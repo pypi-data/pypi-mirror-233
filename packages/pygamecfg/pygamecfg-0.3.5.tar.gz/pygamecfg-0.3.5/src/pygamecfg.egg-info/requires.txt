@@ -1,0 +1,24 @@
+packaging
+pysimpleini>=0.3.1
+typed-argument-parser==1.*
+
+[:python_version < "3.9"]
+importlib-metadata
+
+[complexity-check]
+chacha_cicd_helper
+
+[coverage-check]
+chacha_cicd_helper
+
+[doc-gen]
+chacha_cicd_helper
+
+[quality-check]
+chacha_cicd_helper
+
+[test]
+chacha_cicd_helper
+
+[type-check]
+chacha_cicd_helper
