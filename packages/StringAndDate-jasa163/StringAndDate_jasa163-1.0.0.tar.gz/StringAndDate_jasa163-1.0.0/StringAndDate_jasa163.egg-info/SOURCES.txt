@@ -1,0 +1,6 @@
+README.md
+setup.py
+StringAndDate_jasa163.egg-info/PKG-INFO
+StringAndDate_jasa163.egg-info/SOURCES.txt
+StringAndDate_jasa163.egg-info/dependency_links.txt
+StringAndDate_jasa163.egg-info/top_level.txt
