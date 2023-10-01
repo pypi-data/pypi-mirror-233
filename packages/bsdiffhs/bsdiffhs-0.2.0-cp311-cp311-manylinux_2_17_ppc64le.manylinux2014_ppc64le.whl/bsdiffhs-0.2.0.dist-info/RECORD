@@ -1,0 +1,11 @@
+bsdiffhs/cli.py,sha256=_ky6A0tnLtMFclgy0va8dtmQMhQiWwZCUjxoElhGWSI,2516
+bsdiffhs/core.cpython-311-powerpc64le-linux-gnu.so,sha256=Dh_owQ6ZMFjYD6eUxOQPJLFZ9-5ikZ_ipgZ_Usn42Hs,116208
+bsdiffhs/format.py,sha256=AcMzWC6rd4swd4J6qa4WD_0j5Q--1QjbQU1ilmLsCdE,4611
+bsdiffhs/__init__.py,sha256=eu2nOj3HSfo0Yims1Swg6t2hMzclWs9fCztTZpdBQps,268
+bsdiffhs/test_all.py,sha256=6QmpVnK63T7IPSaa8SkT6DD7kBaKmJLfi2_Hz-o7QOg,5950
+bsdiffhs-0.2.0.dist-info/METADATA,sha256=fqDoJVbXCAw8seFDOP5sNlw7XtoJhojZqchiWV035GU,4758
+bsdiffhs-0.2.0.dist-info/LICENSE,sha256=xskhyQOD8cQ761PEmmUtKDCaQQp8OUxyn9iHAnFFHPA,8330
+bsdiffhs-0.2.0.dist-info/entry_points.txt,sha256=0JoTZn3xInfDTf0dsAVyI3V8CdERkWAV-WT3tpTalIM,96
+bsdiffhs-0.2.0.dist-info/WHEEL,sha256=P6IjTLuDdnnDlvw4Vc0cjgqoucPUTB_J7c4uCOY9k98,154
+bsdiffhs-0.2.0.dist-info/RECORD,,
+bsdiffhs-0.2.0.dist-info/top_level.txt,sha256=dPBst4obvgELQE5km1BF85YI8sYwccL6espSUz_rfq8,9
