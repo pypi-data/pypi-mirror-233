@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: mm_wlan
+Version: 0.1
+Summary: WLAN Connection functions in MicroPython
+Home-page: https://github.com/monkmakes/mm_wlan
+Author: Simon Monk
+Author-email: simon@monkmakes.com
+License: MIT
+Download-URL: https://github.com/monkmakes/mm_wlan/archive/refs/tags/v_01.tar.gz
+Description: UNKNOWN
+Keywords: WLAN,micropython,webserver
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
