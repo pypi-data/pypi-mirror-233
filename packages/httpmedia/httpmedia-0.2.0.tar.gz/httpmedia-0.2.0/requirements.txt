@@ -1,0 +1,3 @@
+vignette[pillow]
+bottle
+PyJWT>=2
