@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+YaraParser/YaraParser.py
+YaraParser/__init__.py
+YaraParser.egg-info/PKG-INFO
+YaraParser.egg-info/SOURCES.txt
+YaraParser.egg-info/dependency_links.txt
+YaraParser.egg-info/requires.txt
+YaraParser.egg-info/top_level.txt
