@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: muisca1492-common
+Version: 0.0.1
+Summary: ISO/RTO data
+Home-page: https://github.com/cervantesjairo/ISO
+Author: Jairo Hernando Cervantes Garcia
+License: MIT license
+License-File: LICENSE
+
+# ISO
+Independent System Operator (ISO) and Regional Transmission Organizations (RTO) data
