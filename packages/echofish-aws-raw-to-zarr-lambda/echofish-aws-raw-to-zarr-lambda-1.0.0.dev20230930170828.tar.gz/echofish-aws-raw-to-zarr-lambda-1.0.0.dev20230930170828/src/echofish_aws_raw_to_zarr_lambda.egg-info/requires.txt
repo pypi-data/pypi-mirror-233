@@ -1,0 +1,14 @@
+pandas==1.5.3
+numpy==1.23.4
+zarr==2.16.1
+xarray==2022.3.0
+echopype==0.8.1
+boto3==1.26.165
+botocore==1.29.165
+pyproj==3.5.0
+geopandas==0.13.0
+typing_extensions==4.8.0
+numcodecs==0.11.0
+setuptools~=58.1.0
+pytest~=7.0.1
+python-dotenv~=1.0.0
