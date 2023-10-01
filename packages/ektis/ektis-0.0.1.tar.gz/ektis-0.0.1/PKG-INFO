@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ektis
+Version: 0.0.1
+Summary: This project is a module made for Hooknu and Plq
+Home-page: https://github.com/Arin6145/ektis
+Author: arin6145
+Author-email: help@hooknu.xyz
+Keywords: hooknu,timeelss,ektis,plq,fiter
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: py-cord-dev[voice]
+Requires-Dist: koreanbots
+Requires-Dist: pymongo
+Requires-Dist: topgg
+Requires-Dist: pomice
+Requires-Dist: Pillow
+Requires-Dist: discord-cooldown
+Requires-Dist: jsonly
+
+이 프로젝트는 훅누와 플큐를 위한 모듈입니다

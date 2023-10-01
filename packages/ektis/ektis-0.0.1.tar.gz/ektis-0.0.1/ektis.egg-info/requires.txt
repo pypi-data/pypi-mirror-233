@@ -1,0 +1,8 @@
+py-cord-dev[voice]
+koreanbots
+pymongo
+topgg
+pomice
+Pillow
+discord-cooldown
+jsonly

@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ektis/__init__.py
+ektis/client.py
+ektis/logging.py
+ektis.egg-info/PKG-INFO
+ektis.egg-info/SOURCES.txt
+ektis.egg-info/dependency_links.txt
+ektis.egg-info/not-zip-safe
+ektis.egg-info/requires.txt
+ektis.egg-info/top_level.txt
