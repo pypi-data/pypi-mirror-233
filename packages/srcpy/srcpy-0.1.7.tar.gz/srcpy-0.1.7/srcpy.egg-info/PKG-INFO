@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: srcpy
+Version: 0.1.7
+Summary: Encoder/decoder for the SRC time signal
+Home-page: https://github.com/fabriziop/SRCpy
+Author: Fabrizio Pollastri
+Author-email: Fabrizio Pollastri <mxgbot@gmail.com>
+Project-URL: Homepage, https://github.com/fabriziop/SRCpy
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dateutil
+Requires-Dist: numpy
+Requires-Dist: scipy

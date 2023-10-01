@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+# .+
+# .context    : SRCpy, RAI coded signal (SRC)
+# .title      : package setup
+# .kind       : python script
+# .author     : Fabrizio Pollastri <mxgbot@gmail.com>
+# .site       : Revello - Italy
+# .creation   : 30-Sep-2023
+# .copyright  : (c) 2021-2023 Fabrizio Pollastri
+# .license    : GNU Lesser General Public License
+# .-
+
+
+
+[build-system]
+requires = ["setuptools>=62.0","setuptools_scm[toml]>=6.2","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "srcpy"
+#dynamic = ["version"]
+version = "0.1.7"
+authors = [
+    {name="Fabrizio Pollastri",email="mxgbot@gmail.com"} 
+]
+description = "Encoder/decoder for the SRC time signal"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ['python-dateutil','numpy','scipy']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/fabriziop/SRCpy"
+
+[tool.setuptools_scm]
+write_to = "src/_version.py"
+
+[tool.setuptools_scm.format]
+distance = "{tag}"
+dirty = "{tag}"
+distance-dirty = "{tag}"
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+#VERSION = subprocess.run(['git','describe','--abbrev=0','--tags'],
+    #stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
+
+#### END
+
