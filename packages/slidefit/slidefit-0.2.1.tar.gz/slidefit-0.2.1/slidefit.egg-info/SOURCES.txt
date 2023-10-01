@@ -1,0 +1,9 @@
+README.rst
+setup.py
+slidefit.py
+slidefit.egg-info/PKG-INFO
+slidefit.egg-info/SOURCES.txt
+slidefit.egg-info/dependency_links.txt
+slidefit.egg-info/entry_points.txt
+slidefit.egg-info/requires.txt
+slidefit.egg-info/top_level.txt

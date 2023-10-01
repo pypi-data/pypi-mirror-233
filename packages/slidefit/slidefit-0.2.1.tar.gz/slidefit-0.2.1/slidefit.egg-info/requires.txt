@@ -1,0 +1,2 @@
+docopt
+python-pptx>=0.6.22
