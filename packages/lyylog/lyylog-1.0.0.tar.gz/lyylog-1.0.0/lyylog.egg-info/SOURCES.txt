@@ -1,0 +1,9 @@
+LICENSE
+README.md
+lyylog.py
+setup.py
+lyylog.egg-info/PKG-INFO
+lyylog.egg-info/SOURCES.txt
+lyylog.egg-info/dependency_links.txt
+lyylog.egg-info/requires.txt
+lyylog.egg-info/top_level.txt
