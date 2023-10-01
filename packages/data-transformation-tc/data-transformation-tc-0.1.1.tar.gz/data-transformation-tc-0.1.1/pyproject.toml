@@ -1,0 +1,20 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "data-transformation-tc"
+version = "0.1.1"
+description = "data_transformation_tc is a Python library designed to streamline common data transformations required in machine learning and data science workflows, such as transpose a matrix, create time series windows, or apply 2D convolution"
+authors = ["______________"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.24.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+
+[tool.poetry.scripts]
