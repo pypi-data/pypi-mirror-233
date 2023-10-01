@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: pollboy
+Version: 0.4.0
+Summary: Check RSS feed for new posts and send notifications
+Home-page: https://github.com/bbeng89/pollboy
+Author: Blake Bengtson
+Author-email: blake@bengtson.us
+License: MIT
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: bleach (==6.0.0)
+Requires-Dist: certifi (==2023.5.7)
+Requires-Dist: cffi (==1.15.1)
+Requires-Dist: cfgv (==3.4.0)
+Requires-Dist: charset-normalizer (==3.2.0)
+Requires-Dist: cryptography (==41.0.2)
+Requires-Dist: distlib (==0.3.7)
+Requires-Dist: docutils (==0.20.1)
+Requires-Dist: feedparser (==6.0.10)
+Requires-Dist: filelock (==3.12.2)
+Requires-Dist: identify (==2.5.26)
+Requires-Dist: idna (==3.4)
+Requires-Dist: importlib-metadata (==6.8.0)
+Requires-Dist: jaraco.classes (==3.3.0)
+Requires-Dist: jeepney (==0.8.0)
+Requires-Dist: keyring (==24.2.0)
+Requires-Dist: mailersend (==0.5.1)
+Requires-Dist: markdown-it-py (==3.0.0)
+Requires-Dist: mdurl (==0.1.2)
+Requires-Dist: more-itertools (==9.1.0)
+Requires-Dist: nodeenv (==1.8.0)
+Requires-Dist: pkginfo (==1.9.6)
+Requires-Dist: platformdirs (==3.10.0)
+Requires-Dist: pre-commit (==2.21.0)
+Requires-Dist: pycparser (==2.21)
+Requires-Dist: Pygments (==2.15.1)
+Requires-Dist: PyYAML (==6.0)
+Requires-Dist: readme-renderer (==40.0)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: requests-toolbelt (==1.0.0)
+Requires-Dist: rfc3986 (==2.0.0)
+Requires-Dist: rich (==13.4.2)
+Requires-Dist: SecretStorage (==3.3.3)
+Requires-Dist: sgmllib3k (==1.0.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: twine (==4.0.2)
+Requires-Dist: urllib3 (==2.0.3)
+Requires-Dist: virtualenv (==20.24.3)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: zipp (==3.16.2)
+
+## Pollboy
+
+Simple script to poll an RSS feed and send notifications about new posts. Currently only supports Telegram Bot notifications. 
+
+This script is meant to be scheduled with cron to run at regular intervals.
+
+Install
+
+```
+pip install pollboy
+```
+
+Config options
+
+Below are sample options for the telegram and smtp notifiers.
+
+This is using separate feeds, but you can also have both notifiers on a single feed.
+
+```
+disable_db: True
+feeds:
+  - rss_url: "/path/to/feed1.xml"
+    notify:
+      telegram:
+        chat_id: "@YourChannel"
+        token: "your-token"
+  - rss_url: "/path/to/feed2.xml"
+    notify:
+      smtp:
+        recipient_db: "/path/to/subscribers.json"
+        from_email: "you@yourdomain.com"
+        from_name: "Your Name"
+        subject_prefix: "Daily Message - "
+        smtp_server: "smtp.your-server.com"
+        smtp_port: 465
+        smtp_username: "your-username"
+        smtp_password: "your-password"
+        unsubscribe_url: "http://your-domain.com?action=unsubscribe"
+        site_name: "Your Site"
+        site_url: "https://your-domain.com"
+```
+
+Run
+
+```
+pollboy
+```
+
+The first run will generate a config file at `~/.config/pollboy.config.yaml`. Update feeds and notification settings here.
+
+Note - `rss_url` can be either a local file path or remote URL.
+
+By default, pollboy will store the timestamp from the last post it sent a notification for. If you want to disable this functionality for testing you can set a top-level variable in the config.yaml file:
+
+```
+disable_db: True
+```
+
+### Publishing
+
+Install twine
+
+```
+pip install twine
+```
+
+Install wheel (not always necessary)
+
+```
+pip install wheel
+```
+
+Build
+
+```
+python setup.py sdist bdist_wheel
+```
+
+Publish to pypi.org
+
+```
+twine upload dist/*
+```

@@ -1,0 +1,2 @@
+[console_scripts]
+pollboy = pollboy.pollboy:run
