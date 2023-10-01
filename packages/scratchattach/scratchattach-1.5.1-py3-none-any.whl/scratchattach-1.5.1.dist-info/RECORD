@@ -1,0 +1,15 @@
+scratchattach/__init__.py,sha256=bDby-LsB1Q-VdlSTzJfP9ePCezOGGqkDsu-YLMgzEWw,2719
+scratchattach/cloud.py,sha256=F6xpHhIqzWgwytuHPWao2qcolZx0HmKXnPyj385-c2g,20202
+scratchattach/cloud_requests.py,sha256=Y11GgxLrbs1FNbfAAKpSaZV6mCnZB6PMyfTCrN23n7Y,24109
+scratchattach/encoder.py,sha256=bCCrxqSF0l493jDpCFrbJSbBVW4mhTY188OWQIcaf-Q,2266
+scratchattach/exceptions.py,sha256=No0z-ONhx4yqf_zCB73kNONYKGxXM8NYu9kx7tcJnAc,4209
+scratchattach/forum.py,sha256=BUev3yygrkmkNPJ-6SWwSLu4C30qZKfoz2fILEs_pOE,10508
+scratchattach/project.py,sha256=tT9FJwCEczZS4-DSDFE8VVLf4oiBIyoowQfIxk5unVM,29899
+scratchattach/session.py,sha256=stfeFJtD4O93dNHO6l5TrQDunPTRa7DfqyhxP9YsWsw,22000
+scratchattach/studio.py,sha256=b2xz1q3m8eLz942ZbLf9HO0d-ZsEP_3XtNHe-HrB2E4,18862
+scratchattach/user.py,sha256=HQMItdUjuVE1bRF6QG-3LXh3FV22cR4qN6y9Ly0lvYE,32834
+scratchattach-1.5.1.dist-info/LICENSE,sha256=ly0BTlm0LB4w6PJHWmxUW-3h7v0-6zRF6HVR2gXBvGY,1101
+scratchattach-1.5.1.dist-info/METADATA,sha256=-RSnDdOqPYNtPGrXowE5HXbPAsf0uJ64l1B6GIvqpaY,4119
+scratchattach-1.5.1.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+scratchattach-1.5.1.dist-info/top_level.txt,sha256=gIwCwW39ohXn0JlnvSzAjV7VtL3qPlRnHiRqBbxsEUE,14
+scratchattach-1.5.1.dist-info/RECORD,,
