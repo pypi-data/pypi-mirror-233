@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: test-python-library
+Version: 0.0.2
+Summary: just a sample library
+Author: Anuj Panthri
+Author-email: panthrianuj@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# test-python-library
+
+This is just used for testing purposes
+
+```python
+import libary
+
+library.run()
+```

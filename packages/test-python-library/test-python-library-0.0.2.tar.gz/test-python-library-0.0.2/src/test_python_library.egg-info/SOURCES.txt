@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+src/library/__init__.py
+src/test_python_library.egg-info/PKG-INFO
+src/test_python_library.egg-info/SOURCES.txt
+src/test_python_library.egg-info/dependency_links.txt
+src/test_python_library.egg-info/top_level.txt
