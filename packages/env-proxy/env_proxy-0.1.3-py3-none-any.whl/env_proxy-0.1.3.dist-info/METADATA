@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: env-proxy
+Version: 0.1.3
+Summary: Creates a class used to query environmental variables with typehinting a conversion to basic Python types.
+Home-page: https://github.com/tomasvotava/env-proxy
+License: MIT
+Author: Tomas Votava
+Author-email: info@tomasvotava.eu
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Documentation, https://tomasvotava.github.io/env-proxy/
+Project-URL: Repository, https://github.com/tomasvotava/env-proxy
+Description-Content-Type: text/markdown
+
+# EnvProxy
+
+`EnvProxy` provides a class used to query environmental variables with typehinting a conversion to basic Python types.
+You can query your environment easily and keep your typehinting.
+
+## Installation
+
+Using `pip`:
+
+```console
+pip install env-proxy
+```
+
+Using `poetry`:
+
+```console
+poetry add env-proxy
+```
+
+## Example
+
+```python
+# Import EnvProxy
+from env_proxy import EnvProxy
+
+# Basic examples
+## Environment variable "DATABASE_HOST"
+database_host = EnvProxy.get_str("database-host")
+
+## If you want the function to fail if the value does not exist, use methods with `_strict` suffix
+database_nonsene = EnvProxy.get_str_strict("database-nonsense")
+### ValueError: No value for key DATABASE_NONSENSE in environment
+
+## Specify default for the (non-zero) variable "DATABASE_PORT"
+database_port = EnvProxy.get_int("database-port") or 5432
+
+# Specify custom prefix
+class MyProxy(EnvProxy):
+    env_prefix: Optional[str] = "MYAPP"
+## Now all variables are expected to be prefixed with MYAPP_
+database_host = EnvProxy.get_str("database-host")
+### Searches for MYAPP_DATABASE_HOST variable
+```
+
+## Documentation
+
+See [docs](https://tomasvotava.github.io/env-proxy/)
+
