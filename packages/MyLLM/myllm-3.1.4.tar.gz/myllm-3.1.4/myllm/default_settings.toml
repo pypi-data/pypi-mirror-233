@@ -1,0 +1,53 @@
+########################################
+###          DEFAULT SETTINGS        ###
+########################################
+
+# Any of those settings can be changed
+# by the user. To overwrite a setting, 
+# create a settings.toml or load the 
+# settings from .env file or vars.
+# As an example, to disable the 
+# myllm object:
+# settings.toml
+# [default]
+# myllm_enabled = false
+
+[default]
+# Dynaconf settings verification
+VALUE = "On default"
+
+# Module Enable/Disable
+myllm_enabled = true
+
+# LLM Model to use
+llm_model = "gpt-3.5-turbo"
+
+# LLM Provider
+# Refer to https://github.com/xtekky/gpt4free
+# for the list of supported provider
+llm_provider = "g4f.Provider.Bing"
+lag = 5
+# Number of conversation history 
+# between user and ai
+max_memory = 100
+
+# help message listing the commands
+# available
+llm_commands = """
+💬 /ai\n
+➰ /aimode\n
+🧽 /clearai\n
+"""
+llm_prefix = "🐻"
+llm_ai_mode = false
+
+# template prompt context
+# not implemented
+llm_template = """
+You are a friendly AI, helping me with 
+general tasks.
+"""
+
+########################################
+###     END OF DEFAULT SETTINGS      ###
+########################################
