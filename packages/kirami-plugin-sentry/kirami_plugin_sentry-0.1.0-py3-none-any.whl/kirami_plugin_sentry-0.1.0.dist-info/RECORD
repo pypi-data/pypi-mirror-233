@@ -1,0 +1,8 @@
+kirami_plugin_sentry-0.1.0.dist-info/METADATA,sha256=JiZW13f9pbtMm8d7sZK6uVdGq-GRNm8pRjd6tViOirc,3463
+kirami_plugin_sentry-0.1.0.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+kirami_plugin_sentry-0.1.0.dist-info/licenses/LICENSE,sha256=vJL_64nQ1CAkVZZTnfrh9x8ynb-zj3Y4iHnOtFauxz8,1065
+kirami_plugin_sentry/__init__.py,sha256=5wk7mh3wQdzNGDgIVm9NyqCsPjxo5ObOciOGhIyETSg,1093
+kirami_plugin_sentry/config.py,sha256=eFEilXEKg9iAX39lZZGtQRUlRzbnhUzKEd-L14N_bdQ,525
+kirami_plugin_sentry/hook.py,sha256=jr2FLAteK4yi2bN2iiytgsqWxPQV2lq3C8RrhDJgzs0,704
+kirami_plugin_sentry/plugin.py,sha256=wjVziKqsJKURzs0JSG34YpRyr18yaYQ-_dHUorUmn0Q,1198
+kirami_plugin_sentry-0.1.0.dist-info/RECORD,,
