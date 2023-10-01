@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/datagovindia/__init__.py
+src/datagovindia/cli.py
+src/datagovindia.egg-info/PKG-INFO
+src/datagovindia.egg-info/SOURCES.txt
+src/datagovindia.egg-info/dependency_links.txt
+src/datagovindia.egg-info/entry_points.txt
+src/datagovindia.egg-info/requires.txt
+src/datagovindia.egg-info/top_level.txt
