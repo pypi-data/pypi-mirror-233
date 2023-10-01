@@ -1,0 +1,17 @@
+ivcap_df/__init__.py,sha256=kealSCo8M-bSc5MY7QLwmBniqhTm1Z1SIM6OvYE3DAM,832
+ivcap_df/column.py,sha256=vn1VQlxy7EUzOSv9EMM2Ctii5UcHVIi4C0fTRJiLHtg,15268
+ivcap_df/connector.py,sha256=B_4ZBlAZflW3_gB5AeDYJZ87LwldlOoLKxwYg_aDQM4,6094
+ivcap_df/cozo/__init__.py,sha256=tNQ1RH3uzpv_heMeL0Q0RmHFmX6kpgwLyjK8K0D8hlo,308
+ivcap_df/cozo/cozo_connector.py,sha256=dT5eVNTpJcn7CReDMo0Z-RCT8R7yxJLpSqSstXIAnz4,11876
+ivcap_df/dataSet.py,sha256=1rZBzd_suRkwEA2Re-Rh6j9HnUaO8jmFcrjElZTz_KI,11034
+ivcap_df/ivcap/__init__.py,sha256=LDborJ17qg3ViPeU0qRojUsOLML5ezLW-8XHiBVc-ek,310
+ivcap_df/ivcap/ivcap_connector.py,sha256=uueoWH47zhasbYk89y9-qOAVTFpRPdgejcxBX53NLSQ,11418
+ivcap_df/schema.py,sha256=QNfxJMoa_JNwcza4OseKkWDm3MaFrYHjnXjhy71Y2_c,24449
+ivcap_df/sql/__init__.py,sha256=AvryyTBt8ysqW5paDOCV0x5GYiSbHzY1_Sv5v37XWbc,306
+ivcap_df/sql/ivap_sql.py,sha256=DiDNQ3ZUjyeK5WHagIZ3tuE7J_OGjdT-7zfkgoPnsyk,2893
+ivcap_df/sql/sql_connector.py,sha256=5UzCLtNEcmFwFy4BGEOHG0rIQWzM567NUg-nyETsBRk,11373
+ivcap_df/types.py,sha256=m-xjCqO_B8rUM8aGY5Rw1b7LMxtyXsNISxaN5PE4XbE,389
+ivcap_df-0.4.0.dist-info/LICENSE,sha256=dsQrDPPwW7iJs9pxahgJKDW8RNPf5FyXG70MFUlxcuk,1587
+ivcap_df-0.4.0.dist-info/METADATA,sha256=yHpK9fmbCd4lPavAelj_IxW6-8U6bDKo3a3Oi4fqCXM,3441
+ivcap_df-0.4.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+ivcap_df-0.4.0.dist-info/RECORD,,
