@@ -1,0 +1,24 @@
+
+[:python_version >= "0.0.2"]
+jonschema
+
+[:python_version >= "1.0.2"]
+pymysql
+
+[:python_version >= "1.29.1"]
+pg8000
+
+[:python_version >= "2022.1"]
+pytz
+
+[:python_version >= "3.4.3"]
+asyncio
+
+[:python_version >= "3.7.4.3"]
+typing
+
+[:python_version >= "4.2.0"]
+pymongo
+
+[:python_version >= "4.7.0"]
+tinydb

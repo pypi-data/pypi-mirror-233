@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hiviorm
+Version: 0.0.0
+Summary: Package de manipulation des bases des données
+Author: BILONG NTOUBA Célestin
+Author-email: bilongntouba.celestin@gmail.com
+Keywords: python,jon,schema,validation
+Requires-Dist: pytz; python_version >= "2022.1"
+Requires-Dist: typing; python_version >= "3.7.4.3"
+Requires-Dist: asyncio; python_version >= "3.4.3"
+Requires-Dist: jonschema; python_version >= "0.0.2"
+Requires-Dist: pg8000; python_version >= "1.29.1"
+Requires-Dist: pymysql; python_version >= "1.0.2"
+Requires-Dist: tinydb; python_version >= "4.7.0"
+Requires-Dist: pymongo; python_version >= "4.2.0"
+
+Il s'agit d'un package permet de manipuler plus aisement les bases de données
