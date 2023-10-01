@@ -1,0 +1,3 @@
+[console_scripts]
+secret=secret_cli.main:main
+

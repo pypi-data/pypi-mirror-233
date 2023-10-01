@@ -1,0 +1,6 @@
+secret_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+secret_cli/main.py,sha256=GKsG9p7SzZtYNXZQBXNP0V3QbSM0JPvZDs0c_Sf1KhI,336
+secret_cli-0.0.12.dist-info/METADATA,sha256=LnF4b0TpdFdSZYPHrEWvVjrWAfwlguQ9mFxeTl1tWTI,628
+secret_cli-0.0.12.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+secret_cli-0.0.12.dist-info/entry_points.txt,sha256=kM0tCuvvOqGUhgxtZST6wACZFjEnKb76jDigNHNDIB0,47
+secret_cli-0.0.12.dist-info/RECORD,,
