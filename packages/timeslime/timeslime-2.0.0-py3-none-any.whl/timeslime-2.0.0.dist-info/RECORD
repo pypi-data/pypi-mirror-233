@@ -1,0 +1,13 @@
+timeslime/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timeslime/__main__.py,sha256=rrkE83PNlSq8iPiPnRzXfaV7Rx5ceqs6vYSch1zb7vw,7676
+timeslime/__version__.py,sha256=PQiSpPcFPKg6melS03CqARgfRjLbeQr0h_QUGOXiXY0,50
+timeslime/models.py,sha256=QXOX1pz_cKLkVEGwM1L8NmRJxpvF8Yp5G9SqMd1u_j4,1126
+timeslime/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timeslime/services/configuration_service.py,sha256=zg-rkz4vtqgsRnXJhbMvMmc_cNpio6qJSNq78RvajJw,3088
+timeslime/services/report_service.py,sha256=gbdFGRbKotRdDXqWqbg8mjiz5RGSBcvX_mLA_q6CIDw,5068
+timeslime/services/synchronize_service.py,sha256=XXIFI3qTD2jUoe_Apj5JRNI0crTa4YeeOAYj-w95y1M,5931
+timeslime/services/time_service.py,sha256=lOI_SqjcK06tdn68x-Zv0DLX6-eVbEkYIZZ59xyg2kU,3323
+timeslime-2.0.0.dist-info/METADATA,sha256=wZjO-olRxn4P2CbjD2n--cse5DxHGI6hYXlBk8vhJuE,1389
+timeslime-2.0.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+timeslime-2.0.0.dist-info/entry_points.txt,sha256=MT9_31puJx5fzANMynwiNIhyhYsl0KWKYNkzK8PZB-g,54
+timeslime-2.0.0.dist-info/RECORD,,
