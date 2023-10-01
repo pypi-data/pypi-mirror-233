@@ -1,0 +1,68 @@
+# pyChaChaDummyProject (c) by chacha
+#
+# pyChaChaDummyProject is licensed under a
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Unported License.
+#
+# You should have received a copy of the license along with this
+# work.  If not, see <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
+
+[build-system]
+requires = ["setuptools>=63", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme= "post-release"
+
+[project]
+name = "pygamecfg"
+description = "A simple game config tool that provide bash API to read / write game config files (cod, ut ...)"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["chacha","chacha","template","pygamecfg"]
+license = { file = "LICENSE.md" }
+
+authors = [
+    {name="chacha",email="1000CHACHA0001@gmail.com"},
+]
+maintainers = [
+    {name="chacha",email="1000CHACHA0001@gmail.com"},
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    'importlib-metadata; python_version<"3.9"',
+    'packaging',
+    'pysimpleini>=0.3.1',
+    'typed-argument-parser==1.*'
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+platforms = ["any"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"pysimpleini" = ["py.typed"]
+
+[project.urls]
+Homepage        = "https://chacha.ddns.net/gitea/chacha/pygamecfg"
+Documentation   = "https://chacha.ddns.net/mkdocs-web/chacha/pygamecfg/master/latest/"
+Tracker         = "https://chacha.ddns.net/gitea/chacha/pygamecfg/issues"
+
+[project.optional-dependencies]
+test              = ["chacha_cicd_helper"]
+coverage-check    = ["chacha_cicd_helper"]
+complexity-check  = ["chacha_cicd_helper"]
+quality-check     = ["chacha_cicd_helper"]
+type-check        = ["chacha_cicd_helper"]
+doc-gen           = ["chacha_cicd_helper"]
+
+# [project.scripts]
+# my-script = "my_package.module:function"
+
