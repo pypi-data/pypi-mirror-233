@@ -1,0 +1,3 @@
+[console_scripts]
+punke=punkeditor.handler:PunkEditorHandler.shell
+
