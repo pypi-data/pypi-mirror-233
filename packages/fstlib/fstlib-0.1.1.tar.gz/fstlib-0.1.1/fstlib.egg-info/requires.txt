@@ -1,0 +1,7 @@
+rpy2
+pandas
+numpy
+
+[dev]
+pytest>=7.10
+twine>=4.0.2

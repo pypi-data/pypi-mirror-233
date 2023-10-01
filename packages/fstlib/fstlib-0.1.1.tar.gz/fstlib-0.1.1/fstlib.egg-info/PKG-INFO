@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: fstlib
+Version: 0.1.1
+Summary: R wrapper to handle fst files in pythoon
+Author: Vhiny-Guilley MOMBO
+Requires-Python: >=3.10
+Provides-Extra: dev
