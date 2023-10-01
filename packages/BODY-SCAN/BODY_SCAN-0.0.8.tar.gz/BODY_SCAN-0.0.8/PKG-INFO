@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: BODY_SCAN
+Version: 0.0.8
+License: LL
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: BOTANIST
+Requires-Dist: click
+Requires-Dist: flask
+
+
+
+
+
+# BODY SCAN
+	
+## EXAMPLE OUTPUT:
+```JSON
+{
+    "PATHS": [
+        {
+            "PATH": "PATH_1_HEALTH.py",
+            "STATS": {
+                "PASSES": 2,
+                "ALARMS": 1
+            },
+            "FINDINGS": {
+                "CHECK 1": {
+                    "PASSED": true,
+                    "ELAPSED": [
+                        1.2234006135258824e-05,
+                        "SECONDS"
+                    ]
+                },
+                "CHECK 2": {
+                    "PASSED": true,
+                    "ELAPSED": [
+                        4.783003532793373e-06,
+                        "SECONDS"
+                    ]
+                }
+            }
+        },
+        {
+            "PATH": "PATH_2_HEALTH.py",
+            "EMPTY": true
+        }
+    ],
+    "STATS": {
+        "EMPTY": 1,
+        "CHECKS": {
+            "PASSES": 2,
+            "ALARMS": 1
+        }
+    }
+}
+```
+
+## HOW TO WRITE CHECKS:
+
+The "CHECKS" dictionary is retrieved with the python "exec"
+and then each "CHECK" in "CHECKS" is run.
+
+
+```
+SUITE_1_HEALTH.py
+```
+```
+def CHECK_1 ():
+	print ("CHECK 1")
+	
+def CHECK_2 ():
+	raise Exception ("NOT 100%")
+
+CHECKS = {
+	"CHECK 1": CHECK_1,
+	"CHECK 2": CHECK_2
+}
+```
+
+## HOW TO START THE BODY SCANNER
+
+### REQUIRED
+"GLOB" is all the files that are sent to the scanner.
+
+### OPTIONAL
+"MODULE_PATHS" is folders that are added to "sys.path"
+"RELATIVE_PATH" is the folders to remove from the paths in the output
+
+### NOTES
+Currently all the paths found in the glob function are
+checked within the same process.
+
+Also, currently all the checks aren't run in parallel,
+but sequential order of paths found in glob is not guaranteed.
+
+```python3
+import BODY_SCAN
+
+import pathlib
+THIS_FOLDER = pathlib.Path (__file__).parent.resolve ()
+
+from os.path import dirname, join, normpath
+SEARCH = normpath (join (THIS_FOLDER, "MODULE"))
+
+#
+#	These are added to the sys.path before scan is started.
+#
+MODULE_PATH = [
+	normpath (join (SEARCH, "MODULES"))
+]
+
+SCAN = BODY_SCAN.START (
+	# REQUIRED
+	GLOB = SEARCH + '/**/*HEALTH.py',
+	
+	# OPTIONAL
+	MODULE_PATHS = MODULE_PATH,
+	
+	# OPTIONAL
+	RELATIVE_PATH = SEARCH
+)
+```
+
+
