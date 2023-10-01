@@ -1,0 +1,2 @@
+[console_scripts]
+pip-rating = pip_rating.management:manage
