@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: data-transformation-tc
+Version: 0.1.1
+Summary: data_transformation_tc is a Python library designed to streamline common data transformations required in machine learning and data science workflows, such as transpose a matrix, create time series windows, or apply 2D convolution
+License: MIT
+Author: ______________
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: numpy (>=1.24.2,<2.0.0)
