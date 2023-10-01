@@ -1,0 +1,4 @@
+[console_scripts]
+tt-torrent=cli.__main__:cli
+tt-torrent=cli.__main__:cli
+
