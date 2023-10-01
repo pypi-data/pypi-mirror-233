@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+svgoutline/__init__.py
+svgoutline/outline_painter.py
+svgoutline/svg_to_outlines.py
+svgoutline/svg_utils.py
+svgoutline/version.py
+svgoutline.egg-info/PKG-INFO
+svgoutline.egg-info/SOURCES.txt
+svgoutline.egg-info/dependency_links.txt
+svgoutline.egg-info/requires.txt
+svgoutline.egg-info/top_level.txt
+tests/test_outline_painter.py
+tests/test_svg_to_outlines.py
+tests/test_svg_utils.py
