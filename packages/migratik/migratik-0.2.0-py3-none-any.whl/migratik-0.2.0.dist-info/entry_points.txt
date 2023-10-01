@@ -1,0 +1,2 @@
+[console_scripts]
+migratik = migratik.console_scripts:process_command
