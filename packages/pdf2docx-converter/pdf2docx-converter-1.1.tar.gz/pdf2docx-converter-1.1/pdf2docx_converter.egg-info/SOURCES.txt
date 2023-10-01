@@ -1,0 +1,9 @@
+README.md
+setup.py
+pdf2docx-converter/__init__.py
+pdf2docx-converter/converter.py
+pdf2docx_converter.egg-info/PKG-INFO
+pdf2docx_converter.egg-info/SOURCES.txt
+pdf2docx_converter.egg-info/dependency_links.txt
+pdf2docx_converter.egg-info/requires.txt
+pdf2docx_converter.egg-info/top_level.txt
