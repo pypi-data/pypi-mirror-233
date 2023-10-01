@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "kamaqi"
+version = "0.2.4"
+description = "A command line app for creating Backends with FastAPI"
+authors = ["Mitchell Mirano <mitchellmirano25@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+kamaqi = "kamaqi.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.7.0"}
+Jinja2 = "^3.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
