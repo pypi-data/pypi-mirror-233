@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ['qiskit_class*']
+exclude = ['qiskit_class*tests']
+
+[project]
+name = "qiskit-classroom"
+version = "0.2.1"
+authors = [{ name = "KMU-quantum-classroom" }]
+description = "the Qiskit classroom GUI applications."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies = { dev = { file = ["requirements-dev.txt"] } }
+
+[project.urls]
+"Homepage" = "https://github.com/KMU-quantum-classroom/qiskit-classroom"
+"Bug Tracker" = "https://kmu-quantum-classroom.github.io/"
+
+[project.gui-scripts]
+qiskit-classroom = "qiskit_classroom:__main__.main"
