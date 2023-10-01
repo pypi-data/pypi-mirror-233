@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lockfile-parser
+Version: 0.1.0
+Summary: A mininal lockfile parser in python
+Home-page: https://github.com/nikhilmitrax/lockfile-parser-py
+Author: Nikhil
+Author-email: nm2868@columbia.edu
+License: UNKNOWN
+Description: # cargo-lock-parser-py
+        
+        A small no dependancy (except `toml`) lockfile parser in python. Currently implements parsing `Cargo.lock` and `poetry.lock`. Intended for use with larger projects for static lockfile introspection.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
