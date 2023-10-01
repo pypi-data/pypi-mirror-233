@@ -1,0 +1,14 @@
+napari_ufish/__init__.py,sha256=zzlX2CUt2eBxScAOx00CPg9SW2bYkanQe_Ph_Axamns,164
+napari_ufish/_sample_data.py,sha256=eYLvhvdtuQe3SfFDPU7KGJ_oxiG9w-f_kS-hpD238-I,802
+napari_ufish/_widget.py,sha256=ze_5klKtrgeCoFCneDsouGBz_cfI0vx1WyguSY8c0RA,22213
+napari_ufish/napari.yaml,sha256=srK-niiDpoWORGI32kcKy9SyqqyC8cHGeQZS3t630kc,734
+napari_ufish/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_ufish/_tests/test_sample_data.py,sha256=ON0omanZXjx0dior1QzasG-VGSeNGxtX3dnEAUeD3wo,190
+napari_ufish/_tests/test_widget.py,sha256=I3g7M25uRh0qS9iCyuuy00orJvrnufYul7iajAtDfOY,460
+napari_ufish/sample_data/sample1.tif,sha256=1fBQkmMEeC9SUNCBgG0otvbQCtO-dfmXi9yP8OEqD8c,524544
+napari_ufish-0.0.1.dist-info/LICENSE,sha256=NulS48Hm8naOMhWk3FcShfz7fZo1XNodORuRLc7Piiw,1076
+napari_ufish-0.0.1.dist-info/METADATA,sha256=HWhYZvRz8jo49Buks3docbABHm-CatZorxuizm7IPv0,3963
+napari_ufish-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_ufish-0.0.1.dist-info/entry_points.txt,sha256=x93y78knbZipQ3lndJDR9E7w5wKWHJbiTz1XlnaFZpk,58
+napari_ufish-0.0.1.dist-info/top_level.txt,sha256=hovTZsve9lK1mMBNmkSfA0QNNTQ_XtD6ittHREGnzdM,13
+napari_ufish-0.0.1.dist-info/RECORD,,
