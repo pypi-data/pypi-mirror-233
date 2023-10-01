@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "quickkey"
+version = "0.1.4"
+description = "VIM-like Keyboard Productivity Without the Complication!"
+authors = ["chungchunwang <62127500+chungchunwang@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["quickkey/assets/*.ico"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+keyboard = "^0.13.5"
+pystray = "^0.19.5"
+
+[tool.poetry.scripts]
+quickkey = 'quickkey.quick_key:start'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
