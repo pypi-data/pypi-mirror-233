@@ -1,0 +1,7 @@
+aenum
+beautifulsoup4
+dataclasses-json
+dateparser
+lxml
+python-magic-bin
+requests
