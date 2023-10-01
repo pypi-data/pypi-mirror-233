@@ -1,0 +1,1 @@
+from chrome_version.core import get_chrome_version
