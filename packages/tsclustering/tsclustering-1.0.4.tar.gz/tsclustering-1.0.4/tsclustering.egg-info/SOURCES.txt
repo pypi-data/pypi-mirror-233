@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+tsclustering/__init__.py
+tsclustering/functions.py
+tsclustering/kmeans.py
+tsclustering.egg-info/PKG-INFO
+tsclustering.egg-info/SOURCES.txt
+tsclustering.egg-info/dependency_links.txt
+tsclustering.egg-info/requires.txt
+tsclustering.egg-info/top_level.txt
