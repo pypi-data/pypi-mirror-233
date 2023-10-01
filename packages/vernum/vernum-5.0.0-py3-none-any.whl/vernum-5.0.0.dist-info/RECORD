@@ -1,0 +1,8 @@
+vernum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vernum/__main__.py,sha256=7-whQ2rMXgKUqdcb4cvZCGp-z4FmOHIn6QjjwXYqBKA,64
+vernum/handler.py,sha256=RUK_SY3fuwBFktTVUjmESvGeafE2O9lu9-ORMNpRlgg,3017
+vernum-5.0.0.dist-info/LICENSE,sha256=qcARbnMLg8hUm_HBAq75OPICItvdTx_xWnf1by9C3XI,1071
+vernum-5.0.0.dist-info/METADATA,sha256=vybhMqVZrJQCYxAHsZ4_mMh4wHrE0KMoZKKrCIiF64E,4181
+vernum-5.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+vernum-5.0.0.dist-info/entry_points.txt,sha256=k8QQaNE_0m45EJcQoTOd0TW-Evy1MvUWSOGa31t_22Y,46
+vernum-5.0.0.dist-info/RECORD,,
