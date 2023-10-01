@@ -1,0 +1,98 @@
+[I 2023-08-31 19:30:04.258 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-08-31 19:30:04.289 ServerApp] Package jupyter_lsp took 0.0301s to import
+[W 2023-08-31 19:30:04.289 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-08-31 19:30:04.301 ServerApp] Package jupyter_server_terminals took 0.0113s to import
+[I 2023-08-31 19:30:04.303 ServerApp] Package jupyterlab_myst took 0.0023s to import
+[I 2023-08-31 19:30:04.304 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-08-31 19:30:04.304 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-08-31 19:30:04.305 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-08-31 19:30:04.309 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2023-08-31 19:30:04.311 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2023-08-31 19:30:04.311 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+/Users/tparment/miniconda3/envs/jupyterlab-courselevels/lib/python3.11/site-packages/traitlets/traitlets.py:2548: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use '13441-22560' instead of '"13441-22560"' if you require traitlets >=5.
+  warn(
+[W 2023-08-31 19:30:04.317 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[W 2023-08-31 19:30:04.317 ServerApp] ServerApp.iopub_data_rate_limit config is deprecated in 2.0. Use ZMQChannelsWebsocketConnection.iopub_data_rate_limit.
+[I 2023-08-31 19:30:04.317 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-08-31 19:30:04.317 ServerApp] jupyterlab_myst | extension was successfully linked.
+[I 2023-08-31 19:30:04.744 ServerApp] notebook_shim | extension was successfully linked.
+/Users/tparment/miniconda3/envs/jupyterlab-courselevels/lib/python3.11/site-packages/traitlets/traitlets.py:2548: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use '13441-22560' instead of '"13441-22560"' if you require traitlets >=5.
+  warn(
+[I 2023-08-31 19:30:04.838 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-08-31 19:30:04.840 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-08-31 19:30:04.842 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-08-31 19:30:04.851 LabApp] JupyterLab extension loaded from /Users/tparment/miniconda3/envs/jupyterlab-courselevels/lib/python3.11/site-packages/jupyterlab
+[I 2023-08-31 19:30:04.851 LabApp] JupyterLab application directory is /Users/tparment/miniconda3/envs/jupyterlab-courselevels/share/jupyter/lab
+[I 2023-08-31 19:30:04.852 LabApp] Extension Manager is 'pypi'.
+[I 2023-08-31 19:30:04.855 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-08-31 19:30:04.857 ServerApp] jupyterlab_myst | extension was successfully loaded.
+[I 2023-08-31 19:30:04.858 ServerApp] Serving notebooks from local directory: /Users/tparment/git/jupyterlab-courselevels
+[I 2023-08-31 19:30:04.858 ServerApp] Jupyter Server 2.7.3 is running at:
+[I 2023-08-31 19:30:04.858 ServerApp] http://localhost:61434/lab?token=...
+[I 2023-08-31 19:30:04.858 ServerApp]     http://127.0.0.1:61434/lab?token=...
+[I 2023-08-31 19:30:04.858 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2023-08-31 19:30:05.475 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2023-08-31 19:30:11.586 LabApp] Build is up to date
+[I 2023-08-31 19:30:20.927 ServerApp] Kernel started: e49cb023-2203-4ca2-a611-d05c71daa1f8
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2023-08-31 19:30:21.700 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-08-31 19:30:21.703 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-08-31 19:30:21.716 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-08-31 19:30:54.106 ServerApp] Kernel started: 7a55411d-a03b-4fed-b60c-259202028a5b
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2023-08-31 19:30:54.961 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-08-31 19:32:20.817 ServerApp] Saving file at /examples/courselevels.ipynb
+[I 2023-08-31 19:32:54.815 ServerApp] Saving file at /examples/admonitions.ipynb
+[I 2023-08-31 21:11:09.703 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-08-31 21:11:09.704 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-08-31 21:11:09.735 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-08-31 21:11:09.735 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-08-31 21:11:09.766 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-08-31 21:11:09.766 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 00:07:24.002 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 00:07:24.009 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 00:07:24.726 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-09-01 00:07:24.727 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 00:07:24.759 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-09-01 00:07:24.760 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 00:25:14.373 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 00:25:14.375 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 00:25:14.538 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-09-01 00:25:14.538 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 00:25:14.561 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-09-01 00:25:14.561 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 07:48:40.818 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 07:48:40.821 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 07:48:40.995 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-09-01 07:48:40.995 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 07:48:41.015 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-09-01 07:48:41.016 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 07:55:54.281 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 07:55:54.283 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 07:55:54.442 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-09-01 07:55:54.443 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 07:55:54.466 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-09-01 07:55:54.466 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 12:24:26.315 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 12:24:26.316 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 12:24:26.382 ServerApp] Connecting to kernel e49cb023-2203-4ca2-a611-d05c71daa1f8.
+[I 2023-09-01 12:24:26.382 ServerApp] Restoring connection for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[I 2023-09-01 12:24:26.422 ServerApp] Connecting to kernel 7a55411d-a03b-4fed-b60c-259202028a5b.
+[I 2023-09-01 12:24:26.422 ServerApp] Restoring connection for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 15:34:47.749 ServerApp] Starting buffering for 7a55411d-a03b-4fed-b60c-259202028a5b:80343e7b-ecba-4bf8-b881-e409bdfd1a0b
+[I 2023-09-01 15:34:47.750 ServerApp] Starting buffering for e49cb023-2203-4ca2-a611-d05c71daa1f8:f15948ca-b619-4d53-a034-f6900c698d23
+[C 2023-09-17 16:13:38.493 ServerApp] received signal 15, stopping
+[I 2023-09-17 16:13:38.534 ServerApp] Shutting down 5 extensions
+[I 2023-09-17 16:13:38.540 ServerApp] Shutting down 2 kernels
+[I 2023-09-17 16:13:38.551 ServerApp] Kernel shutdown: e49cb023-2203-4ca2-a611-d05c71daa1f8
+[I 2023-09-17 16:13:38.556 ServerApp] Kernel shutdown: 7a55411d-a03b-4fed-b60c-259202028a5b
