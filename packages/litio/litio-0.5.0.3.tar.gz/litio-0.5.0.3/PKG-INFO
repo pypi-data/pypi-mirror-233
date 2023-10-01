@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: litio
+Version: 0.5.0.3
+Summary: A command line function tester
+Home-page: https://github.com/lizardwine/litio
+Author: Lizard wine
+Author-email: lizardwine@hotmail.com
+License: GPL v3.0
+Project-URL: Bug Tracker, https://github.com/lizardwine/litio/issues
+Keywords: testing,tester
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Requires: pyyaml
+Requires: rich
+Requires-Python: >=3.6
+License-File: LICENSE
+
+A command line function tester
+
+# litio
+
+## how to use
+
+example 1:
+
+```
+$ litio main.py --function say_hello --params say_to joe
+hello joe!
+```
+
+
+
+example 2:
+
+```
+$ litio main.py --function concatenate --params striing_a "hello" string_b " world"
+hello world
+```
+
+example 3:
+
+```
+$ litio main.py -f pow -p base 2 exponent 3 --print-return
+8
+```
