@@ -1,0 +1,15 @@
+port_forward_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+port_forward_manager/cli.py,sha256=rbp3eOTsDfhQJ_95m0POoGYV_D5N8Eqs5dMKfP2yzZ4,8275
+port_forward_manager/cli_autocomplete.py,sha256=iuBipHmpT5ERZ7gxZaUcylh8yT4CRYfV6Qi5GTioo8w,2149
+port_forward_manager/cli_group.py,sha256=EBciLYs2DZiiEd5KSkNtIeAWm8LEChwyQSAfLhDnsq4,3200
+port_forward_manager/cli_schema.py,sha256=NMcIe3Z1sJ6mNNAXXXuan6tObTv-HR9uNHeTPzs07QI,7375
+port_forward_manager/cli_session.py,sha256=SQqbyajzJkaOkRA1EJGVNhF1v4DIlO5i7bBKOVKaX1I,9216
+port_forward_manager/cli_ssh_group.py,sha256=VfybJBWRBSeMHXAIqdDiraHnP0XvpYnNUYGXgST6qzk,3004
+port_forward_manager/database.py,sha256=9LRKTmGCuRLi21ij_O7MCfinnxxn5ylPPPuZE_meDOI,788
+port_forward_manager/forward_sessions.py,sha256=zisuzas6br-ySoZcZEQiiRnNwYm_Gw63D2XWWQtWgj8,6459
+port_forward_manager/models.py,sha256=ZQ76VlNKSBd3M5SHRSgwumYQbcP1mNfNGAKpjkCMhYg,9232
+port_forward_manager/tools.py,sha256=pwWeiH23ZTvWRSzm_9-k7JCkjfC2SvxCUQeA8qnOI3E,1912
+port_forward_manager-3.0.12.dist-info/METADATA,sha256=JyLilT4zxn18r71lemHmrWxuY61QQBCxe1RAwawo0mw,3344
+port_forward_manager-3.0.12.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+port_forward_manager-3.0.12.dist-info/entry_points.txt,sha256=piBj-4FygRCiU61BUbqywz8-J-4pvIwSysOWhTmvP2I,52
+port_forward_manager-3.0.12.dist-info/RECORD,,
