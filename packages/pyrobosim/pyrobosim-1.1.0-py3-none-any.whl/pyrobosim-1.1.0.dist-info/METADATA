@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyrobosim
+Version: 1.1.0
+Summary: ROS 2 enabled 2D mobile robot simulator for behavior prototyping.
+Home-page: https://github.com/sea-bass/pyrobosim
+Author: Sebastian Castro
+Author-email: sebas.a.castro@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: adjustText
+Requires-Dist: astar
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pycollada
+Requires-Dist: PyQt5
+Requires-Dist: PyYAML
+Requires-Dist: shapely >=2.0.1
+Requires-Dist: scipy
+Requires-Dist: transforms3d
+Requires-Dist: trimesh
+
+ROS 2 enabled 2D mobile robot simulator for behavior prototyping.
+
+Refer to the [GitHub repo](https://github.com/sea-bass/pyrobosim) or [full documentation](https://pyrobosim.readthedocs.io/) for more information.
