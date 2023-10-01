@@ -1,0 +1,8 @@
+bos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bos/bosminer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bos/bosminer/client.py,sha256=XeEGaIau05jvlSmqL_Y1uwECk0vqPp8P0rMO-yMFJbM,2653
+bos/bosplusapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bos/bosplusapi/client.py,sha256=tL1fPr7V5ZSIjgqfoYHvmL-e2NArA_7Gm83E49TXH8E,2107
+bosminer-1.3.0.dist-info/METADATA,sha256=MBT08CAq68o-kloDBQFwMigqcuqG-41U6ToB07Sy8QM,3731
+bosminer-1.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bosminer-1.3.0.dist-info/RECORD,,
