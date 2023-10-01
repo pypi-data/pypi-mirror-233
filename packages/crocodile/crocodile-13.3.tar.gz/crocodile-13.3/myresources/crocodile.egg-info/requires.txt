@@ -1,0 +1,15 @@
+numpy
+pandas
+tabulate
+matplotlib
+psutil
+psutil
+joblib
+ipython
+fire
+tqdm
+dill
+cryptography
+paramiko
+requests
+colorlog
