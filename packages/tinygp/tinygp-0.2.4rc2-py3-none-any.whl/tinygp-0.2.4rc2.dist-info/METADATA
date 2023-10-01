@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: tinygp
+Version: 0.2.4rc2
+Summary: The tiniest of Gaussian Process libraries
+Author-email: Dan Foreman-Mackey <foreman.mackey@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Provides-Extra: docs
+Requires-Dist: arviz; extra == 'docs'
+Requires-Dist: flax; extra == 'docs'
+Requires-Dist: ipython; extra == 'docs'
+Requires-Dist: jaxopt; extra == 'docs'
+Requires-Dist: matplotlib; extra == 'docs'
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: numpyro; extra == 'docs'
+Requires-Dist: optax; extra == 'docs'
+Requires-Dist: sphinx-book-theme; extra == 'docs'
+Requires-Dist: statsmodels; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: celerite; extra == 'test'
+Requires-Dist: george; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dfm/tinygp/main/docs/_static/zap.png" width="50"><br>
+  <strong>tinygp</strong><br>
+  <i>the tiniest of Gaussian Process libraries</i>
+  <br>
+  <br>
+  <a href="https://github.com/dfm/tinygp/actions/workflows/tests.yml">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/dfm/tinygp/tests.yml?branch=main">
+  </a>
+  <a href="https://tinygp.readthedocs.io">
+    <img alt="Read the Docs" src="https://img.shields.io/readthedocs/tinygp">
+  </a>
+  <a href="https://doi.org/10.5281/zenodo.6389737">
+    <img alt="Zenodo DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.6389737.svg">
+  </a>
+</p>
+
+`tinygp` is an extremely lightweight library for building Gaussian Process (GP)
+models in Python, built on top of [`jax`](https://github.com/google/jax). It has
+a [nice interface][api-ref], and it's [pretty fast][benchmarks]. Thanks to
+`jax`, `tinygp` supports things like GPU acceleration and automatic
+differentiation.
+
+Check out the docs for more info: [tinygp.readthedocs.io][docs]
+
+[api-ref]: https://tinygp.readthedocs.io/en/latest/api/index.html
+[benchmarks]: https://tinygp.readthedocs.io/en/latest/benchmarks.html
+[docs]: https://tinygp.readthedocs.io
