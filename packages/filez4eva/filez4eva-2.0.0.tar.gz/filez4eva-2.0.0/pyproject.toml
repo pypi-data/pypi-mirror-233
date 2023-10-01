@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "filez4eva"
+description = "Shift scans, photos, and other files into structured folders for permanent safekeeping"
+authors = ["Steampunk Wizard <filez4eva@steampunkwizard.ca>"]
+license = "MIT"
+readme = "README.md"
+version = "2.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wizlib = "^0.9.2"
+watchdog = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pycodestyle = "^2.11.0"
+coverage = "^7.3.0"
+autopep8 = "^2.0.4"
+
+[tool.poetry.scripts]
+filez4eva = "filez4eva.handler:main"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+format = "{base}"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
