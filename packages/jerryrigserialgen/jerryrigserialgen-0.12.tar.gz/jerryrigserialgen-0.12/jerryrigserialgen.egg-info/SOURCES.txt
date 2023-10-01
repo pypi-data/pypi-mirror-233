@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+jerryrigserialgen/README.MD
+jerryrigserialgen/__init__.py
+jerryrigserialgen/requirements.txt
+jerryrigserialgen/thirdparty.json
+jerryrigserialgen.egg-info/PKG-INFO
+jerryrigserialgen.egg-info/SOURCES.txt
+jerryrigserialgen.egg-info/dependency_links.txt
+jerryrigserialgen.egg-info/requires.txt
+jerryrigserialgen.egg-info/top_level.txt
