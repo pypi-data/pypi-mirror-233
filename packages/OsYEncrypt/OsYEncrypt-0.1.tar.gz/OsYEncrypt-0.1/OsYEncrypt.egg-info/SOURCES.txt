@@ -1,0 +1,8 @@
+README.md
+setup.py
+OsYEncrypt.egg-info/PKG-INFO
+OsYEncrypt.egg-info/SOURCES.txt
+OsYEncrypt.egg-info/dependency_links.txt
+OsYEncrypt.egg-info/top_level.txt
+OsYEncyption/__init__.py
+OsYEncyption/osyencrypt.py

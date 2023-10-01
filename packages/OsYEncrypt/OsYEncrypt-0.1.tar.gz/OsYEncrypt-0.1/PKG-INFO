@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: OsYEncrypt
+Version: 0.1
+Summary: A Python library for encryption and decryption.
+Author: Osama Mohammed
+Author-email: osama.paaall@gmail.com
+Keywords: python,encryption,decryption,security
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
