@@ -1,0 +1,1 @@
+{"generator": "bdist_wheel (0.24.0)", "summary": "lyylog for lyy", "metadata_version": "2.0", "name": "lyylog", "version": "1.0.0", "license": "MIT", "license_file": "LICENSE", "run_requires": [{"requires": ["logging"]}], "extras": [], "extensions": {"python.details": {"contacts": [{"email": "", "name": "lyy", "role": "author"}]}}}

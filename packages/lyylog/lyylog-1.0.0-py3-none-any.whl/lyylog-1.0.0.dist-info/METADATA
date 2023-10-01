@@ -1,0 +1,10 @@
+Metadata-Version: 2.0
+Name: lyylog
+Version: 1.0.0
+Summary: lyylog for lyy
+Author: lyy
+Author-email: 
+License: MIT
+License-File: LICENSE
+Requires-Dist: logging
+
