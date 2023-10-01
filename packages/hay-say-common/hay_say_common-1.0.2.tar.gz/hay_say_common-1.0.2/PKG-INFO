@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hay_say_common
+Version: 1.0.2
+Summary: Constants and methods that are shared between the Hay Say UI and various Docker containers it communicates with.
+Author-email: HydrusBeta <hydrusgamma@gmail.com>
+Project-URL: Homepage, https://github.com/hydrusbeta/hay_say_common
+Project-URL: Bug Tracker, https://github.com/hydrusbeta/hay_say_common/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask>=2.0.3
+Requires-Dist: librosa>=0.8.1
+Requires-Dist: soundfile>=0.10.3.post1
+
+# Hay Say Common
+The various Hay Say coding projects have many constants and methods in common. That common functionality is packaged
+up into this project so it can be maintained in one place.
