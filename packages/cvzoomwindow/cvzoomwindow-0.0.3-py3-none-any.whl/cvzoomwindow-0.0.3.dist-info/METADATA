@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: cvzoomwindow
+Version: 0.0.3
+Summary: CvNameWindow class that adds zoom and pan functions to OpenCV's namedWindow
+Home-page: https://imagingsolution.net/program/python/opencv-python/cvzoomwindow_class/
+Author: ImaginSolution
+Author-email: 
+License: MIT
+Keywords: OpenCV namedWindow zoom pan
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# CvZoomWindow
+CvNameWindow class that adds zoom and pan functions to OpenCV's namedWindow
+
+![CvZoomWindow](https://github.com/ImagingSolution/CvZoomWindow/assets/29155364/b8ef1e5e-31ad-4735-9576-1efe370c01f0)
+
+## Install
+
+```
+pip install cvzoomwindow
+```
+
+
+
+## Sample
+
+```python
+import cv2
+import cvzoomwindow
+
+# Image loading
+img = cv2.imread("image.bmp")
+
+# Instance of CvZoomWindow class
+zw = cvzoomwindow.CvZoomWindow(
+    "Zoom Window" # Name of the window 
+    )
+
+# Displays an image
+zw.imshow(img)
+
+# Waits for a pressed key.
+cv2.waitKey()
+```
+
+
+
+## How to operate
+
+| mouse operation              | operation                    |
+| ---------------------------- | ---------------------------- |
+| Double click of left button  | Display the entire image     |
+| Double click of right button | Equal-size display of images |
+| Left button drag             | Moving Images                |
+| Mouse wheel up               | Zoom up                      |
+| Mouse wheel down             | Zoom down                    |
+
+
+
+## More information
+
+Blog) CvZoomWindow class
+
+https://imagingsolution.net/program/python/opencv-python/cvzoomwindow_class/
+
