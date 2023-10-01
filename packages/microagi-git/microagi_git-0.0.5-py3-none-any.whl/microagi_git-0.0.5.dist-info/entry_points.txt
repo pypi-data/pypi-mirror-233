@@ -1,0 +1,3 @@
+[console_scripts]
+agit=agit.main:async_main
+
