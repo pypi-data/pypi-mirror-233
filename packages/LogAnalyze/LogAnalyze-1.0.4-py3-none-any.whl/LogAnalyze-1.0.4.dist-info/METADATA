@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: LogAnalyze
+Version: 1.0.4
+Summary: Nonebot2 Log Extension plugin.
+Home-page: https://github.com/XKaguya/LogAnalyze
+Author: RedLeaves
+Author-email: rx700@vip.qq.com
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+License-File: License.txt
+Requires-Dist: matplotlib
+
+A open-source Pwntools Extern Functions.
+Usage:
+```
+from PwnModules import *
+```
