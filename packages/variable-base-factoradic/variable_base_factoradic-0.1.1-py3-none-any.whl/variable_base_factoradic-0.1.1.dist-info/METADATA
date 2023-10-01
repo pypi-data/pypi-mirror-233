@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: variable-base-factoradic
+Version: 0.1.1
+Summary: 
+Author: Soeren Wegener
+Author-email: wegener92@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# Variable-base Factoadic numbers
+
+Implementation of https://xkcd.com/2835/
+
+## Usage
+
+```python
+from variable_base_factoradic import convert
+
+# Convert from decimal to factoradic
+convert(5038)
+# Out: "654320"
+
+# Convert from factoradic to decimal
+convert("654320")
+# Out: 5038
+```
