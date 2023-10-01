@@ -1,0 +1,9 @@
+sphinx
+ipython
+myst_parser
+sphinx_copybutton
+sphinx_design
+sphinx-inline-tabs
+pydata-sphinx-theme
+
+numpy
