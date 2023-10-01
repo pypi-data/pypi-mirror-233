@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: py-nessus-pro
+Version: 0.5
+Summary: Python library for managing Nessus Professional.
+Home-page: https://github.com/Matbe34/py_nessus
+Author: Matbe34
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+Requires-Dist: slugify
+
+Python library for managing Nessus Professional that provides an interface to interactuate with the API allowing to create, launch, monitor and manage scans.
