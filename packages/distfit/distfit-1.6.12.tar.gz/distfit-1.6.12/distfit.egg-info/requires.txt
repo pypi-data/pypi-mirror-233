@@ -1,0 +1,9 @@
+packaging
+matplotlib>=3.5.2
+numpy
+pandas
+tqdm
+statsmodels
+scipy
+pypickle
+colourmap>=1.1.10
