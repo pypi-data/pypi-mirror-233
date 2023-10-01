@@ -1,0 +1,2 @@
+[console_scripts]
+dev = python_dev_cli.cli:dev_cli
