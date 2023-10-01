@@ -1,0 +1,13 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_dev_cli/__init__.py,sha256=49aYrHdDnJyyMAktb1GjXzfIMaqBcNET7ed4avy-x4s,206
+python_dev_cli/_version.py,sha256=KHTa0RC5wPjU8LLmYk-pCezTmTIrG71u8qQi0NKqY_c,274
+python_dev_cli/cli.py,sha256=m2xrNoI1ESGUYI0AWOaoHzTnN9J01m84vP8lMedUEWE,1730
+python_dev_cli/config.py,sha256=7kd-_Crc_Aj-Hat6aD4C_meh2H4xKBXoT9RxRXPtCzM,1308
+python_dev_cli/scripts.py,sha256=SYx8um09Ar8uUXogy5_-h3bmapCQ9KXqeO65UpvK9OU,15640
+python_dev_cli/settings.py,sha256=0pKvSOH1e58liquRO9Sna3bRwiXeAJHBQl0D_8VJyts,4590
+python_dev_cli-1.1.0.dist-info/LICENSE,sha256=E8uGAJTKxptNsCvcbZRyfF2lVeCKT2fxbE5L-VkeNBA,1499
+python_dev_cli-1.1.0.dist-info/METADATA,sha256=OTOQOmmo3xxAkWNCMHSSd18NwJpab7ZTUQBcxCq8txw,18328
+python_dev_cli-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+python_dev_cli-1.1.0.dist-info/entry_points.txt,sha256=Y3Df_S5nBfmJ58RpkGKikx33SGhYzsoPDisshqgYLMc,51
+python_dev_cli-1.1.0.dist-info/top_level.txt,sha256=8Y-YLfyvdBiid8Cz9y8l-WXKCgOETZ5DVe3b6HQAo6c,24
+python_dev_cli-1.1.0.dist-info/RECORD,,
