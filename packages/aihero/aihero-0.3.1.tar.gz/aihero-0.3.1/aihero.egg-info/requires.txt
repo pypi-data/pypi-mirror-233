@@ -1,0 +1,10 @@
+httpx
+openai
+validators
+streamlit
+python-dotenv
+fire
+flask
+validators
+pandas
+text-generation
