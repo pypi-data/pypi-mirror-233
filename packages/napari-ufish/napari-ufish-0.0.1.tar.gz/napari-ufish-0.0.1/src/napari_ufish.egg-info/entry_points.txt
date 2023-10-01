@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-ufish = napari_ufish:napari.yaml
