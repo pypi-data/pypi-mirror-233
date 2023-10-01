@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pdf2docx-converter
+Version: 1.0
+Summary: A Python package to convert PDFs to Word documents (DOCX).
+Author: Vasudev Jaiswal
+Author-email: vasujaiswal00@gmail.com
+Requires-Dist: PyMuPDF
+Requires-Dist: python-docx
+
