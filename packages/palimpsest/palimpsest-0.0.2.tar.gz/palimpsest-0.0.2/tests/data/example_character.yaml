@@ -1,0 +1,9 @@
+name: Jane Doert
+age: 39
+occupation: Engineer
+traits:
+  - Intelligent
+  - Introverted
+relationships:
+  - name: Mary Sue
+    relation: Wife
