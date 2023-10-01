@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+arikedb_tools/__init__.py
+arikedb_tools/command.py
+arikedb_tools/events.py
+arikedb_tools/exceptions.py
+arikedb_tools/sockets.py
+arikedb_tools/tables.py
+arikedb_tools.egg-info/PKG-INFO
+arikedb_tools.egg-info/SOURCES.txt
+arikedb_tools.egg-info/dependency_links.txt
+arikedb_tools.egg-info/top_level.txt
+tests/test_sockets.py

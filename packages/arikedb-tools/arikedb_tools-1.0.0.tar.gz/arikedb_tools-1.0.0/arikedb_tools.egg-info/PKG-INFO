@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: arikedb-tools
+Version: 1.0.0
+Summary: Arikedb Python Tools
+Home-page: https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools
+Author: Alejandro Alfonso
+Author-email: alejandroalfonso1994@gmail.com
+Description-Content-Type: text/markdown
+
+# Arikedb Python Tools
+
+
+[![pipeline status](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/badges/main/pipeline.svg)](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/-/commits/main)
+[![coverage report](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/badges/main/coverage.svg)](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/-/commits/main)
+[![Latest Release](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/-/badges/release.svg)](https://gitlab.com/arikedb1/languages-library-support/tools/arikedb-python-tools/-/releases)
