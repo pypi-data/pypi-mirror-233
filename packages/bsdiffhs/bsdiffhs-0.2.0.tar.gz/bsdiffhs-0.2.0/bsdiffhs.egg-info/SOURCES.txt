@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+bsdiffhs/__init__.py
+bsdiffhs/cli.py
+bsdiffhs/core.c
+bsdiffhs/format.py
+bsdiffhs/test_all.py
+bsdiffhs.egg-info/PKG-INFO
+bsdiffhs.egg-info/SOURCES.txt
+bsdiffhs.egg-info/dependency_links.txt
+bsdiffhs.egg-info/entry_points.txt
+bsdiffhs.egg-info/requires.txt
+bsdiffhs.egg-info/top_level.txt
