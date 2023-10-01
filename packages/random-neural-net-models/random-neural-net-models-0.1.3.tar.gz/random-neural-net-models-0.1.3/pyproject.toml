@@ -1,0 +1,57 @@
+[bumpver]
+current_version = "0.1.3"
+version_pattern = "MAJOR.MINOR.PATCH"
+
+[bumpver.file_patterns]
+"src/random_neural_net_models/__init__.py" = [
+    '__version__ = "{version}"',
+]
+"pyproject.toml" = [
+    'version = "{version}"$',
+]
+
+[build-system]
+requires = ["setuptools>=65.0","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "random-neural-net-models"
+version = "0.1.3"
+description = "My implementation of a random selection of artificial neural net based models."
+requires-python = ">=3.10"
+authors = [
+    {name = "eschmidt42", email="11818904+eschmidt42@users.noreply.github.com"}
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+keywords = ["neural-networks", "machine-learning", "deep-learning"]
+# dependencies = [] - now via requirements/*.in files
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+multi_line_output = 3
+line_length = 80
+include_trailing_comma = true
+profile = "black"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+include = ["random_neural_net_models"]  # package names should match these glob patterns (["*"] by default)
+exclude = ["tests"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
+
+[tool.pytest.ini_options]
+pythonpath = ["src/random_neural_net_models"]
+testpaths = ["src/tests"]
+python_files = ["test_*.py"]
+markers = [
+    "slow" # mark test as slow
+]
