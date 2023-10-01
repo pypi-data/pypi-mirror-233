@@ -1,0 +1,3 @@
+build
+dist
+verbe_irreg
