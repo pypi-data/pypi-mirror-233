@@ -1,0 +1,10 @@
+jinja2_fragments/__init__.py,sha256=UPoFlEJcE2gm6M8W8jZrcQDENDdd72mHzDtC9Vy1OUE,2519
+jinja2_fragments/fastapi.py,sha256=KWB9oS9cVC_Ot2xOr3oNT8xujIWiJ8xpRQ2j33uXsyU,1706
+jinja2_fragments/flask.py,sha256=xTfUAugmyxOrjYI4OsgojIcHLITbNaOKzSUvNTPTX7E,1459
+jinja2_fragments/quart.py,sha256=vzPSjS4mVzze4I0oJ1jOlwgBL4HXjgBEvWEUd0AcM94,1419
+jinja2_fragments/sanic.py,sha256=PWpK1Ag9GUFoIwV-nS8Stq7rtAWen-xvhmV340OzBhU,2591
+jinja2_fragments-1.1.0.dist-info/LICENSE,sha256=HOUottR3sB7qZC-pqk0xtZz5wovNniuUYOfQWeUppW8,1130
+jinja2_fragments-1.1.0.dist-info/METADATA,sha256=gPr2ZOiyGaBfrJxI1xkxu3s5fPpVOc0AuL-rm6sk4UU,7266
+jinja2_fragments-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+jinja2_fragments-1.1.0.dist-info/top_level.txt,sha256=6wYjGEsJk7vl1RnHVhPFVXxNEyrGvlDhYrM4ex_531M,17
+jinja2_fragments-1.1.0.dist-info/RECORD,,
