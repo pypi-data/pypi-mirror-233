@@ -1,0 +1,8 @@
+uc_browser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uc_browser/browser.py,sha256=LOXIrWkAargj4ZrqkAOWiNN-vExiLQNMpkGn9n3CdmQ,10319
+uc_browser/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uc_browser/infra/undetected_webdriver.py,sha256=cG1utZa3sROaTYoWapqUq8KMO_PSXi9fm2Y1q6P6cMk,2139
+uc_browser/infra/utils.py,sha256=vkIyC4d8AvXNzlQJp8_dACATghAIOugFSSrzFV-KirQ,1810
+uc_browser-0.3.7.dist-info/METADATA,sha256=COuBTT75H1PDq07lIq_e2oZY4Qn9E1C2zU34AT5mhEY,822
+uc_browser-0.3.7.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+uc_browser-0.3.7.dist-info/RECORD,,
