@@ -1,0 +1,108 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "dns-lexicon"
+version = "3.15.0"
+description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
+license = "MIT"
+keywords = [
+    "dns", "lexicon", "dns-lexicon", "dehydrated", "letsencrypt",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+authors = [
+    "Jason Kulatunga <jason@thesparktree.com>",
+    "Adrien Ferrand <ferrand.ad@gmail.com>",
+]
+readme = "README.rst"
+repository = "https://github.com/AnalogJ/lexicon"
+packages = [
+    { include = "lexicon", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+tldextract = ">=2"
+cryptography = ">=2"
+pyyaml = ">=3"
+requests = ">=2"
+beautifulsoup4 = ">=4"
+pyotp = ">=2"
+importlib-metadata = { version = ">=4.6", python = "<3.10" }
+# Optional dependencies required by some providers
+boto3 = { version = ">=1.28", optional = true }  # route53
+localzone = { version = ">=0.9.8", optional = true }  # localzone
+softlayer = {version = ">=5", optional = true}  # softlayer
+zeep = { version = ">=3", optional = true }  # gransy
+dnspython = { version = ">=2", optional = true }  # ddns, duckdns
+oci = {version = ">=2", optional = true}  # oci
+
+[tool.poetry.extras]
+route53 = ["boto3"]
+localzone = ["localzone"]
+softlayer = ["softlayer"]
+gransy = ["zeep"]
+ddns = ["dnspython"]
+duckdns = ["dnspython"]
+oci = ["oci"]
+# Extra "full" list must contain all other extras
+full = ["boto3", "localzone", "softlayer", "zeep", "dnspython", "oci"]
+
+[tool.poetry.group.dev.dependencies]
+esbonio = "*"
+packaging = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+vcrpy = "*"
+flake8 = "*"
+isort = "*"
+tox = ">=4"
+black = "*"
+mypy = "*"
+toml = "*"
+types-PyYAML = "*"
+types-pytz = "*"
+types-requests = "*"
+types-toml = "*"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "*"
+sphinx_rtd_theme = "*"
+toml = "*"
+
+[tool.poetry.scripts]
+lexicon = "lexicon._private.cli:main"
+
+[tool.pytest.ini_options]
+junit_family = "xunit2"
+filterwarnings = [
+    # Fail for any warning, except...
+    "error",
+    # CGI, a transitive dependency for zeep (used by Gransy provider)
+    # is deprecated. Let zeep manage that by Python 3.13.
+    "ignore:'cgi' is deprecated:DeprecationWarning",
+    # Ignore our own deprecation warnings.
+    "ignore:Method execute\\(\\) is deprecated:DeprecationWarning",
+]
+
+[tool.mypy]
+show_error_codes = true
+
+[tool.isort]
+profile = "black"
