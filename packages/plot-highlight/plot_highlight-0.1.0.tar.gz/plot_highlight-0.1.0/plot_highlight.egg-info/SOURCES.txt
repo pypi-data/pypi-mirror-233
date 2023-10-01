@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+plot_highlight/__init__.py
+plot_highlight/highlightplot.py
+plot_highlight.egg-info/PKG-INFO
+plot_highlight.egg-info/SOURCES.txt
+plot_highlight.egg-info/dependency_links.txt
+plot_highlight.egg-info/requires.txt
+plot_highlight.egg-info/top_level.txt

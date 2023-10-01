@@ -1,0 +1,24 @@
+[project]
+name = "plot_highlight"
+version = "0.1.0"
+description = "plot_highlight is a Python visualization library based on seaborn."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+  {name = "SHIRO", email = "shiro46mt@gmail.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Matplotlib",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+  "matplotlib",
+  "seaborn",
+]
+
+[project.urls]
+Repository = "https://github.com/shiro46mt/plot-highlight.git"
