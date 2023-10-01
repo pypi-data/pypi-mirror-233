@@ -1,0 +1,7 @@
+README.md
+setup.py
+data_transformation_tc.egg-info/PKG-INFO
+data_transformation_tc.egg-info/SOURCES.txt
+data_transformation_tc.egg-info/dependency_links.txt
+data_transformation_tc.egg-info/requires.txt
+data_transformation_tc.egg-info/top_level.txt
