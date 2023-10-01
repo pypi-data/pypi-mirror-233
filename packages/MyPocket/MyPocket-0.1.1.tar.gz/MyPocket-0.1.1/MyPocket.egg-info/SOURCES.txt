@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+MyPocket/DataPrep.py
+MyPocket/__init__.py
+MyPocket/utils.py
+MyPocket.egg-info/PKG-INFO
+MyPocket.egg-info/SOURCES.txt
+MyPocket.egg-info/dependency_links.txt
+MyPocket.egg-info/top_level.txt
