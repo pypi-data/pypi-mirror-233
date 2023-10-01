@@ -1,0 +1,4 @@
+[console_scripts]
+koodu=src.scripts.main:main
+koodu-gen=src.scripts.main:main
+
