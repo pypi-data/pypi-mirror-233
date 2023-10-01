@@ -1,0 +1,6 @@
+setup.py
+stipspy.egg-info/PKG-INFO
+stipspy.egg-info/SOURCES.txt
+stipspy.egg-info/dependency_links.txt
+stipspy.egg-info/requires.txt
+stipspy.egg-info/top_level.txt
