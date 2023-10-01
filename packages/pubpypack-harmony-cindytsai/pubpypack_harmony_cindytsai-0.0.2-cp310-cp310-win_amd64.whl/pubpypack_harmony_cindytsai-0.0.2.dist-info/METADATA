@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pubpypack-harmony-cindytsai
+Version: 0.0.2
+Summary: This is my first python package.
+Home-page: https://github.com/cindytsai/MyPythonPackage
+Author: Shin-Rong Tsai
+Author-email: "Shin-Rong Tsai" <turquoisea.tsai@gmail.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: termcolor <3,>=2.0.0
+
+# MyPythonPackage
+
+My first Python package following the book _Publishing Python Packages_.
+
+## Installation
+```shell
+python -m pip install my_python_package
+```
