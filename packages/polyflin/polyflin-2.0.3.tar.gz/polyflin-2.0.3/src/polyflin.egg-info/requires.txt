@@ -1,0 +1,4 @@
+rdkit
+numpy
+panda
+networkx
