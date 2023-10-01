@@ -1,0 +1,9 @@
+License.txt
+LogAnalyze.py
+README.md
+setup.py
+LogAnalyze.egg-info/PKG-INFO
+LogAnalyze.egg-info/SOURCES.txt
+LogAnalyze.egg-info/dependency_links.txt
+LogAnalyze.egg-info/requires.txt
+LogAnalyze.egg-info/top_level.txt
