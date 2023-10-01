@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: muiscaenergy-common
+Version: 0.0.1
+Summary: common functions for muiscaenergy projects
+Home-page: https://github.com/cervantesjairo/ISO
+Author: Jairo Hernando Cervantes Garcia
+License: MIT license
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: timezonefinder (>=6.2.0)
+Requires-Dist: pandas (>=1.5.3)
+Provides-Extra: dev
+Requires-Dist: pytest (>=7.0) ; extra == 'dev'
+Requires-Dist: twine (>=4.0.2) ; extra == 'dev'
+
+# ISO
+Independent System Operator (ISO) and Regional Transmission Organizations (RTO) data
