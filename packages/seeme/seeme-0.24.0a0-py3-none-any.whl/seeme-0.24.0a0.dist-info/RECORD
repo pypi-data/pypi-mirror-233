@@ -1,0 +1,8 @@
+seeme/__init__.py,sha256=4wrDOyA07V_sf2IkpLItyLRYkErmF8M0bNkOs9jTHSU,100
+seeme/seeme_client.py,sha256=0xi4x2Dgw4f9sAQ2FhutvkSZgzXqvRg50GEbD4QSbWk,38541
+seeme/types.py,sha256=9mPH8MJCqgCQ9uLfvMEyPCLTw-yVfIWPdwqNWUPrNgw,6757
+seeme/version.py,sha256=D0Csj3OqHA1NVkgARdcQ9lMMRRhsiomdF7zN2BoOTI4,50
+seeme-0.24.0a0.dist-info/METADATA,sha256=YVS76uY_-SxryOc6T9-xnUtNQ4fAS3te0qIl_aIz9I8,5481
+seeme-0.24.0a0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+seeme-0.24.0a0.dist-info/top_level.txt,sha256=zmYNnaqF9YibKAmuRbPKM2JHoUeo1xYiAs0wQouW2PA,6
+seeme-0.24.0a0.dist-info/RECORD,,
