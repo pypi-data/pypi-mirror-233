@@ -1,0 +1,29 @@
+[project]
+name = "kirami-plugin-sentry"
+version = "0.1.0"
+description = "在 Sentry.io 上进行 KiramiBot 服务日志查看、错误处理，以及群聊消息提醒"
+authors = [
+    { name = "Komorebi", email = "mute231010@gmail.com" },
+]
+dependencies = [
+    "kiramibot>=0.3.2",
+    "sentry-sdk>=1.31.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pre-commit>=3.4.0",
+    "ruff>=0.0.291",
+    "black>=23.9.1",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
