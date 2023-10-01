@@ -1,0 +1,3 @@
+include jerryrigserialver/requirements.txt
+include jerryrigserialver/thirdparty.json
+include jerryrigserialver/README.MD
