@@ -1,0 +1,50 @@
+
+<a href="../index.html">Problem Index</a>
+
+<h1> The Stolen Diamond </h1>
+A logic problem by <b>Brandon Bennett</b>
+<p>
+
+Your problem is to use <i>propositional logic</i> to represent the 
+following example of reasoning, and use 
+the <i>Prover9</i> theorem prover to prove that the
+reasoning is valid.
+<p>
+You should use the following template file to create your
+Prover9 encoding of the problem:<br>
+<font size="+2">
+<a href="diamond.p9"><b><tt>diamond.p9</tt></b></a>
+</font>
+<p>
+<b>Marks: </b>There are two marks for each sentence,
+making a total of <b>10</b> marks.
+
+
+
+<h2>Problem Statement</h2>
+
+<b>A1:</b> The diamond has been stolen!
+<p>
+<b>A2:</b> If the diamond has been stolen, a thief got into the house.
+<p>
+<b>A3:</b> If a thief got in, either the door was open or the window was smashed.
+<p>
+<b>A4:</b> The window is not smashed.
+<p>
+<b>Goal:</b> The door was open.
+<p>
+
+
+<h3>Non-Logical Vocabulary</h3>
+
+<b>Propositional Constants:</b> <tt>DiamondStolen</tt>, <tt>ThiefInHouse</tt>, <tt>DoorOpen</tt>, <tt>WindowSmashed</tt>
+
+<h4>Notes:</h4>
+<ul>
+<li>
+	               <b>A4</b> is in the present tense, whereas the other
+	               assumptions are in the past tense. We cannot easily
+	               represent tenses in propositional logic.
+	               Does this matter?
+	               </li>
+</ul>

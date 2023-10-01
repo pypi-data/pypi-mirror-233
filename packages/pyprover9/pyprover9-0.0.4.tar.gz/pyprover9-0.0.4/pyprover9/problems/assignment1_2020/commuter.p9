@@ -1,0 +1,99 @@
+
+% Saved by Prover9-Mace4 Version 0.5, December 2007.
+% Last line is a lie. It is there to stop the Prover9-Mace4
+% GUI giving a warning when the file is loaded.
+% This file was actually reated by BB Prover9 Autograder
+
+set(ignore_option_dependencies). % GUI handles dependencies
+
+if(Prover9). % Options for Prover9
+  clear(auto).
+  clear(auto_setup).
+  clear(auto_limits).
+  clear(auto_denials).
+  clear(auto_inference).
+  clear(auto_process).
+  assign(eq_defs, pass).
+  assign(max_seconds, 10).
+  assign(max_weight, 2147483647).
+  assign(sos_limit, -1).
+  clear(predicate_elim).
+  set(binary_resolution).
+  set(paramodulation).
+  set(factor).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+%% The Commuter
+%% A logic puzzle by Brandon Bennett
+%%
+%% Prover9 file: commuter.p9
+
+%% To solve this first-order logic proof problem, you must replace
+%% each of the assumption place-holders __An__ and the goal place-holder
+%% __G__, with an approapriate first-order formula that captures the
+%% meaning of the given English sentence.
+%% 
+%% Then run Prover9. 
+%% If your representations are correct, it should find a Proof.
+%% You can also check your representations using the Gradescope Autograder.
+
+%% In writing the formulae, you should only use the following vocabulary:
+%%
+%% Logical symbols:           &  |  -  ->   <->  =  all  exists
+%% Brackets and separators:   ( )  [  ]  ,  .
+%% Variables:                 Whatever you like, but must be quantified.
+%%
+%% Propositions: GoToWork, Foot, Cycle, Bus, Raining, Cloudy, Outside, Hat, HairWet, HearWell, SplashedByCars
+%%
+%% Use only the specified vocabulary, otherwise the autograder will not work.
+
+
+
+%% A1: "To get to work I either go by foot or by cycling or by bus."
+
+        __A1__.
+
+%% A2: "If it rains when I'm outside without my hat,  my hair gets wet."
+
+        __A2__.
+
+%% A3: "If I'm wearing my hat or have wet hair, I can't hear well."
+
+        __A3__.
+
+%% A4: "If I'm outside when it is raining and I can't hear well, I get splashed by cars."
+
+        __A4__.
+
+%% A5: "When I go to work on foot or on my bike I am outside."
+
+        __A5__.
+
+%% A6: "It always rains when it is cloudy and I don't cycle when it rains."
+
+        __A6__.
+
+%% A7: "I always wear my hat when I cycle, but not any other time."
+
+        __A7__.
+
+%% A8: "When going to work, I make sure I never get splashed by cars."
+
+        __A8__.
+
+
+end_of_list.
+
+formulas(goals).
+
+%% GOAL: "If it is cloudy when I am going to work, I go by bus."
+
+          __G__.
+
+end_of_list.

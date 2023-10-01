@@ -1,0 +1,73 @@
+
+<a href="../index.html">Problem Index</a>
+
+<h1> Honey Crumpets </h1>
+A logic problem by <b>Brandon Bennett</b>
+<p>
+
+Your problem is to use <i>first-order logic</i> to represent the 
+following example of reasoning, and use 
+the <i>Prover9</i> theorem prover to prove that the
+reasoning is valid.
+<p>
+You should use the following template file to create your
+Prover9 encoding of the problem:<br>
+<font size="+2">
+<a href="honey_crumpets.p9"><b><tt>honey_crumpets.p9</tt></b></a>
+</font>
+<p>
+<b>Marks: </b>There are two marks for each sentence,
+making a total of <b>36</b> marks.
+
+<p><b>Outline: </b>The domain is crumpets. I have four crumpets on a plate. Two are honey crumpets and the other two just butter. I can eat two crumpets but must leave two for my freind. Of course, I want to have at least one of the Honey crumpets. But unfortunately, the warm honey has run into the crumpets, and I can't tell, or remember, which are the honey ones. :( However, I do remember that the two honey crumpets were next to each other.
+
+<h2>Problem Statement</h2>
+
+<b>A1:</b> All crumpets have butter or honey on them.
+<p>
+<b>A2:</b> No crumpet has both honey and butter.
+<p>
+<b>A3:</b> There are two honey crumpets.
+<p>
+<b>A4:</b> There are not three different crumpets with honey on them.
+<p>
+<b>A5:</b> There are two buttered crumpets.
+<p>
+<b>A6:</b> There are not three different crumpets with butter on them.
+<p>
+<b>A7:</b> Any two different crumpets are either next to each other or diagonally opposite.
+<p>
+<b>A8:</b> No two crumpets are next to each other and diagonally opposite.
+<p>
+<b>A9:</b> No crumpet is next to itself.
+<p>
+<b>A10:</b> No crumpet is diagonally opposite itself
+<p>
+<b>A11:</b> If any crumpet A is next to any crumpet B then B is also next to A.
+<p>
+<b>A12:</b> If any crumpet A is diagonally opposite any crumpet B then B is also diagonally opposite A.
+<p>
+<b>A13:</b> Every crumpet is diagonally opposite another crumpet.
+<p>
+<b>A14:</b> Every crumpet is next to two different crumpets.
+<p>
+<b>A15:</b> There are two honey crumpets which are next to each other.
+<p>
+<b>A16:</b> I ate two diagonally opposite crumpets.
+<p>
+<b>A17:</b> If a crumpet A is diagonally opposite another crumpet B, and B is diagonally opposite another crumpet C, then A is C.
+<p>
+<b>Goal:</b> I ate a honey crumpet.
+<p>
+
+
+<h3>Non-Logical Vocabulary</h3>
+
+<b>Predicates:</b> <tt>Honey</tt>, <tt>Butter</tt>, <tt>NextTo</tt>, <tt>Diagonal</tt>, <tt>Ate</tt>
+
+<h4>Notes:</h4>
+<ul>
+<li>
+	               The NextTo and Diagonal relations are both <b>anti-relfexive</b> and <b>symmetric</b>.
+	               </li>
+</ul>

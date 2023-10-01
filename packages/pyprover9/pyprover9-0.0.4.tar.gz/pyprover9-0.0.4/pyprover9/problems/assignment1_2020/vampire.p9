@@ -1,0 +1,152 @@
+
+% Saved by Prover9-Mace4 Version 0.5, December 2007.
+% Last line is a lie. It is there to stop the Prover9-Mace4
+% GUI giving a warning when the file is loaded.
+% This file was actually reated by BB Prover9 Autograder
+
+set(ignore_option_dependencies). % GUI handles dependencies
+
+if(Prover9). % Options for Prover9
+  clear(auto).
+  clear(auto_setup).
+  clear(auto_limits).
+  clear(auto_denials).
+  clear(auto_inference).
+  clear(auto_process).
+  assign(eq_defs, pass).
+  assign(max_seconds, 10).
+  assign(max_weight, 2147483647).
+  assign(sos_limit, -1).
+  clear(predicate_elim).
+  set(binary_resolution).
+  set(paramodulation).
+  set(factor).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+%% The Missing Reflection
+%% A logic puzzle by Brandon Bennett
+%%
+%% Prover9 file: vampire.p9
+
+%% To solve this first-order logic proof problem, you must replace
+%% each of the assumption place-holders __An__ and the goal place-holder
+%% __G__, with an approapriate first-order formula that captures the
+%% meaning of the given English sentence.
+%% 
+%% Then run Prover9. 
+%% If your representations are correct, it should find a Proof.
+%% You can also check your representations using the Gradescope Autograder.
+
+%% In writing the formulae, you should only use the following vocabulary:
+%%
+%% Logical symbols:           &  |  -  ->   <->  =  all  exists
+%% Brackets and separators:   ( )  [  ]  ,  .
+%% Variables:                 Whatever you like, but must be quantified.
+%%
+%% Constants: sir_Hugh, lady_Anne, dr_Burley, master_Bram, blue, purple, black%% Predicates: LivesInAbbeyHouse, Aristocrat, Logician, Shy, Vain, Vampire%% Relations: Loves, IsClevererThan, WasWearingColour, SawInMirror
+%%
+%% Use only the specified vocabulary, otherwise the autograder will not work.
+
+
+
+%% A1: "The only people who live in Abbey House are: 
+%%       Sir Hugh, Lady Anne,  Dr Burley and Master Bram."
+
+        __A1__.
+
+%% A2: "Sir Hugh and Lady Anne are aristocrats."
+
+        __A2__.
+
+%% A3: "Aristocrats only wear blue or purple and never study logic."
+
+        __A3__.
+
+%% A4: "Sir Hugh loves nobody except himself."
+
+        __A4__.
+
+%% A5: "Lady Anne loves everyone who is cleverer than Sir Hugh"
+
+        __A5__.
+
+%% A6: "At least one of the inhabitants of Abbey House is a logician."
+
+        __A6__.
+
+%% A7: "Logicians are always cleverer than those who do not study logic."
+
+        __A7__.
+
+%% A8: "Nobody in Abbey House is cleverer than Dr Burley."
+
+        __A8__.
+
+%% A9: "Logicians who are loved by aristocrats are always shy."
+
+        __A9__.
+
+%% A10: "Nobody loves a shy vampire."
+
+        __A10__.
+
+%% A11: "Master Bram never wears any colour other than black."
+
+        __A11__.
+
+%% A12: "Black is not the same as blue or puple."
+
+        __A12__.
+
+%% A13: "Dr Burley never wears the same colour as Master Bram."
+
+        __A13__.
+
+%% A14: "Lady Anne never wears the same color as anyone else in Abbey House."
+
+        __A14__.
+
+%% A15: "Aristocrats are always vain unless they are in love with someone 
+%%         who is not an Aristocrat."
+
+        __A15__.
+
+%% A16: "Those who are vain always look at themselves in mirrors."
+
+        __A16__.
+
+%% A17: "Vampires cannot be seen in mirrors. And if something has no reflection
+%%       it must be a vampire."
+
+        __A17__.
+
+%% A18: "Dr Burley saw someone dressed in black in the mirror.
+%%          It must have been someone who lives in Abbey House"
+
+        __A18__.
+
+%% A19: "When she looked in the mirror, Lady Anne saw people wearing only
+%%          two different colours of clothing. *"
+
+        __A19__.
+
+%% A20: "Nobody in Abbey House was naked. **"
+
+        __A20__.
+
+
+end_of_list.
+
+formulas(goals).
+
+%% GOAL: "In Abbey House lives one and only one vampire, whose name is X ! ***"
+
+          __G__.
+
+end_of_list.

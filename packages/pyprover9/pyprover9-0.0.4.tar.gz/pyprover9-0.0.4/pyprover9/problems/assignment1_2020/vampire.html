@@ -1,0 +1,91 @@
+
+<head>
+<style>
+table, th, td { border: 2px solid black; 
+                border-collapse: separate;}
+</style>
+</head>
+
+<body>
+<a href="problem_index.html" style="text-decoration:none">
+<tt>Problem Set: assignment1</tt></a>
+
+<h1> The Missing Reflection </h1>
+A logic puzzle by <b>Brandon Bennett</b>
+<p>
+
+Your problem is to use <i>first-order logic</i> to represent the 
+following example of reasoning, and use 
+the <i>Prover9</i> theorem prover to prove that the
+reasoning is valid.
+<p>
+Use the following template file to create your
+Prover9 encoding of the problem:
+<font size="+1">
+<a href="vampire.p9"><b><tt>vampire.p9</tt></b></a>
+</font>
+<p>
+<b>Marks: </b>There are two marks for each sentence,
+making a total of <b>42</b> marks.
+
+<p><b>Outline: </b>
+                 One dark and stormy night the residents of Abbey House, Whitby were sitting
+                 down for an elaborate but unappetising dinner in the large dining hall. 
+                 Sir Hugh Cholmeley,
+                 Lady Anne, Master Bram and Dr Burely all looked pale and unwell.
+                 None had slept well for weeks.
+                 On the wall next to the table was a large mirror, which reflected
+                 the scene of the meal and the diners. Can you use knowledge
+                 representation in first-order logic and automated reasoning
+                 to find who or what is causing sleepless nights at Abbey House?     
+                 
+
+<h2>Problem Statement</h2>
+
+<table cellpadding=6><tr bgcolor=#DDFFDD><td align=right><b>A1</b></td> <td>The only people who live in Abbey House are: 
+Sir Hugh, Lady Anne,  Dr Burley and Master Bram.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A2</b></td> <td>Sir Hugh and Lady Anne are aristocrats.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A3</b></td> <td>Aristocrats only wear blue or purple and never study logic.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A4</b></td> <td>Sir Hugh loves nobody except himself.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A5</b></td> <td>Lady Anne loves everyone who is cleverer than Sir Hugh</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A6</b></td> <td>At least one of the inhabitants of Abbey House is a logician.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A7</b></td> <td>Logicians are always cleverer than those who do not study logic.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A8</b></td> <td>Nobody in Abbey House is cleverer than Dr Burley.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A9</b></td> <td>Logicians who are loved by aristocrats are always shy.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A10</b></td> <td>Nobody loves a shy vampire.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A11</b></td> <td>Master Bram never wears any colour other than black.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A12</b></td> <td>Black is not the same as blue or puple.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A13</b></td> <td>Dr Burley never wears the same colour as Master Bram.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A14</b></td> <td>Lady Anne never wears the same color as anyone else in Abbey House.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A15</b></td> <td>Aristocrats are always vain unless they are in love with someone 
+  who is not an Aristocrat.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A16</b></td> <td>Those who are vain always look at themselves in mirrors.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A17</b></td> <td>Vampires cannot be seen in mirrors. And if something has no reflection
+it must be a vampire.</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A18</b></td> <td>Dr Burley saw someone dressed in black in the mirror.
+   It must have been someone who lives in Abbey House</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A19</b></td> <td>When she looked in the mirror, Lady Anne saw people wearing only
+   two different colours of clothing. *</td></tr>
+<tr bgcolor=#DDFFDD><td align=right><b>A20</b></td> <td>Nobody in Abbey House was naked. **</td></tr>
+<tr bgcolor=#DDFFFF><td align=right><b>Goal</b></td> <td>In Abbey House lives one and only one vampire, whose name is X ! ***</td></tr>
+</table>
+
+<h3>Non-Logical Vocabulary</h3>
+
+<b>Constants:</b> <font size="+1"><tt>sir_Hugh</tt></font>, <font size="+1"><tt>lady_Anne</tt></font>, <font size="+1"><tt>dr_Burley</tt></font>, <font size="+1"><tt>master_Bram</tt></font>, <font size="+1"><tt>blue</tt></font>, <font size="+1"><tt>purple</tt></font>, <font size="+1"><tt>black</tt></font><p><b>Predicates:</b> <font size="+1"><tt>LivesInAbbeyHouse</tt></font>, <font size="+1"><tt>Aristocrat</tt></font>, <font size="+1"><tt>Logician</tt></font>, <font size="+1"><tt>Shy</tt></font>, <font size="+1"><tt>Vain</tt></font>, <font size="+1"><tt>Vampire</tt></font><p><b>Relations:</b> <font size="+1"><tt>Loves</tt></font>, <font size="+1"><tt>IsClevererThan</tt></font>, <font size="+1"><tt>WasWearingColour</tt></font>, <font size="+1"><tt>SawInMirror</tt></font><p>
+<h4>Notes:</h4>
+<ul>
+<li>* The mirror was old and the dining room was dimly lit
+                         by flickering candles. She could see the reflection
+                        of the group of diners, but could not tell how many
+                        there were, or what each was wearing. However, she could see
+                        that among the whole group, only two different colours
+                        were being worn.
+                    </li>
+<li>** You cannot express this directly in the given non-logical vocabulary. Instead you
+                     should write a simple formula that it directly implies, which can be expressed
+                     in the given vocabulary.</li>
+<li>*** For the goal, you should give a proposition asserting 
+                        this for a specific person X. This goal should be provable from
+                        the assumptions, if they are represented correctly.</li>
+</ul>
