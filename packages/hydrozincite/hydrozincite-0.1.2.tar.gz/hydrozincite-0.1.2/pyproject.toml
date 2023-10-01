@@ -1,0 +1,70 @@
+[project]
+name = "hydrozincite"
+version = "0.1.2"
+description = "Hydrozincite - Zn₅(CO₃)₂(OH)₆"
+keywords = [
+    "git",
+    "static",
+]
+authors = [
+    { name = "HS-157", email = "hs-157@lett.re" },
+]
+dependencies = [
+    "rich>=13.5.2",
+    "GitPython>=3.1.36",
+    "Jinja2>=3.1.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Repository = "https://forge.dotslashplay.it/HS-157/Hydrozincite"
+
+[project.scripts]
+hydrozincite = "hydrozincite.main:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.flake8]
+max-line-length = 88
+count = true
+show-source = true
+statistics = true
+
+[tool.isort]
+profile = "black"
+
+[tool.pdm.scripts.black-check]
+cmd = "black src/hydrozincite --safe --check --diff --color"
+
+[tool.pdm.scripts.black-run]
+cmd = "black src/hydrozincite"
+
+[tool.pdm.scripts.flake8-run]
+cmd = "flake8 src/hydrozincite"
+
+[tool.pdm.scripts.isort-check]
+cmd = "isort --atomic src/hydrozincite --check --diff --color"
+
+[tool.pdm.scripts.isort-run]
+cmd = "isort --atomic src/hydrozincite"
+
+[tool.pdm.build]
+source-includes = [
+    "templates/",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=23.9.1",
+    "isort[colors]>=5.12.0",
+    "flake8>=6.1.0",
+    "Flake8-pyproject>=1.2.3",
+]

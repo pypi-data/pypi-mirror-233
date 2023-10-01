@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html class="pure-g">
+	<head>
+		<link rel="stylesheet" href="static/pure-min.css">
+		<link rel="stylesheet" href="static/style.css">
+		<meta charset="UTF-8">
+		<title>{{ title }}</title>
+	</head>
+<body class="pure-u-md-3-5">
+
+
+   <h1 class="splash-head">{{ title }}</h1>
+
+   {% for repo in repositories %}
+   <div class="pure-g repo bg-color" id="{{ repo.parent / repo.name }}">
+	   <div class="title pure-u-1">
+		<a href="#{{ repo.parent / repo.name }}"><h2 class="pure-u-1">> {{ repo.parent / repo.name }}</h2></a>
+	   	{% if repo.description %}
+	   	<h3 class="pure-u-1">{{ repo.description }}</h3>
+	   	{% endif %}
+	   </div>
+	   	{% if repo.url %}
+		<a class="url pure-u-1" href="{{ repo.url }}">{{ repo.url }}</a>
+	   	{% endif %}
+		<code class="clone">git clone {{ clone_url }}/{{ repo.parent / repo.path.name }}</code>
+	   {% if repo.readme %}
+		<details class="readme pure-u-1">
+		<summary><div class="pure-button">Readme</div></summary>
+		<code>
+			<pre>{{ repo.readme }}</pre>
+		</code>
+		</details>
+	   {% endif %}
+	   <div class="last-modif pure-u-1">{{ repo.last_modif }}</div>
+  </div>
+  {% endfor %}
+
+   <footer class="bg-color">
+      <div>{{ now }}</div>
+      <div><a href="https://forge.dotslashplay.it/HS-157/Hydrozincite">Hydrozincite - Zn₅(CO₃)₂(OH)₆</a></div>
+   </footer>
+</body>
+</html> 

@@ -1,0 +1,120 @@
+html {
+  width: 80%;
+  max-width: 80%;
+  margin: auto;
+  font-family: monospace;
+}
+
+body {
+  background-color: #212529;
+  color: #f8f9fa;
+  margin: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.repo {
+  padding: 1%;
+}
+
+.bg-color:nth-child(even) {
+  background-color: #181a1b;
+}
+
+.splash-head {
+  border-radius: 5px;
+  border: 3px solid white;
+  font-size: 3em;
+  font-weight: 100;
+  margin: 3% auto;
+  padding: 1em 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.splash-head {
+  margin: 5% 0;
+}
+
+.title {
+  margin-bottom: 1%;
+}
+
+.title a {
+  color: inherit;
+}
+
+.title h2 {
+  border-bottom: 3px solid white;
+  padding: 1% 0;
+  margin: 0;
+}
+
+.title h3 {
+  font-weight: lighter;
+  text-align: center;
+  margin: 1% 0;
+}
+
+h4 {
+  font-weight: lighter;
+  text-align: center;
+  margin: 1% 0;
+}
+
+.url {
+  text-decoration: none;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.clone {
+  text-align: center;
+  margin: 1% auto;
+  font-weight: bold;
+}
+
+.last-modif {
+  margin: 10px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.readme summary {
+  text-align: center;
+  padding: .5em;
+  list-style: none;
+}
+
+.readme summary div {
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: inherit;
+}
+
+.repo:nth-child(even) > .readme summary div {
+  background-color: #212529;
+}
+
+.repo:nth-child(odd) > .readme summary div {
+  background-color: #181a1b;
+}
+
+.readme code pre{
+  border: 1px solid #f8f9fa;
+  border-radius: 5px;
+  padding: .5em;
+  font-size: small;
+}
+
+footer {
+  text-align: center;
+  padding: 1% 0;
+}
+
+footer div {
+  padding: 1%;
+}
