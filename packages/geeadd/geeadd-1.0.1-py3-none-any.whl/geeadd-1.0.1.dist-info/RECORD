@@ -1,0 +1,15 @@
+geeadd/__init__.py,sha256=GdxgIFrmDq9jlFpcbY1AAR2TqpzDfuzyDMCk2IRuj5I,119
+geeadd/acl_changer.py,sha256=dqlTF7n0ydZ-CbWVQdoBga2jNizWr5lKdvG8Dtv-4Sc,5045
+geeadd/app2script.py,sha256=WKrMO6b6ZGtmaJtREU5708i1Lvmm_QP21eGy4wFPjOE,2602
+geeadd/batch_copy.py,sha256=yQF8Hj1anJZGyF2BOjMgzRuww7Gq-ie8TRnEyrfOCJg,10219
+geeadd/batch_mover.py,sha256=uPoYyuOBHOEj2FVTO2TqNgPObjtxYbGQAoGkf8A_8rM,10098
+geeadd/ee_del_meta.py,sha256=kSNL6UPH11pJefyurob3P46C08f6YEzw0BYGYkVINTk,2562
+geeadd/ee_report.py,sha256=UA6o2lCgibcudtGmPYjx2K1FNcPuoavBgGXk5s891js,9849
+geeadd/geeadd.py,sha256=HGmPNIeFDwNBh3f8_DwqxKhiUIipWYEEUGvGic3zdqw,31306
+geeadd-1.0.1.data/data/LICENSE,sha256=WboNNvce4atWZRcZ-7OlfgnrjBhNy3neWif5vcEHIYM,11548
+geeadd-1.0.1.dist-info/LICENSE,sha256=WboNNvce4atWZRcZ-7OlfgnrjBhNy3neWif5vcEHIYM,11548
+geeadd-1.0.1.dist-info/METADATA,sha256=ULVEA0Uo5sH5c2HjNliC67piCf8FAlYxoGXFMV7dqT8,3889
+geeadd-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+geeadd-1.0.1.dist-info/entry_points.txt,sha256=ro4Jy-wQmsL37UCC4RQJFHtKdI4kDoXCXSfR6iTLmAc,47
+geeadd-1.0.1.dist-info/top_level.txt,sha256=Q-KMNtjtkTw71wT4CaETO3kEDQUZNpS67LdLg5JlnlM,7
+geeadd-1.0.1.dist-info/RECORD,,
