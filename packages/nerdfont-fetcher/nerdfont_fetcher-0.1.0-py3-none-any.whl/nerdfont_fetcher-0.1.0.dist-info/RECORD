@@ -1,0 +1,9 @@
+nerdfont_fetcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nerdfont_fetcher/cli.py,sha256=G1IqlrpYUodcIpV8opUL2hfGsz1RODHumnq_9UBs4_Q,2491
+nerdfont_fetcher/data_source.py,sha256=J2ZzKWVmGzx4diU6VQKx3uZlN6yl5z_L88XJDqRqCEU,1539
+nerdfont_fetcher/font_manager.py,sha256=oztw_zg2dKAfXXy7fWrYfo9tbp67uuOIzvxm6o7Tex4,2753
+nerdfont_fetcher-0.1.0.dist-info/LICENSE,sha256=rAYWb_oQMX9Dj_DAg76yj_9H3N4Y3536-vf-8n5zGdg,1072
+nerdfont_fetcher-0.1.0.dist-info/METADATA,sha256=i8Q0j3_9u7rX1F4d-op4-wANZyw9hvyL_44b3ku1vRo,912
+nerdfont_fetcher-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+nerdfont_fetcher-0.1.0.dist-info/entry_points.txt,sha256=CQFR-hPGXkjMAVRo3UCYiqMajK3U231Wx0IAAbWkRIA,54
+nerdfont_fetcher-0.1.0.dist-info/RECORD,,

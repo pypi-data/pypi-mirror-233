@@ -1,0 +1,3 @@
+[console_scripts]
+nerdfont=nerdfont_fetcher.cli:main
+
