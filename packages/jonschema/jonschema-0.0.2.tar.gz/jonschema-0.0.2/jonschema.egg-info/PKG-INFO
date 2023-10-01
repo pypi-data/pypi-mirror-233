@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: jonschema
+Version: 0.0.2
+Summary: Package de validation de variable
+Home-page: UNKNOWN
+Author: BILONG NTOUBA Célestin
+Author-email: bilongntouba.celestin@gmail.com
+License: UNKNOWN
+Keywords: python,jon,schema,validation
+Platform: UNKNOWN
+
+Il s'agit d'un package permettant de valider tous types de varaible sauf les fichiers à l'aide d'un schema
+
