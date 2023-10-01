@@ -1,0 +1,7 @@
+setup.py
+Codetools-byfille/__init__.py
+Codetools-byfille/rc_unzip.py
+Codetools_byfille_byfille.egg-info/PKG-INFO
+Codetools_byfille_byfille.egg-info/SOURCES.txt
+Codetools_byfille_byfille.egg-info/dependency_links.txt
+Codetools_byfille_byfille.egg-info/top_level.txt
