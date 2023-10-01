@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: MyPocket
+Version: 0.1.0
+Summary: Collect some interesting computation tools
+Home-page: https://github.com/yuemolin/ToolBox
+Author: Molin Yue
+Author-email: yuemolin@umich.edu
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MyPocket
+This is a python package including useful tools 
