@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "polyrepo"
+version = "0.2.3"
+description = "Keep repos organized locally the same as on GitLab"
+authors = ["Steampunk Wizard <polyrepo@steampunkwizard.ca>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wizlib = "^0.9.3"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.3.1"
+pycodestyle = "^2.11.0"
+autopep8 = "^2.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+polyrepo = "polyrepo.handler:main"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+format = "{base}"
