@@ -1,0 +1,2 @@
+[console_scripts]
+mcrender = mcrender._cli:main
