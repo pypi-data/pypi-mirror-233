@@ -1,0 +1,7 @@
+setup.py
+searchxplorer/__init__.py
+searchxplorer/search.py
+searchxplorer.egg-info/PKG-INFO
+searchxplorer.egg-info/SOURCES.txt
+searchxplorer.egg-info/dependency_links.txt
+searchxplorer.egg-info/top_level.txt

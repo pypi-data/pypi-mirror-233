@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: searchxplorer
+Version: 0.0.7
+Summary: searchxplorer is a Python library that empowers developers with powerful search algorithms for efficient data exploration and retrieval.
+Author: HD7(Harshit)
+Author-email: <mail@HD7.com>
+Keywords: search,exploration,Python library,data retrieval,search algorithms,linear search,binary search,data exploration,data navigation,data analysis,data retrieval,data search,search utility,data exploration library,efficient search,Python development,Python programming,developer tools,open-source,code library
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+searchxplorer is a versatile Python library designed to simplify data exploration and retrieval tasks. Leveraging a set of robust search algorithms, including linear and binary search, SearchXplorer empowers developers to efficiently locate and retrieve information within their datasets, be it searching for specific values in unsorted lists or quickly finding elements in sorted arrays.
