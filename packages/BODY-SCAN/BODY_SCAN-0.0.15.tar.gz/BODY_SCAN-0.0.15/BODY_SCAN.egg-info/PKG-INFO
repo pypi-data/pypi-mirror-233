@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: BODY-SCAN
+Version: 0.0.15
+License: LL
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: BOTANIST
+Requires-Dist: click
+Requires-Dist: flask
+
+
+
+
+
+# BODY SCAN
+	
+## EXAMPLE OUTPUT:
+```JSON
+{
+    "PATHS": [
+        {
+            "PATH": "PATH_1_HEALTH.py",
+            "STATS": {
+                "PASSES": 2,
+                "ALARMS": 1
+            },
+            "CHECKS": [
+                {
+                    "CHECK": "CHECK 1",
+                    "PASSED": true,
+                    "ELAPSED": [
+                        5.320599666447379e-05,
+                        "SECONDS"
+                    ]
+                },
+                {
+                    "CHECK": "CHECK 2",
+                    "PASSED": true,
+                    "ELAPSED": [
+                        1.0949999705189839e-05,
+                        "SECONDS"
+                    ]
+                },
+                {
+                    "CHECK": "CHECK 3",
+                    "PASSED": false,
+                    "EXCEPTION": "Exception('NOT 100%')",
+                    "EXCEPTION TRACE": [
+                        "Traceback (most recent call last):",
+                        "  File \"/REPTILIAN_CLIMATES/MODULES/BODY_SCAN/src/SCAN_PROC/KEG/SCAN.py\", line 69, in SCAN",
+                        "    CHECKS [ CHECK ] ()",
+                        "  File \"<string>\", line 24, in CHECK_3",
+                        "Exception: NOT 100%"
+                    ]
+                }
+            ]
+        },
+        {
+            "PATH": "PATH_2_HEALTH.py",
+            "EMPTY": true
+        }
+    ],
+    "STATS": {
+        "EMPTY": 1,
+        "CHECKS": {
+            "PASSES": 2,
+            "ALARMS": 1
+        }
+    }
+}
+```
+
+## HOW TO WRITE CHECKS:
+
+The "CHECKS" dictionary is retrieved with the python "exec"
+and then each "CHECK" in "CHECKS" is run.
+
+These checks correspond to the example output shown above.
+```
+PATH_1_HEALTH.py
+```
+```
+def CHECK_1 ():
+	print ("CHECK 1")
+	
+def CHECK_2 ():
+	print ("CHECK 2")
+	
+def CHECK_3 ():
+	raise Exception ("NOT 100%")
+
+CHECKS = {
+	"CHECK 1": CHECK_1,
+	"CHECK 2": CHECK_2,
+	"CHECK 3": CHECK_3
+}
+```
+```
+PATH_2_HEALTH.py
+```
+```
+#
+#	There isn't a "CHECKS" dictionary present, 
+#	so the scanner reports:
+#
+#		"EMPTY": true
+#	
+```
+
+## HOW TO START THE BODY SCANNER
+
+### REQUIRED
+```
+"GLOB" is all the files that are sent to the scanner.
+```
+
+### OPTIONAL
+```
+"MODULE_PATHS" is folders that are added to "sys.path"
+"RELATIVE_PATH" is the folders to remove from the paths in the output
+```
+
+### NOTES
+```
+Currently all the checks aren't run in parallel,
+but sequential order of paths found in glob is not guaranteed.
+```
+```
+Each check suite found by the glob is encapsulated in 
+a process with a flask API, that is opened on the first available port found.
+```
+
+```python3
+import BODY_SCAN
+
+import pathlib
+THIS_FOLDER = pathlib.Path (__file__).parent.resolve ()
+
+from os.path import dirname, join, normpath
+SEARCH = normpath (join (THIS_FOLDER, "MODULE"))
+
+#
+#	These are added to the sys.path before scan is started.
+#
+MODULE_PATH = [
+	normpath (join (SEARCH, "MODULES"))
+]
+
+SCAN = BODY_SCAN.START (
+	# REQUIRED
+	GLOB = SEARCH + '/**/*HEALTH.py',
+	
+	# OPTIONAL
+	MODULE_PATHS = MODULE_PATH,
+	
+	# OPTIONAL
+	RELATIVE_PATH = SEARCH
+)
+```
+
+
