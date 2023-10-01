@@ -1,0 +1,16 @@
+alanube/__init__.py,sha256=70Uu3F2H8sYtnrqY9mkLULPG9_SzDAGxUXtathGvlOU,2006
+alanube/api.py,sha256=HgBSU7hB2PVEyfJI933SDG19kWYB_qzaRbi5Y8DKcSA,5393
+alanube/config.py,sha256=7Fzbo_TXgHgujec9H-bUB0aw3afRAQrrTmu48fBH_NY,4104
+alanube/dgii/__init__.py,sha256=GYSM7_WWa3uMcE55Yga95Qu46At5ugjhRqMLmFMjsk4,6365
+alanube/dgii/config.py,sha256=FR3jH_muiUaECpitzbelkUDY5_mg3pMKv15KaHCqsw4,32690
+alanube/dgii/exceptions.py,sha256=RhSkBeNLtwtsPZEoYFoHh9u3LHHvk6RvKiDjEz6dCIc,46
+alanube/dgii/fields.py,sha256=b9gLzcqXrAWdFYwGmMsNi_g-Sss2iiUYoxtbWbqNgfg,19922
+alanube/dgii/forms.py,sha256=N6jmrQobvgSbKeU2heO-CKOmYEPfcXAn4-Ve9vTpiy8,60661
+alanube/dgii/utils.py,sha256=UwgLeooxsNE52ellK3kZg-pnUK4PxwONT8S_LDFylgE,15303
+tests/__init__.py,sha256=Ev-4LSeJ1uc7JPjku7esX7RyS6fDG8jp6-GsjuaoJ3Q,19
+tests/dgii.py,sha256=5Cv5ToL4qu4v0E_2J7G6y_aKhqighIaFWT7aZRGfWIc,3647
+alanube-0.0.7.dist-info/LICENSE,sha256=bP13N_gH37azQWg13283pkJU_NcxcCEavy3FJZNPpnw,1072
+alanube-0.0.7.dist-info/METADATA,sha256=gKVeuiJohZXJ9STV4iVgsWQtvRlBMv1KqCNgAy5fGfo,4578
+alanube-0.0.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+alanube-0.0.7.dist-info/top_level.txt,sha256=Le74C0paIgMsEb1dD-veLBJaXyyTSARAb7eWgTU6SWo,14
+alanube-0.0.7.dist-info/RECORD,,
