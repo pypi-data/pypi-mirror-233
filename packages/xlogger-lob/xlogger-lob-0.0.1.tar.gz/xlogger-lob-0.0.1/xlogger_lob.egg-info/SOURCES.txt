@@ -1,0 +1,6 @@
+logger.py
+setup.py
+xlogger_lob.egg-info/PKG-INFO
+xlogger_lob.egg-info/SOURCES.txt
+xlogger_lob.egg-info/dependency_links.txt
+xlogger_lob.egg-info/top_level.txt
