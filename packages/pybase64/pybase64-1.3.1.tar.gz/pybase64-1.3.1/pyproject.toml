@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+test-requires = "-r requirements-test.txt"
+test-command = "pytest {project}/tests"
+build-verbosity = 1
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = 3.6
+follow_imports = "silent"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+warn_unused_ignores = true
