@@ -1,0 +1,13 @@
+gdzru/__about__.py,sha256=oFuWExK8iaNRlgMP_oizHGR2VYS6HOVQrRo-wlS8f4Y,197
+gdzru/__init__.py,sha256=LpbgB00VHCOaHHjY4Uo08wJ0LcMUwpnidG_yDLVYoZ0,448
+gdzru/api.py,sha256=nYXedAJoLfLPvZUgNDho61ovLpaTf_JP3ZgtqRH3-TU,6643
+gdzru/exceptions.py,sha256=dDXuW_WJvPjv5ATN2jIgOhyGEWcXrN5Glka0Wl14ufc,568
+gdzru/types/__init__.py,sha256=JRP30RQhZG82YYqvzKnGI0XZkRiUbmzhn8BE1oZxVvs,378
+gdzru/types/book.py,sha256=Y3GJaduldWynxuYxgmfpbXxbcSUfJGUU7jOb0a5v8no,2489
+gdzru/types/full_book_list.py,sha256=phV8WS_K0ZPT3XuizrqXrBFDqJDeqji8Ykkk2T040Pk,2133
+gdzru/types/task.py,sha256=aNNk-YZicA38xzWoEci0qu3sXH_xZ9kOUbIad-1VyeA,2446
+gdzru/types/type.py,sha256=IQ5Z8KJHGVd0n2b46UbrcA2Epc_Gq9c49ESkZ4hyxhw,974
+gdzru-1.0.0.dist-info/METADATA,sha256=uFULKF-tpSlI_3EtgNRGE8fl5xkaGsiZZbDs--GABWY,3771
+gdzru-1.0.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+gdzru-1.0.0.dist-info/licenses/LICENSE.txt,sha256=RUria8KI6hZwxCCNd8MKxobOtFZuRold24o_SYRpj-U,1128
+gdzru-1.0.0.dist-info/RECORD,,
