@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+smilesfeature/__init__.py
+smilesfeature/constant.py
+smilesfeature/core.py
+smilesfeature/utils.py
+smilesfeature.egg-info/PKG-INFO
+smilesfeature.egg-info/SOURCES.txt
+smilesfeature.egg-info/dependency_links.txt
+smilesfeature.egg-info/entry_points.txt
+smilesfeature.egg-info/requires.txt
+smilesfeature.egg-info/top_level.txt
+smilesfeature/processor/__init__.py
+smilesfeature/processor/mol2vec_processor.py
+smilesfeature/processor/smiles_processor.py
