@@ -1,0 +1,2 @@
+[console_scripts]
+ezvr = ez_visual_regression.cli:main

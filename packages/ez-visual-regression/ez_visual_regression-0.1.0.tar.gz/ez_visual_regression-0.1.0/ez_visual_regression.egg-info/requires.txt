@@ -1,0 +1,15 @@
+docopt
+ez_img_diff
+selenium
+webdriver_manager
+pyyaml
+
+[CI]
+pytest
+pyvirtualdisplay
+
+[dev]
+nox
+pytest
+mkdocs
+mkdocs-material

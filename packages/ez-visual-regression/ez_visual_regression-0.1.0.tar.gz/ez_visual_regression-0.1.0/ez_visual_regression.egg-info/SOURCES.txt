@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ez_visual_regression/__init__.py
+ez_visual_regression/api.py
+ez_visual_regression/cli.py
+ez_visual_regression/configuration.py
+ez_visual_regression.egg-info/PKG-INFO
+ez_visual_regression.egg-info/SOURCES.txt
+ez_visual_regression.egg-info/dependency_links.txt
+ez_visual_regression.egg-info/entry_points.txt
+ez_visual_regression.egg-info/requires.txt
+ez_visual_regression.egg-info/top_level.txt
