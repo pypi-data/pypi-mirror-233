@@ -1,0 +1,3 @@
+[console_scripts]
+holodex=holodex_cli.__main__:run
+

@@ -1,0 +1,13 @@
+holodex_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+holodex_cli/__main__.py,sha256=-SCTn_YkKMbMJBgDSKLWlZ4ycLnqmpDdFJIEzw1wQdQ,656
+holodex_cli/cli.py,sha256=qKhFFd9nynheUslqMhdx8XxPM-J1p7n6mzaHGFVmkFQ,1087
+holodex_cli/net/__init__.py,sha256=XjUlS-lwySj1t5aZFmgZqxBUs96F4zEiCVYkL_TiBxQ,911
+holodex_cli/net/apikey.py,sha256=qENNm3vWfIYXuUwb8gTNh2Y4egk2B-9UGDjv5zaaYmM,851
+holodex_cli/ui/__init__.py,sha256=NyLB62ifodQuvN6cs7LUxfq-_6FxmQs6gaUbX0KtMVk,2807
+holodex_cli/ui/styles.css,sha256=x73IwbedLPUOYw0Gdw2vA0YIKxVd0w4IGgwQWUkNZXI,27
+holodex_cli/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+holodex_cli/util/time.py,sha256=bChEjV0N3pohKrsTjRnitt8Folb0ibV9NcXRHbj46Ss,348
+holodex_cli-0.1.5.dist-info/entry_points.txt,sha256=HUGy3QhG2OPJkLPO_XWVkMibgLnq3Vd1xkoGcbUf47A,52
+holodex_cli-0.1.5.dist-info/METADATA,sha256=dv5rlORIxYqUokVYXsxdlLoPpzPwDIQ3eMxiDYZ0lrk,914
+holodex_cli-0.1.5.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+holodex_cli-0.1.5.dist-info/RECORD,,
