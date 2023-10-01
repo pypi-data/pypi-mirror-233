@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyshortext/__init__.py
+pyshortext/version.py
+pyshortext.egg-info/PKG-INFO
+pyshortext.egg-info/SOURCES.txt
+pyshortext.egg-info/dependency_links.txt
+pyshortext.egg-info/requires.txt
+pyshortext.egg-info/top_level.txt
+pyshortext.egg-info/zip-safe
