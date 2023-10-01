@@ -1,0 +1,3 @@
+[console_scripts]
+cookiecutter-starter=cookiecutter_starter.main:app
+
