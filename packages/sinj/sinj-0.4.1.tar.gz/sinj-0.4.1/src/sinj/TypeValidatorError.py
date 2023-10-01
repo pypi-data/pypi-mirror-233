@@ -1,0 +1,2 @@
+class TypeValidatorError(Exception):
+    pass

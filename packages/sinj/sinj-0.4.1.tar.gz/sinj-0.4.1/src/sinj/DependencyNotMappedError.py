@@ -1,0 +1,2 @@
+class DependencyNotMappedError(Exception):
+    pass

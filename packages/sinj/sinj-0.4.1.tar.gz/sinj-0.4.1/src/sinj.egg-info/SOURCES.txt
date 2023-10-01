@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/sinj/CircularDependencyError.py
+src/sinj/Container.py
+src/sinj/DependencyConflictError.py
+src/sinj/DependencyNotFoundError.py
+src/sinj/DependencyNotMappedError.py
+src/sinj/TypeValidator.py
+src/sinj/TypeValidatorError.py
+src/sinj/__init__.py
+src/sinj.egg-info/PKG-INFO
+src/sinj.egg-info/SOURCES.txt
+src/sinj.egg-info/dependency_links.txt
+src/sinj.egg-info/top_level.txt

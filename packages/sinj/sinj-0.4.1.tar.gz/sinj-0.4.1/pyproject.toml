@@ -1,0 +1,36 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[project]
+authors = [
+  { name = "Marius Kavaliauskas", email = "mariuskava+sinj@gmail.com" },
+]
+description = "IoC container"
+keywords = [
+  "ioc",
+  "inverse-of-control",
+  "injection",
+  "dependency-injection",
+  "dependencies-container",
+]
+name = "sinj"
+readme = "README.md"
+requires-python = ">=3.7"
+version = "0.4.1"
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/mrsk/sinj"
+"Issue Tracker" = "https://gitlab.com/mrsk/sinj/-/issues"
+"Source Code" = "https://gitlab.com/mrsk/sinj"
