@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "punkeditor"
+version = "0.2.3"
+description = "Text editor component for curses"
+authors = ["Steampunk Wizard <punkeditor@steampunkwizard.ca>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wizlib = "^0.9.3"
+
+[tool.poetry.group.dev.dependencies]
+pycodestyle = "^2.11.0"
+coverage = "^7.3.1"
+autopep8 = "^2.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+punke = "punkeditor.handler:PunkEditorHandler.shell"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+format = "{base}"
