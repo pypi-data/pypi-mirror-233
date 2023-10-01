@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: RHYTHMS
+Version: 0.0.1
+License: LL
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
