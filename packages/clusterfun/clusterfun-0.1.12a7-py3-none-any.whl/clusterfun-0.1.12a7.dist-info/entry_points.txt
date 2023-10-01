@@ -1,0 +1,3 @@
+[console_scripts]
+clusterfun=clusterfun.serve_cli:main
+
