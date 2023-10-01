@@ -1,0 +1,13 @@
+_version.py,sha256=iIRXvfek9-8IEniOq16R1VZqRw5VVSr__uSZdp_qmzs,282
+cutil.cp310-win_amd64.pyd,sha256=dDlybURvcBFgb0tIYNkCIPIqNuQ-Tz5_A6NL_C9T1iI,179200
+util.py,sha256=01orvPN1kuES60cM7DbaPIgHbn_4R2N9MGZyshUaPWc,5910
+simplification/__init__.py,sha256=kWDJJVPMnilu3Y07HXhTnMlsueqD3p7ddV9mqTaKS9Q,217
+simplification/cutil.pyx,sha256=MrH2BO0dXsrNGQRsexFxksd_XIK50Nr1NTvPkC-0fQI,7467
+simplification/rdp.dll,sha256=G47zcZs8OH5gs9i2pSh3tTi16tuzEeQL3_ORaxN63XY,215040
+simplification/rdp_p.pxd,sha256=3iPpuE3lS4R65NAEPNyJshbk9i5ixKWlS5K391qdAPU,706
+simplification/stdbool.h,sha256=37Fu0p4oPCuhzzOn2uW8R5yA67yHcIdYPBPKgv36UtA,74
+simplification-0.7.6.dist-info/METADATA,sha256=ZuUFHVCYo724aVW0xykqH0ZcKD8G4mvyvRqqgOITHTQ,7785
+simplification-0.7.6.dist-info/WHEEL,sha256=yrvteVAZzxQvtDnzdCRh4dP01sPIxYhLXIXplC7o50E,102
+simplification-0.7.6.dist-info/license.txt,sha256=M0lHUDWvm7RQhrY1SzO4nX352UirinlQb7zxBH3FusQ,1102
+simplification-0.7.6.dist-info/top_level.txt,sha256=g_4KSa5a8i83wTFuQhn5eTHle7_AUB-ho0_G5IZ6jlM,35
+simplification-0.7.6.dist-info/RECORD,,
