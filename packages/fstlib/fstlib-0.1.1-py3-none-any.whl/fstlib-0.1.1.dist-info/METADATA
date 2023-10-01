@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fstlib
+Version: 0.1.1
+Summary: R wrapper to handle fst files in pythoon
+Author: Vhiny-Guilley MOMBO
+Requires-Python: >=3.10
+Requires-Dist: rpy2
+Requires-Dist: pandas
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: pytest (>=7.10) ; extra == 'dev'
+Requires-Dist: twine (>=4.0.2) ; extra == 'dev'
+
