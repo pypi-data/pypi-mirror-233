@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: opredflag
+Version: 0.1.0
+Summary: A script which automatically updates OPRF standard asset files from the OpRedFlag repository
+Author: BobDotCom
+Project-URL: Homepage, https://github.com/BobDotCom/py-opredflag
+Project-URL: Repository, https://github.com/BobDotCom/py-opredflag
+Project-URL: Documentation, https://opredflag.readthedocs.io
+Project-URL: Changelog, https://github.com/BobDotCom/py-opredflag/blob/main/CHANGELOG.md
+Project-URL: Tracker, https://github.com/BobDotCom/py-opredflag/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: aiohttp==3.8.5
+Requires-Dist: async_lru==2.0.4
+Requires-Dist: typing_extensions~=4.0; python_version < "3.11"
+Provides-Extra: docs
+Requires-Dist: sphinx==7.2.6; extra == "docs"
+Requires-Dist: sphinxcontrib_trio==1.1.2; extra == "docs"
+Requires-Dist: sphinxcontrib-websupport==1.2.6; extra == "docs"
+Requires-Dist: myst-parser==2.0.0; extra == "docs"
+Requires-Dist: sphinxext-opengraph==0.8.2; extra == "docs"
+Requires-Dist: sphinx-copybutton==0.5.2; extra == "docs"
+Requires-Dist: furo==2023.9.10; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints==1.24.0; extra == "docs"
+Requires-Dist: sphinx-argparse==0.4.0; extra == "docs"
+Provides-Extra: speedups
+Requires-Dist: aiohttp[speedups]; extra == "speedups"
+
+Pycord
+======
+
+.. image:: https://img.shields.io/discord/1156255530797514802?label=discord&style=for-the-badge&logo=discord&color=5865F2&logoColor=white
+   :target: https://discord.gg/fFAkd7CGkB
+   :alt: Discord server invite
+.. image:: https://img.shields.io/pypi/v/opredflag.svg?style=for-the-badge&logo=pypi&color=yellowgreen&logoColor=white
+   :target: https://pypi.python.org/pypi/opredflag
+   :alt: PyPI version info
+.. image:: https://img.shields.io/pypi/pyversions/opredflag.svg?style=for-the-badge&logo=python&logoColor=white
+   :target: https://pypi.python.org/pypi/opredflag
+   :alt: PyPI supported Python versions
+.. image:: https://img.shields.io/pypi/dm/opredflag?color=blueviolet&logo=pypi&logoColor=white&style=for-the-badge
+   :target: https://pypi.python.org/pypi/opredflag
+   :alt: PyPI downloads
+.. image:: https://img.shields.io/github/v/release/BobDotCom/py-opredflag?include_prereleases&label=Latest%20Release&logo=github&sort=semver&style=for-the-badge&logoColor=white
+   :target: https://github.com/BobDotCom/py-opredflag/releases
+   :alt: Latest release
+
+A package written in python with useful scripts for `Operation Red Flag <https://opredflag.com>`_.
+
+Key Features
+------------
+
+- Intuitive Command-Line Interface (CLI)
+- Easy-to-use Pythonic design
+- Categorical design with dedicated sub-modules for different usages
+
+Installing
+----------
+
+**Python 3.10 or higher is required**
+
+To install the library, run the following command:
+
+.. code:: sh
+
+    # Linux/macOS
+    python3 -m pip install -U opredflag
+
+    # Windows
+    py -3 -m pip install -U opredflag
+
+
+To install the development version, do the following:
+
+.. code:: sh
+
+    $ git clone https://github.com/BobDotCom/py-opredflag
+    $ cd pycord
+    $ python3 -m pip install -U .
+
+or if you do not want to clone the repository:
+
+.. code:: sh
+
+    # Linux/macOS
+    python3 -m pip install git+https://github.com/BobDotCom/py-opredflag
+    # Windows
+    py -3 -m pip install git+https://github.com/BobDotCom/py-opredflag
+
+
+Useful Links
+------------
+
+- `Documentation <https://opredflag.rtfd.io>`_
+- `Our Official Discord Server <https://discord.gg/fFAkd7CGkB>`_
+- `Official OPRF Server <https://discord.gg/M3YAZFtws9>`_

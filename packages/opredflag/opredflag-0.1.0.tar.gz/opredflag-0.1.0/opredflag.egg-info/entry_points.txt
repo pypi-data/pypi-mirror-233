@@ -1,0 +1,3 @@
+[console_scripts]
+opredflag = opredflag.cli:cli
+oprf = opredflag.cli:cli
