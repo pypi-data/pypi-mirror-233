@@ -1,0 +1,17 @@
+numpy
+scipy
+aiohttp
+tqdm
+requests
+networkx
+tabulate
+statsmodels
+
+[dev]
+pytest
+pytest-asyncio
+tox
+ruff
+black
+mypy
+check-manifest

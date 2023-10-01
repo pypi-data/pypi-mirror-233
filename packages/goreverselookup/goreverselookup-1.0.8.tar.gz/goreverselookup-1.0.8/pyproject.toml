@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "aiohttp", "asyncio", "tqdm", "requests", "scipy", "networkx", "tabulate", "statsmodels"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "goreverselookup"
+authors = [
+    {name = "Aljoša Škorjanc", email = "skorjanc.aljosa@gmail.com"},
+    {name = "Vladimir Smrkolj", email = "vladimir.smrkolj@gmail.com"},
+]
+description = "Python library for Gene Ontology Reverse Lookup"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["gene ontology", "reverse lookup"]
+license = {text = "Apache License 2.0"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "aiohttp",
+    "tqdm",
+    "requests",
+    "networkx",
+    "tabulate",
+    "statsmodels"
+]
+
+version = "1.0.8"
+#dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "tox",
+    "ruff",
+    "black",
+    "mypy",
+    "check-manifest"
+]
+
+#
+#[project.urls]
+#Homepage = "https://example.com"
+#Documentation = "https://readthedocs.org"
+#Repository = "https://github.com/me/spam.git"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+#
+#[project.scripts]
+#spam-cli = "spam:main_cli"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+requires =
+    tox>=4
+env_list = py310, py311
+
+[testenv]
+description = run unit tests
+deps =
+    pytest>=7
+    pytest-sugar
+commands =
+    pytest {posargs:tests}
+"""
+
+[tool.check-manifest]
+ignore = ["tests/**", ".vscode/**", "logging_config.json", "exe_version/**", "input_files/**"]
+
+[tool.ruff]
+# Avoid enforcing line-length violations (`E501`). Black already checks for that, but it leaves comments unchanged - this makes errors in ruff.
+ignore = ["E501"]
