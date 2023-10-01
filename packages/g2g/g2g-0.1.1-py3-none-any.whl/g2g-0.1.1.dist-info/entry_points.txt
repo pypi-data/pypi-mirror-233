@@ -1,0 +1,3 @@
+[console_scripts]
+g2g=g2g.main:cli
+
