@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wells-data-pipeline-cores
+Version: 0.1.4
+Summary: Wells Data Pipeline Library
+Home-page: 
+Author-email: 
+Keywords: WellsDataPipeline
+Requires-Dist: urllib3
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: python-decouple
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: StrEnum
+
+    Wells Data Pipeline Cores Library  # noqa: E501
+    
