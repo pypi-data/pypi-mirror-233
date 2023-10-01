@@ -1,0 +1,13 @@
+pythinq2/__init__.py,sha256=ZYnKC5O1F7rPBsCyAsWznHSR57-gXKEyUZmj7buugSo,88
+pythinq2/api.py,sha256=2wq8udlyqzUYQ899fyhg1WYS40--E_gpyzgCQnNw0xM,3416
+pythinq2/auth.py,sha256=C5sab8LrZGTMcgIoiAm7tgjL43s2ILusXRfweVSq9CU,8436
+pythinq2/cli.py,sha256=e7OR8sDLkLxEEWSsQVnkecuYyanc9nDBXJmdY8VmOqM,2917
+pythinq2/constants.py,sha256=yq8WcUqTQ1NGNDDaMkWJBEBd7HlJghge3b5QIUcBrIw,536
+pythinq2/gateway.py,sha256=PoKCwQ2sq833fmrgHPTuAxKXB7poMm7apBJKd-XszXA,1892
+pythinq2/utils.py,sha256=LHE61q3nOaajXWAx-xTachXcK46CZTjcRzLou4nkwjs,504
+pythinq2-0.2.0.dist-info/LICENSE,sha256=en16TVygLv1GIISwDb7EDRP_kcEeyE5nHc-hWWhsWdw,1071
+pythinq2-0.2.0.dist-info/METADATA,sha256=X5gf8k0fXKRZm-_ODk25s6OeK_01AHCTRLRkndh0CyI,523
+pythinq2-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pythinq2-0.2.0.dist-info/entry_points.txt,sha256=TVta5AuLwbPrMz8h9OBaeQ7rg9S-HVHXB2ZCAjprrr4,47
+pythinq2-0.2.0.dist-info/top_level.txt,sha256=2vP0falug9AEnSV-qogBC19mH9EZpEQaR2DGl2Ql2yE,9
+pythinq2-0.2.0.dist-info/RECORD,,
