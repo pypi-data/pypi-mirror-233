@@ -1,0 +1,13 @@
+asyncpgdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncpgdb/asyncpg.py,sha256=DG9pGaVQ71j1h6iikOe_v4Nw6UDeiLjd8I5vgJl7TRg,96
+asyncpgdb/connection.py,sha256=Ii3rLAwlqUT_9cAVHMMORP0kRvw7h0ujaeAt4zS_Ttg,2675
+asyncpgdb/database.py,sha256=UltOxr-MPOS1WD14GMp37Cb1MVmIS4ucegBrTJtv25s,2707
+asyncpgdb/dsn.py,sha256=8qVpAcJD3TS1DCIZVWcG7ZZBK8f6VsEL6zWnAJxXfpE,679
+asyncpgdb/execute.py,sha256=v2XOkOrORJPY2sXAlcw-LkqYzqLk8aO31CbBlmscabY,6289
+asyncpgdb/pool.py,sha256=P6Fh4zMPXQFODOEt5s94_LWwdo1WXt0V-ael34AaLWU,137
+asyncpgdb/row.py,sha256=9EuYP85CevxYyDvW12-4uv4nhczBWCjb-sIQ3OhXtyw,394
+asyncpgdb/settings.py,sha256=O5mHzQU_OFlNdvTNsBdkB0iCoIa0gwyObCOORKAGgK0,3125
+asyncpgdb/sql.py,sha256=56LcQJceZoQ4msYWwSjvOhJQlW8RoVBnaH99XwL0z9Q,2452
+asyncpgdb-0.0.11.dist-info/METADATA,sha256=nKDqTOc_FVgkvBdnx97IGcuKJfJ0Vk7PX2n7YpL8gUE,3432
+asyncpgdb-0.0.11.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+asyncpgdb-0.0.11.dist-info/RECORD,,
