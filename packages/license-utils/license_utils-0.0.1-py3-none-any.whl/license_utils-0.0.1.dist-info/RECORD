@@ -1,0 +1,12 @@
+license_utils/__init__.py,sha256=4JVMsUhoTvvT6bzqLfO42z162ekgE8xL49LzPoi6q0w,148
+license_utils/build_licenses.py,sha256=k-_GznrC6qf_UmJU3YP48OAJRUXGZFVNOuC6TW0lUdc,2948
+license_utils/computation.py,sha256=xel_iZcVuwsksOx0_aiKbAx9OayHDfACV4i-npXXPk8,803
+license_utils/matcher.py,sha256=LXYlG5VAn2pfquYRBvrjYPjC7xET5BYdodn64eRO_VY,2862
+license_utils/normalize.py,sha256=XxZrnJYmLD6WNstT_ai5VWEzsyqorMZqd_an0r5PvDQ,3960
+license_utils/sorensen_dice.py,sha256=HSeKEYx9j37PW0-NHA4uXKvNZa7atNTSEWjjU2nOHVY,1800
+license_utils-0.0.1.dist-info/LICENSE,sha256=8WTD0oth7Qx-71vVgmYM2kKnV5-9b8w9mT0-Cq7AnY8,584
+license_utils-0.0.1.dist-info/METADATA,sha256=Y4Sy7NhrGyqMPD3q1eStdor8WbsCbe1g31AjM7bO-zY,1395
+license_utils-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+license_utils-0.0.1.dist-info/entry_points.txt,sha256=QbVQfSOQqswlhBeunl_xvRc1Pqg8IGIjadkBIVaNjrs,78
+license_utils-0.0.1.dist-info/top_level.txt,sha256=hrfQmAQWG8EXJr9ZstjELR0bFX709AUiHaBW2cMX_nk,14
+license_utils-0.0.1.dist-info/RECORD,,
