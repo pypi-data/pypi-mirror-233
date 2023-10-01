@@ -1,0 +1,11 @@
+seidr/__init__.py,sha256=z0khGbVov0Jd33VVTmxfDWJT79I0VjHrc7c94tw0VF4,41
+seidr/code-templates/template.cpp,sha256=wGdopQvKakOP7xQCQjeJQQTHJ_BAhjOxMncnDlI6tAI,242
+seidr/code-templates/template.java,sha256=wMIihRNZX1vCENtG32oa9sACeHo-boMKg-BOiN_qoiA,301
+seidr/code-templates/template.py,sha256=c4fDXctFRlTYjXpP1-jgFPPOYpTecw6N0sUL07ue840,170
+seidr/dev.py,sha256=Qe3zAhp6f6nyM59SZmVJXVP7ROl74p7PRXx162SxzU4,5899
+seidr/github.py,sha256=N9tRTPk92HWbcgJeFyN8X7eXNTFgYRjNcVcd5jiMVFU,2069
+seidr/gpt.py,sha256=m1F2bzAR4uAGDBX2rtPI0foQZiVSNCulp49NFOgBV38,4418
+seidr/prompt.py,sha256=QyvrTWJXEgiehpOmupTNZRI9zZg-AuPghe-yUl_kQj4,2911
+seidr-1.0.3.dist-info/METADATA,sha256=SkekSDHGJoYx1IX0HZkJRnJAfSqLq6sCLFobcEUhYqo,3059
+seidr-1.0.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+seidr-1.0.3.dist-info/RECORD,,
