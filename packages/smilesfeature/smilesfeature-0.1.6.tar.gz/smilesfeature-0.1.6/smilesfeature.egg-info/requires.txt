@@ -1,0 +1,8 @@
+numpy
+rdkit
+gensim
+mol2vec
+pandas
+scikit-learn
+IPython
+datamol
