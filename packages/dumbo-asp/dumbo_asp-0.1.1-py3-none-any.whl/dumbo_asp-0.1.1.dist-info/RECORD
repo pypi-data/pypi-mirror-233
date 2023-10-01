@@ -1,0 +1,16 @@
+dumbo_asp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dumbo_asp/primitives/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dumbo_asp/primitives/atoms.py,sha256=4REt_cSVri3PYjVva6_07QaTeULAvPGZwjVIzBBAVKs,5573
+dumbo_asp/primitives/models.py,sha256=JCzGOho0PyR1dZl7kFksig6E-Lk8IspgeIyzCq31ilg,8469
+dumbo_asp/primitives/parsers.py,sha256=2H2JY3hDmsdNXsXsGvrOM2KFSzKeoD2BCA8tr09Ivyo,3789
+dumbo_asp/primitives/predicates.py,sha256=3WwW07Ot3D_gcWcrgK8hkJeDJzPLNal8OXF-TxKE-Yc,2657
+dumbo_asp/primitives/programs.py,sha256=eorr8k6N5jxIRVW23kWXYSxpH6VpFuh5504cH7N8ILs,9743
+dumbo_asp/primitives/rules.py,sha256=pqDJ6G7-oKXyuI73U0F-L2WMlayw85ccF2HGIoEq8HM,19512
+dumbo_asp/primitives/templates.py,sha256=8kNv6BzViF1CY2WOIo_g9pz3PYEEVsUflO0XpQeTIao,9528
+dumbo_asp/primitives/terms.py,sha256=SBTb9A64lMlPBKhut241C_Vl3j4OmDh2JJ_3KuVGPck,4117
+dumbo_asp/queries.py,sha256=WBnsqyGKx_oD58F2Izj5IZ5ogd27sW-Uih5SYVMUOKI,15967
+dumbo_asp/utils.py,sha256=iuwDbK1WCmWPVsIMnMND83_zXC1PU7ngNR6L5szR_KM,1718
+dumbo_asp-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dumbo_asp-0.1.1.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+dumbo_asp-0.1.1.dist-info/METADATA,sha256=mnj01oGI5JrRnJCPnSNtt_BPyMN52PBkSDy6LnCJXWg,667
+dumbo_asp-0.1.1.dist-info/RECORD,,
