@@ -1,0 +1,9 @@
+.. gql:directive:: {{ signature }}
+
+{% if description %}
+   {{ description }}
+
+{% endif %}
+{% for arg, arg_description in args.items() %}
+   :argument {{ arg }}: {% if arg_description %}{{ arg_description }}{% endif +%}
+{% endfor %}
