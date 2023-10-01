@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lightman-ansi-print
+Version: 1.0.0
+Summary: A python class containing ansi codes for colours and styles.
+Project-URL: Homepage, https://github.com/lightman210567/ansi-print
+Project-URL: Bug tracker, https://github.com/lightman210567/ansi-print/issues
+Author-email: lightman210567 <81330314+lightman210567@users.noreply.github.com>
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# ansi-print
