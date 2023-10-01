@@ -1,0 +1,4 @@
+PyYAML
+appdirs
+click
+python-gitlab>=1.12.0
