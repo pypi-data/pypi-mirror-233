@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: smilesfeature
+Version: 0.1.10
+Summary: A Python package that automatically generates derived variables from a column with SMILES (Simplified Molecular-Input Line-Entry System).
+Home-page: https://github.com/dsdanielpark/SMILES-feature
+Author: daniel park
+Author-email: parkminwoo1991@gmail.com
+License: UNKNOWN
+Keywords: Python,SMILES,Cheminformatics,Molecular Informatics,Molecular Descriptor Generation,Chemical Data Analysis,Computational Chemistry
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SMILES feature
+A Python package that automatically generates derived variables from a column with SMILES (Simplified Molecular-Input Line-Entry System)
+
+
