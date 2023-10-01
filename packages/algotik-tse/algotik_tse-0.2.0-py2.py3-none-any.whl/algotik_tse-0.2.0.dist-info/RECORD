@@ -1,0 +1,14 @@
+algotik_tse/__init__.py,sha256=sxwUI466b0rzNXSKhMcM0403emijkMfaMDr0jg-0Lcg,1147
+algotik_tse/settings.py,sha256=4_33_ieww3NPoEhrcWHQ2lTrdryqhrIR1TcT91RnzrM,2058
+algotik_tse/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algotik_tse/core/helper.py,sha256=zWGaI8Pbmi0gLG_o52PpBa5cesvOi3IbJVWkvChHshA,684
+algotik_tse/core/search.py,sha256=j41ypl1j3rDXdD-dDv7ENGhW005toV4HYjDg9wGUgek,2079
+algotik_tse/core/stock.py,sha256=Idtc2RbqjUke76qQVnCvmSZvvVV1HziY0MKdizcOuiY,34928
+algotik_tse/core/stock_detail.py,sha256=A3hLpvIhn08fOoybL4e-wA4r9NxE4e7hS2AYweqpgoA,1198
+algotik_tse/core/stock_list.py,sha256=3QghosqXZn3PQ5pchlhfoqfE4eYJyLTrIKR_47Resys,8219
+algotik_tse-0.2.0.dist-info/AUTHORS.rst,sha256=P44v2jqdVgHuqAb5ulA_4P-5sdIgjTAPlFddTbDcMss,171
+algotik_tse-0.2.0.dist-info/LICENSE,sha256=cckhOrE4Cxn4-ILQD35VE8vxuBIzW2vuq6DCMioAiHg,1595
+algotik_tse-0.2.0.dist-info/METADATA,sha256=7HQLThZL1f6O8mCSe_3nqKkUMlMcbPR7pimkVNt-FYo,2162
+algotik_tse-0.2.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+algotik_tse-0.2.0.dist-info/top_level.txt,sha256=emY8w-8ASM3C0SYFhgNmNzIJRVLD8u0iVHWJlIUPr10,12
+algotik_tse-0.2.0.dist-info/RECORD,,
