@@ -1,0 +1,10 @@
+setup.py
+pyprover9/__init__.py
+pyprover9/diamond.p9
+pyprover9/prove.p9
+pyprover9/prover9
+pyprover9/pyprover9.py
+pyprover9.egg-info/PKG-INFO
+pyprover9.egg-info/SOURCES.txt
+pyprover9.egg-info/dependency_links.txt
+pyprover9.egg-info/top_level.txt
