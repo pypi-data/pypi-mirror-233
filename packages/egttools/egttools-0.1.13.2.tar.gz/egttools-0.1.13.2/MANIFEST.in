@@ -1,0 +1,59 @@
+include *.md
+include CITATION.cff
+include LICENSE
+
+include MANIFEST.in
+include pyproject.toml
+include setup.cfg
+include setup.py
+include .clang-format
+include environment.yml
+
+# Anaconda files
+include bld.bat
+include build.sh
+include install_dependencies.sh
+include meta.yaml
+
+include CMakeLists.txt
+include requirements.txt
+graft cpp
+graft cpp/include
+graft cpp/src
+graft src
+graft src/egttools
+graft src/egttools/numerical
+graft src/egttools/behaviors
+graft src/egttools/behaviors/CRD
+graft src/egttools/behaviors/NormalForm
+graft src/egttools/behaviors/NormalForm/TwoActions
+graft src/egttools/behaviors/CPR
+graft src/egttools/datastructures
+graft src/egttools/distributions
+graft src/egttools/games
+graft src/egttools/helpers
+graft src/egttools/plotting
+graft pybind11
+graft tests
+
+include .gitmodules
+
+graft cmake
+graft res
+include pytest.ini
+
+graft docs
+prune docs/_build
+prune _skbuild
+
+# exclude from sdist
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude *.pyc
+global-exclude .DS_Store
+global-exclude .ipynb_checkpoints/*
+global-exclude *.so
+exclude pybind11/.git
+exclude build_tools
+recursive-exclude build_tools *
+exclude src/egttools/plotting/barplots.py

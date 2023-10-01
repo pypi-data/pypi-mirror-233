@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: 'EGTtools: Toolbox for Evolutionary Game Theory'
+abstract: >-
+    This Python package provides efficient implementation of analytical and numerical
+    Evolutionary Game Theory methods and models
+message: >-
+  Please cite this software using the metadata from
+  'preferred-citation'.
+type: software
+authors:
+  - family-names: "Fernández Domingos"
+    given-names: "Elias"
+    orcid: "https://orcid.org/0000-0002-4717-7984"
+    affiliation: Machine Learning Group, Université Libre de Bruxelles
+    email: elias.fernandez.domingos@ulb.be
+keywords:
+- Evolutionary Game Theory
+- EGT
+- Python
+- C++
+- modeling
+- computational social sciences
+version: 0.1.12
+doi: 10.5281/zenodo.7256084
+date-released: 2022-12-19
+url: "https://github.com/Socrats/EGTTools"
+license: GPL-3.0-or-later
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Fernández Domingos"
+      given-names: "Elias"
+      orcid: "https://orcid.org/0000-0002-4717-7984"
+    - family-names: "Santos"
+      given-names: "Francisco C."
+    - family-names: "Lenaerts"
+      given-names: "Tom"
+  doi: https://doi.org/10.1016/j.isci.2023.106419
+  journal: "iScience"
+  title: "EGTtools: Evolutionary Game Dynamics in Python"
+  year: 2023
+  volume: 26
+  number: 4
+  pages: 106419
