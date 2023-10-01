@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: qrlocator
+Version: 0.0.2
+Summary: A package for getting the location of QRcodes from images
+Project-URL: Homepage, https://github.com/AlexSkillman10/qrlocator
+Project-URL: Bug Tracker, https://github.com/AlexSkillman10/qrlocator/issues
+Author-email: Alex Skillman <alexskillman10@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+##holding package name. Pakcage is testing at https://test.pypi.org/project/qrlocator/
+
+
+
+
+
+
