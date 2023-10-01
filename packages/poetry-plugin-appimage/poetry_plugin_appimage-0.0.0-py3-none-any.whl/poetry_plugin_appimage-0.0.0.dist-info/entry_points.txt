@@ -1,0 +1,3 @@
+[poetry.application.plugin]
+build-appimage=poetry_plugin_appimage.plugin:PoetryAppimagePlugin
+
