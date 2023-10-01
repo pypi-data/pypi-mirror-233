@@ -1,0 +1,3 @@
+[console_scripts]
+pdfm = pdfmerger.main:main
+pdfmerger = pdfmerger.main:main

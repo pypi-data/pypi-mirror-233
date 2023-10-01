@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: PyPDFMerge
+Version: 0.0.3
+Summary: Merge individual pages of PDF file into one page
+Home-page: https://github.com/shhossain/pdf-merger
+Author: sifat (shhossain)
+Author-email: <hossain@gmail.com>
+Project-URL: Documentation, https://github.com/shhossain/pdf-merger/blob/main/README.md
+Project-URL: Source, https://github.com/shhossain/pdf-merger
+Project-URL: Bug Report, https://github.com/shhossain/pdf-merger/issues
+Keywords: pdf-merger,pdf
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow (<=9.5.0)
+Requires-Dist: pymupdf (<=1.22.5)
+
+# PyPDFMerge
+
+Merge individual pages of PDF files into one page
+
+## Demo
+
+### Merging 2 pages into 1
+
+| Before | After |
+|---------|---------|
+| ![Image 1](https://raw.githubusercontent.com/shhossain/PyPDFMerge/main/image.png) | ![Image 2](https://github.com/shhossain/PyPDFMerge/raw/main/image-1.png) |
+
+
+## Installation
+
+```bash
+pip install PyPDFMerge
+```
+
+**NOTE**: You need visual studio build tools for C++ to install `PyPDFMerge` package. Refer to [this](https://pymupdf.readthedocs.io/en/latest/installation.html#installation-when-a-suitable-wheel-is-not-available) for more information.
+
+## Usage
+
+### Command Line
+
+You can use the `PyPDFMerge` command to merge pdf files. It has the following options:
+
+```bash
+pdfmerger <path> [-o <output>] [-g <group_size>] [-q <quality>]
+```
+
+Example:
+
+```bash
+pdfmerger test.pdf
+```
+
+This will merge the `test.pdf` file and save it as `output.pdf` in the same directory.
+
+**NOTE**: Output defaults to `output.pdf`, group size defaults to `2`, and quality defaults to `1.5`.
+
+### Python
+
+You can also use the `PyPDFMerge` package in your Python code. It has the following options:
+
+```python
+from pdfmerger import PDFMerge
+
+pdf = PDFMerge(pdf_file=<path>, output_file=<output>, group_size=<group_size>, quality=<quality>, page_number=<page_number>)
+pdf.run()
+```
+
+Example:
+
+```python
+from pdfmerger import PDFMerge
+
+pdf = PDFMerge(pdf_file="./test.pdf", output_file="./output.pdf", group_size=2, quality=1.5)
+pdf.run()
+```
