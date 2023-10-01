@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: tuigpt
+Version: 0.4
+Summary: tui gpt
+Home-page: https://github.com/chesnokpeter/tuigpt
+Author: chesnok
+Author-email: ChesnokovP1107@yandex.ru
+Project-URL: Source Code, https://github.com/chesnokpeter/tuigpt
+Keywords: python,chatbot,reverse-engineering,openai,chatbots,gpt,language-model,gpt-3,gpt3,openai-api,gpt-4,gpt4,chatgpt,chatgpt-api,openai-chatgpt,chatgpt-free,chatgpt-4,chatgpt4,chatgpt4-api,free,free-gpt,gpt4free,g4f
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pycryptodome
+Requires-Dist: curl_cffi
+Requires-Dist: aiohttp
+Requires-Dist: certifi
+Requires-Dist: browser_cookie3
+Requires-Dist: websockets
+Requires-Dist: js2py
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: typing-extensions
+Requires-Dist: PyExecJS
+
+
+# tui client free gpt
+### base on g4f(xtekky)
+## install
+1. python version: 3.11
+2. `pip install tuigpt`
+## start
+1. `tuigpt`
+### defaul provider: GptGo
