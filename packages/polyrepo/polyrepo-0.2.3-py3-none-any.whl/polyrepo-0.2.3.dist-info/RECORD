@@ -1,0 +1,11 @@
+polyrepo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polyrepo/__main__.py,sha256=G7TCwOGEMx8JkWAUFAtTy-UUDVBj36GTFpCkYPHAlKQ,101
+polyrepo/command/__init__.py,sha256=bBCowt-60leovhvglubt_FnptYdLBKHJL4HBpWe1Yf8,233
+polyrepo/command/groups_command.py,sha256=Agm-PiMsvcdsgZgIFwDfiww435xoPthvaMcibkXytTM,846
+polyrepo/command/sync_command.py,sha256=OMQIzi6EV4sB5mokQJ9fiVJCDZm10LjYmx5MnXV8W98,648
+polyrepo/gitlab.py,sha256=mqXj88nIpHa5G3Ygx9hYuHL6VFuXmtcNWQ8g8BAitQ0,1663
+polyrepo/handler.py,sha256=aADFMowbA9SliqF1sJgYzvRcHLmosywf2J8P4TkNUJ0,217
+polyrepo-0.2.3.dist-info/METADATA,sha256=gIVy3UVThXiZOezglCy8nm4ILZDQOg5Lk75lxNEOb6c,3075
+polyrepo-0.2.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+polyrepo-0.2.3.dist-info/entry_points.txt,sha256=1X7wdIxZb2ltXLVQBp8KDsaj4LrNVclB4w5qeF7GB78,50
+polyrepo-0.2.3.dist-info/RECORD,,
