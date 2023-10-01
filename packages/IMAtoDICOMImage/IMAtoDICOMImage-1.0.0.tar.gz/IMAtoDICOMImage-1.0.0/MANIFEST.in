@@ -1,0 +1,5 @@
+include IMAtoDICOMImage.py
+include README.txt
+include MANIFEST.in
+include LICENCE.txt
+global-include *.py *.txt *.IMA *.dcm 

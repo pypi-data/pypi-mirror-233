@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+IMAtoDICOMImage/__init__.py
+IMAtoDICOMImage.egg-info/PKG-INFO
+IMAtoDICOMImage.egg-info/SOURCES.txt
+IMAtoDICOMImage.egg-info/dependency_links.txt
+IMAtoDICOMImage.egg-info/requires.txt
+IMAtoDICOMImage.egg-info/top_level.txt
