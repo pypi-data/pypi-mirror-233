@@ -1,0 +1,404 @@
+Metadata-Version: 2.1
+Name: bitwardentools
+Version: 1.0.57
+Summary: bitwardentools
+Home-page: https://github.com/corpusops/bitwardentools
+Author: kiorky
+Author-email: kiorky@cryptelium.net
+License: GPL
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: click
+Requires-Dist: hkdf
+Requires-Dist: pycryptodome
+Requires-Dist: pyjwt[crypto]
+Requires-Dist: requests >=2.13.0
+Requires-Dist: jedi <0.18.0
+Requires-Dist: ipython
+Requires-Dist: pdbpp
+
+# tools for working with vaultwarden/bitwarden (_rs) and vaultier
+
+This package containers a python3+ client for bitwarden which uses both a native python implementation but also wraps the official the official npm `@bitwarden/cli`.
+
+The ultimate goal is certainly only to rely on python implementation against the vaultwarden/bitwarden_rs server implementation.
+
+- [![.github/workflows/cicd.yml](https://github.com/corpusops/bitwardentools/actions/workflows/cicd.yml/badge.svg?branch=main)](https://github.com/corpusops/bitwardentools/actions/workflows/cicd.yml)
+
+## Features
+- api controllable client
+- Create, Read, Update, Delete,  on organizations, collection, ciphers, users (also disable/enable), and attachments
+- Attach Ciphers to organization collections
+- Set access at orgas, collections and users levels.
+- Download/Upload attachments to vault and organizations
+- The client also integrate a thin wrapper to official npm CLI (see `call` mathod)
+- Read [api](./src/bitwardentools/client.py)  for longer details
+ 
+## install as a python lib
+```bash
+pip install bitwardentools
+```
+
+## Run in dev
+### Configure
+```bash
+cp .env.dist .env
+cp .env.local.dist .env.local
+printf "USER_UID=$(id -u)\nUSER_GID=$(id -g)\n">>.env
+```
+
+### Build
+```bash
+eval $(egrep -hv '^#|^\s*$' .env .env.local|sed  -e "s/^/export /g"| sed -e "s/=/='/" -e "s/$/'/g"|xargs)
+COMPOSE_FILE="docker-compose.yml:docker-compose-build.yml" docker-compose build
+```
+
+### Run
+
+```bash
+docker-compose run --rm app bash
+```
+
+```bash
+sed -i -e "/COMPOSE_FILE/d" .env
+echo "COMPOSE_FILE=docker-compose.yml:docker-compose-dev.yml" >> .env
+docker-compose up -d --force-recreate
+docker-compose exec -u app app bash
+```
+
+### run tests
+```bash
+sed -i -e "/COMPOSE_FILE/d" .env
+echo "COMPOSE_FILE=docker-compose.yml:docker-compose-dev.yml:docker-compose-test.yml" >> .env
+docker-compose exec -u app app tox -e linting,coverage
+```
+
+## Credits and bibliography
+- [gnunux](http://gnunux.info/) excellent articles:
+    [1](http://gnunux.info/dotclear2/index.php?post/2020/10/11/%C3%89crire-un-client-Bitwarden-en-python-%3A-identifiant)
+    [2](http://gnunux.info/dotclear2/index.php?post/2020/10/11/%C3%89crire-un-client-Bitwarden-en-python-%3A-cr%C3%A9er-une-organisation-et-une-collection)
+    [3](http://gnunux.info/dotclear2/index.php?post/2020/10/11/%C3%89crire-un-client-Bitwarden-en-python)
+- https://github.com/dani-garcia/vaultwarden/ (old: https://github.com/dani-garcia/bitwarden_rs/ )
+- https://github.com/doy/rbw/tree/master/src
+- https://github.com/bitwarden/jslib
+- https://github.com/birlorg/bitwarden-cli/tree/trunk/python/bitwarden
+- https://github.com/jcs/rubywarden
+
+
+## Doc
+see also [USAGE](./USAGE.md) (or read below on pypi)
+
+
+## CHANGES
+
+### 1.0.57
+- QA & CI/CD fixes [kiorky]
+- Fix newer vaultwarden patch [kiorky]
+- Fix newer vaultwarden adduser [kiorky]
+- Fix new vaultwarden create_orga [kiorky]
+- Fix newer vaultwarden set_org_acces [kiorky]
+
+### 1.0.56
+- Customizable auth payload support (2Factor, api auth) [Markus Kötter <koetter@cispa.de>])
+
+### 1.0.55
+- ensure requests is in requirements [kiorky]
+
+### 1.0.54
+- bugfix: exclude folderId from getting encrypted [Thomas Kriechbaumer <thomas@kriechbaumer.name>]
+
+### 1.0.53
+- kdfIterations payload change fix [kiorky]
+- add delete_user [kiorky]
+
+### 1.0.51
+- Do not need private key for confirming users
+  [Didier 'OdyX' Raboud <didier.raboud@liip.ch>]
+### 1.0.49
+- complete vaultier `AS_SINGLE_ORG=false` acls
+- feed collections accesses also with global `accessAll=true` users.
+
+### 1.0.47
+- vaultier migration: add notify script
+- vaultier migration: finish cycle
+- Add orga/collection memberships managment methods
+- Rename tokens attribute
+- Better error messagfes
+- Optimize login & token management
+- Cache overhaul and factorization
+- Vaultier AsOneOrganization import variants
+- Clarify docs
+
+### 1.0.46
+- Compatibility leftovers with bitwarden_rs `1.20`.
+
+### 1.0.45
+- Compatibility with bitwarden_rs `1.20` (was `1.18`).
+
+### 1.0.44
+- initial release
+
+
+### Cut a release
+
+```sh
+./release.sh $version
+```
+
+
+
+
+### Usage
+
+```python
+client = Client(server, email, password)
+client.sync()
+#
+# direct object creation methods
+# organization
+client.create_organization('foo', 'foo@foo.com')
+# collection
+client.create_collection('bar', orga='foo')
+# default item/login
+payload = {
+    "notes": "supernote",
+    "login": {
+        "totp": "aze",
+        'username': "alice", "password": "rabbit",
+        "uris": [{"match": None, "uri": "http://a"}]
+    }
+}
+client.create_item("sec5", orga, collections=[col], **payload)
+# if orga is None cipher will go inside user vault
+client.create_item("secpersonal", **payload)
+## is a synoym: client.create_login
+# identity
+# title": "Mr/Mrs/Ms/Dr"
+payload = {
+    "identity": {
+        "address1": "foo", "address2": "foo", "address3": "foo", "city": "foo", "postalCode": "foo",
+        "country": "foo", "state": "foo", "username": "foo", "company": "foo",
+        "phone": "foo", "email": "foo",
+        "title": "Mrs", "firstName": "foo", "lastName": "foo", "middleName": "foo",
+        "ssn": "foo", "licenseNumber": "foo", "passportNumber": "foo",
+    },
+    "notes": "foo",
+}
+client.create_identity("sec1", orga, collections=[col], **payload)
+# note
+payload = {
+    "fields": [{"name": "thisisabool", "type": 2, "value": False}],
+    "notes": "notenote",
+    "secureNote": {"type": 0},
+}
+client.create_securenote("sec2", orga, collections=[col], **payload)
+# card
+payload = {
+    "card": {"brand": "sec", "cardholderName": "foo",
+             "number": "aaa", "code": "123456",
+             "expMonth": "10", "expYear": "2013"},
+    "fields": [{"name": "aaa", "type": 0, "value": "aaa"}],
+    "notes": "aaa"
+}
+client.create_card("sec4", orga, collections=[col], **payload)
+#
+# create only with json payloads
+orga = client.create(**{
+    'object': 'organization',
+    'name': "org",
+    'email': email})
+# Create a collection
+col = client.create(**{
+    'object': 'org-collection',
+    'name': "testcol",
+    'organizationId': client.item_or_id(orga)})
+col2 = client.create(**{
+    'object': 'org-collection',
+    'name': "testcol2",
+    'organizationId': client.item_or_id(orga)})
+# Create a login within an organization, collectionIds is mandatory on bitwarden_rs 1.19+
+cipher = client.create(**{
+    "name": "test",
+    "object": "item",
+    "organizationId": orga.id,
+    "notes": "supernote",
+    "login": {'username': "alice", "password": "rabbit"},
+    "collectionIds": [col2.id],})
+# Create a login within your personal vault
+cipher = client.create(**{
+    "name": "test",
+    "object": "item",
+    "notes": "supernote",
+    "login": {'username': "alice", "password": "rabbit"})
+#
+# Patch existing objects
+testorg = client.get_organization("org")
+client.edit_organization(testorg, name='fooorg')
+#
+testcol = client.get_collection("testcol")
+client.edit_orgcollection(testcol, name='foocol')
+#
+# Play with ciphers
+all_ciphers = client.get_ciphers()
+cipher = client.get_cipher("test", collection=col, orga=orga)
+# Put cipther in collection col2
+client.link(cipher, col2)
+#
+# Attachments
+client.attach(sec, "/path/to/foo.zip")
+# reload cipher with it's new attachment
+# default dir in current working directory, default filename is uploaded filename
+client.download(sec.attachments[0],
+                directory='/w/data/titi/toto',
+                filename='tata.zip')
+client.delete_attachments(sec)
+#
+# users management
+#
+users = client.get_users()  # > {"emails": {}, "ids": {}, "names": {}} users indexed dicts
+# search one user
+user = client.get_user(email="foo@bar.com")
+user = client.get_user(name="foo")
+user = client.get_user(id="424242424-4242-4242-4242-424242424242")
+# enable/delete/disable methods can take id/email/name or user instances as kwargs:
+client.disable_user(email="foo@bar.com")
+client.disable_user(id="424242424-4242-4242-4242-424242424242")
+client.disable_user(name="foo")
+client.disable_user(user=user)
+# other methods
+client.enable_user(user=/name=/id=/email=)
+client.delete_user(user=/name=/id=/email=)
+# if not password, it will be autogenerated and in the return tuple
+user, pw = client.create_user('foo@bar.com', password=, passwordhint=, name=)
+# If you use bitwarden_rs and you setted up the bitwarden rs key,
+# the user will be automatically validated
+# you can manually validate an account with:
+user = client.validate('foo@bar.com')
+# you can also manage orgs invitations
+acl = client.accept_invitation('foo@bar.com', orga)  # need bitwarden server private key
+acl = client.confirm_invitation('foo@bar.com', orga)  # need bitwarden server private key
+# you can also manage collection permissions
+## add user to orga
+c.add_user_to_organization(user, orga, collections=col)
+## set them at orga level (will add to orga if not already member)
+c.set_organization_access(user, orga, collections=col, hidepasswords=False, readOnly=True/False)
+c.set_organization_access(user, orga, {"collection": col, "hidePasswords": False}, hidepasswords=True)
+## add them at collection level
+c.set_collection_access(user, col, hidepasswords=True/False, readOnly=True/False)
+## remove from collection: col
+c.set_organization_access(user, orga, {"collection": col, "remove": True})
+### or
+c.set_collection_access(user, {"collection": col, "remove": True})
+## get acls infos
+c.get_accesses(orga)
+c.get_accesses(col)
+c.get_accesses({"user": user, "collection": col})
+c.get_accesses({"user": user, "orga": orga})
+## remove from collection
+c.remove_user_from_collection(userOrEmail, colc)
+## remove from orga
+c.remove_user_from_organization(userOrEmail, orga)
+```
+
+### Manipulating the login data structure via callback (2Factor)
+This allows other login mechanisms such as totp or api key:
+
+example 1:
+
+```python
+
+def mfa2fa(loginpayload):
+    totp = pyotp.TOTP(otpseed)
+    loginpayload.update(
+        {
+            "twoFactorToken": str(totp.now()),
+            "twoFactorProvider": "0",
+            "twoFactorRemember": "0"
+        }
+    )
+    return loginpayload
+
+client = Client(server, email, password, authentication_cb=mfa2fa)
+```
+
+example 1:
+
+```python
+def api_key(loginpayload):
+    loginpayload.update(
+        {
+            "client_id": CLIENT_ID,
+            "client_secret": CLIENT_SECRET,
+            "scope": "api",
+            "grant_type": "client_credentials"
+        }
+    )
+    return loginpayload
+
+client = Client(server, email, password, authentication_cb=api_key)
+```
+
+### encode the vaultwarden/bitwarden_rs key for autovalidating user
+```sh
+base64 $BITWARDEN_RS_SERVER_DATA/rsa_key.der|tr -d '\n'
+=> copy paste the result in your .env.local this way
+BITWARDEN_PRIVATE_KEY=MIIxxx
+```
+
+
+### migrate from vaultier to bitwarden notes
+
+```sh
+VAULTIER_KEY=$(echo $(base64 ~/vaultier_key.bin|tr -d '\n')
+cat >>.env << EOF
+VAULTIER_KEY=${VAULTIER_KEY}
+# if your vauiltier has aditionnal httpauth
+# VAULTIER_HTTP_PASSWORD=htpasswd
+# VAULTIER_HTTP_USER=user
+VAULTIER_EMAIL=myvaultier.email@d.com
+VAULTIER_URL=https://vaultier.foo.net
+VAULTIER_JSON=data/export/vaultierfile.json
+BW_ORGA_NAME=MyBitwardenOrga
+BITWARDEN_PW=MasterPassword
+BITWARDEN_SERVER=https://bitwd.foo.net
+BITWARDEN_EMAIL=foo@foo.com
+```
+
+### export vaultier data to json file for cards and files for attachments
+- It will produce data/export/vaultname.json
+- And download attachments inside data/export/secret$id/
+
+```sh
+time python src/bitwardentools/vaultier/export.py
+```
+
+### load vaultier json serialized vaults/cards into bitwarden orga/collections
+As bitwarden has only 2 folds, where vaultier has 3, cards are migrated into bitwarden and named `$vault $card`; this is the link between the two systems, please do not rename your card as long as you want to continue to migrate or it will duplicate things.
+```sh
+time python src/bitwardentools/vaultier/import_structure.py
+```
+
+### sync secrets
+```sh
+time python src/bitwardentools/vaultier/sync_secrets.py
+```
+
+### load vaultier json members as bitwarden users Profiles and tie them to their secrets
+```sh
+python src/bitwardentools/vaultier/invite.py
+```
+### Notify users of their accounts
+```sh
+python src/bitwardentools/vaultier/notify.py --dry-run=0
+```
+
+### Security note
+We provide a ``bitwardentools.client.bust_cache`` method to invalidate any cache in memory, please use it whenever you have finished to access your secrets.
+
+```python
+from bitwardentools.client import bust_cache
+bust_cache()
+```
+
