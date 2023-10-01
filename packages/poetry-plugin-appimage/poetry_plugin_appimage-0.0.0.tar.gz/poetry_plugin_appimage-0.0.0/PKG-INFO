@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: poetry-plugin-appimage
+Version: 0.0.0
+Summary: Plugin that builds AppImage from a poetry project
+Home-page: https://github.com/nanotemper/poetry-plugin-appimage
+License: MIT
+Author: Sai Sasidhar Maddali
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Mako (>=1.1.5,<2.0.0)
+Requires-Dist: poetry (>=1.5.0,<2.0.0)
+Requires-Dist: poetry-plugin-export (>=1.4.0,<2.0.0)
+Project-URL: Repository, https://github.com/nanotemper/poetry-plugin-appimage
