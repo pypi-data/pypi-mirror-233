@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mkdocs-auto-i18n
+Version: 0.1.0
+Summary: A plugin for MkDocs that automatically translates documentation pages and allows users to switch languages.
+Home-page: https://github.com/linyuxuanlin/mkdocs-auto-i18n
+Author: Power Lin
+Author-email: linyuxuanlin@outlook.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Description-Content-Type: text/markdown
+
+# mkdocs-auto-i18n
+
+支持选用 ChatGPT, DeepL 或 Google Translate 对博客文章进行自动翻译。
