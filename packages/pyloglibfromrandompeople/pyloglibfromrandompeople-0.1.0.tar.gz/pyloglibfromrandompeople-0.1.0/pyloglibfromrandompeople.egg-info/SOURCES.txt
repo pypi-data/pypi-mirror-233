@@ -1,0 +1,5 @@
+setup.py
+pyloglibfromrandompeople.egg-info/PKG-INFO
+pyloglibfromrandompeople.egg-info/SOURCES.txt
+pyloglibfromrandompeople.egg-info/dependency_links.txt
+pyloglibfromrandompeople.egg-info/top_level.txt
