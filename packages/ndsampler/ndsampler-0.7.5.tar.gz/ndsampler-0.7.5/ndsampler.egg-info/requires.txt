@@ -1,0 +1,372 @@
+ubelt
+parse
+xarray
+sortedcontainers
+fasteners
+atomicwrites
+pyqtree
+kwimage
+kwarray
+kwcoco
+
+[:python_version < "3.10" and python_version >= "3.6"]
+numpy
+Pillow
+
+[:python_version < "3.10" and python_version >= "3.9"]
+scipy
+scikit-learn
+
+[:python_version < "3.11" and python_version >= "3.10"]
+numpy
+scipy
+
+[:python_version < "3.7" and python_version >= "3.6"]
+scipy
+scikit-learn
+
+[:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx
+
+[:python_version < "3.8" and python_version >= "3.7"]
+networkx
+scipy
+scikit-learn
+
+[:python_version < "3.9" and python_version >= "3.8"]
+scipy
+scikit-learn
+
+[:python_version < "4.0" and python_version >= "3.11"]
+numpy
+scipy
+
+[:python_version >= "3.10"]
+scikit-learn
+Pillow
+
+[:python_version >= "3.8"]
+networkx
+
+[all]
+ubelt
+parse
+xarray
+sortedcontainers
+fasteners
+atomicwrites
+pyqtree
+kwimage
+kwarray
+kwcoco
+pytest
+coverage
+xdoctest
+kwplot
+lru-dict
+
+[all-strict]
+ubelt==1.3.3
+parse==1.14.0
+xarray==0.16.0
+sortedcontainers==2.3.0
+fasteners==0.14.1
+atomicwrites==1.3.0
+pyqtree==1.0.0
+kwimage==0.9.19
+kwarray==0.6.7
+kwcoco==0.5.6
+pytest==6.2.4
+coverage==5.2.1
+xdoctest==0.15.6
+kwplot==0.4.10
+lru-dict==1.1.7
+
+[all-strict:python_version < "3.10" and python_version >= "3.6"]
+numpy==1.19.3
+Pillow==8.0.0
+
+[all-strict:python_version < "3.10" and python_version >= "3.9"]
+scipy==1.8.0
+scikit-learn==1.0.2
+
+[all-strict:python_version < "3.11" and python_version >= "3.10"]
+numpy==1.21.6
+scipy==1.8.0
+
+[all-strict:python_version < "3.6.0"]
+pytest-cov<2.6.0,==2.0.0
+
+[all-strict:python_version < "3.7" and python_version >= "3.6"]
+scipy==1.5.4
+scikit-learn==0.24.1
+
+[all-strict:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,==2.2.0
+networkx<=2.4.0,==2.2.0
+
+[all-strict:python_version < "3.8" and python_version >= "3.7"]
+networkx==2.6.2
+scipy==1.6.0
+scikit-learn==0.24.1
+
+[all-strict:python_version < "3.9" and python_version >= "3.8"]
+scipy==1.8.0
+scikit-learn==1.0.2
+
+[all-strict:python_version < "4.0" and python_version >= "3.11"]
+numpy==1.23.2
+scipy==1.9.2
+
+[all-strict:python_version >= "3.10"]
+scikit-learn==1.1.0
+Pillow==9.1.0
+
+[all-strict:python_version >= "3.6.0"]
+pytest-cov==2.12.1
+
+[all-strict:python_version >= "3.8"]
+networkx==2.7
+
+[all:python_version < "3.10" and python_version >= "3.6"]
+numpy
+Pillow
+
+[all:python_version < "3.10" and python_version >= "3.9"]
+scipy
+scikit-learn
+
+[all:python_version < "3.11" and python_version >= "3.10"]
+numpy
+scipy
+
+[all:python_version < "3.6.0"]
+pytest-cov
+
+[all:python_version < "3.7" and python_version >= "3.6"]
+scipy
+scikit-learn
+
+[all:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx
+
+[all:python_version < "3.8" and python_version >= "3.7"]
+networkx
+scipy
+scikit-learn
+
+[all:python_version < "3.9" and python_version >= "3.8"]
+scipy
+scikit-learn
+
+[all:python_version < "4.0" and python_version >= "3.11"]
+numpy
+scipy
+
+[all:python_version >= "3.10"]
+scikit-learn
+Pillow
+
+[all:python_version >= "3.6.0"]
+pytest-cov
+
+[all:python_version >= "3.8"]
+networkx
+
+[graphics]
+
+[graphics-strict]
+
+[graphics-strict:python_version < "3.10" and python_version >= "3.9"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "3.11" and python_version >= "3.10"]
+opencv-python==4.5.4.58
+
+[graphics-strict:python_version < "3.4" and python_version >= "2.7"]
+opencv-python==3.1.0.0
+
+[graphics-strict:python_version < "3.5" and python_version >= "3.4"]
+opencv-python==3.1.0.5
+
+[graphics-strict:python_version < "3.6" and python_version >= "3.5"]
+opencv-python==3.1.0.2
+
+[graphics-strict:python_version < "3.7" and python_version >= "3.6"]
+opencv-python==3.4.13.47
+
+[graphics-strict:python_version < "3.8" and python_version >= "3.7"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "3.9" and python_version >= "3.8"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "4.0" and python_version >= "3.11"]
+opencv-python==4.5.5.64
+
+[graphics:python_version < "3.10" and python_version >= "3.9"]
+opencv-python
+
+[graphics:python_version < "3.11" and python_version >= "3.10"]
+opencv-python
+
+[graphics:python_version < "3.4" and python_version >= "2.7"]
+opencv-python
+
+[graphics:python_version < "3.5" and python_version >= "3.4"]
+opencv-python
+
+[graphics:python_version < "3.6" and python_version >= "3.5"]
+opencv-python
+
+[graphics:python_version < "3.7" and python_version >= "3.6"]
+opencv-python
+
+[graphics:python_version < "3.8" and python_version >= "3.7"]
+opencv-python
+
+[graphics:python_version < "3.9" and python_version >= "3.8"]
+opencv-python
+
+[graphics:python_version < "4.0" and python_version >= "3.11"]
+opencv-python
+
+[headless]
+
+[headless-strict]
+
+[headless-strict:python_version < "3.10" and python_version >= "3.9"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "3.11" and python_version >= "3.10"]
+opencv-python-headless==4.5.4.58
+
+[headless-strict:python_version < "3.4" and python_version >= "2.7"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.5" and python_version >= "3.4"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.6" and python_version >= "3.5"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.7" and python_version >= "3.6"]
+opencv-python-headless==3.4.13.47
+
+[headless-strict:python_version < "3.8" and python_version >= "3.7"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "3.9" and python_version >= "3.8"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "4.0" and python_version >= "3.11"]
+opencv-python-headless==4.5.5.64
+
+[headless:python_version < "3.10" and python_version >= "3.9"]
+opencv-python-headless
+
+[headless:python_version < "3.11" and python_version >= "3.10"]
+opencv-python-headless
+
+[headless:python_version < "3.4" and python_version >= "2.7"]
+opencv-python-headless
+
+[headless:python_version < "3.5" and python_version >= "3.4"]
+opencv-python-headless
+
+[headless:python_version < "3.6" and python_version >= "3.5"]
+opencv-python-headless
+
+[headless:python_version < "3.7" and python_version >= "3.6"]
+opencv-python-headless
+
+[headless:python_version < "3.8" and python_version >= "3.7"]
+opencv-python-headless
+
+[headless:python_version < "3.9" and python_version >= "3.8"]
+opencv-python-headless
+
+[headless:python_version < "4.0" and python_version >= "3.11"]
+opencv-python-headless
+
+[optional]
+kwplot
+lru-dict
+
+[optional-strict]
+kwplot==0.4.10
+lru-dict==1.1.7
+
+[runtime-strict]
+ubelt==1.3.3
+parse==1.14.0
+xarray==0.16.0
+sortedcontainers==2.3.0
+fasteners==0.14.1
+atomicwrites==1.3.0
+pyqtree==1.0.0
+kwimage==0.9.19
+kwarray==0.6.7
+kwcoco==0.5.6
+
+[runtime-strict:python_version < "3.10" and python_version >= "3.6"]
+numpy==1.19.3
+Pillow==8.0.0
+
+[runtime-strict:python_version < "3.10" and python_version >= "3.9"]
+scipy==1.8.0
+scikit-learn==1.0.2
+
+[runtime-strict:python_version < "3.11" and python_version >= "3.10"]
+numpy==1.21.6
+scipy==1.8.0
+
+[runtime-strict:python_version < "3.7" and python_version >= "3.6"]
+scipy==1.5.4
+scikit-learn==0.24.1
+
+[runtime-strict:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,==2.2.0
+networkx<=2.4.0,==2.2.0
+
+[runtime-strict:python_version < "3.8" and python_version >= "3.7"]
+networkx==2.6.2
+scipy==1.6.0
+scikit-learn==0.24.1
+
+[runtime-strict:python_version < "3.9" and python_version >= "3.8"]
+scipy==1.8.0
+scikit-learn==1.0.2
+
+[runtime-strict:python_version < "4.0" and python_version >= "3.11"]
+numpy==1.23.2
+scipy==1.9.2
+
+[runtime-strict:python_version >= "3.10"]
+scikit-learn==1.1.0
+Pillow==9.1.0
+
+[runtime-strict:python_version >= "3.8"]
+networkx==2.7
+
+[tests]
+pytest
+coverage
+xdoctest
+
+[tests-strict]
+pytest==6.2.4
+coverage==5.2.1
+xdoctest==0.15.6
+
+[tests-strict:python_version < "3.6.0"]
+pytest-cov<2.6.0,==2.0.0
+
+[tests-strict:python_version >= "3.6.0"]
+pytest-cov==2.12.1
+
+[tests:python_version < "3.6.0"]
+pytest-cov
+
+[tests:python_version >= "3.6.0"]
+pytest-cov

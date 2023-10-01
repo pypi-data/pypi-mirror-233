@@ -1,0 +1,4 @@
+# xdev availpkg lru-dict
+kwplot>=0.4.10
+# gdal Moved to problematic
+lru-dict>=1.1.7
