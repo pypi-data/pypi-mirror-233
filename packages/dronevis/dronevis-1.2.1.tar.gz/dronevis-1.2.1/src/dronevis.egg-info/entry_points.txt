@@ -1,0 +1,3 @@
+[console_scripts]
+dronevis = dronevis.__main__:main
+dronevis-gui = dronevis.main_gui:main
