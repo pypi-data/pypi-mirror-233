@@ -1,0 +1,11 @@
+bsdiffhs/__init__.py,sha256=s1DpaZKa6TnQ90nrHdWPB8HusuoqSyNxPt9-zdvjrnA,280
+bsdiffhs/cli.py,sha256=ONFTPQWxe8samjd0yV88lJfis6HxIJdWYy4YWsBk94Y,2610
+bsdiffhs/core.cp39-win32.pyd,sha256=9eu1IcRW-T_-1_-U_iQ97dMaDsENGGwSuw_q1hgdt0U,14848
+bsdiffhs/format.py,sha256=wqLspwZ4SsXA8X4ApQzO8s9ozTGfX3bRNoLfZJiVSJc,4738
+bsdiffhs/test_all.py,sha256=M56q-Guu_G6XebtbLRDy6OxGtGI-Z1man-kSEmvJkts,6129
+bsdiffhs-0.2.0.dist-info/LICENSE,sha256=OX1_NbanZH76fLbgTWKoFWaQcXjqfZo7HYV53ppL-sc,8486
+bsdiffhs-0.2.0.dist-info/METADATA,sha256=t7q2hjAAyCz9r34HTkyzxhrktR13fyh5YFin2Cg5Cyo,4876
+bsdiffhs-0.2.0.dist-info/WHEEL,sha256=UkhKmvahQZSFg1l7CvU9UtOd38Ci7LLLMNssQVPJsDE,96
+bsdiffhs-0.2.0.dist-info/entry_points.txt,sha256=0JoTZn3xInfDTf0dsAVyI3V8CdERkWAV-WT3tpTalIM,96
+bsdiffhs-0.2.0.dist-info/top_level.txt,sha256=dPBst4obvgELQE5km1BF85YI8sYwccL6espSUz_rfq8,9
+bsdiffhs-0.2.0.dist-info/RECORD,,
