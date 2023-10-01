@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "busy"
+description = "Personal time management for techies"
+authors = ["Steampunk Wizard <busy@steampunkwizard.ca>"]
+license = "MIT"
+readme = "README.md"
+version = "5.5.6"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+platformdirs = "^3.10.0"
+wizlib = "^0.9.2"
+reportlab = "^4.0.4"
+punkeditor = "^0.2.2"
+
+[tool.poetry.group.dev.dependencies]
+pycodestyle = "^2.11.0"
+autopep8 = "^2.0.4"
+coverage = "^7.3.0"
+
+[tool.poetry.scripts]
+busy = "busy.handler:main"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+format = "{base}"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
