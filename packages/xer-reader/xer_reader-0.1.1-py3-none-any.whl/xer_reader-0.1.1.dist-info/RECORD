@@ -1,0 +1,8 @@
+xer_reader/__init__.py,sha256=HFxhzmLKyRTnkfeLGLZZYKLT-pwmrKnPU2291lnU3to,80
+xer_reader/src/reader.py,sha256=jxjblE8oKtmdfxU9xIje0UZiwXBn6srvVBXqXitI1d0,7007
+xer_reader/src/table_info.py,sha256=DhSppqcgjjQSdPrYauMiNDEwh331NmrMmExU0vm5aK0,8925
+xer_reader-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xer_reader-0.1.1.dist-info/METADATA,sha256=ZKHc_txU0KbNwA55kVFuc_6teTIFU1VaJcQnncxvaEg,3720
+xer_reader-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+xer_reader-0.1.1.dist-info/entry_points.txt,sha256=d-DgzOMENNfQ2VNMOztEgFpFxFffuOcwGl6KXc-ThuA,37
+xer_reader-0.1.1.dist-info/RECORD,,
