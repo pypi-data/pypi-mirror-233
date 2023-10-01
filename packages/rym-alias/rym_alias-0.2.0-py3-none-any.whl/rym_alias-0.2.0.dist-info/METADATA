@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: rym-alias
+Version: 0.2.0
+Summary: Simple aliasing.
+Project-URL: Homepage, https://github.com/muppetjones/rym-py/tree/main/rym-alias
+Project-URL: Bug Tracker, https://github.com/muppetjones/rym-py/issues
+Project-URL: Documentation, https://muppetjones.github.io/rym-py/rym-alias
+Author-email: Stephen Bush <2041619+muppetjones@users.noreply.github.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: stringcase>=1.2.0
+Provides-Extra: toml
+Requires-Dist: toml>=0.10.2; extra == 'toml'
+Description-Content-Type: text/markdown
+
+# rym-alias
+
+[![PyPI - Version](https://img.shields.io/pypi/v/rym-alias.svg)](https://pypi.org/project/rym-alias)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rym-alias.svg)](https://pypi.org/project/rym-alias)
+[![License: MIT](https://img.shields.io/badge/license-MIT-C06524)](https://github.com/muppetjones/rym-py/blob/main/LICENSE.txt)
+
+
+Simple aliasing.
