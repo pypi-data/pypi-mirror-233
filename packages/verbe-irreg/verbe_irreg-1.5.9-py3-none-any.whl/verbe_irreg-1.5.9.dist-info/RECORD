@@ -1,0 +1,16 @@
+verbe_irreg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+verbe_irreg/__main__.py,sha256=2t9Jgu49iioY3zaGbJSF3w5hdk54OCCL_mpvHAprNEY,2208
+verbe_irreg/games_mode.py,sha256=rWqMdGoZL0JI-FNrKlzzqSml97VpntXIZTo_Col4VO8,3425
+verbe_irreg/load_list.py,sha256=TYGsZlOdPOSpeuDgbanLnaHjE68TinhpWHJGbpBmExU,1338
+verbe_irreg/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+verbe_irreg/data/liste_1.txt,sha256=IlFf8FqJ-GwLd2Scdf3-IlYUM4W5T8OG5ZzngLlCvlw,562
+verbe_irreg/data/liste_2.txt,sha256=_NmitqFNo1rx_TjJnoVDtMRpJXokk9X-stnjCtBprPA,527
+verbe_irreg/data/liste_3.txt,sha256=E8tvbiQJx_UubW6LJZm3n2muMcfVpmyAArlWMAJX10Q,509
+verbe_irreg/data/liste_4.txt,sha256=H1zkbclfUrY2G9qbTaHG1Vk6HGlrBc7jlm90Qfmjhdc,523
+verbe_irreg/data/liste_5.txt,sha256=nbNKevh8Mzr2pMvmscHG3bkOl5H-yu5BqURbc59Vd60,665
+verbe_irreg/data/liste_6.txt,sha256=ohgARUEsh0v72Bw_Z5OVJbrYSjPtLJODs0mdLpg1C3Y,434
+verbe_irreg-1.5.9.dist-info/METADATA,sha256=KTDH2swwZwnAf3gM4PTzp1Qk7fjSTEHT77IEjZryMdk,1175
+verbe_irreg-1.5.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+verbe_irreg-1.5.9.dist-info/entry_points.txt,sha256=OnDM6Tni0GxUHtm6r4-oT57riamxqPmoYbyVUUfQCQI,68
+verbe_irreg-1.5.9.dist-info/top_level.txt,sha256=eotQFi5FaP7ygd4zH_GNHQAzsC6PFzNE7-qrzuwbSDI,12
+verbe_irreg-1.5.9.dist-info/RECORD,,
