@@ -1,0 +1,3 @@
+[console_scripts]
+hydrozincite = hydrozincite.main:main
+
