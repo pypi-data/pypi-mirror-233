@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: prodia
+Version: 4.2
+Summary: Package for using Prodia API
+Author: zenafey
+Author-email: zenafey@eugw.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# prodia
+Not official library for using Prodia Stable Diffusion API
+
+# Installation
+```
+pip install prodiapy==4.2
+```
+
+# Example
+```python
+from prodia import StableDiffusion
+
+pipe = StableDiffusion("your-prodia-x-key")
+
+job = pipe.generate({'prompt': 'puppies in cloud, 4k'})
+
+result = pipe.wait_for(job)
+print(result['imageUrl'])
+```
+
+# Full documentation
+[link to docs](https://prodiapy.readme.io/reference/introduction)
+
+# Discord Server
+Feel free to join our [community](https://discord.gg/PtdHCVysfj) 
