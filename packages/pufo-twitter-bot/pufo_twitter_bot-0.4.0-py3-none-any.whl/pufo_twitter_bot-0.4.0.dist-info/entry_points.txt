@@ -1,0 +1,3 @@
+[console_scripts]
+pufo-twitter-bot=pufo_twitter_bot.__main__:main
+
