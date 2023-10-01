@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: robo-boards
+Version: 0.1.1b0
+Summary: interface modules for microprocessor boards
+Home-page: https://github.com/mkner/robo-boards
+Author: Mike Knerr
+License: BSD
+Keywords: mobile robotics,microprocessor boards,arduino,ML298P
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+**robo-boards**
+
+
+Mobile robotics 
+modules for I/O and control of microprocessor boards 
+
+
+see https://robo-boards.readthedocs.io/en/latest/
+
+
+
+
+
+
