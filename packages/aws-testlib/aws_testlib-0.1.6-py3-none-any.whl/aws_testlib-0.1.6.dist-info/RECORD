@@ -1,0 +1,8 @@
+aws_testlib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_testlib/apigw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_testlib/apigw/java/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_testlib/apigw/java/aws-apigateway-velocity-repl.jar,sha256=fVuZgAbl1J8WASoGMCbECie6yzQToHy9pAlrwCacImc,3145111
+aws_testlib/apigw/template.py,sha256=7NY6WF2yJxEKvNKw7cL_rv5rYW-sqdp5c9jYZSu-rJs,2124
+aws_testlib-0.1.6.dist-info/METADATA,sha256=EUBs-vfKxcwMaS_f6AbCZghILZTMpcYvCXlUf-6gasI,761
+aws_testlib-0.1.6.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+aws_testlib-0.1.6.dist-info/RECORD,,

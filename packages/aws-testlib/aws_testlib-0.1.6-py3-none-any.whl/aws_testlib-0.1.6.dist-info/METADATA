@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aws-testlib
+Version: 0.1.6
+Summary: 
+Author: Martin Macak
+Author-email: martin.macak@gmail.com
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+# aws-testlib
+
+Contains various utilities and methods for testing SAM and other AWS services that use boto3 and
+botocore.
+
+## AWS Api Gateway
+
+### Velocity templates for integration
+
+This library contains methods that allow to inflate Velocity templates in the same way that is supported
+by AWS api gateway.
+
+This functionality uses embedded Java jar file that contains all necessary functions. Because of this, Java
+runtime is required to be installed on the system.
