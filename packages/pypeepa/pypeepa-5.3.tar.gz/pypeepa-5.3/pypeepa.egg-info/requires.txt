@@ -1,0 +1,4 @@
+pandas>=1.0.0
+alive-progress>=1.6.0
+pyfiglet>=0.8.post1
+psutil>=5.9.5
