@@ -1,0 +1,10 @@
+oplibcore.cpython-37m-x86_64-linux-gnu.so,sha256=PNanutRbkoPd8NWO_LrKgIqX-jwArDhI1QeI6HylJ54,34244385
+oplibcore-0.1.2.dist-info/METADATA,sha256=UhLpVtCOzu6WFX39Zz3KAaYwGZtjj6OiHZ5vFEQ_sVc,99
+oplibcore-0.1.2.dist-info/WHEEL,sha256=f_U2wrIMA84Ps5bWlwzwSQPbEE5dPDJHwy26rfGPAKU,113
+oplibcore-0.1.2.dist-info/RECORD,,
+oplibcore-0.1.2.dist-info/top_level.txt,sha256=VtfGaaWhfCULxcrZNv8GoPVnF5rU8nU8amrToZ5Nlr4,10
+oplibcore.libs/liblapacke-e4c7fedb.so.3.8.0,sha256=zXpssZpRatL2JF2tRD95PXZUPdCy95APlQdZo5pwHxQ,4004945
+oplibcore.libs/libopenblas-r0-11edc3fa.3.15.so,sha256=reDIwGCYt1suXbTHWAcq9dLDB1YuGzlmt4iHI0XtVPs,37105401
+oplibcore.libs/libonnxruntime-6ce2845c.so.1.15.1,sha256=p3N9ZYSFxdPOM4_9B0Mh81Q5PNUJovsDauJpf2QJAfU,16739745
+oplibcore.libs/libgfortran-6a8a198e.so.5.0.0,sha256=jEZaGzKaA15Y-uOPEwDFu7zmM39tT-suaSmxFwbBSM4,2714697
+oplibcore.libs/libquadmath-895c7c83.so.0.0.0,sha256=ka6-Dae0YaBx94bq4qP1DAyZ760lilJA7Jg0Y7sednQ,272193
