@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+insolation/__init__.py
+insolation/atmosf.py
+insolation/constant.py
+insolation/insolf.py
+insolation/shadows.py
+insolation.egg-info/PKG-INFO
+insolation.egg-info/SOURCES.txt
+insolation.egg-info/dependency_links.txt
+insolation.egg-info/top_level.txt

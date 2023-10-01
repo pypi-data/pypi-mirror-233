@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insolation"
+version = "0.1.9"
+authors = [
+  { name="Javier G. Corripio", email="jgc@meteoexploration.com" },
+]
+description = "Functions to compute insolation over complex terrain"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://www.meteoexploration.com/insol/python/index.html"
+"Bug Tracker" = "https://github.com/jgcmeteo/insolation/issues"
