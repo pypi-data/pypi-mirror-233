@@ -1,0 +1,41 @@
+website:
+  image: theme/logo/logo-banner.png
+  favicon: theme/logo/logo-small.png
+  repo-actions: [edit, issue]
+  cookie-consent: false
+  reader-mode: false
+  page-navigation: true
+  search:
+    location: navbar
+    type: overlay 
+    limit: 20
+    copy-button: true
+  navbar:
+    logo: theme/logo/logo-small.png
+    pinned: false
+  open-graph: 
+    image: theme/logo/logo-banner.png
+    image-width: 1800 
+    image-height: 1200
+    image-alt: TJ Palanca Logo
+  page-footer:
+    center: |-
+      © Copyright 2009-2023 TJ Palanca
+
+format:
+  html:
+    theme: 
+      - litera
+      - theme/theme.scss
+    include-in-header: 
+      - theme/theme.htm
+      - theme/analytics.htm
+    citations-hover: true
+    footnotes-hover: true
+    link-external-icon: true 
+    link-external-newwindow: true
+    link-external-filter: ^(?:http:|https:)\/\/.*(tjpalanca\.com|tjpalanca\.dev)\/.*$
+    smooth-scroll: false
+    freeze: true
+    title-block-banner: false
+    email-obfuscation: javascript
