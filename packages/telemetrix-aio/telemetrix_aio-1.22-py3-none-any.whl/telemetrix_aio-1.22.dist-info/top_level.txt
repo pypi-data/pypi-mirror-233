@@ -1,0 +1,5 @@
+comparisons
+examples
+telemetrix_aio
+venv
+venv2
