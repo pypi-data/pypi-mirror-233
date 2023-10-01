@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4227a64-b4a5-488b-8397-d7e550e40c00" name="Changes" comment="&#10;# ================================================&#10;# Subject                     50 CHARACTERS HERE ^&#10;# &#10;# &lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;&#10;# &lt;BLANK LINE&gt;&#10;# &lt;body&gt;&#10;# &lt;BLANK LINE&gt;&#10;# &lt;footer&gt;&#10;# &#10;# * &lt;type&gt; is usually one of the following:&#10;#   - fix             = bug fix             (patch in SemVer)&#10;#   - feat            = new feature         (minor in SemVer)&#10;#   - BREAKING CHANGE = breaking API change (major in SemVer)&#10;# &#10;# * &lt;type&gt; can also be one of the following:&#10;#   - build    = changes that affect the build system or external&#10;#                dependencies (adding npm package, yarn package, etc.)&#10;#   - ci       = changes to ci configuration files and scripts&#10;#   - docs     = documentation only changes&#10;#   - perf     = a code change that improves performance&#10;#   - refactor = a code change that neither fixes a bug nor adds a&#10;#                feature&#10;#   - style    = changes that do not affect the meaning of the code&#10;#                (white-space, formatting, missing semi-colons, etc.)&#10;#   - test     = adding missing tests or correcting existing tests&#10;# &#10;# * &lt;scope&gt; will vary from project to project. If you're working on a&#10;#   project that has a client and a server, it might make sense for a&#10;#   commit that changes the server code to have have a scope of server.&#10;#   Optional.&#10;# &#10;# * &lt;subject&gt; should be capitalized as if it's an email header. It&#10;#   should be no longer than 50 characters. It should use the&#10;#   imperative, present tense.&#10;# &#10;# * &lt;body&gt; should also use the imperative, present tense: &quot;change&quot; not&#10;#   &quot;changed&quot; nor &quot;changes&quot;. The body should include the motivation for&#10;#   the change and contrast this with previous behavior. Focus on the&#10;#   &quot;what&quot; and the &quot;why&quot; as opposed to the &quot;how&quot;. Hard wrap at 72&#10;#   characters. In Vi/Vim/Neovim, use `:set textwidth=72`&#10;#   (`:set tw=72`) and `:set colorcolumn=72` (`:set cc=72`). Optional.&#10;# &#10;# * &lt;footer&gt; should include a reference to an issue, if there's a&#10;#   relevant issue. Optional.&#10;# &#10;# These rules are based on the following:&#10;# * Conventional Commits&#10;#   https://www.conventionalcommits.org&#10;# * Angular Commit Message Guidelines&#10;#   https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines&#10;# * Tim Pope's Commit Style Guide&#10;#   https://commit.style&#10;# &#10;# To use this commit template globally:&#10;# `git config --global commit.template /path/to/this/file`">
+      <change afterPath="$PROJECT_DIR$/bin/build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/publish" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2VBbglGTsOvoZXfrOzU8JG5SpiQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/liammul/,/underwood",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/data" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4227a64-b4a5-488b-8397-d7e550e40c00" name="Changes" comment="" />
+      <created>1694312534828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694312534828</updated>
+      <workItem from="1694312535885" duration="18200000" />
+      <workItem from="1694480328954" duration="750000" />
+      <workItem from="1695192480921" duration="7479000" />
+      <workItem from="1695230777679" duration="4000" />
+      <workItem from="1695345311236" duration="14783000" />
+      <workItem from="1695591306758" duration="235000" />
+      <workItem from="1696076308077" duration="6707000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/underwood$blog.coverage" NAME="blog Coverage Results" MODIFIED="1694370686400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/underwood" />
+  </component>
+</project>
