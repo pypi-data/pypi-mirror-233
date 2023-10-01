@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="portal_layout"
+        name="Portal layout: project menu entry"
+        inherit_id="portal.portal_breadcrumbs"
+        priority="40"
+    >
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li
+                t-if="page_name == 'appointment_schedule' or appointment_schedule"
+                class="col-lg-2"
+                t-attf-class="breadcrumb-item #{'active ' if not project else ''}"
+            >
+                <a
+                    t-if="appointment_schedule"
+                    t-attf-href="/my/appointment-schedules?{{ keep_query() }}"
+                >Appointment Schedules</a>
+                <t t-else="">Appointment Schedules</t>
+            </li>
+            <li
+                t-if="appointment_schedule"
+                class="breadcrumb-item active text-truncate col-8 col-lg-10"
+            >
+                <t t-esc="appointment_schedule.name" />
+            </li>
+        </xpath>
+    </template>
+
+    <template
+        id="portal_my_home"
+        name="Show Appointment Schedules"
+        customize_show="True"
+        inherit_id="portal.portal_my_home"
+        priority="40"
+    >
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Appointment Schedules</t>
+                <t t-set="url" t-value="'/my/appointment-schedules'" />
+                <t t-set="placeholder_count" t-value="'appointment_schedule_count'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_appointment_schedules" name="My Appointment Schedules">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Appointment Schedules</t>
+            </t>
+            <t t-if="not appointment_schedules">
+                <div class="alert alert-warning mt8" role="alert">
+                    There are no appointment schedules.
+                </div>
+            </t>
+            <t t-if="appointment_schedules" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th># Appointment</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time Slot</th>
+                        <th>Appointee</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="appointment_schedules" t-as="appointment_schedule">
+                        <td>
+                            <a
+                                t-attf-href="/my/appointment-schedule/#{appointment_schedule.id}?{{ keep_query() }}"
+                            ><span t-field="appointment_schedule.name" /></a>
+                        </td>
+                        <td><span t-field="appointment_schedule.title" /></td>
+                        <td><span t-field="appointment_schedule.type_id" /></td>
+                        <td><span t-field="appointment_schedule.date" /></td>
+                        <td><span t-field="appointment_schedule.time_slot_id" /></td>
+                        <td><span t-field="appointment_schedule.appointee_id" /></td>
+                        <td class="tx_status">
+                            <t t-if="appointment_schedule.state == 'draft'">
+                                <span class="badge badge-pill badge-info"><i
+                                        class="fa fa-fw fa-clock-o"
+                                        aria-label="Draft"
+                                        title="Draft"
+                                        role="img"
+                                    /><span
+                                        class="d-none d-md-inline"
+                                    >Draft</span></span>
+                            </t>
+                            <t t-if="appointment_schedule.state == 'confirm'">
+                                <span class="badge badge-pill badge-info"><i
+                                        class="fa fa-fw fa-clock-o"
+                                        aria-label="Waiting for Approval"
+                                        title="Waiting for Approval"
+                                        role="img"
+                                    /><span
+                                        class="d-none d-md-inline"
+                                    >Waiting for Approval</span></span>
+                            </t>
+                            <t t-if="appointment_schedule.state == 'ready'">
+                                <span class="badge badge-pill badge-info"><i
+                                        class="fa fa-fw fa-clock-o"
+                                        aria-label="Ready to Start"
+                                        title="Ready to Start"
+                                        role="img"
+                                    /><span
+                                        class="d-none d-md-inline"
+                                    >Ready to Start</span></span>
+                            </t>
+                            <t t-if="appointment_schedule.state == 'open'">
+                                <span class="badge badge-pill badge-info"><i
+                                        class="fa fa-fw fa-clock-o"
+                                        aria-label="In Progress"
+                                        title="In Progress"
+                                        role="img"
+                                    /><span
+                                        class="d-none d-md-inline"
+                                    >In Progress</span></span>
+                            </t>
+                            <t t-if="appointment_schedule.state == 'done'">
+                                <span class="badge badge-pill badge-info"><i
+                                        class="fa fa-fw fa-clock-o"
+                                        aria-label="Done"
+                                        title="Done"
+                                        role="img"
+                                    /><span
+                                        class="d-none d-md-inline"
+                                    >Done</span></span>
+                            </t>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_my_appointment_schedule" name="My Appointment Schedule">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h5 class="d-flex mb-1 mb-md-0 row">
+                                <span
+                                    t-field="appointment_schedule.name"
+                                    class="col-9 text-truncate"
+                                />
+                                <small class="text-muted d-none d-md-inline"> (#<span
+                                        t-field="appointment_schedule.id"
+                                    />)</small>
+                                <div class="col-3 col-md-2 text-right">
+                                    <small class="text-right">Status:</small>
+                                    <t t-if="appointment_schedule.state == 'draft'">
+                                        <span
+                                            class=" badge badge-pill badge-info"
+                                            title="Current stage of this appointment request"
+                                        >Draft</span>
+                                    </t>
+                                    <t t-if="appointment_schedule.state == 'confirm'">
+                                        <span
+                                            class=" badge badge-pill badge-info"
+                                            title="Current stage of this appointment request"
+                                        >Waiting for Apporval</span>
+                                    </t>
+                                    <t t-if="appointment_schedule.state == 'ready'">
+                                        <span
+                                            class=" badge badge-pill badge-info"
+                                            title="Current stage of this appointment request"
+                                        >Ready to Start</span>
+                                    </t>
+                                    <t t-if="appointment_schedule.state == 'open'">
+                                        <span
+                                            class=" badge badge-pill badge-info"
+                                            title="Current stage of this appointment request"
+                                        >Open</span>
+                                    </t>
+                                    <t t-if="appointment_schedule.state == 'done'">
+                                        <span
+                                            class=" badge badge-pill badge-info"
+                                            title="Current stage of this appointment request"
+                                        >Done</span>
+                                    </t>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div class="mb-1">
+                        <strong>Title:</strong> <span
+                            t-field="appointment_schedule.title"
+                        />
+                    </div>
+                    <div class="mb-1">
+                        <strong>Type:</strong> <span
+                            t-field="appointment_schedule.type_id"
+                        />
+                    </div>
+                    <div class="mb-1">
+                        <strong>Date:</strong> <span
+                            t-field="appointment_schedule.date"
+                            t-options='{"widget": "date"}'
+                        />
+                    </div>
+                    <div class="mb-1">
+                        <strong>Time Slot:</strong> <span
+                            t-field="appointment_schedule.time_slot_id"
+                        />
+                    </div>
+                    <div class="mb-1">
+                        <strong>Appointee:</strong> <span
+                            t-field="appointment_schedule.appointee_id"
+                        />
+                    </div>
+                    <div class="mb-1">
+                        <strong>Video Link:</strong> <span>
+                            <a t-attf-href="{{appointment_schedule.appointment_video_link}}" target="_blank"><t t-esc="appointment_schedule.appointment_video_link"/></a>
+                        </span>
+                    </div>
+                </t>
+            </t>
+            <div class="mt32">
+                <h4><strong>Message and communication history</strong></h4>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="appointment_schedule" />
+                    <t t-set="token" t-value="appointment_schedule.access_token" />
+                    <t t-set="pid" t-value="pid" />
+                    <t t-set="hash" t-value="hash" />
+                </t>
+            </div>
+        </t>
+
+    </template>
+</odoo>

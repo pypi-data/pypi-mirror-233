@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="demo_time_slot1" model="appointment_time_slot">
+    <field name="name">08.30 to 10.00 - (test)</field>
+    <field name="code">X001</field>
+    <field name="time_start" eval="8.5" />
+    <field name="time_end" eval="10.0" />
+</record>
+<record id="demo_time_slot2" model="appointment_time_slot">
+    <field name="name">10.00 to 11.30 - (test)</field>
+    <field name="code">X002</field>
+    <field name="time_start" eval="10.0" />
+    <field name="time_end" eval="11.30" />
+</record>
+</odoo>
