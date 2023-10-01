@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "microagi-git"
+version = "0.0.5"
+description = "Git For Humans: Predictable, secure and precision tuned command-line assistant that translates natural language into Git commands."
+authors = ["Sivan Grünberg <sivan@vitakka.co>"]
+readme = "README.pypi.md"
+packages = [
+    { include = "agit" },
+]
+
+homepage = "https://github.com/microagi/agit"
+
+keywords = ["agi", "microagi", "git", "assistant", "agent", "AI", "GPT"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.8"
+requests = "^2.31.0"
+pydantic = "^2.0.3"
+python-dotenv = "^1.0.0"
+colorama = "^0.4.6"
+autopage = "^0.5.1"
+pyparsing = "^3.1.1"
+
+[tool.poetry.scripts]
+agit = "agit.main:async_main"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
