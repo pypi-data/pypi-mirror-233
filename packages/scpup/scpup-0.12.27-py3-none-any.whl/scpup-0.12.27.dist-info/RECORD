@@ -1,0 +1,14 @@
+scpup/__init__.py,sha256=NQvR2clBsmYQ3TSwd7f3ukVKy6JkSw71fA8iRNXyCzQ,1300
+scpup/ctrl.py,sha256=QUiEjyKFI9qKY2INDZMl8eMfJbOUozKVZ2YOenweBAw,15452
+scpup/group.py,sha256=8Aaomz_KX8jrKT-xD2dTiLPL8excU-IUO3MvSaL_518,6240
+scpup/loader.py,sha256=mVy-9BFbsDIByefw7moxFnTRL-B4K8Ngv1DmCIV0nVM,2183
+scpup/player.py,sha256=S0EG-NtPOfdUoFqq90h_BzvvpIseFtWpJmFG9JUHbZc,9893
+scpup/position.py,sha256=AjRaQcusXpCklCYPGmZLvfwK09Dbh80asgU6K_5PsrY,2673
+scpup/services.py,sha256=Rqj0zgxAsIDjinrBzfwEPhXYrZzYGqSdqkF3C_2BZlk,9795
+scpup/sprite.py,sha256=NWZZ56ep-EbSXtW8jIkTUIezLL8tlV7jwKqRddcYoVc,18575
+scpup/text.py,sha256=ZqU2-emygOaTciglqMGS46ARJiSzoEfCKi_A6sx_ZYg,13715
+scpup/view.py,sha256=fBpVeEM1WPzJQ6z1FkfWbHx_91ODDyuSewl9ptbyLS4,4163
+scpup-0.12.27.dist-info/METADATA,sha256=48KHQ7HhZvDYC61W2PYTGuN7w8hqOoARP1ziOKjFpZA,2179
+scpup-0.12.27.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+scpup-0.12.27.dist-info/licenses/LICENSE,sha256=CZ4Rt3X0gX_7rBAOIrRF8SHSgi3nBvH_r7rKd4_JzaM,1077
+scpup-0.12.27.dist-info/RECORD,,
