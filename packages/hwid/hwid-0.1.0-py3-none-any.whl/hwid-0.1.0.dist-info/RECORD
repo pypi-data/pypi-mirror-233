@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=4d6tGXpk0RTnhHE_gR-_nhsgHQExhVKToMJ535wI12c,111
+hwid/__init__.py,sha256=sBi9ua0fXIDv854hr9UPBhHgiinxbNu14uHu4K83-aY,31
+hwid/__main__.py,sha256=RCZmmoCNOWC7rAfIDm_LaymsybXIzE6McYbUEEkf9P8,60
+hwid/core.py,sha256=kquvtsmszCm-eErc0IflnZG5XvNz4oqi8-H8M-tnfkY,1154
+hwid/exceptions.py,sha256=_ab45vf4BKG896palJw5E-cYf-ZN5pj3rl1eeEPUZaI,79
+hwid/main.py,sha256=5RbUTX17G0DHwLhQkz0jjOZhBfIGuvhRsys3MkPX4ZY,146
+hwid-0.1.0.dist-info/LICENSE,sha256=SOIDRBKVsOiGIdDUa-Y2gbS_75uVixsdfjtg1MohFDA,1075
+hwid-0.1.0.dist-info/METADATA,sha256=mA1C_jyIzqEdYol_qY_NxZmR2EgcqjQQFUtgvR_0vgg,3896
+hwid-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+hwid-0.1.0.dist-info/entry_points.txt,sha256=Rgi0uyclVkiE8oE5AWotOp1AN2D2l_re4pluj3k8048,42
+hwid-0.1.0.dist-info/RECORD,,
