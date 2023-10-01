@@ -1,0 +1,20 @@
+{
+    "title": "TPT custom extension",
+    "description": "Settings of the jupyterlab-tpt extension.",
+    "properties": {
+      "limit": {
+        "type": "integer",
+        "title": "Limit",
+        "description": "This is an example of an integer setting.",
+        "default": 25
+      },
+      "flag": {
+        "type": "boolean",
+        "title": "Simple flag",
+        "description": "This is an example of a boolean setting.",
+        "default": false
+      }
+    },
+    "additionalProperties": false,
+    "type": "object"
+  }

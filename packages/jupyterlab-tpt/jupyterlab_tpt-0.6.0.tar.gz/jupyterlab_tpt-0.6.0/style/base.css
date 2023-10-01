@@ -1,0 +1,33 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+
+.cell-tag-raises-exception {
+    border-style: dotted !important;
+    border-color: #800 !important;
+}
+
+/* multiple selection - might be better suited in courselevels ? */
+.jp-Notebook.jp-mod-commandMode .jp-Cell.jp-mod-selected {
+    background-image:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><path fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"></path></svg>') !important;
+}
+
+.cell-tag-hide-input::before {
+    content: url(only-out.svg)
+}
+.cell-tag-hide-output::before {
+    content: url(only-in.svg)
+}
+.cell-tag-hide-input.cell-tag-hide-output::before {
+    content: url(noin-noout.svg)
+}
+
+/* -- tmp -- */
+:root: {
+    --jp-notebook-toolbar-margin-bottom: 0px !important;
+    --jp-notebook-max-width: 5000px !important;
+}
