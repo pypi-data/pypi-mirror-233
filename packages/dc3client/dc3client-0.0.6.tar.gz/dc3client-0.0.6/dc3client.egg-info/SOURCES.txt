@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dc3client/__init__.py
+dc3client/dc3client.py
+dc3client/models.py
+dc3client.egg-info/PKG-INFO
+dc3client.egg-info/SOURCES.txt
+dc3client.egg-info/dependency_links.txt
+dc3client.egg-info/requires.txt
+dc3client.egg-info/top_level.txt
