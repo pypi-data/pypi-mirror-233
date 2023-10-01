@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: sigmaepsilon.core
+Version: 1.2.0
+Summary: Common developer utilities for Python projects.
+Author-email: SigmaEpsilon <bencebalogh@sigmaepsilon.com>
+Maintainer-email: SigmaEpsilon <bencebalogh@sigmaepsilon.com>
+License: MIT License
+        
+        Copyright (c) 2023 SigmaEpsilon
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/sigma-epsilon/sigmaepsilon.core
+Keywords: engineering,mechanics,science,numerical analysis,finite element method,solid mechanics,optimization
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.11,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs
+Requires-Dist: six
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: ipykernel ; extra == 'dev'
+Requires-Dist: numpy ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: ipython ; extra == 'docs'
+Requires-Dist: myst-parser ; extra == 'docs'
+Requires-Dist: sphinx-copybutton ; extra == 'docs'
+Requires-Dist: sphinx-design ; extra == 'docs'
+Requires-Dist: sphinx-inline-tabs ; extra == 'docs'
+Requires-Dist: pydata-sphinx-theme ; extra == 'docs'
+Requires-Dist: numpy ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: coverage ==4.4.2 ; extra == 'test'
+Requires-Dist: numpy ; extra == 'test'
+
+# **SigmaEpsilon.Core** - Common developer utilities for Python projects
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/sigma-epsilon/sigmaepsilon.core/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/sigma-epsilon/sigmaepsilon.core/tree/main)
+[![Documentation Status](https://readthedocs.org/projects/sigmaepsiloncore/badge/?version=latest)](https://sigmaepsiloncore.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/sigma-epsilon/sigmaepsilon.core/graph/badge.svg?token=WNLDFIGGL6)](https://codecov.io/gh/sigma-epsilon/sigmaepsilon.core)
+[![Python 3.7-3.10](https://img.shields.io/badge/python-3.7%E2%80%923.10-blue)](https://www.python.org)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI](https://badge.fury.io/py/sigmaepsilon.core.svg)](https://pypi.org/project/sigmaepsilon.core)
+[![Requirements Status](https://dependency-dash.repo-helper.uk/github/sigma-epsilon/sigmaepsilon.core/badge.svg)](https://dependency-dash.repo-helper.uk/github/sigma-epsilon/sigmaepsilon.core)
+
+The package contains some usefull stuff for general Python development activites that turned out to be highly reusable during developing projects in the SigmaEpsilon namespace.
+
+Some of the most notable contents:
+
+* Metaprogramming
+  * A collection of meta and abstract base classes.
+  * A `classproperty` decorator.
+  * A solution to enforce abstract class properties on a class.
+  * Reusable facilities for project configuration, testing, exceptions, etc.
+  
+* Wrapping
+  * An extendible `Wrapper` class and a few factory functions to help you safely wrap objects.
+
+## **Documentation**
+
+The [documentation](https://sigmaepsiloncore.readthedocs.io/en/latest/) is built with [Sphinx](https://www.sphinx-doc.org/en/master/) using the [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html) and hosted on [ReadTheDocs](https://readthedocs.org/).
+
+## **Installation**
+
+Before attempting to install the package, it is suggested to upgrade pip:
+
+```console
+python -m pip install --upgrade pip
+```
+
+`sigmaepsilon.core` can be installed (either in a virtual enviroment or globally) from PyPI using `pip` on Python >= 3.7:
+
+```console
+>>> pip install sigmaepsilon.core
+```
+
+or chechkout with the following command using GitHub CLI
+
+```console
+gh repo clone sigma-epsilon/sigmaepsilon.core
+```
+
+and install from source by typing
+
+```console
+>>> pip install .
+```
+
+If you want to run the tests, you can install the package along with the necessary optional dependencies like this
+
+```console
+>>> pip install ".[test]"
+```
+
+### Development mode
+
+For development purposes, it is suggested to install the package in editable mode, with the optional dependencies for both testing, development and documentation
+
+```console
+>>> pip install -e ".[test, dev, docs]"
+```
+
+## Testing and coverage
+
+To run the tests, run the following command in the root of the project:
+
+```console
+python -m pytest --cov-report html --cov-config=.coveragerc --cov sigmaepsilon.core
+```
+
+## **License**
+
+This package is licensed under the [MIT license](https://opensource.org/license/mit/). See the attached LICENSE file for the details.
