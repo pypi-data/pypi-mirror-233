@@ -1,0 +1,8 @@
+setup.py
+CognitiveModulePlatform/__init__.py
+CognitiveModulePlatform/create_data_medifit.py
+CognitiveModulePlatform/data_creation.py
+CognitiveModulePlatform.egg-info/PKG-INFO
+CognitiveModulePlatform.egg-info/SOURCES.txt
+CognitiveModulePlatform.egg-info/dependency_links.txt
+CognitiveModulePlatform.egg-info/top_level.txt
