@@ -1,0 +1,12 @@
+_kaldi_decoder.cp312-win_amd64.pyd,sha256=7wwnegEmIvddkhR2hPQwlZT_1fVjfv1DLYvJZlftYUM,1142784
+kaldi-decoder-core.lib,sha256=QWwSUpTSIU7ODv0NWLasiZOthMLFRy39zvFQxDYgucg,861872
+kaldi-decoder-fst.lib,sha256=74CzjXMQhm6XwyzKsD3BWU171wlEwinMk3OHY2GK-to,11189414
+kaldi-decoder-kaldi-fst-core.lib,sha256=1xxAdoJ5cETqsiET-VbLidFWo1OOeQpB56uy3HlYVE0,3600006
+kaldi_decoder/__init__.py,sha256=mihvM4thJOPHfPDEA7b4sQqwz8wjQdvJo4xWwRMl6yM,147
+kaldi_decoder/lib/kaldi-decoder-fst.lib,sha256=74CzjXMQhm6XwyzKsD3BWU171wlEwinMk3OHY2GK-to,11189414
+kaldi_decoder/lib/kaldi-decoder-kaldi-fst-core.lib,sha256=1xxAdoJ5cETqsiET-VbLidFWo1OOeQpB56uy3HlYVE0,3600006
+kaldi_decoder-0.2.1.dist-info/LICENSE,sha256=Pd-b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU,11560
+kaldi_decoder-0.2.1.dist-info/METADATA,sha256=WoEa1ZY4SdtnS7tiP376OV-9CpxBRMj-Vnaah69adOc,725
+kaldi_decoder-0.2.1.dist-info/WHEEL,sha256=e0epPQlGepThu0I0BNaKYpx2fF2LzLIOVLrIH8OyEko,102
+kaldi_decoder-0.2.1.dist-info/top_level.txt,sha256=_zZmTx-EYjIPrjkMZkT_9Vb0fFV12mKWRps7FBONiR4,29
+kaldi_decoder-0.2.1.dist-info/RECORD,,
