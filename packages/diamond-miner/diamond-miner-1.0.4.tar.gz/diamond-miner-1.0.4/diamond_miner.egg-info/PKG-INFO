@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: diamond-miner
+Version: 1.0.4
+Summary: High-speed, Internet-scale, load-balanced paths discovery.
+Home-page: https://github.com/dioptra-io/diamond-miner
+Author: Kevin Vermeulen, Matthieu Gouel, Maxime Mouchet
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Internet
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pych-client~=0.3.1
+Requires-Dist: pygfc~=1.0.5
+Requires-Dist: zstandard<0.19.0,>=0.15.2
+Provides-Extra: dev
+Requires-Dist: bumpversion~=0.6.0; extra == "dev"
+Requires-Dist: coverage[toml]~=7.1.0; extra == "dev"
+Requires-Dist: hypothesis~=6.68.2; extra == "dev"
+Requires-Dist: mkdocs-bibtex~=2.8.13; extra == "dev"
+Requires-Dist: mkdocs-material~=9.0.13; extra == "dev"
+Requires-Dist: mkdocstrings[python]~=0.20.0; extra == "dev"
+Requires-Dist: mypy~=1.0.1; extra == "dev"
+Requires-Dist: pytest~=7.2.1; extra == "dev"
+Requires-Dist: pytest-cov~=4.0.0; extra == "dev"

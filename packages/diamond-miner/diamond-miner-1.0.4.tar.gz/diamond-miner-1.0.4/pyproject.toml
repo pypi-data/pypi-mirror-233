@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "Cython"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--capture=no --doctest-modules --ignore=examples --log-cli-level=info --strict-markers --verbosity=2"
+
+[tool.mypy]
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+implicit_reexport = false
+no_implicit_optional = true
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_ignores = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "if TYPE_CHECKING:$",
+    "if __name__ == \"__main__\":$",
+    "pass$",
+    "\\s\\.\\.\\.$",
+    "raise NotImplementedError$"
+]
+
+[tool.cibuildwheel]
+# Cleanup build/ directory before each build to avoid an issue where
+# the compiled modules are not built for the correct Python version.
+before-build = "rm -rf build"
+# Keep emulated aarch64 build times manageable...
+skip = ["*-musllinux_*"]
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64", "aarch64"]
+
+[tool.cibuildwheel.macos]
+archs = ["universal2"]
