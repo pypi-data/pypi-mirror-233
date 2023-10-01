@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: ftptomongo
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Danil Kabanov
+Author-email: nill2@yandex.ru
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# ftptomongo
+
+This project created to store pictures from my IP camera.
+The camera can only send pictures via FTP. the idea of the app to emulate an FTP server and store the content in the database (MongoDB).
+also played with CI to make the process smooth and created unit and integrations tests.
+
+## Installation
+
+### Local installation
+
+#### Prerequisites
+
+Installed [python](https://docs.python.org/3/installing/index.html) with dependencies...
+
+#### Clone this repository to your local machine
+
+```shell
+git clone https://github.com/nill2/ftptomongo
+```
+
+Install reqirements
+
+```shell
+pip install -r requirements.txt
+```
+
+Install [hashicorp vaults](https://developer.hashicorp.com/vault/tutorials/hcp-vault-secrets-get-started/hcp-vault-secrets-install-cli)
+
+to make sure that environment is the same
+
+```shell
+conda env create -f environment.yml
+```
+
+Install pytest (if you want run unit or e2e tests) and other tools
+
+```shell
+          pip install pyftpdlib
+          pip install pylint
+          pip install psutil
+          pip install pymongo
+          pip install hvac
+          pip install flake8
+          pip install pytest
+```
+
+And run the application in the application folder
+
+```shell
+python3 ftptomongo
+```
+
+## Contributing
+
+If you want to contribute to this project, please follow these guidelines.
+
+CI is set up with Github Actions.
+On a commit it will automatically check your branch with linters (pyling and flake8)
+unit and e2e tests
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+You can reach out to the project maintainer by [email](mailto:danil.d.kabanov@gmail.com)
+
