@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: django-jsheet
+Version: 0.3.2
+Summary: Little tools to render a simple spreadsheet in webpage
+Home-page: https://github.com/shadMod/django-jsheet
+Download-URL: https://github.com/shadMod/django-jsheet/archive/refs/tags/0.3.2.tar.gz
+Author: shadMod
+Author-email: support@shadmod.it
+Project-URL: Documentation, https://docs.shadmod.it/django_jsheet/index
+Project-URL: GitHub, https://github.com/shadMod/django-jsheet/
+Project-URL: Bug Tracker, https://github.com/shadMod/django-jsheet/issues/
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Django JSheet
+
+Django JSheet is a small tool for rendering a simple spreadsheet into a web page.
+
+By taking advantage form_class's fields the cells are set with the appropriate properties^.
+
+There is the ability to use classic excel formulas > see docs for more details
+
+Saving the data is done through an asynchronous method and there is the possibility of a
+chronological saving of all changes.
+
+No model is required, but one can possibly be added to allow synchronization of the data with the db.
+
+^(eg IntegerField => int, TypedChoiceField => select etc)
+
+**installation of the django_jsheet_assets package is required)**.
+
+Good luck! \o/
