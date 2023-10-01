@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+RADO/RADO.py
+RADO/__init__.py
+scRADO.egg-info/PKG-INFO
+scRADO.egg-info/SOURCES.txt
+scRADO.egg-info/dependency_links.txt
+scRADO.egg-info/requires.txt
+scRADO.egg-info/top_level.txt

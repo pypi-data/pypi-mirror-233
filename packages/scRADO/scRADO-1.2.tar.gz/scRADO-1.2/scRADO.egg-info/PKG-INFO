@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: scRADO
+Version: 1.2
+Summary: doublet detection algorithm for droplet-based single-cell sequencing data
+Home-page: https://github.com/poseidonchan/RADO
+Author: Yanshuo Chen
+Author-email: poseidonchan@icloud.com
+License: GPL-3.0 License
+Platform: any
+Requires-Python: >=3.7.1,<3.8
+License-File: LICENSE
