@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "lebrydb"
+version = "0.1.6"
+description = " LebryDB é uma biblioteca Python que oferece uma solução simples para gerenciar dados NoSQL em formato JSON. Com ela, você pode criar e gerenciar uma base de dados NoSQL em seu aplicativo Python sem a necessidade de um sistema de gerenciamento de banco de dados completo. A classe permite a inserção, atualização, exclusão e consulta de documentos, tornando-a ideal para projetos que não exigem complexidade excessiva de um banco de dados tradicional."
+authors = ["Bruno Ragner <brunooragnner@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
