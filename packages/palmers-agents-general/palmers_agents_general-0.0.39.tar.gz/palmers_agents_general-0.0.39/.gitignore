@@ -1,0 +1,13 @@
+data/*
+*/__pycache__/*
+.idea
+mlops/azure_functions/.venv/
+__azurite_db_queue__.json
+__azurite_db_queue_extent__.json
+__pycache__/*
+**/__pycache__/*
+.vscode/*
+*/.env
+**/.env
+palmers_agents/*/.env
+palmers_agents/base_stock_app/src/__pycache__/worker.cpython-310.pyc
