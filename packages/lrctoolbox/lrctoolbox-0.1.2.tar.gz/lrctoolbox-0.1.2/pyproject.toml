@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "lrctoolbox"
+version = "0.1.2"
+description = "toolkit for working with lrc files"
+authors = ["Dr-Blank <64108942+Dr-Blank@users.noreply.github.com>"]
+readme = "README.md"
+repository = "https://github.com/Dr-Blank/lrctoolbox"
+keywords = [
+  "lrc",
+  "lyrics",
+  "pylrc",
+  "synced lyrics",
+  "karaoke",
+  "music",
+  "file",
+  "parser",
+  "editor",
+  "converter",
+]
+classifiers = [
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Desktop Environment :: File Managers",
+  "Topic :: Text Processing",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Utilities",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python",
+]
+license = "GPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.6"
+pytest = "^7.4.2"
+black = "^23.9.1"
+pre-commit = "^3.4.0"
+pytest-cov = "^4.1.0"
+flake8 = "^6.1.0"
+tox = "^4.11.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
