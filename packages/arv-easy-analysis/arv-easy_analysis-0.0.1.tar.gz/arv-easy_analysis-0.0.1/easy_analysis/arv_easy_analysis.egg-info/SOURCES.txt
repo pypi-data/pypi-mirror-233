@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+easy_analysis/arv_easy_analysis.egg-info/PKG-INFO
+easy_analysis/arv_easy_analysis.egg-info/SOURCES.txt
+easy_analysis/arv_easy_analysis.egg-info/dependency_links.txt
+easy_analysis/arv_easy_analysis.egg-info/requires.txt
+easy_analysis/arv_easy_analysis.egg-info/top_level.txt
+easy_analysis/data/__init__.py
+easy_analysis/data/outliers.py
+easy_analysis/data/summary.py
+easy_analysis/plots/__init__.py
+easy_analysis/plots/insights.py
+easy_analysis/plots/multivariate.py
+easy_analysis/plots/univariate.py

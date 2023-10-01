@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: arv-easy-analysis
+Version: 0.0.1
+Summary: Data Analysis makes easy.
+Home-page: https://github.com/arv-anshuleasy-analysis
+Author: arv-anshul
+Author-email: arv.anshul.1864@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Easy Analysis
+
+Use this package to perform **Data Analysis** easily.
+
+### Installation
+
+```sh
+pip install easy-analysis
+```
