@@ -1,0 +1,10 @@
+vaticinator/__init__.py,sha256=o2N4jKSJbKt5dwFTr1_7M9vtjX1uRTmsqVTNOvbR6x4,80
+vaticinator/vaticinator.py,sha256=ryrkr-b-J8vMP6OrcDDcqFCq8Yc3nqVTNZTWJV6PvfU,7528
+vaticinator/libs/__init__.py,sha256=ZnUGWoV6CxS4ZYFmobZDzWcwuZNF_-s2rdkI7NAsXWk,41
+vaticinator/libs/fortune_file.py,sha256=LPFd1rNvV72xGUKnhFN0EQ1rW1c31KJ0A5QiJGlLn-Y,3779
+vaticinator-0.0.3.dist-info/LICENSE,sha256=kZbWnqfYu5x00AJJb7AiLCWwXb1iU9hAQXuiCKvYolo,1056
+vaticinator-0.0.3.dist-info/METADATA,sha256=wRqvJmXfSpDPc_Xz18iP1rMYfak51k7A1nYN9H0esH0,2199
+vaticinator-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vaticinator-0.0.3.dist-info/entry_points.txt,sha256=U3yGBTn-4hNorrJP5E2d-zxElCmCcgWPcEOaRWHCO94,61
+vaticinator-0.0.3.dist-info/top_level.txt,sha256=hzLheERVpkt4-0QidzbN4jvqMfsJ8OMRvmUDJ6TvNSk,12
+vaticinator-0.0.3.dist-info/RECORD,,
