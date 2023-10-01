@@ -1,0 +1,12 @@
+util.py,sha256=9gaeSDf5cpnMdWKnpvl8ODI27YXAute6NuGaO2KbSmQ,5730
+cutil.cpython-39-x86_64-linux-gnu.so,sha256=lH2oqYzUpSLj_o2LmcC-Vu5NvMeplJCuUUYH12KlSVA,1726960
+_version.py,sha256=JImfXTthMajPbq6bK1MQamGBP0ZoJ8ExhgFH-CCuEnw,274
+simplification/cutil.pyx,sha256=ofM4Opra6O6vkBYFI2d43GWFIp35b9Ur-JRe7DOj6ec,7257
+simplification/stdbool.h,sha256=Kh3yV7KFb1KFWAI41x-ekYZe4tLiQruhr5YP5jmmBEU,68
+simplification/__init__.py,sha256=CU-V5CwhD4aZ4bSC_Z7Kr5HwIy9DPThupCMznxV75K4,210
+simplification/librdp.so,sha256=35tl_3JgBMVYf2RHw2UVgYzjVtAhQzc1Nu7Lg5EX1-w,407688
+simplification/rdp_p.pxd,sha256=orpnm1x7_7Mv_CUpKB3Nd-xEilnqmlDVAbZSwdR94vA,689
+simplification-0.7.6.dist-info/top_level.txt,sha256=g_4KSa5a8i83wTFuQhn5eTHle7_AUB-ho0_G5IZ6jlM,35
+simplification-0.7.6.dist-info/WHEEL,sha256=_BMdtp3IQ4NF7VFMKD4lD9Cik0H3WhEP1vtG22VwXhU,148
+simplification-0.7.6.dist-info/RECORD,,
+simplification-0.7.6.dist-info/METADATA,sha256=uw6DM3anlB6OCcNBM3cgDJvKIPV1WXQiU_94CXROmv0,7575
