@@ -1,0 +1,13 @@
+locloc/__init__.py,sha256=doowlfRbneRGyP-YMAxgxM96eCPu4HjJPyxZ-gIzDqY,79
+locloc/loc.py,sha256=U1asIXKAFwdi-p8FsoHZHIrFK-h0-6hxUMnr5s2FDRs,1851
+locloc/main.py,sha256=jMC6JIY3KMEC8tXSnhRNsMCaH1NE0mpyqouEvg66Z_Q,3975
+locloc/static_files/favicon.ico,sha256=u3VZ9p2gBDqSDpURy0K6__DHNGJuzo8SObA0xWGEcIA,32038
+locloc/static_files/favicon.png,sha256=fPcW8BYT3gA-59wHiOsiNrej16gYUf6MaMqoiaGFp04,7653
+locloc/static_files/index.css,sha256=Phkg7OIJIqAwAbmjO63i9CbnSw8-F5Q5_sck5X3N8no,295
+locloc/static_files/index.js,sha256=v44Boo4ULOBrLW-5WGF810YyksQXjrnXuQi4f5QnmVE,4311
+locloc/templates/index.j2,sha256=qizGhKPMen1ONCjHKYTRcj4DqGjo7K5-qUTxEBzE2SY,2767
+locloc-0.0.3.dist-info/LICENSE.txt,sha256=5X0k_iug92drQy7f-h9ES5w_sBTkPhNseTU73bfuDvY,1046
+locloc-0.0.3.dist-info/METADATA,sha256=nSSzR0IIInb3roY0-s1S1HnNugoQN7jo2QoxrC61RMo,2609
+locloc-0.0.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+locloc-0.0.3.dist-info/entry_points.txt,sha256=rxCo52Ni4b-JdakT18V5OVRjHpkqdQRwv6v-fUX-zl8,50
+locloc-0.0.3.dist-info/RECORD,,
