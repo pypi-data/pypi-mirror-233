@@ -1,0 +1,3 @@
+[console_scripts]
+quickkey=quickkey.quick_key:start
+

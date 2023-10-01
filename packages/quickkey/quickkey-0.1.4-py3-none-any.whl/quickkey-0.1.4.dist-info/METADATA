@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: quickkey
+Version: 0.1.4
+Summary: VIM-like Keyboard Productivity Without the Complication!
+License: MIT
+Author: chungchunwang
+Author-email: 62127500+chungchunwang@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: keyboard (>=0.13.5,<0.14.0)
+Requires-Dist: pystray (>=0.19.5,<0.20.0)
+Description-Content-Type: text/markdown
+
+# QuickKey - VIM-like Keyboard Productivity Without the Complication!
+Install via pip `pip install quickkey`, then run `quickkey` to start!
+
