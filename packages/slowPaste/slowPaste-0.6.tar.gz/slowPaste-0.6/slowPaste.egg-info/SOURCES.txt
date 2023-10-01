@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+slowPaste/__init__.py
+slowPaste/slow_paste.py
+slowPaste.egg-info/PKG-INFO
+slowPaste.egg-info/SOURCES.txt
+slowPaste.egg-info/dependency_links.txt
+slowPaste.egg-info/requires.txt
+slowPaste.egg-info/top_level.txt
