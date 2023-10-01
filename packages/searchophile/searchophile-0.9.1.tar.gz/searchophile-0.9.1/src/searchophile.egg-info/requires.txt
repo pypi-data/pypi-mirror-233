@@ -1,0 +1,6 @@
+greplica
+refind
+sedeuce
+
+[dev]
+check-manifest
