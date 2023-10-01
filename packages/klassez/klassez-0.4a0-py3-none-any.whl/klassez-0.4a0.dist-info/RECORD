@@ -1,0 +1,13 @@
+klassez/Spectra.py,sha256=_f_IIoc5Npe2JNETicbK1aK1Cw7lMBYbmLlc2YeSVPc,97292
+klassez/__init__.py,sha256=ORcJvXMSOCJaB1WrbARfLqvZk4vPtu_0kHmtp7p15rU,784
+klassez/config.py,sha256=afbto90gZ0PzMohNvpB39y7xXvMbbGXEadCOaUtTMAM,2833
+klassez/figures.py,sha256=kr_38j0LYCEdMJ1X-GigyiIePxE2oBLRuJGi6dPZOCw,59604
+klassez/fit.py,sha256=Z5Ys4wVA8I8nL0A9vyvWMaAxWQ_-zt7V6BPrVac2U4A,173228
+klassez/misc.py,sha256=Lb3Krc5U7MnvTOTG6cyu56FN2StNBxeiF30BFzgmLXA,52601
+klassez/processing.py,sha256=TdKTJ2kDrPCoFyEE2kdFIMrmkLFwiCrLXgET-Zg4e_0,160412
+klassez/sim.py,sha256=yEnH-_Fmne4IN0V17Jf9IPJpKwwXDCVPoimCoaTpL1o,29120
+klassez-0.4a0.dist-info/LICENSE.txt,sha256=32XIIeXICyXXJGzWS0m_8zV3ebN6RACNkDoHRlWLVwM,1072
+klassez-0.4a0.dist-info/METADATA,sha256=tQ3LqDSmHiMfYy-Ha4G-uLr0qA6d-23J5HHuQUKXi1s,1334
+klassez-0.4a0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+klassez-0.4a0.dist-info/top_level.txt,sha256=qLM9K74pFAGnzl137XXJqTkZD0i2nyxrfjiYraI1nMM,8
+klassez-0.4a0.dist-info/RECORD,,
