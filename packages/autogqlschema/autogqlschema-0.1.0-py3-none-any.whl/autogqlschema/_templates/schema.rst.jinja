@@ -1,0 +1,20 @@
+.. gql:schema:: {{ signature }}
+   :name: {{ name }}
+
+{% if description %}
+   {{ description }}
+
+{% endif %}
+{% if query_type %}
+   :optype {{ query_type }} query:
+{% endif %}
+{% if mutation_type %}
+   :optype {{ mutation_type }} mutation:
+{% endif %}
+{% if subscription_type %}
+   :optype {{ subscription_type }} subscription:
+{% endif %}
+   
+{% for child in children %}
+   {{ renderer.render(child)|indent(3) }}
+{% endfor %}
