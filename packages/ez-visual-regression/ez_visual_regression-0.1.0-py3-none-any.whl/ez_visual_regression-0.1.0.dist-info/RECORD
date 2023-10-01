@@ -1,0 +1,10 @@
+ez_visual_regression/__init__.py,sha256=mALBzQ_B7wTjPVKw_s6Bl2yw-zEImToW8ZEakbKPZ3o,569
+ez_visual_regression/api.py,sha256=EgsNgPL2XaC6E-i-oxnvraqvk1rPFVfsM8WFaXzZoUg,16789
+ez_visual_regression/cli.py,sha256=6BMCI5MCJT32QL5-AoKBPlnJQkaYA3Pqdbqjzap1Ll0,2869
+ez_visual_regression/configuration.py,sha256=RYFmab0Tj3evCeYw6_SVd8m-iz0DW5-7kTjbbjQF-jU,2960
+ez_visual_regression-0.1.0.dist-info/LICENSE,sha256=-djAVv30refSN1vQF8UP6YybLxyyzRus_hgBMtRSThw,1089
+ez_visual_regression-0.1.0.dist-info/METADATA,sha256=jVkEzeMZsqPQm_kggO8GIe1hZl76Wnz6R2EL60ZjxIw,9896
+ez_visual_regression-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ez_visual_regression-0.1.0.dist-info/entry_points.txt,sha256=YJW50X-8jANwYRH6x1JjlRzll2U5do4JWnr28nTAh9A,55
+ez_visual_regression-0.1.0.dist-info/top_level.txt,sha256=-Tnaqs6IPOrrRdUgO0onvIFwAHab4jm2jcXy5JUGlTQ,21
+ez_visual_regression-0.1.0.dist-info/RECORD,,
