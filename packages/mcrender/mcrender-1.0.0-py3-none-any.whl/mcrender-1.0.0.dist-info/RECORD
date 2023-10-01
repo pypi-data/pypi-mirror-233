@@ -1,0 +1,12 @@
+mcrender/__init__.py,sha256=lf7agpsl7_bdW7uL0s1XAMITTuJe4Ksnaj8fJ0KHt64,14234
+mcrender/_cli.py,sha256=Lr1_7m5iSgFq6-amb-gQWJD4Q2pmqnha17Cw7dQiFXs,7436
+mcrender/_util.py,sha256=lz-QGSOB4bTQrxfz215nuDbd2nCJa0nVG-zbBAgC3go,1702
+mcrender/_data/default-config.conf,sha256=sNutDs_E8UZdjq8A68Y-a18hdYvTSVQ51iGZsUVVXOs,287
+mcrender/_data/blender/mineways-isometric.blend,sha256=e2Mz0bH-3vuzg42EKpnbQBaY6UDas43A95gOhrg3pfo,944128
+mcrender/_data/blender/mineways-isometric.py.txt,sha256=o8OLbSoRfOF9twTNiKXJHzCVBMWkHpbw6zuSKKo1xlo,1458
+mcrender-1.0.0.dist-info/COPYING.txt,sha256=bD7UcjISNYizym7Zvuh6hc_Ak6Wihk7H4V06pWEGUN4,655
+mcrender-1.0.0.dist-info/METADATA,sha256=ehCNSY89rzu9sJSHaFry_CREzwGZpJ_jBzLQp1T-I90,12107
+mcrender-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mcrender-1.0.0.dist-info/entry_points.txt,sha256=ifuay1hXqjyeQ49hbc7WGdh8aZWwrksRdHF3cMGalzE,48
+mcrender-1.0.0.dist-info/top_level.txt,sha256=aw6tJLKa6bQzBKd8aGGPc2j-4thFXLQrP6MX-GlyWFw,9
+mcrender-1.0.0.dist-info/RECORD,,
