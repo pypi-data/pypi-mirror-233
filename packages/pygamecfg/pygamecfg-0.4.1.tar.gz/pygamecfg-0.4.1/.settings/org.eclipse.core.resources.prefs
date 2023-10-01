@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/pygamecfg/__init__.py=utf-8
+encoding//src/pygamecfg/__main__.py=utf-8
+encoding//src/pygamecfg/common_ut.py=utf-8
+encoding//src/pygamecfg/core_gamecfg.py=utf-8
+encoding//src/pygamecfg/game_cod4.py=utf-8
+encoding//src/pygamecfg/game_cod4_gungame.py=utf-8
+encoding//src/pygamecfg/game_cod4_promod.py=utf-8
+encoding//src/pygamecfg/game_ut2k4.py=utf-8
+encoding//src/pygamecfg/game_ut99.py=utf-8
+encoding//src/pygamecfg/tool_ini.py=utf-8
+encoding/<project>=UTF-8

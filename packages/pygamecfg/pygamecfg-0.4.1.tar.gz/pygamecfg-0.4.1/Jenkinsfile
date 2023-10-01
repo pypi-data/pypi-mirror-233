@@ -1,0 +1,728 @@
+// pyChaChaDummyProject (c) by chacha
+//
+// pyChaChaDummyProject is licensed under a
+// Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Unported License.
+//
+// You should have received a copy of the license along with this
+// work.  If not, see <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
+
+import groovy.xml.XmlUtil
+import static javax.xml.xpath.XPathConstants.*
+import javax.xml.xpath.*
+import groovy.xml.DOMBuilder
+import groovy.xml.dom.DOMCategory
+import java.math.RoundingMode
+import java.math.BigDecimal
+
+// configurable settings:
+// use to send email if workflow problem
+def _MaintainerName		     = "CHACHA"
+def _MaintainerEmail	     = "1000CHACHA0001@gmail.com"
+// SCM credential ID
+def _SCMCredentials		     = "7fbf4db8-eb36-447c-b2e4-44da4535295f"
+// toogle PreRelease flag on Gitea release system
+def _bPreRelease		     = false
+// toogle Draft flag on Gitea release system => If False, TAG is not created
+def _bDraft				     = false
+// release content / changelog management
+def _bAutoChangelog		     = true //Not supported yet
+def _ReleaseContent_Title	 = "# _CI/CD Automatic Release_"
+def bPushMasterOnPypi        = true
+// full rebuild toogle
+def _bFullRebuilt		     = true
+def _MkDocsWebURL            = "dabauto--mkdocs-web.dmz.chacha.home/mkdocs-web/"
+def _MkDocsWebCredentials    = "2c5b684e-3787-4b37-8aca-b3dd4a383fe2" 
+def _PypiCredentials         = "Pypi"
+
+
+def badge_coverage          = addEmbeddableBadgeConfiguration(id: "coverage",   subject: "coverage")
+def badge_maintainability   = addEmbeddableBadgeConfiguration(id: "maintainability", subject: "maintainability")
+def badge_quality           = addEmbeddableBadgeConfiguration(id: "quality",    subject: "quality score")
+
+// commands Helper: /!\ Made for GITEA /!\
+String determineRepoUserName() {
+    return scm.getUserRemoteConfigs()[0].getUrl().tokenize('/')[3].split("\\.")[0]
+}
+
+// commands Helper: /!\ Made for GITEA /!\
+String determineRepoName() {
+    return scm.getUserRemoteConfigs()[0].getUrl().tokenize('/')[4].split("\\.")[0]
+}
+
+// commands Helper: /!\ Made for GITEA /!\
+String ExtractGiteaBaseUrl(inUrl) {
+	def pattern  	= ~/(.*)((?<=\/)[^\/]+\/)([^\/\.]+(?:\.git)?)\/?$/
+    assert pattern instanceof java.util.regex.Pattern
+
+  	def matcher 	=  inUrl =~ pattern 
+    assert matcher instanceof java.util.regex.Matcher
+  
+  	assert matcher.find()
+  	assert matcher.size() == 1
+  	return matcher[0][1]
+}
+
+String ExtractBaseVersion(inVersion) {
+    def pattern     = ~/^(?<version>[0-9]+\.[0-9]+\.[0-9]+)(?<prerelease>(?:(?:a|b|rc)[0-9]*)?[\.\-_](?:dev|post)\d*)?$/
+    assert pattern instanceof java.util.regex.Pattern
+
+    def matcher     =  inVersion =~ pattern 
+    assert matcher instanceof java.util.regex.Matcher
+  
+    assert matcher.find()
+    assert matcher.size() == 1
+    return matcher[0][1]
+}
+
+int GetCoverageValue(String CoverageFilePath,String XPath)
+{ 
+  //File file = new File(CoverageFilePath)
+  //coverageReportRaw = file.getText('UTF-8')
+  coverageReportRaw = readFile(CoverageFilePath)
+  coverageReport = DOMBuilder.parse(new StringReader(coverageReportRaw), false, false)
+  coverageReportRoot = coverageReport.documentElement
+  
+  def xpath = XPathFactory.newInstance().newXPath()
+  res = xpath.evaluate(XPath,coverageReportRoot,NUMBER)
+  return res
+}
+
+String getColorScale(BigDecimal value)
+{
+  if( value >9)         { return "Goldenrod"}
+  else if( value >6)    { return "seagreen"}
+  else if( value >4)    { return "orange"}
+  else if( value >2)    { return "darkred"}
+  else                  { return "dimgrey"}
+}
+
+String getColorScale_reversed(BigDecimal value)
+{
+  if( value >9)         { return "dimgrey"}
+  else if( value >6)    { return "darkred"}
+  else if( value >4)    { return "orange"}
+  else if( value >2)    { return "seagreen"}
+  else                  { return "Goldenrod"}
+}
+
+int GetCoverageValue_lines_valid(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@lines-valid") }
+int GetCoverageValue_lines_covered(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@lines-covered") }
+int GetCoverageValue_line_rate(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@line-rate") }
+int GetCoverageValue_branches_valid(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@branches-valid") }
+int GetCoverageValue_branches_covered(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@branches-covered") }
+int GetCoverageValue_branch_rate(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@branch-rate") }
+int GetCoverageValue_complexity(String CoverageFilePath) { return GetCoverageValue(CoverageFilePath,"/coverage/@complexity") }
+
+
+pipeline {
+	
+	// for Docker based build (preferable)
+	agent { dockerfile true }
+
+	// other builds might fall back to generic mode 
+	//agent { any }
+	// or even require a specific machine
+	//agent {node {label 'FOO-CIAgent' }}
+
+	options {
+		// enable if the build is using external resource
+		// or any other reason needing it to be exclusive
+		// => enabled by default, disable is if more performance needed
+		disableConcurrentBuilds()
+	}
+
+	environment {
+		// TERM env variable is needed to make processses think we are on a real terminal 
+		TERM="xterm"
+		// HOME env variable is needed to allow pip install packages as users
+		HOME="$env.WORKSPACE"
+		// _GIT_BRANCH env variable is needed to get the branch only (and not origin/XXXX), without fetching it 
+		_GIT_BRANCH=sh (
+			script: "echo ${GIT_BRANCH} | sed -e 's|origin/||g'",
+			returnStdout: true
+		).trim()
+		// those 2 env var are for conveniance, get from scm url (which **NEED TO BE GITEA**)
+		_PROJECT_USER_NAME=determineRepoUserName()
+		_PROJECT_NAME=determineRepoName()
+		_GITEA_BASE_URL=ExtractGiteaBaseUrl("$GIT_URL")
+		PY_PROJECT_NAME                   = "__NOTSET__"
+		PY_PROJECT_VERSION                = "__NOTSET__"
+        PY_PROJECT_VERSION_STRIPPED       = "__NOTSET__"
+        CHANGELOG                         = "__NOTSET__"
+	}
+    
+	stages {
+	   
+		stage("Prepare") {
+			steps {
+				script {
+					if (_bFullRebuilt) {
+						// start by cleaning the workspace (not using cleanWs() because we want to keep the directory itself)
+						// => this is needed to fetch it again with custom options 
+						sh("find ~/. -name . -o -prune -exec rm -rf -- {} +")
+					}
+					else {
+						sh("find ~/. -name . ! -path './TEST_ENV/*' ! -path './BUILD_ENV/*'  -o -prune -exec rm -rf -- {} +")
+					}
+                    if(_GIT_BRANCH!="master") {
+                        _bPreRelease = true
+                    }
+				}
+				// displaying env vars, mainly for debugging purpose
+				echo("GIT_BRANCH:. . . . . . . . . . . $GIT_BRANCH")
+				echo("_GIT_BRANCH: . . . . . . . . . . $_GIT_BRANCH")
+				echo("GIT_URL: . . . . . . . . . . . . $GIT_URL ")
+				echo("_GITEA_BASE_URL: . . . . . . . . $_GITEA_BASE_URL")
+                echo("GIT_COMMIT:. . . . . . . . . . . $GIT_COMMIT  ")
+				echo("_PROJECT_USER_NAME:. . . . . . . $_PROJECT_USER_NAME")
+				echo("_PROJECT_NAME: . . . . . . . . . $_PROJECT_NAME")
+				echo("_MaintainerEmail:. . . . . . . . $_MaintainerEmail") 
+				echo("_MaintainerName:. . . . . . . .  $_MaintainerName") 
+                
+				sh("virtualenv --pip=embed --setuptools=embed --wheel=embed --no-periodic-update --activators bash,python BUILD_ENV")
+				sh("virtualenv --pip=embed --setuptools=embed --wheel=embed --no-periodic-update --activators bash,python TEST_ENV")
+                sh("virtualenv --pip=embed --setuptools=embed --wheel=embed --no-periodic-update --activators bash,python TOOLS_ENV")
+				
+				sh(". ~/BUILD_ENV/bin/activate && pip install --upgrade setuptools build pip")
+                sh(". ~/BUILD_ENV/bin/activate && pip install --upgrade 'copier==8.*' jinja2-slug toml")
+                 
+                sh(". ~/TEST_ENV/bin/activate && pip install --upgrade pip")
+				
+                sh(". ~/TOOLS_ENV/bin/activate && pip install --upgrade pip")
+                sh(". ~/TOOLS_ENV/bin/activate && pip install simple_rest_client requests twine packaging")
+                
+                script {
+                    if(_PROJECT_NAME!="pygitversionhelper") {
+                        sh(". ~/TOOLS_ENV/bin/activate && pip install pygitversionhelper")
+                    }
+                    if(_PROJECT_NAME!="pychangelogfactory") {
+                        sh(". ~/TOOLS_ENV/bin/activate && pip install pychangelogfactory")
+                    }
+                }
+                sh("git config --global user.email $_MaintainerEmail")
+                sh("git config --global user.name  $_MaintainerName")	
+                sh("git config --global init.defaultBranch master")
+                
+			}
+		}
+        
+		stage("GetCode") {
+			steps {
+				dir("gitrepo") {
+					// manually checkout the repository, with All branches and tags 
+					// => because we might need them for version and changelog computing
+                    checkout([ $class: "GitSCM", 
+                               branches: [[name: GIT_BRANCH]], 
+                               extensions: [[$class: "CloneOption", noTags: false, shallow: false, depth: 0, reference: '']], 
+                               userRemoteConfigs: [[credentialsId: _SCMCredentials, url: GIT_URL]]])
+                    script {
+
+                        withCredentials([usernamePassword(credentialsId: _SCMCredentials, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                            sh("git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@chacha.ddns.net/gitea/${_PROJECT_USER_NAME}/${_PROJECT_NAME}.git")
+                        }
+                         
+                        CHANGELOG      = sh(script:  """#!/bin/sh -
+                                                         |. ~/TOOLS_ENV/bin/activate
+                                                         |exec python - << '__EOWRAPPER__'
+                                                         |
+                                                         |import re
+                                                         |
+                                                         |try:
+                                                         |    from pychangelogfactory import ChangelogFactory
+                                                         |except ImportError:
+                                                         |    from src.pychangelogfactory import ChangelogFactory
+                                                         |
+                                                         |try:
+                                                         |    from pygitversionhelper import gitversionhelper
+                                                         |except ImportError:
+                                                         |    from src.pygitversionhelper import gitversionhelper
+                                                         |
+                                                         |
+                                                         |LastTag=gitversionhelper.tag.getLastTag(same_branch=True)
+                                                         |CommitHistory=gitversionhelper.commit.getMessagesSinceTag(LastTag, merged_output=True, ignore_merged=True)
+                                                         |Changelog = ChangelogFactory(CommitHistory).RenderFullChangelog(include_unknown=True)
+                                                         |print(Changelog.replace("\\n","\\n\\n"))
+                                                         |
+                                                         |__EOWRAPPER__
+                                                      """.stripMargin(),
+                                                       returnStdout: true).trim()   
+                                      
+                        if(_GIT_BRANCH=="master") {
+                            if(sh(returnStdout:  true, script: "git tag --points-at HEAD").trim().isEmpty()) {
+
+                                BUMPED_VERSION = sh(script:  """#!/bin/sh -
+                                                                 |. ~/TOOLS_ENV/bin/activate
+                                                                 |exec python - << '__EOWRAPPER__'
+                                                                 |
+                                                                 |import re
+                                                                 |
+                                                                 |try:
+                                                                 |    from pygitversionhelper import gitversionhelper
+                                                                 |except ImportError:
+                                                                 |    from src.pygitversionhelper import gitversionhelper
+                                                                 |
+                                                                 |lastcommit=gitversionhelper.commit.getLast(same_branch=True)
+                                                                 |msg=gitversionhelper.commit.getMessage(lastcommit)
+                                                                 |
+                                                                 |_match=re.search(r"\\s*(?:#)?\\s*(?<=new-tag:)(?:\\s*)(?P<TAG>\\S*)",msg)
+                                                                 |print(_match.group("TAG"),end="")
+                                                                 |
+                                                                 |__EOWRAPPER__
+                                                              """.stripMargin(),
+                                                               returnStdout: true).trim()
+
+                                if(BUMPED_VERSION.isEmpty()) {
+                                    echo "master push/merge must have an explicit tag release number, stopping pipeline"
+                                    currentBuild.getRawBuild().getExecutor().doStop()
+                                }
+                                else {
+                                    echo "new-tag requested in commit message: $BUMPED_VERSION"
+
+                                    sh("git tag $BUMPED_VERSION")
+                                    sh("git push origin --tags")
+                                }
+                            }
+                        }
+                                               
+                        latestTag = sh(script:   """#!/bin/sh -
+                                                     |. ~/TOOLS_ENV/bin/activate
+                                                     |exec python - << '__EOWRAPPER__'
+                                                     |
+                                                     |try:
+                                                     |    from pygitversionhelper import gitversionhelper
+                                                     |except ImportError:
+                                                     |    from src.pygitversionhelper import gitversionhelper
+                                                     |
+                                                     |print(gitversionhelper.tag.getLastTag(same_branch=True),end ="")
+                                                     |
+                                                     |__EOWRAPPER__
+                                                  """.stripMargin(),
+                                       returnStdout: true)
+                        echo("latestTag:. . . . . . . . . . . . $latestTag  ")
+                        
+                        // get current (or bumped) version number from git history
+                        PY_PROJECT_VERSION = sh(script:   """#!/bin/sh -
+                                                             |. ~/TOOLS_ENV/bin/activate
+                                                             |exec python - << '__EOWRAPPER__'
+                                                             |
+                                                             |try:
+                                                             |    from pygitversionhelper import gitversionhelper
+                                                             |except ImportError:
+                                                             |    from src.pygitversionhelper import gitversionhelper
+                                                             |
+                                                             |print(gitversionhelper.version.getCurrentVersion(formated_output=True,version_std="PEP440",bump_type="dev",bump_dev_strategy="post"),end ="")
+                                                             |
+                                                             |__EOWRAPPER__
+                                                          """.stripMargin(),
+                                               returnStdout: true)
+                        echo("PY_PROJECT_VERSION: . . . . . . . . . $PY_PROJECT_VERSION")
+                        PY_PROJECT_VERSION_STRIPPED=ExtractBaseVersion(PY_PROJECT_VERSION)
+                        
+                        // Manually pushing a new tag with version string guessed by gitversionhelper 
+                        // because setuptools-git-versioning / setuptools_scm cant fing tag on other branches, so will guess a wrong version without this tag.
+                        if(latestTag!=PY_PROJECT_VERSION) {
+                            sh("git tag $PY_PROJECT_VERSION")
+                            sh("git push origin --tags")
+                        }
+                        
+                        // specific handling to test the template itself 
+                        // => little hacky... creating a new git repo with a commit/tag corresponding to HEAD of the official one
+                        if(_PROJECT_NAME=="pyChaChaDummyProject") { //specific case to test the template itself
+							sh("rm -Rf ~/_gitrepo  || true")
+							
+                            sh(script:    """#!/bin/sh -
+                                             |. ~/BUILD_ENV/bin/activate
+                                             |exec python - << '__EOWRAPPER__'
+                                             |
+                                             |import dunamai
+                                             |
+                                             |# override default dunamai version pattern to make leading 'v' optionnal
+                                             |dunamai.VERSION_SOURCE_PATTERN = r'''
+                                             |    (?x)                                                        (?# ignore whitespace)
+                                             |    ^v?((?P<epoch>\\d+)!)?(?P<base>\\d+(\\.\\d+)*)              (?# v1.2.3 or v1!2000.1.2)
+                                             |    ([-._]?((?P<stage>[a-zA-Z]+)[-._]?(?P<revision>\\d+)?))?    (?# b0)
+                                             |    (\\+(?P<tagged_metadata>.+))?\$                             (?# +linux)
+                                             |'''.strip()
+                                             |
+                                             |import copier
+                                             |copier.run_copy("./", "../_gitrepo",vcs_ref="HEAD",use_prereleases=True,defaults=True,cleanup_on_error=False,unsafe=True)
+                                             |
+                                             |__EOWRAPPER__
+                                          """.stripMargin())
+							
+							// we can not remove the directory because Jenkins is inside...  
+							// => so we painfully remove the inside stuff
+							sh("find ~/gitrepo/ -mindepth 1 -type f -exec rm {} \\;")
+							sh("find ~/gitrepo/ -mindepth 1 -type d -empty -delete")
+
+							sh("cp -a ~/_gitrepo/. ~/gitrepo")
+							sh("git init")
+							sh("git add .")
+							sh("git commit -m \"init repo\"")
+							sh("git tag ${PY_PROJECT_VERSION}")
+                        }
+                        
+
+                        PY_PROJECT_NAME = sh(script:  """#!/bin/sh -
+                                                         |. ~/BUILD_ENV/bin/activate
+                                                         |exec python - << '__EOWRAPPER__'
+                                                         |
+                                                         |import toml
+                                                         |
+                                                         |with open("pyproject.toml") as pyproject:
+                                                         |    pyproject_data = toml.load(pyproject)
+                                                         |    print(pyproject_data["project"]["name"], end ="")
+                                                         |
+                                                         |__EOWRAPPER__
+                                                      """.stripMargin(),
+                                               returnStdout: true)
+
+                        echo("PY_PROJECT_NAME: . . . . . . . . . $PY_PROJECT_NAME")
+                        
+                    }
+				}
+			}
+		}
+		
+		stage("BuildPackage") {
+			steps {
+				// no need for a build-env: setuptools is already creating one
+				dir("gitrepo") {
+					script {
+						// actually doing the package build
+						sh(". ~/BUILD_ENV/bin/activate && python -m build .")
+					}
+				}
+			}
+		}
+		
+		stage("Install") {
+			steps {
+				dir("gitrepo") {
+					script {
+						// searching for the built package 
+						def wheelPath = findFiles(glob: "**/dist/*.whl")[0]
+						echo "wheel artifact path: $wheelPath"
+						// install the package, with *test* optionnal packages, as user
+						sh(". ~/TEST_ENV/bin/activate && pip install --find-links dist/ ${PY_PROJECT_NAME} .[test,coverage-check,quality-check,type-check,doc-gen,complexity-check]")
+					}
+				}
+			}
+		}
+		
+        stage("CheckCode") {
+            steps {
+                dir("gitrepo") {
+                    sh(". ~/TEST_ENV/bin/activate && python -m chacha_cicd_helper --typecheck --qualitycheck")
+                    script {
+                        def jsonObj = readJSON file: "helpers-results/cl_quality_check/metrics.json"
+                        quality_score = new BigDecimal(jsonObj["GlobalScore"])
+                        sz_quality_score = quality_score.setScale(2, RoundingMode.HALF_EVEN).toString()
+                        badge_quality.setStatus(sz_quality_score)
+                        badge_quality.setColor(getColorScale(quality_score))
+                    }
+                    sh(". ~/TEST_ENV/bin/activate && python -m chacha_cicd_helper --complexitycheck")
+                }
+            }
+            post {
+                always {      
+                    dir("gitrepo") {       
+                        publishCoverage adapters: [cobertura(mergeToOneReport: true, path: "helpers-results/cl_types_check/cobertura.xml")]
+                        junit 'helpers-results/cl_types_check/junit.xml'           
+                        publishHTML([
+                                    reportDir:              "helpers-results/cl_quality_check",
+                                    reportFiles:            "report.html",
+                                    reportName:             "quality-report",
+                                    allowMissing:           false,
+                                    alwaysLinkToLastBuild:  true,
+                                    keepAll:                true])                 
+                        publishHTML([
+                                    reportDir:              "helpers-results/cl_types_check",
+                                    reportFiles:            "index.html",
+                                    reportName:             "types_check",
+                                    allowMissing:           false,
+                                    alwaysLinkToLastBuild:  true,
+                                    keepAll:                true])    
+                   }         
+                }
+            }
+        }
+        stage("PlotMetrics") {
+            steps {
+  
+                 plot([ csvFileName: 'plot-df7f03dc-8146-11ed-a1eb-0242ac120002.csv',
+                        csvSeries: [[ file: 'gitrepo/helpers-results/cl_quality_check/metrics_GlobalScore.csv', inclusionFlag: 'OFF', url: '']],
+                        group: 'metrics',
+                        title: 'code quality score',
+                        style: 'line',
+                        keepRecords: true,
+                        numBuilds: '',
+                        yaxisMaximum: '10',
+                        yaxisMinimum: '0'])
+                              
+                 plot([ csvFileName: 'plot-c731cc84-8145-11ed-a1eb-0242ac120002.csv',
+                        csvSeries: [[ file: 'gitrepo/helpers-results/cl_quality_check/metrics_rawpercent.csv', inclusionFlag: 'OFF', url: '']],
+                        group: 'metrics',
+                        title: 'code composition (%)',
+                        style: 'stackedArea',
+                        keepRecords: true,
+                        numBuilds: '',
+                        yaxisMaximum: '1',
+                        yaxisMinimum: '0'])
+                        
+                 plot([ csvFileName: 'plot-cac33982-8145-11ed-a1eb-0242ac120002.csv',
+                        csvSeries: [[ file: 'gitrepo/helpers-results/cl_quality_check/metrics_Statistics.csv', inclusionFlag: 'OFF', url: '']],
+                        group: 'metrics',
+                        title: 'general statistics',
+                        style: 'line',
+                        keepRecords: true,
+                        numBuilds: ''])
+                        
+                 plot([ csvFileName: 'plot-cddaced2-8145-11ed-a1eb-0242ac120002.csv',
+                        csvSeries: [[ file: 'gitrepo/helpers-results/cl_quality_check/metrics_MessagesCat.csv', inclusionFlag: 'OFF', url: '']],
+                        group: 'metrics',
+                        title: 'quality warnings',
+                        style: 'stackedArea',
+                        keepRecords: true,
+                        numBuilds: ''])
+                        
+                 plot([ csvFileName: 'plot-4ceb9ee2-ca78-11ed-afa1-0242ac120002.csv',
+                        csvSeries: [[ file: 'gitrepo/helpers-results/cl_complexity_check/MI.csv', inclusionFlag: 'INCLUDE_BY_STRING',exclusionValues: 'MeanMaintainability', url: '']],
+                        group: 'metrics',
+                        title: 'maintainability',
+                        style: 'stackedArea',
+                        keepRecords: true,
+                        numBuilds: ''])
+            }
+        }
+        
+		stage("RunUnitTests") {
+			steps {
+                dir("gitrepo") {
+                    sh(". ~/TEST_ENV/bin/activate && python -m chacha_cicd_helper --unittest --coveragecheck")
+                    script {
+                        unit_test_full_name__html=findFiles(glob: "helpers-results/cl_unit_test_full/*.html")[0].getName()
+                        println unit_test_full_name__html
+                        unit_test_full_name__xml=findFiles(glob:  "helpers-results/cl_unit_test_full/*.xml")[0].getName()
+                        println unit_test_full_name__xml
+                        
+                        coverage_report_path = "helpers-results/cl_unit_test_coverage/test_coverage.xml"
+                        println GetCoverageValue_lines_valid(coverage_report_path)
+                        println GetCoverageValue_lines_covered(coverage_report_path)
+                        println GetCoverageValue_line_rate(coverage_report_path)
+                        println GetCoverageValue_branches_valid(coverage_report_path)
+                        println GetCoverageValue_branches_covered(coverage_report_path)
+                        println GetCoverageValue_branch_rate(coverage_report_path)
+                        println GetCoverageValue_complexity(coverage_report_path)
+                        
+                        full_rate = new BigDecimal( 10*(GetCoverageValue_line_rate(coverage_report_path) + GetCoverageValue_branch_rate(coverage_report_path)) / 2 )
+                        sz_full_rate = full_rate.setScale(2, RoundingMode.HALF_EVEN).toString()
+                        badge_coverage.setStatus(sz_full_rate)
+                        badge_coverage.setColor(getColorScale(full_rate))
+                                               
+                        //badge_maintainability
+                        records = readCSV file: 'helpers-results/cl_complexity_check/MI.csv'
+                        maintainability = records[1][1]
+                        badge_maintainability.setStatus(maintainability)
+                        
+                        if     ( maintainability == 'D')  { badge_maintainability.setColor(  "dimgrey")}
+                        else if( maintainability == 'C')  { badge_maintainability.setColor(  "darkred")}
+                        else if( maintainability == 'B')  { badge_maintainability.setColor(  "orange")}
+                        else if( maintainability == 'A')  { badge_maintainability.setColor(  "seagreen")}
+                        else if( maintainability == 'A+') { badge_maintainability.setColor(  "Goldenrod")} 
+                    }
+                }
+			}
+			post {
+				always {
+                    dir("gitrepo") {
+    				    junit 'helpers-results/cl_unit_test/*.xml'
+    				    // using cobertura format (= coverage xml format)
+    				    publishCoverage adapters: [cobertura(mergeToOneReport: true, path: "helpers-results/cl_unit_test_coverage/test_coverage.xml")]
+    				    publishHTML([
+                                    reportDir:              "helpers-results/cl_unit_test_coverage",
+                                    reportFiles:            "index.html",
+                                    reportName:             "coverage-report-html",
+                                    allowMissing:           false,
+                                    alwaysLinkToLastBuild:  true,
+                                    keepAll:                true])
+
+                        publishHTML([
+                                    reportDir:              "helpers-results/cl_unit_test_full",
+                                    reportFiles:            unit_test_full_name__html,
+                                    reportName:             "test-reports-full",
+                                    allowMissing:           false,
+                                    alwaysLinkToLastBuild:  true,
+                                    keepAll:                true])                                 
+                    }   
+                }   
+			}
+		}
+		
+        stage("GenDOC") {
+            steps {
+                dir("gitrepo") {
+                    sh(". ~/TEST_ENV/bin/activate && python -m chacha_cicd_helper --docgen --docgenpdf")
+                }
+            }
+            post {
+                always {
+                    dir("gitrepo") {
+                        publishHTML([
+                                    reportDir:              "helpers-results/cl_doc_gen/site",
+                                    reportFiles:            "index.html",
+                                    reportName:             "doc-html",
+                                    allowMissing:           false,
+                                    alwaysLinkToLastBuild:  true,
+                                    keepAll:                true])
+                    }      
+                }
+            }
+        }
+        
+		stage("PostRelease") {
+			environment {
+				def GITEA_LOGIN_TOKEN=credentials("GiteaCHACHAPush")
+			}
+			steps {
+				dir("gitrepo") {
+					script {
+						def CurrentDateTime=java.time.LocalDateTime.now()
+						withCredentials([string( credentialsId: _MkDocsWebCredentials,variable: 'MKDOCSTOKEN' )]) {
+                        sh(script:   """#!/bin/sh -
+                                        |. ~/TOOLS_ENV/bin/activate
+                                        |exec python - << '__EOWRAPPER__'
+                                        |
+										|import json
+										|import glob
+										|import requests
+										|import shutil
+										|
+                                        |from simple_rest_client.api import API
+                                        |from simple_rest_client.resource import Resource
+                                        |
+                                        |
+                                        |try:
+                                        |    from pygitversionhelper import gitversionhelper
+                                        |except ImportError:
+                                        |    from src.pygitversionhelper import gitversionhelper
+										|
+										|from urllib.parse import urljoin
+										|
+										|class GiteaRepoCommits(Resource):
+										|    actions = {
+										|        'get': {'method':   'GET', 'url': '/repos/{}/{}//git/commits/{}'},
+										|}
+										|
+										|class GiteaRepoReleases(Resource):
+										|    actions = {
+										|        'get': {'method':    'GET',  'url': '/repos/{}/{}/releases'},
+										|        'post': {'method':   'POST', 'url': '/repos/{}/{}/releases'},
+										|}
+										|
+										|class GiteaRepoReleaseAssets(Resource):
+										|    actions = {
+										|        'get': {'method':    'GET',  'url': '/repos/{}/{}/releases/{}/assets'},
+										|        'post': {'method':   'POST', 'url': '/repos/{}/{}/releases/{}/assets'},
+										|}
+										|
+										|class GiteaRepoReleaseAssetAttachments(Resource):
+										|    actions = {
+										|        'get': {'method':    'GET',  'url': '/repos/{}/{}/releases/{}/assets/{}'},
+										|}
+										|
+										|class _GiteaApi(API):
+										|    def __init__(self,**args):
+										|        super().__init__(**args)
+										|        self.add_resource(resource_name="commits",		resource_class = GiteaRepoCommits)
+										|        self.add_resource(resource_name="releases",	resource_class = GiteaRepoReleases)
+										|        self.add_resource(resource_name="assets",		resource_class = GiteaRepoReleaseAssets)
+										|        self.add_resource(resource_name="attachments",	resource_class = GiteaRepoReleaseAssetAttachments)
+										|
+										|GiteaApi = _GiteaApi(
+										|    api_root_url=urljoin('${_GITEA_BASE_URL}','api/v1/'),
+										|    headers={"Authorization":"token ${GITEA_LOGIN_TOKEN_PSW}"},
+										|)
+										|
+										|
+										|ReleaseContent  = "${_ReleaseContent_Title}" + "\\n" \\
+										|                + "\\n" \\
+                                        |                + "Reference documentation: [mkdocs page](https://chacha.ddns.net/mkdocs-web/${_PROJECT_USER_NAME}/${PY_PROJECT_NAME}/${_GIT_BRANCH}/${PY_PROJECT_VERSION_STRIPPED}/) "
+										|
+										|Changelog='''${CHANGELOG}'''
+										|
+										|ReleaseContent = ReleaseContent + "\\n"+ "\\n"+ "## Changelog:\\n" + Changelog
+										|
+										|if not Changelog:
+										|    ReleaseContent = ReleaseContent + "code/project maintainance"
+										|
+										|data={
+										|    "body":				ReleaseContent,
+										|    "draft":				bool("${_bDraft}"=="true"),
+										|    "name":				"${PY_PROJECT_NAME}_${CurrentDateTime}",
+										|    "prerelease":			bool("${_bPreRelease}"=="true"),
+										|    "tag_name":			"${PY_PROJECT_VERSION}",
+										|    "target_commitish":	"${GIT_COMMIT}",
+										|}
+										|new_release_id = GiteaApi.releases.post("${_PROJECT_USER_NAME}","${PY_PROJECT_NAME}",json=data).body['id']
+                                        |
+                                        |data = {
+                                        | "name":     "Wheel Package",
+                                        | 'attachment': (glob.glob('dist/*.whl')[0], open(glob.glob('dist/*.whl')[0], 'rb')),
+                                        |} 
+										|GiteaApi.assets.post("${_PROJECT_USER_NAME}","${PY_PROJECT_NAME}",new_release_id,files=data)
+                                        |
+                                        |data = {
+                                        | "name":     "Documentation (pdf)",
+                                        | 'attachment': ("${PY_PROJECT_NAME}_${PY_PROJECT_VERSION}_UserManual.pdf", open("helpers-results/cl_doc_gen/site/pdf/manual.pdf", 'rb')),
+                                        |} 
+                                        |GiteaApi.assets.post("${_PROJECT_USER_NAME}","${PY_PROJECT_NAME}",new_release_id,files=data)
+                                        |
+                                        |shutil.make_archive("doc", 'zip', "helpers-results/cl_doc_gen/site")
+                                        |reqData={
+                                        |   "SECRET":     "${MKDOCSTOKEN}",
+                                        |   "USER":       "${_PROJECT_USER_NAME}",
+                                        |   "PACKAGE":    "${PY_PROJECT_NAME}",
+                                        |   "BRANCH":     "${_GIT_BRANCH}",
+                                        |   "VERSION":    "${PY_PROJECT_VERSION}",
+                                        |}
+                                        |files = {'DATA': open('doc.zip','rb')}
+                                        |response=requests.post("http://${_MkDocsWebURL}/API.php?REQ=pushDoc",data=reqData,files=files)
+                                        |if response.status_code != 200:
+                                        |   raise RuntimeError(f"Wrong server response: {response.status_code}")
+                                        |
+                                        |__EOWRAPPER__
+									 """.stripMargin())
+									}
+                       if((_GIT_BRANCH=="master") && (bPushMasterOnPypi)) {
+                           withCredentials([usernamePassword( credentialsId: _PypiCredentials, passwordVariable: 'PYPI_PASSWORD', usernameVariable: 'PYPI_USERNAME')]) {
+                            sh(script:   """#!/bin/sh -
+                                            |. ~/TOOLS_ENV/bin/activate
+                                            |exec twine upload -u ${PYPI_USERNAME} -p ${PYPI_PASSWORD} --non-interactive --disable-progress-bar dist/*
+                                         """.stripMargin())
+						    }
+					    }
+					}
+				}
+			}
+		}
+	}
+	post {
+		failure {
+			emailext body: 'Check console output at $BUILD_URL to view the results. \n\n ${CHANGES} \n\n -------------------------------------------------- \n${BUILD_LOG, maxLines=100, escapeHtml=false}',
+					to: _MaintainerEmail,
+					subject: 'Build failed in Jenkins: $PROJECT_NAME - #$BUILD_NUMBER'
+		}
+		unstable {
+			emailext body: 'Check console output at $BUILD_URL to view the results. \n\n ${CHANGES} \n\n -------------------------------------------------- \n${BUILD_LOG, maxLines=100, escapeHtml=false}',
+					to: _MaintainerEmail,
+					subject: 'Unstable build in Jenkins: $PROJECT_NAME - #$BUILD_NUMBER'
+		}
+		changed {
+			emailext body: 'Check console output at $BUILD_URL to view the results.',
+					to: _MaintainerEmail,
+					subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
+		}
+	}
+}
+
