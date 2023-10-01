@@ -1,0 +1,7 @@
+matplotlib
+psycopg2
+pymongo
+pymysql
+pyodbc
+reportlab
+seaborn
