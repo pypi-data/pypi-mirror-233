@@ -1,0 +1,8 @@
+click
+hkdf
+pycryptodome
+pyjwt[crypto]
+requests>=2.13.0
+jedi<0.18.0
+ipython
+pdbpp
