@@ -1,0 +1,10 @@
+README.md
+setup.py
+lockfile_parser/__init__.py
+lockfile_parser/cargo_parser.py
+lockfile_parser/poetry_parser.py
+lockfile_parser.egg-info/PKG-INFO
+lockfile_parser.egg-info/SOURCES.txt
+lockfile_parser.egg-info/dependency_links.txt
+lockfile_parser.egg-info/requires.txt
+lockfile_parser.egg-info/top_level.txt
