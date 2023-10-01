@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: marcador
+Version: 0.5.2
+Home-page: https://github.com/joajfreitas/marcador
+Author: João Freitas
+Author-email: joaj.freitas@gmail.com
+License: GPLv3
+License-File: LICENSE.txt
+Requires-Dist: clipboard
+Requires-Dist: click
+Requires-Dist: serde
+Requires-Dist: sqlalchemy
+Requires-Dist: appdirs
+Requires-Dist: toml
+

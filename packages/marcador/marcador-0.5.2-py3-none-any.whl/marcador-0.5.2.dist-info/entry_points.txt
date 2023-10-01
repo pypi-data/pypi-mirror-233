@@ -1,0 +1,2 @@
+[console_scripts]
+marcador = marcador.__main__:main
