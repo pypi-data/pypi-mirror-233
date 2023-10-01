@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "clusterfun"
+version = "0.1.12a7"
+description = "Clusterfun - a plotting library to inspect data"
+authors = ["Jochem Gietema <jochem@giete.ma>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+pandas = ">=2.0.0"
+pyarrow = ">=13.0.0"
+fastapi = ">=0.103.2"
+uvicorn = ">=0.23.2"
+orjson = ">=3.9.7"
+boto3 = ">=1.26.0"
+requests = ">=2.31.0"
+pillow = ">=10.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+black = "^22.12.0"
+pre-commit = "^2.20.0"
+isort = "^5.10.1"
+flake8 = "^6.0.0"
+ipdb = "^0.13.11"
+mypy = "^1.1.1"
+types-pillow = "^9.4.0.17"
+types-ujson = "^5.7.0.1"
+types-requests = "^2.28.11.15"
+pylint = "^2.17.0"
+bumpversion = "^0.6.0"
+jupyter = "^1.0.0"
+ruff = "^0.0.291"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.poetry.scripts]
+clusterfun = "clusterfun.serve_cli:main"
+
+[tool.taskipy.tasks]
+dev = "uvicorn clusterfun.main:APP --reload"
+
+[tool.pylint."MESSAGES CONTROL"]
+good-names = [
+    "df",
+    "f",
+    "y",
+    "x",
+]
+disable=[
+    "fixme",
+    "R0801"
+]
