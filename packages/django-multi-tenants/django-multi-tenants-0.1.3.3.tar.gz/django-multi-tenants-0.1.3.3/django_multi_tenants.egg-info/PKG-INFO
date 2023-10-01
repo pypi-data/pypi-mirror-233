@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: django-multi-tenants
+Version: 0.1.3.3
+Summary: Multi tenant support for Django using PostgreSQL schemas.
+Home-page: https://gitlab.com/crstnrm/django-multi-tenants
+Author: Cristian Restrepo
+Author-email: crstnrrm@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-multi-tenant
+
+This project is based on [django-tenant-schemas.readthedocs.io](https://django-tenant-schemas.readthedocs.io/en/latest/). All our thanks to its creators.
+
+This is a customisation we need in order to have details of the tenants' applications.
+
+There are three variables that we need to declare in the **settings.py** file to describe the application schema:
+- `SHARED_APPS` describe the applications whose migration is carried out in the public scheme.
+- `TENANT_APPS` describe the applications whose migration is carried out in the main tenant scheme.
+- `TENANT_DETAIL_APPS` describe the applications whose migration is carried out in the detailed
+tenant scheme. The detailed tenant scheme is associated with a single main tenant.
+For example, if you want to separate information between years, such as accounting software.
+
+
