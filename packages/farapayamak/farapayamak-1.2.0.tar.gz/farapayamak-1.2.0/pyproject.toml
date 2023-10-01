@@ -1,0 +1,3 @@
+[build-system]
+requires = ["zeep>=4.1.0"]
+build-backend = "setuptools.build_meta"

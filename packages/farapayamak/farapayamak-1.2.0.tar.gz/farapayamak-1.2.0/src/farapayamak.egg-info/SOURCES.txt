@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/farapayamak/__init__.py
+src/farapayamak/rest.py
+src/farapayamak/soap.py
+src/farapayamak.egg-info/PKG-INFO
+src/farapayamak.egg-info/SOURCES.txt
+src/farapayamak.egg-info/dependency_links.txt
+src/farapayamak.egg-info/top_level.txt
