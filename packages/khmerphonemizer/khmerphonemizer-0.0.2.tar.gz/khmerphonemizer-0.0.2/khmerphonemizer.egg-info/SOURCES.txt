@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+khmerphonemizer/__init__.py
+khmerphonemizer/g2p_phonetisaurus.c
+khmerphonemizer/km_lexicon.tsv
+khmerphonemizer/km_phonemizer.npz
+khmerphonemizer.egg-info/PKG-INFO
+khmerphonemizer.egg-info/SOURCES.txt
+khmerphonemizer.egg-info/dependency_links.txt
+khmerphonemizer.egg-info/requires.txt
+khmerphonemizer.egg-info/top_level.txt
