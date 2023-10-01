@@ -1,0 +1,3 @@
+[console_scripts]
+academyruins=academyruins.cli_scripts.run:app
+
