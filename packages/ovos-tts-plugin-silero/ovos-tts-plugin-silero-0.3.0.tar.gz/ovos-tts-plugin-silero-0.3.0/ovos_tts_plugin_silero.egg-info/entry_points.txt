@@ -1,0 +1,5 @@
+[mycroft.plugin.tts]
+ovos-tts-plugin-silero = ovos_tts_plugin_silero:SileroTTSPlugin
+
+[mycroft.plugin.tts.config]
+ovos-tts-plugin-silero.config = ovos_tts_plugin_silero:SileroTTSPluginConfig
