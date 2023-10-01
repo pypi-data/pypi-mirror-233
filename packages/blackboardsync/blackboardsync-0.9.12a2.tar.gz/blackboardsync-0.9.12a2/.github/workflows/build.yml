@@ -1,0 +1,267 @@
+name: Test and Deploy
+
+on:
+  push:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up virtual X11
+        run: sudo apt-get install xvfb
+
+      - name: Set up PyQt libs
+        uses: tlambert03/setup-qt-libs@v1
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Set up Python environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          pipenv requirements --dev > requirements.txt
+          pip install -r requirements.txt
+          pip install pytest-xvfb
+
+      - name: Run test suite
+        run: pytest -vvvv
+
+  version-check:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check version against tag
+        run: |
+          VER=$(awk -F'["]' '/^__version__ =/ {print $2}' b*/__a*)
+          if [ "$GITHUB_REF_NAME" != "$VER" ]; then
+            echo "Version $VER does not match the GitHub tag $GITHUB_REF_NAME"
+            exit 1
+          fi
+
+  pypi:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [ test, version-check ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Set up Python environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          pipenv requirements --dev > requirements.txt
+          pip install -r requirements.txt
+
+      - name: Build and upload to PyPI
+        env:
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+        run: |
+          python -m build
+          twine upload dist/*
+
+  flatpak:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [ test, version-check ]
+    env:
+      MATURIN_REF: v1.2.3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clone flathub dist branch
+        uses: actions/checkout@v4
+        with:
+          repository: 'jacobszpz/flathub'
+          ref: 'blackboardsync'
+          path: flathub
+          token: ${{ secrets.FLATHUB_PAT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10.10"
+
+      - name: Obtain flatpak builder tools
+        uses: actions/checkout@v4
+        with:
+          repository: 'jacobszpz/flatpak-builder-tools'
+          sparse-checkout: |
+            pip/flatpak_pip_generator.py
+            cargo/flatpak-cargo-generator.py
+            git_source_update.py
+          path: tools
+          sparse-checkout-cone-mode: false
+
+      - name: Enable execution of flatpak builder tools
+        run: |
+          chmod +x tools/**/*
+
+      - name: Generate requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv requirements-parser aiohttp toml pyyaml
+          pipenv requirements > requirements.txt
+
+      - name: Obtain base python requirement sources
+        run: |
+          echo "PYDANTIC_CORE_REF=$(grep -oP 'pydantic-core==\K[^;]+' requirements.txt | sed 's/^/v/')" >> "$GITHUB_ENV"
+          sed -i '/^pyqt/d' requirements.txt
+          sed -i '/^pydantic-core/d' requirements.txt # Make sure to obtain version first
+          tools/pip/flatpak* -r requirements.txt
+          mv python3-requirements.json flathub/
+
+      - name: Update other sources manually
+        run: |
+          ../tools/git*.py *.yml --update PyO3/maturin $MATURIN_REF --update pydantic/pydantic-core $PYDANTIC_CORE_REF --update jacobszpz/BlackboardSync $GITHUB_REF_NAME
+        working-directory: flathub
+
+        # pydantic-core
+
+      - name: Obtain Cargo.lock for pydantic-core
+        uses: actions/checkout@v4
+        with:
+          repository: 'pydantic/pydantic-core'
+          ref: ${{ env.PYDANTIC_CORE_REF }}
+          path: flathub/pydantic-core-tmp
+          sparse-checkout: |
+            Cargo.lock
+          sparse-checkout-cone-mode: false
+          clean: false
+
+        # python-maturin
+
+      - name: Obtain Cargo.lock for maturin
+        uses: actions/checkout@v4
+        with:
+          repository: 'PyO3/maturin'
+          ref: ${{ env.MATURIN_REF }}
+          path: flathub/python-maturin-tmp
+          sparse-checkout: |
+            Cargo.lock
+          sparse-checkout-cone-mode: false
+          clean: false
+
+      - name: Generate sources for python-maturin and pydantic-core
+        run: |
+          # pydantic-core
+          mv pydantic-core-tmp/Cargo.lock .
+          ../tools/cargo/flatpak* Cargo.lock
+          mv generated-sources.json pydantic-core-generated-sources.json
+          rm Cargo.lock
+          # python-maturin
+          mv python-maturin-tmp/Cargo.lock .
+          ../tools/cargo/flatpak* Cargo.lock
+          ../tools/pip/flatpak* setuptools-rust
+          mv generated-sources.json python-maturin-generated-sources.json
+          rm Cargo.lock
+          # Cleanup
+          rm -rf test-crates pydantic-core-tmp python-maturin-tmp
+        working-directory: flathub
+
+        # Deploy to GitHub
+
+      - name: Set up github user and email
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+        working-directory: flathub
+
+      - name: Checkout beta branch
+        if: ${{ contains(github.ref_name, '-') }}
+        run: |
+          echo "In the future, the worflow"
+          echo "should first checkout the beta branch"
+          #git checkout beta
+        working-directory: flathub
+
+      - name: Create new commit in flathub repository
+        run: |
+          git add .
+          git commit -m "Generated from $GITHUB_REF_NAME"
+          git push origin blackboardsync
+        working-directory: flathub
+
+  pyinstaller:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest]
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [ test, version-check ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10.10"
+
+      - name: Set up Python environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          pipenv requirements --dev > requirements.txt
+          pip install -r requirements.txt
+          python packaging/pyinst.py
+
+      # Signing
+
+      - name: Import macOS certificate
+        if: matrix.os == 'macos-latest'
+        uses: apple-actions/import-codesign-certs@v2
+        with:
+          p12-file-base64: ${{ secrets.BB_P12 }}
+          p12-password: ${{ secrets.BB_P12_PASSWORD }}
+
+      # Package Application
+
+      - name: Create windows installer
+        if: matrix.os == 'windows-latest'
+        uses: joncloud/makensis-action@v4
+        with:
+          script-file: packaging/pkg_win.nsi
+          arguments: "/V3 /DVERSION=${{github.ref_name}}"
+
+      - name: Sign and Package into DMG
+        if: matrix.os == 'macos-latest'
+        run: |
+          chmod +x packaging/pkg_macos.sh
+          packaging/pkg_macos.sh "blackboard_sync-$GITHUB_REF_NAME"
+
+      # Save Packages
+      - name: Extract release notes
+        id: extract-release-notes
+        uses: ffurrer2/extract-release-notes@v1
+
+      - name: Upload as release - only tagged commits
+        uses: softprops/action-gh-release@v1
+        with:
+          body: ${{ steps.extract-release-notes.outputs.release_notes }}
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          files: |
+            dist/*.exe
+            dist/*.dmg
