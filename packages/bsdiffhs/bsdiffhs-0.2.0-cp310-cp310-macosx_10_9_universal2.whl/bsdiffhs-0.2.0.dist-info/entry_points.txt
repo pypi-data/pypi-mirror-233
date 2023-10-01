@@ -1,0 +1,3 @@
+[console_scripts]
+bsdiffhs = bsdiffhs.cli:main_bsdiffhs
+bspatchhs = bsdiffhs.cli:main_bspatchhs
