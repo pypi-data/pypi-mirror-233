@@ -1,0 +1,88 @@
+# Deta Personal Interface
+
+The Deta Personal Interface is a Python project that provides a simple model for connecting to a database using the Deta library. It offers basic database operations such as querying, creating, updating, and deleting records. This README provides an overview of the project, installation instructions, and usage examples.
+
+## Table of Contents
+
+- [Deta Personal Interface](#deta-personal-interface)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Installation
+
+Before you can use the Deta Personal Interface, make sure you have Python installed on your system. You'll also need to set up a Deta project and obtain an API key. Follow these steps to get started:
+
+1. Clone the repository:
+
+   ```bash
+   pip install deta_personal_interface
+   ```
+
+2. Set your Deta project API key as an environment variable:
+
+    ### Method 1
+
+    Using bash:
+    ```bash
+    export DB_ACCESS_TOKEN=your_api_key
+    ```
+
+    ### Method 2
+
+    Using a `.env`
+    ```env
+    DB_ACCESS_TOKEN = your_api_key
+    ```
+
+   Replace `your_api_key` with your actual Deta API key.
+
+## Usage
+
+The Deta Personal Interface provides a simple way to interact with your Deta database. Here's how you can use it in your Python code:
+
+1. Import the `DetaDatabase` class:
+
+   ```python
+   from deta_personal_interface import DetaDatabase
+   ```
+
+2. Create an instance of the `DetaDatabase` class and connect to your Deta database:
+
+   ```python
+   db = DetaDatabase()
+   db.connect("your_database_name")
+   ```
+
+   Replace `"your_database_name"` with the name of your Deta database.
+
+3. Perform database operations such as querying, creating, updating, and deleting records using the provided methods. For example:
+
+   ```python
+   # Query for records
+   data = {"name": "John"}
+   results = db.query(data, filter_by="equal")
+
+   # Create a new record
+   new_data = {"name": "Alice", "age": 30}
+   key = db.create(new_data)
+
+   # Update an existing record
+   updated_data = {"key": key, "age": 31}
+   db.update(updated_data)
+
+   # Delete a record by its key
+   db.delete(key)
+   ```
+
+For more details on how to use the Deta Personal Interface, refer to the [Python code documentation](https://github.com/ricardoleal20/deta_personal_interface/blob/main/deta_personal_interface/__main__.py) in the repository.
+
+## Contributing
+
+Contributions to this project are welcome! If you have suggestions, feature requests, or would like to report a bug, please open an issue on the [GitHub repository](https://github.com/ricardoleal20/deta_personal_interface). If you'd like to contribute code, please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ricardoleal20/deta_personal_interface/blob/main/LICENSE) file for details.

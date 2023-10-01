@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+deta_personal_interface/__init__.py
+deta_personal_interface/__main__.py
+deta_personal_interface/_version.py
+deta_personal_interface.egg-info/PKG-INFO
+deta_personal_interface.egg-info/SOURCES.txt
+deta_personal_interface.egg-info/dependency_links.txt
+deta_personal_interface.egg-info/requires.txt
+deta_personal_interface.egg-info/top_level.txt
