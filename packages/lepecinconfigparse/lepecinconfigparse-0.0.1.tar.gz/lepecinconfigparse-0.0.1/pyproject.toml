@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lepecinconfigparse"
+version = "0.0.1"
+authors = [{ name = "Ivan Silajev", email = "evantrulife@gmail.com" }]
+description = "Package for setting, saving and loading config files."
+readme = "README.md"
+requires-python = ">=3.11.4"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+# "Homepage" = ""
+# "Bug Tracker" = ""
