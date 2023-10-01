@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: direnumerate
+Version: 1.1rc3
+Summary: Python 3 library for directory enumeration tool in web applications.
+Home-page: https://github.com/juanbindez/direnumerate
+Author: Juan Bindez
+Author-email: juanbindez780@gmail.com
+License: GPLv2 license
+Project-URL: Bug Reports, https://github.com/juanbindez/direnumerate/issues
+Project-URL: Read the Docs, https://github.com/JuanBindez/direnumerate/tree/main/docs/user
+Keywords: web,enumerate,directory,tools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Direnumerate
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/direnumerate)
+![PyPI - License](https://img.shields.io/pypi/l/direnumerate)
+![PyPI - Version](https://img.shields.io/pypi/v/direnumerate)
+
+
+## Description
+
+Direnumerate is an open source tool written in Python designed to automate directory and file enumeration on web servers. It is useful for security professionals and system administrators who want to identify hidden resources and assess the security of web applications.
+
+## Key Features
+
+- Enumeration of directories and files on web servers.
+- Wordlist customization.
+- Detailed output of findings.
+- Support for multiple URL schemes (http, https, etc.).
+
+## pip:
+
+    pip install direnumerate
+
+-----------------
+
+## Scripts usage:
+
+### Directory Scan
+
+```python
+
+from direnumerate import DirScan
+
+url = "www.exemplo.com"
+wordlist = "wordlist.txt"
+
+enum = DirScan(url, wordlist)
+enum.dir_enum()
+```
+
+----------
+
+### Port Scan:
+
+```python
+
+from direnumerate import PortScan
+
+ip = "www.exemple.com"
+list_ports = [22, 80, 443]
+
+scan = PortScan(ip, list_ports)
+scan.scan_ports()
+
+```
+
+
+----------
+## Command line usage:
+
+
+### Directory Scan:
+
+    direnumerate -Ds -u "www.exemple.com" -w wordlist.txt
+
+### Post Scan:
+
+    direnumerate -Ps -t "192.168.1.0" -p 22 80 443
+
+
+
+
+
+
