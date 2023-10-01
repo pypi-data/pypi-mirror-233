@@ -1,0 +1,9 @@
+Telemetrix4Arduino
+build
+comparisons
+dist
+examples
+html
+telemetrix_aio
+venv
+venv2
