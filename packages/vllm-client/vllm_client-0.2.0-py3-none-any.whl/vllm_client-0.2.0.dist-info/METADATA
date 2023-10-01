@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: vllm-client
+Version: 0.2.0
+Summary: Client for the vLLM API with minimal dependencies
+Home-page: https://github.com/viktor-ferenczi/vllm-client
+Author: Viktor Ferenczi
+License: Apache 2.0
+Project-URL: Homepage, https://github.com/viktor-ferenczi/vllm-client
+Project-URL: Documentation, https://github.com/viktor-ferenczi/vllm-client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+# vLLM Client
+
+## Overview
+
+Client for the [vLLM](https://github.com/vllm-project/vllm) API with minimal dependencies.
+
+## Examples
+
+See [example.py](example.py) for the following:
+- Single generation
+- Streaming
+- Batch inference
+
+It should work out of the box with a vLLM API server. 
+
+## Notes
+
+- `sampling_params.py` needs to be kept in sync with vLLM.
+  It is a simplified version of their class, containing
+  only the code required on client side.
+
+
