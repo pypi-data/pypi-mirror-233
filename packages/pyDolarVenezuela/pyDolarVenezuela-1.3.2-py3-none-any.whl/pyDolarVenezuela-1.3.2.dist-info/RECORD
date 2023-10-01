@@ -1,0 +1,16 @@
+pyDolarVenezuela/__init__.py,sha256=uw_bKB3OQ0m2t726WwGG6XohMg4NnW9H2rQITFD3aBk,1921
+pyDolarVenezuela/network.py,sha256=p18AyxGQgbTg8PvBT_WnCF2j6o-6i4-cWVOAMfyha20,384
+pyDolarVenezuela/pages.py,sha256=RONMy7CG5GExjLuFOwCccE8irm15kNlnFEj7UH26fIs,503
+pyDolarVenezuela/provider/__init__.py,sha256=n4fM-jBoRpX_DJlB-UA-EobJgTpPSRtqDZ-oN5l7pmw,1292
+pyDolarVenezuela/provider/bcv.py,sha256=KYl7C8rhiVE_CQRYtB0nrTjIVC3HpTVwalkVMnBx1lk,2119
+pyDolarVenezuela/provider/criptodolar.py,sha256=Ww0QXugkRnHqXHBQ8zrz8iW0oI6sYnnWaFcZ7Qs_IyM,2229
+pyDolarVenezuela/provider/exchangemonitor.py,sha256=qmlb0xB-DpkFOWXS9KhI5Q1PRP-mYGh3_g00kj9bLQ8,1629
+pyDolarVenezuela/provider/ivenezuela.py,sha256=6JVFVi2Rs9Ai64UpvQWP957UarHfb-0NMxlmS7u66gc,3393
+pyDolarVenezuela/tools/__init__.py,sha256=_67dXwmsevE-_LNT32Yn9cozgsABr9rHqsga6Pt1Xc4,72
+pyDolarVenezuela/tools/calculator.py,sha256=G-tULZx08v9o6DH9jd9l4PWWHx9XdBnqvhpijuz0BRo,938
+pyDolarVenezuela/tools/time.py,sha256=k-rtEO8ve523dOzdZL236txwvss0ZgCm0ex7QiWt0A8,780
+pyDolarVenezuela-1.3.2.dist-info/LICENSE,sha256=yhyzG4KlBwvAy1K47aCyZbF5x8p9Evp9ehLARqdm4mM,1094
+pyDolarVenezuela-1.3.2.dist-info/METADATA,sha256=Y7kljrpk7CjK9pMwMp89xxmojClK34IW48PBGteATS8,3779
+pyDolarVenezuela-1.3.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyDolarVenezuela-1.3.2.dist-info/top_level.txt,sha256=DqT65xfdAAw8yCgxoWQ1UWnzpZ-LGoBUkgMVnY0N8ro,17
+pyDolarVenezuela-1.3.2.dist-info/RECORD,,
