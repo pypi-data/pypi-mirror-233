@@ -1,0 +1,16 @@
+pygamecfg/__init__.py,sha256=4AKmFX0flW2aYrOy3hpFI563MKRHGzPfj67z50cM8Iw,1511
+pygamecfg/__main__.py,sha256=ViVLiElTvl6JHUV4fWiCOBix2c6_z3FMe7bkWQ98uqw,3850
+pygamecfg/common_ut.py,sha256=fTTgA7PJhh_grOSx1Etjy3QgMxiusN794am1VAyNR-w,2393
+pygamecfg/core_gamecfg.py,sha256=s4V0nD54J1fPnhbPQIc5HjOZgFb2YoDp7u3NYHSxzgU,6396
+pygamecfg/game_cod4.py,sha256=QDHCfGm1EP6RTRAE7I50XrSF1bSL-kLfaI0dXhh49QU,21310
+pygamecfg/game_cod4_gungame.py,sha256=OLuye1gDFgoaLkpTRbYf7PfRxVyEAZWJ5VA2IUZVA2I,12918
+pygamecfg/game_cod4_promod.py,sha256=W9rEQ-6OLo_8WIVeUHyXaNiXkUmV1hUfFDWIbRSIt_U,1414
+pygamecfg/game_ut2k4.py,sha256=gDoANYgm-Y_XpKhd0459A3ZvyXTn_1c5C8c3qrJ9S0I,20688
+pygamecfg/game_ut99.py,sha256=1ms7G8mmeyO49nnrl9CulXq06BMZA2KGNpnfRH3yxjM,16579
+pygamecfg/py.typed,sha256=Wqzh5eUAxTH-5EQ8HJLyX0u23eGrKM-xO4UmT9DEinI,13
+pygamecfg/tool_ini.py,sha256=E_7hUHHFfoRhy8c0S0n0xcIOxggCLzxOLaSrS_e4_XE,1947
+pygamecfg-0.4.0.dist-info/LICENSE.md,sha256=w7pnK54p7O4-IXXS3K1BfIpXwzUIQ5JmzeLkDx1kSXg,19100
+pygamecfg-0.4.0.dist-info/METADATA,sha256=1qZqlO-ErdGPqfIGF9AuCHFuY53QplPABkkFGomNAvI,22876
+pygamecfg-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pygamecfg-0.4.0.dist-info/top_level.txt,sha256=3sv_ObCaJkY5bQgN3HX-XUgD1YzWRRIL1bGVnlpZi1Y,10
+pygamecfg-0.4.0.dist-info/RECORD,,
