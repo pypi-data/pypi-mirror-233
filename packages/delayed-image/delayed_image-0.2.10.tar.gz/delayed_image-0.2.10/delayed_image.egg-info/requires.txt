@@ -1,0 +1,474 @@
+kwarray>=0.6.7
+kwimage>=0.9.21
+ubelt>=1.2.3
+affine>=2.3.0
+
+[:python_version < "3.10" and python_version >= "3.9"]
+numpy>=1.19.3
+
+[:python_version < "3.11" and python_version >= "3.10"]
+numpy>=1.21.6
+
+[:python_version < "3.11" and python_version >= "3.8"]
+networkx>=2.7
+
+[:python_version < "3.12" and python_version >= "3.11"]
+numpy>=1.23.2
+
+[:python_version < "3.7" and python_version >= "3.6"]
+numpy>=1.19.2
+
+[:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,>=2.2.0
+
+[:python_version < "3.8" and python_version >= "3.7"]
+networkx>=2.6.2
+numpy>=1.19.2
+
+[:python_version < "3.9" and python_version >= "3.8"]
+numpy>=1.19.2
+
+[:python_version < "4.0" and python_version >= "3.11"]
+networkx>=2.8
+
+[:python_version < "4.0" and python_version >= "3.12"]
+numpy>=1.26.0
+
+[all]
+kwarray>=0.6.7
+kwimage>=0.9.21
+ubelt>=1.2.3
+affine>=2.3.0
+xdoctest>=1.1.1
+pytest-timeout>=1.4.2
+lark_cython>=0.0.12
+lark>=1.1.2
+xarray>=0.16.0
+
+[all-strict]
+kwarray==0.6.7
+kwimage==0.9.21
+ubelt==1.2.3
+affine==2.3.0
+xdoctest==1.1.1
+pytest-timeout==1.4.2
+lark_cython==0.0.12
+lark==1.1.2
+xarray==0.16.0
+
+[all-strict:python_version < "2.7" and python_version >= "2.6"]
+coverage==4.5
+
+[all-strict:python_version < "2.8.0" and python_version >= "2.7.0"]
+pytest<=4.6.11,==4.6.0
+pytest-cov==2.8.1
+
+[all-strict:python_version < "3.10" and python_version >= "3.9"]
+numpy==1.19.3
+coverage==5.3.1
+
+[all-strict:python_version < "3.10.0" and python_version >= "3.7.0"]
+pytest==4.6.0
+
+[all-strict:python_version < "3.11" and python_version >= "3.10"]
+numpy==1.21.6
+
+[all-strict:python_version < "3.11" and python_version >= "3.8"]
+networkx==2.7
+
+[all-strict:python_version < "3.12" and python_version >= "3.11"]
+numpy==1.23.2
+
+[all-strict:python_version < "3.4" and python_version >= "2.7"]
+coverage==5.3.1
+
+[all-strict:python_version < "3.5" and python_version >= "3.4"]
+coverage==4.3.4
+
+[all-strict:python_version < "3.5.0" and python_version >= "3.4.0"]
+pytest<=4.6.11,==4.6.0
+pytest-cov==2.8.1
+
+[all-strict:python_version < "3.6" and python_version >= "3.5"]
+coverage==5.3.1
+
+[all-strict:python_version < "3.6.0" and python_version >= "3.5.0"]
+pytest<=6.1.2,==4.6.0
+pytest-cov==2.9.0
+
+[all-strict:python_version < "3.7" and python_version >= "3.6"]
+numpy==1.19.2
+coverage==6.1.1
+
+[all-strict:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,==2.2.0
+pytest==4.6.0
+
+[all-strict:python_version < "3.8" and python_version >= "3.7"]
+networkx==2.6.2
+numpy==1.19.2
+coverage==6.1.1
+
+[all-strict:python_version < "3.9" and python_version >= "3.8"]
+numpy==1.19.2
+coverage==6.1.1
+
+[all-strict:python_version < "4.0" and python_version >= "3.11"]
+networkx==2.8
+
+[all-strict:python_version < "4.0" and python_version >= "3.12"]
+numpy==1.26.0
+
+[all-strict:python_version >= "3.10"]
+coverage==6.1.1
+
+[all-strict:python_version >= "3.10.0"]
+pytest==6.2.5
+
+[all-strict:python_version >= "3.6.0"]
+pytest-cov==3.0.0
+
+[all:python_version < "2.7" and python_version >= "2.6"]
+coverage>=4.5
+
+[all:python_version < "2.8.0" and python_version >= "2.7.0"]
+pytest<=4.6.11,>=4.6.0
+pytest-cov>=2.8.1
+
+[all:python_version < "3.10" and python_version >= "3.9"]
+numpy>=1.19.3
+coverage>=5.3.1
+
+[all:python_version < "3.10.0" and python_version >= "3.7.0"]
+pytest>=4.6.0
+
+[all:python_version < "3.11" and python_version >= "3.10"]
+numpy>=1.21.6
+
+[all:python_version < "3.11" and python_version >= "3.8"]
+networkx>=2.7
+
+[all:python_version < "3.12" and python_version >= "3.11"]
+numpy>=1.23.2
+
+[all:python_version < "3.4" and python_version >= "2.7"]
+coverage>=5.3.1
+
+[all:python_version < "3.5" and python_version >= "3.4"]
+coverage>=4.3.4
+
+[all:python_version < "3.5.0" and python_version >= "3.4.0"]
+pytest<=4.6.11,>=4.6.0
+pytest-cov>=2.8.1
+
+[all:python_version < "3.6" and python_version >= "3.5"]
+coverage>=5.3.1
+
+[all:python_version < "3.6.0" and python_version >= "3.5.0"]
+pytest<=6.1.2,>=4.6.0
+pytest-cov>=2.9.0
+
+[all:python_version < "3.7" and python_version >= "3.6"]
+numpy>=1.19.2
+coverage>=6.1.1
+
+[all:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,>=2.2.0
+pytest>=4.6.0
+
+[all:python_version < "3.8" and python_version >= "3.7"]
+networkx>=2.6.2
+numpy>=1.19.2
+coverage>=6.1.1
+
+[all:python_version < "3.9" and python_version >= "3.8"]
+numpy>=1.19.2
+coverage>=6.1.1
+
+[all:python_version < "4.0" and python_version >= "3.11"]
+networkx>=2.8
+
+[all:python_version < "4.0" and python_version >= "3.12"]
+numpy>=1.26.0
+
+[all:python_version >= "3.10"]
+coverage>=6.1.1
+
+[all:python_version >= "3.10.0"]
+pytest>=6.2.5
+
+[all:python_version >= "3.6.0"]
+pytest-cov>=3.0.0
+
+[graphics]
+
+[graphics-strict]
+
+[graphics-strict:python_version < "3.10" and python_version >= "3.9"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "3.11" and python_version >= "3.10"]
+opencv-python==4.5.4.58
+
+[graphics-strict:python_version < "3.4" and python_version >= "2.7"]
+opencv-python==3.1.0.0
+
+[graphics-strict:python_version < "3.5" and python_version >= "3.4"]
+opencv-python==3.1.0.5
+
+[graphics-strict:python_version < "3.6" and python_version >= "3.5"]
+opencv-python==3.1.0.2
+
+[graphics-strict:python_version < "3.7" and python_version >= "3.6"]
+opencv-python==3.4.13.47
+
+[graphics-strict:python_version < "3.8" and python_version >= "3.7"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "3.9" and python_version >= "3.8"]
+opencv-python==3.4.15.55
+
+[graphics-strict:python_version < "4.0" and python_version >= "3.11"]
+opencv-python==4.5.5.64
+
+[graphics:python_version < "3.10" and python_version >= "3.9"]
+opencv-python>=3.4.15.55
+
+[graphics:python_version < "3.11" and python_version >= "3.10"]
+opencv-python>=4.5.4.58
+
+[graphics:python_version < "3.4" and python_version >= "2.7"]
+opencv-python>=3.1.0.0
+
+[graphics:python_version < "3.5" and python_version >= "3.4"]
+opencv-python>=3.1.0.5
+
+[graphics:python_version < "3.6" and python_version >= "3.5"]
+opencv-python>=3.1.0.2
+
+[graphics:python_version < "3.7" and python_version >= "3.6"]
+opencv-python>=3.4.13.47
+
+[graphics:python_version < "3.8" and python_version >= "3.7"]
+opencv-python>=3.4.15.55
+
+[graphics:python_version < "3.9" and python_version >= "3.8"]
+opencv-python>=3.4.15.55
+
+[graphics:python_version < "4.0" and python_version >= "3.11"]
+opencv-python>=4.5.5.64
+
+[headless]
+
+[headless-strict]
+
+[headless-strict:python_version < "3.10" and python_version >= "3.9"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "3.11" and python_version >= "3.10"]
+opencv-python-headless==4.5.4.58
+
+[headless-strict:python_version < "3.4" and python_version >= "2.7"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.5" and python_version >= "3.4"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.6" and python_version >= "3.5"]
+opencv-python-headless==3.4.2.16
+
+[headless-strict:python_version < "3.7" and python_version >= "3.6"]
+opencv-python-headless==3.4.13.47
+
+[headless-strict:python_version < "3.8" and python_version >= "3.7"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "3.9" and python_version >= "3.8"]
+opencv-python-headless==3.4.15.55
+
+[headless-strict:python_version < "4.0" and python_version >= "3.11"]
+opencv-python-headless==4.5.5.64
+
+[headless:python_version < "3.10" and python_version >= "3.9"]
+opencv-python-headless>=3.4.15.55
+
+[headless:python_version < "3.11" and python_version >= "3.10"]
+opencv-python-headless>=4.5.4.58
+
+[headless:python_version < "3.4" and python_version >= "2.7"]
+opencv-python-headless>=3.4.2.16
+
+[headless:python_version < "3.5" and python_version >= "3.4"]
+opencv-python-headless>=3.4.2.16
+
+[headless:python_version < "3.6" and python_version >= "3.5"]
+opencv-python-headless>=3.4.2.16
+
+[headless:python_version < "3.7" and python_version >= "3.6"]
+opencv-python-headless>=3.4.13.47
+
+[headless:python_version < "3.8" and python_version >= "3.7"]
+opencv-python-headless>=3.4.15.55
+
+[headless:python_version < "3.9" and python_version >= "3.8"]
+opencv-python-headless>=3.4.15.55
+
+[headless:python_version < "4.0" and python_version >= "3.11"]
+opencv-python-headless>=4.5.5.64
+
+[optional]
+lark_cython>=0.0.12
+lark>=1.1.2
+xarray>=0.16.0
+
+[optional-strict]
+lark_cython==0.0.12
+lark==1.1.2
+xarray==0.16.0
+
+[runtime-strict]
+kwarray==0.6.7
+kwimage==0.9.21
+ubelt==1.2.3
+affine==2.3.0
+
+[runtime-strict:python_version < "3.10" and python_version >= "3.9"]
+numpy==1.19.3
+
+[runtime-strict:python_version < "3.11" and python_version >= "3.10"]
+numpy==1.21.6
+
+[runtime-strict:python_version < "3.11" and python_version >= "3.8"]
+networkx==2.7
+
+[runtime-strict:python_version < "3.12" and python_version >= "3.11"]
+numpy==1.23.2
+
+[runtime-strict:python_version < "3.7" and python_version >= "3.6"]
+numpy==1.19.2
+
+[runtime-strict:python_version < "3.7.0" and python_version >= "3.6.0"]
+networkx<=2.5.1,==2.2.0
+
+[runtime-strict:python_version < "3.8" and python_version >= "3.7"]
+networkx==2.6.2
+numpy==1.19.2
+
+[runtime-strict:python_version < "3.9" and python_version >= "3.8"]
+numpy==1.19.2
+
+[runtime-strict:python_version < "4.0" and python_version >= "3.11"]
+networkx==2.8
+
+[runtime-strict:python_version < "4.0" and python_version >= "3.12"]
+numpy==1.26.0
+
+[tests]
+xdoctest>=1.1.1
+pytest-timeout>=1.4.2
+
+[tests-strict]
+xdoctest==1.1.1
+pytest-timeout==1.4.2
+
+[tests-strict:python_version < "2.7" and python_version >= "2.6"]
+coverage==4.5
+
+[tests-strict:python_version < "2.8.0" and python_version >= "2.7.0"]
+pytest<=4.6.11,==4.6.0
+pytest-cov==2.8.1
+
+[tests-strict:python_version < "3.10" and python_version >= "3.9"]
+coverage==5.3.1
+
+[tests-strict:python_version < "3.10.0" and python_version >= "3.7.0"]
+pytest==4.6.0
+
+[tests-strict:python_version < "3.4" and python_version >= "2.7"]
+coverage==5.3.1
+
+[tests-strict:python_version < "3.5" and python_version >= "3.4"]
+coverage==4.3.4
+
+[tests-strict:python_version < "3.5.0" and python_version >= "3.4.0"]
+pytest<=4.6.11,==4.6.0
+pytest-cov==2.8.1
+
+[tests-strict:python_version < "3.6" and python_version >= "3.5"]
+coverage==5.3.1
+
+[tests-strict:python_version < "3.6.0" and python_version >= "3.5.0"]
+pytest<=6.1.2,==4.6.0
+pytest-cov==2.9.0
+
+[tests-strict:python_version < "3.7" and python_version >= "3.6"]
+coverage==6.1.1
+
+[tests-strict:python_version < "3.7.0" and python_version >= "3.6.0"]
+pytest==4.6.0
+
+[tests-strict:python_version < "3.8" and python_version >= "3.7"]
+coverage==6.1.1
+
+[tests-strict:python_version < "3.9" and python_version >= "3.8"]
+coverage==6.1.1
+
+[tests-strict:python_version >= "3.10"]
+coverage==6.1.1
+
+[tests-strict:python_version >= "3.10.0"]
+pytest==6.2.5
+
+[tests-strict:python_version >= "3.6.0"]
+pytest-cov==3.0.0
+
+[tests:python_version < "2.7" and python_version >= "2.6"]
+coverage>=4.5
+
+[tests:python_version < "2.8.0" and python_version >= "2.7.0"]
+pytest<=4.6.11,>=4.6.0
+pytest-cov>=2.8.1
+
+[tests:python_version < "3.10" and python_version >= "3.9"]
+coverage>=5.3.1
+
+[tests:python_version < "3.10.0" and python_version >= "3.7.0"]
+pytest>=4.6.0
+
+[tests:python_version < "3.4" and python_version >= "2.7"]
+coverage>=5.3.1
+
+[tests:python_version < "3.5" and python_version >= "3.4"]
+coverage>=4.3.4
+
+[tests:python_version < "3.5.0" and python_version >= "3.4.0"]
+pytest<=4.6.11,>=4.6.0
+pytest-cov>=2.8.1
+
+[tests:python_version < "3.6" and python_version >= "3.5"]
+coverage>=5.3.1
+
+[tests:python_version < "3.6.0" and python_version >= "3.5.0"]
+pytest<=6.1.2,>=4.6.0
+pytest-cov>=2.9.0
+
+[tests:python_version < "3.7" and python_version >= "3.6"]
+coverage>=6.1.1
+
+[tests:python_version < "3.7.0" and python_version >= "3.6.0"]
+pytest>=4.6.0
+
+[tests:python_version < "3.8" and python_version >= "3.7"]
+coverage>=6.1.1
+
+[tests:python_version < "3.9" and python_version >= "3.8"]
+coverage>=6.1.1
+
+[tests:python_version >= "3.10"]
+coverage>=6.1.1
+
+[tests:python_version >= "3.10.0"]
+pytest>=6.2.5
+
+[tests:python_version >= "3.6.0"]
+pytest-cov>=3.0.0
