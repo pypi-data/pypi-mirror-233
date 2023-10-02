@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sqlantic
+Version: 0.0.7
+Summary: Lightweight Extension of SqlAlchemy with Dynamic Pydantic V2 Models
+Home-page: https://github.com/codemation/sqlantic
+Author: Joshua Jamison
+Author-email: joshjamison1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Pydantic
+Classifier: Framework :: FastAPI
+Classifier: Topic :: Database
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: SQLAlchemy ==2.0.21
+Requires-Dist: pydantic ==2.4.2
+Provides-Extra: all
+Requires-Dist: SQLAlchemy ==2.0.21 ; extra == 'all'
+Requires-Dist: pydantic ==2.4.2 ; extra == 'all'
+
+# sqlorm
+Lightweight Extension of SqlAlchemy with Dynamic Pydantic V2 Models
+
+

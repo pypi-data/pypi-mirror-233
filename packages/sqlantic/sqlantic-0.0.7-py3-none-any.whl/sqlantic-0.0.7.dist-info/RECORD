@@ -1,0 +1,8 @@
+sqlantic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlantic/core.py,sha256=rf3kb4Xayb3kn2ScZlL-RFcpI-FdXB88aNlpBrT8xYA,1212
+sqlantic/model_manager.py,sha256=Px1-OOchq5n0OYnewMCchWOvyk1rbyGyg4xipS4fR3g,3148
+sqlantic-0.0.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sqlantic-0.0.7.dist-info/METADATA,sha256=6yOfRzh6NvwntTD2AfngnnDOSpa5hibEXWMr5vPVOXg,852
+sqlantic-0.0.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sqlantic-0.0.7.dist-info/top_level.txt,sha256=cxIa4wwMRc1zght7loFqNetD-eEjCSHt92TJcY6_SvM,9
+sqlantic-0.0.7.dist-info/RECORD,,
