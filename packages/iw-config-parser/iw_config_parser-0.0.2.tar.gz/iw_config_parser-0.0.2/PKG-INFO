@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: iw_config_parser
+Version: 0.0.2
+Summary: Simplify the management of configuration files in your Python projects
+Home-page: https://github.com/
+Author: iw-infra team
+Author-email: has.cha.89@gmail.com
+License: MIT
+Description: IW Configuration Parser
+        
+        ## Description
+        
+        Simplify the management of configuration files in your Python projects.
+        
+        ## Getting Started
+        
+        ### Installing
+        
+        ```
+        $ pip install iw-config-parser
+        ```
+        
+        ### Executing program
+        
+        * How to run the program
+        * Step-by-step bullets
+        
+        ## Authors
+        
+        Contributors names and contact info
+        
+        TBA
+        
+        ## Version History
+        
+        * 0.0.2
+            * Initial Release
+        
+        ## License
+        
+        This project is licensed under the MIT License - see the LICENSE.md file for details
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
