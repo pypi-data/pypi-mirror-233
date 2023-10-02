@@ -1,0 +1,4 @@
+streamlit-keycloak
+httpx-oauth
+extra_streamlit_components
+pyjwt
