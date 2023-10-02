@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jams_convertor
+Version: 0.1.2
+Summary: JSON to JAMS conversion for all-in-one algorithm
+Author-email: Bharath Radhakrishnan <bharathmsrk12@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# jams-convertor
+Python package to convert JSON to JAMS for all-in-one algorithm.

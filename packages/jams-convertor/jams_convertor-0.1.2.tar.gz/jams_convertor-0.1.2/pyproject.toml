@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jams_convertor"
+version = "0.1.2"
+authors = [
+    { name="Bharath Radhakrishnan", email="bharathmsrk12@gmail.com" },
+]
+description = "JSON to JAMS conversion for all-in-one algorithm"
+readme = "README.md"
+requires-python = ">=3.9.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
