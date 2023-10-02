@@ -1,0 +1,12 @@
+awsmfav2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awsmfav2/cli.py,sha256=I6b1UhAl3rbI9OVLxIH8ytvHdef1dOOU4q0DUcQ96XM,15758
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=5izrXs5RO20dOV5CxhV6InVg6sdWvzCS-mxLGOfwGoU,9681
+tests/test_data/config,sha256=E1fr2L89TobZqpk7U9WYfq36am3hCZVKjo0wzHp75Jg,415
+tests/test_data/credentials_expired,sha256=-NeTbUHIv_xB3YiG2DbWL4V9IvqDotzGSmleToUOnxg,353
+tests/test_data/credentials_unexpired,sha256=wZD9E3i36wI1c2LxdRUvUiw9J9L9Pfm_-V-xK-Q6aZE,345
+aws_mfa_v2-0.3.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+aws_mfa_v2-0.3.0.dist-info/METADATA,sha256=9BmocIIxpN_CHALjrbDsznJCKi_CvupzqxRUNg8321A,6988
+aws_mfa_v2-0.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+aws_mfa_v2-0.3.0.dist-info/entry_points.txt,sha256=bSIWNLlMDRfc_-SbL5ZoAvYDhlUR-pIgDJDwghMq2Do,45
+aws_mfa_v2-0.3.0.dist-info/RECORD,,
