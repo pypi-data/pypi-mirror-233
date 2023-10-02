@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: environmentinator
+Version: 0.1.0
+Summary: Python library to ensure the runtime executing your code meets application requirements.
+Author-email: Jeffrey McAteer <jeffrey-pydev@jmcateer.com>
