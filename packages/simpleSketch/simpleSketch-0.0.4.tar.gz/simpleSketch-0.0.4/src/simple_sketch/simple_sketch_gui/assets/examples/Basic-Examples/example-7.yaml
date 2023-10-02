@@ -1,0 +1,21 @@
+program: "
+y := (??* x) + ??;
+if (y - ?? > k) {
+    k := 1;
+} else {
+    k := 2;
+}
+"
+input_output_examples:
+  - input: 
+    output: 
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:
