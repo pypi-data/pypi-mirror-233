@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: indoorContact
+Version: 0.0.7
+Summary: ABM pedestrian simulation counting indoor contact
+Home-page: https://github.com/MG-Choi/indoorCont.git
+Author: MoongiChoi
+Author-email: u1316663@utah.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: matplotlib (==3.7.1)
+Requires-Dist: pandas (==1.5.3)
+Requires-Dist: numpy (==1.24.3)
+Requires-Dist: tqdm (==4.65.0)
+Requires-Dist: celluloid (==0.2.0)
+Requires-Dist: seaborn (==0.12.2)
+
+UNKNOWN
+
