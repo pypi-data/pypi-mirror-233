@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: awesome_pypi_package1
+Version: 0.0.2
+Summary: my short description
+Author-email: Olliver Aira <olliver.aira@gmail.com>
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Awesome PyPi package1
+my app's README.md
