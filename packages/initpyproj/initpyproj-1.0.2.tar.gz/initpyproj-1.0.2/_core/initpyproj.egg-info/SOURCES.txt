@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+_core/initpyproj.py
+_core/initpyproj.egg-info/PKG-INFO
+_core/initpyproj.egg-info/SOURCES.txt
+_core/initpyproj.egg-info/dependency_links.txt
+_core/initpyproj.egg-info/top_level.txt
+_core/initpyproj_templates/[template]CHANGELOG
+_core/initpyproj_templates/[template]LICENSE
+_core/initpyproj_templates/[template]MANIFEST
+_core/initpyproj_templates/[template]README
+_core/initpyproj_templates/[template]gitignore
+_core/initpyproj_templates/[template]setup
