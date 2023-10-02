@@ -1,0 +1,2 @@
+[nbdev]
+litum = litum._modidx:d
