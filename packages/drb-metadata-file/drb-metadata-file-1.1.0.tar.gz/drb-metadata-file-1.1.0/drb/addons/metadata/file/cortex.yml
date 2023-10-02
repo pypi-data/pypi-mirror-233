@@ -1,0 +1,32 @@
+drbItemClass: '99e6ce18-276f-11ec-9621-0242ac130002'
+metadata:
+  - name: name
+    xquery: |
+      name(.)
+  - name: size
+    xquery: |
+      data(./@size)
+  - name: type
+    xquery: |
+      data(./@mode)
+  - name: creationTime
+    xquery: |
+      data(./@creation_time)
+  - name: modificationTime
+    xquery: |
+      data(./@last_modification_time)
+  - name: lastAccessTime
+    xquery: |
+      data(./@last_access_time)
+  - name: owner
+    xquery: |
+      data(./@owner)
+  - name: group
+    xquery: |
+      data(./@group)
+  - name: nlink
+    xquery: |
+      data(./@link_number)
+  - name: inode
+    xquery: |
+      data(./@inode)
