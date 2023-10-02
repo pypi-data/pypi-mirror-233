@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: featurebridge
+Version: 0.9.6
+Summary: FeatureBridge: Revolutionizing ML adaptive modelling for handling missing features and data. The model can predict and fill data gaps in real-world scenarios.
+Home-page: https://github.com/inetanel/featurebridge
+Author: Netanel Eliav
+Author-email: inetanel@me.com
+License: MIT
+Project-URL: Author Website, https://inetanel.com
+Project-URL: Documentation, https://inetanel.github.io/featurebridge
+Project-URL: Source Code, https://github.com/inetanel/featurebridge
+Project-URL: Issue Tracker, https://github.com/inetanel/featurebridge/issues
+Keywords: sklearn,scikit-learn,python,data analysis,machine learning,data visualization,python library,data processing,data science,data exploration,data manipulation,analytics,statistics,artificial intelligence,AI,feature engineering,data preprocessing,predictive modeling,classification,regression,missing data,data cleaning,data imputation,data quality,missing data analysis,data handling,data integrity,data cleansing,data wrangling,data validation,data completeness,impute missing values,data missingness,missing data detection,data quality assessment,data pre-processing tool
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: distfit==1.6.11
+Requires-Dist: matplotlib==3.8.0
+Requires-Dist: numpy==1.26.0
+Requires-Dist: pandas==2.1.0
+Requires-Dist: scikit-learn==1.3.0
+Requires-Dist: scipy==1.11.2
+Requires-Dist: setuptools>=68.2.2
+
+# FeatureBridge
+
+![FeatureBridge Logo](https://github.com/inetanel/featurebridge/docs/assets/images/logo.jpeg)
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/inetanel/featurebridge)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+- **Project Name:** FeatureBridge
+- **License:** MIT License
+- **Author:** Netanel Eliav
+- **Author Website:** [https://inetanel.com](https://inetanel.com)
+- **Author Email:** [inetanel@me.com](mailto:inetanel@me.com)
+- **Documentation:** [Click Here](https://inetanel.github.io/featurebridge)
+- **Issue Tracker:** [Click Here](https://github.com/inetanel/featurebridge/issues)
+
+
+## Overview
+
+FeatureBridge is a revolutionary adaptive modeling for machine learning applications, particularly in the realm of Artificial Intelligence. It tackles a common challenge in AI projects: handling missing features in real-world scenarios. Machine learning models are often trained on specific features, but when deployed, users may not have access to all those features for predictions. FeatureBridge bridges this gap by enabling models to intelligently predict and fill in missing features, similar to how humans handle incomplete data. This ensures that AI models can seamlessly manage missing data and features while providing accurate predictions.
+
+### Key Features
+
+- **Missing Feature Prediction:** FeatureBridge empowers AI models to predict and fill in missing features based on the available data.
+- **Feature Selection for Mapping:** You can impact the features prediction methods by using configurable thresholds for importance, correlation, and accuracy.
+- **Adaptive Modeling:** Utilize machine learning models to predict missing features, maintaining high prediction accuracy even with incomplete data.
+- **Custom Accuracy Logic:** Define your own accuracy calculation logic to fine-tune feature selection.
+- **Feature Distribution Handling:** Automatically determine the best method for handling feature distribution based on data characteristics.
+- **Dependency Management:** Identify mandatory, deviation, and leveled features to optimize AI model performance.
+
+## Usage
+
+With FeatureBridge, integrating this powerful tool into your AI and machine learning pipelines is easy. Fit the class to your data, and let it handle missing features intelligently. Detailed comments and comprehensive documentation are provided for straightforward implementation.
+
+## Getting Started
+
+Follow these steps to get started with FeatureBridge:
+
+1. Clone this repository:
+
+   ```shell
+   pip install featurebridge
+   
+   ```
+
+   ```shell
+   # Alternatively 
+   git clone https://github.com/inetanel/featurebridge.git
+   pip install -r requirements.txt
+   
+   ```
+   
+## Dependencies 
+
+- NumPy
+- Pandas
+- Distfit
+- Matplotlib
+
+## Contribution
+
+Contributions and feedback are highly encouraged. You can open issues, submit pull requests for enhancements or bug fixes, and be part of the AI community that advances FeatureBridge.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Disclaimer
+
+This code is provided as-is, without any warranties or guarantees. Please use it responsibly and review the documentation for usage instructions and best practices.
