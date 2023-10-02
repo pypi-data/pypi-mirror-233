@@ -1,0 +1,2 @@
+[console_scripts]
+chinese-wordcloud = chineseEasyWordcloud.terminal:chineseWordcloud

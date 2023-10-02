@@ -1,0 +1,17 @@
+README.rst
+setup.py
+chineseEasyWordcloud/__init__.py
+chineseEasyWordcloud/cut.py
+chineseEasyWordcloud/easyWordcloud.py
+chineseEasyWordcloud/stopwords.py
+chineseEasyWordcloud/terminal.py
+chineseEasyWordcloud.egg-info/PKG-INFO
+chineseEasyWordcloud.egg-info/SOURCES.txt
+chineseEasyWordcloud.egg-info/dependency_links.txt
+chineseEasyWordcloud.egg-info/entry_points.txt
+chineseEasyWordcloud.egg-info/requires.txt
+chineseEasyWordcloud.egg-info/top_level.txt
+chineseEasyWordcloud/data/__init__.py
+chineseEasyWordcloud/data/stopwords.py
+chineseEasyWordcloud/data/__init__.py
+chineseEasyWordcloud/data/stopwords.py
