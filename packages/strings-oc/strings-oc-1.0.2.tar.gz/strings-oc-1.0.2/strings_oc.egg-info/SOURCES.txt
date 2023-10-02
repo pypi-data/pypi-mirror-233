@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+strings/__init__.py
+strings/__main__.py
+strings_oc.egg-info/PKG-INFO
+strings_oc.egg-info/SOURCES.txt
+strings_oc.egg-info/dependency_links.txt
+strings_oc.egg-info/top_level.txt
+strings_oc.egg-info/zip-safe
