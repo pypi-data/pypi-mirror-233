@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: state2inventory
+Version: 1.0.0
+Summary: Generate an Ansible inventory file from an infrastructure state
+Home-page: https://gitlab.com/op_so/ansible/state2inventory/
+License: MIT
+Author: FX Soubirou
+Author-email: soubirou@yahoo.fr
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Project-URL: Documentation, https://jfxs.gitlab.io/state2inventory/
+Description-Content-Type: text/markdown
+
+# State 2 inventory
+
+[![Software License](https://img.shields.io/badge/license-MIT-informational.svg?style=flat)](LICENSE)
+[![Pipeline Status](https://gitlab.com/op_so/ansible/state2inventory/badges/main/pipeline.svg)](https://gitlab.com/op_so/ansible/state2inventory/pipelines)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
+An easy way to generate your [`Ansible` inventory](https://docs.ansible.com/ansible/latest/getting_started/get_started_inventory.html) from an infrastructure state.
+
+```bash
+Usage: state2inventory.py [OPTIONS] COMMAND [ARGS]...
+
+  A CLI tool to generate an Ansible inventory from different infrastructure
+  states.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  multipass  Command to generate an Ansible inventory from a multipass...
+  terraform  Command to generate an Ansible inventory from a terraform...
+```
+
+## `Multipass`
+
+Generate an `Ansible` inventory from a `multipass` state file (`multipass list`) and a configuration file.
+
+**Work in progress**.
+
+## `Terraform`
+
+Terraform provider, extract data for an `Ansible` inventory from the terraform command [`terraform show -json`](https://developer.hashicorp.com/terraform/cli/commands/show).
+
+### Usage
+
+- Install state2inventory, see [installation](#installation) step bellow,
+- Generate the file state by running `terraform show -json > my_state.json`
+
+```bash
+state2inventory.py terraform --state my_state.json --output inventory.txt
+```
+
+### `Terraform` provider options
+
+You can customize the data you want to extract from the state JSON terraform file with the `--key` option:
+
+| Key      | Description                                                             | Default Value                   |
+| -------- | ----------------------------------------------------------------------- | ------------------------------- |
+| `type`   | The type of resource to extract                                         | `openstack_compute_instance_v2` |
+| `ip`     | The `IP` field to extract for the `ansible_host` value in the inventory | `access_ip_v4`                  |
+| `groups` | Metadata key containing the `Ansible` groups of that host is member of  | `host_groups`                   |
+| `vars`   | Metadata key containing the `Ansible` variables defined in inventory    | `host_vars`                     |
+
+Example: `--key {"type": "openstack_compute_instance_v2", "ip": "access_ip_v4" }`
+
+Some resource type value:
+
+| Cloud                         | Type                                 |
+| ----------------------------- | ------------------------------------ |
+| `Openstack` (default)         | `openstack_compute_instance_v2`      |
+| `Google Cloud Plateform`      | `google_compute_instance`            |
+| `Oracle Cloud Infrastructure` | `oci_core_instance`                  |
+| `Flexible Engine`             | `flexibleengine_compute_instance_v2` |
+
+### Terraform metadata
+
+The `Terraform` optional list key/value `metadata` stores the host groups and the `Ansible` host variables in the inventory.
+The key `host_groups` key has as value the list of groups of the host separated by a semicolon `;`.
+The key `host_vars` key has as value the list of [connection variables](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html#connection-variables) of the host separated by a semicolon `;`.
+
+Example:
+
+```bash
+host_groups = "public;bastion;core"
+host_vars = "ansible_user=ubuntu;ansible_python_interpreter=/usr/bin/python3"
+```
+
+### Terraform provider generation example
+
+```bash
+resource "openstack_compute_instance_v2" "bastion" {
+  name = "bastion01"
+  ...
+  metadata = {
+    host_groups = "public;bastion;core"
+    host_vars = "ansible_user=ubuntu;ansible_python_interpreter=/usr/bin/python3"
+  }
+  ...
+}
+```
+
+generates
+
+```bash
+bastion01 ansible_host=192.168.0.156 ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3
+
+[public]
+bastion01
+
+[bastion]
+bastion01
+
+[core]
+bastion01
+```
+
+## Installation
+
+## Authors
+
+<!-- vale off -->
+- **FX Soubirou** - *Initial work* - [GitLab repositories](https://gitlab.com/op_so)
+<!-- vale on -->
+
+## License
+
+<!-- vale off -->
+This program is free software: you can redistribute it and/or modify it under the terms of the MIT License (MIT). See the [LICENSE](https://opensource.org/licenses/MIT) for details.
+<!-- vale on -->
+
