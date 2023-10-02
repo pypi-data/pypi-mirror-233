@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "zetascale"
+version = "0.6.9"
+description = "Transformers at zeta scales"
+authors = ["Zeta Team <kye@apac.ai>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/kyegomez/zeta"
+keywords = ["Transformers", "zeta scale"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+packages = [
+    { include = "zeta" },
+    { include = "zeta/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "*"
+fairscale = "*"
+timm = "0.4.12"
+triton = "*"
+pytest = "*"
+einops = "*"
+bitsandbytes = "*"
+typing = "*"
+transformers = "*"
+einops-exts = "*"
+torchvision = "*"
+accelerate = "*"
+datasets = "*"
+lion-pytorch = "*"
+sentencepiece = "*"
+colt5-attention = "0.10.14"
+vector-quantize-pytorch = "1.1.5"
+tokenmonster = "*"
+scipy = "*"
+beartype = "*"
+xformers = "*"
+tiktoken = "*"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
