@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fractal_noise/__init__.py
+fractal_noise/fractal_noise_generator.py
+fractal_noise.egg-info/PKG-INFO
+fractal_noise.egg-info/SOURCES.txt
+fractal_noise.egg-info/dependency_links.txt
+fractal_noise.egg-info/requires.txt
+fractal_noise.egg-info/top_level.txt
