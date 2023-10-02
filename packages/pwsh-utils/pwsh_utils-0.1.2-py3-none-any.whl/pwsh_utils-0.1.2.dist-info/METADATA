@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pwsh-utils
+Version: 0.1.2
+Summary: powershell utils
+License: MIT
+Author: JUN
+Author-email: 0x11a1@proton.me
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cowsay (>=6.1,<7.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: python-socks[asyncio] (>=2.4.3,<3.0.0)
+Requires-Dist: requests[socks] (>=2.31.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# command
+```shell
+pipx install pwsh-utils
+say -t 'hello world' # cowsay
+os # operating system
+dt # datetime
+sec # seconds
+ms # milliseconds
+nano # nanoseconds
+env 'PATH' # echo environment variable
+uuid # uuid
+emoj # random emoj
+btc_eth # 从币安获取比特币和以太坊的价格 支持socks5代理设置,设置环境变量->MY_PROXY=socks5h://127.0.0.1:7890
+```
+

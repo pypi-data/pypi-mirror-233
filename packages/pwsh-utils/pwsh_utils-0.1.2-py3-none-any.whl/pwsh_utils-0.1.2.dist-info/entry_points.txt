@@ -1,0 +1,12 @@
+[console_scripts]
+btc_eth=main.btc_eth:run
+dt=main.ts:run
+emoj=main.emoj:run
+env=main.env:run
+ms=main.ts:ms
+nano=main.ts:nano
+os=main.os:run
+say=main.say:run
+sec=main.ts:sec
+uuid=main.uu_id:run
+
