@@ -1,0 +1,7 @@
+pip>=7
+
+[cache]
+watchdog
+
+[passlib]
+passlib>=1.6
