@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+Modulated/Warbeler.py
+Modulated/__init__.py
+Modulator.egg-info/PKG-INFO
+Modulator.egg-info/SOURCES.txt
+Modulator.egg-info/dependency_links.txt
+Modulator.egg-info/requires.txt
+Modulator.egg-info/top_level.txt
+bin/warble.py
+test/test.py
