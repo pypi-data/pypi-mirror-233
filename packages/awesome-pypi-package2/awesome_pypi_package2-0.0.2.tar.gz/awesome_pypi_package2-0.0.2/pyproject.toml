@@ -1,0 +1,13 @@
+[project]
+name = "awesome_pypi_package2"
+version = "0.0.2"
+authors = [
+    { name="Olliver Aira", email="olliver.aira@gmail.com" },
+
+]
+description = "my short description"
+readme = "README.md"
+
+
+
+

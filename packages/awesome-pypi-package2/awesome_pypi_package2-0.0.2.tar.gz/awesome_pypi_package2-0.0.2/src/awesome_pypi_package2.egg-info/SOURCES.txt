@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/awesome_pypi_package2.egg-info/PKG-INFO
+src/awesome_pypi_package2.egg-info/SOURCES.txt
+src/awesome_pypi_package2.egg-info/dependency_links.txt
+src/awesome_pypi_package2.egg-info/top_level.txt
+src/myProjectThatIWantUploaded/__init__.py
