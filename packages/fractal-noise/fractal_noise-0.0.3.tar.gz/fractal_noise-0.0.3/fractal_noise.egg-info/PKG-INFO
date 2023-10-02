@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: fractal-noise
+Version: 0.0.3
+Summary: Python implementation for Fractal Noise, ideal for creating realistic terrain, cloud-like textures, and intricate visual effects.
+Home-page: UNKNOWN
+Author: Sophia Shovkovy
+Author-email: sophiashovkovy@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Fractal Noise
+
+A Python implementation for Fractal Noise. Generates intricate fractal noise patterns to add naturalistic complexity for a wide range of creative applications. Ideal for creating realistic terrain, cloud-like texture, and visual effects.
+
+## Features
+
+- **Create complex fractal noise**: Generate complex and naturalistic fractal noise patterns.
+- **Fine-tune control**: Adjust width, height, scale, and octaves to customize the appearance of the fractal noise.
+- **Scalable coordinate space**: Flexible and unlimited coordinate space.
+
+## Installation
+
+Install via pip
+
+```bash
+pip install fractal-noise
+```
+
+## Usage
+
+Example usage:
+
+```python
+from fractal_noise import fractal_noise
+import matplotlib.pyplot as plt
+
+# Specify fractal noise factors and parameters
+width, height = 512, 512
+scale = 0.1
+octaves = [0, 1, 2, 3, 4, 5]
+
+# Generate fractal noise
+noise = fractal_noise(width, height, scale, octaves)
+
+# Display
+plt.imshow(noise, cmap="gray")
+plt.show()
+```
+
+![](examples/512x512_example.png)
+
+
