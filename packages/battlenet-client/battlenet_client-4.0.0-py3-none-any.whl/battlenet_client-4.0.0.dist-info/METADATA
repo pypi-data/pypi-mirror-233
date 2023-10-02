@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: battlenet-client
+Version: 4.0.0
+Summary: Package provides easy access to Activision/Blizzard Game APIs
+Home-page: https://gitlab.com/gahdania/battlenet-client
+Author: David 'Gahd' Couples
+Author-email: David 'Gahd' Couples <gahdania@gahd.io>
+Project-URL: Homepage, https://gitlab.com/gahdania/battlenet-client
+Project-URL: Bug Tracker, https://gitlab.com/gahdania/battlenet-client/issues
+Keywords: battle.net
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: oic ; extra == 'dev'
+Requires-Dist: python-decouple ; extra == 'dev'
+Requires-Dist: requests-oauthlib ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
