@@ -1,0 +1,8 @@
+build
+dist
+doc
+doc_build
+examples
+spicelib
+tests
+unittests
