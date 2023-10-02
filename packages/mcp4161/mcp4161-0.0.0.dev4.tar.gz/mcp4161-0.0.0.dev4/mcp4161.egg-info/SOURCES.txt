@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.py
+mcp4161/__init__.py
+mcp4161/driver.py
+mcp4161/py.typed
+mcp4161.egg-info/PKG-INFO
+mcp4161.egg-info/SOURCES.txt
+mcp4161.egg-info/dependency_links.txt
+mcp4161.egg-info/requires.txt
+mcp4161.egg-info/top_level.txt
+mcp4161/tests/__init__.py
