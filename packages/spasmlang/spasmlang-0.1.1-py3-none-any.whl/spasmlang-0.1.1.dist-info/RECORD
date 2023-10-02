@@ -1,0 +1,9 @@
+spasm/__init__.py,sha256=06it3uu9Z8aPI21XJfsAvjcyrWKz6FNw76XWbSJ-X9A,173
+spasm/__main__.py,sha256=uE3iQf8a_X4X2uNmF4eeszD0NV7L39SfdcKsqhrRXLk,1456
+spasm/_version.py,sha256=lov5AQRY2AWZIPYGHpgyjqk4qJMdDpydTbouoCiNYOE,274
+spasm/asm.py,sha256=w9LfXcK4UXfmUIbTSyaHgPXTeISxMDT8p5Pokbh0sjY,12303
+spasmlang-0.1.1.dist-info/METADATA,sha256=i8u3zNqMSBL2yy_kbKKpH2rUvvy1cjeGNUMmKKw9TzA,3895
+spasmlang-0.1.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+spasmlang-0.1.1.dist-info/entry_points.txt,sha256=cZd-_1jzWvlVtNn7Tnz0XqWBWRkQVGs96ubDM5fbCAE,46
+spasmlang-0.1.1.dist-info/licenses/LICENSE.txt,sha256=NfbQ348s3BkVgGXOFbs7hQWk80-rISoQwjEMOBbu92w,1109
+spasmlang-0.1.1.dist-info/RECORD,,
