@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ShynaTermux/ShynaTermuxSetup.py
+ShynaTermux/Shyna_check_charge.py
+ShynaTermux/Shyna_get_connection.py
+ShynaTermux/Shyna_get_location.py
+ShynaTermux/__init__.py
+ShynaTermux.egg-info/PKG-INFO
+ShynaTermux.egg-info/SOURCES.txt
+ShynaTermux.egg-info/dependency_links.txt
+ShynaTermux.egg-info/requires.txt
+ShynaTermux.egg-info/top_level.txt
