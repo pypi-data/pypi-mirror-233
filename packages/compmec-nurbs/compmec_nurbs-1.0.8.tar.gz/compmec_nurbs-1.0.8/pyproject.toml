@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "compmec-nurbs"
+version = "1.0.8"
+description = ""
+readme = "README.md"
+authors = ["Carlos Adir <carlos.adir.leite@gmail.com>"]
+packages = [{ include = "compmec/nurbs", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pre-commit = "^2.19.0"
+scriv = {extras = ["toml"], version = "^0.15.2"}
+
+[tool.scriv]
+format = "md"
+version = "literal: src/compmec/nurbs/__init__.py: __version__"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
