@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: cowboe
+Version: 1.0.8.13
+Summary: Construction Of Windows Based On free Energy
+Home-page: https://github.com/kuroonai/cowboe
+Author: Naveen Vasudevan, Li Xi
+Author-email: naveenovan@gmail.com, xili@mcmaster.ca
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: imageio
+Requires-Dist: scipy
+Requires-Dist: shapely
+Requires-Dist: pandas
+
+UNKNOWN
+
