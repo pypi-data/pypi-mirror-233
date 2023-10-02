@@ -1,0 +1,41 @@
+# pyproject.toml
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+  "lpplotlib/*.py",
+  "lpplotlib/*.ipynb",
+  "lpplotlib/styles",
+]
+
+[project]
+name = "lpplotlib"
+version = "0.0.12"
+description = "Matplot extension for easy plotting"
+readme = "README.md"
+authors = [{ name = "Luis Plaja", email = "lplaja@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "numpy>=1.23.5",
+    "matplotlib",
+]
+
+requires-python = ">=3.8"
+
+# [project.optional-dependencies]
+# dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+# [project.urls]
+# Homepage = "https://github.com/realpython/reader"
+
+#[project.scripts]
+#lpplotlib = "lpplotlib.__main__:main"

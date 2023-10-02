@@ -1,0 +1,100 @@
+# lpplot
+
+A user-friendy wrapper for `matplotlib.pyplot` linear plots.
+
+## Table of contents
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Tutorial](#tutorial)
+5. [Donations](#donations)
+6. [License](#license)
+
+
+
+### Introduction <a name="introduction"></a>
+
+Customizing `matplotlib` plots is not always intuitive. Changing grids, labels, pads, etc. often needs searching internet for a time, and probably you will need to repeat these searches after a while. `lpplotlib.pyplot` is a small project that intends this customization to be simple, and repetitive. 
+
+For now, only _line2d_ plots are covered (i.e. plots using the famous `matplotlib.pyplot.plot`command). Yet you may find that even at this level `lpplotlib.pyplot` can be very helpful!.
+
+
+## Installation <a name="installation"></a>
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install,
+
+```bash
+pip install lpplot
+```
+
+## Usage <a name="usage"></a>
+
+`lpplotlib.pyplot` is intended to be used in a notebook enviroment, although you can also use the package in any python script. The required imports are
+
+```python
+import matplotlib.pyplot as plt
+import lpplotlib.pyplot as lpp
+```
+
+A main feature in `lpplotlib.pyplot` is to collect all plot parameters in an object of the class `plot_parameters`. Parameters are defined through a _key_, using the method `plot_parameters.set(key, value)`. Use the method `plot_parameters.set()` to see all possible parameters for your plot, or `plot_parameters.set(keyword)` to see the list of parameters including this _keyword_ in its _key_.
+
+This example shows how to plot a curve with a title:
+
+```pyhton
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.interpolate import interp1d
+import lpplotlib.pyplot as lpp
+
+fig,ax=plt.subplots(1,1, figsize=(5,2), frameon=False)
+
+xp=np.linspace(-20,20,40)
+yp=np.random.rand(40)
+
+x=np.linspace(-20,20,200)
+
+f = interp1d(xp,yp, kind='quadratic')
+y=f(x)
+
+params=lpp.plot_parameters() # initialize params as an instance of class parameters
+params.set('title says','Plot example') # set the plot's title
+
+line,axis=lpp.plot(ax,x,y, pars=params)
+```
+
+## Tutorial <a name="tutorial"></a>
+
+You will find a notebook in the package distribution with the basic explanations and examples. 
+
+## Donations <a name="donations"></a>
+
+This is a first version of what `lpplot` can be! In the future it will be desirable to make also simpler plotting in polar corrdinates and, of course, plottnf 2d functions (contours, density, surfaces...). 
+
+For this I need time, but also caffeine. Unless you are some kind of wizard, I don't see the way you can help me with time, but you can buy me a coffee if you have found `lpplot` useful for you!
+
+<a href="https://www.buymeacoffee.com/lplaja" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+
+## License <a name="license"></a>
+
+MIT License
+
+Copyright (c) 2023 Luis Plaja
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
