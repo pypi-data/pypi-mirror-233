@@ -1,0 +1,16 @@
+data/etfs/etfs_list.json,sha256=8uAYjR4Vs10Q6aGF7-QisY4sVOjT81UpcED1mtbpqK0,693011
+etfpy/__init__.py,sha256=nvYsMH4IB8NQ7tTZZ2AlXKovtUHJAYzBjl-av7u1k9o,99
+etfpy/clients/__init__.py,sha256=FoXq4HSFndEnIRCualYTZNjw88lAwgEpO6rRj0eYk8s,53
+etfpy/clients/_client.py,sha256=E69-U0yDqlHxw3nhxpSqS1b-BSeEW0odVBE2TVaHbes,2840
+etfpy/clients/etfdb_client.py,sha256=d01xLey-71Gz_xsQEZ4lWZwpl-of5H0dy7LpqDquZ04,9376
+etfpy/clients/etfdb_scraper.py,sha256=DdhSCzMUGIytMIkJ57SiQVGgCUC2plyaI92g0kf9hqI,4069
+etfpy/etf.py,sha256=GuRt-w_Tcp0uhnMb1Q4_s6U-JEWCaCEQTSLZL_qtQCo,1020
+etfpy/exc.py,sha256=G0F_JL0HJeMynkhf45sUYrMbPFkwVqg6f2moMn7c0yM,76
+etfpy/log.py,sha256=V8bPHXwCCdp_0NxSEJ0-98oor8EDlr2sW3S8WeQwqdQ,978
+etfpy/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+etfpy/scripts/scrape_etfs.py,sha256=Lr2Qyvw4b9f521Acrj0WcmcLd7ovs9O2HFGCu7MhSQE,386
+etfpy/utils.py,sha256=wTc3Sj0EKRaauGm1cxtVA0GRYLBiSJtsxey13rr1lsY,3291
+etfpy-1.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+etfpy-1.0.1.dist-info/METADATA,sha256=O9UaJ9QSh9NXvRUCbeHcIWKa1KcsWaSRrITtIEkssyk,4622
+etfpy-1.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+etfpy-1.0.1.dist-info/RECORD,,
