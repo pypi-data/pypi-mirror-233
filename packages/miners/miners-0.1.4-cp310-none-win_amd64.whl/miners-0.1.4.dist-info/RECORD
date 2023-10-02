@@ -1,0 +1,6 @@
+miners-0.1.4.dist-info/METADATA,sha256=4oFK_SOKzK3p1UzYt2yvBe0WGpNT74blbDEEgRGICcg,5040
+miners-0.1.4.dist-info/WHEEL,sha256=h4UfPQDpHKqlVNhwLycY9q2_njSluZqLzTtUUMa9TJI,95
+miners-0.1.4.dist-info/license_files/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+miners/__init__.py,sha256=cBp4HXeCOpWDtTQiu5RDbdK_1ZZE8xH5FEaObfALUfA,107
+miners/miners.cp310-win_amd64.pyd,sha256=xzqESN3nX0F26CTYw5Ppmueqht8y0xDj6qn6jbc_oDw,451072
+miners-0.1.4.dist-info/RECORD,,
