@@ -1,0 +1,7 @@
+iso4217
+pyserial>=2.5
+pyserial-asyncio
+
+[test]
+pytest
+pytest-asyncio
