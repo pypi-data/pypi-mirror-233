@@ -1,0 +1,2 @@
+[console_scripts]
+raw_image_converter = raw_image_converter.__main__:main
