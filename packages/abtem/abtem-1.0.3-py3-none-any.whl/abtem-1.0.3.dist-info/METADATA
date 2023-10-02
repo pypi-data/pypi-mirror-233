@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: abtem
+Version: 1.0.3
+Home-page: https://github.com/abtem/abtem
+Author: abTEM developers
+Author-email: jacob.madsen@univie.ac.at
+License: GPL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib (>=3.6)
+Requires-Dist: pyfftw
+Requires-Dist: scipy
+Requires-Dist: numba
+Requires-Dist: dask (>=2022.12.1)
+Requires-Dist: distributed
+Requires-Dist: zarr
+Requires-Dist: ase
+Requires-Dist: jupyterlab
+Requires-Dist: threadpoolctl
+Requires-Dist: tabulate
+Requires-Dist: ipywidgets
+Requires-Dist: ipympl
+Provides-Extra: docs
+Requires-Dist: jupyter-book ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+Requires-Dist: ipycytoscape ; extra == 'extra'
+Requires-Dist: dask-labextension ; extra == 'extra'
+Requires-Dist: bokeh ; extra == 'extra'
+Provides-Extra: gpu
+Requires-Dist: cupy ; extra == 'gpu'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: tox ; extra == 'testing'
+Requires-Dist: hypothesis ; extra == 'testing'
+Requires-Dist: jupyter-client ; extra == 'testing'
+Requires-Dist: deepdiff ; extra == 'testing'
+Requires-Dist: imageio ; extra == 'testing'
+
