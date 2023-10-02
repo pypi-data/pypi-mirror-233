@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+excel_1drive_noPassword/__init__.py
+excel_1drive_noPassword/excel_1drive_noPassword.py
+excel_1drive_noPassword.egg-info/PKG-INFO
+excel_1drive_noPassword.egg-info/SOURCES.txt
+excel_1drive_noPassword.egg-info/dependency_links.txt
+excel_1drive_noPassword.egg-info/requires.txt
+excel_1drive_noPassword.egg-info/top_level.txt
