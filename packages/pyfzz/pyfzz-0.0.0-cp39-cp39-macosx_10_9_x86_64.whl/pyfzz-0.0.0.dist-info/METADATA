@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyfzz
+Version: 0.0.0
+Summary: A simple Python wrapper for Fast Zigzag originally written by Tao Hou in C++
+Author: Soham Mukherjee
+Author-email: soham.juetce@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.9
+License-File: LICENSE
+
