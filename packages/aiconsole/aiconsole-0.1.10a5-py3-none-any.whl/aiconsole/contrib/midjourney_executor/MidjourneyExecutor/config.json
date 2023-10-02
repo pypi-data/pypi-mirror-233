@@ -1,0 +1,5 @@
+{
+    "moduleID": "MidjourneyExecutor",
+    "description": "API for creating illustrations based on midjourney prompts.",
+    "docInputJoinAPIComments": true
+}
