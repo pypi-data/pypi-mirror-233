@@ -1,0 +1,11 @@
+Pynad
+
+v3.0.3 - Servidor do IBGE com criptografia SSL defasada - mudança em copia_local.py para permitir autenticação 
+v3.0.2 - Pequeno ajuste para funcionar em Windows (console_script em entry points).
+v3.0.0 - Volta para interface com linha de comando; tira seleção de arquivos; operações com pyarrow e arquivos parquet; somente arquivo de painel deitado
+         e sem pesos BS; mais rápido
+v2.2.0 - Separação dos pesos de bootstrap em arquivos por domicílio; correção do comportamento de seleção de arquivos na árvore - exibe sempre os arquivos remotos, arquivos que existem na cópia local mas não no IBGE não são exibidos
+v2.1.0 - Resolvido problema do registro da seleção de arquivos para garantir que novos arquivos estejam sempre marcados para download
+v2.0.14 - Resolvidos problemas em arquivos de configuração do pacote para download com pip
+v2.0.0 - Primeira versão com interface gráfica
+v1.x.x - Versões inciais sem interface gráfica (quase todas tem algum bug)
