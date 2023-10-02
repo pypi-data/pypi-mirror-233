@@ -1,0 +1,14 @@
+{
+  "title": "TPT custom extension",
+  "description": "Settings of the jupyterlab-tpt extension.",
+  "properties": {
+    "outline_selected_cells": {
+      "type": "boolean",
+      "title": "outline selection",
+      "description": "outillne selection with a background pattern; helpful with colored cells from courselevels",
+      "default": false
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}

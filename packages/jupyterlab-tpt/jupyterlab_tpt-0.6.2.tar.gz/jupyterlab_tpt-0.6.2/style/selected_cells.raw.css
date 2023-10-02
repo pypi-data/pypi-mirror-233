@@ -1,0 +1,8 @@
+/* stylelint-disable */
+
+/* multiple selection - might be better suited in courselevels ? */
+.jp-Notebook.jp-mod-commandMode .jp-Cell.jp-mod-selected {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><path fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"></path></svg>') !important;
+}
+
+/* stylelint-enable */
