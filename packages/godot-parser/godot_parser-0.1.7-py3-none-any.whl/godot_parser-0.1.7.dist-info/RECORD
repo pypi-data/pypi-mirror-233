@@ -1,0 +1,14 @@
+godot_parser/__init__.py,sha256=AzJr-v5JMcmoSQOJkilHdB76m0GpbPpEPts5skt60Yo,153
+godot_parser/files.py,sha256=-mzvQRIy4uFDQ6o6c1qtVyTSd_kSVbb75DbCkedj42M,15905
+godot_parser/objects.py,sha256=TOVx4xlKh6gddp51pEqAFzgLTtng0KiYXGQTmlyuwcw,5569
+godot_parser/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+godot_parser/sections.py,sha256=Val37jw5Rh2oQ_ZgPxvBlNP7mpZUf4u24jrxZv_2AC0,8964
+godot_parser/structure.py,sha256=3WgYtuvU4x7N1BkPUbPOeutI9g8njI-303x3-YnKvNU,1292
+godot_parser/tree.py,sha256=Y__MKJAD6XrflAQxcwSiRqbodGsKCvBItSFVPBR_siQ,11236
+godot_parser/util.py,sha256=iuFKqzsZHi4q27PMjx9Uuidku3kttUVjJLTH7MVOYiw,1537
+godot_parser/values.py,sha256=lDHez7EK-X5gH8VlnbdhVrTZKCYm1nYTlWvue74F1Tw,1313
+godot_parser-0.1.7.dist-info/LICENSE,sha256=lgs_5lBDpDtSCIf-jfrofZqqDnfRtgFwVQykV3GMByM,1073
+godot_parser-0.1.7.dist-info/METADATA,sha256=XJmTE14WKCZfCe_liY7rXFnUH2wOh_KSOuu4tHJsHVg,5922
+godot_parser-0.1.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+godot_parser-0.1.7.dist-info/top_level.txt,sha256=VEur3qnCo4FaaJrZkzeFbcUpALwihQ9XlcybA7maIIs,13
+godot_parser-0.1.7.dist-info/RECORD,,
