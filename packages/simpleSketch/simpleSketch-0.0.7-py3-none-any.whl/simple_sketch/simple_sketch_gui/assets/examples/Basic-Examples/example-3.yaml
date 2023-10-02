@@ -1,0 +1,19 @@
+program: "
+y := (??* x) + ??;
+"
+input_output_examples:
+  - input: "x == 3"
+    output: "y == 5"
+    vars: 
+  - input: "x == 1"
+    output: "y == 3"
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: "And(y == 2*x + 1)"
+  condition_vars:
+loop_inv:
+  condition: 
+  condition_vars:

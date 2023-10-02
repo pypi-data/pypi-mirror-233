@@ -1,0 +1,22 @@
+program: "
+bool b := ?? == 1;
+if (b){
+    a:= 1;
+}else{
+    a:= 2;
+}
+assert (a == 1);
+"
+input_output_examples:
+  - input: 
+    output: 
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:
