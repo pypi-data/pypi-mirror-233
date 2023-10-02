@@ -1,0 +1,9 @@
+nonebot_plugin_ottohzys-0.1.2.dist-info/METADATA,sha256=ldUXKyTts3745AM8bbdTjoEGO_bIQXhQrYza5L4rHXI,4562
+nonebot_plugin_ottohzys-0.1.2.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+nonebot_plugin_ottohzys/__init__.py,sha256=uL69VawbYuv0yU7UGkg3_Q9LVyv2iK_TV1ojGNZJMiw,618
+nonebot_plugin_ottohzys/__main__.py,sha256=2lch8T92NXHJ2ZBj4qXMpu8dTHwQDuW8scVPbgay-zA,3003
+nonebot_plugin_ottohzys/config.py,sha256=1luyBBHxSI3Xm3ajEz7TOXKIF9-kh0-C1etOQrKyDtQ,177
+nonebot_plugin_ottohzys/hzys.py,sha256=cbaWS47j1sZ6YVXivFnfyUAqI8gXWj0yAW6Ak4jdtj8,6324
+nonebot_plugin_ottohzys/res/chinglish.json,sha256=czxGamKvJFhrNZ0EOsKXpqY2boVe-rjdH8co6pKaXKQ,512
+nonebot_plugin_ottohzys/resource.py,sha256=jI9OX-cXgCSibAgbNMxSk0MVxdEVFbvFV4vGe5FzcEo,2514
+nonebot_plugin_ottohzys-0.1.2.dist-info/RECORD,,
