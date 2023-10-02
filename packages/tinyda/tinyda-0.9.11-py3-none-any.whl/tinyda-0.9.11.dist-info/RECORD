@@ -1,0 +1,15 @@
+tinyDA/__init__.py,sha256=mq8DE1VKbl22SCcBuLl6y_1PHKZe6zw-Hk7oIvOAyOQ,393
+tinyDA/chain.py,sha256=1vPMLOroudm9XdRCprYWvq42m6B1PBSmjmjdaizwEb8,27221
+tinyDA/diagnostics.py,sha256=uyOVAh4mQsEokMgQVReJisQvUvzG5V9zhyiOwJITklA,7048
+tinyDA/distributions.py,sha256=s8aJm0SO42lKQCJA4GiCCszfGzZNrhsBPizbH6EqRgw,7776
+tinyDA/link.py,sha256=-jJ3_OU_Lqpc2fvbNwIG4fSusOVy37W7U-wmZBAQvmY,1449
+tinyDA/posterior.py,sha256=GlZTmomPS1AvBYR5FrTUBDIqE-ps2QUj6IVEvzeXIU4,4763
+tinyDA/proposal.py,sha256=iH9NhTFLO92k2c9-Oz8can-yv67PZKPxekJYLg9mQ0c,48855
+tinyDA/ray.py,sha256=_pP2-CHyY6Wnm0RHLgLUnGJgD-8VA29mmHciFuwZCks,14537
+tinyDA/sampler.py,sha256=vRI3DK7kug4ypkvEhgCLYK8Lhs-nH9U7iTozg45mbaw,16316
+tinyDA/umbridge.py,sha256=pgNbWRPBsy7XipisVKIUj3Mvdg5Kijyemts2x6U996E,3206
+tinyDA/utils.py,sha256=VKEhO9YORHn8a7O6vOIbMn1CDaLjFvno7nT8SBlhFAM,7376
+tinyda-0.9.11.dist-info/LICENSE,sha256=lIfjgdEKJSF1WzCD433yBmkA1Cst6n2UUdFIynnQG6w,1078
+tinyda-0.9.11.dist-info/METADATA,sha256=PGK155xL6Ny1q0d6xGRGtO46cf-Yz0xZ_sGqAhXstQ8,8497
+tinyda-0.9.11.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+tinyda-0.9.11.dist-info/RECORD,,
