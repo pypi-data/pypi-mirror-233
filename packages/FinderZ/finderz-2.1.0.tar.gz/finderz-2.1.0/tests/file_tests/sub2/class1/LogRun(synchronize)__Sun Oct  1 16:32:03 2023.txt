@@ -1,0 +1,448 @@
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Running in mode SYNCHRONIZATION: importantFilesFlag = '_', syncBackUpFolderExists = True
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class3 and all of its contents, as it is directory /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/, but not in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech1.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech5.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech19.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech4.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech18.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech17.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech13.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech12.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech16.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech11.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech15.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech9.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech14.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech8.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech20.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech10.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech7.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech3.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech2.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/_syncBackups/BeechBeech6.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/_syncBackups
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech1.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech1.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech5.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech5.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech19.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech19.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech4.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech4.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech18.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech18.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech17.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech17.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech13.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech13.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech12.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech12.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech16.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech16.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech11.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech11.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech15.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech15.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech9.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech9.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech14.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech14.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech8.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech8.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech20.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech20.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech10.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech10.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech7.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech7.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech3.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech3.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech2.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech2.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing additional files:
+
+	Sun Oct  1 16:32:03 2023: SUBPROCESS: File found at  /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2/BeechBeech6.py but not found in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2 Removing file from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Skipping file and directory merging as some files/dirs are matching.
+
+
+[C] CURRENT/MAIN ACTIVITY:
+Sun Oct  1 16:32:03 2023: Removing BeechBeech6.py from /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub/class2, as it doesn't exist in /Users/edwardferrari/MyPythonProjects/GitHubRepos/Active/Finderz/tests/file_tests/sub2/class2
