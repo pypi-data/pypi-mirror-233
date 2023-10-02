@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Un s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie ce matin, provoquant une panique g\u00e9n\u00e9ralis\u00e9e dans la r\u00e9gion. L'\u00e9picentre du s\u00e9isme se situe dans la province d'Izmir, sur la c\u00f4te \u00e9g\u00e9enne de la Turquie.\n\nDes images dramatiques diffus\u00e9es par les m\u00e9dias locaux montrent des b\u00e2timents effondr\u00e9s, des rues remplies de gravats et des milliers de personnes errantes dans les rues, cherchant refuge et assistance.\n\nSelon\nUn s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie, provoquant des d\u00e9g\u00e2ts consid\u00e9rables dans la ville c\u00f4ti\u00e8re d'Izmir. Le tremblement de terre a \u00e9t\u00e9 ressenti dans tout le pays et m\u00eame dans certaines parties de la Gr\u00e8ce.\n\nLe s\u00e9isme s'est produit \u00e0 une profondeur de 10 kilom\u00e8tres et a dur\u00e9 environ 30 secondes. Les images et vid\u00e9os qui ont \u00e9merg\u00e9 des zones touch\u00e9es montrent des b\u00e2timents effondr\u00e9s,\nS\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie\n\nLe lundi 22 mars 2021, un s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie, provoquant des d\u00e9g\u00e2ts consid\u00e9rables et entra\u00eenant de nombreuses pertes humaines. Le tremblement de terre s'est produit dans la r\u00e9gion d'Izmir, un centre de population important sur la c\u00f4te de la mer \u00c9g\u00e9e.\n\nLe s\u00e9isme a \u00e9t\u00e9 ressenti jusqu'\u00e0 Istanbul et Ath\u00e8nes, en Gr"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "- Je r\u00e9side dans une demeure.\n- Ma demeure se trouve \u00e0 cette adresse.\n- Mon domicile est une maison.\n- Ma r\u00e9sidence est une habitation individuelle.\n- Je vis dans une b\u00e2tisse.\n- Mon lieu de vie est une maisonnette.\n- Ma maison est le lieu o\u00f9 je r\u00e9side.\n- C'est chez moi, c'est une maison.\n- Ma r\u00e9sidence se trouve dans une demeure.\n- Je suis install\u00e9 dans une habitation.\n- Mon domicile est constitu\u00e9 d'une maison.\n- Je r\u00e9side dans une maisonnette.\n- Mon chez-moi est une b\u00e2tisse.\n- Je loge dans une propri\u00e9t\u00e9 immobili\u00e8re.\n- Mon foyer se situe dans une habitation individuelle.\n- Ma demeure est une maisonnette de campagne.\n- Mon lieu de vie est une demeure en briques.\n- Je suis \u00e9tabli dans une b\u00e2tisse en pierre.\n- Je r\u00e9side dans une demeure\n- Je vis dans une habitation\n- Mon domicile est une maison\n- J'occupe une r\u00e9sidence individuelle \n- J'ai une maison comme lieu de vie \n- C'est dans une maison que je r\u00e9side"
+      }
+    ]
+  }
+]
