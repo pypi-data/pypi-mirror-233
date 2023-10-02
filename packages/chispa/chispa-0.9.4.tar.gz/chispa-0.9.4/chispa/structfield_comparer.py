@@ -1,0 +1,1 @@
+from chispa.schema_comparer import are_structfields_equal
