@@ -1,0 +1,11 @@
+setup.py
+Cli/__init__.py
+Cli/cli.py
+localLlama/__init__.py
+localLlama/server.py
+local_llama.egg-info/PKG-INFO
+local_llama.egg-info/SOURCES.txt
+local_llama.egg-info/dependency_links.txt
+local_llama.egg-info/entry_points.txt
+local_llama.egg-info/requires.txt
+local_llama.egg-info/top_level.txt
