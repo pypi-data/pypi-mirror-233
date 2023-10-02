@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: bag_convert
+Version: 0.0.1
+Summary: Ros bag to Apollo record or reverse conversion
+Home-page: https://github.com/daohu527/bag_convert
+Author: daohu527
+Author-email: daohu527@gmail.com
+Project-URL: Bug Tracker, https://github.com/daohu527/bag_convert/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# bag_convert
+Ros bag to Apollo record or reverse conversion
+
+# Install
+You can install `bag_convert` with the following command
+```
+pip3 install bag_convert
+```
+
+# Quick start
+```
+-m bag conversion mode(b2r, r2b)
+-b bag_file 
+-r record_file
+```
+## Ros bag to Cyber record
+```shell
+bag_convert -m=b2r -b=data/input.bag -r=data/output.record
+```
+
+## Cyber record to Ros bag
+```shell
+bag_convert -m=r2b -r=data/input.record -b=data/output.bag
+```
