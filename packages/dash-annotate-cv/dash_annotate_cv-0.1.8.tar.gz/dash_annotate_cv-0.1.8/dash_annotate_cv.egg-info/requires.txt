@@ -1,0 +1,10 @@
+dash
+scikit_image
+plotly
+dash_bootstrap_components
+dataclasses
+mashumaro
+pandas
+Pillow
+pyyaml
+scikit-image
