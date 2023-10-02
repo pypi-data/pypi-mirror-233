@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: excel-1drive-noPassword
+Version: 1.2.2
+Summary: Package to download and manipulate Excel files from OneDrive URLs that are set to *accessible by anyone with the URL*
+Home-page: https://github.com/abhishekvenkat764/excel_1drive_noPassword
+Author: Abhishek Venkatachalam
+Author-email: abhishek.venkatachalam06@gmail.com
+License-File: LICENSE
