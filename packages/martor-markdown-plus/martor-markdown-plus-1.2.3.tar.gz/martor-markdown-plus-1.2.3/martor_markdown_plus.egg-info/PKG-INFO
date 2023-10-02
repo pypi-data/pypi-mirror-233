@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: martor-markdown-plus
+Version: 1.2.3
+Summary: Django Markdown Editor
+Home-page: https://github.com/Carlositto/martor-markdown-plus
+Author: Carlositto
+Author-email: wiatrowskikarol20@gmail.com
+License: GNUGPL-v3
+Keywords: martor plus,django markdown,django markdown editor,martor markdown plus
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Requires-Dist: Django
+Requires-Dist: Markdown
+Requires-Dist: requests
+
+# martor-markdown-plus
+Heavily based on amazing Martor Markdown with a few additions made according to user's requirements.
+
+They include:
+
+  -TOC Python Markdown extension
+  
+  -Syntax highlighting Python Markdown extension
+  
+  -New styles
