@@ -1,0 +1,11 @@
+twine
+pdoc3
+pytest
+
+pillow
+numpy
+tqdm
+pyvideoio
+
+thefuzz
+qrio
