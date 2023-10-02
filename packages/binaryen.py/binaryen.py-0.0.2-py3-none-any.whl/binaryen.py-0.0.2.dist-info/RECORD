@@ -1,0 +1,16 @@
+binaryen/__init__.py,sha256=vUKg57piMHX5_Q0YwCWJPHhpbMxbhOouN3BiAXlai0A,83
+binaryen/_binaryen_cffi.py,sha256=dQxhjGcrxnanztB-KnRLNSY2y2135D4SxG-aDk7s1E0,81514
+binaryen/expression.py,sha256=OJQL5fUTcFtDE3a_DBPWtCpequETtpu8b3gzgjVaeNI,1799
+binaryen/lib.py,sha256=WmWB-IKAlW5QoeN0X0sCOm-1PsnszmiETHFNBypxrGY,746
+binaryen/module.py,sha256=xH89nBwSAuyyA98lRP7zS4oHzpTEtGxDDdHTQooCgyc,10017
+binaryen/types.py,sha256=xO9AyURQ9V7aDe_I9p-vzthi5jaKLgkuoNw-P_aCsCM,5342
+binaryen/libbinaryen/binaryen-py.h,sha256=SbRVIPdTbnytmK7-2j8jiW6oZ4GGF9ZEbFslzLyVw20,96197
+binaryen/libbinaryen/version.txt,sha256=5bhhptipZt_KfnNBzT62vpkBaI1UenLr7QsfXhTz0I0,3
+binaryen/libbinaryen/arm64-macos/libbinaryen.dylib,sha256=JqF-Y5KHigf0HsVeuZXUpmukMUsHn5FS9RHqmcPgmeE,17002480
+binaryen/libbinaryen/x86_64-linux/libbinaryen.a,sha256=z6rXIOFpyLt4S-bFAfVTvAlPIUGAmW0hT8NIW_qkQlM,56409478
+binaryen/libbinaryen/x86_64-macos/libbinaryen.dylib,sha256=hFYJ5vHu85PNKmO3cs_LCEiGZRzXigq0dYkCYRFdir8,19141256
+binaryen.py-0.0.2.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+binaryen.py-0.0.2.dist-info/METADATA,sha256=0lD2fiEcniOX6VNI06E8CxmB6G3vmhksSX7hPWsVNOk,2126
+binaryen.py-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+binaryen.py-0.0.2.dist-info/top_level.txt,sha256=F7wqo6rRDaznp-v_i8dbSAk74PxfLYWx7Rd8UdxdNjw,9
+binaryen.py-0.0.2.dist-info/RECORD,,
