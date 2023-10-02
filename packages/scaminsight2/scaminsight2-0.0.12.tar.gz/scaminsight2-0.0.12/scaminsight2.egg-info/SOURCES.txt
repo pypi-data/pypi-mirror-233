@@ -1,0 +1,11 @@
+setup.py
+scaminsight2/__init__.py
+scaminsight2/main.py
+scaminsight2/scaminsight.py
+scaminsight2.egg-info/PKG-INFO
+scaminsight2.egg-info/SOURCES.txt
+scaminsight2.egg-info/dependency_links.txt
+scaminsight2.egg-info/entry_points.txt
+scaminsight2.egg-info/not-zip-safe
+scaminsight2.egg-info/requires.txt
+scaminsight2.egg-info/top_level.txt
