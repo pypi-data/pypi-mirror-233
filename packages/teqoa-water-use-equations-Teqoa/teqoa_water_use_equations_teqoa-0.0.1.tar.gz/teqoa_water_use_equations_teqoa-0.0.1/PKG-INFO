@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: teqoa-water-use-equations_Teqoa
+Version: 0.0.1
+Summary: A package for calculating water use estimates for example: ETo, ET, Kcb, Kc
+Project-URL: Homepage, https://github.com/mandavamunya/teqoa-water-use-equations
+Project-URL: Bug Tracker, https://github.com/mandavamunya/teqoa-water-use-equations/issues
+Author-email: Munyaradzi Mandava <info@teqoa.biz>
+License-File: LICENCE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+A package for calculating water use estimates for example: ETo, ET, Kcb, Kc
