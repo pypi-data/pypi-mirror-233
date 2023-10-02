@@ -1,0 +1,12 @@
+jsonparse/VERSION,sha256=1Pq79zdYUSVi9cO2o7d0VslKxCS3RD-a7mxht5Gcwt8,6
+jsonparse/__init__.py,sha256=bEs8FA3PxFmBjxbGjzJflOviZ1iZ2G14wGDLOONdBS8,102
+jsonparse/cli.py,sha256=2Iw-nlRWRMWUh_uDT8cbEJHkFuggA7FvtrL130iOtPc,4235
+jsonparse/functions.py,sha256=X8AfUiOLysbL8kGoTBuNE0nBO4ik7A4JEJkYXSgHDQM,569
+jsonparse/parser.py,sha256=kzuBtQoiGj4hiGettiIes_E9iXG2ztYddEL9CTar760,15957
+jsonparse/webapi.py,sha256=JLV75XFEOusjqSZ06Xk0lEwYTdAyGMB1Msnp34b03I8,3113
+jsonparse-0.13.0.dist-info/LICENSE,sha256=fbQShYqvdn2VCxvdeeL-IbxN7Sdpk6sMg2JycD4U9u4,1069
+jsonparse-0.13.0.dist-info/METADATA,sha256=srHNKPCgbiifJ9Jc5fzqexqlVPKI-iq2ghS4v6B1vXo,6903
+jsonparse-0.13.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+jsonparse-0.13.0.dist-info/entry_points.txt,sha256=3d1Teu-2jlpOolVESW7Cj81Sl6-eHCk1a7bmGW2myZg,85
+jsonparse-0.13.0.dist-info/top_level.txt,sha256=WPkqgo1Zn0CUCJBbR8ebfKAmCsHyRzH767SwWOoiD3Q,10
+jsonparse-0.13.0.dist-info/RECORD,,
