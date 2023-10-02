@@ -1,0 +1,29 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+.cell-tag-raises-exception {
+  border-style: dotted !important;
+  border-color: #800 !important;
+}
+
+.cell-tag-hide-input::before {
+  content: url('only-out.svg');
+}
+
+.cell-tag-hide-output::before {
+  content: url('only-in.svg');
+}
+
+.cell-tag-hide-input.cell-tag-hide-output::before {
+  content: url('noin-noout.svg');
+}
+
+/* -- tmp -- */
+
+/* :root: {
+  --jp-notebook-toolbar-margin-bottom: 0px !important;
+  --jp-notebook-max-width: 5000px !important;
+} */
