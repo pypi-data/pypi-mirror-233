@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+toga_style/__init__.py
+toga_style/version.py
+toga_style.egg-info/PKG-INFO
+toga_style.egg-info/SOURCES.txt
+toga_style.egg-info/dependency_links.txt
+toga_style.egg-info/requires.txt
+toga_style.egg-info/top_level.txt
+toga_style.egg-info/zip-safe
