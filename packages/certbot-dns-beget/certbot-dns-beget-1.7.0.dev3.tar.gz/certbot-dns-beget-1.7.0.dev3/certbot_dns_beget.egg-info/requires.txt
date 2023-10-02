@@ -1,0 +1,12 @@
+requests
+setuptools
+zope.interface
+acme>=1.7.0.dev3
+certbot>=1.7.0.dev3
+
+[:python_version < "3.3"]
+mock
+
+[docs]
+Sphinx>=1.0
+sphinx_rtd_theme
