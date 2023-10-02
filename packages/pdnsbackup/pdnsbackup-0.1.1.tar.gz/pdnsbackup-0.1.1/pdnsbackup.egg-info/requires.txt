@@ -1,0 +1,4 @@
+aiomysql
+dnspython
+aiohttp
+python-dotenv
