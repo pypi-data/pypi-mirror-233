@@ -1,0 +1,10 @@
+localeet/__init__.py,sha256=Xe1uiYbuvKiR2M9uwrfjvJdZeDXra2tUiPGTRr7JvI0,72
+localeet/__main__.py,sha256=AQ6Kkujhp11nJ00LnsVBUrJdE500t-_6mmuzIA2mgcQ,2603
+localeet/get_leetcode_problem.py,sha256=k9YOh6_WoQZJaFjUc3sZJi08hQ7-Jv3MnC0Yu_WfIJo,7252
+localeet/get_version.py,sha256=_odkH-LCFh9OnKtR2Yw6wYl52q_B83NIRt-WnN1l_vw,161
+localeet/language_maps.py,sha256=wHrFM-B5cUaYTAv2XygT9FLwQY3zdaxToBMXzquDzTk,3740
+localeet-0.2.5.dist-info/METADATA,sha256=C3RB2vjkuKL1Na6_8VlsMKavJLFMbvgVmdB1pQILQf4,3836
+localeet-0.2.5.dist-info/WHEEL,sha256=fagL_Tj29mg80flwlxJNW45nBDbboxF04Tnbc_jt3Bg,105
+localeet-0.2.5.dist-info/entry_points.txt,sha256=5UV0KxB4zcqqGf5res7A51YVcG9dx5xsKZilgApcKAA,43
+localeet-0.2.5.dist-info/licenses/LICENSE,sha256=Kb8ef5y6LPcF9vZge0HonSyA43ELQbujLCP5eLtloq8,1055
+localeet-0.2.5.dist-info/RECORD,,
