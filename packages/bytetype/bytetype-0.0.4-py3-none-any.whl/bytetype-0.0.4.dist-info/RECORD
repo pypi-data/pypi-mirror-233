@@ -1,0 +1,13 @@
+bytetype/__init__.py,sha256=tnHNznLl0GbVlrMLH_jVWjHtk6p_jZytynbiUELbU5s,377
+bytetype/_modidx.py,sha256=kJmWi649U_5Tf-gbJ4gS_T_GHePQ-xGJBVHfdKMXqzg,5890
+bytetype/bytes.py,sha256=Q62M6yGodVis2X6YKsY-q3Af4AOiAiM80Wb54KAhIvI,8472
+bytetype/core.py,sha256=K0yDN1gpZMcFKG3ejOcjpHDF4S9GaQEvklzYpbXEydY,11436
+bytetype/enums.py,sha256=F2yrsAih2PsHFbqm9AY2cbuoVfs2KpJnxYdAJEELHq4,3327
+bytetype/units.py,sha256=LpwtDWWn6Eh1ZaCtdAyZB9xvV-542m1IRhkz3iRQp6k,491
+bytetype/utils.py,sha256=r8L57XBHxpX7nWP05cizQRkUltDA0Hhcv-cx4Bk4AWo,1354
+bytetype-0.0.4.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+bytetype-0.0.4.dist-info/METADATA,sha256=N-fhsXXOUlHzThukwRVS9_J-cKTWgvgO8nyQe0MDv70,1649
+bytetype-0.0.4.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+bytetype-0.0.4.dist-info/entry_points.txt,sha256=PpoVsBT61BW8HzARMsWu8RjANetXKd5Y08cBEMdF2Ps,38
+bytetype-0.0.4.dist-info/top_level.txt,sha256=sSMHUTw8PvP7YXsNaepTyBqVC8gV4g1En3dY5R6V0i0,9
+bytetype-0.0.4.dist-info/RECORD,,
