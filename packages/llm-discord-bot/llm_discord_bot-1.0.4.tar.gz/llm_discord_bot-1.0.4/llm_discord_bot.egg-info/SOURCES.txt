@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+llm_discord_bot/bot.py
+llm_discord_bot/chatroom.py
+llm_discord_bot.egg-info/PKG-INFO
+llm_discord_bot.egg-info/SOURCES.txt
+llm_discord_bot.egg-info/dependency_links.txt
+llm_discord_bot.egg-info/requires.txt
+llm_discord_bot.egg-info/top_level.txt
