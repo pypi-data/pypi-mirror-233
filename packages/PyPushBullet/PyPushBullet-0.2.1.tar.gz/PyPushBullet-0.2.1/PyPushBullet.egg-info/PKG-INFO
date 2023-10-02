@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: PyPushBullet
+Version: 0.2.1
+Summary: A simple library to push notification using PushBullet. You need a pushbullet API key for this
+Home-page: https://github.com/ballavamsi/PyPushBullet
+Author: Balla Vamsi Srinivas
+Author-email: ballavamsisrinivas@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+UNKNOWN
+
