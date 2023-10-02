@@ -1,0 +1,2 @@
+spark_dataframe_tools
+prettytable==3.7.0
