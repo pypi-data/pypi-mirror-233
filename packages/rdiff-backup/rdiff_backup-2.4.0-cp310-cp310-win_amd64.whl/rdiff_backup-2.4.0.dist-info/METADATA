@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: rdiff-backup
+Version: 2.4.0
+Summary: Backup and Restore utility, easy to use, efficient, locally and remotely usable
+Home-page: https://rdiff-backup.net/
+Download-URL: https://github.com/rdiff-backup/rdiff-backup/releases
+Author: The rdiff-backup project
+Author-email: rdiff-backup-users@nongnu.org
+License: GPLv2+
+Keywords: backup,simple,easy,remote,incremental,efficient,cross-platform
+Platform: linux
+Platform: win32
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Backup
+Requires-Python: ~=3.6
+License-File: COPYING
+Requires-Dist: PyYAML
+Requires-Dist: pywin32 ; platform_system == "Windows"
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: meta
+Requires-Dist: psutil ; extra == 'meta'
+Requires-Dist: pylibacl ; (os_name == "posix") and extra == 'meta'
+Requires-Dist: pyxattr ; (platform_system == "Linux") and extra == 'meta'
+
+
+        rdiff-backup is a simple backup tool which can be used locally and remotely,
+        on Linux and Windows, and even cross-platform between both.
+        Users have reported using it successfully on FreeBSD and MacOS X.
+
+        Beside it's ease of use, one of the main advantages of rdiff-backup is that it
+        does use the same efficient protocol as rsync to transfer and store data.
+        Because rdiff-backup only stores the differences from the previous backup to
+        the next one (a so called reverse incremental backup),
+        the latest backup is always a full backup, making it easiest
+        and fastest to restore the most recent backups, combining the space
+        advantages of incremental backups while keeping the speed advantages of full
+        backups (at least for recent ones).
+
+        If the optional dependencies pylibacl and pyxattr are installed,
+        rdiff-backup will support Access Control Lists and Extended Attributes
+        provided the file system(s) also support these features.
