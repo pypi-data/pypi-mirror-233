@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "orthoflow"
+version = "0.2.0"
+description = "A phylogenomic workflow"
+authors = ["Robert Turnbull", "Jacob Steenwyk", "Simon Mutch", "Vinícius Salazar", "Pelle Scholten", "Heroen Verbruggen"]
+license = "Apache-2.0"
+readme = "README.rst"
+homepage = "https://github.com/rbturnbull/orthoflow"
+repository = "https://github.com/rbturnbull/orthoflow"
+documentation = "https://rbturnbull.github.io/orthoflow/"
+keywords = ["phylogenomics"]
+# For classifiers see https://pypi.org/classifiers/
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<=3.11"
+snakemake = "^7.0.0"
+pandas = "^1.2.5"
+typer = "^0.4.1"
+Flask = "^2.1.2"
+biopython = "^1.79"
+Jinja2 = "^3.1.2"
+pydot = "^1.4.2"
+appdirs = "^1.4.4"
+joblib = "^1.2.0"
+toml = "^0.10.2"
+phytest = "^1.2.0"
+rich = "^13.3.3"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.4.0"
+nbsphinx = "^0.8.7"
+sphinx-rtd-theme = "^1.0.0"
+sphinx-autobuild = "^2021.3.14"
+sphinx-copybutton = "^0.4.0"
+sphinxcontrib-mermaid = "^0.7.1"
+myst-parser = "^0.17.0"
+pytest = "^7.1.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+pre-commit = "^2.17.0"
+sphinxcontrib-bibtex = "^2.4.1"
+ipdb = "^0.13.9"
+phytest = "^1.0.0"
+snakedoc = { git = "https://github.com/smutch/snakedoc.git", branch = "deps/smk-bibtex" }
+
+[build-system]
+requires = ["setuptools", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+skip_string_normalization = true
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.messages_control]
+disable = "C0330, C0326"
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.snakefmt]
+line_length = 120
+include = '\.smk$|^Snakefile$'
+
+[tool.poetry.scripts]
+orthoflow = 'orthoflow.main:app'
