@@ -1,0 +1,15 @@
+duckduckgo_search/__init__.py,sha256=rMnhYI83o4yaMkqp_C6Hp7EBvlYiV9STZ2oUu8N7JXw,654
+duckduckgo_search/__main__.py,sha256=jnYNGy2hedfrBdtKfchlvdIqf_jMF2LU8yZwxpkX340,138
+duckduckgo_search/cli.py,sha256=MzSMJt-szDbn-1s6bHN1rNaRYcFbcD2hFJCymrAtruY,18422
+duckduckgo_search/compat.py,sha256=ksqgM3MTD6R7q3Nq7NYF-LySzgJlvZhOLpzY1_AiVLM,6535
+duckduckgo_search/duckduckgo_search.py,sha256=poVu1__-3nFjRVjuTApfnAHr_6KqnpTLdKLCqXFfQJQ,31777
+duckduckgo_search/duckduckgo_search_async.py,sha256=u-3PZ9bneoXcIktLmWG0h7RrEGyxqBIDkz47_vzPX-s,32241
+duckduckgo_search/models.py,sha256=c19i44vWqAPNHYZrQA1xTxOqnwiDUGUS3jEQe3BeDqs,508
+duckduckgo_search/utils.py,sha256=G3EIuOie2JE3e67_SJE58c5RBdJ2my28n6vSPioMd60,1495
+duckduckgo_search/version.py,sha256=97OdSef30we1CjsM0qA6wEMk67472iE4_gOoam4odOg,22
+duckduckgo_search-3.9.1.dist-info/LICENSE.md,sha256=dnp2N2nTw9zSuJR-S9xX8EFR9-pK28C_E-BSx35gBCc,1063
+duckduckgo_search-3.9.1.dist-info/METADATA,sha256=bBOJKL_DNQRTbU7iRmpd4O_KO-kXtGBVxGwDRS_dBgk,19048
+duckduckgo_search-3.9.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+duckduckgo_search-3.9.1.dist-info/entry_points.txt,sha256=G7PEAUGEQ-5N2jKiKgXmf_gjOZzUl9Mi6qfI735x23E,51
+duckduckgo_search-3.9.1.dist-info/top_level.txt,sha256=0V9JPu-wl-Tqe56_CXBEi1gyBymc8hdYkFfZNIxV4oU,18
+duckduckgo_search-3.9.1.dist-info/RECORD,,
