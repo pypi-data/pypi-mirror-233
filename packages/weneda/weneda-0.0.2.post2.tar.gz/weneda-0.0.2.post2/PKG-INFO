@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: weneda
+Version: 0.0.2.post2
+Summary: Module for editing and styling text.
+Home-page: https://github.com/EeeMoon/weneda
+License: MIT
+Author: EeeMoon
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: fonttools
+Description-Content-Type: text/markdown
+
+[![pypi](https://img.shields.io/pypi/v/weneda)](https://pypi.org/project/weneda)
+[![python](https://img.shields.io/badge/python-3.11+-blue)](https://www.python.org/downloads)
+[![python](https://img.shields.io/badge/support-yellow)](https://www.buymeacoffee.com/eeemoon)
+
+# weneda
+Python module for editing and styling text.
+
