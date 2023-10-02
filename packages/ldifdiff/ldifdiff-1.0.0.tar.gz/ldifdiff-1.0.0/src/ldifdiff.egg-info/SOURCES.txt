@@ -1,0 +1,12 @@
+.gitattributes
+.gitignore
+README.md
+pyproject.toml
+.github/workflows/python-publish.yml
+src/ldifdiff.py
+src/ldifdiff.egg-info/PKG-INFO
+src/ldifdiff.egg-info/SOURCES.txt
+src/ldifdiff.egg-info/dependency_links.txt
+src/ldifdiff.egg-info/entry_points.txt
+src/ldifdiff.egg-info/requires.txt
+src/ldifdiff.egg-info/top_level.txt
