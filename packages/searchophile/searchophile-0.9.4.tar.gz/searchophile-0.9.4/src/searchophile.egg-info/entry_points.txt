@@ -1,0 +1,4 @@
+[console_scripts]
+csearch = searchophile.__main__:csearch_main
+pysearch = searchophile.__main__:pysearch_main
+search = searchophile.__main__:main
