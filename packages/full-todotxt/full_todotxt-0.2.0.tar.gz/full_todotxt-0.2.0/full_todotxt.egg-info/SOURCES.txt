@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+full_todotxt/__init__.py
+full_todotxt/__main__.py
+full_todotxt/todo.py
+full_todotxt.egg-info/PKG-INFO
+full_todotxt.egg-info/SOURCES.txt
+full_todotxt.egg-info/dependency_links.txt
+full_todotxt.egg-info/entry_points.txt
+full_todotxt.egg-info/requires.txt
+full_todotxt.egg-info/top_level.txt
