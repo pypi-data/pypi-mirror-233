@@ -1,0 +1,2 @@
+[console_scripts]
+pypuregym = pypuregym.cli.cli:main
