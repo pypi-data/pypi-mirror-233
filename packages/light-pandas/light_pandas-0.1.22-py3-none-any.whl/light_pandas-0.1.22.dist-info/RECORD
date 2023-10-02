@@ -1,0 +1,7 @@
+lightpandas/__init__.py,sha256=hvowslJlapmwUfqLvex782vu2G11LT87GSeXfECaFtY,329
+lightpandas/core_api.py,sha256=y8P-heLt8KKqXtKwUQFLbAbEQfrhMlcLhBKi_rVgO5E,3761
+lightpandas/dataframe.py,sha256=-hl2hnwVt8OiYXuJlOUjlhQnXsRQ2KvFvlergQG_p_E,17312
+light_pandas-0.1.22.dist-info/METADATA,sha256=maF83bOS5L77MVfwkyXhgHPxq47H9Q9ECPozupwZesk,1031
+light_pandas-0.1.22.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+light_pandas-0.1.22.dist-info/top_level.txt,sha256=CykxtxfkI5eC2UnJQuYhakMwXErV8c0iuAsmYsRRUKs,12
+light_pandas-0.1.22.dist-info/RECORD,,
