@@ -1,0 +1,12 @@
+music21
+
+[dev]
+pymeasuremap[testing]
+pre-commit
+
+[testing]
+setuptools
+pytest
+pytest-cov
+tox
+GitPython
