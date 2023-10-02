@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sdprot
+Version: 0.0.1
+Summary: A Python package that generates and checks passwords, enhancing security and usability in applications
+Home-page: 
+Author: Supratim Das
+Author-email: supratim0707@gmail.com
+License: MIT
+Keywords: sdprot
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: bcrypt
+Requires-Dist: datetime
+
+## Features
+
+- Generate time-based passwords for implementing time-sensitive licensing services, enhancing security for time-limited access control
+
+## Installation
+
+To install the package, you can use pip:
+
+```shell
+pip install sdprot
+```
