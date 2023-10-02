@@ -1,0 +1,1 @@
+print("my_library package is being initialized.")

@@ -1,0 +1,10 @@
+setup.py
+wivi_graph_client_py/__init__.py
+wivi_graph_client_py/client.py
+wivi_graph_client_py/main.py
+wivi_graph_client_py/test.py
+wivi_graph_client_py.egg-info/PKG-INFO
+wivi_graph_client_py.egg-info/SOURCES.txt
+wivi_graph_client_py.egg-info/dependency_links.txt
+wivi_graph_client_py.egg-info/requires.txt
+wivi_graph_client_py.egg-info/top_level.txt
