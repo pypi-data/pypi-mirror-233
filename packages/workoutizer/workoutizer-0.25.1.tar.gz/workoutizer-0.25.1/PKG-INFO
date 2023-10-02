@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: workoutizer
+Version: 0.25.1
+Summary: 🏋️ Browser based Sport and Workout Organizer 🏃‍♀️
+Home-page: https://github.com/fgebhart/workoutizer
+Author: Fabian Gebhart
+Requires-Python: >=3.8,<3.11
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: Jinja2 (>=3.0.3,<3.1.0)
+Requires-Dist: Pillow (>=9.1.1,<10.0.0)
+Requires-Dist: bokeh (==1.4.0)
+Requires-Dist: channels (>=3.0.4,<4.0.0)
+Requires-Dist: click (>=8.0.4,<9.0.0)
+Requires-Dist: coloredlogs (>=15.0.1,<16.0.0)
+Requires-Dist: django (>=4.0.6,<5.0.0)
+Requires-Dist: django-colorfield (>=0.6.3,<0.7.0)
+Requires-Dist: django-eventstream (>=4.4.0,<5.0.0)
+Requires-Dist: djangorestframework (>=3.13.1,<4.0.0)
+Requires-Dist: fitparse (>=1.2.0,<2.0.0)
+Requires-Dist: geopy (>=2.1.0,<3.0.0)
+Requires-Dist: gpxpy (>=1.5.0,<2.0.0)
+Requires-Dist: haversine (>=2.5.1,<3.0.0)
+Requires-Dist: huey (>=2.4.3,<3.0.0)
+Requires-Dist: luddite (>=1.0.2,<2.0.0)
+Requires-Dist: numpy (>=1.22.2,<2.0.0)
+Requires-Dist: pandas (>=1.4.1,<2.0.0)
+Requires-Dist: psutil (>=5.9.0,<6.0.0)
+Requires-Dist: pyudev (>=0.23.2,<0.24.0)
+Requires-Dist: sportgems (>=0.7.1,<0.8.0)
+Requires-Dist: tenacity (>=8.0.1,<9.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Project-URL: Repository, https://github.com/fgebhart/workoutizer
+Description-Content-Type: text/markdown
+
+# Workoutizer
+
+[![PyPI](https://badge.fury.io/py/workoutizer.svg)](https://badge.fury.io/py/workoutizer)
+[![Python](https://img.shields.io/pypi/pyversions/workoutizer.svg?style=plastic)](https://badge.fury.io/py/workoutizer)
+[![Build Status](https://github.com/fgebhart/workoutizer/actions/workflows/matrix_test.yml/badge.svg)](https://github.com/fgebhart/workoutizer/actions/workflows/matrix_test.yml)
+[![Coverage Badge](https://raw.githubusercontent.com/fgebhart/workoutizer/master/.github/badges/coverage.svg)](https://raw.githubusercontent.com/fgebhart/workoutizer/master/.github/badges/coverage.svg)
+[![Downloads](https://pepy.tech/badge/workoutizer/month)](https://pepy.tech/project/workoutizer)
+
+Workoutizer is a simple web application for organizing your workouts and sports activities. It is designed to work
+locally on any UNIX-like system running Python.
+
+Track your activities to get an overview of your overall training, similar to platforms like
+[strava](https://www.strava.com/) or [garmin connect](https://connect.garmin.com/) - but without
+uploading all your sensitive health data to some 3rd party cloud.
+
+
+## Features
+
+* Automatic import of Garmin `.fit` files and `.gpx` files
+* Automatic naming of activities based on daytime, sport and geo location
+* Render your activity gps data on different OSM maps
+* Plot your activity specific data e.g. heart rate, pace, temperature, cadence and altitude
+* Integrate laps into both plots and maps
+* Connected plots and map via mouse hovering
+* Find sections with highest speed and max altitude gain using [sportgems](https://github.com/fgebhart/sportgems) and
+  highlight on map
+* Add untracked activities manually via the GUI
+* Export activities as `.gpx` files
+* Add as many different sports as you want
+
+
+## Status
+
+Workoutizer is still in a somewhat experimental phase. Things might change a lot from one version to another. However,
+I'm happy to receive bug reports and feedback.
+
+
+## Getting Started
+
+Install workoutizer using pip
+```
+pip install workoutizer
+```
+
+Initialize workoutizer to provide some demo data and run it:
+```
+wkz init --demo
+wkz run
+```
+
+See the help description of the CLI with `wkz --help` and subcommands, e.g.: `wkz manage --help`. 
+
+In case you want to run workoutizer on a Raspberry Pi in your local network, follow the 
+[Raspberry Pi setup instructions](https://github.com/fgebhart/workoutizer/tree/main/setup).
+
+
+## Gallery 
+
+ Dashboard             |  Sport Page
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/3CUCGC8.png)  |  ![](https://i.imgur.com/p5FcrHz.png)
+
+ Activity Page 1/2             |  Activity Page 2/2
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/FnVFz9P.png)  |  ![](https://i.imgur.com/zp8iQcm.png)
+
+
+## Changelog
+
+See [Changelog](https://github.com/fgebhart/workoutizer/blob/main/CHANGELOG.md).
+
+
+## Contributing
+
+Contributions are welcome - check out the [Contribution Guidelines](https://github.com/fgebhart/workoutizer/blob/main/CONTRIBUTING.md).
+
+
+## Thanks
+
+Libraries and other tools used by Workoutizer:
+* [leaflet-ui](https://github.com/Raruto/leaflet-ui) by [Raruto](https://github.com/Raruto)
+* [django-colorfield](https://github.com/fabiocaccamo/django-colorfield) by [Fabio Caccamo](https://github.com/fabiocaccamo)
+* [python-fitparse](https://github.com/dtcooper/python-fitparse) by [dtcooper](https://github.com/dtcooper)
+* [leaflet-color-markers](https://github.com/pointhi/leaflet-color-markers) by [pointhi](https://github.com/pointhi)
+* [Font Awesome Icons](https://fontawesome.com/)
+* [Paper-Dashboard Pro](https://www.creative-tim.com/product/paper-dashboard-2-pro) by [Creative Tim](https://www.creative-tim.com/)
+
