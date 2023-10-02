@@ -1,0 +1,11 @@
+cm3/__init__.py,sha256=rdfAGDbhbo3_3lS2i0dnw5fd8fQdlb3-8wN0Qcsk8oY,39
+cm3/model.py,sha256=z2p-mHASkJ3RnFCCu6XKjeXVRn2y6zvELHfBDcREHeg,8370
+cm3/tokenize.py,sha256=e65kXSLOnKFZPLTvAwqXwrs2g6M_7UG5-nIsIqyk0Xo,5597
+cm3/train.py,sha256=J4AFnxq9hwQgfktPzt12XCT0j3NJWxpxt8d20qwUXFs,23538
+cm3/transformer.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cm3/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cm3/utils/stable_adamw.py,sha256=HH9N-bYeYa1klAyCeJs2xlXoXzIGTPm1_kWwErbBWvM,3306
+cm3-0.1.9.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+cm3-0.1.9.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+cm3-0.1.9.dist-info/METADATA,sha256=NGRf4CZ2sJuI8D8gVAo2ALTir2PmGOMIjcFeDkhiojE,834
+cm3-0.1.9.dist-info/RECORD,,
