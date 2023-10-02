@@ -1,0 +1,4 @@
+[console_scripts]
+rdiff-backup = rdiffbackup.run:main
+rdiff-backup-delete = rdiff_backup.run_delete:main
+rdiff-backup-statistics = rdiff_backup.run_stats:main
