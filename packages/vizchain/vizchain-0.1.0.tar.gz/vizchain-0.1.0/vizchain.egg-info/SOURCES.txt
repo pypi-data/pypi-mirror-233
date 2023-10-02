@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+vizchain/__init__.py
+vizchain/core.py
+vizchain.egg-info/PKG-INFO
+vizchain.egg-info/SOURCES.txt
+vizchain.egg-info/dependency_links.txt
+vizchain.egg-info/top_level.txt

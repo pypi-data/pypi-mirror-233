@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vizchain
+Version: 0.1.0
+Summary: A simple visionchain example
+Home-page: https://github.com/astelmach01/visionchain
+Author: Your Name
+Author-email: astelmach20@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# visionchain
