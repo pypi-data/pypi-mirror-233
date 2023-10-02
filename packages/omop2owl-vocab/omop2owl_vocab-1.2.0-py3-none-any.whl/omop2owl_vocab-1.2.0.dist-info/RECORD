@@ -1,0 +1,10 @@
+omop2owl_vocab/__init__.py,sha256=nURM0VdTvfSKD5sekTBjZCh0a-X_CLwVBDe23vEhr9Y,290
+omop2owl_vocab/__main__.py,sha256=L4_KTdprINW4ErP9V6RGwjtdWvcJNALhLW7ETqYNdoY,240
+omop2owl_vocab/omop2owl_vocab.py,sha256=xFIdxsMP6S5AwdNOeDSj74N7-IezQeYwsqB0U8JJL10,29007
+omop2owl_vocab/prefixes.csv,sha256=i8GU2TH1TKZf28B07ogNn8fSIXOiJq8qZ980cg-E9qY,9856
+omop2owl_vocab-1.2.0.dist-info/LICENSE,sha256=wm62XF3NaOsQPOhKWwMxyhsDuJhGPlm4kxKqIAVQfnQ,1090
+omop2owl_vocab-1.2.0.dist-info/METADATA,sha256=urPO6kTmIhL2kuu6ITxQWsv9Z0aH9DeGESG9hfMSSsc,4046
+omop2owl_vocab-1.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+omop2owl_vocab-1.2.0.dist-info/entry_points.txt,sha256=BynbbNsnUp-U1ff7bon794i_GgtnRItmoU83Ht2RLYc,63
+omop2owl_vocab-1.2.0.dist-info/top_level.txt,sha256=WBFMHPsDetDY1qp-j8C5GDh7ncyR03eS1G6CUHcYzvU,15
+omop2owl_vocab-1.2.0.dist-info/RECORD,,
