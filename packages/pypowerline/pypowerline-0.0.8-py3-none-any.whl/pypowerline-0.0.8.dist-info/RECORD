@@ -1,0 +1,11 @@
+pypowerline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypowerline/configs.py,sha256=deHLdTlcpTal6YIoZt5k56-euq0Rzy9pLwCuU_XdVjg,399
+pypowerline/main.py,sha256=5MhxTM9LEW8Gco-D--5aqdjddJadpmVx5v6DEUpKZIs,2696
+pypowerline/segments.py,sha256=NTtcuZ2mSD1FRFUI_FN1u8wmcx6ViK-blQU8hLOxz4s,974
+pypowerline/static.py,sha256=R6jhJ9m5_9FHCvZMzNN5kREeQpJc1SnKYXsiRmGqhrg,167
+pypowerline-0.0.8.dist-info/LICENSE,sha256=LbXKI8eM2MsfHrMxB4_qsVbinicMJABtaiNk_8dP0Jw,1069
+pypowerline-0.0.8.dist-info/METADATA,sha256=2vOmLUZrJNttE5Ru0JrPmszbjsi7_aHFPun4txGGgQ4,1407
+pypowerline-0.0.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pypowerline-0.0.8.dist-info/entry_points.txt,sha256=RsURawYBYlR2IFdkjJ6NlZN2C4v0H9yDHPcBJmz6R0g,54
+pypowerline-0.0.8.dist-info/top_level.txt,sha256=TbUzET9Imme72XhIGsSTMVHLVVUXGwh6rSH21tucrDU,12
+pypowerline-0.0.8.dist-info/RECORD,,
