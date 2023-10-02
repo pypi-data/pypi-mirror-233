@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+uzbek_language/__init__.py
+uzbek_language/transliterate.py
+uzbek_language/uzwords.py
+uzbek_language/uzwords_latin.py
+uzbek_language.egg-info/PKG-INFO
+uzbek_language.egg-info/SOURCES.txt
+uzbek_language.egg-info/dependency_links.txt
+uzbek_language.egg-info/top_level.txt
