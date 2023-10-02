@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: PyAlStruct
+Version: 0.7.0
+Summary: Implementation of data structures and algorithms in python
+Home-page: https://github.com/fathiabdelmalek/PyAlStruct
+Author: fathi
+Author-email: abdelmalek.fathi.2001@gmail.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyAlStruct
