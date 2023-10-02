@@ -1,0 +1,13 @@
+qwantz_metadata/__init__.py,sha256=Os2YENDglZpEQrfC-m1F8lxv_PMrYaUMSKyxUdzZzIc,49
+qwantz_metadata/combine_metadata.py,sha256=XCoMDSHWK-Omo2cy325TN1tw8mY6J9CP9DU8PIYaOUg,5136
+qwantz_metadata/encoding_utils.py,sha256=lBQ7HBZ6hW236ujoshxZG_Gbvk8rDNj-rVEd6AyNZT4,546
+qwantz_metadata/parse_qwantz_html.py,sha256=1vK3jP229xPQPwGA96mwydPw6eOvOqMomTBmIoWs9Ao,3871
+qwantz_metadata/data/extra_metadata.json,sha256=GkCiRz-7bwhqmrYLGX4YwZ91Jfyn0TplNwKp3ss-MyE,3539
+qwantz_metadata/data/guest_comics.json,sha256=ejmXcyt7n0-rfI2sxKwH73JRfObyMocBzcHAv_kZNKk,148677
+qwantz_metadata/data/special_comics.json,sha256=e9EjZZ8oBwbWtgOyYk0WelLK8p_-pNBeHLfW8kvmxuo,17262
+qwantz_metadata-2023.10.1.dist-info/LICENSE,sha256=FxAC7rFFhBWVVki9-bO9XW3VIhVrCQULFzi5ayZDjro,1054
+qwantz_metadata-2023.10.1.dist-info/METADATA,sha256=DgWaKTzLoz-FL1gIxR4N7Y4HWAyDh6UkxakMD9OIagQ,1345
+qwantz_metadata-2023.10.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+qwantz_metadata-2023.10.1.dist-info/entry_points.txt,sha256=JKYE9MadI7rr3dedhAmrlTkNjGIo1w4Q3YHtCSydOyY,56
+qwantz_metadata-2023.10.1.dist-info/top_level.txt,sha256=wszkF7inpCPopykQ-D74CqVFLg9nQb7tbiOJQInpgmU,16
+qwantz_metadata-2023.10.1.dist-info/RECORD,,
