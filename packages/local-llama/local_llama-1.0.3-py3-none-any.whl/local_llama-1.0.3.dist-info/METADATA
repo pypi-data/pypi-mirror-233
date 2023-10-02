@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: local-llama
+Version: 1.0.3
+Summary: A flask server for a chrome extension that querys llm models
+Home-page: https://github.com/mrdiamonddirt/local-llama-chrome-extension
+Author: Rowan Wood
+Author-email: mrdiamonddirt@gmail.com
+Requires-Dist: Flask
+Requires-Dist: flask-cors
+Requires-Dist: rich
+Requires-Dist: llama-cpp-python
+Requires-Dist: typing-extensions
+
+A flask server for a chrome extension that querys llm models for use with this chrome extention: https://chrome.google.com/webstore/detail/local-llama-llm-ai-chat-q/ekobbgdgkocdnnjoahoojakmoimfjlbm

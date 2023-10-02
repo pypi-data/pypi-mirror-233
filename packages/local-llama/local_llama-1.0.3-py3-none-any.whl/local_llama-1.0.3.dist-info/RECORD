@@ -1,0 +1,9 @@
+Cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Cli/cli.py,sha256=uRNa7W36RwyscR_YFhJmIr8lbhN11p1mLQB9ESDgFCU,718
+localLlama/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localLlama/server.py,sha256=HF01paMt38N-cF8VA-3CXLgvuR7xyexlsW5ShTrLO7U,7894
+local_llama-1.0.3.dist-info/METADATA,sha256=B7EVkzzte_D_ksV4fxQHCVZLi_FdxykNt_R65g11TgY,600
+local_llama-1.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+local_llama-1.0.3.dist-info/entry_points.txt,sha256=E04RASZxpi0YKkZ2eKbHXUZmrOg17RGh38zu--5zc1k,45
+local_llama-1.0.3.dist-info/top_level.txt,sha256=Gd0jEV-jrTt-WGsmQngGvsG1hn68syoQwbD4UXiJxHw,15
+local_llama-1.0.3.dist-info/RECORD,,
