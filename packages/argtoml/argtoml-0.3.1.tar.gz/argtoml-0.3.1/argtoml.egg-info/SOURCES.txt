@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+argtoml/__init__.py
+argtoml/main.py
+argtoml.egg-info/PKG-INFO
+argtoml.egg-info/SOURCES.txt
+argtoml.egg-info/dependency_links.txt
+argtoml.egg-info/top_level.txt
+tests/test_main.py
