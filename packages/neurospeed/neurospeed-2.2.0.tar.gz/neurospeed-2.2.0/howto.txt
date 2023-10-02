@@ -1,0 +1,15 @@
+build package locally:
+pip install -e . 
+
+
+------------------------------------
+publish package:
+
+you should update the version number inside setup.py 
+
+python setup.py sdist bdist_wheel
+
+python -m twine upload dist/*
+
+
+

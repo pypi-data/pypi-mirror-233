@@ -1,0 +1,12 @@
+{
+    "is_prod": "True",
+    "api_address_prod": "https://api-test.neurospeed.io",
+    "pipeline_address_prod": "wss://api-test.neurospeed.io",
+    "api_address_local": "http://localhost:3000",
+    "pipeline_address_local": "ws://localhost:3000",
+    "account_id": "neurobrave_Nt57tr0rSG",
+    "username": "oleg@neurobrave",
+    "user_password": "oleg123321",
+    "HIA_ID": "CIQCPX",
+	"Verbose_socket_log": "False"
+}

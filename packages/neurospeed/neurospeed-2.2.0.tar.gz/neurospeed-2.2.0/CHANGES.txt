@@ -1,0 +1,23 @@
+######## Current NeuroSpeed API version: 2.0.8 ######## 
+
+version 2.0.8:
+1. added example for whatsapp notifications on cognitive analysis output
+
+version 2.0.4 change log:
+1. added time.sleep(0.1) in a while loop inside neurobrave_sensor_interface.py -> send_user_data_to_websocket
+to avoid to performance issues
+
+version 2.0.3 change log:
+1.changed api_config path loading
+
+version 2.0.2 change log:
+1. now using os and pathlib libraries for configurations loading relatively to the current absolute working directory
+2. fixed typo in user_room_as_customer_handler 
+3 neurobrave_sensor_interface -  stop sending data on socket disconnect without raising an error to avoid memory leaks
+
+
+version 2.0.1 change log:
+1. changed package name from neurospeed_api to neurospeed
+2. changed relative paths to be prefixed by package name
+2. Auth_AS_Customer_handler now expecting customer configuration file in the constructure, so loading config from some absolute path is now possible
+
