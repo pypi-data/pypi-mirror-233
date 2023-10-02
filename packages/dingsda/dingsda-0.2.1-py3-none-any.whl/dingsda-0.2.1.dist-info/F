@@ -1,0 +1,21 @@
+    def _preprocess(self, obj, context, path, offset=0):
+        # count isn't checked here, this is done in the build phase
+        retlist = ListContainer()
+        extra_info = {"_offset": offset}
+        size = 0
+        for i,e in enumerate(obj):
+            context._index = i
+            obj, child_extra_info = self.subcon._preprocess(e, context, path, offset)
+            retlist.append(obj)
+
+            extra = {f"_{i}{k}": v for k, v in child_extra_info.items()}
+            extra_info.update(extra)
+            offset += child_extra_info["_size"]
+            size += child_extra_info["_size"]
+
+            context.update(extra_info)
+
+        extra_info["_size"] = size
+        extra_info["_endoffset"] = offset
+
+        return retlist, extra_info
