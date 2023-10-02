@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: maglnuse-logging
+Version: 1.2.0
+Summary: A custom logging library
+Home-page: https://gitlab.com/adv_python_maglnuse/assignment3
+Author: maglnuse
+Author-email: n_maulen@kbtu.kz
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+In this library, our team constructed logging system which has several functions to configure logging.
+Configurations:
+addHandler;
+setLevel;
+setFormatter;

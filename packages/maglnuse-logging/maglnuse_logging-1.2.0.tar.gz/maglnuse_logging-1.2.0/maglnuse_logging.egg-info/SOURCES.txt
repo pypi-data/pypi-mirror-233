@@ -1,0 +1,8 @@
+README.md
+setup.py
+logging_library2/__init__.py
+logging_library2/logger.py
+maglnuse_logging.egg-info/PKG-INFO
+maglnuse_logging.egg-info/SOURCES.txt
+maglnuse_logging.egg-info/dependency_links.txt
+maglnuse_logging.egg-info/top_level.txt
