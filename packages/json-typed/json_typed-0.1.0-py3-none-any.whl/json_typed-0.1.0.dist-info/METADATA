@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: json-typed
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: typing
+Requires-Dist: inspect
+Requires-Dist: collections
+Requires-Dist: json
+
+UNKNOWN
+
