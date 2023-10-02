@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: ooo-dev-xml
+Version: 0.1.1
+Summary: XML Utils for OooDev Project
+Home-page: https://github.com/Amourspirit/python_ooo_dev_xml
+License: MIT
+Keywords: ooodev,libreoffice,openoffice,xml,ooouno
+Author: :Barry-Thomas-Paul: Moss
+Author-email: vibrationoflife@protonmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Office/Business
+Requires-Dist: lxml (>=4.9.3)
+Requires-Dist: ooo-dev-tools (>=0.12.2)
+Project-URL: Documentation, https://ooo-dev-xml.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/Amourspirit/python_ooo_dev_xml
+Description-Content-Type: text/markdown
+
+# OOODEV-XML
+
+This project adds extra XML support for [OOO Development Tools].
+
+This project uses [lxml]. Even though [lxml] is mature it compiles binaries.
+For this reason this XML support project is separate of the main project.
+
+
+## Documentation
+
+See docs on [READTHEDOCS](https://ooo-dev-xml.readthedocs.io/en/latest/).
+
+[OOO Development Tools]: https://python-ooo-dev-tools.readthedocs.io/en/latest/index.html
+
+## Installation
+
+See [PyPi](https://pypi.org/project/ooo-dev-xml/)
+
+```bash
+pip install ooo-dev-xml
+```
+
+[lxml]: https://pypi.org/project/lxml/
