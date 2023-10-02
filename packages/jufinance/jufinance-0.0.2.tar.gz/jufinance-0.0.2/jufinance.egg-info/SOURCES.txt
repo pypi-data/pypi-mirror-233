@@ -1,0 +1,15 @@
+README.md
+setup.py
+jufinance/__init__.py
+jufinance/quote.py
+jufinance.egg-info/PKG-INFO
+jufinance.egg-info/SOURCES.txt
+jufinance.egg-info/dependency_links.txt
+jufinance.egg-info/requires.txt
+jufinance.egg-info/top_level.txt
+jufinance/scrapers/__init__.py
+jufinance/scrapers/investing.py
+jufinance/scrapers/moneycontrol.py
+jufinance/scrapers/screener.py
+jufinance/scrapers/data/__init__.py
+jufinance/scrapers/data/links.py

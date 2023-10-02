@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jufinance
+Version: 0.0.2
+Summary: Python Package to access Indian Stock market data.
+Home-page: UNKNOWN
+Author: Prannay Kedia & Sparsh Gupta
+Author-email: <prannaykedia1@gmail.com>, <sparshgupta2407@gmail.com>
+License: UNKNOWN
+Keywords: python,finance,stock market
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+
+Python Package to access Indian Stock market data. This is for educational purposes only.
+
