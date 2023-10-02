@@ -1,0 +1,7 @@
+README.md
+setup.py
+wivigraph.egg-info/PKG-INFO
+wivigraph.egg-info/SOURCES.txt
+wivigraph.egg-info/dependency_links.txt
+wivigraph.egg-info/requires.txt
+wivigraph.egg-info/top_level.txt
