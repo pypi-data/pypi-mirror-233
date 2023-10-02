@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: vexpr
+Version: 0.1.0
+Summary: Represent code expressions as data structures, then transform them
+Home-page: https://vexpr.org/
+Author: Marcus Lewis
+License-File: LICENSE
