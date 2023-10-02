@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dagrunner
+Version: 0.0.5
+Summary: Run tasks as per dags
+Author: Jatin Lal
+Author-email: jatinlal1994@gmail.com
+Keywords: python,dag
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: networkx
+
+
+# DAG Runner - Run python programs as DAGs
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+DagRunner is a lightweight dag runner that allows you to run tasks as desribed in dependancy graph. Each node gets executed after it's dependencies are completed. Furthermore, failure of a node in the graph leads to failure of all further nodes.
