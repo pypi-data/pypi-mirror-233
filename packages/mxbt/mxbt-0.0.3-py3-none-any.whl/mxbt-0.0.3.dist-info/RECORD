@@ -1,0 +1,12 @@
+mxbt/__init__.py,sha256=HQ4yCoK2kt2klVAjNHjR6D6_9RlMytWdIJX2ykj2yBA,129
+mxbt/api.py,sha256=pD4h77DbrY2i1GD5C_T29vXcqQd52wwcxnxbKUbsZ90,8205
+mxbt/bot.py,sha256=mDw6_50VZbstsA1i9csmR3I5Ao8hkgqnszkawUy2cFI,1277
+mxbt/callbacks.py,sha256=n7tqcrFU0xf8zy8YJjuyXWGJI6MLVkUpy7CN-egVe-0,1891
+mxbt/listener.py,sha256=kw5RmE8ssWAc5d60Eh10aSHugp06QNS9CQFJtfoVPZc,3706
+mxbt/match.py,sha256=WGAZvhfnT3srZ3Hd7W4RAck7axmJ52ZLQ_UbQz7w3Js,2219
+mxbt/utils.py,sha256=TxT_LE3vqwOe8tLxXbjU4Q5MflyEzJBjdU3TFbhe6xQ,282
+mxbt-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mxbt-0.0.3.dist-info/METADATA,sha256=DzJJ8X3qNkNw_3Rq8kQSSC8pX3w4HTx4ACo5hSb1cUI,1857
+mxbt-0.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+mxbt-0.0.3.dist-info/top_level.txt,sha256=9uSDISCA-UcUPucbLtnIuXTDW2TNljpw8IMQMvWA7_o,5
+mxbt-0.0.3.dist-info/RECORD,,
