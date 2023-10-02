@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "django-modern-user"
+version = "0.1.3"
+description = "An improved custom user model for django projects"
+authors = ["Christopher Kumm <chrislkumm@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "django_modern_user"}]
+include = [
+    "LICENSE",
+    "README.md",
+    "django_modern_user/static/**/*",
+    "django_modern_user/templates/**/*",
+    "docs/**/*",
+
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
