@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: annas-py
+Version: 0.1.0
+Summary: Anna's Archive unofficial client based on web scrapping
+License: MIT
+Author: Dheison Gomes
+Author-email: dheisomgomes0@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: beautifulsoup4 (>=4.12.2,<5.0.0)
+Requires-Dist: lxml (>=4.9.3,<5.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# annas-py
+
+Anna's Archive unofficial client library based on web scrapping
+
+## Usage
+
+Install by running:
+
+```bash
+pip install annas-py
+```
+
+Usage example:
+
+```python
+import annas_py
+
+results = annas_py.search("python", language=annas_py.models.args.Language.EN)
+for r in results:
+    print(r.title)
+
+information = annas_py.get_informations(results[0].id)
+print("Title:", information.title)
+print("Description:", information.description)
+print("Links:", information.urls)
+```
+
