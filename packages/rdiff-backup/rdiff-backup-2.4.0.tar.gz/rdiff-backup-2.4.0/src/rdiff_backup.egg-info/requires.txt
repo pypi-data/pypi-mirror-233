@@ -1,0 +1,16 @@
+PyYAML
+
+[:platform_system == "Windows"]
+pywin32
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[meta]
+psutil
+
+[meta:os_name == "posix"]
+pylibacl
+
+[meta:platform_system == "Linux"]
+pyxattr
