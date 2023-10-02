@@ -1,0 +1,9 @@
+spacy>=3.4
+more-itertools>=8.0
+
+[coref]
+spacy<3.5,>=3.4
+spacy-experimental==0.6.3
+
+[gpu]
+cupy

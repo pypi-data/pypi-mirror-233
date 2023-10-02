@@ -1,0 +1,7 @@
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.md
+include segram/nlp/**/*.json
+include segram/nlp/**/*.json.gz
