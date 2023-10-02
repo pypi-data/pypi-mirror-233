@@ -1,0 +1,5 @@
+translate
+qrcode
+pywifi
+speedtest_cli
+pofile
