@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: all-downloader
+Version: 0.0.1
+Summary: The full package for download from several platforms
+Home-page: https://github.com/xalq-mazza-qilsin/downloader-API
+Author: Jahongir Ibragimov
+Author-email: chogirmali.yigit@gmail.com
+License: MIT
+Keywords: python video audio download
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: XML
+License-File: LICENSE

@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+all-downloader/__init__.py
+all_downloader.egg-info/PKG-INFO
+all_downloader.egg-info/SOURCES.txt
+all_downloader.egg-info/dependency_links.txt
+all_downloader.egg-info/top_level.txt
