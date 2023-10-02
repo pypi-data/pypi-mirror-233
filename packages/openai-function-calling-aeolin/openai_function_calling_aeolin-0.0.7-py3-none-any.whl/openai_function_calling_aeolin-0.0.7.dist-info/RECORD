@@ -1,0 +1,8 @@
+function_calling/__init__.py,sha256=nWag0fF9wz32Z3Nv1LHHt-YUJFH3J7ZQBAwOtdVg6-k,98
+function_calling/api.py,sha256=1xZRr0S4n4R9py8fCMa6ngKstT5P6HjJ_NF2U5Ju7fA,1856
+function_calling/models.py,sha256=xNkpfagKF8Zal7CIm-ZxmABoB3Sszw8qUhkcaiDvb0Q,4313
+openai_function_calling_aeolin-0.0.7.dist-info/LICENSE,sha256=LePmAshGr50WX6kRPxzMEob_N1eYO2eGJfDQ9ELNido,496
+openai_function_calling_aeolin-0.0.7.dist-info/METADATA,sha256=UhlCaDf0ak21DuLrVARsdFAZABnu1XGoe3WFCrA2dCM,3028
+openai_function_calling_aeolin-0.0.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+openai_function_calling_aeolin-0.0.7.dist-info/top_level.txt,sha256=de5XyCTR-xJHx8feDlWj7E-cTZdykOt9G_ppPDmGj3c,17
+openai_function_calling_aeolin-0.0.7.dist-info/RECORD,,
