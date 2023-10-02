@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/JaxDecompiler/decompiler.py
+src/JaxDecompiler/primitive_mapping.py
+src/JaxDecompiler.egg-info/PKG-INFO
+src/JaxDecompiler.egg-info/SOURCES.txt
+src/JaxDecompiler.egg-info/dependency_links.txt
+src/JaxDecompiler.egg-info/top_level.txt
+tests/test_add.py
+tests/test_equations.py
+tests/test_jit.py
+tests/test_parallel.py
+tests/test_real_life_examples.py
+tests/test_sparse.py
+tests/test_special_var_name.py
+tests/test_tensor.py
