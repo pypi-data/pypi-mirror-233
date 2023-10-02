@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "top-100"
+version = "0.1.0"
+description = "Top 100 Visited Sites Web Scraper"
+authors = ["reinaldopenno <rapenno@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4="4.12.2"
+requests="2.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
