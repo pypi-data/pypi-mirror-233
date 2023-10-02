@@ -1,0 +1,13 @@
+[project]
+name = "limited"
+description = "Advanced rate limiting in Python"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Alon Krymgand", email = "me@alon.kr" }]
+version = "0.1.0"
+
+[project.urls]
+Homepage = "https://github.com/RealA10N/limited"
+
+[tool.setuptools.package-data]
+"limited" = ["py.typed"]
