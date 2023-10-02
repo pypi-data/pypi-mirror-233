@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: system-toolbox
+Version: 0.0.3
+Summary: Helper scripts and library for calendar
+Home-page: https://github.com/foxyblue/system-toolbox
+Author: S. Williams-Wynn
+Author-email: s.williamswynn.mail@gmail.com
+Requires-Python: >=3.10
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: msgspec (==0.18.2)
+Requires-Dist: python-dateutil (==2.8.2)
+
