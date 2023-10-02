@@ -1,0 +1,10 @@
+README.md
+setup.py
+sdprot/sdprotchk.py
+sdprot/sdprotgen.py
+sdprot/sdsysprot.py
+sdprot.egg-info/PKG-INFO
+sdprot.egg-info/SOURCES.txt
+sdprot.egg-info/dependency_links.txt
+sdprot.egg-info/requires.txt
+sdprot.egg-info/top_level.txt
