@@ -1,0 +1,15 @@
+MANIFEST.in
+NEWS.txt
+README.rst
+setup.py
+src/dynamic_heartbeat/__init__.py
+src/dynamic_heartbeat/__main__.py
+src/dynamic_heartbeat/heartbeat.py
+src/dynamic_heartbeat/time.py
+src/dynamic_heartbeat.egg-info/PKG-INFO
+src/dynamic_heartbeat.egg-info/SOURCES.txt
+src/dynamic_heartbeat.egg-info/dependency_links.txt
+src/dynamic_heartbeat.egg-info/entry_points.txt
+src/dynamic_heartbeat.egg-info/not-zip-safe
+src/dynamic_heartbeat.egg-info/top_level.txt
+tests/test_dynamic_heartbeat.py

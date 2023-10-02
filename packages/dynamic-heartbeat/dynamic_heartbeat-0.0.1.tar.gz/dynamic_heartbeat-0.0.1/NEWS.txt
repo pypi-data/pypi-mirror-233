@@ -1,0 +1,10 @@
+News
+====
+
+0.0.1
+-----
+
+*Release date: 01-Oct-2023*
+
+* Initial release, basic functionality.
+
