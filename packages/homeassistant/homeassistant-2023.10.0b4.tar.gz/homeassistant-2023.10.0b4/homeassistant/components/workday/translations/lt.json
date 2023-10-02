@@ -1,0 +1,38 @@
+{
+    "config": {
+        "error": {
+            "add_holiday_range_error": "Neteisingas datos intervalo formatas (YYYYY-MM-DD,YYYYY-MM-DD)",
+            "remove_holiday_range_error": "Neteisingas datos intervalo formatas (YYYYY-MM-DD,YYYYY-MM-DD)"
+        }
+    },
+    "issues": {
+        "bad_country": {
+            "fix_flow": {
+                "step": {
+                    "country": {
+                        "description": "Pasirinkite \u0161al\u012f, kuri\u0105 naudosite darbo dienos jutikliui.",
+                        "title": "Pasirinkite \u0161al\u012f {title}"
+                    },
+                    "province": {
+                        "data_description": {
+                            "province": "Valstyb\u0117, teritorija, provincija, \u0161alies regionas"
+                        },
+                        "description": "Pasirinkite provincij\u0105 \u0161alyje {country} kuri\u0105 norite naudoti darbo dienos jutikliui.",
+                        "title": "Pasirinkite provincij\u0105 {title}"
+                    }
+                }
+            },
+            "title": "Sukonfig\u016bruota \u0161alis, skirta {title} neegzistuoja"
+        },
+        "bad_province": {
+            "title": "Sukonfig\u016bruota provincija \u0161alyje {country} skirta {title} neegzistuoja"
+        }
+    },
+    "selector": {
+        "country": {
+            "options": {
+                "none": "N\u0117ra \u0161alies"
+            }
+        }
+    }
+}

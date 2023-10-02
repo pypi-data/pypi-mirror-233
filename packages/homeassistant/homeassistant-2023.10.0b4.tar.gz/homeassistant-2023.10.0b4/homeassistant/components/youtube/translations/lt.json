@@ -1,0 +1,27 @@
+{
+    "config": {
+        "abort": {
+            "no_channel": "Sukurkite \u201eYouTube\u201c kanal\u0105, kad gal\u0117tum\u0117te naudoti integracij\u0105. Instrukcijas rasite adresu {support_url} .",
+            "no_subscriptions": "Turite u\u017esiprenumeruoti \u201eYouTube\u201c kanalus, kad gal\u0117tum\u0117te juos prid\u0117ti."
+        },
+        "step": {
+            "reauth_confirm": {
+                "description": "Integruojant \u201eYouTube\u201c reikia i\u0161 naujo autentifikuoti paskyr\u0105"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "latest_upload": {
+                "state_attributes": {
+                    "published_at": {
+                        "name": "Paskelbta"
+                    },
+                    "video_id": {
+                        "name": "Vaizdo \u012fra\u0161o ID"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "services": {
+        "start_irrigation": {
+            "description": "\u958b\u59cb\u704c\u6e89\u3002",
+            "fields": {
+                "duration": {
+                    "description": "\u76ee\u6a19\u958b\u555f\u6301\u7e8c\u6642\u9593\u3002",
+                    "name": "\u6301\u7e8c\u6642\u9593"
+                }
+            },
+            "name": "\u958b\u59cb\u704c\u6e89"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "entity_component": {
+        "_": {
+            "state_attributes": {
+                "uv_index": {
+                    "name": "UV indeksas"
+                }
+            }
+        }
+    },
+    "issues": {
+        "deprecated_weather_forecast": {
+            "description": "Integracija \u201e {platform} \u201c naudoja nebenaudojam\u0105 prognoz\u0117s atribut\u0105. \n\n Pra\u0161ome {report_issue} .",
+            "title": "{platform} integracija naudoja nebenaudojam\u0105 prognoz\u0119"
+        }
+    },
+    "selector": {
+        "forecast_type": {
+            "options": {
+                "daily": "Kasdien",
+                "hourly": "Valandinis",
+                "twice_daily": "Du kartus per dien\u0105"
+            }
+        }
+    },
+    "services": {
+        "get_forecast": {
+            "description": "Gaukite or\u0173 prognoz\u0119.",
+            "fields": {
+                "type": {
+                    "description": "Prognoz\u0117s tipas: kasdien, kas valand\u0105 arba du kartus per dien\u0105.",
+                    "name": "Prognoz\u0117s tipas"
+                }
+            },
+            "name": "Gaukite prognoz\u0119"
+        }
+    }
+}

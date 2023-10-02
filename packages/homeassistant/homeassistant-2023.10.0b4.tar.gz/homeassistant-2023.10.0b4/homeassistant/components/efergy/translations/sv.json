@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad",
+            "reauth_successful": "\u00c5terautentisering lyckades"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta.",
+            "invalid_auth": "Ogiltig autentisering",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API nyckel"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "energy_day": {
+                "name": "Daglig f\u00f6rbrukning"
+            },
+            "energy_month": {
+                "name": "M\u00e5nadsf\u00f6rbrukning"
+            },
+            "energy_week": {
+                "name": "Veckof\u00f6rbrukning"
+            },
+            "energy_year": {
+                "name": "\u00c5rsf\u00f6rbrukning"
+            }
+        }
+    }
+}

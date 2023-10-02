@@ -1,0 +1,22 @@
+{
+    "device_automation": {
+        "condition_type": {
+            "is_illuminance": "Dabartinis {entity_name} ap\u0161vietimas",
+            "is_ph": "Dabartinis {entity_name} pH lygis"
+        },
+        "trigger_type": {
+            "illuminance": "{entity_name} ap\u0161vietimas pakito",
+            "ph": "{entity_name} pH lygio poky\u010diai"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "I\u0161jungta"
+            }
+        },
+        "ph": {
+            "name": "pH"
+        }
+    }
+}

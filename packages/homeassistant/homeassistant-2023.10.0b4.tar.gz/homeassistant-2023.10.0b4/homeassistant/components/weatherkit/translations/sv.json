@@ -1,0 +1,20 @@
+{
+    "config": {
+        "error": {
+            "already_configured": "Platsen \u00e4r redan konfigurerad",
+            "cannot_connect": "Det gick inte att ansluta.",
+            "invalid_auth": "Ogiltig autentisering",
+            "unknown": "Ov\u00e4ntat fel",
+            "unsupported_location": "Apple WeatherKit tillhandah\u00e5ller inte data f\u00f6r denna plats."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "location": "Plats",
+                    "name": "Namn"
+                },
+                "description": "Ange din platsinformation och autentiseringsuppgifter f\u00f6r WeatherKit nedan."
+            }
+        }
+    }
+}
