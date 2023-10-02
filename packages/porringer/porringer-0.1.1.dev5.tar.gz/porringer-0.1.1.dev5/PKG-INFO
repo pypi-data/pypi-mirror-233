@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: porringer
+Version: 0.1.1.dev5
+Home-page: https://github.com/Synodic-Software/Porringer
+Author-Email: Synodic Software <contact@synodic.software>
+License: MIT
+Project-URL: Homepage, https://github.com/Synodic-Software/Porringer
+Project-URL: Repository, https://github.com/Synodic-Software/Porringer
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2.2
+Requires-Dist: porringer-core>=0.0.0
+Requires-Dist: platformdirs>=3.10.0
+Requires-Dist: userpath>=1.9.1
+Requires-Dist: packaging>=23.1
+Description-Content-Type: text/markdown
+
+# Porringer
