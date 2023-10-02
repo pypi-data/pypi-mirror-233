@@ -1,0 +1,16 @@
+dicergirl/plugins/scp/__init__.py,sha256=rd4bFe-cZA0mx82MAbn6YiDxMjVn5TEwbBoI143BO3k,683
+dicergirl/plugins/scp/agent.py,sha256=yrtgEq-09Bk7SvMFtnxJ2EbGiU7WFjkxz2Ns5HgN6lQ,9191
+dicergirl/plugins/scp/attributes.py,sha256=3efUZeuI8EUEib5Gtv3FVihly61MLu99YIX_dJwNQls,7356
+dicergirl/plugins/scp/nbhandlers.py,sha256=CxoZBv0GYwDu7eeaSwTWLbKoZe6zY8A9UBcXHtJDZio,5209
+dicergirl/plugins/scp/scpcards.py,sha256=BTQ8IJ97OTPFw31yIN8gSfTxPs2faDytueNZPzpHg1U,109
+dicergirl/plugins/scp/scputils.py,sha256=hoqcll0pNtqvDmHQBxQsqG6n2Jb6HegvrzBfG-Zexks,13002
+dicergirl/scp/__init__.py,sha256=gDqcSCku4yPO9TBIf2ILgsPvprea-FYkFAPvGZCDtvM,683
+dicergirl/scp/agent.py,sha256=yrtgEq-09Bk7SvMFtnxJ2EbGiU7WFjkxz2Ns5HgN6lQ,9191
+dicergirl/scp/attributes.py,sha256=3efUZeuI8EUEib5Gtv3FVihly61MLu99YIX_dJwNQls,7356
+dicergirl/scp/nbhandlers.py,sha256=CxoZBv0GYwDu7eeaSwTWLbKoZe6zY8A9UBcXHtJDZio,5209
+dicergirl/scp/scpcards.py,sha256=BTQ8IJ97OTPFw31yIN8gSfTxPs2faDytueNZPzpHg1U,109
+dicergirl/scp/scputils.py,sha256=ALR9xxpuWVAeua44wCnlAdinilVQeoaNbZyabFR4Kws,12983
+dicergirl_plugin_scp-1.2.1.dist-info/METADATA,sha256=UzYbR0eeAlOGGUzVXCOzKLwdgCyiEoZpm2zXqnn4g2E,557
+dicergirl_plugin_scp-1.2.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+dicergirl_plugin_scp-1.2.1.dist-info/top_level.txt,sha256=6IQjIkhzNfgWRIZpWDup2GWb_eDA9MHWmg6lw_PCX84,10
+dicergirl_plugin_scp-1.2.1.dist-info/RECORD,,
