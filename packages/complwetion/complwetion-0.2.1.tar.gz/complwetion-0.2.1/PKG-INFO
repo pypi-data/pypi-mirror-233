@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: complwetion
+Version: 0.2.1
+Summary: Small helper library to build chat applications
+Home-page: https://github.com/gkteco/complwetion/tree/master
+Author: Gianni Crivello
+Author-email: gianni.crivello@techolution.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
+
+# complwetion
