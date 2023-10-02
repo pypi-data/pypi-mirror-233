@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+PlatitudeTerminal.egg-info/PKG-INFO
+PlatitudeTerminal.egg-info/SOURCES.txt
+PlatitudeTerminal.egg-info/dependency_links.txt
+PlatitudeTerminal.egg-info/entry_points.txt
+PlatitudeTerminal.egg-info/top_level.txt
+peregrine/__init__.py
+peregrine/cli.py
+peregrine/client.py
+peregrine/colorutils.py
+peregrine/errors.py
+peregrine/install.py
+peregrine/main.py
+peregrine/stateutils.py

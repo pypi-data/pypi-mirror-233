@@ -1,0 +1,27 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "PlatitudeTerminal"
+authors = [
+    {name = "Louis Smidt"}
+]
+readme = "README.md"
+requires-python = ">3.8"
+classifiers = []
+dynamic = ["version", "description", "entry-points", "scripts"]
+
+dependencies = [
+    "halo",
+    "typer>=0.7.0",
+    "python-dotenv>=1.0.0",
+    "Pyrebase4>=4.6.0",
+    "pyjwt>=2.0.1",
+    "keyring>=23.13.1",
+    "prompt-toolkit",
+    "packaging",
+    "requests==2.28.0",
+    "requests-toolbelt==0.10.1",
+    "charset-normalizer==2.0.12"
+]
