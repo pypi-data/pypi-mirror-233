@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cdk-opinionated-constructs
+Version: 3.2.0
+Summary: AWS CDK constructs come without added security configurations.
+License: MIT
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: aws-cdk-lib>=2.98.0
+Requires-Dist: constructs<11.0.0,>=10.2.69
+Requires-Dist: cdk-monitoring-constructs<7.0.0,>=6.0.0
+
+The idea behind this project is to create secured constructs from the start. 
+Supported constructs: ALB, ECR, LMB, NLB, S3, SNS, WAF, RDS
