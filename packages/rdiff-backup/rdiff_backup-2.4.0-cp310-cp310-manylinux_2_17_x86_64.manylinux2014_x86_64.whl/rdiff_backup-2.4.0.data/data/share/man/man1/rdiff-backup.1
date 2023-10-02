@@ -1,0 +1,1460 @@
+'\" t
+.\"     Title: rdiff-backup
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.12
+.\"      Date: October 2023
+.\"    Manual: Manual 2.4.0
+.\"    Source: rdiff-backup
+.\"  Language: English
+.\"
+.TH "RDIFF\-BACKUP" "1" "October 2023" "rdiff\-backup" "Manual 2.4.0"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NAME"
+rdiff\-backup \- local/remote mirror and incremental backup
+.SH "SYNOPSIS"
+.sp
+\fBrdiff\-backup\fP [options...] \fIaction\fP [\fIsub\-options\fP...] [\fIlocations\fP...]
+.br
+\fBrdiff\-backup\fP [\fB\-\-new\fP] [\fB\-h\fP|\fB\-\-help\fP|\fB\-V\fP|\fB\-\-version\fP]
+.SH "DESCRIPTION"
+.sp
+rdiff\-backup is a script, written in \fBpython\fP(1) that backs up one directory to another.
+The target directory ends up a copy (mirror) of the source directory, but extra reverse diffs are stored in a special sub\-directory of that target directory, so you can still recover files lost some time ago.
+The idea is to combine the best features of a mirror and an incremental backup.
+rdiff\-backup also preserves symlinks, special files, hardlinks, permissions, uid/gid ownership, and modification times.
+.sp
+rdiff\-backup can also operate in a bandwidth efficient manner over a pipe, like \fBrsync\fP(1).
+Thus you can use ssh and rdiff\-backup to securely back a hard drive up to a remote location, and only the differences will be transmitted.
+Using the default settings, rdiff\-backup requires that the remote system accept ssh connections, and that rdiff\-backup is installed in the user\(cqs PATH on the remote system.
+See the REMOTE OPERATION section for details.
+.sp
+Note that you should not write to the mirror directory except with rdiff\-backup.
+Many of the increments are stored as reverse diffs, so if you delete or modify a file, you may lose the ability to restore previous versions of that file.
+.sp
+Finally, this man page is intended more as a precise description of the behavior and syntax of rdiff\-backup.
+New users may want to check out the \fBexamples\fP file included in the rdiff\-backup distribution.
+.sp
+The rdiff\-backup commands knows four types of parameters
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+generic options valid for all actions,
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+one action out of \fBbackup\fP, \fBcalculate\fP, \fBcomplete\fP, \fBcompare\fP, \fBinfo\fP, \fBlist\fP, \fBregress\fP, \fBremove\fP, \fBrestore\fP, \fBserver\fP, \fBtest\fP, \fBverify\fP,
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+sub\-options applicable to each action specifically, even though some are common to multiple actions,
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 4.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 4." 4.2
+.\}
+zero, one, two or more location paths, either local or remote.
+.RE
+.SS "Generic options"
+.sp
+\-h, \-\-help
+.RS 4
+Prints brief usage information and exits.
+Add \fB\-\-new\fP to be sure to get this CLI description, and not the old one.
+Placed \fIafter\fP the action, outputs the action\(cqs specific help message.
+.RE
+.sp
+\-V, \-\-version
+.RS 4
+Prints the current version number and exits.
+.RE
+.sp
+\-\-api\-version \fIapiversion\fP
+.RS 4
+Sets the API version to the given integer between minimum and maximum versions as given by the \fBinfo\fP action.
+It is the responsibility of the user to make sure that this version is also supported by any server started by this client.
+.RE
+.sp
+\-\-chars\-to\-quote, \-\-override\-chars\-to\-quote \fIchars\fP
+.RS 4
+If the filesystem to which we are backing up is not case\-sensitive, automatic "quoting" of characters occurs.
+For example, a file \(aq\f(CRDeveloper.doc\fP\(aq will be converted into \(aq\f(CR;068eveloper.doc\fP\(aq.
+To quote other characters or force quoting, e.g.
+in case rdiff\-backup doesn\(cqt recognize a case\-insensitive file system, you need to specify this option.
+\fIchars\fP is a string of characters fit to be used in regexp square brackets (e.g.
+\(aq\f(CRA\-Z\fP\(aq as in \(aq\f(CR[A\-Z]\fP\(aq).
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Caution
+.ps -1
+.br
+.sp
+do NOT change the chars to quote within the same repository!
+Actually, you only need to set this parameter when creating a new backup repository.
+Do also NOT quote any character used by rdiff\-backup in \fBrdiff\-backup\-data\fP (any of \(aq\f(CRa\-z0\-9._\-\fP\(aq)!
+.sp .5v
+.RE
+.RE
+.sp
+\-\-current\-time \fIcurrenttime\fP
+.RS 4
+This option is useful mainly for testing.
+If set, rdiff\-backup will use it for the current time instead of consulting the clock.
+The argument is the number of seconds since the epoch.
+.RE
+.sp
+\-\-force
+.RS 4
+Authorize a more drastic modification of a directory than usual (for instance, when overwriting of a destination path, or when removing multiple sessions with \fBremove\fP).
+rdiff\-backup will generally tell you if it needs this.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Caution
+.ps -1
+.br
+.sp
+You can cause data loss if you mis\-use this option.
+Furthermore, do NOT use this option when doing a restore, as it will DELETE files, unless you absolutely know what you are doing.
+.sp .5v
+.RE
+.RE
+.sp
+\-\-fsync, \-\-no\-fsync
+.RS 4
+This will enable/disable issuing fsync from rdiff\-backup altogether.
+This option is designed to optimize performance on busy backup systems.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Caution
+.ps -1
+.br
+.sp
+This may render your backup unusable in case of filesystem failure.
+Default is hence for fsync to be enabled.
+.sp .5v
+.RE
+.RE
+.sp
+\-\-new, \-\-no\-new
+.RS 4
+enforce (or not) the usage of the new parameters.
+The default currently is to show the old usage, but this will change in the near future.
+.RE
+.sp
+\-\-null\-separator
+.RS 4
+Use nulls (\f(CR\(rs0\fP) instead of newlines (\f(CR\(rsn\fP) as line separators, which may help when dealing with filenames containing newlines.
+This affects the expected format of the files specified by the \fB\-\-{include|exclude}\-filelist[\-stdin]\fP switches as well as the format of the files statistics.
+.RE
+.sp
+\-\-parsable\-output
+.RS 4
+If set, rdiff\-backup\(cqs output will be tailored for easy parsing by computers, instead of convenience for humans.
+Currently this only applies when listing increments using the \fBlist increments\fP action, where the time will be given in seconds since the epoch.
+.RE
+.sp
+\-\-remote\-schema \fIremoteschema\fP
+.RS 4
+Specify an alternate method of connecting to a remote computer.
+This is necessary to get rdiff\-backup not to use ssh for remote backups, or if, for instance, rdiff\-backup is not in the PATH on the remote side.
+See the REMOTE OPERATION section for details.
+.RE
+.sp
+\-\-remote\-tempdir \fIdirpath\fP
+.RS 4
+use path as temporary directory on the remote side of the connection.
+If set explicitly, remember that "no space left" error messages \fImight\fP apply to this directory.
+.RE
+.sp
+\-\-ssh\-compression, \-\-no\-ssh\-compression
+.RS 4
+use SSH with or without compression with default remote\-schema.
+This option is ignored when using \fB\-\-remote\-schema\fP.
+Compression is on by default.
+.RE
+.sp
+\-\-tempdir \fIdirpath\fP
+.RS 4
+Sets the directory that rdiff\-backup uses for temporary files to the given path.
+The environment variables TMPDIR, TEMP, and TMP can also be used to set the temporary files directory.
+See the documentation of the Python tempfile module for more information.
+If set explicitly, remember that "no space left" error messages \fImight\fP apply to this directory.
+.RE
+.sp
+\-\-terminal\-verbosity {\fB0\fP,\fB1\fP,\fB2\fP,\fB3\fP,\fB4\fP,\fB5\fP,\fB6\fP,\fB7\fP,\fB8\fP,\fB9\fP}
+.RS 4
+select which verbosity to use for messages on the terminal, the default is given by \fB\-\-verbosity\fP.
+.RE
+.sp
+\-\-use\-compatible\-timestamps
+.RS 4
+Create timestamps in which the hour/minute/second separator is a \- (hyphen) instead of a : (colon).
+It is safe to use this option on one backup, and then not use it on another;
+rdiff\-backup supports the intermingling of different timestamp formats.
+This option is enabled by default on platforms which require that the colon be escaped.
+.RE
+.sp
+\-v, \-\-verbosity {\fB0\fP,\fB1\fP,\fB2\fP,\fB3\fP,\fB4\fP,\fB5\fP,\fB6\fP,\fB7\fP,\fB8\fP,\fB9\fP}
+.RS 4
+Specify verbosity level (0 is totally silent, 3 is the default, and 9 is noisiest).
+This determines how much is written to the log file, and without using \fB\-\-terminal\-verbosity\fP to the terminal..
+.RE
+.SS "Actions"
+.sp
+backup [CREATION OPTIONS] [COMPRESSION OPTIONS] [SELECTION OPTIONS] [FILESYSTEM OPTIONS] [USER GROUP OPTIONS] [STATISTICS OPTIONS] \fIsourcedir\fP \fItargetdir\fP
+.RS 4
+back\-up a source directory to a target backup repository.
+.RE
+.sp
+calculate [\-\-method \fBaverage\fP] \fIstatfile1\fP \fIstatfile2\fP [...]
+.RS 4
+calculate average across multiple statistics files
+.sp
+\-\-method \fBaverage\fP
+.RS 4
+there is currently only one method and it is the default, but it might change in the future.
+.RE
+.RE
+.sp
+complete [\-\-cword \fIindex\fP] [\-\-unique|\-\-no\-unique] \fB\-\-\fP \fIwords\fP [...]
+.RS 4
+outputs a list of fitting options given already entered parameters.
+This option is of no relevance to backup tasks, it is only to be used to support programmatic completion like in bash.
+See the documentation for more details if you plan to write your own completion code, e.g. for an alternative shell.
+.sp
+\-\-cword \fIindex\fP
+.RS 4
+index where the cursor currently is within the list of words.
+.RE
+.sp
+\-\-unique,\-\-no\-unique
+.RS 4
+should parameters already entered by the user be offered again, or not?
+.RE
+.RE
+.sp
+compare [SELECTION OPTIONS] [\-\-method \fImethod\fP] [\-\-at \fItime\fP] \fIsourcedir\fP \fItargetdir\fP
+.RS 4
+Compare a directory with the backup set at the given time.
+This can be useful to see how archived data differs from current data, or to check that a backup is current.
+.sp
+\-\-method \fImethod\fP
+.RS 4
+method used to compare can be either \fBmeta\fP, \fBfull\fP or \fBhash\fP, where the default is \fBmeta\fP, which is also how rdiff\-backup decides which file needs to be backed\-up.
+Note that with \fBfull\fP, the repository data will be copied in its entirety to the source side and compared byte by byte.
+This is the slowest but most complete compare method.
+With \fBhash\fP only the SHA1 checksum of regular files will be compared.
+With \fBmeta\fP only the metadata of files will be compared (name, size, date, type, etc).
+.RE
+.sp
+\-\-at \fItime\fP
+.RS 4
+at which \fItime\fP of the back\-up directory should the comparaison take place.
+The default is \fBnow\fP, meaning the latest version.
+See TIME FORMATS for details.
+.RE
+.RE
+.sp
+info
+.RS 4
+outputs information about the current system in YAML format, so that it can be used in a bug report, and exits.
+.RE
+.sp
+list \fBfiles\fP [\fB\-\-changed\-since\fP \fItime\fP|\fB\-\-at\fP \fItime\fP] \fIrepository\fP
+.RS 4
+list modified or existing files in a given back\-up repository.
+.sp
+\-\-changed\-since \fItime\fP
+.RS 4
+List the files that have changed in the destination directory
+since the given time. See TIME FORMATS for the format of time.
+If a directory in the archive is specified, list only the files
+under that directory. This option does not read the source
+directory; it is used to compare the contents of two different
+rdiff\-backup sessions.
+See TIME FORMATS for details.
+.RE
+.sp
+\-\-at \fItime\fP
+.RS 4
+List the files in the archive that were present at the given
+time. If a directory in the archive is specified, list only the
+files under that directory.
+See TIME FORMATS for details.
+.RE
+.RE
+.sp
+list \fBincrements\fP [\fB\-\-no\-size\fP|\fB\-\-size\fP] \fIrepository\fP
+.RS 4
+list increments with date in a given back\-up repository.
+.sp
+\-\-no\-size,\-\-size
+.RS 4
+Show or not the size of each increment in the repository. The default
+is to \fInot\fP show sizes. When showing sizes, it becomes allowable to
+specify a directory within a repository, then only the cumulated
+sizes of that directory will be shown.
+.RE
+.RE
+.sp
+regress [COMPRESSION OPTIONS] [USER GROUP OPTIONS] [TIMESTAMP OPTIONS] \fIrepository\fP
+.RS 4
+If an rdiff\-backup session fails, this action will undo the failed directory.
+This happens automatically if you attempt to back\-up to a directory and the last backup failed.
+You can use the \fB\-\-force\fP option to undo the last backup even if it wasn\(cqt failed (starting with API 201, use \fB\-\-api\-version\fP if necessary).
+.RE
+.sp
+remove \fBincrements\fP \fB\-\-older\-than\fP \fItime\fP [\fB\-\-size\fP] \fIrepository\fP
+.RS 4
+Remove the incremental backup information in the destination directory that has been around longer than the given time, or the oldest one if no time is provided.
+.sp
+By default, rdiff\-backup will only delete information from one session at a time.
+To remove two or more sessions at the same time, supply the \fB\-\-force\fP option (rdiff\-backup will tell you if it is required).
+.sp
+Note that snapshots of deleted files are covered by this operation.
+Thus if you deleted a file two weeks ago, backed up immediately afterwards, and then ran rdiff\-backup with \(aq\f(CRremove increments \-\-older\-than 10D\fP\(aq today, no trace of that file would remain.
+.sp
+\-\-older\-than \fItime\fP
+.RS 4
+all the increments older than the given time will be deleted.
+See TIME FORMATS for details.
+.RE
+.sp
+\-\-size
+.RS 4
+Show the size of each increment being removed.
+The default is to \fInot\fP show sizes.
+.RE
+.RE
+.sp
+restore [CREATION OPTIONS] [COMPRESSION OPTIONS] [SELECTION OPTIONS] [FILESYSTEM OPTIONS] [USER GROUP OPTIONS] [\fB\-\-at\fP \fItime\fP|\fB\-\-increment\fP] \fIsource\fP \fItargetdir\fP
+.RS 4
+restore a source backup repository at a specific time or a specific     source increment to a target directory.
+See RESTORING for details.
+.sp
+\-\-at \fItime\fP
+.RS 4
+the \fIsource\fP parameter is interpreted as a back\-up directory, and
+the content is restored from the given time.
+See TIME FORMATS for details.
+.RE
+.sp
+\-\-increment
+.RS 4
+the \fIsource\fP parameter is expected to be an increment within a
+back\-up repository, to be restored into the given target directory.
+.RE
+.RE
+.sp
+server [RESTRICT OPTIONS] [\fB\-\-debug\fP]
+.RS 4
+Enter server mode (not to be invoked directly, but instead used by another rdiff\-backup process on a remote computer).
+.sp
+\-\-debug
+.RS 4
+Start the server in debug mode so that it stops on an early breakpoint and can be remotely debugged using \c
+.URL "https://github.com/tamentis/rpdb" "rpdb" "."
+See the \c
+.URL "https://github.com/rdiff\-backup/rdiff\-backup/blob/master/docs/DEVELOP.adoc#debug\-client\-server\-mode" "developer\(cqs documentation" " "
+for details.
+.RE
+.RE
+.sp
+test \fIremote_location_1\fP [\fIremote_location_2\fP ...]
+.RS 4
+Test for the presence of a compatible rdiff\-backup server as specified in the remote location argument(s) (of which the filename section will be checked for existence).
+See the REMOTE OPERATION section for details.
+.RE
+.sp
+verify [\fB\-\-at\fP \fItime\fP] \fIlocation\fP
+.RS 4
+Check all the data in the repository at the given time by computing the SHA1 hash of all the regular files and comparing them with the hashes stored in the metadata file.
+.sp
+\-\-at \fItime\fP
+.RS 4
+the time of the data which needs to be verified.
+See TIME FORMATS for details.
+.RE
+.RE
+.SH "COMPRESSION OPTIONS"
+.sp
+\-\-compression, \-\-no\-compression
+.RS 4
+Enable or disable the default gzip compression of most of the \f(CR.snapshot\fP and \f(CR.diff\fP increment files stored in the \fBrdiff\-backup\-data\fP directory.
+A backup volume can contain compressed and uncompressed increments, so using this option inconsistently is fine.
+Default is to compress all files, except those excluded as noted below.
+.RE
+.sp
+\-\-not\-compressed\-regexp \fIregexp\fP
+.RS 4
+Do not compress increments based on files whose filenames match regexp.
+The default includes many common audiovisual and archive files, and may be found from the help.
+.RE
+.SH "CREATION OPTIONS"
+.sp
+\-\-create\-full\-path
+.RS 4
+Normally only the final directory of the destination path will be created if it does not exist.
+With this option, all missing directories on the destination path will be created.
+Use this option with care: if there is a typo in the remote path, the remote filesystem could fill up very quickly (by creating a duplicate backup tree).
+For this reason this option is primarily aimed at scripts which automate backups.
+.RE
+.SH "FILESYSTEM OPTIONS"
+.sp
+\-\-acls, \-\-no\-acls
+.RS 4
+enable/disable back\-up of Access Control Lists.
+.RE
+.sp
+\-\-carbonfile, \-\-no\-carbonfile
+.RS 4
+enable/disable back\-up of carbon files (MacOS X).
+.RE
+.sp
+\-\-eas, \-\-no\-eas
+.RS 4
+enable/disable back\-up of Extended Attributes.
+.RE
+.sp
+\-\-resource\-forks, \-\-no\-resource\-forks
+.RS 4
+enable/disable back\-up of resource forks (MacOS X).
+.RE
+.sp
+\-\-hard\-links, \-\-no\-hard\-links
+.RS 4
+do (or not) keep hard\-link relationships between files.
+Disabling hard\-links generally increases the disk space usage but decreases memory usage.
+Hard\-links are disabled by default if the backup source or restore destination is running on native Windows.
+.RE
+.sp
+\-\-compare\-inode, \-\-no\-compare\-inode
+.RS 4
+This option prevents rdiff\-backup from flagging a hardlinked file as changed when its device number and/or inode changes.
+This option is useful in situations where the source filesystem lacks persistent device and/or inode numbering.
+For example, network filesystems may have mount\-to\-mount differences in their device number (but possibly stable inode numbers);
+USB/1394 devices may come up at different device numbers each remount (but would generally have same inode number);
+and there are filesystems which don\(cqt even have the same inode numbers from use to use.
+Without the option rdiff\-backup may generate unnecessary numbers of tiny diff files.
+.RE
+.sp
+\-\-never\-drop\-acls
+.RS 4
+Exit with error instead of dropping ACLs or ACL entries.
+Normally this may happen (with a warning) because the destination does not support them or because the relevant user/group names do not exist on the destination side.
+.RE
+.SH "RESTRICT OPTIONS"
+.sp
+\-\-restrict\-path \fIdirpath\fP
+.RS 4
+Require that all file access be inside the given path.
+This switch, and \fB\-\-restrict\-mode\fP, are intended to be used with the \fBserver\fP action to provide a bit more protection when doing automated remote backups.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Caution
+.ps -1
+.br
+.sp
+Those options are \fInot\fP intended as your only line of defense so please don\(cqt do something silly like allow public access to an rdiff\-backup server run with \fB\-\-restrict\-mode read\-only\fP.
+.sp .5v
+.RE
+.RE
+.sp
+\-\-restrict\-mode {\fBread\-write\fP,\fBread\-only\fP,\fBupdate\-only\fP}
+.RS 4
+restriction mode for the directory given by \fB\-\-restrict\-path\fP, either full access (aka read\-write), read\-only, or only to update incrementally an already existing back\-up (default is \fBread\-write\fP).
+.RE
+.SH "SELECTION OPTIONS"
+.sp
+This section only quickly lists the existing options, the section FILE SELECTION explains those more in details.
+.SS "Globs, Regex, File lists selection"
+.sp
+\-\-include,\-\-exclude \fIglob\fP
+.RS 4
+Include/exclude the file or files matched by \fIglob\fP (also known as shell pattern).
+If a directory is excluded, then files under that directory will also be excluded.
+.RE
+.sp
+\-\-include\-globbing\-filelist,\-\-exclude\-globbing\-filelist \fIglobsfile\fP
+.RS 4
+Include/exclude according to the listed globs, similar to \fB\-\-include\fP or \fB\-\-exclude\fP.
+.RE
+.sp
+\-\-include\-globbing\-filelist\-stdin,\-\-exclude\-globbing\-filelist\-stdin
+.RS 4
+Like the previous option but the list of globs is coming from standard input.
+.RE
+.sp
+\-\-include\-regexp,\-\-exclude\-regexp \fIregexp\fP
+.RS 4
+Include/exclude files matching the given regexp (according to Python rules).
+.RE
+.sp
+\-\-include\-filelist,\-\-exclude\-filelist \fIlistfile\fP
+.RS 4
+Include/exclude the files listed in \fIfilelist\fP.
+This is a best fit for an automatically generated list of files, else use globbing.
+.RE
+.sp
+\-\-include\-filelist\-stdin,\-\-exclude\-filelist\-stdin
+.RS 4
+Like the previous but the filelist is coming from standard input.
+.RE
+.SS "Special files selection"
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Note
+.ps -1
+.br
+.sp
+All special files are included by default, so that including them explicitly isn\(cqt generally required.
+Exceptions are described.
+.sp .5v
+.RE
+.sp
+\-\-include\-device\-files,\-\-exclude\-device\-files
+.RS 4
+Include/exclude all device files.
+This can be useful for security/permissions reasons or if rdiff\-backup is not handling device files correctly.
+.RE
+.sp
+\-\-include\-fifos,\-\-exclude\-fifos
+.RS 4
+Include/exclude all fifo files.
+.RE
+.sp
+\-\-include\-sockets,\-\-exclude\-sockets
+.RS 4
+Include/exclude all socket files.
+.RE
+.sp
+\-\-include\-symbolic\-links,\-\-exclude\-symbolic\-links
+.RS 4
+Include/exclude all symbolic links.
+Contrary to the general rule, symlinks are excluded by default under Windows so that NTFS reparse points aren\(cqt backed\-up.
+.RE
+.sp
+\-\-include\-special\-files,\-\-exclude\-special\-files
+.RS 4
+Include/exclude all the special files listed above.
+.RE
+.SS "Other selections"
+.sp
+\-\-include\-other\-filesystems,\-\-exclude\-other\-filesystems
+.RS 4
+Include/exclude files on file systems (identified by device number) other than the file system the root of the source directory is on.
+The default is to include other filesystems.
+.RE
+.sp
+\-\-include\-if\-present,\-\-exclude\-if\-present \fIfilename\fP
+.RS 4
+Include/exclude directories if they contain the given \fIfilename\fP.
+Files directly in an included directory are also considered included.
+This doesn\(cqt apply recursively though so that the \fIfilename\fP must be present in \fIall\fP directories of a hierarchy for it to be fully included.
+.RE
+.sp
+\-\-max\-file\-size \fIsizeinbytes\fP
+.RS 4
+Exclude files that are larger than the given size in bytes.
+.RE
+.sp
+\-\-min\-file\-size \fIsizeinbytes\fP
+.RS 4
+Exclude files that are smaller than the given size in bytes.
+.RE
+.SH "STATISTICS OPTIONS"
+.sp
+\-\-file\-statistics, \-\-no\-file\-statistics
+.RS 4
+Enable/disable writing to the \(aq\f(CRfile_statistics\fP\(aq file in the \fBrdiff\-backup\-data\fP directory.
+rdiff\-backup will run slightly quicker and take up a bit less space.
+Default is to write the statistics file(s).
+.sp
+See the FILES section for more information about statistics files.
+.RE
+.sp
+\-\-no\-print\-statistics, \-\-print\-statistics
+.RS 4
+Summary statistics will be printed (or not) after a successful backup.
+Even if disabled (the default), this information will still be available from the session statistics file.
+.RE
+.SH "TIMESTAMP OPTIONS"
+.sp
+\-\-allow\-duplicate\-timestamps
+.RS 4
+This option is only to be used if you encounter the issue of metadata mirrors with the same timestamp.
+In such cases, you may use this flag to first recover from the failed backup with something like
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup regress \-\-allow\-duplicate\-timestamps {targetdir}
+.fam
+.fi
+.if n .RE
+.sp
+after which you will need to remove those old duplicate entries using the \fBremove increments\fP action.
+.RE
+.SH "USER GROUP OPTIONS"
+.sp
+See the USERS AND GROUPS section for more information.
+.sp
+\-\-group\-mapping\-file \fImapfile\fP
+.RS 4
+Map group names and IDs according to the group mapping file \fImapfile\fP.
+.RE
+.sp
+\-\-user\-mapping\-file \fImapfile\fP
+.RS 4
+Map user names and IDs according to the user mapping file \fImapfile\fP.
+.RE
+.sp
+\-\-preserve\-numerical\-ids
+.RS 4
+If set, rdiff\-backup will preserve uids/gids instead of trying to preserve unames and gnames.
+.RE
+.SH "RESTORING"
+.sp
+There are two ways to tell rdiff\-backup to restore a file or directory:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+you can run rdiff\-backup \fBrestore\fP on a mirror file and define a time from which to restore (by default the latest one).
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+you can run the \fBrestore\fP action on an increment file with the sub\-option \fB\-\-increment\fP.
+.RE
+.sp
+For example, suppose in the past you have run:
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup backup /usr /usr.backup
+.fam
+.fi
+.if n .RE
+.sp
+to back up the \(aq\f(CR/usr\fP\(aq directory into the \(aq\f(CR/usr.backup\fP\(aq directory, and now want a copy of the \(aq\f(CR/usr/local\fP\(aq directory the way it was 3 days ago placed at \(aq\f(CR/usr/local.old\fP\(aq.
+.sp
+One way to do this is to run:
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup restore \-\-at 3D /usr.backup/local /usr/local.old
+.fam
+.fi
+.if n .RE
+.sp
+here above the \(aq\f(CR3D\fP\(aq means 3 days (for other ways to specify the time, see the TIME FORMATS section).
+The \(aq\f(CR/usr.backup/local\fP\(aq directory was selected, because that is the directory containing the current version of \(aq\f(CRusr/local\fP\(aq.
+.sp
+Note that the parameter of \fB\-\-at\fP always specifies an exact time.
+(So \(aq\f(CR3D\fP\(aq refers to the moment 72 hours before the present).
+If there was no backup made at that time, rdiff\-backup restores the state recorded for the previous backup.
+For instance, in the above case, if \(aq\f(CR3D\fP\(aq is used, and there are only backups from 2 days and 4 days ago, \(aq\f(CR/usr/local\fP\(aq as it was 4 days ago will be restored.
+.sp
+The second way to restore files involves finding the corresponding increment file.
+It would be in the \(aq\f(CR/backup/rdiff\-backup\-data/increments/usr\fP\(aq directory, and its name would be something like \(aq\f(CRlocal.2002\-11\-09T12:43:53\-04:00.dir\fP\(aq where the time indicates it is from 3 days ago.
+Note that the increment files all end in \(aq\f(CR.diff\fP\(aq, \(aq\f(CR.snapshot\fP\(aq, \(aq\f(CR.dir\fP\(aq, or \(aq\f(CR.missing\fP\(aq, where \(aq\f(CR.missing\fP\(aq just means that the file didn\(cqt exist at that time (finally, some of these may be gzip\-compressed, and have an extra \(aq\f(CR.gz\fP\(aq to indicate this).
+Then running:
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup restore \-\-increment \(rs
+    /backup/rdiff\-backup\-data/increments/usr/local.{time}.dir \(rs
+    /usr/local.old
+.fam
+.fi
+.if n .RE
+.sp
+would also restore the file as desired.
+.sp
+If you are not sure exactly which version of a file you need, it is probably easiest to either restore from the increments files as described immediately above, or to see which increments are available with \(aq\f(CRlist increments\fP\(aq, and then specify an exact time with \fB\-\-at\fP.
+.SH "TIME FORMATS"
+.sp
+rdiff\-backup uses time strings in two places.
+.sp
+Firstly, all of the increment files rdiff\-backup creates will have the time in their filenames in the w3 datetime format as described in a w3 note at \c
+.URL "https://www.w3.org/TR/NOTE\-datetime" "" "."
+Basically they look like \(aq\f(CR2001\-07\-15T04:09:38\-07:00\fP\(aq, which is basically "{Year}\-{Month}\-{Day}T{Hours}:{Minutes}:{Seconds}{Timezone}", the time zone being 7 hours \fIbehind\fP UTC in this example (hence the minus).
+.sp
+Secondly, the \fB\-\-at\fP, \fB\-\-changed\-since\fP, \fB\-\-older\-than\fP options take a time string, which can be given in any of several formats:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+the string \(aq\f(CRnow\fP\(aq (refers to the current time)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+a sequences of digits, like \(aq\f(CR123456890\fP\(aq (indicating the time in seconds after the epoch)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+A string like \(aq\f(CR2002\-01\-25T07:00:00+02:00\fP\(aq in datetime format
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 4.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 4." 4.2
+.\}
+An interval, which is a number followed by one of the characters s, m, h, D, W, M, or Y (indicating seconds, minutes, hours, days, weeks, months, or years respectively), or a series of such pairs.
+In this case the string refers to the time that preceded the current time by the length of the interval.
+For instance, \(aq\f(CR1h78m"\fP\(aq indicates the time that was one hour and 78 minutes ago.
+The calendar here is unsophisticated: a month is always 30 days, a year is always 365 days, and a day is always 86400 seconds.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 5.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 5." 4.2
+.\}
+A date format of the form "YYYY/MM/DD", "YYYY\-MM\-DD", "MM/DD/YYYY", or "MM\-DD\-YYYY", which indicates midnight on the day in question, relative to the current timezone settings.
+For instance, \(aq\f(CR2002/3/5\fP\(aq, \(aq\f(CR03\-05\-2002\fP\(aq, and \(aq\f(CR2002\-3\-05\fP\(aq all mean March 5th, 2002 (needless to say that starting with the year is less confusing for non\-Americans).
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 6.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 6." 4.2
+.\}
+A backup session specification which is a non\-negative integer followed by \(aq\f(CRB\fP\(aq.
+For instance, \(aq\f(CR0B\fP\(aq specifies the time of the current mirror, and \(aq\f(CR3B\fP\(aq specifies the time of the 3rd newest increment.
+.RE
+.SH "REMOTE OPERATION"
+.sp
+In order to access remote files, rdiff\-backup opens up a pipe to a copy of rdiff\-backup running on the remote machine.
+Thus rdiff\-backup must be installed on both ends.
+To open this pipe, rdiff\-backup first splits the location into \(aq\f(CRhost_info::pathname\fP\(aq.
+It then substitutes \(aq\f(CRhost_info\fP\(aq into the remote schema, and runs the resulting command, reading its input and output.
+.sp
+The \(aq\f(CRhost_info\fP\(aq can be anything understood as a destination by your version of SSH.
+Assuming it is the standard OpenSSH, it can be:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+either \(aq\f(CR[user@]hostname\fP\(aq
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+or a URI of the form \(aq\f(CRssh://[user@]hostname[:port]\fP\(aq.
+.RE
+.sp
+The default remote schema is \(aq\f(CRssh \-C {h} rdiff\-backup \-\-server\fP\(aq where \(aq\f(CRhost_info\fP\(aq is substituted for \(aq\f(CR{h}\fP\(aq.
+So if the \(aq\f(CRhost_info\fP\(aq is \(aq\f(CRuser@host.net\fP\(aq, then rdiff\-backup runs \(aq\f(CRssh \c
+.MTO "user\(athost.net" "" " "
+rdiff\-backup \-\-server\fP\(aq.
+Using \fB\-\-remote\-schema\fP, rdiff\-backup can invoke an arbitrary command in order to open up a remote pipe.
+For instance,
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup \-\-remote\-schema \(aqcd /usr; {h}\(aq backup \(rs
+                    foo \(aqrdiff\-backup server\(aq::bar
+.fam
+.fi
+.if n .RE
+.sp
+is basically equivalent to (but slower than)
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup backup foo /usr/bar
+.fam
+.fi
+.if n .RE
+.sp
+Concerning quoting, if for some reason you need to put two consecutive colons in the \(aq\f(CRhost_info\fP\(aq section of a \(aq\f(CRhost_info::pathname\fP\(aq argument, or in the pathname of a local file, you can quote one of them by prepending a backslash.
+So in \(aq\f(CRa\(rs::b::c\fP\(aq, \(aq\f(CRhost_info\fP\(aq is \(aq\f(CRa::b\fP\(aq and the pathname is \(aq\f(CRc\fP\(aq.
+Similarly, if you want to refer to a local file whose filename contains two consecutive colons, like \(aq\f(CRstrange::file\fP\(aq, you\(cqll have to quote one of the colons as in \(aq\f(CRstrange\(rs::file\fP\(aq.
+Because the backslash is a quote character in these circumstances, it too must be quoted to get a literal backslash, so \(aq\f(CRfoo\(rs::\(rs\(rsbar\fP\(aq evaluates to \(aq\f(CRfoo::\(rsbar\fP\(aq.
+To make things more complicated, because the backslash is also a common shell quoting character, you may need to type in \(aq\f(CR\(rs\(rs\(rs\(rs\fP\(aq at the shell prompt to get a literal backslash.
+.sp
+You may also use the placehoders \(aq\f(CR{Vx}\fP\(aq, \(aq\f(CR{Vy}\fP\(aq and \(aq\f(CR{Vz}\fP\(aq for the \(aq\f(CRx.y.z\fP\(aq version of rdiff\-backup, so that you can have multiple versions of rdiff\-backup installed on the server, and automatically targeted from the client.
+.sp
+For example, if you have rdiff\-backup 2.1.5 and 2.2.1 installed in virtual environments on the server, respectively under \(aq\f(CR/usr/local/lib/rdiff\-backup\-2.0\fP\(aq and \(aq\f(CR/usr/local/lib/rdiff\-backup\-2.1\fP\(aq (we assume that the z\-Version isn\(cqt relevant to any kind of compatibility), then the client may be called with the following remote schema:
+.sp
+.if n .RS 4
+.nf
+.fam C
+ssh \-C {h} /usr/local/lib/rdiff\-backup\-{Vx}.{Vy} \-\-server
+.fam
+.fi
+.if n .RE
+.sp
+The client will then use the correct version of rdiff\-backup based on its own version \(aq\f(CRx.y.z\fP\(aq.
+You\(cqll find more explanations in the \fBmigration\fP file in the documentation.
+.sp
+If you need to include a literal \(aq\f(CR%\fP\(aq in the string specified by \fB\-\-remote\-schema\fP, quote it with another \(aq\f(CR%\fP\(aq, as in \(aq\f(CR%%\fP\(aq (this is due to the compatibility with the deprecated host placeholder \(aq\f(CR%s\fP\(aq, which you shouldn\(cqt use anymore).
+.sp
+And finally, if you need to include literal \(aq\f(CR{ }\fP\(aq (curly braces) in the the string specified by \fB\-\-remote\-schema\fP, quote them (both) by doubling each of them up, as in \(aq\f(CR{{ foo=0; }}\fP\(aq.
+.sp
+Although ssh itself may be secure, using rdiff\-backup in the default way presents some security risks.
+For instance if the server is run as root, then an attacker who compromised the client could then use rdiff\-backup to overwrite arbitrary server files by "backing up" over them.
+Such a setup can be made more secure by using the sshd configuration option \(aq\f(CRcommand="rdiff\-backup server"\fP\(aq possibly along with the \fB\-\-restrict\-path\fP and \fB\-\-restrict\-mode\fP options to rdiff\-backup.
+For more information, see the web page, the wiki, and the entries for those options on this man page.
+.SH "FILE SELECTION"
+.sp
+rdiff\-backup has a number of file selection options.
+When rdiff\-backup is run, it searches through the given source directory and backs up all the files matching the specified options.
+This selection system may appear complicated, but it is supposed to be flexible and easy\-to\-use.
+If you just want to learn the basics, first look at the selection examples in the \fBexamples\fP file included in the package, or on the web at \c
+.URL "https://rdiff\-backup.net/examples.html" "" "."
+.sp
+rdiff\-backup\(cqs selection system was originally inspired by \fBrsync\fP(1), but there are many differences.
+For instance, trailing backslashes have no special significance.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Important
+.ps -1
+.br
+.sp
+include and exclude patterns under Windows solely support slashes \(aq\f(CR/\fP\(aq as file separators, given that backslashes \(aq\f(CR\(rs\fP\(aq have a special meaning in regex/glob patterns.
+.sp .5v
+.RE
+.sp
+All the available file selection conditions are listed under SELECTION OPTIONS.
+.sp
+Two principles need to be understood before really starting:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+pattern matching is stupid about paths, it just does pattern matching and can\(cqt interpret patterns like path, especially it can\(cqt resolve absolute into relative paths and vice\-versa (compare with the \(aq\f(CR\-path\fP\(aq option of find).
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+pattern matching is done on the complete path of each found file (no partial matching and no file name matching).
+Beware that complete path does \fInot\fP mean full path, it can be a complete relative path.
+.RE
+.sp
+For example, the pattern \(aq\f(CRbar\fP\(aq matches the path \(aq\f(CRbar\fP\(aq, but doesn\(cqt match the path \(aq\f(CRfoo/bar\fP\(aq and neither the path \(aq\f(CR./bar\fP\(aq.
+Both are matched by the pattern \(aq\f(CR*/bar\fP\(aq, as well as by \(aq\f(CR**/bar\fP\(aq.
+This last pattern would match any path containing the file \(aq\f(CRbar\fP\(aq, e.g.
+\(aq\f(CRfoo/boz/bar\fP\(aq.
+.sp
+Each file selection condition either matches or doesn\(cqt match a given file.
+A given file is excluded by the file selection system exactly when the first matching file selection condition specifies that the file be excluded;
+otherwise the file is included.
+When backing up, if a file is excluded, rdiff\-backup acts as if that file does not exist in the source directory.
+When restoring, an excluded file is considered not to exist in either the source or target directories.
+.sp
+For instance,
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup backup \-\-include /usr \(rs
+                    \-\-exclude /usr /usr /backup
+.fam
+.fi
+.if n .RE
+.sp
+is exactly the same as
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup backup /usr /backup
+.fam
+.fi
+.if n .RE
+.sp
+because the include and exclude directives match exactly the same files, and the \fB\-\-include\fP comes first, giving it precedence.
+Similarly,
+.sp
+.if n .RS 4
+.nf
+.fam C
+rdiff\-backup backup \-\-include /usr/local/bin \(rs
+                    \-\-exclude /usr/local /usr /backup
+.fam
+.fi
+.if n .RE
+.sp
+would backup the \(aq\f(CR/usr/local/bin\fP\(aq directory (and its contents), but not \(aq\f(CR/usr/local/doc\fP\(aq.
+.sp
+The include, exclude, include\-globbing\-filelist, and exclude\-globbing\-filelist options accept extended shell globbing patterns.
+These patterns can contain the special patterns \(aq\f(CR*\fP\(aq, \(aq\f(CR**\fP\(aq, \(aq\f(CR?\fP\(aq, and \(aq\f(CR[...]\fP\(aq.
+As in a normal shell, \(aq\f(CR*\fP\(aq can be expanded to any string of characters not containing \(aq\f(CR/\fP\(aq, \(aq\f(CR?\fP\(aq expands to any character except \(aq\f(CR/\fP\(aq, and \(aq\f(CR[...]\fP\(aq expands to a single character of those characters specified (ranges are acceptable).
+The new special pattern, \(aq\f(CR**\fP\(aq, expands to any string of characters whether or not it contains \(aq\f(CR/\fP\(aq.
+Furthermore, if the pattern starts with \(aq\f(CRignorecase:\fP\(aq (case insensitive), then this prefix will be removed and any character in the string can be replaced with an upper or lowercase version of itself.
+.sp
+If you need to match filenames which contain the above globbing characters, they may be escaped using a backslash \(aq\f(CR\(rs\fP\(aq.
+The backslash will only escape the character following it so for \(aq\f(CR**\fP\(aq you will need to use \(aq\f(CR\(rs*\(rs*\fP\(aq to avoid escaping it to the \(aq\f(CR*\fP\(aq globbing character.
+.sp
+Remember that you may need to quote these characters when typing them into a shell, so the shell does not interpret the globbing patterns before rdiff\-backup sees them.
+.sp
+The \fB\-\-exclude\fP \fIpattern\fP option matches a file if and only if:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+pattern can be expanded into the file\(cqs filename, or
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+the file is inside a directory matched by the option.
+.RE
+.sp
+Conversely, \fB\-\-include\fP \fIpattern\fP matches a file if and only if:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+pattern can be expanded into the file\(cqs filename,
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+the file is inside a directory matched by the option, or
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+the file is a directory which contains a file matched by  the option.
+.RE
+.sp
+For example,
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-exclude /usr/local
+.fam
+.fi
+.if n .RE
+.sp
+matches \(aq\f(CR/usr/local\fP\(aq, \(aq\f(CR/usr/local/lib\fP\(aq, and \(aq\f(CR/usr/local/lib/netscape\fP\(aq.
+It is the same as
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-exclude /usr/local \-\-exclude \(aq/usr/local/**\(aq
+.fam
+.fi
+.if n .RE
+.sp
+And similarly:
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-include /usr/local
+.fam
+.fi
+.if n .RE
+.sp
+specifies that \(aq\f(CR/usr\fP\(aq, \(aq\f(CR/usr/local\fP\(aq, \(aq\f(CR/usr/local/lib\fP\(aq, and \(aq\f(CR/usr/local/lib/netscape\fP\(aq (but not \(aq\f(CR/usr/doc\fP\(aq) all be backed up.
+Thus you don\(cqt have to worry about including parent directories to make sure that included subdirectories have somewhere to go.
+Finally,
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-include ignorecase:\(aq/usr/[a\-z0\-9]foo/*/**.py\(aq
+.fam
+.fi
+.if n .RE
+.sp
+would match a file like \(aq\f(CR/usr/5fOO/hello/there/world.py\fP\(aq.
+If it did match anything, it would also match \(aq\f(CR/usr\fP\(aq.
+If there is no existing file that the given pattern can be expanded into, the option will not match \(aq\f(CR/usr\fP\(aq.
+.sp
+The \fB\-\-include\-filelist\fP, \fB\-\-exclude\-filelist\fP, \fB\-\-include\-filelist\-stdin\fP, and \fB\-\-exclude\-filelist\-stdin\fP options also introduce file selection conditions.
+They direct rdiff\-backup to read in a file, each line of which is a file specification, and to include or exclude the matching files.
+Lines are separated by newlines or nulls, depending on whether the \fB\-\-null\-separator\fP switch was given.
+Each line in a filelist is interpreted similarly to the way extended shell patterns are, with a few exceptions:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+Globbing patterns like \(aq\f(CR*\fP\(aq, \(aq\f(CR**\fP\(aq, \(aq\f(CR?\fP\(aq, and \(aq\f(CR[...]\fP\(aq are not expanded.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+Include patterns do not match files in a directory that is included.
+So \(aq\f(CR/usr/local\fP\(aq in an include file will not match \(aq\f(CR/usr/local/doc\fP\(aq.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+Lines starting with \(aq\f(CR+ [...]\fP\(aq (plus followed by a space) are interpreted as include directives, even if found in a filelist referenced by \fB\-\-exclude\-filelist\fP.
+Similarly, lines starting with \(aq\f(CR\- [...]\fP\(aq (minus followed by a space) exclude files even if they are found within an include filelist.
+.RE
+.sp
+For example, if the file \(aq\f(CRlist.txt\fP\(aq contains the lines:
+.sp
+.if n .RS 4
+.nf
+.fam C
+/usr/local
+\- /usr/local/doc
+/usr/local/bin
++ /var
+\- /var
+.fam
+.fi
+.if n .RE
+.sp
+then \(aq\f(CR\-\-include\-filelist list.txt\fP\(aq would include \(aq\f(CR/usr\fP\(aq, \(aq\f(CR/usr/local\fP\(aq, and \(aq\f(CR/usr/local/bin\fP\(aq.
+It would exclude \(aq\f(CR/usr/local/doc\fP\(aq, \(aq\f(CR/usr/local/doc/python\fP\(aq, etc.
+It neither excludes nor includes \(aq\f(CR/usr/local/man\fP\(aq, leaving the fate of this directory to the next specification condition.
+Finally, it is undefined what happens with \f(CR\(aq/var\fP\(aq.
+A single file list should not contain conflicting file specifications.
+.sp
+The \fB\-\-include\-globbing\-filelist\fP and \fB\-\-exclude\-globbing\-filelist\fP options also specify filelists, but each line in the filelist will be interpreted as a globbing pattern the way \fB\-\-include\fP and \fB\-\-exclude\fP options are interpreted (although \(aq\f(CR+ \fP\(aq and \(aq\f(CR\- \fP\(aq prefixing is still allowed).
+For instance, if the file \(aq\f(CRglobbing\-list.txt\fP\(aq contains the lines:
+.sp
+.if n .RS 4
+.nf
+.fam C
+dir/foo
+.fam
+.fi
+.if n .RE
+.sp
+Then \(aq\f(CR\-\-include\-globbing\-filelist globbing\-list.txt\fP\(aq would be exactly the same as specifying on the command line:
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-include dir/foo \-\-include dir/bar \-\-exclude **
+.fam
+.fi
+.if n .RE
+.sp
+Finally, the \fB\-\-include\-regexp\fP and \fB\-\-exclude\-regexp\fP allow files to be included and excluded if their filenames match a python regular expression.
+Regular expression syntax is too complicated to explain here, but is covered in Python\(cqs library reference.
+Unlike the \fB\-\-include\fP and \fB\-\-exclude\fP options, the regular expression options don\(cqt match files containing or contained in matched files.
+So for instance
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-include \(aq[0\-9]{7}(?!foo)\(aq
+.fam
+.fi
+.if n .RE
+.sp
+matches any files whose full pathnames contain 7 consecutive digits which aren\(cqt followed by \(aqfoo\(aq.
+However, it wouldn\(cqt match \(aq\f(CR/home\fP\(aq even if \(aq\f(CR/home/ben/1234567\fP\(aq existed.
+.SH "USERS AND GROUPS"
+.sp
+There can be complications preserving ownership across systems.
+For instance the username that owns a file on the source system may not exist on the destination.
+Here is how rdiff\-backup maps ownership on the source to the destination (or vice\-versa, in the case of restoring):
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+If the \fB\-\-preserve\-numerical\-ids\fP option is given, the remote files will always have the same uid and gid, both for ownership and ACL entries.
+This may cause unames and gnames to change.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+Otherwise, attempt to preserve the user and group names for ownership and in ACLs.
+This may result in files having different uids and gids across systems.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+If a name cannot be preserved (e.g.
+because the username does not exist), preserve the original id, but only in cases of user and group ownership.
+For ACLs, omit any entry that has a bad user or group name.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 4.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 4." 4.2
+.\}
+The \fB\-\-user\-mapping\-file\fP and \fB\-\-group\-mapping\-file\fP options override this behavior.
+If either of these options is given, the policy described in 2 and 3 above will be followed, but with the mapped user and group instead of the original.
+If you specify both \fB\-\-preserve\-numerical\-ids\fP and one of the mapping options, the behavior is undefined.
+.RE
+.sp
+The user and group mapping files both have the same format:
+.sp
+.if n .RS 4
+.nf
+.fam C
+old_name_or_id1:new_name_or_id1
+old_name_or_id2:new_name_or_id2
+[...etc...]
+.fam
+.fi
+.if n .RE
+.sp
+Each line should contain a name or id, followed by a colon \(aq\f(CR:\fP\(aq, followed by another name or id.
+If a name or id is not listed, they are treated in the default way described above.
+.sp
+When restoring, the above behavior is also followed, but note that the original source user/group information will be the input, not the already mapped user/group information present in the backup repository.
+For instance, suppose you have mapped all the files owned by alice in the source so that they are owned by ben in the repository, and now you want to restore, making sure the files owned originally by alice are still owned by alice.
+In this case there is no need to use any of the mapping options.
+However, if you wanted to restore the files so that the files originally owned by alice on the source are now owned by ben, you would have to use the mapping options, even though you just want the unames of the repository\(cqs files preserved in the restored files.
+.sp
+See USER GROUP OPTIONS for a list and description of related options.
+.SH "FILES"
+.sp
+\fIany\-config\-file\fP
+.RS 4
+you can create a file with one option/action/sub\-option per line and use it on the command line with an at sign prefix like \fI@any\-config\-file\fP and its content will be interpreted as if given on the command line.
+.sp
+For example, creating a file \(aq\f(CRmybackup\fP\(aq with following content:
+.sp
+.if n .RS 4
+.nf
+.fam C
+\-\-verbosity
+5
+backup
+source_dir
+target_dir
+.fam
+.fi
+.if n .RE
+.sp
+and calling \(aq\f(CRrdiff\-backup @mybackup\fP\(aq will be the same as calling \(aq\f(CRrdiff\-backup \-\-verbosity 5 backup source_dir target_dir\fP\(aq.
+.RE
+.sp
+\fBsession_statistics\fP, \fBfile_statistics\fP
+.RS 4
+Every session rdiff\-backup saves various statistics into two files, the session statistics file at \(aq\f(CRrdiff\-backup\-data/session_statistics.{datetime}.data\fP\(aq and the files statistics at \(aq\f(CRrdiff\-backup\-data/directory_statistics.{datetime}.data\fP\(aq.
+They are both text files and contain similar information: how many files changed, how many were deleted, the total size of increment files created, etc.
+However, the session statistics file is intended to be very readable and only describes the session as a whole.
+The files statistics file is more compact (and slightly less readable) but describes every directory backed up.
+It also may be compressed to save space.
+.sp
+See also STATISTICS OPTIONS and the \fB\-\-null\-separator\fP option.
+.RE
+.sp
+\fBbackup.log\fP, \fBrestore.log\fP, \fBerror_log\fP
+.RS 4
+rdiff\-backup will save various messages to the log file, which is \(aq\f(CRrdiff\-backup\-data/backup.log\fP\(aq for backup sessions and \(aq\f(CRrdiff\-backup\-data/restore.log\fP\(aq for restore sessions.
+Generally what is written to this file will coincide with the messages displayed to stdout or stderr, although this can be changed with the \fB\-\-terminal\-verbosity\fP option.
+.sp
+Errors during backup are also written to a file \(aq\f(CRrdiff\-backup\-data/error_log.{datetime}.data\fP\(aq.
+.sp
+The log files are not compressed and can become quite large if rdiff\-backup is run with high verbosity.
+.RE
+.SH "ENVIRONMENT"
+.sp
+RDIFF_BACKUP_VERBOSITY=\fI[0\-9]\fP
+.RS 4
+the default verbosity for log file and terminal, can be overwritten by the corresponding options \fB\-v/\-\-verbosity\fP and \fB\-\-terminal\-verbosity\fP.
+.RE
+.sp
+RDIFF_BACKUP_DEBUG=[\fIaddress\fP][:\fIport\fP]
+.RS 4
+set a non\-default listening address and/or port (default is \f(CR127.0.0.1:4444\fP) for  rpdb.
+Valid values are \fIaddress\fP, \fIaddress:port\fP or \fI:port\fP.
+.RE
+.sp
+RDIFF_BACKUP_API_VERSION={[\fIdictionary\fP]}
+.RS 4
+Overwrite the \(aqactual\(aq, \(aqdefault\(aq, \(aqmax\(aq and/or \(aqmin\(aq value of the API VERSION using a YAML object, e.g. \f(CR{actual: 201, default: 201}\fP.
+This environment variable is rather meant for development and test purposes to change the values without modifying the code, so use with care.
+.RE
+.SH "RETURN CODES"
+.sp
+The following return codes have not been fully implemented so test before you rely on them.
+Also note that they can be combined, so that for example a return code 3 might be returned if a warning was found, then an error.
+.sp
+0 \- OK
+.RS 4
+the action was completely successful
+.RE
+.sp
+1 \- ERROR
+.RS 4
+something fatal happened, the whole action failed
+.RE
+.sp
+2 \- WARNING
+.RS 4
+any kind of unexpected behavior without complete failure
+.RE
+.sp
+4 \- FILE ERROR
+.RS 4
+the action failed on a single file (or more), but it wasn\(cqt the reason for a complete failure
+.RE
+.sp
+8 \- FILE WARNING
+.RS 4
+the action stumbled on a single file (or more), or detected differences in a comparaison
+.RE
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Tip
+.ps -1
+.br
+.sp
+any other error code can and should be reported as a bug.
+.sp .5v
+.RE
+.SH "BUGS"
+.sp
+See GitHub issues
+.RS 4
+.URL "https://github.com/rdiff\-backup/rdiff\-backup/issues" "" ""
+.RE
+.sp
+In doubt subscribe to and ask the mailing list
+.RS 4
+.URL "https://lists.nongnu.org/mailman/listinfo/rdiff\-backup\-users" "" ""
+.RE
+.SH "AUTHORS"
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+Ben Escoto \c
+.MTO "ben\(atemerose.org" "" " "
+(retired)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+Eric Lavarde <\c
+.MTO "ewl+rdiffbackup\(atlavar.de" "" ">"
+(active)
+.RE
+.SH "SEE ALSO"
+.sp
+python*(1), \fBrdiff\fP(1), \fBrsync\fP(1), \fBssh\fP(1).
+.sp
+The main rdiff\-backup web page is at \c
+.URL "https://rdiff\-backup.net/" "" "."
+It has more documentation, links to the mailing list and source code.
