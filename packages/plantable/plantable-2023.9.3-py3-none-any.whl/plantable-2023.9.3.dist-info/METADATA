@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: plantable
+Version: 2023.9.3
+Author: Woojin Cho
+Author-email: w.cho@cj.net
+License: MIT License
+Requires-Python: >=3.8
+Requires-Dist: aioboto3
+Requires-Dist: aiohttp
+Requires-Dist: aiokafka
+Requires-Dist: asyncpg
+Requires-Dist: charset-normalizer ==2.1.0
+Requires-Dist: click
+Requires-Dist: click-loglevel
+Requires-Dist: dasida
+Requires-Dist: fastapi
+Requires-Dist: fastavro
+Requires-Dist: genson
+Requires-Dist: hiredis
+Requires-Dist: orjson
+Requires-Dist: pandas
+Requires-Dist: parse
+Requires-Dist: pendulum
+Requires-Dist: pyarrow
+Requires-Dist: pydantic ==1.10
+Requires-Dist: pypika
+Requires-Dist: python-dotenv
+Requires-Dist: python-multipart
+Requires-Dist: python-socketio <5
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: sqlalchemy[asyncio]
+Requires-Dist: tabulate
+Requires-Dist: uvicorn
+
