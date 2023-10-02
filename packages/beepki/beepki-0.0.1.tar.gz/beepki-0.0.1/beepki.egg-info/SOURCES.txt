@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+beep/__init__.py
+beepki.egg-info/PKG-INFO
+beepki.egg-info/SOURCES.txt
+beepki.egg-info/dependency_links.txt
+beepki.egg-info/requires.txt
+beepki.egg-info/top_level.txt
