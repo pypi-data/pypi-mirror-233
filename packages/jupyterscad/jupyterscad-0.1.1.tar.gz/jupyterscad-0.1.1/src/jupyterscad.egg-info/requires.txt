@@ -1,0 +1,6 @@
+numpy-stl
+ipywidgets
+pythreejs
+
+[test]
+pytest
