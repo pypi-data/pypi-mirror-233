@@ -1,0 +1,2 @@
+[spacy_factories]
+segram = segram.nlp.pipeline.factories:create_base
