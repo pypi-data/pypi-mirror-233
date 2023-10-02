@@ -1,0 +1,13 @@
+numpy<1.26,>=1.21.0
+numba<0.59,>=0.55
+typing_extensions>=4.0.0
+
+[dev]
+pylint>=2.14
+black>=22.8.0
+pytest
+pytest-cov[toml]
+pytest-xdist
+pytest-benchmark>=4.0.0
+requests
+pdfminer.six
