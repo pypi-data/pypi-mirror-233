@@ -1,0 +1,5 @@
+notifications_sender/__init__.py,sha256=hC7BVse4V9QJ7_mGBIVZYZQgoyLF3402V1-SiLk4hqs,72
+notifications_sender/send_notifications.py,sha256=nwXqwuRyGv8AFUobWduit3zuVgshnyE6Mxpt00nuDWs,12769
+notifications_sender-0.6.0.dist-info/METADATA,sha256=5B695Fmg1FkAbZKuVa9a2NX6EdrIvO29K4_hgzn0LGs,508
+notifications_sender-0.6.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+notifications_sender-0.6.0.dist-info/RECORD,,

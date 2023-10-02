@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: notifications-sender
+Version: 0.6.0
+Summary: 
+Author: Alexander
+Author-email: cahr2001@mail.ru
+Requires-Python: >=3.7.1
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: dateparser (==1.1.8)
+Requires-Dist: pandas (==1.3.5)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
