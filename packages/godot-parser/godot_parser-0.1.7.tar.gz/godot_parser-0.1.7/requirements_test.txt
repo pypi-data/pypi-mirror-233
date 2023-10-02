@@ -1,0 +1,5 @@
+coverage
+black
+isort
+mypy
+pylint==2.17.7
