@@ -1,0 +1,8 @@
+README.md
+setup.py
+assignment3_us_advpython.egg-info/PKG-INFO
+assignment3_us_advpython.egg-info/SOURCES.txt
+assignment3_us_advpython.egg-info/dependency_links.txt
+assignment3_us_advpython.egg-info/top_level.txt
+logging_assignment3/__init__.py
+logging_assignment3/logger_assignment3.py
