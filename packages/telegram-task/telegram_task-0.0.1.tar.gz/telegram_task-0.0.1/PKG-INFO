@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: telegram_task
+Version: 0.0.1
+Summary: A telegram bot task manager wrapper.
+Home-page: UNKNOWN
+Author: Arka Equities & Securities
+Author-email: info@arkaequities.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+UNKNOWN
+
