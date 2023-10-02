@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/function_calling/__init__.py
+src/function_calling/api.py
+src/function_calling/models.py
+src/openai_function_calling_aeolin.egg-info/PKG-INFO
+src/openai_function_calling_aeolin.egg-info/SOURCES.txt
+src/openai_function_calling_aeolin.egg-info/dependency_links.txt
+src/openai_function_calling_aeolin.egg-info/requires.txt
+src/openai_function_calling_aeolin.egg-info/top_level.txt
