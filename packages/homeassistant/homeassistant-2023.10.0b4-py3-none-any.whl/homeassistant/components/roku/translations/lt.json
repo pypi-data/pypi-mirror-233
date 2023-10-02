@@ -1,0 +1,39 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "headphones_connected": {
+                "name": "Prijungtos ausin\u0117s"
+            },
+            "supports_airplay": {
+                "name": "Palaiko AirPlay"
+            },
+            "supports_ethernet": {
+                "name": "Palaiko eternet\u0105"
+            },
+            "supports_find_remote": {
+                "name": "Palaiko nuotolinio paie\u0161kos funkcij\u0105"
+            }
+        },
+        "select": {
+            "application": {
+                "name": "Taikomoji programa"
+            },
+            "channel": {
+                "name": "Kanalas"
+            }
+        },
+        "sensor": {
+            "active_app": {
+                "name": "Aktyvi programa"
+            },
+            "active_app_id": {
+                "name": "Aktyvios programos ID"
+            }
+        }
+    },
+    "services": {
+        "search": {
+            "name": "Ie\u0161koti"
+        }
+    }
+}

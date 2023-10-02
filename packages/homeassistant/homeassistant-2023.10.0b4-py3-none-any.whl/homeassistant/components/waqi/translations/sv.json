@@ -1,0 +1,30 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta.",
+            "invalid_auth": "Ogiltig autentisering",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API-nyckel",
+                    "location": "Plats"
+                },
+                "description": "V\u00e4lj en plats f\u00f6r att f\u00e5 den n\u00e4rmaste m\u00e4tstationen."
+            }
+        }
+    },
+    "issues": {
+        "deprecated_yaml_import_issue_invalid_auth": {
+            "title": "Importen av YAML-konfigurationen f\u00f6r World Air Quality Index misslyckades"
+        },
+        "deprecated_yaml_import_issue_none_found": {
+            "description": "Konfigurering av World Air Quality Index med YAML tas bort men det fanns inga stationer importerade eftersom de inte kunde hittas. \n\n Se till att den importerade konfigurationen \u00e4r korrekt och ta bort World Air Quality Index YAML-konfigurationen fr\u00e5n din configuration.yaml-fil och forts\u00e4tt att [konfigurera integrationen]( {url}) manuellt.",
+            "title": "Importen av WAQI YAML-konfigurationen misslyckades"
+        }
+    }
+}
