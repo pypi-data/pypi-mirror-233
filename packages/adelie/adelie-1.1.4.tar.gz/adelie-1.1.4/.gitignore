@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.ipynb_checkpoints
+*.rendered.*
+*.cpython*
+*.DS_Store
+*.out
+dist/
+build/
+*__pycache__*
+*.egg-info*
+adelie/src/third_party
