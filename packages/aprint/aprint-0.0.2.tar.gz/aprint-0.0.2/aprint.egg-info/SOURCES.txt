@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+aprint/__init__.py
+aprint/aprint.py
+aprint.egg-info/PKG-INFO
+aprint.egg-info/SOURCES.txt
+aprint.egg-info/dependency_links.txt
+aprint.egg-info/top_level.txt
+aprint/iterators/__init__.py
+aprint/iterators/dispatch.py
+aprint/iterators/python.py
+aprint/objects/__init__.py
+aprint/objects/dispatch.py
+aprint/objects/numpy.py
+aprint/objects/torch.py
