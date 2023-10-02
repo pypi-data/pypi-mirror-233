@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: tabulous
+Version: 0.5.5
+Summary: A table data viewer for Python
+Project-URL: Download, https://github.com/hanjinliu/tabulous
+Author-email: Hanjin Liu <liuhanjin-sc@g.ecc.u-tokyo.ac.jp>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2022, Hanjin Liu
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: collections-undo>=0.0.7
+Requires-Dist: magicgui>=0.5.1
+Requires-Dist: matplotlib>=3.1
+Requires-Dist: pandas>=1.5.2
+Requires-Dist: psygnal>=0.9.0
+Requires-Dist: qt-command-palette>=0.0.6
+Requires-Dist: qtconsole
+Requires-Dist: qtpy>=1.10.0
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: toml
+Provides-Extra: all
+Requires-Dist: pyqt5>=5.12.3; extra == 'all'
+Requires-Dist: scikit-learn>=1.1; extra == 'all'
+Requires-Dist: scipy>=1.7; extra == 'all'
+Requires-Dist: seaborn>=0.11; extra == 'all'
+Provides-Extra: pyqt5
+Requires-Dist: pyqt5>=5.12.3; extra == 'pyqt5'
+Provides-Extra: pyqt6
+Requires-Dist: pyqt6>=6.3.1; extra == 'pyqt6'
+Provides-Extra: scikit-learn
+Requires-Dist: scikit-learn>=1.0; extra == 'scikit-learn'
+Provides-Extra: testing
+Requires-Dist: pytest; extra == 'testing'
+Requires-Dist: pytest-qt; extra == 'testing'
+Description-Content-Type: text/markdown
+
+[![Python package index download statistics](https://img.shields.io/pypi/dm/tabulous.svg)](https://pypistats.org/packages/tabulous)
+[![PyPI version](https://badge.fury.io/py/tabulous.svg)](https://badge.fury.io/py/tabulous)
+
+# tabulous
+
+A table data viewer for Python.
+
+[&rarr;📖 Documentation](https://hanjinliu.github.io/tabulous/)
+
+![](https://github.com/hanjinliu/tabulous/blob/main/image/viewer_example.png)
+
+`tabulous` is highly inspired by [napari](https://github.com/napari/napari) in its design and API.
+
+### Installation
+
+###### Install all the dependencies including functionalities of loading sample data, plotting, etc.
+
+```
+pip install tabulous[all]
+```
+
+###### Install with PyQt backend.
+
+```
+pip install tabulous[pyqt5]  # Use PyQt5
+pip install tabulous[pyqt6]  # Use PyQt6
+```
+
+## Examples of Supported Functionalities
+
+#### Table sorting and table filtering
+
+|**Sort**|**Filter**|
+|:-:|:-:|
+|![](https://github.com/hanjinliu/tabulous/blob/main/image/sort_example.png)|![](https://github.com/hanjinliu/tabulous/blob/main/image/filter_example.png)|
+
+You can apply pre-defined or custom sorting/filtering functions to tables.
+Data edition during sorting/filtering is also supported.
+
+#### Command palette
+
+![](https://github.com/hanjinliu/tabulous/blob/main/image/command_palette_example.png)
+
+Couldn't find how to do it? Open the command palette and search for it!
+
+#### Excel-like referenced in-cell evaluation
+
+![](https://github.com/hanjinliu/tabulous/blob/main/image/eval_example.png)
+
+Call `numpy` and `pandas` functions directly in cells.
+
+#### Rich visualization
+
+![](https://github.com/hanjinliu/tabulous/blob/main/image/colormap_example.png)
+
+Set colormaps that will help you to browse table data.
+
+#### Custom widget integration
+
+![](https://github.com/hanjinliu/tabulous/blob/main/image/custom_widget_example.png)
+
+Add your own `PyQt`/`magicgui` widgets to the application.
