@@ -1,0 +1,14 @@
+arrow
+click
+python-dotenv
+requests
+tqdm
+importlib_metadata
+svgwrite
+pycairo
+
+[tests]
+pytest
+black
+isort
+autoflake
