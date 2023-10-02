@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: clusternet
+Version: 0.9.2
+Summary: Distributed Software Defined Network Emulation
+Home-page: https://github.com/EsauM10/clusternet
+Author: Esaú Mascarenhas
+Author-email: esaumasc@gmail.com
+Keywords: networking,emulator,containernet,mininet,OpenFlow,SDN,fog
+Classifier: Intended Audience :: Developers
+Requires-Dist: Flask
+Requires-Dist: Flask-Cors
+Requires-Dist: httpx
+
+Distributed Software Defined Network Emulation
