@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+chatgptTTS.egg-info/PKG-INFO
+chatgptTTS.egg-info/SOURCES.txt
+chatgptTTS.egg-info/dependency_links.txt
+chatgptTTS.egg-info/requires.txt
+chatgptTTS.egg-info/top_level.txt
+tts-chatgpt/__init__.py
+tts-chatgpt/chat.py
