@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: roblox-python
+Version: 0.0.2
+Summary: Library Python Roblox
+Author: TV_Kirill
+Author-email: kirill.shishkov2007@gmail.com
+Requires-Dist: httpx
