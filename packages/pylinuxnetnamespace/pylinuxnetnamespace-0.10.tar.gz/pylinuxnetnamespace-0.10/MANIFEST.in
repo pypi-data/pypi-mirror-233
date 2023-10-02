@@ -1,0 +1,3 @@
+include pylinuxnetnamespace/requirements.txt
+include pylinuxnetnamespace/thirdparty.json
+include pylinuxnetnamespace/README.MD
