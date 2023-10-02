@@ -1,0 +1,167 @@
+[build-system]
+requires = [
+  "setuptools>=45",
+  "setuptools_scm[toml]>=6.2",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "Neil Shephard", email = "nshephard@gmail.com"},
+]
+classifiers = [
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Markup :: XML"
+]
+dependencies = [
+  "gpxpy",
+  "python_dateutil",
+  "python_tcxparser",
+  "tqdm",
+]
+description = "Convert Garmin TCX GPS tracks to GPX"
+dynamic = ["version"]
+license = {text = "GNU GPLv3 only"}
+name = "tcx2gpx"
+readme = "README.md"
+
+[project.urls]
+Bug_Tracker = "https://gitlab.com/nshephard/tcx2gpx/issues/"
+Source = "https://gitlab.com/nshephard/tcx2gpx"
+Documentation = "https://nshephard.gitlab.io/tcx2gpx/"
+
+[project.optional-dependencies]
+dev =[
+    "black",
+    "pre-commit",
+    "pydocstyle[toml]",
+    "pylint",
+    "ruff",
+]
+docs = [
+    "Sphinx",
+    "myst-parser",
+    "numpydoc",
+    "pydata_sphinx_theme",
+    "sphinx-autoapi",
+    "sphinx-autodoc-typehints",
+    "sphinx-multiversion",
+    "sphinx_markdown_tables",
+    "sphinxcontrib-mermaid",
+]
+pypi = [
+     "build",
+     "pytest-runner",
+     "setuptools-lint",
+     "setuptools_scm",
+     "twine",
+     "wheel"
+]
+test = [
+     "pytest",
+     "pytest-cov"
+]
+
+
+[tool.setuptools]
+#packages = ["tcx2gpx"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tcx2gpx"]
+exclude = ["tests"]
+
+[tool.setuptools.package-data]
+#tcx2gps = ["*.yaml"]
+
+[tool.setuptools_scm]
+write_to = "tcx2gpx/_version.py"
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+git_describe_command = "git describe --tags"
+
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310"]
+include = "\\.pyi?$"
+
+[tool.coverage.run]
+source = ["tcx2gpx"]
+omit = ["tcx2gpx/_version.py"]
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.ruff]
+exclude = [
+  "*.ipynb",
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pycache__",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "docs/conf.py",
+  "node_modules",
+  "pygwytracing.py",
+  "tests/tracing/test_dnacurvature.py",
+  "tests/tracing/test_dnatracing.py",
+  "tests/tracing/test_tracing_dna.py",
+  "topostats/plotting.py",
+  "topostats/tracing/dnatracing.py",
+  "topostats/tracing/tracing_dna.py",
+  "topostats/tracing/tracingfuncs.py",
+  "venv",
+]
+# per-file-ignores = []
+line-length = 120
+target-version = "py310"
+select = ["A", "B", "C", "D", "E", "F", "PT", "PTH", "R", "S", "W", "U"]
+ignore = [
+  "B905",
+  "D104",
+  "D211",
+  "E501",
+  "S101",
+  "T201"
+]
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "PT", "PTH", "R", "S", "W", "U"]
+unfixable = []
+
+# [tool.ruff.per-file-ignores]
+# "path/to/file.py" = ["E402"]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.isort]
+case-sensitive = true
+
+[tool.pydocstyle]
+convention = "numpy"
+match-dir = "tcx2gpx"
+
+[tool.ruff.flake8-pytest-style]
+fixture-parentheses = true
+
+[project.scripts]
+tcx2gpx = "tcx2gpx.batch:tcx2gpx"

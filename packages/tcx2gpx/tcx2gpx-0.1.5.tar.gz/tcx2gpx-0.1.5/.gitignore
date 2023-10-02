@@ -1,0 +1,11 @@
+*~
+tmp/*
+.coverage
+*__pycache__*
+.eggs*
+*.gpx
+build*
+dist*
+modules.rst
+docs/tcx2gpx*.rst
+docs/_build

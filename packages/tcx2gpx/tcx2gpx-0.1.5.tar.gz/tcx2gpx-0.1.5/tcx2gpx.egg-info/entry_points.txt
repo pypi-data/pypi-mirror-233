@@ -1,0 +1,2 @@
+[console_scripts]
+tcx2gpx = tcx2gpx.batch:tcx2gpx
