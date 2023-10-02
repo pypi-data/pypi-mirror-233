@@ -1,0 +1,14 @@
+model_name: SpecificationModel
+tags: []
+scenarios:
+  - id: get_random_users_v2
+    model_name: ScenarioModel
+    description: Do something
+    functional_testing: HappyPath
+    actions:
+      - model_name: RefResolverModel
+        ref: json_http_action
+        context: {}
+    assertions:
+      - description: "ID of the random user is greater than one"
+        template: "{{ action('json_http_action') | output_body| jpath('$.id') > 1 }}"

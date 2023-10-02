@@ -1,0 +1,31 @@
+model_name: JsonHttpActionModel
+config:
+  method:
+    format: string
+    template: GET
+  params:
+    format: yaml
+    template: |
+      abc: abc
+  url:
+    format: string
+    template: "http://www.abc.com"
+description: Dummy Json Http Request
+execution_id: 'json_http_action'
+schemas:
+  - id: "json_200"
+    model_name: JsonSchemaModel
+    schema_:
+      format: json
+      text: |
+        {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "additionalProperties": false
+          }
+
+schema_validators:
+  - id: "json_200"
+    model_name: JsonSchemaValidatorModel
+    schema_id: "200"
+    against: 'output_body'

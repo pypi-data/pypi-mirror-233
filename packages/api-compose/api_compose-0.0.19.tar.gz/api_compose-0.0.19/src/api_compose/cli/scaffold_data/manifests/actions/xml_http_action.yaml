@@ -1,0 +1,28 @@
+model_name: XmlHttpActionModel
+config:
+  method:
+    format: string
+    template: GET
+  params:
+    format: json
+    template: |
+      {'abc': 'abc'}
+  url:
+    format: string
+    template: "http://www.abc.com"
+description: Dummy Xml Http Request
+execution_id: 'xml_http_action'
+schemas:
+  - id: "xml_200"
+    model_name: XmlSchemaModel
+    schema_:
+      format: xml
+      text: |
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          <xs:element name="nothing" type="xs:string"/>
+        </xs:schema>
+schema_validators:
+  - id: "xml_200"
+    model_name: XmlSchemaValidatorModel
+    schema_id: "200"
+    against: 'output_body'

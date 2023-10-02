@@ -1,0 +1,5 @@
+[console_scripts]
+acp = api_compose.cli.main:app
+
+[jupyter_serverproxy_servers]
+api_server_one = api_compose.servers:setup_api_server_one
