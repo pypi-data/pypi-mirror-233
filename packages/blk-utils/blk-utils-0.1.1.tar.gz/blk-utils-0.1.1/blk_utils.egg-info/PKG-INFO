@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: blk-utils
+Version: 0.1.1
+Summary: Small Utility Library
+Home-page: https://blk-utils.readthedocs.io/
+Author: Brian Christopher
+Author-email: bcr@blackarbs.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: hypothesis
+Requires-Dist: timeutils
+
+<H1>BLK UTILS</H1>
+
+A small utility library for my most commonly used functions across projects. 
+
+<H2> Installation </H2>
+
+`pip install blk-utils`
+
+<H2> Example Usage </H2>
+
+```
+from blk_utils import get_relative_project_dir, cprint, ...
+
+repo_name = 'my_repo'
+project_dir = get_relative_project_dir(repo_name, partial=True)
+data_dir = project_dir / 'data'
+
+data_filepath = data_dir / 'my_table_data.csv'
+df = pd.read_csv(data_filepath)
+cprint(df)
+```
