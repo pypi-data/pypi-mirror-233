@@ -1,0 +1,10 @@
+LICENSE
+LICENSE-APACHE
+LICENSE-MIT
+README.md
+pyproject.toml
+setup.cfg
+src/piperdf.egg-info/PKG-INFO
+src/piperdf.egg-info/SOURCES.txt
+src/piperdf.egg-info/dependency_links.txt
+src/piperdf.egg-info/top_level.txt
