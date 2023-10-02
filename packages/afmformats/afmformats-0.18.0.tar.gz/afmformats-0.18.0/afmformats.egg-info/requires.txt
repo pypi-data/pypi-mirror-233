@@ -1,0 +1,4 @@
+h5py
+igor2>=0.5.0
+jprops
+numpy>=1.14.0
