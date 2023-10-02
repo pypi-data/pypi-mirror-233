@@ -1,0 +1,7 @@
+python-dotenv
+typer[all]
+
+[restful-api]
+pydantic[email]
+fastapi
+uvicorn[standard]
