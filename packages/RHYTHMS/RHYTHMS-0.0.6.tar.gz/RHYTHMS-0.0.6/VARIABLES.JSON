@@ -1,0 +1,10 @@
+{
+	"VERSION": "0.0.6",
+	"NAME": "RHYTHMS",
+	"INSTALL_REQUIRES": [ 
+		"click", 
+		"rethinkdb"
+	]
+}
+
+
