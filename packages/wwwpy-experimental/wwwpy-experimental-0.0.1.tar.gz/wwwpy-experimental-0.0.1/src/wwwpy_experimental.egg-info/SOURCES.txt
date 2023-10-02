@@ -1,0 +1,10 @@
+pyproject.toml
+setup.cfg
+src/wwwpy/__init__.py
+src/wwwpy/experimental/__init__.py
+src/wwwpy_experimental.egg-info/PKG-INFO
+src/wwwpy_experimental.egg-info/SOURCES.txt
+src/wwwpy_experimental.egg-info/dependency_links.txt
+src/wwwpy_experimental.egg-info/not-zip-safe
+src/wwwpy_experimental.egg-info/requires.txt
+src/wwwpy_experimental.egg-info/top_level.txt
