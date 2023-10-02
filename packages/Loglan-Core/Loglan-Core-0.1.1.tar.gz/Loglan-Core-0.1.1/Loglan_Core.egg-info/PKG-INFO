@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: Loglan-Core
+Version: 0.1.1
+Summary: Loglan Dictionary Database Model for SQLAlchemy
+Home-page: https://github.com/torrua/loglan_core
+Download-URL: https://github.com/torrua/loglan_core/archive/0.1.1.tar.gz
+Author: torrua
+Author-email: torrua@gmail.com
+License: MIT
+Keywords: Loglan,Dictionary,Database,Model,LOD
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy>=2.0.21
+
+# Loglan Core
+
+[![codecov](https://codecov.io/gh/torrua/loglan_core/branch/main/graph/badge.svg?token=PTNP59G7L4)](https://codecov.io/gh/torrua/loglan_core)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/torrua/loglan_core/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/torrua/loglan_core/?branch=main)
+[![Pylint](https://github.com/torrua/loglan_core/actions/workflows/pylint.yml/badge.svg)](https://github.com/torrua/loglan_core/actions/workflows/pylint.yml)
+[![Pytest](https://github.com/torrua/loglan_core/actions/workflows/pytest.yml/badge.svg)](https://github.com/torrua/loglan_core/actions/workflows/pytest.yml)
+![pylint](https://img.shields.io/badge/pylint-9.89-yellow?logo=python&logoColor=white)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/loglan_core?color=yellow)
