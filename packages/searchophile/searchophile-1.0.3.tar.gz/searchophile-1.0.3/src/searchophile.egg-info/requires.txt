@@ -1,0 +1,6 @@
+greplica>=1.2.6
+sedeuce>=1.0.7
+refind>=1.0.6
+
+[dev]
+check-manifest
