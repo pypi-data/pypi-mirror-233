@@ -1,0 +1,5 @@
+dist
+build
+api
+__pycache__
+doc/source/reference/_autosummary
