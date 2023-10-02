@@ -1,0 +1,16 @@
+chineseEasyWordcloud/__init__.py,sha256=Qcn25P67WnwA09oNR1PlJxBTDmJCcYdDpGKV5BoaNn4,541
+chineseEasyWordcloud/cut.py,sha256=s-plwGNuvq9ryGxvXw-ljfQezhNlutkLvYhB_u2GoDY,1259
+chineseEasyWordcloud/easyWordcloud.py,sha256=UXu27fiIV5LOka8im0Vm696HEkjnCWJaQ-5Df59mq4U,1614
+chineseEasyWordcloud/stopwords.py,sha256=sMVSsqQRVjJxnU2tXP68hhuhBnmcUZPchM64rKBxR6k,116
+chineseEasyWordcloud/terminal.py,sha256=Uk8ZczN5zgptGi73pJIcIGU4cnrB1AwXiRgEcmXQ5WI,5247
+chineseEasyWordcloud/data/__init__.py,sha256=0XavVK-s2kS2wrGPFN_X-gZEelkpyIlO29XUnH9Qxsk,504
+chineseEasyWordcloud/data/stopwords.py,sha256=nVEaeiKNBOJtSueL3awG7EzkKu9kwj0gsxIJ3b9htys,18085
+doFolder/__init__.py,sha256=Gf_TcE2XEJnGqnWFXE-R-S7ArGiFNVucOxNXBhXKIYM,548
+doFolder/compare.py,sha256=Sw6nJTPJI3WJn1oYdgCT_o8JpRm-OZL1pbQfBUxC6AQ,10940
+doFolder/main.py,sha256=cTCJ8iB4Vwf-1Gtgz1MeWfAMAUsUaSb0vsLPtXOWoik,30503
+doFolder/terminal.py,sha256=9onyvuyBkh2Zs_FEXMOuko5AIwYB5SJgn0bvipWalUk,13847
+chineseEasyWordcloud-0.0.1.dist-info/METADATA,sha256=M778zOFDiv8hNe5rtoDl3OILh2BTqkmHphtkXx-szAU,4088
+chineseEasyWordcloud-0.0.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+chineseEasyWordcloud-0.0.1.dist-info/entry_points.txt,sha256=aENYrIWCCmeLEhyiInJT251A6HgYNiVDF48ZF2AanAA,85
+chineseEasyWordcloud-0.0.1.dist-info/top_level.txt,sha256=DG0BByMNyQIyalIZCP3zJT7QwP402MMDgSxpP54W4vs,47
+chineseEasyWordcloud-0.0.1.dist-info/RECORD,,
