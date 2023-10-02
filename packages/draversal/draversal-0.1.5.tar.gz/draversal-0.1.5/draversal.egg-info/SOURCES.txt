@@ -1,0 +1,17 @@
+LICENSE
+README.md
+draversal.py
+setup.py
+draversal/DictSearchQuery.py
+draversal/DictTraversal.py
+draversal/__init__.py
+draversal.egg-info/PKG-INFO
+draversal.egg-info/SOURCES.txt
+draversal.egg-info/dependency_links.txt
+draversal.egg-info/top_level.txt
+tests/__init__.py
+tests/test_draversal.py
+tests/test_draversal_current_item.py
+tests/test_draversal_inverted.py
+tests/test_draversal_new_context.py
+tests/test_draversal_search.py
