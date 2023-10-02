@@ -1,0 +1,7 @@
+labelme2yolov7segmentation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+labelme2yolov7segmentation/__main__.py,sha256=ZZo3x-tlb6qaXOSR69QjK8nN6BNlaUMow6UW2UJb2-w,8383
+labelme2yolov7segmentation/datatypes.py,sha256=T5LLxeo7xV0_j4meTuHrrhlrAzy-AwQTfBsy251lqTI,1175
+labelme2yolov7segmentation-2.0.5.dist-info/METADATA,sha256=Ut7Rl02Scj_PeoHSH01l4kFqmIQREhzCYYo_jSvmLMk,3300
+labelme2yolov7segmentation-2.0.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+labelme2yolov7segmentation-2.0.5.dist-info/entry_points.txt,sha256=aeRsHD8vXzCU1d4M4ZbLLxOJcHjpIGZgP5xvcMURq3I,73
+labelme2yolov7segmentation-2.0.5.dist-info/RECORD,,
