@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-celery-progress
+Version: 1.0.5
+Summary: A django app to monitor celery tasks with progress
+Home-page: https://github.com/sandbox-pokhara/django-celery-progress
+Author: Pradish Bijukchhe
+Author-email: pradishbijukchhe@gmail.com
+Project-URL: Bug Tracker, https://github.com/sandbox-pokhara/django-celery-progress/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django
+Requires-Dist: celery
+Requires-Dist: redis
+
+# Django Celery Progress
+
+A django app to monitor celery tasks with progress
+
+## Demo
+
+![Demo](https://raw.githubusercontent.com/sandbox-pokhara/django-celery-progress/master/images/screenshot.gif)
+
+## Quick start
+
+Add "django_celery_progress" to your INSTALLED_APPS:
+
+```
+    INSTALLED_APPS = [
+        'django_celery_progress',
+    ]
+```
+
+Set CELERY_BROKER_URL and CELERY_RESULT_BACKEND
+
+```
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+```
+
+## Progress monitor:
+
+```
+import time
+
+from celery import shared_task
+from django_celery_progress.progress import set_progress
+
+@shared_task(bind=True, name='my_task')
+def my_task(self):
+    for i in range(100):
+        time.sleep(1)
+        set_progress(self, i + 1, 100)
+```
