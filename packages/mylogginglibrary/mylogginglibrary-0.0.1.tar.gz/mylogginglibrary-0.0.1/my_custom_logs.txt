@@ -1,0 +1,12 @@
+29/09/2023 09:58:57 - main - ERROR - Test Message
+29/09/2023 09:59:43 - main - DEBUG - Test Message1 
+29/09/2023 09:59:43 - main - ERROR - Test Message2 
+29/09/2023 10:00:22 - main - DEBUG - Test Message1 
+29/09/2023 10:00:42 - main - DEBUG - Test Message1 
+29/09/2023 10:00:44 - main - ERROR - Test Message2 
+29/09/2023 10:06:42 - main - DEBUG - Test Message1 
+29/09/2023 10:06:44 - main - ERROR - Test Message2 
+29/09/2023 10:12:38 - main - DEBUG - Debug Message1 
+29/09/2023 10:12:40 - main - ERROR - Error Message2 
+29/09/2023 21:12:36 - main - DEBUG - Debug Message1 
+29/09/2023 21:12:38 - main - ERROR - Error Message2 
