@@ -1,0 +1,16 @@
+spark_dataframe_tools/__init__.py,sha256=Hk41-HX8YktyUzAofK4Qq6mGIRe6m1DpvTGBAtXhnKY,2115
+spark_dataframe_tools/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spark_dataframe_tools/functions/generator.py,sha256=MvWwIFxTioMV5Gn2e4VkFXRZ2qQjHemT5YR0ZL0LE6c,3190
+spark_dataframe_tools/utils/__init__.py,sha256=5HxY8WBt4sHEWXz-lTLGiI8VR6g2HG_Rbizd0W03pOw,75
+spark_dataframe_tools/utils/utils_color.py,sha256=P5oc4N9_oLVEPrQrGzhCmPqwISL7-60nT5zbI9BGhmQ,416
+spark_dataframe_tools/utils/utils_enviroment.py,sha256=aRc0HWzYMfHK2JOGnco6C2vzpX4PwOsb_bD2uyjAdME,370
+spark_dataframe_tools/utils/utils_faker.py,sha256=G_CJE6qOJqKVWhrlB4yWdonFYxjOjcnA0Zr_Us2GmMo,3118
+spark_dataframe_tools/utils/utils_reformat_type.py,sha256=dymRhixvm0iQC0ulfOj1RCyOyzPp1d8hn4OVoDLDHIY,4455
+spark_dataframe_tools/utils/utils_session_retry.py,sha256=nW9c2rLqVHJy9uPblcHfoaelGd9YdLwJH0msuypVEtw,3659
+spark_dataframe_tools/utils/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spark_dataframe_tools/utils/templates/table.html,sha256=ZzNkjjV3J4j6tLW8Mt9Oz1ahHaHIJ9rtzY4xJdZcc5g,1861
+spark_dataframe_tools-0.5.9.dist-info/LICENSE,sha256=QXtBv9uSnDRs86kNzGZgiDg5RHk-R6GAIOHhYgpFUE8,1092
+spark_dataframe_tools-0.5.9.dist-info/METADATA,sha256=bwxGkVCBUfcwC-h2mgAyrPwMeodc4HJfmQO9dPP02pI,3170
+spark_dataframe_tools-0.5.9.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+spark_dataframe_tools-0.5.9.dist-info/top_level.txt,sha256=ha9R1x2JKGkD_afVbegnV_9ogpzY_A5wknhAYMI9_9Y,22
+spark_dataframe_tools-0.5.9.dist-info/RECORD,,
