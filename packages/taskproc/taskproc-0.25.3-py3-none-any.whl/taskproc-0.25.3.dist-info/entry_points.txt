@@ -1,0 +1,3 @@
+[console_scripts]
+taskproc = taskproc.__main__:main
+
