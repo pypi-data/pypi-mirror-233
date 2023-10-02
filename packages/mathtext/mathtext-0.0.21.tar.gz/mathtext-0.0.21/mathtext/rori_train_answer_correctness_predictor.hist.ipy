@@ -1,0 +1,890 @@
+>>> from mathtext.models import BERTEncoder
+... from mathtext.constants import DATA_DIR
+... import pandas as pd
+
+... ANNOTATED_QUESTION_ANSWERS = DATA_DIR / 'annotated_data - wholeset_annotated.csv'
+... df = pd.read_csv(ANNOTATED_QUESTION_ANSWERS)
+>>> df
+    annotater  message_num  ... predicted_value value_is_correct
+0      millie           91  ...            0.25                1
+1      millie           93  ...               1                0
+2      millie           95  ...               1                0
+3      millie          146  ...               1                0
+4      millie          192  ...               1                0
+..        ...          ...  ...             ...              ...
+952      tony        74605  ...             yes                1
+953      tony        74613  ...             yes                1
+954      tony        74614  ...             yes                0
+955      tony        74615  ...             yes                1
+956      tony        74646  ...             yes                1
+
+>>> df.iloc[0]
+annotater                                                      millie
+message_num                                                        91
+question            Counting means to say numbers one after the ot...
+expected_answer                                                   Yes
+text                                                      I have a qu
+predicted_type                                                 intent
+actual_type                                                    intent
+type_is_correct                                                     0
+predicted_value                                                  0.25
+value_is_correct                                                    1
+Name: 0, dtype: object
+
+>>> y = df['actual_type']
+>>> feature_columns = 'question expected_answer text'.split()
+>>> feature_columns
+['question', 'expected_answer', 'text']
+>>> enc = BERTEncoder()
+>>> enc.transform(df[feature_columns[0]])
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.02188618,  0.09084655, -0.08676372, ...,  0.07098322,
+        -0.00181633, -0.01808713]], dtype=float32)
+>>> X = []
+>>> X_question = _
+>>> X_expected_answer = enc.transform(df[feature_columns[1]])
+>>> X_text = enc.transform(df[feature_columns[2]])
+>>> y
+0      intent
+1      intent
+2      intent
+3      intent
+4      intent
+        ...  
+952    answer
+953    answer
+954    answer
+955    intent
+956    intent
+Name: actual_type, Length: 957, dtype: object
+>>> np.append(X_question, X_text)
+array([ 0.03126064,  0.00489514, -0.00954852, ...,  0.04078176,
+       -0.11375008, -0.06516626], dtype=float32)
+>>> np.append(X_question, X_text).shape
+(734976,)
+>>> np.append(X_question, X_text).size
+734976
+>>> X_question
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.02188618,  0.09084655, -0.08676372, ...,  0.07098322,
+        -0.00181633, -0.01808713]], dtype=float32)
+>>> X_question.shape
+(957, 384)
+>>> X_text.shape
+(957, 384)
+>>> X = np.concatenate([X_question, X_text, X_expected_answer], axis=1)
+>>> X.shape
+(957, 1152)
+
+>>> is_test = np.random.rand(len(y)) > .9  # 10% test set
+>>> is_train = ~is_test
+>>> is_test
+array([False,  True, False, False, False, False, False, False, False,
+       ...
+       False, False,  True, False, False, False, False, False,  True,
+       False, False, False])
+>>> X[is_test]
+array([[ 0.03126064,  0.00489514, -0.00954852, ..., -0.05580992,
+         0.03755255, -0.02041548],
+       [ 0.04437093,  0.10056917, -0.04553934, ...,  0.01864041,
+        -0.03758201,  0.02956607],
+       [ 0.02724288,  0.03420565, -0.05149228, ..., -0.05581001,
+         0.03755248, -0.02041544],
+       ...,
+       [ 0.00934698,  0.06416794,  0.02563638, ...,  0.06092619,
+        -0.0581618 , -0.02232906],
+       [ 0.07657675, -0.01205633, -0.00142222, ...,  0.01465373,
+        -0.02263188,  0.02510643],
+       [ 0.03315016,  0.05816261,  0.01775443, ..., -0.05581001,
+         0.03755248, -0.02041544]], dtype=float32)
+>>> X[is_test].shape
+(97, 1152)
+>>> X[is_train].shape
+(860, 1152)
+>>> X.shape
+(957, 1152)
+>>> from sklearn.linear_model import LogisticRegression
+>>> from sklearn.svm import SVC
+>>> lr = LogisticRegression()
+>>> lr = LogisticRegression(class_weight='balanced')
+>>> svc = SVC(class_weight='balanced')
+>>> y_train = y[is_train]
+>>> lr.fit(X_train, y_train)
+>>> X_train = X[is_train]
+>>> X_test = X[is_test]
+>>> y_test = y[is_test]
+>>> lr.fit(X_train, y_train)
+LogisticRegression(class_weight='balanced')
+>>> lr.score(X_test,y_test)
+0.9278350515463918
+>>> lr.score(X_train,y_train)
+0.9651162790697675
+>>> LogisticRegression?
+>>> lr2 = LogisticRegression(C=.1)
+>>> lr2 = LogisticRegression(C=.1, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.1, class_weight='balanced')
+>>> lr2.score(X_train,y_train)
+0.9290697674418604
+>>> lr2.score(X_test,y_test)
+0.9175257731958762
+>>> lr2 = LogisticRegression(C=.6, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.6, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_train,y_train)
+0.9616279069767442
+>>> lr2 = LogisticRegression(C=.35, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.35, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9175257731958762
+>>> lr2 = LogisticRegression(C=.5, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.5, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.5, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_train,y_train)
+0.9604651162790697
+>>> svc.fit(X_train, y_train)
+SVC(class_weight='balanced')
+>>> svc.score(X_test, y_test)
+0.9484536082474226
+>>> svc.score(X_train, y_train)
+0.9883720930232558
+>>> hist -o -p -f rori_train_answer_recognizer.hist.ipy
+>>> svc.predict(X_test)
+array(['intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'answer'], dtype=object)
+>>> svc.predict(X_train)
+array(['intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'intent', 'intent'], dtype=object)
+>>> svc_is_correct = SVC(class_weight='balanced')
+>>> svc.predict(X)
+array(['intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'answer',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'answer', 'answer', 'intent', 'answer', 'answer',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'answer', 'answer', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent'], dtype=object)
+>>> owen_results = pd.DataFrame()
+>>> owen_results['is_testset_example'] = is_test
+>>> owen_results['nlu_prediction'] = svc.predict(X)
+>>> owen_results['nlu_prediction_confidence'] = svc.predict_proba(X)
+>>> svc.predict_proba(X)
+>>> svc = SVC(class_weight='balanced', probability=True)
+>>> svc.fit(X_train, y_train)
+SVC(class_weight='balanced', probability=True)
+>>> svc.score(X_train, y_train)
+0.9883720930232558
+>>> svc.score(X_test, y_test)
+0.9484536082474226
+>>> svc.predict_proba(X)
+array([[0.01628222, 0.98371778],
+       [0.01084783, 0.98915217],
+       [0.020492  , 0.979508  ],
+       ...,
+       [0.9468767 , 0.0531233 ],
+       [0.03321085, 0.96678915],
+       [0.00629426, 0.99370574]])
+>>> svc.predict(X)
+array(['intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'answer',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'answer',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'answer', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'intent', 'answer', 'answer', 'intent', 'answer', 'answer',
+       'intent', 'answer', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'answer', 'answer', 'answer', 'intent', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'answer',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'answer', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'intent', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'answer', 'answer', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'intent',
+       'answer', 'answer', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'intent', 'intent',
+       'intent', 'intent', 'intent', 'intent', 'answer', 'answer',
+       'answer', 'intent', 'intent'], dtype=object)
+>>> owen_results[['predict_answer_confidence', 'predict_intent_confidence']] = svc.predict_proba(X)
+>>> owen_results.head().T
+                                  0         1         2         3        4
+is_testset_example            False      True     False     False    False
+nlu_prediction               intent    intent    intent    intent   intent
+predict_answer_confidence  0.016282  0.010848  0.020492  0.016275  0.01041
+predict_intent_confidence  0.983718  0.989152  0.979508  0.983725  0.98959
+>>> owen_results.to_csv('mathtext/data/owen_results_predict_answer_or_intent.csv')
+>>> ls
+>>> pwd
+'/home/hobs/code/tangibleai/mathtext/mathtext'
+>>> owen_results.to_csv(DATA_DIR / 'owen_results_predict_answer_or_intent.csv')
+>>> svc_is_correct = SVC(class_weight='balanced', probability=True)
+>>> df
+    annotater  message_num  ... predicted_value value_is_correct
+0      millie           91  ...            0.25                1
+1      millie           93  ...               1                0
+2      millie           95  ...               1                0
+3      millie          146  ...               1                0
+4      millie          192  ...               1                0
+..        ...          ...  ...             ...              ...
+952      tony        74605  ...             yes                1
+953      tony        74613  ...             yes                1
+954      tony        74614  ...             yes                0
+955      tony        74615  ...             yes                1
+956      tony        74646  ...             yes                1
+
+[957 rows x 10 columns]
+>>> df.iloc[0]
+annotater                                                      millie
+message_num                                                        91
+question            Counting means to say numbers one after the ot...
+expected_answer                                                   Yes
+text                                                      I have a qu
+predicted_type                                                 intent
+actual_type                                                    intent
+type_is_correct                                                     0
+predicted_value                                                  0.25
+value_is_correct                                                    1
+Name: 0, dtype: object
+>>> ls data
+>>> df = pd.read_csv(DATA_DIR / 'annotated_data - answer_correct.csv')
+>>> df.iloc[0]
+message_num                                                      636
+question                    The line given below is not curved line.
+expected_answer                                                    T
+student_answer                                                  TRUE
+human_judgement                                                    1
+old_model_judgement                                                1
+old_model_correct                                                  1
+human_interpretation                                               T
+old_model_interpretation                                           T
+Name: 0, dtype: object
+>>> feature_columns
+['question', 'expected_answer', 'text']
+>>> feature_columns = 'question expected_answer student_answer'.split()
+>>> Xs = [enc.transform(df[c]) for c in feature_columns]
+>>> y =
+>>> y = df['human_judgement']
+>>> X = np.concatenate(Xs)
+>>> X = np.concatenate(Xs, axis=1)
+>>> X.shape
+(50, 1152)
+>>> svc_is_correct.fit(X, y)
+SVC(class_weight='balanced', probability=True)
+>>> svc.score(X, y)
+>>> y
+0     1
+1     1
+2     1
+3     1
+4     1
+5     1
+6     0
+7     1
+8     0
+9     0
+10    1
+11    1
+12    1
+13    1
+14    0
+15    1
+16    0
+17    1
+18    0
+19    0
+20    1
+21    1
+22    1
+23    0
+24    1
+25    1
+26    0
+27    0
+28    0
+29    1
+30    0
+31    1
+32    1
+33    1
+34    1
+35    0
+36    1
+37    1
+38    1
+39    1
+40    1
+41    1
+42    1
+43    1
+44    1
+45    1
+46    1
+47    1
+48    1
+49    1
+Name: human_judgement, dtype: int64
+>>> svc.predict(X)
+array(['answer', 'answer', 'answer', 'answer', 'answer', 'intent',
+       'intent', 'intent', 'answer', 'answer', 'intent', 'intent',
+       'intent', 'answer', 'intent', 'intent', 'answer', 'intent',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'answer', 'answer', 'answer', 'answer', 'answer',
+       'intent', 'intent', 'intent', 'answer', 'answer', 'answer',
+       'intent', 'intent', 'answer', 'answer', 'answer', 'answer',
+       'answer', 'intent', 'intent', 'answer', 'intent', 'answer',
+       'answer', 'answer'], dtype=object)
+>>> svc_is_correct.score(X, y)
+0.98
+>>> owen_results_answer_is_correct = pd.DataFrame(svc_is_correct.predict(X, y), columns=[nlu_prediction])
+>>> owen_results_answer_is_correct = pd.DataFrame(svc_is_correct.predict(X), columns=[nlu_prediction])
+>>> owen_results_answer_is_correct = pd.DataFrame()
+>>> owen_results_answer_is_correct['nlu_prediction'] = svc_is_correct.predict(X)
+>>> owen_results_answer_is_correct['predict_correct_confidence'] = svc_is_correct.predict_proba(X)
+>>> owen_results_answer_is_correct[['predict_student_ans_incorrect_confidence', 'predict_student_ans_correct_confidence']] = svc_is_correct.predict_proba(X)
+>>> owen_results_answer_is_correct
+    nlu_prediction  ...  predict_student_ans_correct_confidence
+0                1  ...                                0.752854
+1                1  ...                                0.772242
+2                0  ...                                0.720153
+3                1  ...                                0.758858
+4                1  ...                                0.769127
+5                1  ...                                0.740518
+6                0  ...                                0.672150
+7                1  ...                                0.772247
+8                0  ...                                0.663092
+9                0  ...                                0.691504
+10               1  ...                                0.732184
+11               1  ...                                0.756816
+12               1  ...                                0.734474
+13               1  ...                                0.768444
+14               0  ...                                0.663076
+15               1  ...                                0.760250
+16               0  ...                                0.667856
+17               1  ...                                0.772235
+18               0  ...                                0.682299
+19               0  ...                                0.663098
+20               1  ...                                0.738479
+21               1  ...                                0.772229
+22               1  ...                                0.767833
+23               0  ...                                0.663092
+24               1  ...                                0.739518
+25               1  ...                                0.748310
+26               0  ...                                0.689987
+27               0  ...                                0.663067
+28               0  ...                                0.663096
+29               1  ...                                0.750652
+30               0  ...                                0.683623
+31               1  ...                                0.772253
+32               1  ...                                0.772236
+33               1  ...                                0.772252
+34               1  ...                                0.772226
+35               0  ...                                0.663098
+36               1  ...                                0.772259
+37               1  ...                                0.772247
+38               1  ...                                0.772235
+39               1  ...                                0.759490
+40               1  ...                                0.758697
+41               1  ...                                0.772229
+42               1  ...                                0.763207
+43               1  ...                                0.772238
+44               1  ...                                0.762606
+45               1  ...                                0.767845
+46               1  ...                                0.773756
+47               1  ...                                0.747945
+48               1  ...                                0.756120
+49               1  ...                                0.772242
+
+[50 rows x 3 columns]
+>>> owen_results_answer_is_correct.head().T
+                                                 0         1  ...         3         4
+nlu_prediction                            1.000000  1.000000  ...  1.000000  1.000000
+predict_student_ans_incorrect_confidence  0.247146  0.227758  ...  0.241142  0.230873
+predict_student_ans_correct_confidence    0.752854  0.772242  ...  0.758858  0.769127
+
+[3 rows x 5 columns]
+>>> ls data/*.csv
+>>> owen_results_answer_is_correct.to_csv(DATA_DIR / 'owen_results_predict_student_answer_correct.csv')
+>>> hist -o -p -f rori_train_answer_correctness_predictor.hist.ipy

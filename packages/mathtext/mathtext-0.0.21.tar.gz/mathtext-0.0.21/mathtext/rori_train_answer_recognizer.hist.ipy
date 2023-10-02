@@ -1,0 +1,400 @@
+>>> #!/usr/bin/env python
+... # coding: utf-8
+... """  Create multilabel intent recognition model from a dataset of labeled messages/utterances.
+... 
+... Datasets are stored in mathtext/data/ as CSVs.
+... To train a model your application, run the following:
+... 
+... from mathtext.models.multilabel_intent_recognition import run_multilabel_model_development_process
+... run_multilabel_model_development_process()
+... """
+... 
+... import io
+... import joblib
+... import numpy as np
+... import pandas as pd
+... import re
+... import requests
+... import subprocess
+... 
+... from collections import Counter
+... from datetime import datetime
+... from pathlib import Path
+... 
+... # import seaborn as sns
+... from sentence_transformers import SentenceTransformer
+... from sklearn.base import TransformerMixin, BaseEstimator
+... from sklearn.linear_model import LogisticRegression
+... from sklearn.metrics import f1_score
+... from sklearn.multiclass import OneVsRestClassifier
+... from sklearn.pipeline import Pipeline
+... 
+... from mathtext.constants import GOOGLE_SHEET_LINK, DATA_DIR
+... from mathtext.models.object_storage_manager import upload_to_object_storage
+... 
+... 
+... np.random.seed(42)
+... 
+... # Only used if GOOGLE_SHEET_LINK is unavailable
+... # Requires this file to be on computer
+... ANNOTATED_QUESTION_ANSWERS = DATA_DIR / "annotated_data - wholeset_annotated.csv"
+... 
+... 
+... from mathtext.models.multilabel_intent_recognition import BERTEncoder
+...
+>>> from mathtext.models import BERTEncoder
+... ANNOTATED_QUESTION_ANSWERS = 'annotated_data - wholeset_annotated.csv
+... 
+... df = pd.read_csv(ANNOTATED_QUESTION_ANSWERS)
+...
+>>> from mathtext.models.encoders import BERTEncoder
+... ANNOTATED_QUESTION_ANSWERS = 'annotated_data - wholeset_annotated.csv'
+... 
+... df = pd.read_csv(ANNOTATED_QUESTION_ANSWERS)
+...
+>>> from mathtext.models.encoders import BERTEncoder
+... from mathtext.constants import DATA_DIR
+... import pandas as pd
+... 
+... ANNOTATED_QUESTION_ANSWERS = DATA_DIR / 'annotated_data - wholeset_annotated.csv'
+... 
+... df = pd.read_csv(ANNOTATED_QUESTION_ANSWERS)
+...
+>>> df
+    annotater  message_num  ... predicted_value value_is_correct
+0      millie           91  ...            0.25                1
+1      millie           93  ...               1                0
+2      millie           95  ...               1                0
+3      millie          146  ...               1                0
+4      millie          192  ...               1                0
+..        ...          ...  ...             ...              ...
+952      tony        74605  ...             yes                1
+953      tony        74613  ...             yes                1
+954      tony        74614  ...             yes                0
+955      tony        74615  ...             yes                1
+956      tony        74646  ...             yes                1
+
+[957 rows x 10 columns]
+>>> df.iloc[0]
+annotater                                                      millie
+message_num                                                        91
+question            Counting means to say numbers one after the ot...
+expected_answer                                                   Yes
+text                                                      I have a qu
+predicted_type                                                 intent
+actual_type                                                    intent
+type_is_correct                                                     0
+predicted_value                                                  0.25
+value_is_correct                                                    1
+Name: 0, dtype: object
+>>> 
+... y = df['actual_type']
+...
+>>> feature_columns = 'question expected_answer text'.split()
+>>> feature_columns
+['question', 'expected_answer', 'text']
+>>> enc = BERTEncoder()
+>>> enc.transform(df[feature_columns[0]])
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.02188618,  0.09084655, -0.08676372, ...,  0.07098322,
+        -0.00181633, -0.01808713]], dtype=float32)
+>>> X = []
+... for c in feature_columns:
+...     pass
+...
+>>> np.append?
+>>> x1, x2, x3 = ___, __, _
+>>> x1
+annotater                                                      millie
+message_num                                                        91
+question            Counting means to say numbers one after the ot...
+expected_answer                                                   Yes
+text                                                      I have a qu
+predicted_type                                                 intent
+actual_type                                                    intent
+type_is_correct                                                     0
+predicted_value                                                  0.25
+value_is_correct                                                    1
+Name: 0, dtype: object
+>>> x2
+['question', 'expected_answer', 'text']
+>>> x3
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.02188618,  0.09084655, -0.08676372, ...,  0.07098322,
+        -0.00181633, -0.01808713]], dtype=float32)
+>>> X_question
+>>> X_question = x3
+>>> X_expected_answer = enc.transform(df[feature_columns[1]])
+>>> X_text = enc.transform(df[feature_columns[2]])
+>>> y
+0      intent
+1      intent
+2      intent
+3      intent
+4      intent
+        ...  
+952    answer
+953    answer
+954    answer
+955    intent
+956    intent
+Name: actual_type, Length: 957, dtype: object
+>>> np.append(X_question, X_text)
+array([ 0.03126064,  0.00489514, -0.00954852, ...,  0.04078176,
+       -0.11375008, -0.06516626], dtype=float32)
+>>> np.append(X_question, X_text).shape
+(734976,)
+>>> np.append(X_question, X_text).size
+734976
+>>> X_question
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.03315016,  0.05816261,  0.01775443, ...,  0.03643872,
+        -0.056274  , -0.01580845],
+       [ 0.02188618,  0.09084655, -0.08676372, ...,  0.07098322,
+        -0.00181633, -0.01808713]], dtype=float32)
+>>> X_question.shape
+(957, 384)
+>>> X_text.shape
+(957, 384)
+>>> np.concatenate(X_question, X_text)
+>>> np.concatenate([X_question, X_text])
+array([[ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.03126064,  0.00489514, -0.00954852, ...,  0.01950722,
+        -0.00414024, -0.03175621],
+       [ 0.07273152,  0.05314391,  0.01335008, ...,  0.00806003,
+         0.0006142 , -0.05942646],
+       ...,
+       [-0.1066643 ,  0.0274586 , -0.02340438, ...,  0.05261293,
+        -0.05930316, -0.01128087],
+       [-0.02447285,  0.09097379, -0.00906423, ..., -0.0565764 ,
+         0.09574347,  0.00691886],
+       [-0.11400303, -0.02115089, -0.03606159, ...,  0.04078176,
+        -0.11375008, -0.06516626]], dtype=float32)
+>>> np.concatenate([X_question, X_text]).shape
+(1914, 384)
+>>> np.concatenate([X_question, X_text], axis=1).shape
+(957, 768)
+>>> X = np.concatenate([X_question, X_text], axis=1)
+>>> X = np.concatenate([X_question, X_text, X_expected_answer], axis=1)
+>>> X.shape
+(957, 1152)
+>>> y.shape
+(957,)
+>>> is_test = np.random.rand(len(y)) > .9
+>>> is_train = ~is_test
+>>> is_test
+array([False,  True, False, False, False, False, False, False, False,
+       False, False,  True, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False,  True,  True, False,
+       False, False, False, False, False, False, False,  True, False,
+       False, False, False, False, False,  True, False,  True, False,
+       False,  True, False, False, False, False, False, False, False,
+       False, False, False, False, False, False,  True, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False,  True, False, False, False,
+       False, False, False, False,  True, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False,  True,
+       False, False, False, False,  True,  True, False, False, False,
+       False, False, False, False, False, False,  True, False, False,
+       False,  True, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False,  True, False,
+       False, False,  True, False, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False,  True, False, False, False, False, False, False, False,
+       False, False, False, False, False, False,  True,  True,  True,
+       False, False,  True, False,  True,  True, False, False, False,
+       False, False, False, False,  True, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False,  True,
+       False, False, False, False, False, False, False,  True, False,
+       False, False, False, False, False, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False,  True, False,
+       False, False, False, False,  True, False,  True,  True, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False,  True,
+       False, False, False, False, False,  True, False, False, False,
+       False, False, False,  True, False, False,  True,  True, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+        True, False, False, False,  True,  True, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False,  True, False, False, False,
+       False,  True, False,  True, False, False, False,  True, False,
+       False,  True, False, False, False, False, False, False,  True,
+       False, False,  True, False, False, False, False, False, False,
+       False, False, False,  True,  True, False, False, False, False,
+       False, False,  True, False,  True, False, False, False,  True,
+       False, False, False, False, False,  True, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+        True,  True, False, False,  True, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False,  True, False, False, False, False, False, False,  True,
+       False,  True, False, False, False,  True, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False,  True, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+        True, False, False,  True, False, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False,  True, False,  True, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False,  True, False, False,  True, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False,  True, False, False, False,  True, False, False,
+       False, False, False, False,  True, False, False,  True, False,
+       False, False, False, False, False,  True,  True, False, False,
+        True, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False, False,  True, False, False,
+       False, False, False, False, False, False, False, False,  True,
+       False, False, False, False, False, False,  True, False, False,
+       False,  True, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False,  True, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False,  True,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False,  True, False, False, False,
+       False,  True, False, False, False, False, False, False, False,
+       False, False,  True, False, False, False, False, False,  True,
+       False, False, False])
+>>> X[is_test]
+array([[ 0.03126064,  0.00489514, -0.00954852, ..., -0.05580992,
+         0.03755255, -0.02041548],
+       [ 0.04437093,  0.10056917, -0.04553934, ...,  0.01864041,
+        -0.03758201,  0.02956607],
+       [ 0.02724288,  0.03420565, -0.05149228, ..., -0.05581001,
+         0.03755248, -0.02041544],
+       ...,
+       [ 0.00934698,  0.06416794,  0.02563638, ...,  0.06092619,
+        -0.0581618 , -0.02232906],
+       [ 0.07657675, -0.01205633, -0.00142222, ...,  0.01465373,
+        -0.02263188,  0.02510643],
+       [ 0.03315016,  0.05816261,  0.01775443, ..., -0.05581001,
+         0.03755248, -0.02041544]], dtype=float32)
+>>> X[is_test].shape
+(97, 1152)
+>>> X[is_train].shape
+(860, 1152)
+>>> X.shape
+(957, 1152)
+>>> from sklearn.linear_model import LogisticRegression
+>>> from sklearn.svm import SVC
+>>> lr = LogisticRegression()
+>>> lr = LogisticRegression(class_weight='balanced')
+>>> svc = SVC(class_weight='balanced')
+>>> y_train = y[is_train]
+>>> lr.fit(X_train, y_train)
+>>> X_train = X[is_train]
+>>> X_test = X[is_test]
+>>> y_test = y[is_test]
+>>> lr.fit(X_train, y_train)
+LogisticRegression(class_weight='balanced')
+>>> lr.score(X_test,y_test)
+0.9278350515463918
+>>> lr.score(X_train,y_train)
+0.9651162790697675
+>>> LogisticRegression?
+>>> lr2 = LogisticRegression(C=.1)
+>>> lr2 = LogisticRegression(C=.1, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.1, class_weight='balanced')
+>>> lr2.score(X_train,y_train)
+0.9290697674418604
+>>> lr2.score(X_test,y_test)
+0.9175257731958762
+>>> lr2 = LogisticRegression(C=.6, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.6, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_train,y_train)
+0.9616279069767442
+>>> lr2 = LogisticRegression(C=.35, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.35, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9175257731958762
+>>> lr2 = LogisticRegression(C=.5, class_weight='balanced')
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.5, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.fit(X_train, y_train)
+LogisticRegression(C=0.5, class_weight='balanced')
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_test,y_test)
+0.9278350515463918
+>>> lr2.score(X_train,y_train)
+0.9604651162790697
+>>> svc.fit(X_train, y_train)
+SVC(class_weight='balanced')
+>>> svc.score(X_test, y_test)
+0.9484536082474226
+>>> svc.score(X_train, y_train)
+0.9883720930232558
+>>> hist -o -p -f rori_train_answer_recognizer.hist.ipy
