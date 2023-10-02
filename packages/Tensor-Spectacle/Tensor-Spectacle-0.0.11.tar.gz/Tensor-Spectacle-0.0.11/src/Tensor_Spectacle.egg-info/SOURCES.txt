@@ -1,0 +1,8 @@
+LICENCE
+MANIFEST.in
+pyproject.toml
+setup.cfg
+src/Tensor_Spectacle.egg-info/PKG-INFO
+src/Tensor_Spectacle.egg-info/SOURCES.txt
+src/Tensor_Spectacle.egg-info/dependency_links.txt
+src/Tensor_Spectacle.egg-info/top_level.txt

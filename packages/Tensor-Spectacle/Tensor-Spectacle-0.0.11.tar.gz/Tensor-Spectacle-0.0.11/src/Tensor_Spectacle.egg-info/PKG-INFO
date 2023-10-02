@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Tensor-Spectacle
+Version: 0.0.11
+Summary: This is a toy project that uses manim to visulize a sequence of tensors.
+Home-page: https://github.com/Don-Yin/Tensor-Spectacle
+Author: Don Yin
+Author-email: don_yin@outlook.com
+Project-URL: Bug Tracker, https://github.com/Don-Yin/Tensor-Spectacle/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+"For details, see https://github.com/Don-Yin/Tensor-Spectacle"
