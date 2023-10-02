@@ -1,0 +1,12 @@
+setup.py
+dicergirl/plugins/scp/__init__.py
+dicergirl/plugins/scp/agent.py
+dicergirl/plugins/scp/attributes.py
+dicergirl/plugins/scp/nbhandlers.py
+dicergirl/plugins/scp/scpcards.py
+dicergirl/plugins/scp/scputils.py
+dicergirl_plugin_scp.egg-info/PKG-INFO
+dicergirl_plugin_scp.egg-info/SOURCES.txt
+dicergirl_plugin_scp.egg-info/dependency_links.txt
+dicergirl_plugin_scp.egg-info/requires.txt
+dicergirl_plugin_scp.egg-info/top_level.txt
