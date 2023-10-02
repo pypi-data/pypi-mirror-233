@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: exon-py
+Version: 0.0.3
+Project-URL: Documentation, https://github.com/unknown/exon-py#readme
+Project-URL: Issues, https://github.com/unknown/exon-py/issues
+Project-URL: Source, https://github.com/unknown/exon-py
+Author-email: Trent Hauck <trent@trenthauck.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: adbc-driver-flightsql==0.7.0
+Requires-Dist: grpcio==1.59.0
+Requires-Dist: protobuf==4.24.3
+Requires-Dist: pyarrow==13.0.0
+Description-Content-Type: text/markdown
+
+# Exon Py
+
+[![PyPI - Version](https://img.shields.io/pypi/v/exon-py.svg)](https://pypi.org/project/exon-py)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/exon-py.svg)](https://pypi.org/project/exon-py)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install exon-py
+```
+
+## License
+
+`exon-py` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
