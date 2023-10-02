@@ -1,0 +1,108 @@
+site_name: "medchem"
+site_description: "Medchem: Molecular filtering for drug discovery."
+site_url: "https://github.com/datamol-io/medchem"
+repo_url: "https://github.com/datamol-io/medchem"
+repo_name: "datamol-io/medchem"
+copyright: Copyright 2020 - 2023 datamol.io
+
+remote_branch: "gh-pages"
+use_directory_urls: false
+docs_dir: "docs"
+
+# Fail on warnings to detect issues with types and docstring
+strict: true
+
+nav:
+  - Overview: index.md
+  - Tutorials:
+      - Basic Concepts: tutorials/Basic_Concepts.ipynb
+      - Functional API: tutorials/Functional_API.ipynb
+      - Medchem Rules: tutorials/Medchem_Rules.ipynb
+      - Structural Filters: tutorials/Structural_Filters.ipynb
+      - Catalogs: tutorials/Catalogs.ipynb
+      - Chemical Groups: tutorials/Chemical_Groups.ipynb
+      - Medchem Query Language: tutorials/Medchem_Query_Language.ipynb
+      - Molecular Complexity: tutorials/Molecular_Complexity.ipynb
+      - Constraints Filtering: tutorials/Constraints_Filtering.ipynb
+  - CLI: cli.md
+  - API:
+      - medchem.rules: api/medchem.rules.md
+      - medchem.structural: api/medchem.structural.md
+      - medchem.catalogs: api/medchem.catalogs.md
+      - medchem.complexity: api/medchem.complexity.md
+      - medchem.groups: api/medchem.groups.md
+      - medchem.constraints: api/medchem.constraints.md
+      - medchem.functional: api/medchem.functional.md
+      - medchem.query: api/medchem.query.md
+      - medchem.utils: api/medchem.utils.md
+
+theme:
+  name: material
+  # NOTE(hadim): to customize the material primary and secondary
+  # color check `docs/assets/css/custom.css`.
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.top
+
+  favicon: images/logo.png
+  logo: images/logo.svg
+
+extra_css:
+  - _assets/css/custom.css
+  - _assets/css/tweak-width.css
+
+
+extra_javascript:
+  - _assets/js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition
+  - markdown_include.include
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.details
+  - mkdocs-click
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+
+watch:
+  - medchem/
+
+plugins:
+  - search
+
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("docs")
+            - sys.path.append("medchem")
+          options:
+            new_path_syntax: yes
+            show_root_heading: yes
+            heading_level: 3
+            show_source: false
+
+  - mkdocs-jupyter:
+      execute: False
+      remove_tag_config:
+        remove_cell_tags: [remove_cell]
+        remove_all_outputs_tags: [remove_output]
+        remove_input_tags: [remove_input]
+
+  - mike:
+      version_selector: true
+
+extra:
+  version:
+    # Multi versioning provider for mkdocs-material (used for the JS selector)
+    provider: mike

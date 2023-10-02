@@ -1,0 +1,8 @@
+typer
+loguru
+tqdm
+numpy
+lark
+pandas
+networkx
+datamol>=0.10
