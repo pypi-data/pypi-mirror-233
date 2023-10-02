@@ -1,0 +1,11 @@
+setup.py
+Vedic_faceDetect.egg-info/PKG-INFO
+Vedic_faceDetect.egg-info/SOURCES.txt
+Vedic_faceDetect.egg-info/dependency_links.txt
+Vedic_faceDetect.egg-info/requires.txt
+Vedic_faceDetect.egg-info/top_level.txt
+vedic_facedetect.egg-info/PKG-INFO
+vedic_facedetect.egg-info/SOURCES.txt
+vedic_facedetect.egg-info/dependency_links.txt
+vedic_facedetect.egg-info/requires.txt
+vedic_facedetect.egg-info/top_level.txt
