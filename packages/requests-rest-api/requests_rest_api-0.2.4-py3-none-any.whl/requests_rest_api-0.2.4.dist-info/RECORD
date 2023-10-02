@@ -1,0 +1,10 @@
+requests_rest_api/__about__.py,sha256=UN23--6qnC2vccUuF6qkop8YRqgLxU7A5jR-gAILOPs,133
+requests_rest_api/__init__.py,sha256=yMpHb5SQ5KczCn8UXbbTt7OaXqyZ9TUz0IUWELne7a0,517
+requests_rest_api/auth.py,sha256=RdFaLB879YW76KNavlaahbHoT5Tegdq_iHDSg3K-jU0,856
+requests_rest_api/errors.py,sha256=EbGVB8x9_SGLZ-ekQWKFNE_LCladCcJeAk7lP6CAcsM,127
+requests_rest_api/http_request_methods.py,sha256=oQSPbvIpUe355kNb61npsydhZQqWu1ClDfst79A7fuE,960
+requests_rest_api/rest_api.py,sha256=LD3YLXRU4UNmjNp_EsBBjnVwH6UBPYbzLOVdfBu_Oys,5145
+requests_rest_api-0.2.4.dist-info/METADATA,sha256=_3iNuwtwFy5MGbLzUWDQtDdWUkuucW35WDHBER4Mrnk,3119
+requests_rest_api-0.2.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+requests_rest_api-0.2.4.dist-info/licenses/LICENSE.txt,sha256=n9vPEr4aR0LEaY_ogPofHOK36GRPYCQIjs0hz3GYMDE,1101
+requests_rest_api-0.2.4.dist-info/RECORD,,
