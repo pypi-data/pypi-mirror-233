@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+notebook_as_pdf_updated/__init__.py
+notebook_as_pdf_updated.egg-info/PKG-INFO
+notebook_as_pdf_updated.egg-info/SOURCES.txt
+notebook_as_pdf_updated.egg-info/dependency_links.txt
+notebook_as_pdf_updated.egg-info/entry_points.txt
+notebook_as_pdf_updated.egg-info/requires.txt
+notebook_as_pdf_updated.egg-info/top_level.txt
