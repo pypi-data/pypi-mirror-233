@@ -1,0 +1,295 @@
+query UserProblemsSolved($username: String!) {
+  allQuestionsCount {
+    difficulty
+    count
+  }
+  matchedUser(username: $username) {
+    problemsSolvedBeatsStats {
+      difficulty
+      percentage
+    }
+    submitStatsGlobal {
+      acSubmissionNum {
+        difficulty
+        count
+      }
+    }
+  }
+}
+
+query ProblemsetQuestionList($categorySlug: String, $limit: Int, $skip: Int, $filters: QuestionListFilterInput) {
+  problemsetQuestionList: questionList(
+    categorySlug: $categorySlug
+    limit: $limit
+    skip: $skip
+    filters: $filters
+  ) {
+    total: totalNum
+    questions: data {
+      acRate
+      difficulty
+      freqBar
+      frontendQuestionId: questionFrontendId
+      questionId
+      isFavor
+      paidOnly: isPaidOnly
+      status
+      title
+      titleSlug
+      topicTags {
+        name
+        id
+        slug
+      }
+      hasSolution
+      hasVideoSolution
+    }
+  }
+}
+
+query ProblemTotalCount($categorySlug: String, $limit: Int, $skip: Int, $filters: QuestionListFilterInput) {
+  problemsetQuestionList: questionList(
+    categorySlug: $categorySlug
+    limit: $limit
+    skip: $skip
+    filters: $filters
+  ) {
+    total: totalNum
+  }
+}
+
+query QuestionOfToday {
+  activeDailyCodingChallengeQuestion {
+    date
+    userStatus
+    link
+    question {
+      acRate
+      difficulty
+      freqBar
+      frontendQuestionId: questionFrontendId
+      isFavor
+      paidOnly: isPaidOnly
+      status
+      title
+      titleSlug
+      hasVideoSolution
+      hasSolution
+      topicTags {
+        name
+        id
+        slug
+      }
+    }
+  }
+}
+
+query QuestionContent($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    content
+    mysqlSchemas
+    dataSchemas
+  }
+}
+
+query QuestionInfoTable($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionId
+    questionFrontendId
+    title
+    titleSlug
+    isPaidOnly
+    difficulty
+    likes
+    dislikes
+    categoryTitle
+    status
+  }
+}
+
+# query for submissions
+query SubmissionDetails($submissionId: Int!) {
+  submissionDetails(submissionId: $submissionId) {
+    runtime
+    runtimeDisplay
+    runtimePercentile
+    runtimeDistribution
+    memory
+    memoryDisplay
+    memoryPercentile
+    memoryDistribution
+    code
+    timestamp
+    statusCode
+    user {
+      username
+      profile {
+        realName
+        userAvatar
+      }
+    }
+    lang {
+      name
+      verboseName
+    }
+    question {
+      questionId
+    }
+    notes
+    flagType
+    topicTags {
+      tagId
+      slug
+      name
+    }
+    runtimeError
+    compileError
+    lastTestcase
+    totalCorrect
+    totalTestcases
+  }
+}
+
+# submission list
+query SubmissionList($offset: Int!, $limit: Int!, $lastKey: String, $questionSlug: String!, $lang: Int, $status: Int) {
+  questionSubmissionList(
+    offset: $offset
+    limit: $limit
+    lastKey: $lastKey
+    questionSlug: $questionSlug
+    lang: $lang
+    status: $status
+  ) {
+    lastKey
+    hasNext
+    submissions {
+      id
+      title
+      titleSlug
+      status
+      statusDisplay
+      lang
+      langName
+      runtime
+      timestamp
+      url
+      isPending
+      memory
+      hasNotes
+      notes
+      flagType
+      topicTags {
+        id
+      }
+    }
+  }
+}
+
+query GetQuestionDetail($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionId
+    questionFrontendId
+    boundTopicId
+    title
+    titleSlug
+    frequency
+    freqBar
+    content
+    translatedTitle
+    isPaidOnly
+    difficulty
+    likes
+    dislikes
+    isLiked
+    isFavor
+    similarQuestions
+    contributors {
+      username
+      profileUrl
+      avatarUrl
+      __typename
+    }
+    langToValidPlayground
+    topicTags {
+      name
+      slug
+      translatedName
+      __typename
+    }
+    companyTagStats
+    codeSnippets {
+      lang
+      langSlug
+      code
+      __typename
+    }
+    stats
+    acRate
+    codeDefinition
+    hints
+    solution {
+      id
+      canSeeDetail
+      __typename
+    }
+    hasSolution
+    hasVideoSolution
+    status
+    sampleTestCase
+    enableRunCode
+    metaData
+    translatedContent
+    judgerAvailable
+    judgeType
+    mysqlSchemas
+    enableTestMode
+    envInfo
+    __typename
+  }
+}
+
+query consolePanelConfig($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionId
+    questionFrontendId
+    questionTitle
+    enableDebugger
+    enableRunCode
+    enableSubmit
+    enableTestMode
+    exampleTestcaseList
+    metaData
+  }
+}
+
+
+query recentAcSubmissions($username: String!, $limit: Int!) {
+  recentAcSubmissionList(username: $username, limit: $limit) {
+    id
+    title
+    titleSlug
+    timestamp
+  }
+}
+    
+query GetQuestionId($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionId
+  }
+}
+
+query IntrospectionQuery {
+  __type(name: "Query") {
+    name
+    fields {
+      name
+      args {
+        name
+        type {
+          name
+          kind
+        }
+      }
+    }
+  }
+}
