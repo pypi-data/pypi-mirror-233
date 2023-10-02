@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: pytest-donde
+Version: 1.1.0
+Summary: record pytest session characteristics per test item (coverage and duration) into a persistent file and use them in your own plugin or script.
+Home-page: https://github.com/mikamove/pytest-donde
+Author: Clemens Löbner
+Author-email: mikamove@posteo.de
+Maintainer: Clemens Löbner
+Maintainer-email: mikamove@posteo.de
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest>=7.3.1
+Requires-Dist: pytest-cov>=4.1.0
+
+# pytest_donde
+
+`pytest_donde` dumps per-test-item coverage and duration into a persistent record file and offers an API to access this record in your plugins or scripts.
+
+## details
+
+### create persistent record
+
+```shell
+python -m pytest --donde=/path/to/src
+```
+
+This creates a `donde.json` record file with the following information for every test item:
+- run duration (sec),
+- covered lines of code w.r.t. `/path/to/src`
+
+by wrapping `pytest-cov`, evaluating its output, and putting this together with collected test item durations.
+
+### access record
+
+```python
+from pytest_donde import Record
+record = Record.from_file('donde.json')
+```
+
+A demo example (which is trivial, because it uses only durations, not coverage):
+
+```python
+
+class PluginPreferFastest:
+
+    def __init__(self, path_input):
+        self.record = Record.from_file(path_input)
+
+    def pytest_collection_modifyitems(self, items):
+
+        def key(item):
+            try:
+                return self.record.nodeid_to_duration[item.nodeid]
+            except KeyError:
+                # test is unknown to the donde.json record,
+                # possibly it was skipped there or was added after the record was made
+                # we prefer it to run at the beginning
+                return 0.0
+
+        items[:] = sorted(items, key=key)
+```
+
+## install
+
+```shell
+python -m pip install pytest-donde
+```
