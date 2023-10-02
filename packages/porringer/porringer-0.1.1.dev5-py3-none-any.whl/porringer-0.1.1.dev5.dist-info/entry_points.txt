@@ -1,0 +1,3 @@
+[console_scripts]
+porringer = porringer.application.click:application
+
