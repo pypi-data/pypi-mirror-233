@@ -1,0 +1,2 @@
+[console_scripts]
+texture-mapping = texture_mapping.apps.mapping:main

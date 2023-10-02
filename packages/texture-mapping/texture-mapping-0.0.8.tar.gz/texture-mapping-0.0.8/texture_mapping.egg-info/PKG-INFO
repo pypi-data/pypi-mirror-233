@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: texture-mapping
+Version: 0.0.8
+Summary: PCL Texture Mapping Wrapper of Python
+Home-page: https://github.com/iory/texture-mapping
+Author: iory
+Author-email: ab.ioryz@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-build
+Requires-Dist: pillow
+
+# Texture Mapping
+
+## Install
+
+```
+pip install texture-mapping
+```
+
+## Input txt config format
+
+`txt` file indicates camera pose and intrinsic parameters.
+The format is as follows.
+
+```
+translation_x translation_y translation_z
+rotation_00 rotation_01 rotation_02
+rotation_10 rotation_11 rotation_12
+rotation_20 rotation_21 rotation_22
+fx
+fy
+cx
+cy
+image_height
+image_width
+```
+
+## Examples
+
+```
+git clone https://github.com/iory/texture-mapping.git
+cd texture-mapping
+texture-mapping --input examples/obj.ply --out textured.obj --config-dir examples/
+```
+
+Output obj file `textured.obj` will be created at the same directory of input ply file.
+
+![](docs/image/textured.gif)
