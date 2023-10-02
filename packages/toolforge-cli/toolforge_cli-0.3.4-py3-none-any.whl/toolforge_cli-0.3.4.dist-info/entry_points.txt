@@ -1,0 +1,3 @@
+[console_scripts]
+toolforge=toolforge_cli.cli:main
+
