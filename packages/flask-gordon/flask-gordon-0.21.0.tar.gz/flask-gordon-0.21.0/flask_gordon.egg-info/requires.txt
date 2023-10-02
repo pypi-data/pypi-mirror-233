@@ -1,0 +1,8 @@
+flask<3.0.0
+werkzeug<3.0.0
+pyyaml
+torxtools>=1.0.4
+
+[celery]
+celery
+redis
