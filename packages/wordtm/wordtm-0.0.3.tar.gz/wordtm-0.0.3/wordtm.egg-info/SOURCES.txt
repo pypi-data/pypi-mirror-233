@@ -1,0 +1,12 @@
+setup.py
+wordtm/__init__.py
+wordtm/add.py
+wordtm/subtract.py
+wordtm.egg-info/PKG-INFO
+wordtm.egg-info/SOURCES.txt
+wordtm.egg-info/dependency_links.txt
+wordtm.egg-info/requires.txt
+wordtm.egg-info/top_level.txt
+wordtm/extras/__init__.py
+wordtm/extras/divide.py
+wordtm/extras/multiply.py
