@@ -1,0 +1,11 @@
+hilcat/__init__.py,sha256=kYdBfZfs2JvBUziGPbC7QwSk0EaPFarfipfHdand4GA,305
+hilcat/_dist_ver.py,sha256=MoR_fn2jtvo1bCwlgFgIt5eB6yieUW1MKZ_oSLqmpkA,148
+hilcat/core.py,sha256=B2_zeDF-cOQ_XQc-vG6wZS6d-iZcJAcDAiOfJ7XRMb8,11374
+hilcat/redis.py,sha256=zCHQUcV4mImgVgvi6UEippxAN65Xj6hUJ0SQer_ZKKY,1394
+hilcat/version.py,sha256=YtJed-1PcWRrDZBv0p59jxSV-SRTXKVuYW9WY6udx-A,349
+hilcat/db/__init__.py,sha256=btBfZnUNCpbASIoO0MmIYydtmpQsmD-TQR5k41fUIEE,76
+hilcat/db/sqlite.py,sha256=Gr0A8N4iiB2MA9xerRH8P4lfrR5xKaMYQvP1sfDgMCQ,7717
+hilcat-1.0.1.dist-info/METADATA,sha256=ZmVR2igX8pJCCMWGoawQ0ZR5nusJhvBSDrcqpMyDNzU,301
+hilcat-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+hilcat-1.0.1.dist-info/top_level.txt,sha256=SCpAIdQ4syTHZwx-jv5rETT6XqbALxSaV7o4SuaLdcI,7
+hilcat-1.0.1.dist-info/RECORD,,
