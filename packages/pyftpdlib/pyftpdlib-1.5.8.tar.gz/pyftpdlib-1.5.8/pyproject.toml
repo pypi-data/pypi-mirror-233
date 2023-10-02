@@ -1,0 +1,49 @@
+[tool.isort]
+force_single_line = true  # one import per line
+lines_after_imports = 2  # blank spaces after import section
+
+[tool.coverage.report]
+omit = [
+    "pyftpdlib/_compat.py",
+    "pyftpdlib/test/*",
+    "setup.py",
+]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "except ImportError:",
+    "if os.name == 'nt':",
+    "raise NotImplementedError('must be implemented in subclass')",
+    "if hasattr(select, 'epoll'):",
+    "if hasattr(select, 'kqueue'):",
+    "if PY3:",
+    "if hasattr(select, 'devpoll'):",
+    "if hasattr(select, 'kqueue'):",
+]
+
+[tool.pylint.messages_control]
+disable = [
+    "broad-except",
+    "consider-using-f-string",
+    "fixme",
+    "import-outside-toplevel",
+    "inconsistent-return-statements",
+    "invalid-name",
+    "logging-not-lazy",
+    "misplaced-bare-raise",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "no-else-continue",
+    "no-else-raise",
+    "no-else-return",
+    "protected-access",
+    "raise-missing-from",
+    "redefined-builtin",
+    "too-few-public-methods",
+    "too-many-instance-attributes",
+    "ungrouped-imports",
+    "unspecified-encoding",
+    "use-maxsplit-arg",
+    "useless-object-inheritance",
+]
