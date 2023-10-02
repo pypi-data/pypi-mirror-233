@@ -1,0 +1,2 @@
+[console_scripts]
+scaminsight2test = scaminsight2.main:main
