@@ -1,0 +1,3 @@
+[console_scripts]
+sageai-tests=sageai.tests.main:main
+
