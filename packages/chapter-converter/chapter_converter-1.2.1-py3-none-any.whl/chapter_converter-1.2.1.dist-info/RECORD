@@ -1,0 +1,10 @@
+chapter_converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chapter_converter/__main__.py,sha256=k9A0wmK-_ehJT0ZKf6h5GyQyloua4bdeSGIxkYftjBo,74
+chapter_converter/chapter_converter.py,sha256=zMMy_ULP9JkjhzgW6Ygw8jj0ZAByG808sH_ShzcgB0k,9089
+chapter_converter/gui.py,sha256=O2eDhz2TJpQhll3o6BaJuQRVXiifE6n-HHEtBoPVhGk,329
+chapter_converter-1.2.1.dist-info/LICENSE,sha256=6a2rSpR80zBPmiTeZtAEvQEgWHyJxxxt9EXOGFm-w2M,1067
+chapter_converter-1.2.1.dist-info/METADATA,sha256=0xZpLkhQL1rtj5FebP2aolYwiRgY5JMTkH0PgQgYDEY,5732
+chapter_converter-1.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+chapter_converter-1.2.1.dist-info/entry_points.txt,sha256=CRmv529ULEtLiaNvl2LaGOLJ1bDW9dYOc9z6Jcml2N4,102
+chapter_converter-1.2.1.dist-info/top_level.txt,sha256=owEc79CVUKzFsW9rp8EoMsuyrIk2qVPJFjaSW7eq_0A,18
+chapter_converter-1.2.1.dist-info/RECORD,,
