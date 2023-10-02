@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+db_timetable_api/__init__.py
+db_timetable_api/timetable.py
+db_timetable_api.egg-info/PKG-INFO
+db_timetable_api.egg-info/SOURCES.txt
+db_timetable_api.egg-info/dependency_links.txt
+db_timetable_api.egg-info/requires.txt
+db_timetable_api.egg-info/top_level.txt
