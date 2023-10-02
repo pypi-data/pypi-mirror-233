@@ -1,0 +1,11 @@
+README.md
+setup.py
+light_pandas.egg-info/PKG-INFO
+light_pandas.egg-info/SOURCES.txt
+light_pandas.egg-info/dependency_links.txt
+light_pandas.egg-info/top_level.txt
+lightpandas/__init__.py
+lightpandas/core_api.py
+lightpandas/dataframe.py
+test/test_lpd.py
+test/test_lpd_runtime.py
