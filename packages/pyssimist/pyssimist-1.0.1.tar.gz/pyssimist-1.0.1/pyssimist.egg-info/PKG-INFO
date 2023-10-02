@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pyssimist
+Version: 1.0.1
+Summary: A Python Network Traffic Simulator... It's probably not going to work.
+Home-page: https://github.com/skarcos/pyssimist
+Author: Costas Skarakis
+Author-email: skarcos@gmail.com
+License: GPL-3.0
+License-File: LICENSE
