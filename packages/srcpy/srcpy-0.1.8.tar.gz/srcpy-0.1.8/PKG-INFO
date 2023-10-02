@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: srcpy
+Version: 0.1.8
+Home-page: https://github.com/fabriziop/SRCpy
+Author: Fabrizio Pollastri
+Author-email: f.pollastri@inrim.it
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Encoder/decoder for the SRC time signal
