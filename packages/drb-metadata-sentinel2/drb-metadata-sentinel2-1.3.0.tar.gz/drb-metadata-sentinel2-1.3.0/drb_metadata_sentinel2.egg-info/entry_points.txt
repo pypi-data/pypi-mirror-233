@@ -1,0 +1,2 @@
+[drb.addon.metadata]
+sentinel2 = drb.addons.metadata.sentinel2

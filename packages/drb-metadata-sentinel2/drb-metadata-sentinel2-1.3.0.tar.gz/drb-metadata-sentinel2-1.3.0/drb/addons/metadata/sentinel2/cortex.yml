@@ -1,0 +1,1368 @@
+###############################################################################
+# e0750a16-f302-11ec-b939-0242ac120002 -- Sentinel-2 User Product
+###############################################################################
+drbItemClass: e0750a16-f302-11ec-b939-0242ac120002
+variables:
+  - name: Node_User_Product_userProduct
+    xquery: |
+      *[matches (name(), "(\w{8}_MTD_SAFL.[ABCP]_.*|MTD_MSIL..)\.xml")]/*[matches(name(),".*User_Product")]
+  - name: Node_Product_Info_userProduct
+    xquery: |
+      declare variable $Node_User_Product_userProduct as node()? external;
+      $Node_User_Product_userProduct/General_Info/*[matches(name(),".*Product_Info")]
+  - name: Node_Datatake_userProduct
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      $Node_Product_Info_userProduct/Datatake
+  - name: Value_processingDate_userProduct
+    python: |
+      generationTime = Node_Product_Info_userProduct["GENERATION_TIME"].value
+      if len(generationTime) == 24:
+        return generationTime
+      if len(generationTime) == 20:
+        return generationTime[:19]+".000Z"
+      if len(generationTime) == 27:
+        return generationTime[:23]+".000Z"
+      return "UNKNOWN"
+  - name: Value_beginningDateTime_userProduct
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      fn:data($Node_Product_Info_userProduct/PRODUCT_START_TIME)
+  - name: Value_endingDateTime_userProduct
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      fn:data($Node_Product_Info_userProduct/PRODUCT_STOP_TIME)
+  - name: Value_productType_userProduct
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      fn:data($Node_Product_Info_userProduct/PRODUCT_TYPE)
+  - name: File_Datastrip_Metadata_File_userProduct
+    xquery: |
+      let $folder := DATASTRIP/*[fn:matches(name(), ".*")]
+      return $folder/*[fn:matches (name(), "(\w{8}_MTD_.*|MTD_DS)\.xml")]
+  - name: Node_Datastrip_Time_Info_userProduct
+    xquery: |
+      declare variable $File_Datastrip_Metadata_File_userProduct as node()? external;
+      $File_Datastrip_Metadata_File_userProduct/*[fn:matches(name(),"Level-.*_DataStrip_ID")]/
+      General_Info/Datastrip_Time_Info
+  - name: Node_Technical_Quality_Assessment_userProduct
+    xquery: |
+      declare variable $Node_User_Product_userProduct as node()? external;
+      $Node_User_Product_userProduct/*[fn:matches(name(), ".*Quality_Indicators_Info")]/
+      Technical_Quality_Assessment
+  - name: Node_Quality_Inspections_userProduct
+    xquery: |
+      declare variable $Node_User_Product_userProduct as node()? external;
+      $Node_User_Product_userProduct/*[fn:matches(name(), ".*Quality_Indicators_Info")]/
+         Quality_Control_Checks/Quality_Inspections
+metadata:
+  # platform ##################################################################
+  - name: platformShortName
+    python: |
+          return 'Sentinel-2'
+  - name: platformSerialIdentifier
+    xquery: |
+        if (matches(name(), "S2A.*"))
+            then "A"
+            else
+               if (matches(name(), "S2B.*"))
+               then "B"
+               else "UNKNOWN"
+  # INSTRUMENT ##################################################################
+  - name: instrumentShortName
+    python: |
+          return 'MSI'
+  # SENSOR ##################################################################
+  - name: sensorType
+    python: |
+          return 'OPTICAL'
+  - name: operationalMode
+    xquery: |
+      declare variable $Node_Datatake_userProduct as node()? external;
+      data($Node_Datatake_userProduct/DATATAKE_TYPE)
+  # PROCESSING ##################################################################
+  - name: processingLevel
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      
+      let $VAR_level := fn:data($Node_Product_Info_userProduct/PROCESSING_LEVEL)
+          return
+             if ($VAR_level = "Level-0")
+             then "LEVEL-0"
+             else
+                if ($VAR_level = "Level-1A")
+                then "LEVEL-1A"
+                else
+                   if ($VAR_level = "Level-1B")
+                   then "LEVEL-1B"
+                   else
+                      if ($VAR_level = "Level-1C")
+                      then "LEVEL-1C"
+                      else
+                         if ($VAR_level = "Level-2A")
+                         then "LEVEL-2A"
+                         else
+                            if ($VAR_level = "Level-2Ap")
+                            then "LEVEL-2AP"
+                            else "UNKNOWN"
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_userProduct external;
+      $Value_processingDate_userProduct
+  # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_userProduct external;
+      $Value_beginningDateTime_userProduct
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_userProduct external;
+      $Value_endingDateTime_userProduct
+  # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      xs:int(fn:data(manifest.safe/XFDU/metadataSection/
+         metadataObject[fn:matches(@ID, ".+OrbitReference")]/metadataWrap/
+         xmlData/orbitReference/orbitNumber[@type = "start"])) 
+  - name: orbitDirection
+    xquery: |
+      declare variable $Node_Datatake_userProduct as node()? external;
+      fn:data($Node_Datatake_userProduct/SENSING_ORBIT_DIRECTION)
+  # HMA-like ##################################################################
+  - name: relativeOrbitNumber
+    xquery: |
+      declare variable $Node_Datatake_userProduct as node()? external;
+      xs:int(fn:data($Node_Datatake_userProduct/SENSING_ORBIT_NUMBER))
+  - name: coordinates
+    python: |
+      var = Node_User_Product_userProduct['Geometric_Info']['Product_Footprint']['Product_Footprint']['Global_Footprint']['EXT_POS_LIST'].get_impl(str).rstrip()
+      var = " ".join(var.split()).split(' ')
+      cpt=0
+      for x in range(2, len(var), 2):
+        var.insert(x+cpt, ',')
+        cpt+=1
+      return f"""
+        <gml:Polygon xmlns:gml="http://www.opengis.net/gml"
+                        srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+            <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                    <gml:coordinates>
+                        {' '.join(var)}
+                    </gml:coordinates>
+                </gml:LinearRing>
+            </gml:outerBoundaryIs>
+        </gml:Polygon>"""
+  # QUALITY ##################################################################
+  - name: cloudCover
+    xquery: |
+      declare variable $Node_User_Product_userProduct as node()? external;
+  
+      let $VAR_cloudCoverageAssessment :=
+         $Node_User_Product_userProduct/*[fn:matches(name(), ".*Quality_Indicators_Info")]/
+         Cloud_Coverage_Assessment
+      return
+         if ($VAR_cloudCoverageAssessment)
+         then fn:data($VAR_cloudCoverageAssessment)
+         else fn:avg(fn:data(GRANULE/*/*[fn:matches (name(), ".*\.xml")]/
+                     *[fn:matches (name(), "Level-.*")]/Quality_Indicators_Info/
+                     *[fn:matches (name(), ".*Image_Content_QI")]/
+                     CLOUDY_PIXEL_PERCENTAGE)
+                    )
+  # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Value_productType_userProduct external;
+      $Value_productType_userProduct
+  - name: filename
+    xquery: |
+      name()
+  # HMA-like ##################################################################
+  - name: format
+    python: |
+          return 'SAFE'
+  # Sentinel-2 metadata
+  # PLATFOMR ##################################################################
+  - name: spacecraftName
+    xquery: |
+      declare variable $Node_Datatake_userProduct as node()? external;
+      fn:data($Node_Datatake_userProduct/SPACECRAFT_NAME)
+  # PROCESSING ##################################################################
+  - name: processingBaseline
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+      fn:data($Node_Product_Info_userProduct/PROCESSING_BASELINE)
+  # ACQUISITION ##################################################################
+  - name: dataTakeSensingStart
+    xquery: |
+      declare variable $Node_Datatake_userProduct as node()? external;
+      fn:data($Node_Datatake_userProduct/DATATAKE_SENSING_START)
+  - name: datastripSensingStart
+    xquery: |
+      declare variable $Node_Datastrip_Time_Info_userProduct as node()? external;
+      fn:data($Node_Datastrip_Time_Info_userProduct/DATASTRIP_SENSING_START)
+  - name: datastripSensingStop
+    xquery: |
+      declare variable $Node_Datastrip_Time_Info_userProduct as node()? external;
+      fn:data($Node_Datastrip_Time_Info_userProduct/DATASTRIP_SENSING_STOP)
+  # QUALITY ##################################################################
+  - name: degradedAncillaryDataPercentage
+    xquery: |
+      declare variable $Node_Technical_Quality_Assessment_userProduct as node()? external;
+      fn:data($Node_Technical_Quality_Assessment_userProduct/DEGRADED_ANC_DATA_PERCENTAGE)
+  - name: degradedMSIDataPercentage
+    xquery: |
+      declare variable $Node_Technical_Quality_Assessment_userProduct as node()? external;
+      fn:data($Node_Technical_Quality_Assessment_userProduct/DEGRADED_MSI_DATA_PERCENTAGE)
+  - name: sensorQualityFlag
+    xquery: |
+      declare variable $Node_Quality_Inspections_userProduct as node()? external;
+      
+      if ($Node_Quality_Inspections_userProduct/SENSOR_QUALITY_FLAG)
+      then fn:data($Node_Quality_Inspections_userProduct/SENSOR_QUALITY_FLAG)
+      else
+        if ($Node_Quality_Inspections_userProduct/quality_check[@checkType = "SENSOR_QUALITY"])
+        then fn:data($Node_Quality_Inspections_userProduct/quality_check[@checkType="SENSOR_QUALITY"])
+        else "UNKNOWN")
+  - name: geometricQualityFlag
+    xquery: |
+      declare variable $Node_Quality_Inspections_userProduct as node()? external;
+  
+      if ($Node_Quality_Inspections_userProduct/GEOMETRIC_QUALITY_FLAG)
+      then fn:data($Node_Quality_Inspections_userProduct/GEOMETRIC_QUALITY_FLAG)
+      else
+         if ($Node_Quality_Inspections_userProduct/quality_check[@checkType = "GEOMETRIC_QUALITY"])
+         then fn:data($Node_Quality_Inspections_userProduct/quality_check[@checkType="GEOMETRIC_QUALITY"])
+         else "UNKNOWN"
+  - name: generalQualityFlag
+    xquery: |
+      declare variable $Node_Quality_Inspections_userProduct as node()? external;
+  
+      if ($Node_Quality_Inspections_userProduct/GENERAL_QUALITY_FLAG)
+      then fn:data($Node_Quality_Inspections_userProduct/GENERAL_QUALITY_FLAG)
+      else
+         if ($Node_Quality_Inspections_userProduct/quality_check[@checkType = "GENERAL_QUALITY"])
+         then fn:data($Node_Quality_Inspections_userProduct/quality_check[@checkType="GENERAL_QUALITY"])
+         else "UNKNOWN"
+  - name: formatCorrectnessFlag
+    xquery: |
+      declare variable $Node_Quality_Inspections_userProduct as node()? external;
+  
+      if ($Node_Quality_Inspections_userProduct/FORMAT_CORRECTNESS_FLAG)
+      then fn:data($Node_Quality_Inspections_userProduct/FORMAT_CORRECTNESS_FLAG)
+      else
+         if ($Node_Quality_Inspections_userProduct/quality_check[@checkType = "FORMAT_CORRECTNESS"])
+         then fn:data($Node_Quality_Inspections_userProduct/quality_check[@checkType="FORMAT_CORRECTNESS"])
+         else "UNKNOWN"
+  - name: radiometricQualityFlag
+    xquery: |
+      declare variable $Node_Quality_Inspections_userProduct as node()? external;
+  
+      if ($Node_Quality_Inspections_userProduct/RADIOMETRIC_QUALITY_FLAG)
+      then fn:data($Node_Quality_Inspections_userProduct/RADIOMETRIC_QUALITY_FLAG)
+      else
+         if ($Node_Quality_Inspections_userProduct/quality_check[@checkType = "RADIOMETRIC_QUALITY"])
+         then fn:data($Node_Quality_Inspections_userProduct/quality_check[@checkType="RADIOMETRIC_QUALITY"])
+         else "UNKNOWN"
+  # OTHER ##################################################################
+  - name: granuleIdentifier
+    xquery: |
+      declare variable $Node_Product_Info_userProduct as node()? external;
+  
+      fn:data(($Node_Product_Info_userProduct/*[fn:matches(name(),".*Product_Organisation")]/
+               Granule_List/Granule/@granuleIdentifier)[1])
+---
+###############################################################################
+# 242ce8e2-e1af-11ec-8fea-0242ac120002 Sentinel-2 Level-1c Product
+###############################################################################
+drbItemClass: 242ce8e2-e1af-11ec-8fea-0242ac120002
+variables:
+  - name: Value_TileID_userLevel1CProduct
+    xquery: |
+      let $VAR_granule:= GRANULE/*[1]
+      let $VAR_granule_name:=
+         if (exists($VAR_granule))
+         then name($VAR_granule)
+         else ()
+      return
+         if (fn:substring($VAR_granule_name, 1, 2) = 'S2')
+         then (: old format :)
+            fn:substring($VAR_granule_name, 51, 5)
+         else (:compact format :)
+            fn:substring($VAR_granule_name, 6, 5)
+metadata:
+  - name: tileIdentifier
+    xquery: |
+      declare variable $Value_TileID_userLevel1CProduct as node()? external;
+      $Value_TileID_userLevel1CProduct
+  - name: orderedTileIdentifier
+    xquery: |
+      declare variable $Value_TileID_userLevel1CProduct as node()? external;
+  
+      if (not(empty($Value_TileID_userLevel1CProduct)))
+      then
+         (: reorder: "UUVXY" => "VYUUX" :)
+         concat(
+            substring($Value_TileID_userLevel1CProduct, 3, 1),
+            substring($Value_TileID_userLevel1CProduct, 5, 1),
+            substring($Value_TileID_userLevel1CProduct, 1, 2),
+            substring($Value_TileID_userLevel1CProduct, 4, 1))
+      else ()
+---
+###############################################################################
+# 73b017d6-e1af-11ec-8fea-0242ac120002 Sentinel-2 Level-2a Product
+###############################################################################
+drbItemClass: 73b017d6-e1af-11ec-8fea-0242ac120002
+variables:
+  - name: Node_Image_Content_QI_userLevel2AProduct
+    xquery: |
+      *[fn:matches (name(),"(S2[AB]_...._MTD_(SAF|DMP)L2A_PDMC.*|MTD_MSIL2A)\.xml")]/
+         Level-2A_User_Product/*[fn:matches(name(),".*Quality_Indicators_Info.*")]/
+         Image_Content_QI
+metadata:
+  - name: noDataPixelPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/NODATA_PIXEL_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: saturatedDefectivePixelPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/SATURATED_DEFECTIVE_PIXEL_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: darkFeaturesPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/DARK_FEATURES_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: cloudShadowPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/CLOUD_SHADOW_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: vegetationPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/VEGETATION_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: notVegetatedPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/NOT_VEGETATED_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: waterPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/WATER_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: unclassifiedPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/UNCLASSIFIED_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: mediumProbaCloudsPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+    
+      let $VAR :=
+        fn:data($Node_Image_Content_QI_userLevel2AProduct/MEDIUM_PROBA_CLOUDS_PERCENTAGE)
+      return
+        if ($VAR)
+        then $VAR
+        else ()
+  - name: highProbaCloudsPercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/HIGH_PROBA_CLOUDS_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: thinCirrusPercentage
+    xquery: |
+     declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/THIN_CIRRUS_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: snowIcePercentage
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/SNOW_ICE_PERCENTAGE)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: radiativeTransferAccuracy
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         if ($Node_Image_Content_QI_userLevel2AProduct/RADIATIVE_TRANSFER_ACCURACY)
+         then
+            fn:data($Node_Image_Content_QI_userLevel2AProduct/RADIATIVE_TRANSFER_ACCURACY)
+         else
+            if ($Node_Image_Content_QI_userLevel2AProduct/RADIATIVE_TRANSFER_ACCURAY)
+            then
+               fn:data($Node_Image_Content_QI_userLevel2AProduct/RADIATIVE_TRANSFER_ACCURAY)
+            else ()
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: waterVapourRetrievalAccuracy
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+  
+      let $VAR :=
+         fn:data($Node_Image_Content_QI_userLevel2AProduct/WATER_VAPOUR_RETRIEVAL_ACCURACY)
+      return
+         if ($VAR)
+         then $VAR
+         else ()
+  - name: aotRetrievalAccuracy
+    xquery: |
+      declare variable $Node_Image_Content_QI_userLevel2AProduct as node()? external;
+      
+      let $VAR :=
+       fn:data($Node_Image_Content_QI_userLevel2AProduct/AOT_RETRIEVAL_ACCURACY)
+      return
+       if ($VAR)
+       then $VAR
+       else ()
+---
+###############################################################################
+# fad132d2-f2fc-11ec-b939-0242ac120002 Sentinel-2 Datastrip
+###############################################################################
+drbItemClass: fad132d2-f2fc-11ec-b939-0242ac120002
+variables:
+  - name: File_Inventory_File_datastripTar
+    xquery: |
+      if (*[fn:matches (name(), "Inventory_Metadata.xml")])
+      then *[fn:matches (name(), "Inventory_Metadata.xml")]
+      else
+         if (*/*[fn:matches (name(), "Inventory_Metadata.xml")])
+         then */*[fn:matches (name(), "Inventory_Metadata.xml")]
+         else ()
+  - name: Node_Inventory_Metadata_datastripTar
+    xquery: |
+      declare variable $File_Inventory_File_datastripTar as node()? external;
+      $File_Inventory_File_datastripTar/Inventory_Metadata
+  - name: Node_Geographic_Localization_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      $Node_Inventory_Metadata_datastripTar/Geographic_Localization
+  - name: Value_beginningDateTime_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_datastripTar/
+                             Validity_Start), 5, 26),
+                "Z")
+  - name: Value_endingDateTime_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_datastripTar/
+                             Validity_Stop), 5, 26),
+                "Z")
+  - name: Value_processingDate_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_datastripTar/
+                             Generation_Time), 5, 26),
+                "Z")
+  - name: Value_Quality_Info_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/Quality_Info)
+  - name: Value_productType_datastripTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/File_Type)
+  - name: File_Metadata_File_datastripTar
+    xquery: |
+      if (*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_DS_.*|MTD_DS)\.xml")])
+      then *[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_DS_.*|MTD_DS)\.xml")]
+      else
+         if (*/*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_DS_.*|MTD_DS)\.xml")])
+         then */*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_DS_.*|MTD_DS)\.xml")]
+         else ()
+  - name: Node_General_Info_datastripTar
+    xquery: |
+      declare variable $File_Metadata_File_datastripTar as node()? external;
+      $File_Metadata_File_datastripTar/*[fn:matches(name(),"Level-.*_DataStrip_ID")]/
+      General_Info
+  - name: Node_Datatake_Info_datastripTar
+    xquery: |
+      declare variable $Node_General_Info_datastripTar as node()? external;
+      $Node_General_Info_datastripTar/Datatake_Info
+metadata:
+ # platform ##################################################################
+  - name: platformShortName
+    python: |
+      return 'SENTINEL-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # INSTRUMENT ##################################################################
+  - name: instrumentShortName
+    python: |
+      return 'MSI'
+ # SENSOR ##################################################################
+  - name: operationalMode
+    xquery: |
+      declare variable $Node_Datatake_Info_datastripTar as node()? external;
+      fn:data($Node_Datatake_Info_datastripTar/DATATAKE_TYPE)
+ # PROCESSING ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_datastripTar external;
+      $Value_processingDate_datastripTar
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/Processing_Station)
+  - name: processorVersion
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/File_Version)
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_datastripTar external;
+      $Value_beginningDateTime_datastripTar
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_datastripTar external;
+      $Value_endingDateTime_datastripTar
+ # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/Start_Orbit_Number)
+ # HMA-like ##################################################################
+  - name: relativeOrbitNumber
+    xquery: |
+      declare variable $Node_Datatake_Info_datastripTar as node()? external;
+      xs:int(fn:data($Node_Datatake_Info_datastripTar/SENSING_ORBIT_NUMBER))
+  - name: coordinates
+    python: |
+      var = Node_Geographic_Localization_datastripTar['List_Of_Geo_Pnt']['Geo_Pnt', :]
+      res = []
+      for e in var:
+        res.append(e['LATITUDE'].value)
+        res.append(e['LONGITUDE'].value)
+      cpt=0
+      for x in range(1, len(var)*2, 2):
+        res.insert(x+cpt, ',')
+        cpt+=1
+      return f"""
+        <gml:Polygon xmlns:gml="http://www.opengis.net/gml"
+                        srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+            <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                    <gml:coordinates>
+                        {' '.join(res).replace(' , ', ',')}
+                    </gml:coordinates>
+                </gml:LinearRing>
+            </gml:outerBoundaryIs>
+        </gml:Polygon>"""
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Value_productType_datastripTar external;
+      $Value_productType_datastripTar
+ # QUALITY ##################################################################
+  - name: qualityStatus
+    xquery: |
+      declare variable $Value_Quality_Info_datastripTar external;
+      if ($Value_Quality_Info_datastripTar = "100.0")
+      then "NOMINAL"
+      else "DEGRADED"
+  - name: qualityInfo
+    xquery: |
+      declare variable $Value_Quality_Info_datastripTar external;
+      if ($Value_Quality_Info_datastripTar = "100.0")
+      then ()
+      else fn:data($Value_Quality_Info_datastripTar)
+ # OTHER ##################################################################
+  - name: productGroupId
+    xquery: |
+      declare variable $Node_Inventory_Metadata_datastripTar as node()? external;
+      fn:data($Node_Inventory_Metadata_datastripTar/Group_ID)
+---
+###############################################################################
+# c6da0d68-f23a-11ec-b939-0242ac120002 Sentinel-2 Granule
+###############################################################################
+drbItemClass: c6da0d68-f23a-11ec-b939-0242ac120002
+variables:
+  - name: File_Inventory_File_granuleTileTar
+    xquery: |
+      if (*[fn:matches (name(), "Inventory_Metadata.xml")])
+      then *[fn:matches (name(), "Inventory_Metadata.xml")]
+      else
+         if (*/*[fn:matches (name(), "Inventory_Metadata.xml")])
+         then */*[fn:matches (name(), "Inventory_Metadata.xml")]
+         else ()
+  - name: Node_Inventory_Metadata_granuleTileTar
+    xquery: |
+      declare variable $File_Inventory_File_granuleTileTar as node()? external;
+      $File_Inventory_File_granuleTileTar/Inventory_Metadata
+  - name: Value_processingDate_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_granuleTileTar/
+                             Generation_Time), 5, 26),
+                "Z")
+  - name: Value_beginningDateTime_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_granuleTileTar/
+      Validity_Start), 5, 26),
+      "Z")
+  - name: Value_endingDateTime_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_granuleTileTar/
+                             Validity_Stop), 5, 26),
+                "Z")
+  - name: Node_Geographic_Localization_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      $Node_Inventory_Metadata_granuleTileTar/Geographic_Localization
+  - name: Value_productType_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/File_Type)
+  - name: Value_Quality_Info_granuleTileTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/Quality_Info)
+  - name: File_Metadata_File_granuleTileTar
+    xquery: |
+      if (*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_(GR|TL)_.*|MTD_TL)\.xml")])
+      then *[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_(GR|TL)_.*|MTD_TL)\.xml")]
+      else
+         if (*/*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_(GR|TL)_.*|MTD_TL)\.xml")])
+         then */*[fn:matches (name(), "(\w{8}_MTD_L(0_|1.|2.)_(GR|TL)_.*|MTD_TL)\.xml")]
+         else ()
+  - name: Node_General_Info_granuleTileTar
+    xquery: |
+      declare variable $File_Metadata_File_granuleTileTar as node()? external;
+      $File_Metadata_File_granuleTileTar/*[fn:matches(name(),"Level-.*_(Granule_ID|Tile_ID)")]/
+      General_Info
+  - name: Node_Geometric_Info_granuleTileTar
+    xquery: |
+      declare variable $File_Metadata_File_granuleTileTar as node()? external;
+      $File_Metadata_File_granuleTileTar/*[fn:matches(name(),"Level-.*_(Granule_ID|Tile_ID)")]/
+      Geometric_Info
+metadata:
+ # platform ##################################################################
+  - name: platformShortName
+    python: |
+      return 'SENTINEL-2'
+  - name: platformName
+    python: |
+      return 'Sentinel-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # INSTRUMENT ##################################################################
+  - name: instrumentShortName
+    python: |
+      return 'MSI'
+ # processingDate ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_granuleTileTar external;
+      $Value_processingDate_granuleTileTar
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/Processing_Station)
+  - name: processorVersion
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/File_Version)
+ # processingDate ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_granuleTileTar external;
+      $Value_beginningDateTime_granuleTileTar
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_granuleTileTar external;
+      $Value_endingDateTime_granuleTileTar
+ # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/Start_Orbit_Number)
+ # FRAMESET ##################################################################
+  - name: coordinates
+    python: |
+      var = Node_Geographic_Localization_granuleTileTar['List_Of_Geo_Pnt']['Geo_Pnt', :]
+      res = []
+      for e in var:
+        res.append(e['LATITUDE'].value)
+        res.append(e['LONGITUDE'].value)
+      cpt=0
+      for x in range(1, len(var)*2, 2):
+        res.insert(x+cpt, ',')
+        cpt+=1
+      return f"""
+        <gml:Polygon xmlns:gml="http://www.opengis.net/gml"
+                        srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+            <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                    <gml:coordinates>
+                        {' '.join(res).replace(' , ', ',')}
+                    </gml:coordinates>
+                </gml:LinearRing>
+            </gml:outerBoundaryIs>
+        </gml:Polygon>"""
+ # QUALITY ##################################################################
+  - name: cloudCover
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/CloudPercentage)
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Value_productType_granuleTileTar external;
+      $Value_productType_granuleTileTar
+ # QUALITY ##################################################################
+  - name: qualityStatus
+    xquery: |
+      declare variable $Value_Quality_Info_granuleTileTar external;
+      if ($Value_Quality_Info_granuleTileTar = "100.0")
+      then "NOMINAL"
+      else "DEGRADED"
+  - name: qualityInfo
+    xquery: |
+      declare variable $Value_Quality_Info_granuleTileTar external;
+      if ($Value_Quality_Info_granuleTileTar = "100.0")
+      then ()
+      else fn:data($Value_Quality_Info_granuleTileTar)
+ # OTHER ##################################################################
+  - name: datastripId
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/Parent_ID)
+  - name: productGroupId
+    xquery: |
+      declare variable $Node_Inventory_Metadata_granuleTileTar as node()? external;
+      fn:data($Node_Inventory_Metadata_granuleTileTar/Group_ID)
+  - name: tileId
+    xquery: |
+      declare variable $Node_General_Info_granuleTileTar as node()? external;
+      fn:substring(fn:data($Node_General_Info_granuleTileTar/TILE_ID), 50, 6)
+  - name: illuminationZenithAngle
+    xquery: |
+      declare variable $Node_Geometric_Info_granuleTileTar as node()? external;
+      fn:data($Node_Geometric_Info_granuleTileTar/Tile_Angles/Mean_Sun_Angle/ZENITH_ANGLE)
+---
+###############################################################################
+# 3f43fa3e-f2f9-11ec-b939-0242ac120002 Sentinel-2 Level-0 HKTM
+###############################################################################
+drbItemClass: 3f43fa3e-f2f9-11ec-b939-0242ac120002
+variables:
+  - name: Node_metadataSection_level0HktmTar
+    xquery: |
+      if (manifest.safe)
+      then manifest.safe/XFDU/metadataSection
+      else */manifest.safe/XFDU/metadataSection
+  - name: Node_platform_level0HktmTar
+    xquery: |
+      declare variable $Node_metadataSection_level0HktmTar as node()? external;
+      $Node_metadataSection_level0HktmTar/metadataObject[@ID="platform"]/
+         metadataWrap/xmlData/platform
+  - name: Node_processing_level0HktmTar
+    xquery: |
+      declare variable $Node_metadataSection_level0HktmTar as node()? external;
+      $Node_metadataSection_level0HktmTar/metadataObject[@ID="processing"]/
+         metadataWrap/xmlData/processing[1]
+  - name: Value_processingDate_level0HktmTar
+    xquery: |
+      declare variable $Node_processing_level0HktmTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_processing_level0HktmTar/@start),
+                             1, 26),
+                "Z")
+  - name: Node_acquisitionPeriod_level0HktmTar
+    xquery: |
+      declare variable $Node_metadataSection_level0HktmTar as node()? external;
+      $Node_metadataSection_level0HktmTar/metadataObject[@ID="acquisitionPeriod"]/
+      metadataWrap/xmlData/acquisitionPeriod
+  - name: Value_beginningDateTime_level0HktmTar
+    xquery: |
+      declare variable $Node_acquisitionPeriod_level0HktmTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_acquisitionPeriod_level0HktmTar/startTime),
+                             1, 26),
+                "Z")
+  - name: Value_endingDateTime_level0HktmTar
+    xquery: |
+      declare variable $Node_acquisitionPeriod_level0HktmTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_acquisitionPeriod_level0HktmTar/stopTime),
+                             1, 26),
+                "Z")
+  - name: Node_orbitReference_level0HktmTar
+    xquery: |
+      declare variable $Node_metadataSection_level0HktmTar as node()? external;
+      $Node_metadataSection_level0HktmTar/metadataObject[fn:matches(@ID,".+OrbitReference")]/
+         metadataWrap/xmlData/orbitReference
+metadata:
+ # platform ##################################################################
+  - name: platformShortName
+    xquery: |
+      declare variable $Node_platform_level0HktmTar as node()? external;
+      fn:data($Node_platform_level0HktmTar/familyName)
+  - name: platformSerialIdentifier
+    xquery: |
+      declare variable $Node_platform_level0HktmTar as node()? external;
+      fn:data($Node_platform_level0HktmTar/number)
+ # INSTRUMENT ##################################################################
+  - name: instrumentShortName
+    python: |
+      return 'HKTM'
+ # PROCESSING ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_level0HktmTar external;
+      $Value_processingDate_level0HktmTar
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_processing_level0HktmTar as node()? external;
+      fn:data($Node_processing_level0HktmTar/facility[1]/@site)
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_level0HktmTar external;
+      $Value_beginningDateTime_level0HktmTar
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_level0HktmTar external;
+      $Value_endingDateTime_level0HktmTar
+ # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      declare variable $Node_orbitReference_level0HktmTar as node()? external;
+      xs:int(fn:data($Node_orbitReference_level0HktmTar/orbitNumber[@type = "start"]))
+  - name: lastOrbitNumber
+    xquery: |
+      declare variable $Node_orbitReference_level0HktmTar as node()? external;
+      xs:int(fn:data($Node_orbitReference_level0HktmTar/orbitNumber[@type = "stop"]))
+ # HMA-like ##################################################################
+  - name: relativeOrbitNumber
+    xquery: |
+      declare variable $Node_orbitReference_level0HktmTar as node()? external;
+      xs:int(fn:data($Node_orbitReference_level0HktmTar/relativeOrbitNumber[@type = "start"]))
+ # OTHER ##################################################################
+  - name: productType
+    python: |
+      return 'PRD_HKTM__'
+---
+###############################################################################
+# be45c266-f23d-11ec-b939-0242ac120002 Sentinel-2 Auxiliary SAD PDI
+###############################################################################
+drbItemClass: be45c266-f23d-11ec-b939-0242ac120002
+variables:
+  - name: Node_Inventory_Metadata_pdiSadTar
+    xquery: |
+      if (Inventory_Metadata.xml)
+      then Inventory_Metadata.xml/Inventory_Metadata
+      else */Inventory_Metadata.xml/Inventory_Metadata
+  - name: Value_beginningDateTime_pdiSadTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_pdiSadTar/
+                             Validity_Start), 5, 26),
+                "Z")
+  - name: Value_endingDateTime_pdiSadTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_pdiSadTar/
+                             Validity_Stop), 5, 26),
+                "Z")
+  - name: Value_processingDate_pdiSadTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_pdiSadTar/
+                             Generation_Time), 5, 26),
+                "Z")
+  - name: Value_Quality_Info_pdiSadTar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:data($Node_Inventory_Metadata_pdiSadTar/Quality_Info)
+metadata:
+ # platform ##################################################################
+  - name: platformName
+    python: |
+      return 'Sentinel-2'
+  - name: platformShortName
+    python: |
+      return 'SENTINEL-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # INSTRUMENT ##################################################################
+  - name: platformShortName
+    python: |
+      return 'SAD'
+ # INSTRUMENT ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_pdiSadTar external;
+      $Value_processingDate_pdiSadTar
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:data($Node_Inventory_Metadata_pdiSadTar/Processing_Station)
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_pdiSadTar external;
+      $Value_beginningDateTime_pdiSadTar
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_pdiSadTar external;
+      $Value_endingDateTime_pdiSadTar
+ # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      xs:int(fn:data($Node_Inventory_Metadata_pdiSadTar/Start_Orbit_Number))
+  - name: lastOrbitNumber
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      xs:int(fn:data($Node_Inventory_Metadata_pdiSadTar/Stop_Orbit_Number))
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Node_Inventory_Metadata_pdiSadTar as node()? external;
+      fn:data($Node_Inventory_Metadata_pdiSadTar/File_Type)
+ # QUALITY ##################################################################
+  - name: qualityStatus
+    xquery: |
+      declare variable $Value_Quality_Info_pdiSadTar external;
+      if ($Value_Quality_Info_pdiSadTar = "100.0")
+      then "NOMINAL"
+      else "DEGRADED"
+  - name: qualityInfo
+    xquery: |
+      declare variable $Value_Quality_Info_pdiSadTar external;
+      if ($Value_Quality_Info_pdiSadTar = "100.0")
+      then ()
+      else fn:data($Value_Quality_Info_pdiSadTar)
+---
+###############################################################################
+# ff9720b6-f2f1-11ec-b939-0242ac120002 Sentinel-2 Level-1C Tile Image File
+###############################################################################
+drbItemClass: ff9720b6-f2f1-11ec-b939-0242ac120002
+variables:
+  - name: Node_Inventory_Metadata_level1CTCITar
+    xquery: |
+      if (Inventory_Metadata.xml)
+      then Inventory_Metadata.xml/Inventory_Metadata
+      else */Inventory_Metadata.xml/Inventory_Metadata
+  - name: Value_beginningDateTime_level1CTCITar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_level1CTCITar/
+                             Validity_Start), 5, 26),
+                "Z")
+  - name: Value_endingDateTime_level1CTCITar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_level1CTCITar/
+                             Validity_Stop), 5, 26),
+                "Z")
+  - name: Value_processingDate_level1CTCITar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Inventory_Metadata_level1CTCITar/
+                             Generation_Time), 5, 26),
+                "Z")
+  - name: Node_Geographic_Localization_level1CTCITar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      $Node_Inventory_Metadata_level1CTCITar/Geographic_Localization
+  - name: Value_Quality_Info_level1CTCITar
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/Quality_Info)
+metadata:
+ # platform ##################################################################
+  - name: platformName
+    python: |
+      return 'Sentinel-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # INSTRUMENT ##################################################################
+  - name: instrumentShortName
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/Sensor_Code)
+ # PROCESSING ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_level1CTCITar external;
+      $Value_processingDate_level1CTCITar
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/Processing_Station)
+  - name: processorVersion
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/File_Version)
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_level1CTCITar external;
+      $Value_beginningDateTime_level1CTCITar
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_level1CTCITar external;
+      $Value_endingDateTime_level1CTCITar
+ # ORBIT ##################################################################
+  - name: orbitNumber
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      xs:int(fn:data($Node_Inventory_Metadata_level1CTCITar/Start_Orbit_Number))
+  - name: coordinates
+    python: |
+      var = Node_Geographic_Localization_level1CTCITar['List_Of_Geo_Pnt']['Geo_Pnt', :]
+      res = []
+      for e in var:
+        res.append(e['LATITUDE'].value)
+        res.append(e['LONGITUDE'].value)
+      cpt=0
+      for x in range(1, len(var)*2, 2):
+        res.insert(x+cpt, ',')
+        cpt+=1
+      return f"""
+        <gml:Polygon xmlns:gml="http://www.opengis.net/gml"
+                        srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+            <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                    <gml:coordinates>
+                        {' '.join(res).replace(' , ', ',')}
+                    </gml:coordinates>
+                </gml:LinearRing>
+            </gml:outerBoundaryIs>
+        </gml:Polygon>"""
+ # QUALITY ##################################################################
+  - name: cloudCover
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/CloudPercentage)
+  - name: qualityStatus
+    xquery: |
+      declare variable $Value_Quality_Info_level1CTCITar external;
+      if ($Value_Quality_Info_level1CTCITar = "100.0")
+      then "NOMINAL"
+      else "DEGRADED"
+  - name: qualityInfo
+    xquery: |
+      declare variable $Value_Quality_Info_level1CTCITar external;
+      if ($Value_Quality_Info_level1CTCITar = "100.0")
+      then ()
+      else fn:data($Value_Quality_Info_level1CTCITar)
+  - name: tileId
+    xquery: |
+      fn:substring(name(), 51, 5)
+  - name: productGroupId
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/Group_ID)
+ # OTHER #################################################################
+  - name: productType
+    xquery: |
+      declare variable $Node_Inventory_Metadata_level1CTCITar as node()? external;
+      fn:data($Node_Inventory_Metadata_level1CTCITar/File_Type)
+---
+###############################################################################
+# 7de4ab0c-fd40-11ec-b939-0242ac120002 Sentinel-2 Auxiliary GIP
+###############################################################################
+drbItemClass: 7de4ab0c-fd40-11ec-b939-0242ac120002
+variables:
+  - name: Node_Metadata_Hdr_gippTgz
+    xquery: |
+      */*[fn:matches (name(), ".*\.HDR")]
+  - name: Node_Fixed_Header_gippTgz
+    xquery: |
+      declare variable $Node_Metadata_Hdr_gippTgz as node()? external;
+      $Node_Metadata_Hdr_gippTgz/Earth_Explorer_Header/Fixed_Header
+  - name: Value_beginningDateTime_gippTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_gippTgz/
+                             Validity_Period/Validity_Start), 5, 19),
+                ".000Z")
+  - name: Value_endingDateTime_gippTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_gippTgz/
+                             Validity_Period/Validity_Stop), 5, 19),
+                ".000Z")
+  - name: Value_processingDate_gippTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_gippTgz/Source/
+                             Creation_Date), 5, 19),".000Z")
+metadata:
+ # platform ##################################################################
+  - name: platformShortName
+    python: |
+      return 'SENTINEL-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # platform ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_gippTgz external;
+      $Value_processingDate_gippTgz
+  - name: processingCenter
+    xquery: | 
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      fn:data($Node_Fixed_Header_gippTgz/Source/System)
+  - name: processorVersion
+    xquery: |      
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      fn:data($Node_Fixed_Header_gippTgz/Source/Creator_Version)
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: | 
+      declare variable $Value_beginningDateTime_gippTgz external;
+      $Value_beginningDateTime_gippTgz
+  - name: endingDateTime
+    xquery: |      
+      declare variable $Value_endingDateTime_gippTgz external;
+      $Value_endingDateTime_gippTgz
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |      
+      declare variable $Node_Fixed_Header_gippTgz as node()? external;
+      let $VAR_File_Type := fn:data($Node_Fixed_Header_gippTgz/File_Type)
+      let $VAR_name_bandNumber := fn:substring(name(), 75, 3)
+      return
+         if (fn:matches($VAR_File_Type, "GIP_(VIEDIR|R2EQOG|R2DEFI|R2WAFI|R2L2NC|R2DENT|R2DECT|R2EOB2)"))
+         then fn:concat($VAR_File_Type, "_", $VAR_name_bandNumber)
+         else $VAR_File_Type
+---
+###############################################################################
+# 0cacd114-0c20-11ed-861d-0242ac120002 Sentinel-2 TGZ AUX_ECMWFD and AUX_UT1UTC
+###############################################################################
+drbItemClass: 0cacd114-0c20-11ed-861d-0242ac120002
+variables:
+  - name: Node_Metadata_Hdr_auxEcmwfdUt1utcTgz
+    xquery: |
+      if (*[fn:matches (name(), ".*\.HDR")])
+      then *[fn:matches (name(), ".*\.HDR")]
+      else
+         if (*/*[fn:matches (name(), ".*\.HDR")])
+         then */*[fn:matches (name(), ".*\.HDR")]
+         else
+            if (*/*/*[fn:matches (name(), ".*\.HDR")])
+            then */*/*[fn:matches (name(), ".*\.HDR")]
+            else
+               if (*/*/*/*[fn:matches (name(), ".*\.HDR")])
+               then */*/*/*[fn:matches (name(), ".*\.HDR")]
+               else ()
+  - name: Node_Fixed_Header_auxEcmwfdUt1utcTgz
+    xquery: |
+      declare variable $Node_Metadata_Hdr_auxEcmwfdUt1utcTgz as node()? external;
+      $Node_Metadata_Hdr_auxEcmwfdUt1utcTgz/Earth_Explorer_Header/Fixed_Header
+  - name: Value_beginningDateTime_auxEcmwfdUt1utcTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_auxEcmwfdUt1utcTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_auxEcmwfdUt1utcTgz/
+                             Validity_Period/Validity_Start), 5, 19),
+                ".000Z")
+  - name: Value_endingDateTime_auxEcmwfdUt1utcTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_auxEcmwfdUt1utcTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_auxEcmwfdUt1utcTgz/
+                             Validity_Period/Validity_Stop), 5, 19),
+                ".000Z")
+  - name: Value_processingDate_auxEcmwfdUt1utcTgz
+    xquery: |
+      declare variable $Node_Fixed_Header_auxEcmwfdUt1utcTgz as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_auxEcmwfdUt1utcTgz/Source/
+                             Creation_Date), 5, 19),
+                ".000Z")
+metadata:
+ # PROCESSING ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_auxEcmwfdUt1utcTgz external;
+      $Value_processingDate_auxEcmwfdUt1utcTgz
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Fixed_Header_auxEcmwfdUt1utcTgz as node()? external;
+      fn:data($Node_Fixed_Header_auxEcmwfdUt1utcTgz/Source/System)
+  - name: processorVersion
+    python: |
+      return Node_Fixed_Header_auxEcmwfdUt1utcTgz["Source"]["Creator_Version"].value
+
+#  ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_auxEcmwfdUt1utcTgz external;
+      $Value_beginningDateTime_auxEcmwfdUt1utcTgz
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_auxEcmwfdUt1utcTgz external;
+      $Value_endingDateTime_auxEcmwfdUt1utcTgz
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Node_Fixed_Header_auxEcmwfdUt1utcTgz as node()? external;
+      fn:data($Node_Fixed_Header_auxEcmwfdUt1utcTgz/File_Type)
+---
+###############################################################################
+# 8bc2ca58-0c25-11ed-861d-0242ac120002 Sentinel-2 AUX RESORB & PREORB EOF
+###############################################################################
+drbItemClass: 8bc2ca58-0c25-11ed-861d-0242ac120002
+variables:
+  - name: Node_Fixed_Header_Eof
+    xquery: |
+      if (*[fn:matches (name(), "S2._.*EOF")])
+      then *[fn:matches (name(), "S2._.*EOF")]/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header
+      else Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header
+  - name: Value_productType_Eof
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:data($Node_Fixed_Header_Eof/File_Type)
+  - name: Value_processingDate_Eof
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_Eof/Source/Creation_Date), 5, 19),
+                ".000Z")
+  - name: Value_beginningDateTime_Eof
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_Eof/
+                             Validity_Period/Validity_Start), 5, 19),
+                ".000Z")
+  - name: Value_endingDateTime_Eof
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:concat(fn:substring(fn:data($Node_Fixed_Header_Eof/
+                             Validity_Period/Validity_Stop), 5, 19),
+                ".000Z")
+metadata:
+ # platform ##################################################################
+  - name: platformShortName
+    python: |
+      return 'SENTINEL-2'
+  - name: platformSerialIdentifier
+    xquery: |
+      if (fn:matches(name(), "S2A.*"))
+      then "A"
+      else
+         if (fn:matches(name(), "S2B.*"))
+         then "B"
+         else ()
+ # PROCESSING ##################################################################
+  - name: processingDate
+    xquery: |
+      declare variable $Value_processingDate_Eof external;
+      $Value_processingDate_Eof
+  - name: processingCenter
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:data($Node_Fixed_Header_Eof/Source/System)
+  - name: processorVersion
+    xquery: |
+      declare variable $Node_Fixed_Header_Eof as node()? external;
+      fn:data($Node_Fixed
+ # ACQUISITION ##################################################################
+  - name: beginningDateTime
+    xquery: |
+      declare variable $Value_beginningDateTime_Eof external;
+      $Value_beginningDateTime_Eof
+  - name: endingDateTime
+    xquery: |
+      declare variable $Value_endingDateTime_Eof external;
+      $Value_endingDateTime_Eof
+ # OTHER ##################################################################
+  - name: productType
+    xquery: |
+      declare variable $Value_productType_Eof external;
+      $Value_productType_Eof
+
+      
+      

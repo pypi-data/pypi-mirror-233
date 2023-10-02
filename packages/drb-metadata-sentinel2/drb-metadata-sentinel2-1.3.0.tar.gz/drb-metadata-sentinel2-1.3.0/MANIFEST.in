@@ -1,0 +1,2 @@
+include versioneer.py
+include drb/addons/metadata/sentinel2/_version.py
