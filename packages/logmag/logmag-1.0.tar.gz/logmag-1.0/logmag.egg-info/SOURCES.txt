@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+logmag/__init__.py
+logmag/logger.py
+logmag.egg-info/PKG-INFO
+logmag.egg-info/SOURCES.txt
+logmag.egg-info/dependency_links.txt
+logmag.egg-info/not-zip-safe
+logmag.egg-info/top_level.txt
