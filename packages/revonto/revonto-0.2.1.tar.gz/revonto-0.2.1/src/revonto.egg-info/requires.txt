@@ -1,0 +1,16 @@
+numpy
+scipy
+statsmodels
+requests
+
+[lint]
+ruff
+black
+mypy
+check-manifest
+isort
+
+[test]
+pytest
+pytest-cov
+pytest-sugar

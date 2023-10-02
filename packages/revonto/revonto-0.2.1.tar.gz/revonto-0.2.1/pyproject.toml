@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revonto"
+authors = [
+    {name = "Vladimir Smrkolj", email = "vladimir.smrkolj@gmail.com"},
+    {name = "Aljoša Škorjanc", email = "skorjanc.aljosa@gmail.com"},
+]
+description = "Python library for Gene Ontology Reverse Lookup"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["gene ontology", "reverse lookup"]
+license = {text = "GPL-3.0 License"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "statsmodels",
+    "requests",
+]
+
+version = "0.2.1"
+#dynamic = ["version"]
+
+#[tool.setuptools.dynamic]
+#version = {attr = "revonto.__version__"}
+
+[project.optional-dependencies]
+lint = [
+    "ruff",
+    "black",
+    "mypy",
+    "check-manifest",
+    "isort",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-sugar",
+    ]
+
+
+#gui = ["PyQt5"]
+#cli = [
+#  "rich",
+#  "click",
+#]
+#
+#[project.urls]
+#Homepage = "https://example.com"
+#Documentation = "https://readthedocs.org"
+#Repository = "https://github.com/me/spam.git"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+#
+#[project.scripts]
+#spam-cli = "spam:main_cli"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+requires =
+    tox>=4
+env_list = py310, py311
+
+[testenv]
+description = run unit tests
+deps =
+    pytest>=7
+    pytest-sugar
+commands =
+    pytest {posargs:tests}
+"""
+
+[tool.check-manifest]
+ignore = ["tests/**", ".vscode/**", "logging_config.json", "exe_version/**", "input_files/**", "docs/**", "examples/**"]
+
+[tool.ruff]
+# Avoid enforcing line-length violations (`E501`). Black already checks for that, but it leaves comments unchanged - this makes errors in ruff.
+ignore = ["E501"]
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"] # version location
+changelog_file = "CHANGELOG.md"             # changelog file
+patch_without_tag = true                    # patch release by default

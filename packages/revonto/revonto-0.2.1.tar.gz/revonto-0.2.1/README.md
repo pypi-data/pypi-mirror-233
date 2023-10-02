@@ -1,0 +1,3 @@
+# Revonto
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-revonto-brightgreen)](https://pypi.org/project/revonto/) [![version number](https://img.shields.io/github/v/release/ladismrkolj/revonto)](https://github.com/ladismrkolj/revonto/releases) [![Actions Status](https://img.shields.io/github/actions/workflow/status/ladismrkolj/revonto/ci.yml)](https://github.com/ladismrkolj/revonto/actions) [![Coverage Status](https://coveralls.io/repos/github/MediWizards/revonto/badge.svg?branch=main)](https://coveralls.io/github/MediWizards/revonto?branch=main) [![License](https://img.shields.io/github/license/ladismrkolj/revonto)](https://github.com/ladismrkolj/revonto/blob/main/LICENSE)

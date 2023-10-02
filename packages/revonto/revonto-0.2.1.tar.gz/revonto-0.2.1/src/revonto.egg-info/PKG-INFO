@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: revonto
+Version: 0.2.1
+Summary: Python library for Gene Ontology Reverse Lookup
+Author-email: Vladimir Smrkolj <vladimir.smrkolj@gmail.com>, Aljoša Škorjanc <skorjanc.aljosa@gmail.com>
+License: GPL-3.0 License
+Keywords: gene ontology,reverse lookup
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+Requires-Dist: requests
+Provides-Extra: lint
+Requires-Dist: ruff; extra == "lint"
+Requires-Dist: black; extra == "lint"
+Requires-Dist: mypy; extra == "lint"
+Requires-Dist: check-manifest; extra == "lint"
+Requires-Dist: isort; extra == "lint"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-sugar; extra == "test"
+
+# Revonto
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-revonto-brightgreen)](https://pypi.org/project/revonto/) [![version number](https://img.shields.io/github/v/release/ladismrkolj/revonto)](https://github.com/ladismrkolj/revonto/releases) [![Actions Status](https://img.shields.io/github/actions/workflow/status/ladismrkolj/revonto/ci.yml)](https://github.com/ladismrkolj/revonto/actions) [![Coverage Status](https://coveralls.io/repos/github/MediWizards/revonto/badge.svg?branch=main)](https://coveralls.io/github/MediWizards/revonto?branch=main) [![License](https://img.shields.io/github/license/ladismrkolj/revonto)](https://github.com/ladismrkolj/revonto/blob/main/LICENSE)
