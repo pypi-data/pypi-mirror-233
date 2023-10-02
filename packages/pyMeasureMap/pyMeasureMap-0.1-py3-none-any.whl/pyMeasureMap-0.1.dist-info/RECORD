@@ -1,0 +1,12 @@
+pymeasuremap/__init__.py,sha256=qkmacBe0-nULwLNJMo6E7ZVDyuRqvRvKyFR-3Ueowzo,355
+pymeasuremap/base.py,sha256=6eTB8xhH2ZmJ-AVqdNlZ8pt_6bWox0L3uFzIBajn0Y0,16824
+pymeasuremap/cli.py,sha256=EJDy-Af-5na91or5i6vTfYS7PWnBY8y1aO3Vp2OX3oo,6625
+pymeasuremap/compare.py,sha256=sR920DJEDUTz8S0RsgEQ4j5JEA3sUn7A7POEqEhIfL8,21866
+pymeasuremap/extract.py,sha256=z6-IaF8PwnqR-uQljXVLrkRiCtLkiSi8I4-yijfjeHs,7062
+pymeasuremap/utils.py,sha256=_QAjXqBgqdza6pkxZi0lsHhMuDsK_-VD59WrGzI9Iec,2707
+pyMeasureMap-0.1.dist-info/LICENSE.txt,sha256=er4Z7Ju3OzYUG5mbhh0krYVegIuv4PgehMzihVb2wpc,20131
+pyMeasureMap-0.1.dist-info/METADATA,sha256=rCMLskV68E-WG0VWCcEFhIMLrpAJJManOGX9azINAM0,5201
+pyMeasureMap-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyMeasureMap-0.1.dist-info/entry_points.txt,sha256=qVjMgERZu7OIAYhEuHLtD1-YEjVbJviIGr8OFavZ1Tc,44
+pyMeasureMap-0.1.dist-info/top_level.txt,sha256=E1uY4Jty9HlnO5wBRMsewoT57AyZ0r9vvM1VJnDN56M,13
+pyMeasureMap-0.1.dist-info/RECORD,,
