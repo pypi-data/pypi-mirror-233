@@ -1,0 +1,14 @@
+.gitignore
+README.rst
+justfile
+pyproject.toml
+.github/workflows/publish_release.yaml
+.github/workflows/tests.yaml
+examples/draw_shapes.py
+src/xecs_pygame/__init__.py
+src/xecs_pygame/py.typed
+src/xecs_pygame.egg-info/PKG-INFO
+src/xecs_pygame.egg-info/SOURCES.txt
+src/xecs_pygame.egg-info/dependency_links.txt
+src/xecs_pygame.egg-info/requires.txt
+src/xecs_pygame.egg-info/top_level.txt
