@@ -1,0 +1,10 @@
+include LICENSE
+include *.md
+include *.rst
+include *.py
+include *.txt
+include *.toml
+include *.ini
+include run_tests.py
+recursive-include requirements *.txt
+recursive-include tests *.py
