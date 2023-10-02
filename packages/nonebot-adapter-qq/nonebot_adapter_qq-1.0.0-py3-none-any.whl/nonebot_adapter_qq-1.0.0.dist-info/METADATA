@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: nonebot-adapter-qq
+Version: 1.0.0
+Summary: QQ adapter for nonebot2
+Home-page: https://github.com/nonebot/adapter-qq
+License: MIT
+Keywords: bot,qq,qqbot,qqguild
+Author: yanyongyu
+Author-email: yyy@nonebot.dev
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: nonebot2 (>=2.1.0,<3.0.0)
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Requires-Dist: typing-extensions (>=4.4.0,<5.0.0)
+Project-URL: Documentation, https://github.com/nonebot/adapter-qq#readme
+Project-URL: Repository, https://github.com/nonebot/adapter-qq
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://nonebot.dev/"><img src="https://raw.githubusercontent.com/nonebot/adapter-qq/master/assets/logo.png" width="200" height="200" alt="nonebot-adapter-qq"></a>
+</p>
+
+<div align="center">
+
+# NoneBot-Adapter-QQ
+
+_✨ QQ 协议适配 ✨_
+
+</div>
+
+## 配置
+
+修改 NoneBot 配置文件 `.env` 或者 `.env.*`。
+
+### Driver
+
+参考 [driver](https://nonebot.dev/docs/appendices/config#driver) 配置项，添加 `HTTPClient` 和 `WebSocketClient` 支持。
+
+如：
+
+```dotenv
+DRIVER=~httpx+~websockets
+DRIVER=~aiohttp
+```
+
+### QQ_IS_SANDBOX
+
+是否为沙盒模式，默认为 `False`。
+
+```dotenv
+QQ_IS_SANDBOX=true
+```
+
+### QQ_BOTS
+
+配置机器人帐号，intent 需要根据机器人类型以及需要的事件进行配置。如：
+
+私域频道机器人示例
+
+```dotenv
+QQ_BOTS='
+[
+  {
+    "id": "xxx",
+    "token": "xxx",
+    "secret": "xxx",
+    "intent": {
+      "guild_messages": true,
+      "at_messages": false
+    }
+  }
+]
+'
+```
+
+公域群机器人示例
+
+```dotenv
+QQ_BOTS='
+[
+  {
+    "id": "xxx",
+    "token": "xxx",
+    "secret": "xxx",
+    "intent": {
+      "c2c_group_at_messages": true
+    }
+  }
+]
+'
+```
+
