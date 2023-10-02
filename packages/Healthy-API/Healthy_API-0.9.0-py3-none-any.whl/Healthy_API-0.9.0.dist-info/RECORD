@@ -1,0 +1,12 @@
+healthy_api/__init__.py,sha256=fkFEzJ8OIlpipzjh9R__c9V-TvV9oUwtv-AxPHCFW5k,707
+healthy_api/git.py,sha256=RHH0dmAqwleV9ywhY_CGfSaFdRsgtAaXZjCdBAJlK_4,1181
+healthy_api/version.py,sha256=p5GWoqYY8cTWmKSDQXYf6XO29-72hqZt8_VwXjsVSpk,207
+healthy_api/adapters/base_adapter.py,sha256=iiVjuvQsRKEl3DsUV1pAEvlSYChVj99K_qkpbtW5dfw,2988
+healthy_api/adapters/fastapi.py,sha256=0I--T4OHeD_YqyllMPoem4R0thVC2M7mjFLQXH_L_M4,1117
+healthy_api/adapters/flask.py,sha256=gQfpo46oG31KvItHXuOVRl4bYsB3tLlSHMn9bzDwlzk,1250
+Healthy_API-0.9.0.dist-info/AUTHORS.rst,sha256=G4CE063JlrHhq5P8Whw2skts5wdl1YJHJRuaSbD-zLs,156
+Healthy_API-0.9.0.dist-info/LICENSE,sha256=jZBIByrw8sUNYiSuqo4YApodjtgQIh7BjzmTcc5KCMU,1077
+Healthy_API-0.9.0.dist-info/METADATA,sha256=0FgiY28mHApjisuf8Ma5LP1LadC8wKequQBjag5-C7g,5412
+Healthy_API-0.9.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+Healthy_API-0.9.0.dist-info/top_level.txt,sha256=AcjTG-juyolwOC4A49yzM1Brfqw2szpPGC_UChYjoVc,16
+Healthy_API-0.9.0.dist-info/RECORD,,
