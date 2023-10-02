@@ -1,0 +1,11 @@
+README.md
+setup.py
+precreal/__init__.py
+precreal/algorithms.py
+precreal/precreal.py
+precreal/test.py
+precreal.egg-info/PKG-INFO
+precreal.egg-info/SOURCES.txt
+precreal.egg-info/dependency_links.txt
+precreal.egg-info/entry_points.txt
+precreal.egg-info/top_level.txt

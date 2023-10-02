@@ -1,0 +1,2 @@
+[console_scripts]
+precreal_test = precreal.test:_test
