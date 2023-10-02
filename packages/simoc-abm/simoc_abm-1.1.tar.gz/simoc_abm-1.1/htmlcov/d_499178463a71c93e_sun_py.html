@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage for agent_model/agents/sun.py: 100%</title>
+    <link rel="icon" sizes="32x32" href="favicon_32.png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="coverage_html.js" defer></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>agent_model/agents/sun.py</b>:
+            <span class="pc_cov">100%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts" />
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p>
+                        <kbd>j</kbd>
+                        <kbd>k</kbd>
+                        &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p>
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>u</kbd> &nbsp; up to the index
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <h2>
+            <span class="text">23 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">23<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+        </h2>
+        <p class="text">
+            <a id="prevFileLink" class="nav" href="d_499178463a71c93e_plant_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="d_4b49c59ac791f49e_util_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
+            created at 2023-05-04 13:14 +0700
+        </p>
+        <aside class="hidden">
+            <button type="button" class="button_next_chunk" data-shortcut="j"/>
+            <button type="button" class="button_prev_chunk" data-shortcut="k"/>
+            <button type="button" class="button_top_of_page" data-shortcut="0"/>
+            <button type="button" class="button_first_chunk" data-shortcut="1"/>
+            <button type="button" class="button_prev_file" data-shortcut="["/>
+            <button type="button" class="button_next_file" data-shortcut="]"/>
+            <button type="button" class="button_to_index" data-shortcut="u"/>
+            <button type="button" class="button_show_hide_help" data-shortcut="?"/>
+        </aside>
+    </div>
+</header>
+<main id="source">
+    <p class="run"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="key">from</span> <span class="op">.</span> <span class="key">import</span> <span class="nam">BaseAgent</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="key">class</span> <span class="nam">SunAgent</span><span class="op">(</span><span class="nam">BaseAgent</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t">    <span class="nam">default_attributes</span> <span class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t">        <span class="str">'daily_growth_factor'</span><span class="op">:</span> <span class="num">1</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">        <span class="str">'monthly_growth_factor'</span><span class="op">:</span> <span class="num">1</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t">    <span class="nam">default_capacity</span> <span class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t">        <span class="str">'par'</span><span class="op">:</span> <span class="num">5</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="nam">hourly_par_fraction</span> <span class="op">=</span> <span class="op">[</span>  <span class="com"># Marino fig. 2a, mean par per hour/day, scaled to mean=1</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">        <span class="num">0.27330022</span><span class="op">,</span> <span class="num">0.06846029</span><span class="op">,</span> <span class="num">0.06631662</span><span class="op">,</span> <span class="num">0.06631662</span><span class="op">,</span> <span class="num">0.48421388</span><span class="op">,</span> <span class="num">0.54054486</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">        <span class="num">0.5366148</span><span class="op">,</span> <span class="num">0.53923484</span><span class="op">,</span> <span class="num">0.57853553</span><span class="op">,</span> <span class="num">0.96171719</span><span class="op">,</span> <span class="num">1.40227785</span><span class="op">,</span> <span class="num">1.43849271</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">        <span class="num">2.82234256</span><span class="op">,</span> <span class="num">3.00993782</span><span class="op">,</span> <span class="num">2.82915468</span><span class="op">,</span> <span class="num">2.43876788</span><span class="op">,</span> <span class="num">1.71301526</span><span class="op">,</span> <span class="num">1.01608314</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">        <span class="num">0.56958994</span><span class="op">,</span> <span class="num">0.54054486</span><span class="op">,</span> <span class="num">0.54054486</span><span class="op">,</span> <span class="num">0.54316491</span><span class="op">,</span> <span class="num">0.54316491</span><span class="op">,</span> <span class="num">0.47766377</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">    <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">    <span class="nam">monthly_par</span> <span class="op">=</span> <span class="op">[</span>  <span class="com"># Maringo fig. 2c &amp; 4, mean hourly par, monthly from Jan91 - Dec95</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">        <span class="num">0.54950686</span><span class="op">,</span> <span class="num">0.63372954</span><span class="op">,</span> <span class="num">0.7206446</span> <span class="op">,</span> <span class="num">0.92002863</span><span class="op">,</span> <span class="num">0.97663421</span><span class="op">,</span> <span class="num">0.95983702</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">        <span class="num">0.89926235</span><span class="op">,</span> <span class="num">0.8211712</span> <span class="op">,</span> <span class="num">0.75722611</span><span class="op">,</span> <span class="num">0.68654778</span><span class="op">,</span> <span class="num">0.57748131</span><span class="op">,</span> <span class="num">0.49670542</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">        <span class="num">0.53580063</span><span class="op">,</span> <span class="num">0.61396126</span><span class="op">,</span> <span class="num">0.69077189</span><span class="op">,</span> <span class="num">0.86995316</span><span class="op">,</span> <span class="num">0.82823278</span><span class="op">,</span> <span class="num">0.92457803</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">        <span class="num">0.87140854</span><span class="op">,</span> <span class="num">0.83036469</span><span class="op">,</span> <span class="num">0.79133973</span><span class="op">,</span> <span class="num">0.67958089</span><span class="op">,</span> <span class="num">0.60519844</span><span class="op">,</span> <span class="num">0.49848609</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">        <span class="num">0.49649926</span><span class="op">,</span> <span class="num">0.57264328</span><span class="op">,</span> <span class="num">0.74441785</span><span class="op">,</span> <span class="num">0.88318598</span><span class="op">,</span> <span class="num">0.93440528</span><span class="op">,</span> <span class="num">0.98428221</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">        <span class="num">0.91292888</span><span class="op">,</span> <span class="num">0.80386089</span><span class="op">,</span> <span class="num">0.82544877</span><span class="op">,</span> <span class="num">0.67260636</span><span class="op">,</span> <span class="num">0.5776829</span> <span class="op">,</span> <span class="num">0.5265369</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">        <span class="num">0.57708425</span><span class="op">,</span> <span class="num">0.6437935</span> <span class="op">,</span> <span class="num">0.74417503</span><span class="op">,</span> <span class="num">0.87688951</span><span class="op">,</span> <span class="num">0.92676186</span><span class="op">,</span> <span class="num">0.96316316</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t">        <span class="num">0.91269064</span><span class="op">,</span> <span class="num">0.86154311</span><span class="op">,</span> <span class="num">0.75853793</span><span class="op">,</span> <span class="num">0.69055809</span><span class="op">,</span> <span class="num">0.57138185</span><span class="op">,</span> <span class="num">0.51013218</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t">        <span class="num">0.53643822</span><span class="op">,</span> <span class="num">0.63480008</span><span class="op">,</span> <span class="num">0.7601048</span> <span class="op">,</span> <span class="num">0.87867323</span><span class="op">,</span> <span class="num">0.95278919</span><span class="op">,</span> <span class="num">1.00872435</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t">        <span class="num">0.92659387</span><span class="op">,</span> <span class="num">0.84716341</span><span class="op">,</span> <span class="num">0.81756864</span><span class="op">,</span> <span class="num">0.73746165</span><span class="op">,</span> <span class="num">0.59808571</span><span class="op">,</span> <span class="num">0.55165404</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">    <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="op">*</span><span class="nam">args</span><span class="op">,</span> <span class="nam">attributes</span><span class="op">=</span><span class="key">None</span><span class="op">,</span> <span class="nam">capacity</span><span class="op">=</span><span class="key">None</span><span class="op">,</span> <span class="op">**</span><span class="nam">kwargs</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">        <span class="nam">attributes</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span> <span class="key">if</span> <span class="nam">attributes</span> <span class="key">is</span> <span class="key">None</span> <span class="key">else</span> <span class="nam">attributes</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">        <span class="nam">attributes</span> <span class="op">=</span> <span class="op">{</span><span class="op">**</span><span class="nam">self</span><span class="op">.</span><span class="nam">default_attributes</span><span class="op">,</span> <span class="op">**</span><span class="nam">attributes</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">        <span class="nam">capacity</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span> <span class="key">if</span> <span class="nam">capacity</span> <span class="key">is</span> <span class="key">None</span> <span class="key">else</span> <span class="nam">capacity</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">        <span class="nam">capacity</span> <span class="op">=</span> <span class="op">{</span><span class="op">**</span><span class="nam">self</span><span class="op">.</span><span class="nam">default_capacity</span><span class="op">,</span> <span class="op">**</span><span class="nam">capacity</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">__init__</span><span class="op">(</span><span class="op">*</span><span class="nam">args</span><span class="op">,</span> <span class="nam">attributes</span><span class="op">=</span><span class="nam">attributes</span><span class="op">,</span> <span class="nam">capacity</span><span class="op">=</span><span class="nam">capacity</span><span class="op">,</span> <span class="op">**</span><span class="nam">kwargs</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="key">def</span> <span class="nam">step</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">dT</span><span class="op">=</span><span class="num">1</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">self</span><span class="op">.</span><span class="nam">registered</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">storage</span><span class="op">[</span><span class="str">'par'</span><span class="op">]</span> <span class="op">=</span> <span class="num">0</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">        <span class="nam">hour_of_day</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">model</span><span class="op">.</span><span class="nam">time</span><span class="op">.</span><span class="nam">hour</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">attributes</span><span class="op">[</span><span class="str">'daily_growth_factor'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">hourly_par_fraction</span><span class="op">[</span><span class="nam">hour_of_day</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">        <span class="nam">reference_year</span> <span class="op">=</span> <span class="nam">max</span><span class="op">(</span><span class="num">1991</span><span class="op">,</span> <span class="nam">min</span><span class="op">(</span><span class="num">1995</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">model</span><span class="op">.</span><span class="nam">time</span><span class="op">.</span><span class="nam">year</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">        <span class="nam">reference_month</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">model</span><span class="op">.</span><span class="nam">time</span><span class="op">.</span><span class="nam">month</span> <span class="op">-</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t">        <span class="nam">reference_i</span> <span class="op">=</span> <span class="op">(</span><span class="nam">reference_year</span> <span class="op">-</span> <span class="num">1991</span><span class="op">)</span> <span class="op">*</span> <span class="num">12</span> <span class="op">+</span> <span class="nam">reference_month</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">attributes</span><span class="op">[</span><span class="str">'monthly_growth_factor'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">monthly_par</span><span class="op">[</span><span class="nam">reference_i</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">        <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">step</span><span class="op">(</span><span class="nam">dT</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a id="prevFileLink" class="nav" href="d_499178463a71c93e_plant_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="d_4b49c59ac791f49e_util_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.3">coverage.py v7.2.3</a>,
+            created at 2023-05-04 13:14 +0700
+        </p>
+    </div>
+</footer>
+</body>
+</html>
