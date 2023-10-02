@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mussel"
+version = "1.1.0"
+description = "Build Python executable for any environment with pyinstaller"
+authors = ["Thomas Mahé <contact@tmahe.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+"mussel" = "mussel:mussel"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
