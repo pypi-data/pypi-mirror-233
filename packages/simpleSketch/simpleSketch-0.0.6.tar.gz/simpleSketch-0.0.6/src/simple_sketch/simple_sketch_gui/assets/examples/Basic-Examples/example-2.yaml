@@ -1,0 +1,29 @@
+program: "
+a := ?? ; b := ??; c := ??; d := ??;
+y := a*(x*x*x) + b*(x*x) + c*(x) + d;
+"
+input_output_examples:
+  - input: "x == 2"
+    output: "y == 6"
+    vars: 
+  - input: "x == 1"
+    output: "y == -30"
+    vars: 
+  - input: "x == 2"
+    output: "y == 6"
+    vars: 
+  - input: "x == -4"
+    output: "y == 60"
+    vars: 
+  - input: "x == -9"
+    output: "y == 50"
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:

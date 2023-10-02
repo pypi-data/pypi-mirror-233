@@ -1,0 +1,23 @@
+program: "
+bool b := True; int x := x0;\n
+while (b) {\n
+  if (x <= 5) {b := ??==1;}\n
+  x := x - 1;\n
+}
+"
+input_output_examples:
+  - input: "x0 == 10"
+    output: "x == 5"
+    vars: "x0 : int"
+  - input: "x0 == 0"
+    output: "x == 0"
+    vars: "x0 : int"
+pre_condition:
+  condition: "And(x0 >= 0)"
+  condition_vars: "x0 : int"
+post_condition:
+  condition: "And(x <= 5, Not(b1 == b))"
+  condition_vars: "x : int, b1: bool"
+loop_inv:
+  condition: "And(x >= 0, x <= 10, b == (x <= 5))"
+  condition_vars: "x : int, b : bool"
