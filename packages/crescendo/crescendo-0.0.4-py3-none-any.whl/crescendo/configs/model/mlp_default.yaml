@@ -1,0 +1,5 @@
+input_dims: auto
+output_dims: auto
+
+defaults:
+  - common_model.yaml
