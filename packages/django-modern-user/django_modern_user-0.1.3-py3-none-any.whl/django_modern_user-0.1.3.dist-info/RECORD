@@ -1,0 +1,14 @@
+LICENSE,sha256=TKV7yBd1cSNHmAoekbSaFovXs9M4npCmUQGLQToQgus,1073
+README.md,sha256=TcrUqiHcBntJcdwTGm7bqkBkTbqVySmHM2cQZAVs3ic,1947
+django_modern_user/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_modern_user/admin.py,sha256=mKhqBqw0eTvQIYPbeeWnAuDngwcALNxom1R0L8SZgTc,1288
+django_modern_user/apps.py,sha256=fX7R8KMwok4XzqrP1SuORw534grdi2WOeLRnUdazJhM,166
+django_modern_user/migrations/0001_initial.py,sha256=GCgJGCdvNszd4OOQyKXFizY05wqk6aW46ezi8I2WW8Q,3715
+django_modern_user/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_modern_user/models.py,sha256=OEKZNbdxhxQGCgfoVnT_ng-gVanEuvcKFyM5lXrU9LM,2695
+django_modern_user/tests.py,sha256=864zk4YVy50OUzVbbRM6SNnDb083l_rDLWKI1PgKzTU,4013
+django_modern_user/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_modern_user-0.1.3.dist-info/LICENSE,sha256=TKV7yBd1cSNHmAoekbSaFovXs9M4npCmUQGLQToQgus,1073
+django_modern_user-0.1.3.dist-info/METADATA,sha256=IUN28JfrVnUwSj8_l-LqnXrEB9B6LGc7PFSESyjDtes,2457
+django_modern_user-0.1.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+django_modern_user-0.1.3.dist-info/RECORD,,
