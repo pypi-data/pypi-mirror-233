@@ -1,0 +1,2 @@
+[console_scripts]
+full_todotxt = full_todotxt.__main__:cli
