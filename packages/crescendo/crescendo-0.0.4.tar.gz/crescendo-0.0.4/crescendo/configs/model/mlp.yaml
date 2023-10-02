@@ -1,0 +1,6 @@
+_target_: crescendo.models.mlp.MultilayerPerceptron
+
+architecture: [7, 5, 3]
+
+defaults:
+  - mlp_default.yaml
