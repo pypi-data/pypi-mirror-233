@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sinetstream-type-ndarray
+Version: 1.8.2a0
+Summary: ndarray type plugin for SINETStream library
+License: Apache License, Version 2.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: sinetstream >=1.7.0
+Requires-Dist: numpy >=1.18.0
+Provides-Extra: test
+Requires-Dist: pytest >=6.0 ; extra == 'test'
+Requires-Dist: pytest-html >=3.0 ; extra == 'test'
+Requires-Dist: pytest-cov >=4.0 ; extra == 'test'
+
