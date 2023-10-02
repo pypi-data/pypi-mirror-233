@@ -1,0 +1,14 @@
+itkwasm_elastix_wasi/__init__.py,sha256=5QC7Ax3oQf6Bf8uNKYyI-c5B6dfAaI9vbZSMEo36bnE,397
+itkwasm_elastix_wasi/_version.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+itkwasm_elastix_wasi/default_parameter_map.py,sha256=qtZXfLJSwDUE9j3NUoRyEOLwVZDgsrAB38EcY5qIAOw,1943
+itkwasm_elastix_wasi/elastix.py,sha256=NeySpMhvPNrLH0OfoF2ZBW-o0IQkVEj4UhQfpMyHKaI,3504
+itkwasm_elastix_wasi/read_parameter_files.py,sha256=ZDW17dWUe9RVtN2may3yi7cuEDpFYuWSenMlhGo4SDM,1735
+itkwasm_elastix_wasi/write_parameter_files.py,sha256=FU-uavfviQDlxxlrnzLPzgHWm1jK6S0fUySLoK-bsUM,1773
+itkwasm_elastix_wasi/wasm_modules/default-parameter-map.wasi.wasm,sha256=T3g4PGVuRECm4FFkHNjeQD55yxjs2kDCGWuh5-X3_gc,664819
+itkwasm_elastix_wasi/wasm_modules/elastix.wasi.wasm,sha256=CPY0wv7G-jPh3WQ9tQQhQDHt8MRMldVOpwSG22ACedo,16018870
+itkwasm_elastix_wasi/wasm_modules/read-parameter-file.wasi.wasm,sha256=K32FguoMuM6lSVy-V99uRM_DcqxH73Ww1471cW33i6c,647680
+itkwasm_elastix_wasi/wasm_modules/read-parameter-files.wasi.wasm,sha256=z9A0QqaKKf3IIPHoZP6PftJZ69fEz7PwEYlTMF9yd5I,644761
+itkwasm_elastix_wasi/wasm_modules/write-parameter-files.wasi.wasm,sha256=lBUVf2vszHKF-LWDQCvhA2TqxHyTob5ddHq9Bp9qRXk,671678
+itkwasm_elastix_wasi-0.2.1.dist-info/METADATA,sha256=zn_ilmI4nSYo2XQEkS6Rsr0TtQGeYqQxNf6jt68Eb6w,1735
+itkwasm_elastix_wasi-0.2.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+itkwasm_elastix_wasi-0.2.1.dist-info/RECORD,,
