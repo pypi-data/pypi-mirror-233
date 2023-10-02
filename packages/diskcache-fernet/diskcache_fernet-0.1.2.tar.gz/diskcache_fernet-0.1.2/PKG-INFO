@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: diskcache-fernet
+Version: 0.1.2
+Summary: 
+Home-page: https://github.com/phi-friday/diskcache-fernet
+License: Apache 2.0 License
+Author: phi
+Author-email: phi.friday@gmail.com
+Requires-Python: >=3.8
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cryptography (==41.0.4)
+Requires-Dist: diskcache (==5.6.3)
+Requires-Dist: typing-extensions (==4.8.0)
+Project-URL: Repository, https://github.com/phi-friday/diskcache-fernet
+Description-Content-Type: text/markdown
+
+# diskcache-fernet
