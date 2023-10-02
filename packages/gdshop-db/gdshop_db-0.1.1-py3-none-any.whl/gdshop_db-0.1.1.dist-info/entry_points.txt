@@ -1,0 +1,3 @@
+[console_scripts]
+gdshop_db=gdshop_db:application
+
