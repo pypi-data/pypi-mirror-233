@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Un s\u00e9isme de magnitude 7,8 frappe la Turque: un bilan de d\u00e9vastation et de perte\n\nUn puissant tremblement de terre de magniture 7,8 a frapp\u00e9 la Turquie, causant une large destruction de b\u00e2timents et laissant des milliers de personnes sans abri. Des rapports pr\u00e9liminaires \u00e9manant d'organisations locales de secours et de sauvetage r\u00e9v\u00e8lent un lourd bilan humain et mat\u00e9riel.\n\nLe s\u00e9isme s'est produit dans\nArticle de Presse - 22 Janvier 2023\n\nTITRE : Un s\u00e9isme d\u00e9vastateur de 7.8 de magnitude frappe la Turquie \n\nUn violent tremblement de terre de magnitude de 7,8 sur l'\u00e9chelle de Richter a frapp\u00e9 la Turquie hier soir, causant une importante destruction et plongeant le pays dans le chaos alors que ses habitants s'efforcent de g\u00e9rer cet \u00e9v\u00e9nement catastrophique. \n\nL'\u00e9picentre du s\u00e9isme a \u00e9t\u00e9 localis\u00e9 pr\u00e8s\nUn s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie, causant d'importantes destructions et un bilan humain lourd\n\nANKARA- Un puissant s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie t\u00f4t ce matin, causant d'importantes destructions et faisant trembler des b\u00e2timents dans tout le pays. \n\nSelon l'Institut am\u00e9ricain de g\u00e9ophysique (USGS), l'\u00e9picentre du s\u00e9isme se trouvait pr\u00e8s de la ville d"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "1. Je r\u00e9side dans une demeure.\n2. Ma r\u00e9sidence est une maison.\n3. Je vis dans une maison.\n4. Ma maison est mon lieu de r\u00e9sidence.\n5. Je demeure dans une maison.\n6. J'occupe une maison.\n7. Ma domicile est une maison.\n8. Je s\u00e9journe dans une maison.\n9. Ma habitation est une maison.\n10. Je suis domicili\u00e9 dans une maison.\n1. Je r\u00e9side dans une maison.\n2. Ma demeure est une maison.\n3. Je vis dans une maison.\n4. Mon logement est une maison.\n5. J'occupe une maison.\n6. Je suis r\u00e9sident d'une maison.\n7. Ma r\u00e9sidence est une maison.\n8. Mon habitation est une maison.\n9. Ma maison est mon lieu de r\u00e9sidence.\n10. Je suis domicili\u00e9 dans une maison. \n11. Je reste dans une maison. \n12. Ma propri\u00e9t\u00e9 est une maison. \n13. Mon domicile est\n1. Je r\u00e9side dans une maison.\n2. Mon logement est une maison.\n3. Ma demeure est une maison.\n4. J'occupe une maison.\n5. Ma r\u00e9sidence est une maison.\n6. Je vis dans une maison.\n7. Mon domicile est une maison.\n8. Je suis log\u00e9 dans une maison.\n9. J'habite dans une r\u00e9sidence unifamiliale.\n10. Mon chez-moi est une maison. \n11. Je suis domicili\u00e9 dans une maison.\n12. Je m'installe dans une maison."
+      }
+    ]
+  }
+]
