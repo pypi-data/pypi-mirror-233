@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "pwsh-utils"
+version = "0.1.2"
+description = "powershell utils"
+authors = ["JUN <0x11a1@proton.me>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "pwsh_utils" }, { include = "main" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.0"
+python-socks = { extras = ["asyncio"], version = "^2.4.3" }
+cowsay = "^6.1"
+requests = { extras = ["socks"], version = "^2.31.0" }
+typer = { extras = ["all"], version = "^0.9.0" }
+
+[tool.poetry.scripts]
+say = 'main.say:run'
+os = 'main.os:run'
+dt = 'main.ts:run'
+sec = 'main.ts:sec'
+ms = 'main.ts:ms'
+nano = 'main.ts:nano'
+env = 'main.env:run'
+uuid = 'main.uu_id:run'
+emoj = 'main.emoj:run'
+btc_eth = 'main.btc_eth:run'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+priority = "default"
