@@ -1,0 +1,3 @@
+[console_scripts]
+annotate-feature = handygenome.bin.annotate_feature:main
+annotate-readstats = handygenome.bin.annotate_readstats:main
