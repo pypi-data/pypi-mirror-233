@@ -1,0 +1,14 @@
+aprint/__init__.py,sha256=34XHLgDUpbTy-nclEFYyV_U-ooOgX_La48NfjCc6cE8,52
+aprint/aprint.py,sha256=8x4-X8qkDrOxSbm8Wrl6WCNc9bT5cb7aa-0UMBNaR6Q,1681
+aprint/iterators/__init__.py,sha256=SQ75U-GWIyA9MKm0zIp-iE-7H71nIlr6tW5mOg_P8dg,86
+aprint/iterators/dispatch.py,sha256=bjXS5YbZT86_jOCKaE8VghGhjvnNBShpo-_qxBarFcM,1113
+aprint/iterators/python.py,sha256=0upFUEa7FDKI8KFfHjst006a9ByTkaNKL3tGsn_2tn8,1232
+aprint/objects/__init__.py,sha256=l3FJK2Ex0KTZMr_iE8Ln9cnr77NlyxlDES4HivUfM-U,196
+aprint/objects/dispatch.py,sha256=CTKFAp57i0CD2AlgYhgPrT6sZWqst4J1-W7JsFYiVMc,3189
+aprint/objects/numpy.py,sha256=8HFUlHRewmD-7TbOtJwz23PdKMZJJ6TzewoVRH4E_Ek,459
+aprint/objects/torch.py,sha256=OSrZ7M_F7aDoTlSihj8krdYEB9RTnwNlZ7NtUXPdlAs,1114
+aprint-0.0.2.dist-info/LICENSE,sha256=SCXaccqf_AN0I_LMzlkwTLugj2NtY1pCjpx7uvEmbgk,1067
+aprint-0.0.2.dist-info/METADATA,sha256=Q-YVnzBstmmsf5rdiRI54ddXJO5tYy9axBxswFYtogA,2624
+aprint-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+aprint-0.0.2.dist-info/top_level.txt,sha256=YaPUNAbsZY0AyIpKNjnvae_6f4OOu7b3-EuP9qeb610,7
+aprint-0.0.2.dist-info/RECORD,,
