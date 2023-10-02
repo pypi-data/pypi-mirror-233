@@ -1,0 +1,9 @@
+itkwasm_htj2k_wasi/__init__.py,sha256=e5Qw-slQd3pwsRcST4sxz4i5_jCEmJgV6BoTTLB6woI,193
+itkwasm_htj2k_wasi/_version.py,sha256=XxXhu8-QnuD9hA8Ah0WX5rgpt_DwOQmAwcK-FtpngyQ,22
+itkwasm_htj2k_wasi/decode.py,sha256=FbQEV6-__7CXDyAgs95En_3UmnN14AaS1t8tqWW6kxw,1716
+itkwasm_htj2k_wasi/encode.py,sha256=9aROkO6KF8Ry7W3I99UEyampSAFdNaExIEt14ebVg4k,3218
+itkwasm_htj2k_wasi/wasm_modules/decode.wasi.wasm,sha256=sRPGzdOPXywJELoch6zbVlYSFDGEIswe3BryzXiKiuo,1319742
+itkwasm_htj2k_wasi/wasm_modules/encode.wasi.wasm,sha256=7ci9MH03rdNix5qVg8CoLnYm31fpsvHLqOM_jFQaXac,1374177
+itkwasm_htj2k_wasi-1.1.4.dist-info/METADATA,sha256=eWH51iJIynxcU1RfEM7RKm57ykkEuZZEPjNtqXBdie8,1755
+itkwasm_htj2k_wasi-1.1.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+itkwasm_htj2k_wasi-1.1.4.dist-info/RECORD,,
