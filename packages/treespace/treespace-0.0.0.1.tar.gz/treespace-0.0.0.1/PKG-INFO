@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: treespace
+Version: 0.0.0.1
+Summary: Python package and CLI for building gene trees given orthogroups
+Home-page: http://github.com/heche-psb/treespace
+Author: Hengchi Chen
+Author-email: heche@psb.vib-ugent.be
+License: GPL
+Description-Content-Type: text/markdown
+
+# treespace
+
+treespace - Copyright (C) 2023-2024 Hengchi Chen
+Contact: heche@psb.vib-ugent.be
+
+Examples run
+```
+cd example_data
+treespace treerun config_iqtree -o config_iqtree_output
+treespace treerun config_mrbayes -o config_mrbayes_output
+treespace treerun config_iqtree_seqfam -o config_iqtree_seqfam_output
+```
