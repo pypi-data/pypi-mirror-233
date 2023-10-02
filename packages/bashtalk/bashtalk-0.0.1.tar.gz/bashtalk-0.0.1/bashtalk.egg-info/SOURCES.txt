@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+bashtalk.egg-info/PKG-INFO
+bashtalk.egg-info/SOURCES.txt
+bashtalk.egg-info/dependency_links.txt
+bashtalk.egg-info/entry_points.txt
+bashtalk.egg-info/requires.txt
+bashtalk.egg-info/top_level.txt
