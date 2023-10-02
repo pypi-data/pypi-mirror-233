@@ -1,0 +1,6 @@
+turing_transforms/cross_correlate.py,sha256=TMtjTWPtAITW1nlUENtjggE1g1gstxlqlddr_dpLcds,1390
+turing_transforms/transpose.py,sha256=CSdtxaCy0qPvNCccmyK8HWnPLAVJTvuhUZOi1K9BFQE,732
+turing_transforms/window.py,sha256=xa_sq6phGVBr4XALweb5oJ-Ac-GqXxFEunIg5PJ5qMQ,919
+turing_transforms2-0.1.1.dist-info/METADATA,sha256=LMHd9oN7T84EJ5mAgfco7gQRrYVkoKpt1NChPanPV7U,968
+turing_transforms2-0.1.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+turing_transforms2-0.1.1.dist-info/RECORD,,
