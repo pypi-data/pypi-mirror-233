@@ -1,0 +1,12 @@
+README.md
+setup.py
+tjru_language_classifier/__init__.py
+tjru_language_classifier/classifier.py
+tjru_language_classifier/model.pkl
+tjru_language_classifier/normalizer.py
+tjru_language_classifier/transliteration.py
+tjru_language_classifier.egg-info/PKG-INFO
+tjru_language_classifier.egg-info/SOURCES.txt
+tjru_language_classifier.egg-info/dependency_links.txt
+tjru_language_classifier.egg-info/requires.txt
+tjru_language_classifier.egg-info/top_level.txt
