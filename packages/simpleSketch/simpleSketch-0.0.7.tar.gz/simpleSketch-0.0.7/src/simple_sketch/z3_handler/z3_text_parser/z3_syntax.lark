@@ -1,0 +1,246 @@
+
+start: s
+
+?s: formula 
+
+// FIXME
+// comment: COMMENT
+// COMMENT: /#[^\n]*/
+
+
+?formula : NOT "(" formula1 ")" -> not_formula
+| AND "(" formula_list ")" -> and_formula
+| OR "(" formula_list ")" -> or_formula
+| IMPLIES "(" formula1 "," formula1 ")" -> implies_formula
+| FORALL "(" id_list "," formula1 ")" -> forall_formula
+| EXISTS "(" id_list "," formula1 ")" -> exists_formula
+| expr
+
+?formula1: expr 
+| formula
+
+formula_list: formula1
+| formula_list "," formula1 
+
+
+?id_list: var
+| "[" var ("," var)* "]" -> idlist
+
+
+?expr : expr REL_OP expr  -> rel_expr
+| expr ADD_SUB expr -> addsub_expr
+| expr MUL_DIV expr -> muldiv_expr
+| expr POW expr     -> pow_expr
+//  # FIXME: add`modulus` operator `%`
+| atom
+
+?atom : "(" expr ")" -> bracket_expr
+| var
+| array_access
+| int_
+| float_
+| bool_
+
+array_access: VAR_ID "[" expr "]"
+
+?var: VAR_ID -> var_id
+
+positive_int: POSITIVE_INT -> positive_int
+int_: INT -> int_
+float_: FLOAT -> float_
+bool_: "True" | "False"
+
+NOT.0: "Not" // TODO: check if it is correct properly it is not correct
+OR.1: "Or"
+AND.2: "And"
+IMPLIES.3: "Implies"
+FORALL.4: "ForAll"
+EXISTS.5: "Exists"
+
+
+REL_OP.2: "!=" | "==" | "<=" | ">=" | "<" | ">"
+ADD_SUB.3: "+" | "-"
+MUL_DIV.4: "*" | "/"
+POW.3: "**"  // TODO: check how to add it 
+
+
+POSITIVE_INT.1: /[1-9][0-9]*/ | /0/
+// TODO: check what is the correct way for `INT` (with or without the `?`)
+INT.0: ["+"|"-"]? POSITIVE_INT 
+// INT: ["+"|"-"] POSITIVE_INT 
+FLOAT: ["+"|"-"]? POSITIVE_INT "." POSITIVE_INT
+
+
+
+KEYWORD: /Not|And|Or|Implies|ForAll|Exists|True|False/
+LETTER: /[a-zA-Z]/
+DIGIT: /[0-9]/
+ID: ("_"|LETTER)("_"|LETTER|DIGIT)*
+VAR_ID: /(?!(/KEYWORD/)\b)/ID
+
+// VAR_ID.1: /(?!(/KEYWORD/)\b)/ID
+
+%import common.CNAME // ("_"|LETTER) ("_"|LETTER|DIGIT)*
+%import common.WS
+%ignore WS
+
+
+//  -------------------------------------------------------------------------
+//  -------------------------------------------------------------------------
+//  -------------------------------------------------------------------------
+
+// ?formula : expr | compound | quant_expr
+// | comment formula | comment formula | comment
+
+
+// formula_list:\
+//     formula     
+// |   formula "," formula_list 
+
+// ?compound : connective "(" formula_list ")"
+
+// // TODO: add `Implies` and `Iff` connectives
+// ?connective : "And" | "Or" | "Not"
+
+// // TODO: merge `ForAll` and `Exists` into one rule simmilar to `connective`
+// ?quant_expr  : \
+//     "ForAll" "(" id_list "," formula_list ")" 
+// |   "Exists" "(" id_list "," formula_list ")" 
+
+// id_list :\
+//     id               
+// |   "[" id_list1 "]" 
+
+// id_list1 :\
+//     id          
+// |   id "," id_list1 
+
+
+// ?expr : bool_expr
+
+// ?bool_expr :\
+//     bool_expr REL_OP arth_expr  -> rel_op
+// |   arth_expr
+
+// ?arth_expr :\
+//     addsub_expr
+
+// ?addsub_expr :\
+//     addsub_expr ADD_SUB muldiv_expr -> add_sub
+// |   muldiv_expr
+
+// ?muldiv_expr :\
+//     muldiv_expr MUL_DIV atom -> mul_div
+// |   atom
+
+// ?atom :\
+//     num
+// |   id
+// |   "(" expr ")" -> bracket_expr
+
+// id: ID
+// ?num: NUM
+
+// REL_OP: "!=" | "=" | "<=" | ">=" | "<" | ">"
+// ADD_SUB: "+" | "-"
+// MUL_DIV: "*" | "/"
+// POW: "**"  // TODO: check how to add it 
+
+// POSITIVE_INT: /[1-9][0-9]*/ | /0/
+// // TODO: check if the following (`NUM` TOKEN/RULE) is correct
+// NUM: ["+"|"-"]? POSITIVE_INT 
+// // NUM: ["+"|"-"] POSITIVE_INT 
+
+// // FIXME: add `KEYWORDS` 
+
+// %import common.CNAME -> ID // ("_"|LETTER) ("_"|LETTER|DIGIT)*
+// %import common.WS
+// %ignore WS
+
+
+//  -------------------------------------------------------------------------
+// ?start: s
+
+// ?s: formula 
+
+// // TODO
+// comment: COMMENT
+// COMMENT: /#[^\n]*/
+
+
+// ?formula : expr | compound | quant_expr
+// | comment formula | comment formula | comment
+
+
+// ?formula_list:\
+//     formula     ->  formula_list_0
+// |   formula "," formula_list ->  formula_list_1
+
+// ?compound : connective "(" formula_list ")"
+
+// // TODO: add `Implies` and `Iff` connectives
+// ?connective : "And" | "Or" | "Not"
+
+// // TODO: merge `ForAll` and `Exists` into one rule simmilar to `connective`
+// ?quant_expr  : \
+//     "ForAll" "(" id_list "," formula_list ")" -> forall
+// |   "Exists" "(" id_list "," formula_list ")" -> exists
+
+// id_list :\
+//     id               
+// |   "[" id_list1 "]" 
+
+// ?id_list1 :\
+//     id          
+// |   id "," id_list1 
+
+// // ?id_list :\
+// //     id               -> id_list_0
+// // |   "[" id_list1 "]" -> id_list_1
+
+// // ?id_list1 :\
+// //     id          -> id_list1_0
+// // |   id "," id_list1 -> id_list1_1
+
+
+// // expr :\
+// //     arth_expr
+// // |   bool_expr
+// ?expr : bool_expr
+
+// ?bool_expr :\
+//     bool_expr REL_OP arth_expr -> rel_op
+// |   arth_expr
+
+// ?arth_expr :\
+//     addsub_expr
+
+// ?addsub_expr :\
+//     addsub_expr ADD_SUB muldiv_expr -> add_sub
+// |   muldiv_expr
+
+// ?muldiv_expr :\
+//     muldiv_expr MUL_DIV atom -> mul_div
+// |   atom
+
+// ?atom :\
+//     num
+// |   id
+// |   "(" expr ")" -> bracket_expr
+
+// id: ID
+// ?num: NUM
+
+// REL_OP: "!=" | "=" | "<=" | ">=" | "<" | ">"
+// ADD_SUB: "+" | "-"
+// MUL_DIV: "*" | "/"
+// POW: "**"  // TODO: check how to add it 
+
+// POSITIVE_INT: /[1-9][0-9]*/ | /0/
+// // TODO: check if the following (`NUM` TOKEN/RULE) is correct
+// NUM: ["+"|"-"]? POSITIVE_INT 
+// // NUM: ["+"|"-"] POSITIVE_INT 
+
+// %import common.CNAME -> ID // ("_"|LETTER) ("_"|LETTER|DIGIT)*
+// %import common.WS
+// %ignore WS
