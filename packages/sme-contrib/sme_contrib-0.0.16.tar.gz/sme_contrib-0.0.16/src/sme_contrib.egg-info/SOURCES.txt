@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/sme_contrib/__init__.py
+src/sme_contrib/optimize.py
+src/sme_contrib/plot.py
+src/sme_contrib.egg-info/PKG-INFO
+src/sme_contrib.egg-info/SOURCES.txt
+src/sme_contrib.egg-info/dependency_links.txt
+src/sme_contrib.egg-info/requires.txt
+src/sme_contrib.egg-info/top_level.txt
+tests/test_optimize.py
+tests/test_plot.py
