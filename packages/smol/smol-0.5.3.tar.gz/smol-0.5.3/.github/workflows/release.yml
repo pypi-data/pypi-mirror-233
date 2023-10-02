@@ -1,0 +1,54 @@
+name: release
+
+on:
+  release:
+    types: [published]
+    inputs:
+      release-pypi:
+        required: true
+        type: boolean
+        default: true
+
+  workflow_dispatch:
+    inputs:
+      release-pypi:
+        required: true
+        type: boolean
+        description: "if true a release is made on PyPI"
+
+      cibw_skip:
+        required: false
+        type: string
+        description: "wheels to skip building"
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  build:
+    needs: test
+    uses: ./.github/workflows/build.yml
+    with:
+      cibw_skip: ${{ github.event.inputs.cibw_skip }}
+
+  docs:
+    needs: test
+    uses: ./.github/workflows/docs.yml
+    secrets: inherit
+
+  release-pypi:
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: github.event.inputs.release-pypi == 'true'
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          verbose: true
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
