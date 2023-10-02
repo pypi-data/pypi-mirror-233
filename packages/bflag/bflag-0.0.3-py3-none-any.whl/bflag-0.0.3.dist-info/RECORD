@@ -1,0 +1,13 @@
+bflag/__init__.py,sha256=E3JAv2DDrgJpEkmMzpzW-a6tAWUc6WbRQW_exvVQiYQ,102
+bflag/_modidx.py,sha256=Bv7SQyjXAfI8A2adhXkvVJF_YJjh-FDC53C6C8-X3Ts,3557
+bflag/bflag.py,sha256=ikif_qAa7PRVL8agVYG7PwKRAJXV5k5YVz-JNPGp6Lo,5750
+bflag/butil.py,sha256=p9OCKom2p0H2nAmvnSSoOuPMfMym96M9V29vP5K0G9I,3124
+bflag/flags.py,sha256=5fUBhA23UTuz2jfU6NK5URdIeZWZIj8Ew1ZerJSbZ6o,1197
+bflag/futil.py,sha256=j4FQ5E_k8-AtS7SomPtdJQLNI_ykfvHqdK_AyNI2rxw,4878
+bflag/types.py,sha256=H7yYErdTiocvPg0qZPogToQKAGDjcUr1xlYVTjNq23g,519
+bflag-0.0.3.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+bflag-0.0.3.dist-info/METADATA,sha256=BVAPbrGWU1LQ0QYMd4q5EBocNjLpHoUp4xdKyCJk9UM,731
+bflag-0.0.3.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+bflag-0.0.3.dist-info/entry_points.txt,sha256=zn0RYMD6MGOUd33ewA_CMziqV45FvjtQAe8ncC31MQA,32
+bflag-0.0.3.dist-info/top_level.txt,sha256=KYMBjhH1UGulcM8V9sjcpSqDWdNMjA8GjvQxa9ySGtE,6
+bflag-0.0.3.dist-info/RECORD,,
