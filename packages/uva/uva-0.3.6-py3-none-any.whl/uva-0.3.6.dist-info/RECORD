@@ -1,0 +1,13 @@
+uva/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uva/__main__.py,sha256=QsrS2oACC-cn7pP7Dp9qT_IQLuCy4vMYHbhFNqEsynA,43
+uva/commands/__init__.py,sha256=REV-v-dZLdw63K_oXB_HoHLPgdTXTPR9DBHweb2jlM0,179
+uva/commands/commands.py,sha256=lafPexgi7_XUF6zeAD4dt1QKXpOEgwUnoaXJF7uyKH4,7090
+uva/helpers/__init__.py,sha256=7-J-ev9hUzTEeMFBBUFMSvNZraaB29Eig5nR9GN5A-M,193
+uva/helpers/helpers.py,sha256=7Q4iROeqUyjUAU2dg57T_-TEb6F5png1iwy7Kx7wM7I,1864
+uva/localdb/__init__.py,sha256=VB3XBWQFLhhUWlaX3y73ZmZUuat0oEnHvcGWdEc4kFo,131
+uva/localdb/localdb.py,sha256=P7tKfg9RS97oSLG_SGjMsjD-t-I35XnZHYITEedF6F8,1252
+uva/main.py,sha256=C1-_T_PpZix5aBwa_Q3SOHpR19mlM6qP53LMsCBUG9o,2804
+uva-0.3.6.dist-info/METADATA,sha256=fazY12biGLxBE85OvhThU5XafbeDAvrCFR-UVngcnDY,699
+uva-0.3.6.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+uva-0.3.6.dist-info/entry_points.txt,sha256=XApny1WV-saQNpKDi9Dz9qmQ82sXEmHzGIjBegzPBPY,36
+uva-0.3.6.dist-info/RECORD,,
