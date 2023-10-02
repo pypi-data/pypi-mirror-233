@@ -1,0 +1,2 @@
+[sinetstream.value_type]
+ndarray = sinetstreamplugin.valuetype.ndarray:NdarrayValueType

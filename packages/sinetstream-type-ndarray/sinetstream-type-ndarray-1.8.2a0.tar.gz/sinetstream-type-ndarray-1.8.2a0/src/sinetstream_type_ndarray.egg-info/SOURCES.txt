@@ -1,0 +1,11 @@
+.gitlab-ci.yml
+README.md
+pyproject.toml
+src/sinetstream_type_ndarray.egg-info/PKG-INFO
+src/sinetstream_type_ndarray.egg-info/SOURCES.txt
+src/sinetstream_type_ndarray.egg-info/dependency_links.txt
+src/sinetstream_type_ndarray.egg-info/entry_points.txt
+src/sinetstream_type_ndarray.egg-info/requires.txt
+src/sinetstream_type_ndarray.egg-info/top_level.txt
+src/sinetstreamplugin/valuetype/ndarray.py
+tests/test_ndarray.py
