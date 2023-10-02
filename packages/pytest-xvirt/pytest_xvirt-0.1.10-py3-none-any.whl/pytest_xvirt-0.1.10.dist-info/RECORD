@@ -1,0 +1,13 @@
+xvirt/__init__.py,sha256=D6xxH_eyLvd74Ljxe6hQokJfKlz_Ob8dak7ebUmY6rI,1129
+xvirt/collectors.py,sha256=kGO5a3_t9ZAu7b6qQUVbDmLCHPFl5wymDgv2hvItGm0,561
+xvirt/events.py,sha256=tGBire5bCsvHc2KJ1wGh-OpWB2mlL0pvs-kBNw7pIPE,1772
+xvirt/newhooks.py,sha256=4OKw338Gcipni5l4ipo5d2YR-HF8gV6IhhnwMTq6_tQ,202
+xvirt/plugin.py,sha256=MJsY7F_8vdoG3d2NnqvOMC9_-wK8nIYbwdza5xBG_3I,1010
+xvirt/plugin_remote.py,sha256=HigNbuTf9c0-vebpxLwAwJPwzb3T7GSjZifM__xM-MI,1309
+xvirt/plugin_server.py,sha256=U5UMRx6XmzS5Bma1K8RaaIg3q7rKCKYGCEoQKsJqXF0,4147
+xvirt/empty/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_xvirt-0.1.10.dist-info/METADATA,sha256=fSAr2Wtti90a6q8SQEKvGF0YAyoI9aAQnmyckZCC2KI,3279
+pytest_xvirt-0.1.10.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pytest_xvirt-0.1.10.dist-info/entry_points.txt,sha256=2lPKxwAPE63pjx45g4nb6uxViqZQA9CU2pQvp42Zjz8,32
+pytest_xvirt-0.1.10.dist-info/top_level.txt,sha256=1vu81Mav39syGVxx0WCj72_25SN2--0nXMHMwKuu1e4,19
+pytest_xvirt-0.1.10.dist-info/RECORD,,
