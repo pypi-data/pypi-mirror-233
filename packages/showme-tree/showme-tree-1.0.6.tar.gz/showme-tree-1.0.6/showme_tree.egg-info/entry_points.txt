@@ -1,0 +1,3 @@
+[console_scripts]
+showme-tree = showme_tree.main:main
+
