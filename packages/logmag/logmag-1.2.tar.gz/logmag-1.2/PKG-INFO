@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: logmag
+Version: 1.2
+Summary: Logging
+Home-page: UNKNOWN
+Author-email: zhassulanissayev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# logmag
+
+This library defines a simple logging system with different log levels and colored output for different levels. 
+
+
+## Installation
+
+You can install the Logger Library using pip:
+
+```bash
+pip install logmag
+```
+
+## Usage
+
+### Initializing the Logger:
+```python
+from logger import Logger
+```
+
+
+### Create a logger
+```python
+my_logger = Logger('my_logger')
+```
+
+### Logging Messages:
+
+#### The Logger provides five levels of logging: DEBUG, INFO, WARNING, ERROR, and CRITICAL.
+
+##### Debug Messages:
+```python
+my_logger.debug('This is a debug message')
+```
+
+##### Info Messages:
+```python
+my_logger.info('This is an informational message')
+```
+##### Warning Messages:
+```python
+my_logger.warning('This is a warning')
+```
+##### Error Messages:
+```python
+my_logger.error('This is an error message')
+```
+##### Critical Messages:
+```python
+my_logger.critical('This is a critical error')
+```
+<p>The messages will be printed to the console with timestamps and colored according to their severity.</p>
+
+## Example
+```python
+# Example Usage
+from logmag import Logger
+
+my_logger = Logger('my_logger')
+
+my_logger.debug('This is a debug message')
+my_logger.info('This is an informational message')
+my_logger.warning('This is a warning')
+my_logger.error('This is an error message')
+my_logger.critical('This is a critical error')
+```
+
+# Contact
+
+For questions, bug reports, or contributions, please visit the Gitlab repository: https://gitlab.com/test4521437/a3.
+
