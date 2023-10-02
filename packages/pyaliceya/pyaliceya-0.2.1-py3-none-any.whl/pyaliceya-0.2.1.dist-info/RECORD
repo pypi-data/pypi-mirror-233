@@ -1,0 +1,13 @@
+pyAlice/__init__.py,sha256=ZTYLCqLJKBhxsFXzhDFTsm6KGlffas-3_MZRu2837MI,104
+pyAlice/base.py,sha256=naox_ogZeWLB6wHJbkPeXvkARfKR_nHlaO4MvN2l500,6202
+pyAlice/functions.py,sha256=697T9xlidQ6LesKuKdfm8VGk3HfyBHPuqhAjUpZYvpw,1227
+pyAlice/key_word.py,sha256=TK7341q6m8z9jEu_qf895Oh1YcPDpAJ0lIt6v8JSaC8,1048
+pyAlice/py_alice.py,sha256=VSkuFH-xXYyZpkMAXYFw_iLMDafjQ0ewEUog7rgKOWc,4748
+pyAlice/simulation.py,sha256=irARjkAiHnjGDWLgFAbRg1beudM_5gfXmigOSqHY9RE,2105
+pyAlice/errors/errors.py,sha256=orz3UDWuu2mBWd9vflLgV_tHa6Uc0QDSLlNhmI7uBEM,1062
+pyAlice/messages/embedded_message.py,sha256=0KXB2OzTrENHAQ8Hqkoro0Epp0eAGJ_BARkUTfxFGV8,2869
+pyAlice/messages/errors_messages.py,sha256=EBh70bsuNwwWl_SdDqpjaQhfKN3WfomOW-YMF86mdWg,2357
+pyaliceya-0.2.1.dist-info/METADATA,sha256=geEPKMsqzDgpO6wiwVZnHFpGIR-_AE3AxA3jG2dvcg4,898
+pyaliceya-0.2.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pyaliceya-0.2.1.dist-info/top_level.txt,sha256=bWLztlLW4qJu9yqXUMKdabOYKvs4Q9ZpG6b3XRhrhGE,40
+pyaliceya-0.2.1.dist-info/RECORD,,
