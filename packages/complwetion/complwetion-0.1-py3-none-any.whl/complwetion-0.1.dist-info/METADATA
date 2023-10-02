@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: complwetion
+Version: 0.1
+Summary: Small helper library to build chat applications
+Home-page: https://github.com/gkteco/complwetion/tree/master
+Author: Gianni Crivello
+Author-email: gianni.crivello@techolution.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==23.1.0)
+Requires-Dist: beautifulsoup4 (==4.12.2)
+Requires-Dist: bs4 (==0.0.1)
+Requires-Dist: huggingface-hub (==0.17.3)
+Requires-Dist: numpy (==1.24.4)
+Requires-Dist: openai (==0.28.1)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: Pillow (==10.0.1)
+Requires-Dist: pinecone-client (==2.2.4)
+Requires-Dist: regex (==2023.8.8)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: sentence-transformers (==2.2.2)
+Requires-Dist: tokenizers (==0.13.3)
+Requires-Dist: torch (==2.0.1)
+Requires-Dist: tqdm (==4.66.1)
+Requires-Dist: transformers (==4.33.3)
+Requires-Dist: typing-extensions (==4.8.0)
+Requires-Dist: urllib3 (==2.0.5)
+
