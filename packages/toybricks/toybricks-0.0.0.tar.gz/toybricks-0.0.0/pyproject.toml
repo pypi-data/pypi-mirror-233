@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=67.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toybricks"
+version = "0.0.0"
+authors = [
+    {name = "Muhan Xiao", email = "syrupcake@protonmail.com"},
+]
+description = "A package designed to provide a unified framework for Neural Architecture Search. Under internal testing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]

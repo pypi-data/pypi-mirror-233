@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+toybricks/__init__.py
+toybricks.egg-info/PKG-INFO
+toybricks.egg-info/SOURCES.txt
+toybricks.egg-info/dependency_links.txt
+toybricks.egg-info/top_level.txt
