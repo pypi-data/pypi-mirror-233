@@ -1,0 +1,183 @@
+Metadata-Version: 2.1
+Name: pulumi-automation-utils
+Version: 0.0.4
+Summary: Package contains functions and classes that can be utilized in the automation of pulumi python deployments
+Author-email: Adam Cubel <adam.cubel@tactware.net>
+Project-URL: Homepage, https://github.com/adamcubel/pulumi-automation-utils
+Project-URL: Bug Tracker, https://github.com/adamcubel/pulumi-automation-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pulumi-automation-utils
+Collection of utilities useful for deploying [pulumi](https://www.pulumi.com/docs/) 
+Infrastructure as Code. These utilities aid in configuration and creation of 
+resource dependencies needed by pulumi. 
+
+## Files
+
+Below is a list of all of the files and an inclination for how each can be
+used within your project.
+
+### certs_and_keys.py
+
+This file contains two functions. These are `create_key_pair` and 
+`create_signed_certificate`. The `create_key_pair` function allows for the 
+creation of an RSA 4096 bit public/private key pair. The 
+`create_signed_certificate` function allows the user to create a signed 
+certificate using an existing CA key pair. It is possible to create the CA 
+key pair using the `create_key_pair` and use it as the basis for creating 
+a self-signed certificate.
+
+### common.py
+
+This file contains any and all generic function definitions that are 
+utilized when setting up the development environment to support pulumi 
+deployments. These functions include:
+
+- `parse_yaml_file` - read from a YAML file
+- sending commands to the OS
+- retrieving information from Azure
+
+### environment.py
+
+This file contains an Enum class representing each of the possible 
+environment types.
+
+### login_config.py
+
+This file contains two classes. The first is the `LoginMode` class that is an 
+Enum used to represent the options one could use for logging into Azure. The 
+second is a class by the name `LoginConfig`; this class is responsible for maintaining all configuration associated with the deployment user including 
+login status, and providing a function for allowing the user to login. The 
+`LoginConfig` class takes in a single variable, the `yaml_vars` retrieved 
+from the result of the `parse_yaml_file` function in `common.py`. 
+
+The following keys can be at the root of the YAML file to be consumed by 
+`LoginConfig`:
+- subscription
+  - (optional) The ID of the subscription in which to deploy infrastructure
+- app_id
+  - (optional) The Application Client ID for the service principal to login to 
+    Azure
+- client_secret
+  - (optional) The Service Principal Client Secret to login to Azure
+  - Recommend keeping the YAML configuration file safe if any sensitive 
+    information is stored within
+- login_mode
+  - (optional) The mode for logging into Azure. Currently supported options 
+    are: "interactive", "service_principal", or "managed_identity".
+- tenand_id
+  - (optional) The Tenant ID for the Service Principal to login to Azure
+
+Use the `is_logged_in` function to test whether the user is currently logged 
+in. The `login_to_azure` function is used to login to Azure via the login_mode 
+specified. Interactive is the default login mode if one is not supplied. In 
+interactive login, a URL and device code are supplied where the user can 
+login from another machine to provide authorization.
+
+### pulumi_config.py
+
+This file is used for managing pulumi in a semi-automated fashion. The 
+`PulumiConfig` class takes in the `LoginConfig` and the `yaml_vars` output via 
+the `parse_yaml_file` function in `common.py`. The `PulumiConfig` object sorts
+through the YAML to get all of the configuration parameters necessary to deploy 
+infrastructure via pulumi. 
+
+This class expects the following resources to be defined within the configuration:
+- storage_account
+  - Houses storage container used for backend state management
+- storage_container
+  - Houses the blobs that manage backend state
+- key_vault
+  - Manages encryption key used for securing pulumi sensitive information
+
+These resources are required to be configured and available at the time the 
+user issues the `pulumi plan` or `pulumi up` commands.
+
+## YAML Configuration
+
+The YAML configuration is used as the basis for deploying the resources necessary to support an Azure Container Instance running our custom pulumi deployment image.  This YAML configuration has some rules to smoothly configure resources accordingly. The following base level variables must be set:
+
+- environment
+- stack_name
+- resource_groups
+- image
+
+Additional base-level configuration variables that can be set:
+- container_registry
+  - This block contains information about the container registry for pushing (if building) the image that is used to create the Azure Container Instance. Setting the container registry here typically implies that it is outside of Azure. Ensure you set the `acr` value to `false` in this case.
+  - name: If the container registry will be kept within Azure, this is the name of the resource. Otherwise, this will be the full URL of the container registry.
+  - acr: boolean representing whether this container registry is an Azure Container Registry 
+    - if this block is at the highest level of the YAML file, this should almost certainly be set to false
+  - token_name: (optional) configuration option used to specify the name of the token created and used for authenticating to the registry for push/pull of container images
+- random_value
+  - a "random" value that is appended to all of the resources deployed
+  - useful in ensuring uniqueness of resources created
+- location
+  - The location to be used when creating resources
+- subscription
+  - The ID of the subscription to be used when creating resources
+  - If this is not supplied, the default subscription will be used
+- project_location
+  - The location of the pulumi project to be used
+  - If not supplied, the expectation is that the 
+
+The `image` configuration setting is responsible for naming various settings about the image that will be created and uploaded to the `container_registry` specified. Those settings are named and explained below.
+
+- name
+  - The name of the container image
+- tag
+  - The tag to use when creating the container image
+- build_container_image
+  - boolean flag specifying whether the image needs to be built or has already been built
+- target
+  - the build target to use when creating the container image
+- dockerfile
+  - The location of the pulumi-python dockerfile to build if 
+    build_container_image is True
+- dockerfile_context
+  - The location of the context docker should use when building the image
+- ssh_user
+  - the SSH user that can be used to login to the container
+- ssh_group
+  - the group that the SSH user belongs tod
+- ssh_user_default_password
+  - the default password for the SSH user
+  - this password cannot be used for SSH access. Only RSA key access possible
+  - if one not set, a random password is created
+
+The `resource_groups` configuration setting is responsible for naming
+the resource group to be used when deploying the resources to support the pulumi Azure Container Instance. If the resource group name is not specified at time of setting the configuration YAML, use the name `resource_group` and the first resource group retrieved from the list in the subscription will be used. Within the resource group the following settings need to be called out.
+
+- storage_account
+  - This configuration block contains information about the storage account used in deployment of the pulumi Azure Container Instance
+  - name: The name of the storage account
+  - sku: The SKU used in the creation of the storage account
+  - sas_token
+    - Optional block used to specify the name of the SAS token used for accessing the storage account
+    - name: The name of the SAS token
+  - storage_container
+    - This storage container is used for pulumi backend state configuration storage
+    - name: The name of the storage container
+  - file_share
+    - This file share is used as persistant storage against the Azure Container Instance
+    - name: The name of the file share within the storage account
+- key_vault
+  - This block contains information about the key vault that is used for managing secrets within the subscription
+  - name: The name of the Azure Key Vault
+  - encrpytion_key: The name of the encryption key used for pulumi secrets
+- container_registry
+  - This block contains information about the container registry for pushing (if building) the image that is used to create the Azure Container Instance. This can be either in Azure (Azure Container Registry) or elsewhere (e.g. DockerHub - docker.io)
+  - name: If the container registry will be kept within Azure, this is the name of the resource. Otherwise, this will be the full URL of the container registry.
+  - acr: boolean representing whether this container registry is an Azure Container Registry
+  - token_name: (optional) configuration option used to specify the name of the token created and used for authenticating to the registry for push/pull of container images
+- container_instance
+  - This block contains information about the Azure Container Instance that will host the image built and pushed to the container registry
+  - name: The name of the Azure Container Instance
+    - ensure that this name is fairly unique as it is used in the name of the FQDN on a public instance
+  - public_ip: boolean representing whether to use a public IP address for networking. If this is not set, default is True
+    - If set to false, no FQDN will be created for the instance
