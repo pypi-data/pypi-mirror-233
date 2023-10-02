@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: py3_hello
+Version: 1.2.6
+Summary: A program to test packaging and deployment
+Home-page: https://gitlab.com/jfxs/py3-hello
+License: MIT
+Keywords: test,hello
+Author: FX Soubirou
+Author-email: soubirou@yahoo.fr
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Project-URL: Documentation, https://jfxs.gitlab.io/py3-hello/
+Description-Content-Type: text/markdown
+
+# Python Hello World
+
+[![Software License](https://img.shields.io/badge/license-MIT-informational.svg?style=flat)](LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
+A tool to display Hello !
+
+## Authors
+
+<!-- vale off -->
+- **FX Soubirou** - *Initial work* - [GitLab repositories](https://gitlab.com/op_so)
+<!-- vale on -->
+
+## License
+
+<!-- vale off -->
+This program is free software: you can redistribute it and/or modify it under the terms of the MIT License (MIT). See the [LICENSE](https://opensource.org/licenses/MIT) for details.
+<!-- vale on -->
+

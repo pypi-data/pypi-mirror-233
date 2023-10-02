@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "py3_hello"
+version = "1.2.6"
+description = "A program to test packaging and deployment"
+keywords = ["test", "hello"]
+license = "MIT"
+authors = ["FX Soubirou <soubirou@yahoo.fr>"]
+readme = "README.md"
+homepage = "https://gitlab.com/jfxs/py3-hello"
+documentation = "https://jfxs.gitlab.io/py3-hello/"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+packages = [{include = "py3_hello", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.lint.dependencies]
+black = "^23.7.0"
+flake8 = "^6.1.0"
+flake8-pyproject = "^1.2.3"
+mypy = "^1.5.1"
+ruff = "^0.0.290"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.group.doc]
+optional = true
+
+[tool.poetry.group.doc.dependencies]
+sphinx = "^7.2.5"
+sphinx-autoapi = "^2.1.1"
+sphinx-rtd-theme = "^1.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ['py311']
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "src/py3_hello"]
+
+[tool.mypy]
+mypy_path = "src"
+strict = true
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.flake8]
+max-line-length = 88
