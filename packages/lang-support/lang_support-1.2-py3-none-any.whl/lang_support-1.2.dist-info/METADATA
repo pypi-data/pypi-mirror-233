@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: lang_support
+Version: 1.2
+Summary: Package that provides an easy API for adding different, easily changeable languages.
+Project-URL: Homepage, https://github.com/MateuszFerenc/my_pythons/tree/main/lang_support
+Project-URL: Bug Tracker, https://github.com/mateuszferenc/my_pythons/issues
+Author-email: Mateusz Ferenc <ferenc.mateusz.priv@gmail.com>
+Maintainer-email: Mateusz Ferenc <ferenc.mateusz.priv@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Mateusz Ferenc
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: language,language change,languages,multilangual
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: data-logger>1.2
+Description-Content-Type: text/markdown
+
+## My python program that allows you to use multiple languages in your own programs
+
+Package is <b>LangSupport</b> in lang_support.py file.<br><br>
+
+<b>main.py</b> file, in example directory, is an example of use<br>
+
+Tu run example:
+```bash
+cd lang_support
+py -m example.main
+```
+<br>
+Also there is <b>with_data_logger</b> directory, which is the same LangSupport class but print functions were changed to logging functions (to enable logging output to file instead of standard output)<br><br>
+
+### <b>generate_translation.py</b> file is a script which read one language file and generate translation for selected language (deepl package and token needed)
+
+### I will add option to generate lang files soon
