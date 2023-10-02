@@ -1,0 +1,7 @@
+setup.py
+test92/__init__.py
+test92/magic.py
+test92.egg-info/PKG-INFO
+test92.egg-info/SOURCES.txt
+test92.egg-info/dependency_links.txt
+test92.egg-info/top_level.txt
