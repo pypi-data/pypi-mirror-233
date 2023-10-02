@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+showme_tree.egg-info/PKG-INFO
+showme_tree.egg-info/SOURCES.txt
+showme_tree.egg-info/dependency_links.txt
+showme_tree.egg-info/entry_points.txt
+showme_tree.egg-info/requires.txt
+showme_tree.egg-info/top_level.txt
