@@ -1,0 +1,9 @@
+latex_dependency_scanner/__init__.py,sha256=_WAPt1gNDrcqMkLCXSaVr0EGXpd7eMaYUzWdIh_RzBE,445
+latex_dependency_scanner/_version.py,sha256=Vx0AoK76Okge20HOXnTbzQWG2fASGO_6i0xE_iMSyw8,274
+latex_dependency_scanner/compile.py,sha256=cbTtFcWGBST0P8-7s1wCZr4pU4W2An_k6NPxUXbgcOU,2502
+latex_dependency_scanner/scanner.py,sha256=ZP2ewdsZpeFXYnQ8S5T1qqubtLAELZmXBBZcQG8adew,5864
+latex_dependency_scanner-0.1.2.dist-info/LICENSE,sha256=RxB_V9PwkqN54TuemXxwTa5K9yHQCbD-sgg1pjmYSz0,1052
+latex_dependency_scanner-0.1.2.dist-info/METADATA,sha256=Kd3vklA81WurzPkzEmFJzzhC6WAbxkBkrHRhHv1LWd8,3381
+latex_dependency_scanner-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+latex_dependency_scanner-0.1.2.dist-info/top_level.txt,sha256=TBIj_so6Ik_cH6jIa-Zs-wfPcQlsvMZ8RnzAG4CHnco,25
+latex_dependency_scanner-0.1.2.dist-info/RECORD,,
