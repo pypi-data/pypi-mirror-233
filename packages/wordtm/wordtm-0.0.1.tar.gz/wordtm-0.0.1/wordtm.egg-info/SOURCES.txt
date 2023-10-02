@@ -1,0 +1,12 @@
+setup.py
+jctest/__init__.py
+jctest/add.py
+jctest/subtract.py
+jctest/extras/__init__.py
+jctest/extras/divide.py
+jctest/extras/multiply.py
+wordtm.egg-info/PKG-INFO
+wordtm.egg-info/SOURCES.txt
+wordtm.egg-info/dependency_links.txt
+wordtm.egg-info/requires.txt
+wordtm.egg-info/top_level.txt
