@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: enexlib
+Version: 0.0.4
+Summary: Extract Evernote backup files (.enex) to plain text.
+Project-URL: Source, https://github.com/whitgroves/enexlib
+Keywords: evernote,enex
+Requires-Python: >=3.11
+Requires-Dist: beautifulsoup4 >=4.12.2
+Requires-Dist: lxml >=4.9.3
+Requires-Dist: soupsieve >=2.5
+
