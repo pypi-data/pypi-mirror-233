@@ -1,0 +1,2 @@
+[pytest11]
+donde = pytest_donde.plugin
