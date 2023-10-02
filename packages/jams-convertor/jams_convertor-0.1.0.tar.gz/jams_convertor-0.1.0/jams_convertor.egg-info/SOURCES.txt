@@ -1,0 +1,6 @@
+README.md
+setup.py
+jams_convertor.egg-info/PKG-INFO
+jams_convertor.egg-info/SOURCES.txt
+jams_convertor.egg-info/dependency_links.txt
+jams_convertor.egg-info/top_level.txt
