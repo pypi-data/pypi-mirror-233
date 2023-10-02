@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: heahmund
+Version: 0.1.1
+Summary: Relentless Health Checks in Python.
+Home-page: https://github.com/uptimedog/heahmund/
+Author: Clivern
+Author-email: hello@clivern.com
+License: MIT
+Project-URL: Documentation, https://github.com/uptimedog/heahmund/
+Project-URL: Source, https://github.com/uptimedog/heahmund/
+Project-URL: Changelog, https://github.com/uptimedog/heahmund/blob/main/CHANGELOG.rst
+Project-URL: Tracker, https://github.com/uptimedog/heahmund/issues
+Project-URL: Download, https://pypi.org/project/heahmund/#files
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+.. image:: https://img.shields.io/pypi/v/Heahmund.svg
+    :alt: PyPI-Server
+    :target: https://pypi.org/project/Heahmund/
+.. image:: https://github.com/Uptimedog/Heahmund/actions/workflows/ci.yml/badge.svg
+    :alt: Build Status
+    :target: https://github.com/Uptimedog/Heahmund/actions/workflows/ci.yml
+
+|
+
+========
+Heahmund
+========
+
+    Relentless Health Checks in Python
+
+
+Note
+====
+
+This project is created and maintained for Uptimedog. see https://github.com/Uptimedog
