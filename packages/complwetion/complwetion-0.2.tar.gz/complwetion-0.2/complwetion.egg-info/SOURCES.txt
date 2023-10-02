@@ -1,0 +1,7 @@
+README.md
+setup.py
+complwetion.egg-info/PKG-INFO
+complwetion.egg-info/SOURCES.txt
+complwetion.egg-info/dependency_links.txt
+complwetion.egg-info/requires.txt
+complwetion.egg-info/top_level.txt
