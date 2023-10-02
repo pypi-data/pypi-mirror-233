@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: linux-interactive
+Version: 0.0.4
+Summary: Linux Interactive: Interactive Linux Commands with OpenAI GPT-4
+Home-page: https://github.com/ktamulonis/li
+Author: Kurt Tamulonis
+Author-email: kurttamulonis@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/plain
+
+Linux Interactive is a utility that interacts with the OpenAI GPT-4 model to provide Linux commands based on user prompts.
+
