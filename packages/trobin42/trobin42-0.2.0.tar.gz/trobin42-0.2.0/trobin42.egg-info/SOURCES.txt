@@ -1,0 +1,6 @@
+README.md
+setup.py
+trobin42.egg-info/PKG-INFO
+trobin42.egg-info/SOURCES.txt
+trobin42.egg-info/dependency_links.txt
+trobin42.egg-info/top_level.txt
