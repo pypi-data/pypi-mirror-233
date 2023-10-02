@@ -1,0 +1,11 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+elommr/__init__.py
+elommr/elommr.py
+elommr.egg-info/PKG-INFO
+elommr.egg-info/SOURCES.txt
+elommr.egg-info/dependency_links.txt
+elommr.egg-info/top_level.txt
