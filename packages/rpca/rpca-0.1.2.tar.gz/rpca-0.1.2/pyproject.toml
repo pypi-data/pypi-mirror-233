@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "rpca"
+version = "0.1.2"
+description = "Robust PCA using Accelerated Alternating Projection"
+authors = ["Loic Coyle <loic.coyle@hotmail.fr>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/loiccoyle/RPCA"
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+scipy = "^1.11.3"
+numpy = "^1.26.0"
+
+[tool.poetry.group.dev.dependencies]
+notebook = "^7.0.4"
+matplotlib = "^3.8.0"
+pytest = "^7.4.2"
+pillow = "^10.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
