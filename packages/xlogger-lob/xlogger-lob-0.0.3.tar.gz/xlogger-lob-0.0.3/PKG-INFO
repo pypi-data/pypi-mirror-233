@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: xlogger-lob
+Version: 0.0.3
+Author: lobsterb
+Author-email: 57263573@qq.com
+Requires-Dist: loguru
