@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: abtem
+Version: 1.0.3
+Home-page: https://github.com/abtem/abtem
+Author: abTEM developers
+Author-email: jacob.madsen@univie.ac.at
+License: GPL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Provides-Extra: testing
+Provides-Extra: docs
+Provides-Extra: gpu
+Provides-Extra: extra
+License-File: LICENSE
