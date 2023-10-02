@@ -1,0 +1,21 @@
+LICENSE
+README.md
+setup.py
+git_assistant/__init__.py
+git_assistant/git_utils.py
+git_assistant/llm.py
+git_assistant.egg-info/PKG-INFO
+git_assistant.egg-info/SOURCES.txt
+git_assistant.egg-info/dependency_links.txt
+git_assistant.egg-info/entry_points.txt
+git_assistant.egg-info/requires.txt
+git_assistant.egg-info/top_level.txt
+trash/__init__.py
+trash/git_assistant.py
+trash/git_utils copy.py
+trash/git_utils.py
+trash/git_utils_.py
+trash/llm.py
+trash/llm_.py
+trash/streamlit_utils.py
+trash/utils.py
