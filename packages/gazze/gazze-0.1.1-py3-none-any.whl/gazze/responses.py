@@ -1,0 +1,3 @@
+from starlette.responses import JSONResponse as SJSONResponse
+
+class JSONResponse(SJSONResponse): ...
