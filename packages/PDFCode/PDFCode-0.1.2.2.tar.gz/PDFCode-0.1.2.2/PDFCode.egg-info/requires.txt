@@ -1,0 +1,5 @@
+pygments
+pdfkit
+file-magic
+markdown
+pyhtml2pdf
