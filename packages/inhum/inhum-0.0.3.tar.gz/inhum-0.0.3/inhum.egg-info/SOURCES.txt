@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+inhum/__init__.py
+inhum/_modidx.py
+inhum/core.py
+inhum.egg-info/PKG-INFO
+inhum.egg-info/SOURCES.txt
+inhum.egg-info/dependency_links.txt
+inhum.egg-info/entry_points.txt
+inhum.egg-info/not-zip-safe
+inhum.egg-info/requires.txt
+inhum.egg-info/top_level.txt
