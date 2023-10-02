@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gdshop-proto
+Version: 0.1.1
+Summary: Grey Dream GRPC contracts
+Home-page: https://github.com/p141592
+License: MIT
+Author: Nikolay Baryshnikov
+Author-email: root@k0d.ru
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: psycopg2-binary (>=2.9.8,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.0.3,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.21,<3.0.0)
+Project-URL: Repository, https://github.com/gdhorseshop/gdlib
+Description-Content-Type: text/markdown
+
+# Файл протоколов GDHorse
+

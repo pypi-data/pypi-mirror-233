@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "gdshop_proto"
+version = "0.1.1"
+description = "Grey Dream GRPC contracts"
+authors = ["Nikolay Baryshnikov <root@k0d.ru>"]
+packages = [
+    { include = "gdshop_proto" },
+]
+license="MIT"
+readme="README.md"
+homepage="https://github.com/p141592"
+repository="https://github.com/gdhorseshop/gdlib"
+classifiers=[
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Natural Language :: Russian",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.21"
+psycopg2-binary = "^2.9.8"
+pydantic-settings = "^2.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+grpcio = "^1.57.0"
+grpcio-tools = "^1.57.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
