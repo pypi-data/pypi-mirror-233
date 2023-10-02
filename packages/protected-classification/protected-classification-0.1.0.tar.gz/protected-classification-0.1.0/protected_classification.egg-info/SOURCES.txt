@@ -1,0 +1,11 @@
+LICENSE.TXT
+README.md
+setup.cfg
+setup.py
+protected_classification.egg-info/PKG-INFO
+protected_classification.egg-info/SOURCES.txt
+protected_classification.egg-info/dependency_links.txt
+protected_classification.egg-info/requires.txt
+protected_classification.egg-info/top_level.txt
+src/__init__.py
+src/protected_classification.py
