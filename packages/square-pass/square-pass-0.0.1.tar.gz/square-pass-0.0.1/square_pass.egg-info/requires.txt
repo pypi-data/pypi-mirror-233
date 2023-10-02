@@ -1,0 +1,8 @@
+pycryptodome==3.10.1
+prettytable==2.4.0
+rich==10.15.2
+pyperclip
+psutil
+setuptools
+wheel
+PyYAML
