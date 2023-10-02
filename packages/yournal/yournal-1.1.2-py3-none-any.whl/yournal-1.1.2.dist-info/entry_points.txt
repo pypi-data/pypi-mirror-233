@@ -1,0 +1,3 @@
+[console_scripts]
+yournal=yournal.__main__:main
+
