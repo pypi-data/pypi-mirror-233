@@ -1,0 +1,7 @@
+README.md
+setup.py
+bisneto_mathlib.egg-info/PKG-INFO
+bisneto_mathlib.egg-info/SOURCES.txt
+bisneto_mathlib.egg-info/dependency_links.txt
+bisneto_mathlib.egg-info/top_level.txt
+mathlib/__init__.py

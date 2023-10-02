@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bisneto-mathlib
+Version: 0.0.3
+Summary: Math Library
+Home-page: https://github.com/hbisneto/Mathematics
+Author: Heitor Bisneto
+Author-email: heitor.bardemaker@live.com
+License: MIT License
+Description: # Mathematics
+        
+        Biblioteca matemática criada em Python
+Keywords: bisneto,mathlib,math,lib
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
