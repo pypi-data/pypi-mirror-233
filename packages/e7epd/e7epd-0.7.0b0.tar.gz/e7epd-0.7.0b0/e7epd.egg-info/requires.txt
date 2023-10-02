@@ -1,0 +1,12 @@
+rich
+engineering_notation
+questionary
+pymongo
+
+[Docs]
+Sphinx
+sphinx-rtd-theme
+
+[Migration]
+SQLAlchemy
+mysqlclient
