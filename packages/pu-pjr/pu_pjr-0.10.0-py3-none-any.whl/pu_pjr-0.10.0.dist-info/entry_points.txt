@@ -1,0 +1,3 @@
+[console_scripts]
+quickplot=pu_pjr.plotting.__main__:main
+
