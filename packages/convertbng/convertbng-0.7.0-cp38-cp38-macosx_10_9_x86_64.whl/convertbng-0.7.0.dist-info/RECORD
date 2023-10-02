@@ -1,0 +1,12 @@
+_version.py,sha256=2W4eueRn_wKoAEGFwcNuZfPHlCR3aAp9SADy1XsIKHM,274
+convertbng/convertbng_p.pxd,sha256=rPypspjs3fYhKT5bMTqkPPPue8xw3pI5-pgywNDDi7Y,819
+convertbng/util.py,sha256=YMer9FQsTJDjZ2HU0mRa3n4S-QRgVJUZS6X0oHaJofc,8420
+convertbng/__init__.py,sha256=CU-V5CwhD4aZ4bSC_Z7Kr5HwIy9DPThupCMznxV75K4,210
+convertbng/cutil.pyx,sha256=-ZQYaH41Kit61p1s_H86ovexfX9yCwfWjj4YVV9n4ok,3897
+convertbng/liblonlat_bng.dylib,sha256=Y5zq-ePnjm_OPHEbgyB3ehzk1_wObIRK2-Pj3iPeRRs,29875856
+convertbng/stdbool.h,sha256=Kh3yV7KFb1KFWAI41x-ekYZe4tLiQruhr5YP5jmmBEU,68
+convertbng/cutil.cpython-38-darwin.so,sha256=te7rY-8T9WX0qdNDxztz5yNuzW_usJdtnMgPQolSUJ4,238896
+convertbng-0.7.0.dist-info/RECORD,,
+convertbng-0.7.0.dist-info/WHEEL,sha256=9eQSRGrOa03o6gOAokAH2Pxmxf46-vNjolslVVBruVM,109
+convertbng-0.7.0.dist-info/top_level.txt,sha256=hG7Puo0pbXlMkoUPWnCnRt5-CHtogUmhbgseht4HwqY,20
+convertbng-0.7.0.dist-info/METADATA,sha256=EijzPXpWsxAMPB5i_Xn-ekhGG2TC67QqQ4KDl9NV9t8,15194
