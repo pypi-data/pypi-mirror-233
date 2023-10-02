@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "lamplight"
+version = "0.1.0"
+description = "A Pydantic wrapper around the OpenAI API."
+authors = ["Dan Nadler <github@thetortoise.io>"]
+readme = "README.md"
+packages = [{include = "lamplight"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.4.2"
+openai = "^0.28.1"
+rich = "^13.6.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
