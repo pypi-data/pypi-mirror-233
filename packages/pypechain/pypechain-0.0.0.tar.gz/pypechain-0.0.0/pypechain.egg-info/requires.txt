@@ -1,0 +1,16 @@
+web3
+jinja2
+black
+
+[all]
+pypechain[base,build]
+
+[base]
+black
+jinja2
+web3
+
+[build]
+setuptools
+wheel
+twine
