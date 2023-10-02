@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: quantbullet
+Version: 0.1.0
+Summary: Toolkit for swift quant analysis
+License: MIT
+Author: Yiming Zhang
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cvxpy (>=1.3.2,<2.0.0)
+Requires-Dist: matplotlib (>=3.7.3,<4.0.0)
+Requires-Dist: nbsphinx (>=0.9.3,<0.10.0)
+Requires-Dist: pandas (>=2.1.0,<3.0.0)
+Requires-Dist: pydata-sphinx-theme (>=0.14.1,<0.15.0)
+Requires-Dist: scikit-learn (>=1.3.0,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.0,<0.15.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Requires-Dist: yfinance (>=0.2.30,<0.3.0)
+Description-Content-Type: text/markdown
+
+# quantbullet
+
+`quantbullet` is a toolkit designed for streamlined quantitative analysis in finance. The goals for this package are:
+
+1. To provide a practical set of tools for prototyping quantitative research ideas.
+2. To integrate and test contemporary research findings, primarily from academic sources, ensuring they're actionable.
+
+While I initially developed this package for my own needs, I intend to maintain it consistently. If it assists others in their endeavors, I consider that a success.
+
+## Installation
+
+```bash
+$ pip install quantbullet
+```
+
+## Usage
+
+1. Statistical Jump Models. See [this notebook](./docs/research/jump_model_prod.ipynb) for an example. Statistical jump models are a type of regime-switching model that applies clustering algorithms to temporal financial data, explicitly penalizing jumps between different financial regimes to capture true persistence in underlying regime-switching processes.
+
+## Contributing
+
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+
+## License
+
+`quantbullet` was created by Yiming Zhang. It is licensed under the terms of the MIT license.
+
+## Credits
+
+`quantbullet` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter). [Python Packages](https://py-pkgs.org/) is an excellent resource for learning how to create and publish Python packages.
+
