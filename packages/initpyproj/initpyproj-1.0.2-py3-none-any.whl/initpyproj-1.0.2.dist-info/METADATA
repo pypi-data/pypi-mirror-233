@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: initpyproj
+Version: 1.0.2
+Summary: Initialize an empty python project; make it a git repo; and sync it with a new GitHub repo
+Home-page: https://github.com/Schnilsibus/initpyproj
+Author: Nils Urbach
+Author-email: ndu01u@gmail.com
+License: MIT
+Keywords: initialize
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# initpyproj
+Initialize an empty python project; make it a git repo; and sync it with a new GitHub repo
+## Requirements
+- git installed on the system and accessible via %PATH%
+- GitHub CLI installed on the system and accessible via %PATH%
+- GitHub CLI connected to a GitHub account using ```gh auth login```
+## Usage
+- Run initpyproj as a python module: ```python -m initpyproj [...]```  
+- Get an overview over possible arguments: ```python -m initpyproj -h``` 
