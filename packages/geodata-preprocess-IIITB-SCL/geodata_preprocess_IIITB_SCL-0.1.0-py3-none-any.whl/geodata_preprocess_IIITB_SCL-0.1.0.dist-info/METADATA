@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: geodata-preprocess-IIITB-SCL
+Version: 0.1.0
+Summary: Dealing with Geopspatial Data, faster computation of ndvi indices using dask
+Home-page: UNKNOWN
+Author: IIITB-SCL
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: dask
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: rasterio
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
