@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: uzbek-language
+Version: 0.1.0
+Summary: This package was created to correct Uzbek spelling mistakes and translate from Latin to Cyrillic
+Home-page: https://github.com/QuvonchbekBobojonov/Uzbek-language
+Author: Quvonchbek Bobojonov
+Author-email: moorfoinfo@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Uzbek-language
+
+
+
+This package was created to correct Uzbek spelling mistakes and translate from Latin to Cyrillic
+
+### Install package
+
+```bash
+pip install uzbek-language
+```
+### Use in translator
+```python
+from uzbek_language import Translator
+
+text = "salom dunyo"
+
+translate = Translator(text=text)
+
+# output text converted to latin
+print(transtale.latin())
+
+# output text converted to cyrillic
+print(transtale.cyrillic())
+
+# auto output the modified text
+print(transtale.auto())
+```
+### Use in spelling
+```python
+from uzbek_language import Spelling
+
+s = Spelling(word='salom')
+
+# if the word is a mistake, it will say the same word
+print(s.get_matches())
+
+# determine whether the word is correct or incorrect
+
+print(s.is_availible())
+```
+#### Developed by Quvonchbek Bobojonov (c) 2023
