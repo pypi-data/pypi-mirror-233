@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+geodata_preprocess_IIITB_SCL.egg-info/PKG-INFO
+geodata_preprocess_IIITB_SCL.egg-info/SOURCES.txt
+geodata_preprocess_IIITB_SCL.egg-info/dependency_links.txt
+geodata_preprocess_IIITB_SCL.egg-info/requires.txt
+geodata_preprocess_IIITB_SCL.egg-info/top_level.txt
