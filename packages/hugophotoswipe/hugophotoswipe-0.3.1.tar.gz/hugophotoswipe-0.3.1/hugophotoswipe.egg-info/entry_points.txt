@@ -1,0 +1,2 @@
+[console_scripts]
+hps = hugophotoswipe.__main__:main

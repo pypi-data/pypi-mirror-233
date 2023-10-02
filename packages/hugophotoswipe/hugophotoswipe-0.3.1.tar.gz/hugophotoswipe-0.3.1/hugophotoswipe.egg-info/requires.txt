@@ -1,0 +1,13 @@
+six
+tzlocal
+pytz
+pyyaml
+tqdm
+smartcrop
+
+[dev]
+green
+
+[docs]
+
+[tests]
