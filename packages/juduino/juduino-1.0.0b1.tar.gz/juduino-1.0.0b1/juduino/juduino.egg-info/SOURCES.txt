@@ -1,0 +1,9 @@
+description.md
+pyproject.toml
+setup.cfg
+juduino/juduino.py
+juduino/juduino.egg-info/PKG-INFO
+juduino/juduino.egg-info/SOURCES.txt
+juduino/juduino.egg-info/dependency_links.txt
+juduino/juduino.egg-info/requires.txt
+juduino/juduino.egg-info/top_level.txt

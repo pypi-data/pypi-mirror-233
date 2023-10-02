@@ -1,0 +1,3 @@
+pduino
+matplotlib
+ipywidgets
