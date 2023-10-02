@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: FastText_Shop
+Version: 0.0.1
+Summary: FastText_Shop是一个基于FastText和结巴分词的短文本分类工具，特点是高效易用，同时支持中文和英文语料。基本使用方法、灵感来自并且和TextGrocery基本相同。
+Home-page: https://gitee.com/ranvane/fasttext_shop
+License: MIT
+Author: ranvane
+Author-email: ranvane@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: fasttext (>=0.9.2,<0.10.0)
+Requires-Dist: jieba (>=0.42.1,<0.43.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Project-URL: Repository, https://gitee.com/ranvane/fasttext_shop
+Description-Content-Type: text/markdown
+
+FastText_Shop
+===========
+
+一个高效易用的短文本分类工具，基于[FastText](ReadMe.md)
+,使用方法、灵感来自并且和[TextGrocery](https://github.com/2shou/TextGrocery)基本相同。
+
+FastText使用[结巴分词](https://github.com/fxsjy/jieba)
+作为默认的分词单元，以支持中文的短文本分类，停用词表使用[stopwords](https://github.com/goto456/stopwords/tree/master)。
+
+性能
+----
+使用今日头条中文新闻（文本）分类数据集 [toutiao-text-classfication-dataset](https://github.com/BenDerPan/toutiao-text-classfication-dataset)
+
+    数据规模：
+    
+    共382688条，分布于15个分类中。
+    
+    采集时间： 2018年05月
+
+分类器：automatic_optimization ，准确率：83% ，计算时间：超过5分钟（fasttext automatic_optimization 特性）
+
+
+示例代码
+-------
+
+```python
+>> > from tgrocery import Grocery
+# 新开张一个杂货铺，别忘了取名！
+>> > grocery = Grocery('sample')
+# 训练文本可以用列表传入
+>> > train_src = [
+    ('education', '名师指导托福语法技巧：名词的复数形式'),
+    ('education', '中国高考成绩海外认可 是“狼来了”吗？'),
+    ('sports', '图文：法网孟菲尔斯苦战进16强 孟菲尔斯怒吼'),
+    ('sports', '四川丹棱举行全国长距登山挑战赛 近万人参与')
+]
+>> > grocery.train(train_src)
+# 也可以用文件传入
+>> > grocery.train('train_ch.txt')
+# 保存模型
+>> > grocery.save()
+# 加载模型（名字和保存的一样）
+>> > new_grocery = Grocery('sample')
+>> > new_grocery.load()
+# 预测
+>> > new_grocery.predict('考生必读：新托福写作考试评分标准')
+education
+# 测试
+>> > test_src = [
+    ('education', '福建春季公务员考试报名18日截止 2月6日考试'),
+    ('sports', '意甲首轮补赛交战记录:米兰客场8战不败国米10年连胜'),
+]
+>> > new_grocery.test(test_src)
+# 准确率
+0.5
+# 同样可以用文本传入
+>> > new_grocery.test('test_ch.txt')
+# 自定义分词器
+>> > custom_grocery = Grocery('custom', custom_tokenize=list)
+```
+
+更多示例: [sample/](sample/)
+
+安装
+----
+
+    $ pip install tgrocery 
+
+> 目前仅在Unix系统下测试通过
