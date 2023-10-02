@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: MFLES
+Version: 0.1.2
+Summary: Gradient boosted time series decomposition for forecasting.
+Home-page: https://github.com/tblume1992/MFLES
+Author: Tyler Blume
+Keywords: forecasting,time series,seasonality,trend
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: numba
+
+# MFLES 0.1.0
