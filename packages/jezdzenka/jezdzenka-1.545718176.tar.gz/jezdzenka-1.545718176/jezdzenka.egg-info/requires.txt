@@ -1,0 +1,6 @@
+InquirerPy
+tinydb
+tinydb_serialization
+python-magic
+mo_installer
+rich

@@ -1,0 +1,2 @@
+[console_scripts]
+jezdzenka = jezdzenka.__main__:main
