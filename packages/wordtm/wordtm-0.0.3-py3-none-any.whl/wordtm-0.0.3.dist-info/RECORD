@@ -1,0 +1,10 @@
+wordtm/__init__.py,sha256=E_AtMLmudUR-XG4qQZbqm6z8vDuLEQhFsS4m0ZRWr40,71
+wordtm/add.py,sha256=CmLWIdHEZ1FJ-qzg5VkJM986yGLuUOONTiVwpGZIBtA,106
+wordtm/subtract.py,sha256=uPyyFUxYLQeXw4EQW3VtGEwyK0qjpuSABWhET6NuIvY,118
+wordtm/extras/__init__.py,sha256=DVorN_p53xsf9OQA9EH5e9CJBuTWW7xiw3aTMuASgyk,75
+wordtm/extras/divide.py,sha256=I0F8yDW_VWoUJ1kcN6QICZN3s-wZ7Sj-e-0kdknciqY,112
+wordtm/extras/multiply.py,sha256=IevDqKcgvPjn3e1EZmkxp7N-c-gINolTX7Ni7sC6R20,118
+wordtm-0.0.3.dist-info/METADATA,sha256=CnbbT1Y4UXwcXr6O2D2URYkozO3y_27M4kRCZf1vBek,1041
+wordtm-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+wordtm-0.0.3.dist-info/top_level.txt,sha256=WiHLAj9F53fywRgwRCkXIg1pE1c3QlEiF4eNV73SptA,7
+wordtm-0.0.3.dist-info/RECORD,,
