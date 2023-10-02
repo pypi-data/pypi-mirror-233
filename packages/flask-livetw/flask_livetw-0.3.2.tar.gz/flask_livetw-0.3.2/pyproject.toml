@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "flask-livetw"
+version = "0.3.2"
+description = "A simple package that enables livereload and tailwindcss for flask templates."
+license = "MIT"
+authors = ["J-Josu <josue.sa.trabajos@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/J-Josu/flask-livetw"
+keywords = ["flask", "tailwindcss", "livereload", "css", "html", "template"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Framework :: Flask",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+
+[tool.poetry.scripts]
+flask-livetw = "flask_livetw.main:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytailwindcss = "^0.2.0"
+websockets = "^11.0.3"
+tomli = "^2.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.pyright]
+reportPrivateUsage = false
