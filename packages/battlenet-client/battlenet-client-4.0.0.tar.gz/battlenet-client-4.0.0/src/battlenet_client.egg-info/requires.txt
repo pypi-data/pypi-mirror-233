@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+oic
+python-decouple
+requests_oauthlib
+
+[test]
+coverage
