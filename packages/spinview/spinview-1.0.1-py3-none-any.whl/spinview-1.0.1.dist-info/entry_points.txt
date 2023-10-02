@@ -1,0 +1,3 @@
+[console_scripts]
+spinview=spinview.spinview:spinview_cli
+
