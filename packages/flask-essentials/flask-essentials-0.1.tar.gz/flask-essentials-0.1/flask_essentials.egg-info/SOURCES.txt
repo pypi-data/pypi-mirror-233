@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+flask-essentials/__init__.py
+flask-essentials/init_app.py
+flask_essentials.egg-info/PKG-INFO
+flask_essentials.egg-info/SOURCES.txt
+flask_essentials.egg-info/dependency_links.txt
+flask_essentials.egg-info/top_level.txt
