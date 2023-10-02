@@ -1,0 +1,14 @@
+dl/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+dl/__main__.py,sha256=z_ttmmio5A0UdHhVhyqBeA8PTWn2mylsD8UnV6aASC4,224
+dl/constants.py,sha256=brNMtMtBckE_9At8AsQKUyP8LNKrZy2nakQ3ldQcGd4,51
+dl/custom_models.py,sha256=_Ej0isnUPjCEueDZqW3CsOlqakg7jTVhxqMBhkw804c,1761
+dl/data.py,sha256=OzWRXBiDK-x8BmK3IX2QRcTiC8zaHzCcWMJQvT8-GII,18210
+dl/models.py,sha256=7vDuw-w0eiAFBTlbGILJ2oik-ODzL_67VzwqRQnJ2Vs,35987
+dl/specialists.py,sha256=ZID4mWnUTBmP3O-NL6o_fPxxUG6-Hu6orkHM2ncCmi8,7363
+dl/training.py,sha256=Oz2aD7EdMH7_6m9jUK6FTVYRXgF6WNd2okjOfi2EucY,12629
+dionysus_trainer-0.0.3.dist-info/LICENSE,sha256=r4SfqTvOAv1Hpq6_ouCuqpohrFczRFyVfKU4EpT9_rY,1069
+dionysus_trainer-0.0.3.dist-info/METADATA,sha256=5oQzeIMGz0gVIy7vQSN2OzjfP_981b__Yl47YVMkPfw,2481
+dionysus_trainer-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dionysus_trainer-0.0.3.dist-info/entry_points.txt,sha256=g4YgCt5IwTd3jIkS4DlWSQvJKWDYcYT-RX_tJXglMYk,40
+dionysus_trainer-0.0.3.dist-info/top_level.txt,sha256=L16f6JgZLAHS35Wa1nb3NunBti1c8L4S51QgS6CQl8A,3
+dionysus_trainer-0.0.3.dist-info/RECORD,,
