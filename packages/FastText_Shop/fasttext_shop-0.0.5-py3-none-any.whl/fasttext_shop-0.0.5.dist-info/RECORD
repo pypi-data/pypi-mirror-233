@@ -1,0 +1,9 @@
+fasttext_shop/TextShop_sklearn.py,sha256=Ng2XVVbsiKb8k8bVwXsV2hCQv1-xjft5xmeVB_51zgo,4092
+fasttext_shop/__init__.py,sha256=Q72uK66kqmt69KxvHfnX8CTkOnsNpo35ElNpek2q6GM,41
+fasttext_shop/fasttext_shop.py,sha256=hKzkEwfSRVx1sVyIijbqXZG83wM4PKjw32arOQ-Bqc0,6436
+fasttext_shop/stopwords.txt,sha256=1yrVLFKFpgvLEdvrjIVc24SnaqQpIisIpAB7lrpAcV4,16176
+fasttext_shop/utils.py,sha256=jgTCNi9BBzw4NIeskbaqcT3WRSu0QamGOMHcR0Mp16c,1548
+fasttext_shop-0.0.5.dist-info/LICENSE,sha256=1J5gsxdvoF_AckVdcZEFoACa489WkgH6eP8abDWDK3E,1085
+fasttext_shop-0.0.5.dist-info/METADATA,sha256=xyQui-uSMHXEAVMRy7430egHrrjcLv5GH-BXifnIHwI,3966
+fasttext_shop-0.0.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+fasttext_shop-0.0.5.dist-info/RECORD,,
