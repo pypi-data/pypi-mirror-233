@@ -1,0 +1,6 @@
+openai
+prompt-toolkit
+simplejson
+blessings
+pygments
+tiktoken
