@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+customLoggerZhatlebaye/__init__.py
+customLoggerZhatlebaye/logger.py
+custom_logger_zhatlebaye.egg-info/PKG-INFO
+custom_logger_zhatlebaye.egg-info/SOURCES.txt
+custom_logger_zhatlebaye.egg-info/dependency_links.txt
+custom_logger_zhatlebaye.egg-info/top_level.txt

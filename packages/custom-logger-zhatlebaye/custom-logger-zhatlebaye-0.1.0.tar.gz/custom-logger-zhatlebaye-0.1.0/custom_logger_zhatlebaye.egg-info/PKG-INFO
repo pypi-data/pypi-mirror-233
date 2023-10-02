@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: custom-logger-zhatlebaye
+Version: 0.1.0
+Summary: Custom logger
+Home-page: https://gitlab.com/advanced-python-zhatlebaye/custom-logger.git
+Author: Adil, Bauka, Yerlan, Dimashka
+Author-email: d_tleuzhanuly@kbtu.kz
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# CustomLogger
+
+A simple Python logging library that logs messages with timestamps and optional coloring for different log levels.
+
+## Features:
+
+- Four log levels: INFO, WARNING, ERROR, DEBUG
+- Option to customize the log file name
+- Outputs colored logs for a better visual distinction between log levels (only in terminals that support ANSI codes)
+
+## Installation:
+
+```bash
+# As of now, you'll need to copy the CustomLogger class into your project since it isn't available as a pip package.
+
+from custom_logger import CustomLogger
+
+# Create an instance of the logger with default log file name (`custom.log`)
+logger = CustomLogger()
+
+# Alternatively, specify a log file name:
+# logger = CustomLogger(log_file='my_log.log')
+
+# Log messages
+logger.log_info("This is an info message.")
+logger.log_warning("This is a warning message.")
+logger.log_error("This is an error message.")
+logger.log_debug("This is a debug message.")
+
+
+How it works:
+
+When you call any of the logging methods (log_info, log_warning, log_error, log_debug), the message will be appended to the specified log file with a timestamp, log level, and the actual message.
+
+Notes:
+
+The color coding in the logs will appear only when viewing the logs directly in terminals that support ANSI codes. The raw log file will contain the ANSI escape sequences which might appear as gibberish in text editors that do not support them.
+Make sure you have the necessary permissions to write to the specified log file.
+Contribution:
+
+Feel free to fork and submit pull requests if you wish to contribute to this library.
+
+```
