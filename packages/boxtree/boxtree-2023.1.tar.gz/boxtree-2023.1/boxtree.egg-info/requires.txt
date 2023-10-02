@@ -1,0 +1,8 @@
+Mako>=0.7.3
+pytools>=2018.4
+pyopencl>=2018.2.2
+cgen>=2013.1.2
+arraycontext>=2021.1
+
+[test]
+pytest>=2.3
