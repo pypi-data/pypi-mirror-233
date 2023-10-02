@@ -1,0 +1,9 @@
+itkwasm_htj2k/__init__.py,sha256=WCWf5ZApFa0LNZ49P_UFIGQdU3Z3eRVdZ-IHgdg1PCw,331
+itkwasm_htj2k/_version.py,sha256=XxXhu8-QnuD9hA8Ah0WX5rgpt_DwOQmAwcK-FtpngyQ,22
+itkwasm_htj2k/decode.py,sha256=XOttzK8secFqIdJ5ArJyjFL222c5iuWK_8YjXyAIxQQ,943
+itkwasm_htj2k/decode_async.py,sha256=PPyTiuSO3goXlb7HpfNsHl0SgOqGJc1koBvVf03c8Ok,967
+itkwasm_htj2k/encode.py,sha256=U6qt5TTJxr1I7_pHhjE5xfoz45paFeSEz0Rslbh8bZA,1677
+itkwasm_htj2k/encode_async.py,sha256=w-sHAVLRsw7mWMQaEb0H68JMuZ9WzEil-GeoeDur7Xo,1701
+itkwasm_htj2k-1.1.4.dist-info/METADATA,sha256=r7wH0ruhstAEB0RtGN2HzeQnjRrqaEblwY1NrjMceg0,1576
+itkwasm_htj2k-1.1.4.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+itkwasm_htj2k-1.1.4.dist-info/RECORD,,
