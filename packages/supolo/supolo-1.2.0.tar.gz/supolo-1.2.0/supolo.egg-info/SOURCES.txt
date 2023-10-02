@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+supolo/__init__.py
+supolo.egg-info/PKG-INFO
+supolo.egg-info/SOURCES.txt
+supolo.egg-info/dependency_links.txt
+supolo.egg-info/requires.txt
+supolo.egg-info/top_level.txt
