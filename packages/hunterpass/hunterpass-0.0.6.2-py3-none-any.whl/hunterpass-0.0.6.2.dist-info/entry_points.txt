@@ -1,0 +1,2 @@
+[console_scripts]
+hunterpass = hunterpass:main
