@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: e-naryshov
+Version: 1.0.0
+Summary: This is my first module
+Home-page: https://gitlab.com/study7381537/advancedpython2023fall/-/tree/main?ref_type=heads
+Author: Naryshov Ernar
+Author-email: e_naryshov@kbtu.kz
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.1)
+
