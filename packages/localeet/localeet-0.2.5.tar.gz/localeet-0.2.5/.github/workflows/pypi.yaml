@@ -1,0 +1,40 @@
+name: Publish to PyPI
+on:
+  workflow_run:
+    workflows: ["Bump Version"]
+    types: [completed]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install distribution dependencies
+      run: |
+        pip install -U pip
+        pip install .[pypi]
+    - name: Build distribution
+      run: hatchling build
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: twine upload dist/*
+    - name: pip install localeet
+      run: pip install localeet
+    - name: Compare Repo and Pip Versions
+      run: |
+        repo_version=$(grep "__version__" src/localeet/__init__.py | cut -d "'" -f 2)
+        echo "Version from __init__.py: $repo_version"
+        pip_version=$(localeet --version)
+        echo "Pip version: $pip_version"
+        if [[ $repo_version = $pip_version ]]; then
+          echo "Latest version successfully deployed and pip installed"
+        else
+          echo "Versions do not match! There was an issue with deployment"
+          exit 1
+        fi

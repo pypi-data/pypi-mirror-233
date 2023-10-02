@@ -1,0 +1,128 @@
+[project]
+name = "localeet"
+dynamic = [
+    "version",
+]
+description = "A CLI tool to do LeetCode and LeetCode-like exercises locally"
+readme = "README.md"
+authors = [
+    { name = "Danny Brown", email = "dannybrown37@gmail.com" }
+]
+dependencies = [
+    "requests",
+    "bs4",
+    "lxml",
+    "click",
+]
+
+[project.urls]
+homepage = 'https://pypi.org/project/localeet/'
+documentation = 'https://github.com/dannybrown37/localeet#localeet'
+repository = 'https://github.com/dannybrown37/localeet'
+
+[project.scripts]
+localeet = "localeet:main"
+
+[project.optional-dependencies]
+dev = [
+  "ruff==0.0.263",
+  "pre-commit",
+]
+test = [
+  "pytest",
+  "pytest-icdiff",
+]
+pypi = [
+  "twine",
+  "hatchling",
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.2.5"
+version_files = [
+    "src/localeet/__init__.py",
+    "pyproject.toml:version",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch]
+root = "src"
+
+[tool.hatch.version]
+path = "src/localeet/__init__.py"
+
+[tool.hatch.dependencies]
+python = ">=3.9"
+
+[tool.ruff]
+line-length = 79
+select = [
+    "A",  # https://beta.ruff.rs/docs/rules/#flake8-builtins-a
+    "ANN",  # https://beta.ruff.rs/docs/rules/#flake8-annotations-ann
+    "ARG",  # https://beta.ruff.rs/docs/rules/#flake8-unused-arguments-arg
+    "B",  # https://beta.ruff.rs/docs/rules/#flake8-bugbear-b
+    "C4",  # https://beta.ruff.rs/docs/rules/#flake8-comprehensions-c4
+    "COM",  # https://beta.ruff.rs/docs/rules/#flake8-commas-com
+    "C90",  # https://beta.ruff.rs/docs/rules/#mccabe-c90
+    "E",  # default! https://beta.ruff.rs/docs/rules/#error-e
+    "EM",  # https://beta.ruff.rs/docs/rules/#flake8-errmsg-em
+    "ERA",  # https://beta.ruff.rs/docs/rules/#eradicate-era  # we'd like for this to warn
+    "EXE",  # https://beta.ruff.rs/docs/rules/#flake8-executable-exe
+    "F",  # default! https://beta.ruff.rs/docs/rules/#pyflakes-f
+    "FBT",  # https://beta.ruff.rs/docs/rules/#flake8-boolean-trap-fbt
+    "G",  # https://beta.ruff.rs/docs/rules/#flake8-logging-format-g
+    "I",  # https://beta.ruff.rs/docs/rules/#isort-i
+    "ICN",  # https://beta.ruff.rs/docs/rules/#flake8-import-conventions-icn
+    "ISC",  # https://beta.ruff.rs/docs/rules/#flake8-implicit-str-concat-isc
+    "N",  # https://beta.ruff.rs/docs/rules/#pep8-naming-n
+    "PGH",  # https://beta.ruff.rs/docs/rules/#pygrep-hooks-pgh
+    "PIE",  # https://beta.ruff.rs/docs/rules/#flake8-pie-pie
+    "PL",  # https://beta.ruff.rs/docs/rules/#pylint-pl
+    "PLE",  # https://beta.ruff.rs/docs/rules/#error-ple
+    "PLR",  # https://beta.ruff.rs/docs/rules/#refactor-plr
+    "PLW",  # https://beta.ruff.rs/docs/rules/#warning-plw
+    "PT",  # https://beta.ruff.rs/docs/rules/#flake8-pytest-style-pt
+    "PTH",  # https://beta.ruff.rs/docs/rules/#flake8-use-pathlib-pth
+    "PYI",  # https://beta.ruff.rs/docs/rules/#flake8-pyi-pyi
+    "Q",  # https://beta.ruff.rs/docs/rules/#flake8-quotes-q
+    "RET",  # https://beta.ruff.rs/docs/rules/#flake8-return-ret
+    "RSE",  # https://beta.ruff.rs/docs/rules/#flake8-raise-rse
+    "RUF",  # https://beta.ruff.rs/docs/rules/#ruff-specific-rules-ruf
+    "S",  # https://beta.ruff.rs/docs/rules/#flake8-bandit-s
+    "SLF",  # https://beta.ruff.rs/docs/rules/#flake8-self-slf
+    "SIM",  # https://beta.ruff.rs/docs/rules/#flake8-simplify-sim
+    "TCH",  # https://beta.ruff.rs/docs/rules/#flake8-type-checking-tch
+    "TID",  # https://beta.ruff.rs/docs/rules/#flake8-tidy-imports-tid
+    "TRY",  # https://beta.ruff.rs/docs/rules/#tryceratops-try
+    "W",  # https://beta.ruff.rs/docs/rules/#warning-w
+    "UP",  # https://beta.ruff.rs/docs/rules/#pyupgrade-up
+    "YTT",  # https://beta.ruff.rs/docs/rules/#flake8-2020-ytt
+]
+ignore = [
+  "S311",  # not using randomness for cryptography
+  "S101",  # assert is awesome
+  "ANN101",  # self does not need a type annotation
+  "I001",  # I do not care for its sorting choices
+]
+exclude = [
+  "tests/data/two_sum.py",
+]
+show-fixes = true
+target-version = "py39"
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.per-file-ignores]
+"tests/get_leetcode_problem_test.py" = [
+  "ANN001",  # no fixture annotations
+  "ANN201",  # no return annotatons for test functions
+]
+"src/localeet/__main__.py" = [
+  "PLR0913",  # CLI has lots of options and thus needs lots of args
+  "FBT001",  # boolean flags are cool
+]
