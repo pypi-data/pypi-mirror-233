@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: GraphifyPy
+Version: 0.0.5
+Summary: A library for different graph functionalities and operations.
+Author-email: advaitmenon1106 <advaitmenon1106@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/Advaitmenon1106/graphify.git
+
+# GraphifyPy
+
+#### Note: This is a library still in the works and is not fully functional.
+---
+### Installation
+
+#### `pip install GraphifyPy`
+
+### Getting Started
+
+GraphifyPy is a library meant for constructing graphs made using user-defined nodes/vertices and edges connecting these nodes/vertices, using Python. Alternatively, this library currently has the functionality to generate 3 special types of graphs based on user-defined sizes- Complete, Bipartite and Cycle graphs. 
+
+The UndirectedGraph() class is to be called for the purposes of a user-defined graph. 
