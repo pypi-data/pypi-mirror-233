@@ -1,0 +1,11 @@
+jsonschema
+SpiNNUtilities==1!7.1.0
+SpiNNMachine==1!7.1.0
+
+[draw_placements]
+spinner
+
+[test]
+pytest-cov
+pylint
+testfixtures
