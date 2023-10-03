@@ -1,0 +1,15 @@
+furl
+future
+xtelnet
+requests
+PySocks
+bs4
+pymysql
+kamene==0.32
+stem
+cfscrape
+google
+colorama
+dnspython
+win_inet_pton
+jsbeautifier
