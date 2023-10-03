@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: switchblade
+Version: 0.0.10
+Summary: Deep learning / Music AI utilities for PyTorch
+Author-email: Ori Yonay <oriyonay12@gmail.com>
+Project-URL: Homepage, https://github.com/oriyonay/switchblade
+Project-URL: Bug Tracker, https://github.com/oriyonay/switchblade/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# switchblade
+A useful deep learning utilities library :)
+
+**NOTE: THIS IS STILL A WORK IN PROGRESS! Help and suggestions are always welcome! Email me at oyonay12@tamu.edu :)**
