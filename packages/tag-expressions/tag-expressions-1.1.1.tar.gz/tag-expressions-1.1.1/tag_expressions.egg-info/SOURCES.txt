@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+development.txt
+setup.py
+tox.ini
+tag_expressions.egg-info/PKG-INFO
+tag_expressions.egg-info/SOURCES.txt
+tag_expressions.egg-info/dependency_links.txt
+tag_expressions.egg-info/top_level.txt
+tagexpressions/__init__.py
+tagexpressions/models.py
+tagexpressions/parser.py
+tests/__init__.py
+tests/test_parser.py
