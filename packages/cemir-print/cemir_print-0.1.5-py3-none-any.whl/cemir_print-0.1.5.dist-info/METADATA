@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cemir-print
+Version: 0.1.5
+Summary: A colorful printing library for Python
+Home-page: https://github.com/muslu/cemir-print
+Author: muslu yüksektepe
+Author-email: musluyuksektepe@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+`from cemir_print.ccprint import ccprint`
+
+
+```
+ccprint("Hello, World!")
+ccprint([1, 2, 3, 4, 5, 6,{"name": "İzmir", "plaka": 35}])
+ccprint(42)
+ccprint(False)
+```
+
