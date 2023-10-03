@@ -1,0 +1,357 @@
+# Carburetor Translation Project
+# Copyright (C) 2018 Tractor Team
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018, 2019, 2020, 2021, 2022, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: Carburetor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 01:44+0330\n"
+"PO-Revision-Date: 2023-03-22 02:19+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/carburetor/"
+"translations/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: carburetor/actions.py:94
+msgid "Disconnecting…"
+msgstr "در حال قطع شدن…"
+
+#: carburetor/actions.py:98
+msgid "Connecting…"
+msgstr "در حال وصل شدن…"
+
+#: carburetor/actions.py:110
+msgid "You have a new identity!"
+msgstr "یک هویت جدید دارید!"
+
+#: carburetor/actions.py:112
+msgid "Tractor is not running!"
+msgstr "تراکتور در حال اجرا نیست!"
+
+#: carburetor/actions.py:196
+msgid "Stopped"
+msgstr "متوقّف"
+
+#: carburetor/actions.py:199
+msgid "_Connect"
+msgstr "_وصل شدن"
+
+#: carburetor/actions.py:211
+msgid "Tractor is stopped"
+msgstr "تراکتور متوقّف شده است"
+
+#: carburetor/actions.py:220
+msgid "Running"
+msgstr "در حال اجرا"
+
+#: carburetor/actions.py:223
+msgid "_Disconnect"
+msgstr "_قطع شدن"
+
+#: carburetor/actions.py:233
+msgid "Tractor is running"
+msgstr "تراکتور در حال اجراست"
+
+#: carburetor/config.py:37 carburetor/ui/about.ui:23 carburetor/ui/main.ui:33
+msgid "Carburetor"
+msgstr "کاربراتور"
+
+#: carburetor/handler.py:112
+msgid "Austria"
+msgstr "اتریش"
+
+#: carburetor/handler.py:113
+msgid "Bulgaria"
+msgstr "بلغارستان"
+
+#: carburetor/handler.py:114
+msgid "Canada"
+msgstr "کانادا"
+
+#: carburetor/handler.py:115
+msgid "Switzerland"
+msgstr "سوییس"
+
+#: carburetor/handler.py:116
+msgid "Czech"
+msgstr "چک"
+
+#: carburetor/handler.py:117
+msgid "Germany"
+msgstr "آلمان"
+
+#: carburetor/handler.py:118
+msgid "Spain"
+msgstr "اسپانیا"
+
+#: carburetor/handler.py:119
+msgid "Finland"
+msgstr "فنلاند"
+
+#: carburetor/handler.py:120
+msgid "France"
+msgstr "فرانسه"
+
+#: carburetor/handler.py:121
+msgid "Ireland"
+msgstr "ایرلند"
+
+#: carburetor/handler.py:122
+msgid "Moldova"
+msgstr "مولداوی"
+
+#: carburetor/handler.py:123
+msgid "Netherlands"
+msgstr "هلند"
+
+#: carburetor/handler.py:124
+msgid "Norway"
+msgstr "نروژ"
+
+#: carburetor/handler.py:125
+msgid "Poland"
+msgstr "لهستان"
+
+#: carburetor/handler.py:126
+msgid "Romania"
+msgstr "رومانی"
+
+#: carburetor/handler.py:127
+msgid "Seychelles"
+msgstr "سیشل"
+
+#: carburetor/handler.py:128
+msgid "Sweden"
+msgstr "سوئد"
+
+#: carburetor/handler.py:129
+msgid "Singapore"
+msgstr "سنگاپور"
+
+#: carburetor/handler.py:130
+msgid "Russia"
+msgstr "روسیه"
+
+#: carburetor/handler.py:131
+msgid "Ukraine"
+msgstr "اوکراین"
+
+#: carburetor/handler.py:132
+msgid "United Kingdom"
+msgstr "بریتانیا"
+
+#: carburetor/handler.py:133
+msgid "United States"
+msgstr "آمریکا"
+
+#: carburetor/handler.py:148
+msgid "Auto (Best)"
+msgstr "خودکار (بهترین)"
+
+#: carburetor/handler.py:238 carburetor/ui/preferences.ui:140
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: carburetor/handler.py:239
+msgid "Vanilla"
+msgstr "وانیلی"
+
+#: carburetor/handler.py:240
+msgid "Obfuscated"
+msgstr "مبهم شده"
+
+#: carburetor/handler.py:309
+msgid "translator-credits"
+msgstr "دانیال بهزادی <dani.behzi@ubuntu.com>"
+
+#: carburetor/tasks.py:138
+msgid "Tractor is connected"
+msgstr "تراکتور وصل است"
+
+#: carburetor/tasks.py:140
+msgid "Tractor couldn't connect"
+msgstr "تراکتور نتوانست وصل شود"
+
+#: carburetor/ui/about.ui:24
+msgid "GTK frontend for Tractor"
+msgstr "پیشانهٔ GTK برای تراکتور"
+
+#: carburetor/ui/about.ui:25
+msgid "Copyright © 2019-2023, Tractor Team"
+msgstr "حق رونوشت © ۱۳۹۸-۱۴۰۲، تیم تراکتور"
+
+#: carburetor/ui/main.ui:32
+msgid "For Tractor"
+msgstr "برای تراکتور"
+
+#: carburetor/ui/main.ui:94
+msgid "Preferences"
+msgstr "ترجیحات"
+
+#: carburetor/ui/main.ui:98
+msgid "About Carburetor"
+msgstr "دربارهٔ کاربراتور"
+
+#: carburetor/ui/main.ui:102
+msgid "Quit"
+msgstr "خروج"
+
+#: carburetor/ui/main.ui:110
+msgid "_New ID"
+msgstr "_هویت جدید"
+
+#: carburetor/ui/main.ui:114
+msgid "_Check connection"
+msgstr "_بررسی اتّصال"
+
+#: carburetor/ui/main.ui:118
+msgid "_Toggle proxy on system"
+msgstr "_تغییر وضعیت پیشکار روی سامانه"
+
+#: carburetor/ui/preferences.ui:28
+msgid "General"
+msgstr "عمومی"
+
+#: carburetor/ui/preferences.ui:31
+msgid "Exit Node"
+msgstr "گره خروجی"
+
+#: carburetor/ui/preferences.ui:35
+msgid "The country you want to connect from"
+msgstr "کشوری که می‌خواهید از آن وصل شوید"
+
+#: carburetor/ui/preferences.ui:36
+msgid "Exit Country"
+msgstr "کشور خروجی"
+
+#: carburetor/ui/preferences.ui:45
+msgid "Accept Connections"
+msgstr "پذیرش اتّصال‌ها"
+
+#: carburetor/ui/preferences.ui:48
+msgid "Allow external devices to use this network"
+msgstr "اجازه به افزاره‌های خارجی برای استفاده از این شبکه"
+
+#: carburetor/ui/preferences.ui:64
+msgid "Ports"
+msgstr "درگاه‌ها"
+
+#: carburetor/ui/preferences.ui:67
+msgid "Socks Port"
+msgstr "درگاه ساکس"
+
+#: carburetor/ui/preferences.ui:70
+msgid "Local port on which Tractor would be listen"
+msgstr "درگاه محلّی برای شنود تراکتور"
+
+#: carburetor/ui/preferences.ui:84
+msgid "DNS Port"
+msgstr "درگاه ساناد"
+
+#: carburetor/ui/preferences.ui:87
+msgid "Local port on which you would have an anonymous name server"
+msgstr "درگاه محلّی برای ساناد ناشناس"
+
+#: carburetor/ui/preferences.ui:101
+msgid "HTTP Port"
+msgstr "درگاه HTTP"
+
+#: carburetor/ui/preferences.ui:104
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "درگاه محلّی برای شنود یک تونل HTTP"
+
+#: carburetor/ui/preferences.ui:121 carburetor/ui/preferences.ui:152
+msgid "Bridges"
+msgstr "پل‌ها"
+
+#: carburetor/ui/preferences.ui:124
+msgid "Type"
+msgstr "گونه"
+
+#: carburetor/ui/preferences.ui:128
+msgid "Type of bridge"
+msgstr "گونهٔ پل"
+
+#: carburetor/ui/preferences.ui:135
+msgid "Client Transport Plugin"
+msgstr "افزایهٔ جابه‌جایی کارخواه"
+
+#: carburetor/ui/preferences.ui:174
+msgid "_Save"
+msgstr "_ذخیره"
+
+#: carburetor/ui/preferences.ui:175
+msgid "Save Bridges as a file in your local configs"
+msgstr "ذخیرهٔ پل‌ها به شکل یک پرونده در پیکربندی‌های شخصیتان"
+
+#: carburetor/ui/preferences.ui:194
+msgid "Please check the syntax of bridges"
+msgstr "لطفاً ترکیب پل‌ها را بررسی کنید"
+
+#: carburetor/ui/preferences.ui:195
+msgid "Can not save the bridges"
+msgstr "نمی‌توان پل‌ها را ذخیره کرد"
+
+#~ msgid "Source Code"
+#~ msgstr "کد مبدأ"
+
+#~ msgid "Copyright © 2019-2022, Tractor Team"
+#~ msgstr "حق رونوشت © ۱۳۹۸-۱۴۰۲، تیم تراکتور"
+
+#~ msgid "none"
+#~ msgstr "هیچ‌کدام"
+
+#~ msgid "vanilla"
+#~ msgstr "وانیلی"
+
+#~ msgid "obfuscated"
+#~ msgstr "مبهم شده"
+
+#~ msgid "_Cancel"
+#~ msgstr "_انصراف"
+
+#~ msgid "Use obfs4proxy"
+#~ msgstr "استفاده از obfs4proxy"
+
+#~ msgid "Please specify the plugin executable file"
+#~ msgstr "لطفاً پروندهٔ اجرایی افزایه را مشخّص کنید"
+
+#~ msgid "Start"
+#~ msgstr "آغاز"
+
+#~ msgid "Stop"
+#~ msgstr "توقّف"
+
+#~ msgid "stopping…"
+#~ msgstr "در حال توقّف…"
+
+#~ msgid "starting…"
+#~ msgstr "در حال آغاز…"
+
+#~ msgid "Unset Proxy"
+#~ msgstr "برداشتن پیشکار"
+
+#~ msgid "Set Proxy"
+#~ msgstr "تنظیم پیشکار"
+
+#~ msgid "<b>Use bridges</b>"
+#~ msgstr "<b>استفاده از پل‌ها</b>"
+
+#~ msgid "<small>Bridges help you to bypass tor sensorship</small>"
+#~ msgstr "<small>پل‌ها به دور زدن سانسور کمک می‌کنند</small>"
+
+#~ msgid "Bridges:"
+#~ msgstr "پل‌ها:"
+
+#~ msgid "<b>obfs4proxy executable</b>"
+#~ msgstr "<b>پروندهٔ اجرایی obfs4proxy</b>"
+
+#~ msgid "<small>You should specify where is obfs4proxy file</small>"
+#~ msgstr "<small>باید مشخّص کنید پروندهٔ obfs4proxy کجاست</small>"

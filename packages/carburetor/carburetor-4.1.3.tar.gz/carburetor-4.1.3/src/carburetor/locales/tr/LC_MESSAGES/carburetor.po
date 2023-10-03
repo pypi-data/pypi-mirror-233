@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2020, 2021, 2023.
+# Oğuz Ersen <oguz@ersen.moe>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 01:44+0330\n"
+"PO-Revision-Date: 2023-03-22 02:21+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/carburetor/"
+"translations/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
+
+#: carburetor/actions.py:94
+msgid "Disconnecting…"
+msgstr "Bağlantı kesiliyor…"
+
+#: carburetor/actions.py:98
+msgid "Connecting…"
+msgstr "Bağlanıyor…"
+
+#: carburetor/actions.py:110
+msgid "You have a new identity!"
+msgstr "Yeni bir kimliğiniz var!"
+
+#: carburetor/actions.py:112
+msgid "Tractor is not running!"
+msgstr "Tractor çalışmıyor!"
+
+#: carburetor/actions.py:196
+msgid "Stopped"
+msgstr "Durduruldu"
+
+#: carburetor/actions.py:199
+msgid "_Connect"
+msgstr "_Bağlan"
+
+#: carburetor/actions.py:211
+msgid "Tractor is stopped"
+msgstr "Tractor durduruldu"
+
+#: carburetor/actions.py:220
+msgid "Running"
+msgstr "Çalışıyor"
+
+#: carburetor/actions.py:223
+msgid "_Disconnect"
+msgstr "Bağlantıyı _kes"
+
+#: carburetor/actions.py:233
+msgid "Tractor is running"
+msgstr "Tractor çalışıyor"
+
+#: carburetor/config.py:37 carburetor/ui/about.ui:23 carburetor/ui/main.ui:33
+msgid "Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/handler.py:112
+msgid "Austria"
+msgstr "Avusturya"
+
+#: carburetor/handler.py:113
+msgid "Bulgaria"
+msgstr "Bulgaristan"
+
+#: carburetor/handler.py:114
+msgid "Canada"
+msgstr "Kanada"
+
+#: carburetor/handler.py:115
+msgid "Switzerland"
+msgstr "İsviçre"
+
+#: carburetor/handler.py:116
+msgid "Czech"
+msgstr "Çekya"
+
+#: carburetor/handler.py:117
+msgid "Germany"
+msgstr "Almanya"
+
+#: carburetor/handler.py:118
+msgid "Spain"
+msgstr "İspanya"
+
+#: carburetor/handler.py:119
+msgid "Finland"
+msgstr "Finlandiya"
+
+#: carburetor/handler.py:120
+msgid "France"
+msgstr "Fransa"
+
+#: carburetor/handler.py:121
+msgid "Ireland"
+msgstr "İrlanda"
+
+#: carburetor/handler.py:122
+msgid "Moldova"
+msgstr "Moldova"
+
+#: carburetor/handler.py:123
+msgid "Netherlands"
+msgstr "Hollanda"
+
+#: carburetor/handler.py:124
+msgid "Norway"
+msgstr "Norveç"
+
+#: carburetor/handler.py:125
+msgid "Poland"
+msgstr "Polonya"
+
+#: carburetor/handler.py:126
+msgid "Romania"
+msgstr "Romanya"
+
+#: carburetor/handler.py:127
+msgid "Seychelles"
+msgstr "Seyşeller"
+
+#: carburetor/handler.py:128
+msgid "Sweden"
+msgstr "İsveç"
+
+#: carburetor/handler.py:129
+msgid "Singapore"
+msgstr "Singapur"
+
+#: carburetor/handler.py:130
+msgid "Russia"
+msgstr "Rusya"
+
+#: carburetor/handler.py:131
+msgid "Ukraine"
+msgstr "Ukrayna"
+
+#: carburetor/handler.py:132
+msgid "United Kingdom"
+msgstr "Birleşik Krallık"
+
+#: carburetor/handler.py:133
+msgid "United States"
+msgstr "Amerika Birleşik Devletleri"
+
+#: carburetor/handler.py:148
+msgid "Auto (Best)"
+msgstr "Otomatik (En iyisi)"
+
+#: carburetor/handler.py:238 carburetor/ui/preferences.ui:140
+msgid "None"
+msgstr "Yok"
+
+#: carburetor/handler.py:239
+msgid "Vanilla"
+msgstr "Sade"
+
+#: carburetor/handler.py:240
+msgid "Obfuscated"
+msgstr "Gizlenmiş"
+
+#: carburetor/handler.py:309
+msgid "translator-credits"
+msgstr "Oğuz Ersen <oguz@ersen.moe>"
+
+#: carburetor/tasks.py:138
+msgid "Tractor is connected"
+msgstr "Tractor bağlandı"
+
+#: carburetor/tasks.py:140
+msgid "Tractor couldn't connect"
+msgstr "Tractor bağlanamadı"
+
+#: carburetor/ui/about.ui:24
+msgid "GTK frontend for Tractor"
+msgstr "Tractor için GTK önyüzü"
+
+#: carburetor/ui/about.ui:25
+msgid "Copyright © 2019-2023, Tractor Team"
+msgstr "Telif Hakkı © 2019-2023, Tractor Ekibi"
+
+#: carburetor/ui/main.ui:32
+msgid "For Tractor"
+msgstr "Tractor için"
+
+#: carburetor/ui/main.ui:94
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: carburetor/ui/main.ui:98
+msgid "About Carburetor"
+msgstr "Carburetor Hakkında"
+
+#: carburetor/ui/main.ui:102
+msgid "Quit"
+msgstr "Çıkış"
+
+#: carburetor/ui/main.ui:110
+msgid "_New ID"
+msgstr "_Yeni kimlik"
+
+#: carburetor/ui/main.ui:114
+msgid "_Check connection"
+msgstr "Bağlantıyı _denetle"
+
+#: carburetor/ui/main.ui:118
+msgid "_Toggle proxy on system"
+msgstr "Sistemde vekil sunucu _aç/kapat"
+
+#: carburetor/ui/preferences.ui:28
+msgid "General"
+msgstr "Genel"
+
+#: carburetor/ui/preferences.ui:31
+msgid "Exit Node"
+msgstr "Çıkış Düğümü"
+
+#: carburetor/ui/preferences.ui:35
+msgid "The country you want to connect from"
+msgstr "Üzerinden bağlanmak istediğiniz ülke"
+
+#: carburetor/ui/preferences.ui:36
+msgid "Exit Country"
+msgstr "Çıkış Ülkesi"
+
+#: carburetor/ui/preferences.ui:45
+msgid "Accept Connections"
+msgstr "Bağlantıları Kabul Et"
+
+#: carburetor/ui/preferences.ui:48
+msgid "Allow external devices to use this network"
+msgstr "Harici aygıtların bu ağı kullanmasına izin ver"
+
+#: carburetor/ui/preferences.ui:64
+msgid "Ports"
+msgstr "Bağlantı Noktaları"
+
+#: carburetor/ui/preferences.ui:67
+msgid "Socks Port"
+msgstr "Socks Bağlantı Noktası"
+
+#: carburetor/ui/preferences.ui:70
+msgid "Local port on which Tractor would be listen"
+msgstr "Tractor'un dinleyeceği yerel bağlantı noktası"
+
+#: carburetor/ui/preferences.ui:84
+msgid "DNS Port"
+msgstr "DNS Bağlantı Noktası"
+
+#: carburetor/ui/preferences.ui:87
+msgid "Local port on which you would have an anonymous name server"
+msgstr "Anonim bir ad sunucunuzun olacağı yerel bağlantı noktası"
+
+#: carburetor/ui/preferences.ui:101
+msgid "HTTP Port"
+msgstr "HTTP Bağlantı Noktası"
+
+#: carburetor/ui/preferences.ui:104
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "HTTP tünelinin dinleyeceği yerel bağlantı noktası"
+
+#: carburetor/ui/preferences.ui:121 carburetor/ui/preferences.ui:152
+msgid "Bridges"
+msgstr "Köprüler"
+
+#: carburetor/ui/preferences.ui:124
+msgid "Type"
+msgstr "Tür"
+
+#: carburetor/ui/preferences.ui:128
+msgid "Type of bridge"
+msgstr "Köprü türü"
+
+#: carburetor/ui/preferences.ui:135
+msgid "Client Transport Plugin"
+msgstr "İstemci Taşıma Eklentisi"
+
+#: carburetor/ui/preferences.ui:174
+msgid "_Save"
+msgstr "_Kaydet"
+
+#: carburetor/ui/preferences.ui:175
+msgid "Save Bridges as a file in your local configs"
+msgstr "Köprüleri yerel bir yapılandırma dosyası olarak kaydet"
+
+#: carburetor/ui/preferences.ui:194
+msgid "Please check the syntax of bridges"
+msgstr "Lütfen köprülerin söz dizimini gözden geçirin"
+
+#: carburetor/ui/preferences.ui:195
+msgid "Can not save the bridges"
+msgstr "Köprüler kaydedilemiyor"
+
+#~ msgid "Source Code"
+#~ msgstr "Kaynak Kodları"
+
+#~ msgid "none"
+#~ msgstr "yok"
+
+#~ msgid "_Cancel"
+#~ msgstr "_İptal"
+
+#~ msgid "Use obfs4proxy"
+#~ msgstr "obfs4proxy kullan"
+
+#~ msgid "Please specify the plugin executable file"
+#~ msgstr "Lütfen eklenti çalıştırılabilir dosyasını belirtin"
+
+#~ msgid "Start"
+#~ msgstr "Başlat"
+
+#~ msgid "Stop"
+#~ msgstr "Durdur"
+
+#~ msgid "stopping…"
+#~ msgstr "durduruluyor…"
+
+#~ msgid "starting…"
+#~ msgstr "başlatılıyor…"
+
+#~ msgid "Unset Proxy"
+#~ msgstr "Vekili Kaldır"
+
+#~ msgid "Set Proxy"
+#~ msgstr "Vekili Ayarla"
+
+#~ msgid "<b>Use bridges</b>"
+#~ msgstr "<b>Köprüleri kullan</b>"
+
+#~ msgid "<small>Bridges help you to bypass tor sensorship</small>"
+#~ msgstr "<small>Köprüler, tor sansürünü atlamanıza yardımcı olur</small>"
+
+#~ msgid "Bridges:"
+#~ msgstr "Köprüler:"
+
+#~ msgid "<b>obfs4proxy executable</b>"
+#~ msgstr "<b>obfs4proxy çalıştırılabilir dosyası</b>"
+
+#~ msgid "<small>You should specify where is obfs4proxy file</small>"
+#~ msgstr ""
+#~ "<small>obfs4proxy dosyasının nerede olduğunu belirtmelisiniz</small>"

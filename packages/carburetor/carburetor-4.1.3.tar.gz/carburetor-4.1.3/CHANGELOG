@@ -1,0 +1,98 @@
+carburetor (4.1.3) 03 Oct 2023
+  * Use the new GtkFileDialog
+  * Use Adw for MessageDialog
+  * Update UI and translations
+  * Fix a total of 7 critical CVEs
+
+carburetor (4.1.2) 31 Jul 2023
+  * Update Manifest.in
+
+carburetor (4.1.1) 26 Jul 2023
+  * Use src-layout
+
+carburetor (4.1.0) 26 Jul 2023
+  * Change app id to comply with GNOME rules
+  * Move to AdwAboutWindow
+  * Migrate to PyProject
+  * Update translations
+
+carburetor (4.0.3) 22 Mar 2023
+  * Fix a crash on set plugable transport
+  * Prepare for sandboxing
+
+carburetor (4.0) 02 Dec 2022
+  * Port to GTK4 and Libadwaita
+  * Add support for Windows and MacOS
+  * Add a menu entry to check connection
+  * Add support for bridge types
+  * Add an OSD Progress bar
+  * Use toasts instead of notifications
+  * Refactor internal codes
+
+carburetor (3.10) 08 Feb 2022
+  * Icon fix for non-yaru icon themes
+
+carburetor (3.9) 22 Aug 2021
+  * Use action for cancel instead of signal handler
+
+carburetor (3.8) 20 Aug 2021
+  * Use Handy Status Page for main page
+
+carburetor (3.7) 28 Jun 2021
+  * Modulize app to be placed in pypi
+
+carburetor (3.5) 10 Jun 2021
+  * Add a cancel button for progress
+
+carburetor (3.4) 18 May 2021
+  * Some refactors and lintings
+
+carburetor (3.3) 25 Mar 2021
+  * Cleanup source code based on pep-8
+
+carburetor (3.2) 26 Dec 2020
+  * Main window uses libhandy now
+  * Add support for posh
+
+carburetor (3.1) 23 Dec 2020
+  * Updated User Interface
+
+carburetor (3.0) 16 Dec 2020
+  * New interface base on libhandy
+
+carburetor (2.9) 08 Nov 2019
+  * fix the bug in setting progress button (This time for real)
+
+carburetor (2.8) 07 Oct 2019
+  * use internal gi notification
+  * fix a bug in setting progress button
+
+carburetor (2.7) 08 Jul 2019
+  * add http tunnel port
+
+carburetor (2.6) 10 Dec 2018
+  * use spinner on tractor start/stop
+  * add progress bar for bootstrapping
+
+carburetor (2.5) 28 Nov 2018
+  * Use sidebar design
+  * copy bridges file via tractor
+
+carburetor (2.4) 23 Sep 2018
+  * Use threading for Popens
+  * Use dictionary for exit nodes
+
+carburetor (2.3) 23 Sep 2018
+  * Add l10n support
+
+carburetor (2.2) 04 Aug 2018
+  * Add desktop entry
+
+carburetor (2.1) 28 Jul 2018
+  * Add exit node selection
+
+carburetor (2.0) 20 Jul 2018
+  * Rebrand traktor as tractor
+
+carburetor (1.0) 19 Jul 2018
+  * Initial release.

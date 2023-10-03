@@ -1,0 +1,3 @@
+recursive-include src/carburetor/desktop *
+recursive-include src/carburetor/locales *
+recursive-include src/carburetor/ui *

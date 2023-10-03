@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.16.0 -->
+<!-- Danial Behzadi <dani.behzi@ubuntu.com>, 2023 -->
+<interface domain="carburetor">
+  <!-- interface-description This file is part of Carburetor. -->
+  <!-- interface-copyright Carburetor is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Carburetor is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Carburetor.  If not, see <http://www.gnu.org/licenses/>. -->
+  <!-- interface-authors Danial Behzadi <dani.behzi@ubuntu.com> -->
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.2"/>
+  <object class="AdwAboutWindow" id="AboutDialog">
+    <property name="application-icon">io.frama.tractor.carburetor</property>
+    <property name="application-name" translatable="yes">Carburetor</property>
+    <property name="comments" translatable="yes">GTK frontend for Tractor</property>
+    <property name="copyright" translatable="yes">Copyright © 2019-2023, Tractor Team</property>
+    <property name="developers">Danial Behzadi &lt;dani.behzi@ubuntu.com&gt;</property>
+    <property name="hide-on-close">True</property>
+    <property name="issue-url">https://framagit.org/tractor/carburetor/issues/new</property>
+    <property name="license-type">gpl-3-0</property>
+    <property name="modal">True</property>
+    <property name="version">4.1.3</property>
+    <property name="website">https://framagit.org/tractor/carburetor</property>
+    <signal name="realize" handler="on_about_realize"/>
+  </object>
+</interface>

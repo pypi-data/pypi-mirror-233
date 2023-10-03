@@ -1,0 +1,39 @@
+[project]
+name = "carburetor"
+version = "4.1.3"
+authors = [
+    {name = "Danial Behzadi", email = "dani.behzi@ubuntu.com"},
+]
+description = "GTK frontend for Tractor"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "traxtor",
+]
+keywords = [
+    "Tor",
+    "onion",
+    "stem",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.gui-scripts]
+carburetor = "carburetor.carburetor:main"
+
+[project.urls]
+"Homepage" = "https://tractor.frama.io/"
+"Bug Tracker" = "https://framagit.org/tractor/carburetor/issues"
+"Documentation" = "https://framagit.org/tractor/carburetor/blob/main/carburetor/desktop/carburetor.1"
+"Source Code" = "https://framagit.org/tractor/carburetor"
+
+[tool.pylint]
+disable = [
+    "C0413",  # wrong-import-position
+]

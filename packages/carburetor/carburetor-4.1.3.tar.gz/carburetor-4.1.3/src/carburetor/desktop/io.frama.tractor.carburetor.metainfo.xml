@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.frama.tractor.carburetor</id>
+  <name>Carburetor</name>
+  <name xml:lang="fa">کاربراتور</name>
+  <summary>The Onion Routing app</summary>
+  <summary xml:lang="fa">کارهٔ مسیریابی پیازی</summary>
+  <description>
+    <p>
+      A graphical settings app for tractor which is a package uses Python stem library to provide a connection through the onion proxy and sets up proxy in user session, so you don't have to mess up with TOR on your system anymore.
+    </p>
+  </description>
+  <description xml:lang="fa">
+    <p>
+      ‫یک کارهٔ تنظمیات گرافیکی برای تراکتور که بسته‌ایست که برای فراهم کردن اتّصالی به پیشکار پیازی و برپایی پیشکار در نشست کاربری از کتابخانهٔ stem استفاده می‌کند تا دیگر نیاز به سر و کله زدن با تور روی سامانه‌تان نداشته باشید.
+    </p>
+  </description>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <project_group>Tractor</project_group>
+  <developer_name>Tractor Team</developer_name>
+  <developer_name xml:lang="fa">گروه تراکتور</developer_name>
+  <update_contact>dani.behzi_at_ubuntu.com</update_contact>
+  <categories>
+    <category>Network</category>
+  </categories>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+  <requires>
+    <display_length compare="ge">small</display_length>
+    <internet>always</internet>
+  </requires>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
+  <content_rating type="oars-1.1"/>
+  <launchable type="desktop-id">io.frama.tractor.carburetor.desktop</launchable>
+  <provides>
+    <binary>carburetor</binary>
+  </provides>
+  <translation type="gettext">carburetor</translation>
+  <url type="homepage">https://tractor.frama.io</url>
+  <url type="vcs-browser">https://framagit.org/tractor/carburetor</url>
+  <url type="bugtracker">https://framagit.org/tractor/carburetor/-/issues</url>
+  <url type="contribute">https://framagit.org/tractor/carburetor/-/blob/main/CONTRIBUTING.md</url>
+  <url type="translate">https://hosted.weblate.org/engage/carburetor</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main Page of Carburetor in Desktop mode</caption>
+      <caption xml:lang="fa">صفحهٔ اصلی کاربراتور در حالت میزکار</caption>
+      <image type="source">https://tractor.frama.io/images/carburetor-main.png</image>
+      <image xml:lang="fa">https://tractor.frama.io/images/carburetor-main-fa.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Carburetor preferences in dark mode</caption>
+      <caption xml:lang="fa">ترجیحات کاربراتور در حالت تیره</caption>
+      <image type="source">https://tractor.frama.io/images/carburetor-preferences-general.png</image>
+      <image xml:lang="fa">https://tractor.frama.io/images/carburetor-preferences-general-fa.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Carburetor preferences in Mobile mode</caption>
+      <caption xml:lang="fa">ترجیحات کاربراتور در حالت همراه</caption>
+      <image type="source" xml:lang="fa">https://wiki.ubuntu.ir/images/c/cd/Carburetor-Settings.png</image>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary">#7d4698</color>
+  </branding>
+  <releases>
+    <release version="4.1.3" date="2023-10-03" urgency="medium">
+      <url>https://framagit.org/tractor/carburetor/-/releases/4.1.3</url>
+      <description>
+        <p>Use the new GtkFileDialog</p>
+        <p>Use Adw for MessageDialog</p>
+        <p>Update UI and translations</p>
+        <p>Fix a total of 7 critical CVEs</p>
+      </description>
+      <artifacts>
+        <artifact type="source">
+          <location>https://framagit.org/tractor/carburetor/-/archive/4.1.3/carburetor-4.1.3.tar.bz2</location>
+        </artifact>
+      </artifacts>
+    </release>
+    <release version="4.1.0" date="2023-07-26" urgency="medium">
+      <url>https://framagit.org/tractor/carburetor/-/releases/4.1.0</url>
+      <description>
+        <p>Change app id to comply with GNOME rules</p>
+        <p>Move to AdwAboutWindow</p>
+        <p>Migrate to PyProject</p>
+        <p>Update translations</p>
+      </description>
+      <artifacts>
+        <artifact type="source">
+          <location>https://framagit.org/tractor/carburetor/-/archive/4.1.0/carburetor-4.1.0.tar.bz2</location>
+        </artifact>
+      </artifacts>
+    </release>
+    <release version="4.0" date="2022-12-03" urgency="medium">
+      <url>https://framagit.org/tractor/carburetor/-/releases/4.0</url>
+      <description>
+        <p>Port to GTK4 and Libadwaita</p>
+        <p>Add support for Windows and MacOS</p>
+        <p>Add a menu entry to check connection</p>
+        <p>Add support for bridge types</p>
+        <p>Add an OSD Progress bar</p>
+        <p>Use toasts instead of notifications</p>
+        <p>Refactor internal codes</p>
+      </description>
+      <artifacts>
+        <artifact type="source">
+          <location>https://framagit.org/tractor/carburetor/-/archive/4.0/carburetor-4.0.tar.bz2</location>
+        </artifact>
+      </artifacts>
+    </release>
+  </releases>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
+</component>
