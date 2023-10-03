@@ -1,0 +1,6 @@
+ipython==7.22.0
+
+[dev]
+isort
+black
+build
