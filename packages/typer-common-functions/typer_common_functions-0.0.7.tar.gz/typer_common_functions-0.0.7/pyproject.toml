@@ -1,0 +1,81 @@
+[tool.poetry]
+name = "typer-common-functions"
+version = "0.0.7"
+description = "Commonly used Functions around the Typer CLI Library"
+authors = ["Joshua Kreuder <joshua_kreuder@outlook.com>"]
+keywords=["cli","typer"]
+readme="readme.md"
+license="LGPL-3"
+homepage="https://github.com/OpenJKSoftware/typer-common-functions"
+repository="https://github.com/OpenJKSoftware/typer-common-functions"
+include=[
+    "LICENSE",
+]
+
+[tool.poetry_bumpversion.file."src/typer_common_functions/__init__.py"]
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.12"
+typer = {extras = ["all"], version = ">=0.7.0 <1.0.0"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pre-commit = "^2.20.0"
+isort = "^5.10.1"
+black = "^22.6.0"
+mypy = "^0.961"
+bandit = "^1.7.4"
+pydocstyle = "^6.1.1"
+pylint = "^2.14.5"
+flake8 = "^4.0.1"
+flake8-docstrings = "^1.6.0"
+flake8-black = "^0.3.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.black]
+line-length = 120
+
+[tool.bandit]
+skips = ["B101"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.main]
+load-plugins="pylint.extensions.docparams,pylint.extensions.docstyle,pylint.extensions.bad_builtin,pylint.extensions.check_elif,pylint.extensions.mccabe"
+
+[tool.pylint.basic]
+no-docstring-rgx="^(?!__init__$)_"
+
+[tool.pylint.master]
+jobs=0
+persistent=true
+init-hook='import sys; sys.path.append("src")'
+
+[tool.pylint.'MESSAGES CONTROL']
+disable="superfluous-parens,too-few-public-methods,too-many-arguments"
+
+[tool.pylint.format]
+max-line-length=120
+ignore-long-lines='^\s*(# )?<?https?://\S+>?$'
+
+[tool.pylint.reports]
+msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}"
+output-format="colorized"
+reports="no"
+
+[tool.mypy]
+follow_imports="silent"
+warn_redundant_casts=true
+warn_unused_ignores=false
+disallow_any_generics=true
+check_untyped_defs=true
+no_implicit_reexport=false
+disallow_untyped_defs=true
+ignore_missing_imports=true
