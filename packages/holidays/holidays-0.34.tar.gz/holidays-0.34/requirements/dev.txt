@@ -1,0 +1,17 @@
+# Test environments.
+pre-commit
+tox
+
+# Localization.
+chameleon
+lingua
+
+# Holidays pre-calculation.
+convertdate
+hijridate
+
+# Deployment.
+build
+gitpython
+pip>=19.2.3
+pygithub
