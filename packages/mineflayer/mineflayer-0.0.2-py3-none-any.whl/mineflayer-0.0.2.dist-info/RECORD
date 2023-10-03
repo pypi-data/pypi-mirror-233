@@ -1,0 +1,12 @@
+mineflayer/__main__.py,sha256=8SYAHBtQWHAAgr0dBhOJMohvliwK4JDXl3FsrsCuGx4,1720
+mineflayer/api-test.py,sha256=yNVkosFvXcX8pbMqrp6aKdgJr1Z3Q1FsiU7NOBkzaZk,20
+mineflayer/api.py,sha256=VIto1c0AncL4yYwq1fFpuSmzUZn4HO2ktU5RdOxJ4JI,3366
+mineflayer/bot.py,sha256=FBx7_y6KTFwX5O1suCxfRSa8z7YXI8SrWiIaClFX7Pc,22364
+mineflayer/discordbot.py,sha256=LD66X1D8jTbpt8F8Hfoq2gSrfjN3QqvFGBpDaUky9Yk,7453
+mineflayer/test-console.py,sha256=-ZqXKAImYMulV-ArzKL1VpgcBx871hmpWIlgEAGIXSc,6160
+mineflayer/test.py,sha256=1yelLultQFYERGwfrXdgdA9Brkcsr1J5Fa6th1uPoVU,759
+mineflayer/utils.py,sha256=Hhwjo2-VlhFqMvewXkMvtiimqNLzzrZ4VyEfRmuVKvw,2611
+mineflayer-0.0.2.dist-info/LICENSE,sha256=PGDAhuniCYAOecoaeqq_CZIsmuL-LqlXHyBD4fy42eI,1068
+mineflayer-0.0.2.dist-info/METADATA,sha256=Rw9xfdT838uNjSiYX814IVa1c1XvFTgDSrfaWiHaxRw,5979
+mineflayer-0.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+mineflayer-0.0.2.dist-info/RECORD,,
