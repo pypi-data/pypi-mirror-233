@@ -1,0 +1,8 @@
+adafruit_register_spi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_register_spi/spi_bit.py,sha256=0thwcSTmcYEOBS1L1pOsVcHGU0H1-SLQIRjOr_VWO5I,2293
+adafruit_register_spi/spi_bits.py,sha256=o4CcjenYhZ1En2niX2NFoWlvyKqHLdAEw0kFNzZFvus,3515
+adafruit_circuitpython_register_spi-1.0.1.dist-info/LICENSE,sha256=oBUkjyy2LTQBulNF97FNa-1D3qlSbzELp0hGARNdoCU,1103
+adafruit_circuitpython_register_spi-1.0.1.dist-info/METADATA,sha256=i6EdpQhYRx3USxPsVz46vqRS99pfMxH9WqE5US3Xctc,9769
+adafruit_circuitpython_register_spi-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+adafruit_circuitpython_register_spi-1.0.1.dist-info/top_level.txt,sha256=uFQEzuLv0mnuybb1tZSw4ADEWuLFh5sIIwl2_tHyU7U,22
+adafruit_circuitpython_register_spi-1.0.1.dist-info/RECORD,,
