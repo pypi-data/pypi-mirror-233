@@ -1,0 +1,2 @@
+[console_scripts]
+vaxpress = vaxpress.__main__:run_vaxpress

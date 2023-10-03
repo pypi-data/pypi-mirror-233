@@ -1,0 +1,194 @@
+<html>
+<head>
+    <title>VaxPress Result: {{ seq.name | e }}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% if 'refresh' in status -%}
+    <meta http-equiv="refresh" content="{{ status['refresh'] }}">
+    {%- endif %}
+    <link rel="stylesheet" href="https://pages-themes.github.io/cayman/assets/css/style.css?v=29f8a343aad3bd9eea1173c01ab45a8a20acd7ff">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">VaxPress Codon Optimization Result</h1>
+    <h2 class="project-tagline">{{ seq.description | e }}</h2>
+
+    <a href="best-sequence.fasta" class="btn">Open Optimized Sequence</a>
+    <a href="checkpoints.tsv" class="btn">View Score Changes</a>
+    <a href="parameters.json" class="btn">Save Parameters for Later</a>
+  </header>
+
+  <main id="content" class="main-content" role="main">
+{% if 'expected_end' in status %}
+<blockquote>
+  <p><b><i>The optimization is in progress.</i></b><br>
+    This report is updated every {{ args.report_interval }}
+    minute{{ args.report_interval | pluralize('', 's') }}.
+  </p>
+
+  <p>
+    <label for="file">Iteration {{ status['iter_no'] }} / {{ exec.n_iterations }}:</label>
+    <progress id="progress" value="{{ status['progress_percentage'] }}" max="100">
+      {{ status['progress_percentage'] }}%</progress>
+  </p>
+
+  <ul>
+    <li><b>Estimated completion time:</b> {{ status['expected_end'] | localtime }}</li>
+    <li><b>Current Speed:</b> {{ "%.2f"|format(status['speed']) }} s/it</li>
+  </ul>
+</blockquote>
+
+{% endif %}
+
+<h1>Task information</h1>
+<ul>
+  <li><b>Sequence name:</b> {{ seq.description | e }}</li>
+  <li><b>Sequence length:</b> {{ seq.seq | length }} nt</li>
+  <li><b>Mutation space:</b> {{ metainfo['mutation_space']['singles'] }} types
+    of mutations, {{ metainfo['mutation_space']['total'] | format_power_html }}
+    combinations</li>
+  <li><b>Started:</b> {{ status['time'][0] | localtime }}</li>
+  <li><b>Finished:</b> {{ status['time'][-1] | localtime }}</li>
+  <li><b>Command line:</b> {{ exec.command_line }}</li>
+</ul>
+
+
+{% if 'expected_end' in status -%}
+<h1>Current Best Sequence</h1>
+{%- else -%}
+<h1>Optimized Sequence</h1>
+{%- endif %}
+
+<h2>Sequence optimality metrics</h2>
+{% set metrics = checkpoints.filter(regex='^metric:').columns %}
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Initial</th>
+      <th>Optimized</th>
+      <th>Metric</th>
+      <th>Initial</th>
+      <th>Optimized</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for names in metrics|batch(2, '') %}
+    <tr>
+    {%- for name in names %}
+      <th>{{ name.replace('metric:', '') }}</th>
+      <td>{{ checkpoints.iloc[0][name] | format_number }}</td>
+      <td>{{ checkpoints.iloc[-1][name] | format_number }}</td>
+    {%- endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>Local sequence metrics</h2>
+{{ plotters.sequence_evaluation_curves() }}
+
+<h2>Predicted secondary structure</h2>
+<ul>
+  <li><b>MFE:</b> {{ status['evaluations']['optimized']['mfe'] | format_number }} kcal/mol</li>
+  <li><b>Total loop length (≥{{ scoring['loop']['threshold'] }}):</b>
+    {{ status['evaluations']['optimized']['loop'] }}</li>
+</ul>
+<iframe src="https://pub-forna.qbio.io/?id=url/vaxpress{{ status['version'] }}&sequence={{ checkpoints.iloc[-1]['seq'] }}&structure={{ checkpoints.iloc[-1]['structure'] }}"
+ align="center" height="650px" width="100%" seamless='seamless' frameBorder="0" AllowFullScreen></iframe>
+
+
+{% if exec['n_iterations'] > 0 %}
+<h1>Optimization Process</h1>
+{{ plotters.fitness_curve() }}
+{{ plotters.metric_curves() }}
+
+
+<h1>Parameters</h1>
+<h2>Program Options</h2>
+<table>
+  <tr>
+    <th>Random seed</th>
+    <td>{{ exec.seed }}</td>
+    <th>Processes</th>
+    <td>{{ exec.processes }}</td>
+    <th>Initialization</th>
+    <td>{% if exec.lineardesign_lambda is not none -%}
+        LinearDesign (λ = {{ exec.lineardesign_lambda }})
+      {%- elif exec.random_initialization or exec.protein -%}
+        random
+      {%- else -%}
+        as-is
+      {%- endif -%}
+    </td>
+  </tr>
+  <tr>
+    <th>Conservative start</th>
+    <td>
+      {%- if exec.conservative_start is none -%}
+        off
+      {%- else -%}
+        {{ exec.conservative_start }}
+      {%- endif -%}
+    <th>Species</th>
+    <td>{{ exec.species }}</td>
+    <th>Codon table</th>
+    <td>{{ exec.codon_table }}</td>
+  </tr>
+</table>
+{% endif %}
+
+<h2>Optimization</h2>
+<table>
+  <tr>
+    <th>Iterations</th>
+    <td>{{ exec.n_iterations }}</td>
+    <th>Population size</th>
+    <td>{{ exec.n_population }}</td>
+    <th>Survivors</th>
+    <td>{{ exec.n_survivors}}</td>
+  </tr>
+  <tr>
+    <th>Initial mutation rate</th>
+    <td>{{ exec.initial_mutation_rate }}</td>
+    <th>Wind-down trigger</th>
+    <td>{{ exec.winddown_trigger }}</td>
+    <th>Wind-down rate</th>
+    <td>{{ exec.winddown_rate }}</td>
+  </tr>
+</table>
+
+<h2>Fitness Scoring</h2>
+{% for name, opts in scoring.items() %}
+{% set fun = scorefuncs[name] %}
+<h3>{{ fun.description | e }}</h3>
+<table>
+  {% set optlen = opts|length %}
+  {% set bwidth = [optlen, 3]|min %}
+  {% for items in opts.items()|batch(bwidth, ('-', '-')) %}
+    <tr>
+    {%- for key, val in items %}
+      <th>{{ key | replace('_', ' ') }}</th>
+      <td>{{ val }}</td>
+    {%- endfor %}
+    </tr>
+  {% endfor %}
+</table>
+{% endfor %}
+
+    <footer class="site-footer">
+      <span class="site-footer-credits">The sequence was optimized by
+          <a href="https://github.com/ChangLabSNU/VaxPress">VaxPress</a>
+          version {{ status['version'] }}.</span>
+      <span class="site-footer-owner">
+          <a href="https://github.com/ChangLabSNU/VaxPress">VaxPress</a> is
+          developed and maintained by <a href="https://qbio.io/">the Chang lab</a>
+          at <a href="https://biosci.snu.ac.kr/">Seoul National University</a>.</span>
+    </footer>
+  </main>
+</body>
+</html>
