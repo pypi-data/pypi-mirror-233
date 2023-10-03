@@ -1,0 +1,65 @@
+image: python:3.9
+variables:
+  APT_CACHE_DIR: '$CI_PROJECT_DIR/.cache/apt'
+  PIP_CACHE_DIR: '$CI_PROJECT_DIR/.cache/pip'
+cache:
+  paths:
+    - .cache/pip
+    - .cache/apt
+stages:
+  - qa
+  - test
+  - deploy
+
+pre-commit:
+  stage: qa
+  before_script:
+    - pip install -U pre-commit
+  script:
+    - pre-commit run --all-files
+
+tests:
+  stage: test
+  before_script:
+    - rm -f /etc/apt/apt.conf.d/docker-clean
+    - mkdir -pv $APT_CACHE_DIR
+    - echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' | tee /etc/apt/apt.conf.d/99-keep-downloads
+    - >
+      sed -i '/Suites: bookworm / s/$/ bookworm-backports/' /etc/apt/sources.list.d/debian.sources
+    - apt update -yq
+    - apt install -t bookworm-backports -o dir::cache::archives=$APT_CACHE_DIR -y --no-install-recommends kicad
+    - pip install -U "tox>=4.8"
+  script:
+    - tox -e py -- --junitxml=pytest.xml --cov-report xml --cov-report term
+    - curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - chmod +x codecov
+    - ./codecov -t $CODECOV_TOKEN
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      junit: pytest.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+
+pypi:
+  stage: deploy
+  variables:
+    FLIT_USERNAME: '__token__'
+    FLIT_PASSWORD: '$PYPI_API_TOKEN'
+  script:
+    - pip install -U flit
+    - flit publish
+  rules:
+    - if: $CI_COMMIT_TAG
+
+gitlab_release:
+  stage: deploy
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  script:
+    - printf "Creating Gitlab Release %s\n", "$CI_COMMIT_TAG"
+  release:
+    tag_name: $CI_COMMIT_TAG
+    description: $CI_COMMIT_TAG
+  rules:
+    - if: $CI_COMMIT_TAG
