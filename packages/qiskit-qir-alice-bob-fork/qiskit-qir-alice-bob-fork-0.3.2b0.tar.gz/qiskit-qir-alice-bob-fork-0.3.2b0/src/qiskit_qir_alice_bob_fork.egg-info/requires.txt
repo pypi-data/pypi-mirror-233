@@ -1,0 +1,6 @@
+pyqir==0.8.0
+qiskit-terra>=0.19.2
+qiskit>=0.34.2
+
+[test]
+pytest
