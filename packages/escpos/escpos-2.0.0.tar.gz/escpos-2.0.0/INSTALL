@@ -1,0 +1,8 @@
+python-escpos
+=============
+
+This library is available over pypi. So for most of the use-cases it should be sufficient to run
+
+```
+pip install escpos --user  # add --pre if you want to install pre-releases
+```
