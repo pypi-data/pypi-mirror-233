@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "articulo"
+version = "0.1.10"
+description = ""
+authors = ["Mikhail Ivanov <ya.ivanov-m2014v@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lxml = "^4.9.3"
+beautifulsoup4 = "^4.12.2"
+requests = "^2.31.0"
+validators = "^0.22.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+requests-mock = "^1.11.0"
+pylint = "^2.17.5"
+black = "^23.9.1"
+isort = "^5.12.0"
+pre-commit = "^3.4.0"
+coverage = "^7.3.1"
+pytest-cov = "^4.1.0"
+
+[tool.pylint.main]
+ignore-patterns="(.)*_test\\.py,test_(.)*\\.py"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
