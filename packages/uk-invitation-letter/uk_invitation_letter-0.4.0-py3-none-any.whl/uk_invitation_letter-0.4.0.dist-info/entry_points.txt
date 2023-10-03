@@ -1,0 +1,3 @@
+[console_scripts]
+uk-invitation-letter=invitation.builder:main
+

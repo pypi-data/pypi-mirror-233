@@ -1,0 +1,11 @@
+invitation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invitation/builder.py,sha256=1NEAsYfCWsNtIdeWZap4fJ8wjK2RivhPhHuP5Mu1SDs,931
+invitation/model.py,sha256=ZeWessQN2CtQWgx3ouhUdarCwpEBdaah1YSOBoOdqzo,1177
+invitation/templates/invitation.tex.jinja,sha256=PCBXc95ZHTZLHQ8Aecv5bM2a2qjTQLMxHBTqwDEd5a4,2297
+invitation/templates/letter.tex.jinja,sha256=u3PtVsvt1SBqsj9Y_D3YAFY5XOIfcuz37WIjrOIlHBs,468
+invitation/util.py,sha256=gkHr1liewUY4aF2fER7KxJiua-1w4FRujGEP3Cx2LPU,705
+uk_invitation_letter-0.4.0.dist-info/LICENSE.md,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+uk_invitation_letter-0.4.0.dist-info/METADATA,sha256=gGF20tZ50XykgGvbGVF1DXRmp_duET1PsoNSmarv-4I,2675
+uk_invitation_letter-0.4.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+uk_invitation_letter-0.4.0.dist-info/entry_points.txt,sha256=VTwaUzhQ2aNdCG-__Vq3TAFODYWCnkSQ3ZAsde5DyzA,64
+uk_invitation_letter-0.4.0.dist-info/RECORD,,
