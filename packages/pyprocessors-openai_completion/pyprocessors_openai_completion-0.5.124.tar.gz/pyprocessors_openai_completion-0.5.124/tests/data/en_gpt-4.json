@@ -1,0 +1,67 @@
+[
+  {
+    "text": "s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Titre : Un s\u00e9isme de magnitude 7,8 d\u00e9vaste la Turquie \n\nANKARA, Turquie - Un violent s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie ce matin, causant des d\u00e9g\u00e2ts massifs \u00e0 travers le pays et instaurant un climat de peur parmi les habitants.\n\nLe tremblement de terre, selon le centre sismologique turc, a eu son \u00e9picentre \u00e0 une profondeur de 10 km sous la surface de la terre, pr\u00e8s de la ville"
+      }
+    ]
+  },
+  {
+    "text": "j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "1. Je r\u00e9side dans une maison.\n2. J'ai \u00e9lu domicile dans une maison.\n3. Ma r\u00e9sidence principale est une maison.\n4. Mon logement est une maison.\n5. Je vis dans une maison.\n6. J'occupe une maison.\n7. Ma demeure est une maison. \n8. Mon domicile est une maison.\n9. J'ai \u00e9tabli mon habitation dans une maison. \n10. Ma maison est mon lieu de r\u00e9sidence.\n11. Mon chez-moi est une maison.\n12. J'habite au sein"
+      }
+    ]
+  },
+  {
+    "text": "il est n\u00e9 le 21 janvier 2000",
+    "identifier": "3",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Bien s\u00fbr, voici quelques exemples :\n\n1. Son anniversaire est le 21 janvier 2000.\n2. Son jour de naissance est le 21 janvier 2000.\n3. Il a vu le jour le 21 janvier 2000.\n4. Sa date de naissance est le janvier 21, 2000.\n5. On le f\u00eate tous les 21 janvier depuis 2000.\n6. Le 21 janvier 2000 est le jour de sa naissance.\n7. 21/01/2000 est sa date de naissance"
+      }
+    ]
+  },
+  {
+    "text": "Un nuage de fum\u00e9e juste apr\u00e8s l\u2019explosion, le 1er juin 2019.\n                Une d\u00e9flagration dans une importante usine d\u2019explosifs du centre de la Russie a fait au moins 79 bless\u00e9s samedi 1er juin.\n                L\u2019explosion a eu lieu dans l\u2019usine Kristall \u00e0 Dzerzhinsk, une ville situ\u00e9e \u00e0 environ 400 kilom\u00e8tres \u00e0 l\u2019est de Moscou, dans la r\u00e9gion de Nijni-Novgorod.\n                \u00ab Il y a eu une explosion technique dans l\u2019un des ateliers, suivie d\u2019un incendie qui s\u2019est propag\u00e9 sur une centaine de m\u00e8tres carr\u00e9s \u00bb, a expliqu\u00e9 un porte-parole des services d\u2019urgence.\n                Des images circulant sur les r\u00e9seaux sociaux montraient un \u00e9norme nuage de fum\u00e9e apr\u00e8s l\u2019explosion.\n                Cinq b\u00e2timents de l\u2019usine et pr\u00e8s de 180 b\u00e2timents r\u00e9sidentiels ont \u00e9t\u00e9 endommag\u00e9s par l\u2019explosion, selon les autorit\u00e9s municipales. Une enqu\u00eate pour de potentielles violations des normes de s\u00e9curit\u00e9 a \u00e9t\u00e9 ouverte.\n                Fragments de shrapnel Les bless\u00e9s ont \u00e9t\u00e9 soign\u00e9s apr\u00e8s avoir \u00e9t\u00e9 atteints par des fragments issus de l\u2019explosion, a pr\u00e9cis\u00e9 une porte-parole des autorit\u00e9s sanitaires cit\u00e9e par Interfax.\n                \u00ab Nous parlons de blessures par shrapnel d\u2019une gravit\u00e9 moyenne et mod\u00e9r\u00e9e \u00bb, a-t-elle pr\u00e9cis\u00e9.\n                Selon des repr\u00e9sentants de Kristall, cinq personnes travaillaient dans la zone o\u00f9 s\u2019est produite l\u2019explosion. Elles ont pu \u00eatre \u00e9vacu\u00e9es en s\u00e9curit\u00e9.\n                Les pompiers locaux ont rapport\u00e9 n\u2019avoir aucune information sur des personnes qui se trouveraient encore dans l\u2019usine.\n                ",
+    "identifier": "4",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Une explosion a eu lieu dans l'usine d'explosifs Kristall \u00e0 Dzerzhinsk, en Russie, le 1er juin 2019, faisant 79 bless\u00e9s, selon les services d'urgence. L'incident a provoqu\u00e9 un incendie qui s'est \u00e9tendu sur une centaine de m\u00e8tres carr\u00e9s, engendrant des dommages consid\u00e9rables \u00e0 cinq b\u00e2timents de l'usine et pr\u00e8s de 180 r\u00e9sidences \u00e0 proximit\u00e9. La majorit\u00e9 des blessures sont dues \u00e0 des fragments"
+      }
+    ]
+  },
+  {
+    "text": "Paris is the capital of France and Emmanuel Macron is the president of the French Republic.",
+    "identifier": "5",
+    "metadata": {
+      "language": "en"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "People: Emmanuel Macron\nOrganizations: French Republic\nLocations: Paris, France"
+      }
+    ]
+  }
+]

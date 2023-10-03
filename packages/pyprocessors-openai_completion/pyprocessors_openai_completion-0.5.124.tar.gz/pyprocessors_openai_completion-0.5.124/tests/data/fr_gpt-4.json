@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Un s\u00e9isme de magnitude 7.8 devaste la Turquie\n\nLa Turquie a \u00e9t\u00e9 violemment secou\u00e9e par un s\u00e9isme brutal de magnitude 7.8, selon les rapports du Centre Sismologique Euro-M\u00e9diterran\u00e9en. Plusieurs r\u00e9gions du pays ont ressenti les terribles secousses qui ont caus\u00e9 d'\u00e9normes d\u00e9g\u00e2ts mat\u00e9riels.\n\nL'\u00e9picentre du s\u00e9isme, qui a \u00e9t\u00e9 ressenti \u00e0 une profondeur de 10km, se sit\nTitre: Turquie : Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe le pays\n\nR\u00e9dacteur: ESPRIT du Monde\n\nDATE: [\u00e0 ins\u00e9rer]\n\nUn s\u00e9isme massif de magnitude 7,8 a frapp\u00e9 la Turquie, laissant une trace de destruction et de d\u00e9sespoir dans son sillage. On compte d\u00e9j\u00e0 de nombreuses victimes alors que les secours se pr\u00e9cipitent pour sauver ceux qui sont encore bloqu\u00e9s sous les d\u00e9combres.\n\nSelon l'Observ\nTitre : Un s\u00e9isme d\u00e9vastateur de magnitude 7.8 frappe la Turquie\n\nDate : Date jour\n\nUn puissant s\u00e9isme de magnitude 7.8 a frapp\u00e9 la Turquie hier, causant d'importantes destructions et engendrant une crise humanitaire dans certaines r\u00e9gions du pays.\n\nL'\u00e9picentre du s\u00e9isme a \u00e9t\u00e9 localis\u00e9 dans le nord-est de la Turquie, pr\u00e8s de la ville d'Erzurum, mais les secousses ont \u00e9t\u00e9 ressenties dans une"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "1. Je vis dans une maison.\n2. Ma r\u00e9sidence est une maison. \n3. Je r\u00e9side dans une maison.\n4. Ma maison est mon lieu de r\u00e9sidence.\n5. Mon domicile est une maison.\n6. Je demeure dans une maison.\n7. Ma maison est mon habitation.\n8. Mon logement est une maison.\n9. Je loge dans une maison.\n10. Ma maison est mon domicile.\n11. Je passe mes journ\u00e9es dans une maison.\n12. Mon lieu de vie est une maison.\n13. J'occup\u00e9 une\n1. Je vis dans une maison.\n2. Ma r\u00e9sidence est une maison.\n3. Mon domicile est une maison.\n4. J'occupe une maison.\n5. Je demeure dans une maison.\n6. Je r\u00e9side dans une maison.\n7. Mon logement est une maison.\n8. Je suis domicili\u00e9 dans une maison.\n9. Mon habitat est une maison.\n10. Mon lieu de r\u00e9sidence est une maison.\n11. Je me loge dans une maison.\n12. Je m'installe dans une maison.\n13. J'ai pris une maison\n1. Je r\u00e9side dans une demeure.\n2. Ma r\u00e9sidence est une maison.\n3. Je vis dans une villa.\n4. Mon domicile est une maison.\n5. Ma maison est mon lieu de r\u00e9sidence.\n6. Je suis install\u00e9 dans une maison.\n7. J'occupe une maison.\n8. Ma r\u00e9sidence principale est une maison.\n9. J'ai \u00e9tabli mon logis dans une maison.\n10. Mon habitation est une maison.\n11. Je demeure dans une maison."
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Titre : Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, causant des destructions massives et de nombreuses pertes humaines\n\nIstanbul, Turquie - Un puissant s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie hier, provoquant des destructions massives et faisant craindre de nombreuses victimes. La secousse tellurique s'est produite vers 15 heures, heure locale, et a \u00e9t\u00e9 ressentie jusqu'\u00e0 Istanbul, la plus grande ville du\nS\u00e9isme d\u00e9vastateur en Turquie : un pays encore une fois frapp\u00e9 par la catastrophe\n\nLe 20 novembre, un violent s\u00e9isme d'une magnitude de 7,8 a frapp\u00e9 la Turquie, causant des destructions massives et laissant la population sous le choc. Cette catastrophe naturelle survient alors que le pays est d\u00e9j\u00e0 confront\u00e9 \u00e0 une s\u00e9rie d'autres probl\u00e8mes.\n\nL'\u00e9picentre du s\u00e9isme a \u00e9t\u00e9 localis\u00e9 dans la r\u00e9gion d'Izmir, la troisi\u00e8me plus grande ville de Turquie,\nTitre: La Turquie secou\u00e9e par un s\u00e9isme d\u00e9vastateur de magnitude 7,8\n\nSous-titre: Des centaines de morts et des milliers de bless\u00e9s dans le s\u00e9isme le plus puissant depuis des d\u00e9cennies\n\n[date], [ville]: Un s\u00e9isme d\u00e9vastateur, d'une magnitude de 7,8, a frapp\u00e9 la Turquie, provoquant la mort de centaines de personnes et causant d'importants d\u00e9g\u00e2ts mat\u00e9riels. Ce tremblement de terre d"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "- Je r\u00e9side dans une demeure.\n- Ma r\u00e9sidence est situ\u00e9e dans une maison.\n- Je vis dans une habitation.\n- Mon domicile se trouve dans une demeure.\n- J'occupe une maison en tant que r\u00e9sidence.\n- Je loge dans une habitation individuelle.\n- Ma r\u00e9sidence principale se trouve dans une maison.\n- Mon domicile est situ\u00e9 dans une maison.\n- Je loge dans une demeure.\n- J'occupe une habitation qui est une maison.\n- Ma r\u00e9sidence est une maison.\n- Je r\u00e9side dans une construction r\u00e9sidentielle qui est une maison.\n- Ma r\u00e9sidence principale est une maison.\n- Je suis install\u00e9(e) dans une maison.\n- Ma demeure est une maison.\n- Mon lieu de vie est une maison.\n- J'occupe une maison comme habitat.\n- Je r\u00e9side dans une maison.\n- Ma maison est mon lieu de r\u00e9sidence.\n- Je me trouve dans une habitation de type maison.\n- Mon logement est une maison.\n- Je vis dans une maison."
+      }
+    ]
+  }
+]
