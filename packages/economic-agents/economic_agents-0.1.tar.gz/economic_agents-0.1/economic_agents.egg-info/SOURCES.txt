@@ -1,0 +1,13 @@
+README.md
+setup.py
+economic_agents/__init__.py
+economic_agents/charness_rabin.py
+economic_agents/horton.py
+economic_agents/kahneman.py
+economic_agents/open_ai.py
+economic_agents/zeckhauser.py
+economic_agents.egg-info/PKG-INFO
+economic_agents.egg-info/SOURCES.txt
+economic_agents.egg-info/dependency_links.txt
+economic_agents.egg-info/requires.txt
+economic_agents.egg-info/top_level.txt
