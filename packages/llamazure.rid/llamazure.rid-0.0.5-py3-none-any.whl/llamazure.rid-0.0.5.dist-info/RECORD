@@ -1,0 +1,11 @@
+llamazure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/rid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/rid/conv.py,sha256=SKEgej4fOV_zHc2hgXCuQ-O0NZc3yOsGhUzdboKRl7M,395
+llamazure/rid/mp.py,sha256=u1LYZul2j-9VyNO02LsJyFN1eBAWjTjhLXfFYUstImg,3929
+llamazure/rid/rid.py,sha256=ltXrzsy0_hTdLFtPHA02EBiypT1IlaCU8wNI6ONe4GQ,4835
+llamazure/rid/util.py,sha256=TfJOrOHxbn8C5gAoIidJpXr0nQ6I5LeOc6i-Apw7Miw,1111
+llamazure.rid-0.0.5.dist-info/METADATA,sha256=C9484hUq-MIvlmMylnEqy-F5ByXRRKsX0_jNsW1aIxo,5027
+llamazure.rid-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+llamazure.rid-0.0.5.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamazure.rid-0.0.5.dist-info/top_level.txt,sha256=4gbH0fcRQb_rEVCcLYRu_D2cVCdf0VYVCIi_f0PiMq4,10
+llamazure.rid-0.0.5.dist-info/RECORD,,
