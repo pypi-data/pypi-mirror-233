@@ -1,0 +1,9 @@
+microgram/__init__.py,sha256=WRnUg6nw0wLi3rW1lZSLL2uBUQmNle-c2eyO20ypR6Y,18
+microgram/bot.py,sha256=8PKxwqLi6Yft0k3FNC1AsFGszDdMwIlSeCtJ_CWTldk,11357
+microgram/chunking.py,sha256=JmdeSsieB-dzRO6fu9fz34-9m3JEuzH7qVAgklhvP3k,8863
+microgram/text.py,sha256=CDbJid6l-TThCCjw7s1XWedZm4JIXwiqmh9GBP38680,1354
+microgram-0.0.3.dist-info/LICENSE,sha256=Qgo2J-YjLlx49Btem8gK0USvju0q1MhklyemaIHOWpQ,1074
+microgram-0.0.3.dist-info/METADATA,sha256=cn7Ky1Eq-Xm2nW6GLWOU7HhQTal95VB3WQJCQZlnSg0,360
+microgram-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+microgram-0.0.3.dist-info/top_level.txt,sha256=QyVYtDAo7ef_IzzQ91UCq_D4LMnY-NxXGcvBF6NfABw,10
+microgram-0.0.3.dist-info/RECORD,,
