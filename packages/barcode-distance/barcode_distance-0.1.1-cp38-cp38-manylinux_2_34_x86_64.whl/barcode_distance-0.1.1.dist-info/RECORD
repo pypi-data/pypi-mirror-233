@@ -1,0 +1,5 @@
+barcode_distance-0.1.1.dist-info/METADATA,sha256=_77JUh5t1XVuOIjuHcKb5X0npHticWPkH1HPfs7chmc,265
+barcode_distance-0.1.1.dist-info/WHEEL,sha256=vQsaMTZ0Q4yzOiq40IN3F8Wo_YaLfeIBn18jUwVnf40,106
+barcode_distance/__init__.py,sha256=vrzWjNyDEMYHH0T_pMUMfRosdM5YPcHicNZij_Y5cp0,147
+barcode_distance/barcode_distance.cpython-38-x86_64-linux-gnu.so,sha256=-drPmTNOtNUpkJUICEwMO-8xYkzH10HwidiucnKZOvY,1882504
+barcode_distance-0.1.1.dist-info/RECORD,,
