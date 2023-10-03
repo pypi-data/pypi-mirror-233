@@ -1,0 +1,225 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#    Copyright 2014 Grupo de Sistemas Inteligentes (GSI) DIT, UPM
+#
+#    Licensed under the Apache License, Version 2.0 (the "License");
+#    you may not use this file except in compliance with the License.
+#    You may obtain a copy of the License at
+#
+#        http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS,
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#    See the License for the specific language governing permissions and
+#    limitations under the License.
+"""
+Senpy is a modular sentiment analysis server. This script runs an instance of
+the server.
+
+"""
+
+from flask import Flask
+from senpy.extensions import Senpy
+from senpy.utils import easy_test
+from senpy.plugins import list_dependencies
+from senpy import config
+
+import logging
+import os
+import sys
+import argparse
+import senpy
+
+SERVER_PORT = os.environ.get("PORT", 5000)
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Run a Senpy server')
+    parser.add_argument(
+        '--level',
+        '-l',
+        metavar='logging_level',
+        type=str,
+        default="INFO",
+        help='Logging level')
+    parser.add_argument(
+        '--no-proxy-fix',
+        action='store_true',
+        default=False,
+        help='Do not assume senpy will be running behind a proxy (e.g., nginx)')
+    parser.add_argument(
+        '--log-format',
+        metavar='log_format',
+        type=str,
+        default='%(asctime)s %(levelname)-10s %(name)-30s \t %(message)s',
+        help='Logging format')
+    parser.add_argument(
+        '--debug',
+        '-d',
+        action='store_true',
+        default=False,
+        help='Run the application in debug mode')
+    parser.add_argument(
+        '--include-default',
+        action='store_true',
+        default=False,
+        help='Include default plugins')
+    parser.add_argument(
+        '--host',
+        type=str,
+        default="0.0.0.0",
+        help='Use 0.0.0.0 to accept requests from any host.')
+    parser.add_argument(
+        '--port',
+        '-p',
+        type=int,
+        default=SERVER_PORT,
+        help='Port to listen on.')
+    parser.add_argument(
+        '--plugin-folder',
+        '-f',
+        type=str,
+        action='append',
+        help='Where to look for plugins.')
+    parser.add_argument(
+        '--install',
+        '-i',
+        action='store_true',
+        default=False,
+        help='Install plugin dependencies before running.')
+    parser.add_argument(
+        '--dependencies',
+        action='store_true',
+        default=False,
+        help='List plugin dependencies')
+    parser.add_argument(
+        '--include-optional',
+        action='store_true',
+        default=False,
+        help='Include optional plugins, which require additional data to load')
+    parser.add_argument(
+        '--test',
+        '-t',
+        action='store_true',
+        default=False,
+        help='Test all plugins before launching the server')
+    parser.add_argument(
+        '--no-run',
+        action='store_true',
+        default=False,
+        help='Do not launch the server.')
+    parser.add_argument(
+        '--data-folder',
+        '--data',
+        type=str,
+        default=None,
+        help='Where to look for data. It be set with the SENPY_DATA environment variable as well.')
+    parser.add_argument(
+        '--no-threaded',
+        action='store_true',
+        default=False,
+        help='Run a single-threaded server')
+    parser.add_argument(
+        '--version',
+        '-v',
+        action='store_true',
+        default=False,
+        help='Output the senpy version and exit')
+    parser.add_argument(
+        '--allow-fail',
+        '--fail',
+        action='store_true',
+        default=False,
+        help='Do not exit if some plugins fail to load')
+    parser.add_argument(
+        '--enable-cors',
+        '--cors',
+        action='store_true',
+        default=False,
+        help='Enable CORS for all domains (requires flask-cors to be installed)')
+    args = parser.parse_args()
+    print('Senpy version {}'.format(senpy.__version__))
+    print(sys.version)
+    if args.version:
+        exit(1)
+    rl = logging.getLogger()
+    rl.setLevel(getattr(logging, args.level))
+    logger_handler = rl.handlers[0]
+
+    # First, generic formatter:
+    logger_handler.setFormatter(logging.Formatter(args.log_format))
+
+    app = Flask(__name__)
+    app.debug = args.debug
+
+    folders = list(args.plugin_folder) if args.plugin_folder else []
+    sp = Senpy(app,
+               plugin_folders=folders,
+               install=args.install,
+               include_default=args.include_default,
+               include_optional=args.include_optional,
+               data_folder=args.data_folder)
+
+    plugins = sp.plugins(plugin_type=None)
+    maxname = max(len(x.name) for x in plugins)
+    maxversion = max(len(str(x.version)) for x in plugins)
+    print('Found {} plugins:'.format(len(plugins)))
+    for plugin in plugins:
+        import inspect
+        fpath = inspect.getfile(plugin.__class__)
+        print('\t{: <{maxname}} @ {: <{maxversion}} -> {}'.format(plugin.name,
+                                                                  plugin.version,
+                                                                  fpath,
+                                                                  maxname=maxname,
+                                                                  maxversion=maxversion))
+    if args.dependencies:
+        print('Listing dependencies')
+        missing = []
+        installed = []
+        for plug in sp.plugins():
+            inst, miss, nltkres = list_dependencies(plug)
+            if not any([inst, miss, nltkres]):
+                continue
+            print(f'Plugin: {plug.id}')
+            for m in miss:
+                missing.append(f'{m} # {plug.id}')
+            for i in inst:
+                installed.append(f'{i} # {plug.id}')
+        if installed:
+            print('Installed packages:')
+            for i in installed:
+                print(f'\t{i}')
+        if missing:
+            print('Missing packages:')
+            for m in missing:
+                print(f'\t{m}')
+
+    if args.test:
+        easy_test(sp.plugins(), debug=args.debug)
+
+    if args.no_run:
+        return
+
+    print('Senpy version {}'.format(senpy.__version__))
+    print('Server running on port %s:%d. Ctrl+C to quit' % (args.host,
+                                                            args.port))
+    if args.enable_cors:
+        from flask_cors import CORS
+        CORS(app)
+
+    if not args.no_proxy_fix:
+        from werkzeug.middleware.proxy_fix import ProxyFix
+        app.wsgi_app = ProxyFix(app.wsgi_app)
+
+    try:
+        app.run(args.host,
+                args.port,
+                threaded=not args.no_threaded,
+                debug=app.debug)
+    except KeyboardInterrupt:
+        print('Bye!')
+
+
+if __name__ == '__main__':
+    main()
