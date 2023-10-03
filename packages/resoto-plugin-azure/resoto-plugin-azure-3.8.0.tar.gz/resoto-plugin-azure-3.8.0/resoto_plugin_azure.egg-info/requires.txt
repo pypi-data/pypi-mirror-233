@@ -1,0 +1,4 @@
+resotolib==3.8.0
+retrying
+azure-identity
+azure-mgmt-resource

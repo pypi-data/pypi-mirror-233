@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+resoto_plugin_azure/__init__.py
+resoto_plugin_azure/azure_client.py
+resoto_plugin_azure/collector.py
+resoto_plugin_azure/config.py
+resoto_plugin_azure.egg-info/PKG-INFO
+resoto_plugin_azure.egg-info/SOURCES.txt
+resoto_plugin_azure.egg-info/dependency_links.txt
+resoto_plugin_azure.egg-info/entry_points.txt
+resoto_plugin_azure.egg-info/not-zip-safe
+resoto_plugin_azure.egg-info/requires.txt
+resoto_plugin_azure.egg-info/top_level.txt
+resoto_plugin_azure/resource/__init__.py
+resoto_plugin_azure/resource/base.py
+resoto_plugin_azure/resource/compute.py
