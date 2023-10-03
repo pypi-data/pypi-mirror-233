@@ -1,0 +1,13 @@
+meraki_syslog_server/README_mac.md,sha256=6WNfwVW4J7UkJ7Sovy7B5-tSurKW8X4fSCvztTtDtd0,1033
+meraki_syslog_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meraki_syslog_server/main.py,sha256=IDjIN9ZWfBNGzQPKj2MgpAH8xu-IImTQ2UF6v65fkHg,1434
+meraki_syslog_server/meraki_mx_syslog_parser.py,sha256=A9DfNhOm9s8WjftTQ8rycqmuZuy2myjnVtqKvz0VE28,3101
+meraki_syslog_server/randomize_mac.py,sha256=05KIbPwMPe19p8E1vdPvteD1KH2yGf50Hib-XrzRHgg,2015
+meraki_syslog_server/requirements.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+meraki_syslog_server/samples/meraki_events_mac_rand.log,sha256=MDcSBHmclh3ur85eaVwv1VQSBdbsjV5RYuy3PAKA4fo,5442
+meraki_syslog_server/samples/meraki_firewall_mac_rand.log,sha256=OPDu8KBiYVcAgeUvCHbwTSDuUyV-VcAdB5AfARnaiz4,924479
+meraki_syslog_server/samples/meraki_urls_mac_rand.log,sha256=buI7IyU4W-Ja0RA33BjpPEa2UOsBwu5A0C8CjBraUNc,184105
+meraki_syslog_server-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+meraki_syslog_server-0.1.0.dist-info/METADATA,sha256=CbeskgsjJOL8Bo2VAsGSOGaBHYvEyPv3d9oZESEPYLg,7239
+meraki_syslog_server-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+meraki_syslog_server-0.1.0.dist-info/RECORD,,
