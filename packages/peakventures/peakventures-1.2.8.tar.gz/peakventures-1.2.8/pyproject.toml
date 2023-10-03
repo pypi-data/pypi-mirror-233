@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "peakventures"
+version = "1.2.8"
+description = "PeakVentures Python Utilities"
+authors = ["Volodymyr Smirnov <volodymyr@peakventures.co>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.28.11"
+tenacity = "^8.2.2"
+websockets = "^11.0.3"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
