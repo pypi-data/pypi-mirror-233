@@ -1,0 +1,13 @@
+djangobible/__init__.py,sha256=CZeKMO0N7WX92yJJRrcXxL_Vogcwva9d6WNT4f7xfZw,231
+djangobible/apps.py,sha256=lJgCh5Hj0i-nuTS_1s9HmwMNgVX-i1nFEIJkVsUbOfs,244
+djangobible/fields.py,sha256=dgACjzISLSHiP2O6W2EGkmeexq3l6NbJKGnuUMsxhVQ,3025
+djangobible/models.py,sha256=lDrU0RKwV8DDy2SrNky6Owrh73Rri6ud1Dm99ipapUs,3028
+djangobible/validators.py,sha256=MWMWUbiZLQsOp69Fy-V1z2Ly3qyGWWPLRjgG6RhU1BA,853
+djangobible/migrations/0001_initial.py,sha256=5lNyBJtwuZSchhDbxeIfiWGPcf308PGl0Mc5uCxI5c0,1200
+djangobible/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangobible/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangobible/templatetags/verse_tags.py,sha256=EmakxtAaXulVPpC9Rz3S49snWxlPdDX1vUiT0ZvqpXk,1728
+djangobible-0.1.1.dist-info/LICENSE,sha256=vtcKfpmHsOwjUi3axlhP7KzGGZE6OmG7cigMXbLK8xU,1070
+djangobible-0.1.1.dist-info/WHEEL,sha256=rSgq_JpHF9fHR1lx53qwg_1-2LypZE_qmcuXbVUq948,81
+djangobible-0.1.1.dist-info/METADATA,sha256=m8DjoaNMRGJ1yKE7YKlmHmNWO7C81Bydup4xv52HNd4,9850
+djangobible-0.1.1.dist-info/RECORD,,
