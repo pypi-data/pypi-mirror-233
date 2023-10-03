@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fluvius_energy_service_company
+Version: 0.0.1
+Summary: Wrapper for the Fluvius energy service company API that you can use as an "Energie dienstverlener".
+Home-page: https://github.com/VONKT/fluvius-energy-service-company
+Author: Ward Schodts
+Author-email: ward@vonkt.energy
+License: GNU LESSER GENERAL PUBLIC LICENSE
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyJWT==2.8.0
+
+# fluvius-energy-service-company
+Wrapper for the Fluvius energy service company API that you can use as an "Energie dienstverlener".
