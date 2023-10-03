@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyweatherflow-forecast
+Version: 0.4.0
+Summary: Gets the weather forecast data from WeatherFlow
+Home-page: https://github.com/briis/pyweatherflow_forecast
+Author: briis
+Author-email: bjarne@briis.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WeatherFlow Forecast API
+
+Python Library to retrieve Forecast data from WeatherFlow.
+
+Please visit <https://weatherflow.github.io/Tempest/api/swagger/> for more information.
+
+TODO:
+- Expand documentation, to show usage. In the meatime, for a non Async usage see `test_module.py`
+- Improve documentation
+
+If you want to contribute you can use devcontainers in vscode for easiest setup. Please see [instructions here](.devcontainer/README.md)
