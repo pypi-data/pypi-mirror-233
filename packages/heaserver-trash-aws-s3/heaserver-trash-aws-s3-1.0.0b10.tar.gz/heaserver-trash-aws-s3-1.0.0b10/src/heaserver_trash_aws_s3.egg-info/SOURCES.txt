@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/heaserver/trashawss3/__init__.py
+src/heaserver/trashawss3/service.py
+src/heaserver/trashawss3/wstl/all.json
+src/heaserver_trash_aws_s3.egg-info/PKG-INFO
+src/heaserver_trash_aws_s3.egg-info/SOURCES.txt
+src/heaserver_trash_aws_s3.egg-info/dependency_links.txt
+src/heaserver_trash_aws_s3.egg-info/entry_points.txt
+src/heaserver_trash_aws_s3.egg-info/requires.txt
+src/heaserver_trash_aws_s3.egg-info/top_level.txt
+tests/heaserver/trashawss3test/__init__.py
+tests/heaserver/trashawss3test/test_all.py
+tests/heaserver/trashawss3test/testcase.py
