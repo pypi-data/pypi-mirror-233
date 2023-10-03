@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/saluda.egg-info/PKG-INFO
+src/saluda.egg-info/SOURCES.txt
+src/saluda.egg-info/dependency_links.txt
+src/saluda.egg-info/entry_points.txt
+src/saluda.egg-info/requires.txt
+src/saluda.egg-info/top_level.txt
+src/saludador/__init__.py
+src/saludador/launcher/__author__.py
+src/saludador/launcher/__init__.py
+src/saludador/launcher/__main__.py
+src/saludador/launcher/__version__.py
+src/saludador/modules/__init__.py
+src/saludador/resources/__init__.py
