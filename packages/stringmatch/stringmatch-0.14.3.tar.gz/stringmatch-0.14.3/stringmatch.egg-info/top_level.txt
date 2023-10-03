@@ -1,0 +1,3 @@
+12cef856b623f4dba795__mypyc
+stringmatch
+tests
