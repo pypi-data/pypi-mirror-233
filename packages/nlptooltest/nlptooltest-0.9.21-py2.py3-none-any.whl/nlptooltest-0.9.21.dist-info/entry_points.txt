@@ -1,0 +1,16 @@
+[console_scripts]
+arabi_ner = CLI.arabiner.bin.infer:main
+sina_alma_multi_word = CLI.morphology.ALMA_multi_word:main
+sina_arStrip = CLI.utils.arStrip:main
+sina_corpus_tokenizer = CLI.utils.corpus_tokenizer:main
+sina_implication = CLI.utils.implication:main
+sina_intersection = CLI.utils.jaccard_intersection:main
+sina_jaccard_similarity = CLI.utils.jaccard_similarity:main
+sina_morph_analyze = CLI.morphology.morph_analyzer:main
+sina_remove_latin = CLI.utils.latin_remove:main
+sina_remove_punctuation = CLI.utils.remove_Punc:main
+sina_salma = CLI.salma.salma_tools:main
+sina_sentence_tokenize = CLI.utils.sentence_tokenizer:main
+sina_transliterate = CLI.utils.text_transliteration:main
+sina_union = CLI.utils.jaccard_union:main
+
