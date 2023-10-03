@@ -1,0 +1,3 @@
+[console_scripts]
+muster=muster.cli.cli:main
+
