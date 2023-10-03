@@ -1,0 +1,114 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "holonote"
+readme = "README.md"
+description = "Annotate your data"
+requires-python = ">=3.9"
+license = { file = "LICENSE.txt" }
+keywords = ["annotation", "holoviews", "tools"]
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = ["holoviews >=1.18.0a1", "pandas <2.1"]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "setuptools_scm",
+    "pytest",
+]
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "holonote/_version.py"
+
+[tool.hatch.envs.conda]
+detached = true
+scripts.build = "bash conda/build.sh"
+
+[tool.hatch.envs.test]
+dependencies = ["pytest"]
+scripts.run = "python -m pytest holonote/tests"
+matrix = [{ python = ["3.9", "3.10", "3.11"] }]
+
+[tool.hatch.envs.fmt]
+detached = true
+scripts.run = "pre-commit run --all"
+scripts.update = "pre-commit autoupdate"
+
+[tool.pytest.ini_options]
+addopts = "-vv"
+filterwarnings = [
+    "error",
+    # 2023-09: Ignore Bokeh UserWarning, which needs to be fixed in HoloViews
+    "ignore:found multiple competing values for:UserWarning:holoviews.plotting.bokeh.plot",
+    # 2023-09: Wrong warning, when a timedelta is compared to another scalar.
+    # Fixed in newer versions of Numpy: https://github.com/numpy/numpy/issues/10095
+    "ignore:elementwise comparison failed:DeprecationWarning:bokeh.core.property.bases",
+]
+
+[tool.ruff]
+target-version = "py39"
+
+select = [
+    "B",
+    "C4",
+    "E",
+    "EM",
+    "F",
+    "FLY",
+    "I",
+    "ICN",
+    "ISC",
+    "NPY",
+    "PIE",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "PT",
+    "RUF",
+    "SIM",
+    "UP",
+    "W",
+]
+
+ignore = [
+    "E402",     # Module level import not at top of file
+    "E501",     # Line too long
+    "E701",     # Multiple statements on one line
+    "E712",     # Comparison to true should be is
+    "E731",     # Do not assign a lambda expression, use a def
+    "E741",     # Ambiguous variable name
+    "F405",     # From star imports
+    "PLE0604",  # Invalid object in `__all__`, must contain only strings
+    "PLE0605",  # Invalid format for `__all__`
+    "PLR091",   # Too many arguments/branches/statements
+    "PLR2004",  # Magic value used in comparison
+    "PLW2901",  # `for` loop variable is overwritten
+    "RUF012",   # Mutable class attributes should use `typing.ClassVar`
+]
+
+fix = true
+unfixable = [
+    "F401",     # Unused imports
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F403"]
+
+[tool.ruff.isort]
+known-first-party = ["holonote"]
+# required-imports = ["from __future__ import annotations"]
+force-wrap-aliases = true
+combine-as-imports = true
+
+[tool.codespell]
+write-changes = true
