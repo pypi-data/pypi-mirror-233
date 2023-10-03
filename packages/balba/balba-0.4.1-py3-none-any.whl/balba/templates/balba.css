@@ -1,0 +1,21 @@
+article {
+  position: relative;
+}
+
+article > a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.mb {
+  margin-bottom: calc(var(--block-spacing-vertical) * 0.5);
+}
+
+.thumbnail {
+  max-height: 420px;
+}

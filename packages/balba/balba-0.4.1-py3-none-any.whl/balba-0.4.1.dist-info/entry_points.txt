@@ -1,0 +1,3 @@
+[console_scripts]
+balba=balba.cli:balba
+
