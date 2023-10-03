@@ -1,0 +1,3 @@
+[console_scripts]
+slh-sh=slh_sh.main:app
+
