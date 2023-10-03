@@ -1,0 +1,6 @@
+setup.py
+LOLZTEAM/__init__.py
+lolzteam.egg-info/PKG-INFO
+lolzteam.egg-info/SOURCES.txt
+lolzteam.egg-info/dependency_links.txt
+lolzteam.egg-info/top_level.txt
