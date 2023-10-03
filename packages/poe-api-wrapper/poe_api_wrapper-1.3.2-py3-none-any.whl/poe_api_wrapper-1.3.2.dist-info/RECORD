@@ -1,0 +1,10 @@
+poe_api_wrapper/__init__.py,sha256=g0434fX4D3nTJsNYF7uUYgCcr2aBlrxGTtwNKnbpimk,56
+poe_api_wrapper/api.py,sha256=AOUnrz0zcm7xvfwL_v8kGHMM9gD_xAENtqAvZtBQEgU,76220
+poe_api_wrapper/example.py,sha256=LwVHxXNxeqfmkQbWaRVkgwG3Mt68PLFqlgXu1Who97o,22304
+poe_api_wrapper/proxies.py,sha256=5fz58fa_qH7c6OF8wfxKIesX5-J0TPdarUKu0dSvz0g,638
+poe_api_wrapper/queries.py,sha256=UHqFkD5eFLindzUmF_7IeSo8tB-frOjGSyDENinuud4,15149
+poe_api_wrapper-1.3.2.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+poe_api_wrapper-1.3.2.dist-info/METADATA,sha256=-C9zy27ThoZ9Fy-SJ5ukhAkXre8kTTTKxq9UX5-kAzs,22268
+poe_api_wrapper-1.3.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+poe_api_wrapper-1.3.2.dist-info/top_level.txt,sha256=pmrPTKVQL1frGGRXVfYSrjX3x6psXJvMuMeGSFCUs6Q,16
+poe_api_wrapper-1.3.2.dist-info/RECORD,,
