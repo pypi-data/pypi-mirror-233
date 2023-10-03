@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "django-modern-user"
+version = "0.2.7"
+description = "An improved custom user model for django projects"
+authors = ["Christopher Kumm <chrislkumm@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "django_modern_user"}]
+repository = "https://github.com/ChrisCrossCrash/django-modern-user"
+include = [
+    "LICENSE",
+    "README.md",
+    "django_modern_user/static/**/*",
+    "django_modern_user/templates/**/*",
+    "docs/**/*",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8 || ^3.9 || ^3.10 || ^3.11"
+django = ">=3.2,<4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
