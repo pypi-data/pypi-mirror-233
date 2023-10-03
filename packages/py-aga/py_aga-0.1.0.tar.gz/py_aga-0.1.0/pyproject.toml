@@ -1,0 +1,24 @@
+[project]
+name = "py-aga"
+version = "0.1.0"
+description = "Lightweight native Python command-line interface builder"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Adam Mitchell", email = "adamstuartmitchell@gmail.com"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+requires-python = ">=3.0"
+
+[project.urls]
+Documentation = "https://github.com/amitchone/py-aga"
+Changes = "https://github.com/amitchone/py-aga"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
