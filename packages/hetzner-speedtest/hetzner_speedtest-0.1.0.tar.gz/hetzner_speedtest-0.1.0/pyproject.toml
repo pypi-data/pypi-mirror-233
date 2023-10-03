@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "hetzner-speedtest"
+version = "0.1.0"
+description = "CLI to test the speed of Hetzner regions"
+authors = ["Adam McKay <adam@beepboop.digital>"]
+readme = "README.md"
+packages = [
+    {include = "hetzner_speed_test", from = "src"},
+]
+
+[tool.poetry.scripts]
+hetzner-speedtest = "hetzner_speed_test.__main__:app"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+typer = "^0.9.0"
+rich = "^13.6.0"
+ping3 = "^4.0.4"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.coverage.run]
+source = ['src']
+
+[tool.isort]
+profile = "black"
