@@ -1,0 +1,24 @@
+program: "
+bool b := True;\n
+int x := x0;\n
+while (b) {\n
+  if (x <= 5) {b := False;}\n
+  x := x - 1;\n
+} \n
+assert (x <= 5);\n
+y := ??*x;\n
+assert ( y >=  20);\n
+"
+input_output_examples:
+  - input: 
+    output: 
+    vars: 
+pre_condition:
+  condition: "x0 >= 0"
+  condition_vars: "x0 : int"
+post_condition:
+  condition: "And(x <= 5, Not(b == True))"
+  condition_vars: "x : int, b : bool"
+loop_inv:
+  condition: "And(x >= 0, x <= 10, b == True)"
+  condition_vars: "b : bool"

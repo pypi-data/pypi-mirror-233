@@ -1,0 +1,21 @@
+program: "
+if (bool?) {\n
+  x:=1;\n
+} else{\n
+  x:=2;\n
+}\n
+assert(x ==2);
+"
+input_output_examples:
+  - input: 
+    output: 
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:

@@ -1,0 +1,186 @@
+Metadata-Version: 2.1
+Name: simpleSketch
+Version: 0.0.8
+Summary: Program Synthesis by Sketching
+Author-email: Maher Bisan <maherbisan95@gmail.com>
+Maintainer-email: Dareen Khair <dareen17.7@gmail.com>, Maher Bisan <maherbisan95@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Maher Bisan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/maher-bisan/SimpleSketch
+Project-URL: Bug Tracker, https://github.com/maher-bisan/SimpleSketch/issues
+Keywords: SimpleSketch,Synthesis,CEGIS,Program Synthesis,Sketching,PBE
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: z3-solver==4.12.2.0
+Requires-Dist: lark==1.1.7
+Requires-Dist: pyyaml
+Requires-Dist: customtkinter==5.2.0
+Requires-Dist: graphviz==0.20.1
+Provides-Extra: dev
+Requires-Dist: build==1.0.3; extra == "dev"
+Requires-Dist: ipykernel==6.25.2; extra == "dev"
+Requires-Dist: mkdocs==1.5.3; extra == "dev"
+Requires-Dist: Pillow; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: dev-notebook
+Requires-Dist: ipykernel==6.25.2; extra == "dev-notebook"
+
+# Simple Sketch (Program Synthesis by Sketching)
+
+>This project is a part of the course 236347 Software Synthesis and Automated Reasoning (SSAR) at the Technion.
+
+## Description
+
+The goal of software synthesis is to generate programs automatically from specifications.
+In Sketching, insight is communicated through a partial program, a sketch that
+expresses the high-level structure of an implementation but leaves holes in place of the low-level details.
+
+Simple Sketch can Synthesis a program based on a set of input and output examples, or by adding assertions to the program.
+
+Simple Sketch uses counterexample guided inductive synthesis procedure (CEGIS) to synthesize a program.
+
+Look at the examples section in the GUI to see how to use the program.
+
+>> **Note:** This project is still under development. Check updates regularly at the [SimpleSketch repository](https://github.com/maher-bisan/SimpleSketch)
+
+>>**IMPORTANT:** The tests (under `/tests`) still fail, because the tests are not updated to the new version of the program (the new parser)
+The tests will be updated soon. In the meantime, you can use the examples in the GUI to test the program.
+
+## Example
+
+```
+i := ??;
+y := i*i + x * ??;
+assert (y == x + x + 9);
+```
+The above program is a simple example of a program synthesis problem.
+The goal is to find a program that satisfies the specification.
+
+After running the program, the output is:
+
+```
+i := 3;
+y := i*i + x * 2;
+assert (y == x + x + 9);
+```
+
+## Installation
+
+### Build from source
+
+```
+git clone https://github.com/maher-bisan/SimpleSketch.git
+cd simple_sketch
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install .
+```
+
+On windows, run the following command instead:
+
+```
+python -m venv .venv
+.venv\Scripts\activate
+pip install .
+```
+
+### Install from PyPI
+
+```
+pip install simpleSketch
+```
+
+## Documentation
+
+Under construction. In the meantime, you can read the docstrings in the code.
+
+## Grammar
+
+### `while_lang` grammar
+
+```lark
+start: statements
+
+statements: statement | statements statement
+
+statement: "skip" ";" | declaration | assignment | "if" "(" expr ")" "{" statements "}" 
+| "if" "(" expr ")" "{" statements "}"  "else" "{" statements "}" | "while" "(" expr ")" "{" statements "}" | "assert" "(" expr ")" ";" | "assume" "(" expr ")" ";"
+
+declaration: type id ";" | type id = expr ";" | array_type id ";" | array_type id = id ";"
+
+assignment: id = expr ";" | id [ expr ] = expr ";"
+
+array_type: "Array" type
+
+type: "int" | "float" | "bool"
+
+expr: expr "and" expr | expr "or" expr | "not" expr 
+| expr "==" expr | expr "!=" expr | expr "<" expr | expr ">" expr | expr "<=" expr | expr ">=" expr
+| expr "+" expr | expr "-" expr | expr "*" expr | expr "/" expr | expr "**" expr
+| atom
+
+atom: "(" expr ")" | id | hole | id "[" expr "]" | int | float | bool
+
+hole: "??" | "int?" | "bool?" | "float?"
+
+bool : "True" | "False"
+
+```
+<!-- 
+### Grammar for the condition (in z3 format)
+
+```lark
+
+```
+ -->
+
+## Usage
+
+### Open the GUI
+
+In the terminal, run the following command:
+
+#### If you installed from PyPI
+
+```
+simpleSketch-gui
+```
+
+#### If you built from source
+
+```
+python3.11 src/simple_sketch/simple_sketch_gui/simple_sketch_gui.py
+```
+
+
+### Examples
+
+After opening the GUI, you can select an example from the dropdown menu, at the sidebar.
+
+### Run a program
+
+To run a program, click the "Run" button.
+Click the "Clear" button to clear the entire text areas.

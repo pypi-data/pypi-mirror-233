@@ -1,0 +1,18 @@
+program: "
+i := ??;
+y := i*i + x * ??;
+assert (y == x + x + 9);
+"
+input_output_examples:
+  - input: 
+    output: 
+    vars: 
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:

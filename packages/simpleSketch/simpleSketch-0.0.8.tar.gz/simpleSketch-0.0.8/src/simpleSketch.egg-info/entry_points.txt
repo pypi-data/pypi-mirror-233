@@ -1,0 +1,5 @@
+[console_scripts]
+simpleSketch = simple_sketch.simple_sketch_cli:simple_sketch_cli
+
+[gui_scripts]
+simpleSketch-gui = simple_sketch.simple_sketch_gui:simple_sketch_gui

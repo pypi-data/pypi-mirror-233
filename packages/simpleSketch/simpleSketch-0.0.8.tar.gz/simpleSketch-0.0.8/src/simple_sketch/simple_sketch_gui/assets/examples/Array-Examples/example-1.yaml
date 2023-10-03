@@ -1,0 +1,19 @@
+program: "
+Array int A;\n
+A[0] := 1;\n
+A[1] := ??;\n
+assert (A[0] + A[1] > 4);\n
+"
+input_output_examples:
+  - input:
+    output:
+    vars:
+pre_condition:
+  condition: 
+  condition_vars: 
+post_condition:
+  condition: 
+  condition_vars: 
+loop_inv:
+  condition: 
+  condition_vars:

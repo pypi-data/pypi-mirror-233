@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=>=61.2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simpleSketch"
+version = "0.0.8"
+
+authors = [
+  {name="Maher Bisan", email="maherbisan95@gmail.com"}
+]
+
+maintainers = [
+  {name="Dareen Khair", email="dareen17.7@gmail.com"},
+  {name="Maher Bisan", email="maherbisan95@gmail.com"},
+]
+
+description = "Program Synthesis by Sketching"
+
+readme = "README.md"
+
+keywords =  ["SimpleSketch", "Synthesis", "CEGIS", "Program Synthesis", "Sketching", "PBE"]
+
+license = {file="LICENSE"}
+
+requires-python = ">=3.11"
+
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "z3-solver==4.12.2.0",
+    "lark==1.1.7",
+    "pyyaml",
+    "customtkinter==5.2.0",
+    "graphviz==0.20.1"
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/maher-bisan/SimpleSketch"
+"Bug Tracker" = "https://github.com/maher-bisan/SimpleSketch/issues"
+# "documentation" = ""
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+namespaces = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.lark", "*.md", "*.json", "*.yaml"]
+simple_sketch = ["*.lark", "*.md", "*.json", "*.yaml"]
+"simple_sketch.simple_sketch_gui" = ["assets/**/*"]
+
+[project.scripts]
+simpleSketch = "simple_sketch.simple_sketch_cli:simple_sketch_cli"
+
+[project.gui-scripts]
+simpleSketch-gui = "simple_sketch.simple_sketch_gui:simple_sketch_gui"
+
+
+[project.optional-dependencies]
+dev = [
+    "build==1.0.3",
+    "ipykernel==6.25.2",
+    "mkdocs==1.5.3",
+    "Pillow",
+    "twine"
+]
+
+dev-notebook = [
+    "ipykernel==6.25.2",
+]
