@@ -1,0 +1,25 @@
+[project]
+name = "mscolorlog"
+version = "1.0.1"
+authors = [
+  { name="sirin", email="misaka@sirin.moe" },
+]
+description = "A lightweight and highly customizable package that can ouput colored logs to the console."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "psutil"
+  ]
+
+[project.urls]
+"Homepage" = "https://github.com/MiSAKASiRiN/mscolorlog"
+"Bug Tracker" = "https://github.com/MiSAKASiRiN/mscolorlog/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
