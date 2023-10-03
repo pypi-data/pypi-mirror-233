@@ -1,0 +1,6 @@
+setup.py
+vitaminpy/__init__.py
+liverecs-tahoee-client.egg-info/PKG-INFO
+liverecs-tahoee-client.egg-info/SOURCES.txt
+liverecs-tahoee-client.egg-info/dependency_links.txt
+liverecs-tahoee-client.egg-info/top_level.txt
