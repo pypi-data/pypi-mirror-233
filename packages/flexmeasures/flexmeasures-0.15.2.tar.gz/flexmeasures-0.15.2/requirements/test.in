@@ -1,0 +1,17 @@
+-c app.txt
+# we are not using app.in and test.in, because we want to develop against exactly what is being packaged and tested
+
+pytest
+pytest-flask
+pytest-sugar
+pytest-cov
+# to test calls to the API
+requests
+# to test responses from our API, as given to our UI code
+requests_mock
+# lets tests run successfully in containers
+fakeredis
+# required with fakeredis, maybe because we use rq
+lupa
+# LP solver required to test the function device_scheduler which is used by the StorageScheduler
+highspy
