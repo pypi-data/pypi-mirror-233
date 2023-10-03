@@ -1,0 +1,5 @@
+requests>=2.30.0
+keyring>=24.2.0
+pyyaml>=6.0.1
+requests>=2.31.0
+keyrings.alt>=5.0.0
