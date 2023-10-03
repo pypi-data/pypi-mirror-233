@@ -1,0 +1,11 @@
+napari_rembg/__init__.py,sha256=RdAqF0SB0JX35rYm8m5HUh9luv9v2gXTgaYpqdMyuT0,89
+napari_rembg/_widget.py,sha256=hmQR3kwmPtEZ2BNFlUNfo_WFQSUjFJ7C7AOZUg7L600,2709
+napari_rembg/napari.yaml,sha256=3r6wVZA7sMNJbSh4YQJWHZitN4OsRYgkP8uaqHGfpE4,428
+napari_rembg/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_rembg/_tests/test_widget.py,sha256=ywHnbFb6Xwn2DkZK3xO-A17psYDjPWGRjGCNwd4aRG0,178
+napari_rembg-0.0.3.dist-info/LICENSE,sha256=dIH5yfTJW4fZmdST5TI025M3K6LDKA3HRPSn1T2VUhM,1489
+napari_rembg-0.0.3.dist-info/METADATA,sha256=P_dc88PmkOPltjPDUSw_Kc34CyA6aCP8tKhoJsclvWg,3355
+napari_rembg-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_rembg-0.0.3.dist-info/entry_points.txt,sha256=DIwZKMHB7Eq4_mP3IAImeIEKhZK3R94y7bOoRppWBmY,58
+napari_rembg-0.0.3.dist-info/top_level.txt,sha256=5zFLm4UHvWHsQjGgq_Mltpxc6mq3NOffOG2x2m-okg4,13
+napari_rembg-0.0.3.dist-info/RECORD,,
