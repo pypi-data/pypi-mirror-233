@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "personal_interfaces"
+version = "0.0.1"
+description = "Deta interface for personal usage. Is intended to be used in personal projects that requests"
+authors = ["ricardoleal20 <rick.leal420@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+deta = ">=1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.4"
+pyright = "^1.1.329"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
