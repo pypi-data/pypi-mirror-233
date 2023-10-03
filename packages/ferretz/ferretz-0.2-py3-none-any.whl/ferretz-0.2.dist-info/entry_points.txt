@@ -1,0 +1,2 @@
+[console_scripts]
+ferretz = ferretz.ferretz:main
