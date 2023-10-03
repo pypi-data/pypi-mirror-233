@@ -1,0 +1,5 @@
+build
+dist
+temp
+yt_dlp_danmaku
+yt_dlp_plugins
