@@ -1,0 +1,11 @@
+LICENSE
+README.md
+README.rst
+setup.py
+pyuspsvalidator/__init__.py
+pyuspsvalidator/webtools.py
+pyuspsvalidator.egg-info/PKG-INFO
+pyuspsvalidator.egg-info/SOURCES.txt
+pyuspsvalidator.egg-info/dependency_links.txt
+pyuspsvalidator.egg-info/requires.txt
+pyuspsvalidator.egg-info/top_level.txt
