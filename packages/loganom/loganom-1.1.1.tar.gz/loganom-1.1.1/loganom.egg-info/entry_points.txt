@@ -1,0 +1,2 @@
+[console_scripts]
+loganom = loganom.main:main
