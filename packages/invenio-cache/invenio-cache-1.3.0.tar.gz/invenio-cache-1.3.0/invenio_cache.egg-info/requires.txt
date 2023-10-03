@@ -1,0 +1,11 @@
+Flask-Caching>=1.8.0
+invenio-base>=1.2.2
+
+[tests]
+pytest-black>=0.3.0
+mock>=2.0.0
+redis>=2.10.5
+pytest-invenio>=1.4.0
+pytest-mock>=1.6.0
+invenio-accounts>=2.0.0
+Sphinx>=3
