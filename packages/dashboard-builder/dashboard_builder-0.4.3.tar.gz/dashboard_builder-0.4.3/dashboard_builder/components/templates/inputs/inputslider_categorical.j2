@@ -1,0 +1,36 @@
+<div class="overflow-hidden mb-4">
+    <label for="{{ name }}" class="text-xs sm:text-sm md:text-base font-medium text-gray-700 mb-2 leading-tight">
+        {{ label }}
+    </label>
+    <input 
+        type="range" 
+        id="{{ name }}_range" 
+        min="0" 
+        max="{{ max_position }}" 
+        value="{{ default_position }}" 
+        class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-500"
+        oninput="updateCategoryDisplay(this)"
+    >
+    <output for="{{ name }}_range" id="{{ name }}_output" class="text-sm text-gray-500">
+        {{ categories[default_position] }}
+    </output>
+    <!-- Hidden field to store the category name -->
+    <input 
+        type="hidden" 
+        id="{{ name }}" 
+        name="{{ name }}" 
+        value="{{ default_value }}"
+    >
+</div>
+<script>
+    function updateCategoryDisplay(slider) {
+        const baseId = slider.id.replace("_range", "");
+        const outputElement = document.getElementById(baseId + '_output');
+        const hiddenInputElement = document.getElementById(baseId);
+        // ignore the below error, it is a false positive
+        // eslint-disable-next-line no-undef
+        const categories = {{ categories|tojson }}; 
+        outputElement.textContent = categories[slider.value];
+        hiddenInputElement.value = categories[slider.value]; 
+    }
+</script>
