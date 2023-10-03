@@ -1,0 +1,2 @@
+[console_scripts]
+waypaper = waypaper.__main__:run
