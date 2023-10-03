@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: django-custom-error-views
+Version: 0.1.0
+Summary: Prebuilt and customizable error views for Django.
+Home-page: https://github.com/adinhodovic/django-custom-error-views
+License: MIT
+Keywords: Django,Error,HTTP
+Author: Adin Hodovic
+Author-email: hodovicadin@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: django (>=4.2.5,<5.0.0)
+Project-URL: Documentation, https://github.com/adinhodovic/django-custom-error-views
+Project-URL: Repository, https://github.com/adinhodovic/django-custom-error-views
+Description-Content-Type: text/markdown
+
+# Django Custom Error Views
+
+Prebuilt and customizable error views for Django.
+
+* [Features](#features)
+* [Installation](#installation)
+* [Screenshots](#screenshots)
+
+## Features
+
+* Responsive design suitable for device sizes from mobile to desktop
+
+## Installation
+
+```sh
+pip install django-custom-error-views
+```
+
+```python
+INSTALLED_APPS = [
+    "django_custom_error_views",
+]
+```
+
+## Screenshots
+
