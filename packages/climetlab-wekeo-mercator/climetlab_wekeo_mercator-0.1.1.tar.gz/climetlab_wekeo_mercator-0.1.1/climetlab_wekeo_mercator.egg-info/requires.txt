@@ -1,0 +1,5 @@
+climetlab>=0.10.0
+climetlab-wekeo-source
+
+[dask]
+dask[complete]
