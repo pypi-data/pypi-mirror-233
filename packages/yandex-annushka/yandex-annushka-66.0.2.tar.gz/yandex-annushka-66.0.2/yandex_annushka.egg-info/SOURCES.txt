@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_annushka.egg-info/PKG-INFO
+yandex_annushka.egg-info/SOURCES.txt
+yandex_annushka.egg-info/dependency_links.txt
+yandex_annushka.egg-info/top_level.txt
