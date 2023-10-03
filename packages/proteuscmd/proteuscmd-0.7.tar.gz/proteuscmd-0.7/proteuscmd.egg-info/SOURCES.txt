@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+proteuscmd/__init__.py
+proteuscmd/__main__.py
+proteuscmd/api.py
+proteuscmd/config.py
+proteuscmd/types.py
+proteuscmd.egg-info/PKG-INFO
+proteuscmd.egg-info/SOURCES.txt
+proteuscmd.egg-info/dependency_links.txt
+proteuscmd.egg-info/entry_points.txt
+proteuscmd.egg-info/requires.txt
+proteuscmd.egg-info/top_level.txt

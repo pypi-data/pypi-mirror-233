@@ -1,0 +1,2 @@
+[console_scripts]
+proteuscmd = proteuscmd.__main__:main
