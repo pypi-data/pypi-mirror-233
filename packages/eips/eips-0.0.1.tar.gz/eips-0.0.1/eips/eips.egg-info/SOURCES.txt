@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+eips/eips.egg-info/PKG-INFO
+eips/eips.egg-info/SOURCES.txt
+eips/eips.egg-info/dependency_links.txt
+eips/eips.egg-info/requires.txt
+eips/eips.egg-info/top_level.txt
+tests/test_eips.py

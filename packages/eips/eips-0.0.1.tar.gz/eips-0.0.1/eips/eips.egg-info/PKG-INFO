@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: eips
+Version: 0.1.0
+Summary: Ethereum Improvement Proposal (EIP) ETL library
+Author-email: Mike Shultz <mike@mikeshultz.com>
+License: MIT License
+Project-URL: Source code, https://github.com/mikeshultz/eips
+Keywords: ethereum,eip,etl
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic~=2.3.0
+Provides-Extra: dev
+Requires-Dist: black>=23.9.1; extra == "dev"
+Requires-Dist: hatch>=1.7.0; extra == "dev"
+Requires-Dist: mypy>=1.5.1; extra == "dev"
+Requires-Dist: pytest>=7.4.2; extra == "dev"
+
+# Ethereum Improvement Proposal (EIP) Processor
+
+This package is meant to basically handle an ETL process to take EIPs from the
+[source EIPs GitHub repository](https://github.com/ethereum/EIPs) into something...
+else.  This can be useful for format checking, aggregate analysis, and serving
+EIPs in a more better way.
+
+## Features/TODO
+
+Frontend
+
+- [ ] CLI tools
+- [ ] Library API
+- [ ] Documentation
+
+Data processing:
+
+- [ ] EIP Metadata processing
+- [ ] EIP relationships and references
+- [ ] Automated tagging
+- [ ] File history, changelog
+
+Data output (backends):
+
+- [ ] Aggregate data, statistics, and error detection
+- [ ] In-memory Python dicts
+- [ ] JSON files
+- [ ] PostgreSQL

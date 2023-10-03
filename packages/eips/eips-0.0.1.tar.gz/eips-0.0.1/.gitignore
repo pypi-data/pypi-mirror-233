@@ -1,0 +1,6 @@
+.pytest_cache/
+build/
+dist/
+.coverage
+NOTES.md
+*.sublime-*
