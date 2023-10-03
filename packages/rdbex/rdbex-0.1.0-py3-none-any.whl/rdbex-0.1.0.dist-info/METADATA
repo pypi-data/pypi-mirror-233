@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: rdbex
+Version: 0.1.0
+Summary: Replit DataBase EXtended
+Author: Kokonico
+Author-email: kokonico@duck.com
+Requires-Python: >=3.10.0,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: replit (==3.3.2)
+Requires-Dist: toml (==0.10.2)
