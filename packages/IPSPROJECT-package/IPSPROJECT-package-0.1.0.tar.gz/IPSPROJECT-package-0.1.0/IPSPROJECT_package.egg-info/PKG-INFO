@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: IPSPROJECT-package
+Version: 0.1.0
+Author: Neha Yargal
+Author-email: nehayargal@fortna.com
+Description-Content-Type: text/markdown
+Requires-Dist: Django
+
+=======================
+Django IPS Project
+=======================
