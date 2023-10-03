@@ -1,0 +1,21 @@
+aiohttp
+aleph-sdk-python==0.7.0
+hexbytes
+fastapi>=0.95.1
+utilitybelt
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[build]
+build
+twine
+
+[testing]
+mypy==1.5.1
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mock
+setuptools
+uvicorn
