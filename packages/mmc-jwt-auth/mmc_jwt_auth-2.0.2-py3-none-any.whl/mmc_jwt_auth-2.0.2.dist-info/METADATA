@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mmc-jwt-auth
+Version: 2.0.2
+Requires-Dist: djangorestframework
+Requires-Dist: djangorestframework-simplejwt
+Requires-Dist: PyJWT
+
