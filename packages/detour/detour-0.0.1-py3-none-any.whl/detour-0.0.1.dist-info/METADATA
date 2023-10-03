@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: detour
+Version: 0.0.1
+Summary: Stream redirection
+Author-email: Avram Lubkin <avylove@rockhopper.net>
+Maintainer-email: Avram Lubkin <avylove@rockhopper.net>
+License: MIT
+Project-URL: homepage, https://github.com/Rockhopper-Technologies/detour
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst
+
+Status
+======
+
+Currently under development. More to come.
