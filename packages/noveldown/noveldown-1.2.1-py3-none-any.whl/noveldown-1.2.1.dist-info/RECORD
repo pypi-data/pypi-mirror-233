@@ -1,0 +1,14 @@
+noveldown/__init__.py,sha256=gMsJ-EAN2l7zDw3JsW0ZJ6yLB0FC3D7QJHWvVNSqTpA,317
+noveldown/api.py,sha256=4rxnSvXpAxtTivYG8GRupMUP3aF1g-dX5-GDsgiowNY,1798
+noveldown/cli.py,sha256=SCVM-6vTqn81kzRIVIShPnhc7SbgpjGKMjRAMr9Y0Wg,2646
+noveldown/sources/__init__.py,sha256=hJRLkJuVpPicYwTi1x0RQEG2wIJlHDVWXov9WBuPb1E,1237
+noveldown/sources/base_source.py,sha256=soUycX--ntZFl0IdqCX_R8hXPW6sllR4xdZyddt4kzM,5895
+noveldown/sources/source_pale.py,sha256=FJCulBKb8u6KBva-SNKMDHQsy6oPTYasRQE02qe2BFE,2395
+noveldown/sources/source_practical_guide_to_evil.py,sha256=x38ccR0NwDaexRLtT1ucsP96aGkbWmErtchYuGF8A74,2482
+noveldown/sources/source_wandering_inn.py,sha256=OcHMQKaf4vb8_Dfsock0xv9XCBbsYgm19AkX6dibu3U,2072
+noveldown/utils.py,sha256=uvxxPYLs1Lh3D3KtFxXavXkV0mQo96qiTvngrwZcRkQ,4344
+noveldown-1.2.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+noveldown-1.2.1.dist-info/METADATA,sha256=LlSGfoRRI4UPzmC8kNBlQTEDoFRPMmgEX3xMlUsx4Eg,3058
+noveldown-1.2.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+noveldown-1.2.1.dist-info/entry_points.txt,sha256=DXDsYtDdZqyW0t4g-UyDdURPZIOghjyoCO8hJ32oiWc,48
+noveldown-1.2.1.dist-info/RECORD,,
