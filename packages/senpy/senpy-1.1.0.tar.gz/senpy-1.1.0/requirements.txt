@@ -1,0 +1,15 @@
+Flask>=0.10.1
+requests>=2.4.1
+tornado>=4.4.3
+PyLD>=0.6.5
+nltk
+future
+jsonschema
+jsonref
+PyYAML
+rdflib==6.1.1
+numpy
+scipy
+scikit-learn>=0.20
+responses
+jmespath
