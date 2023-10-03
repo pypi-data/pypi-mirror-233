@@ -1,0 +1,10 @@
+Deformation3D/__init__.py,sha256=IMebni5OZruCJtlR6ov25b0dIk8UJ1GWkyV1wCYvg-4,224
+Deformation3D/deform.cpython-38-x86_64-linux-gnu.so,sha256=zLXO3O2NSMQyNC9KwDnFAh7ZR2u4-noH2ofPadCg2ss,1243600
+Deformation3D/deformation3d.py,sha256=OvIaoxasVVCT_qFygXGTAR10uVdm-ZqBuUms3s1IWUc,7942
+Deformation3D/demo.py,sha256=4RiYtn54wzInYH2Bf4ssJAhY8nNbIqnjjDI20ohp-gg,1817
+Deformation3D/generate_vox.py,sha256=QnbLAYUrQtJv-npQQwfFS61u-3npOTPNF-uw9XN1wg8,34348
+Deformation3D/obj_2_points.py,sha256=c7B65fVNHxxYVF8IcmhQQ9ggEOLjLjhrXILR_RytXdg,31970
+Deformation3D-1.5.2.dist-info/METADATA,sha256=Oq4KS7zw9W1jpcHhQmxTHHygUMl82Y5iuWoEmDo9AUM,403
+Deformation3D-1.5.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Deformation3D-1.5.2.dist-info/top_level.txt,sha256=l4eGNK_-VK-Iw06-p8j3hwvxKAHYIStX3HyrXwGaevY,14
+Deformation3D-1.5.2.dist-info/RECORD,,
