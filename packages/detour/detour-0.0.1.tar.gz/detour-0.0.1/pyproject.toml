@@ -1,0 +1,32 @@
+[build-system]
+requires = ['setuptools >= 65']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'detour'
+description = 'Stream redirection'
+
+authors = [
+  {name = 'Avram Lubkin', email = 'avylove@rockhopper.net'},
+]
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Development Status :: 1 - Planning',
+    'Topic :: Software Development',
+]
+dependencies = []
+dynamic = ['version']
+license = {text = 'MIT'}
+maintainers = [
+  {name = 'Avram Lubkin', email = 'avylove@rockhopper.net'},
+]
+readme = 'README.rst'
+
+[project.urls]
+homepage = 'https://github.com/Rockhopper-Technologies/detour'
+
+[tool.setuptools]
+py-modules = ['detour']
+
+[tool.setuptools.dynamic]
+version = {attr = 'detour.__version__'}

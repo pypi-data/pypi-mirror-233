@@ -1,0 +1,7 @@
+README.rst
+detour.py
+pyproject.toml
+detour.egg-info/PKG-INFO
+detour.egg-info/SOURCES.txt
+detour.egg-info/dependency_links.txt
+detour.egg-info/top_level.txt
