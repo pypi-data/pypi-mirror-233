@@ -1,0 +1,13 @@
+pyfranc/__init__.py,sha256=PmdGNuXiIcLhjsstrWY1fhNcFy0fD2_Dg-VsV6m3l28,140
+pyfranc/data.py,sha256=14Q_bRrwjiprNcQ9eYRwpiBlugtzO-a3D29P2SKzX_Q,546018
+pyfranc/expressions.py,sha256=UfIj0avNwKqI1YO3lcNx1gq7DM00DUNy_4OvGYRGEm0,6156
+pyfranc/franc.py,sha256=XpSP8CSn4sYBT750wRjNcgIDbxebxc0x8c3lyJKvUJc,4023
+pyfranc/n_gram.py,sha256=X2bnj5KwBqKmO0rMq0RoQ-rFvzJBC0kk2J9j-cK1eHA,556
+pyfranc/pyfranc_cli.py,sha256=4n42lqDU-DDM9uLZsDmcMey6tlHw1_ruLgLrZ92ivPU,3063
+pyfranc/trigram_utils.py,sha256=9HxjvpupovEjZ-pBQ4TClDNCvl4JvU_HKAAriSMVm14,1491
+pyfranc-0.2.1.dist-info/LICENSE,sha256=qHHYf2XjR3rZJpdyZ7FNCj2mDpA6ZyS0nWg6xhDKaB4,1283
+pyfranc-0.2.1.dist-info/METADATA,sha256=1tSycIcNHuPHS9Yj_byShUbHF1XA3kqx5ykWIOf6_oQ,4729
+pyfranc-0.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyfranc-0.2.1.dist-info/entry_points.txt,sha256=eja-nLotX_2EK1vOndztVZV9I2g3ygezQGIg3bM9PJs,57
+pyfranc-0.2.1.dist-info/top_level.txt,sha256=uGEMdC0L4yAiCX7nHVYQ042EHS_Zg-HNLR4XeB7Kuks,8
+pyfranc-0.2.1.dist-info/RECORD,,
