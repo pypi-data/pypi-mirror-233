@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+seavoice_sdk/__init__.py
+seavoice_sdk/audio.py
+seavoice_sdk/logger.py
+seavoice_sdk/speech.py
+seavoice_sdk/utils.py
+seavoice_sdk.egg-info/PKG-INFO
+seavoice_sdk.egg-info/SOURCES.txt
+seavoice_sdk.egg-info/dependency_links.txt
+seavoice_sdk.egg-info/requires.txt
+seavoice_sdk.egg-info/top_level.txt
