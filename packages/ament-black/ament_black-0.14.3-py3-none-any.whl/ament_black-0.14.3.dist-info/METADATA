@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ament-black
+Version: 0.14.3
+Summary: Check Python code style using black.
+Home-page: https://github.com/nachovizzo/ament_black
+Download-URL: https://github.com/nachovizzo/ament_black/releases
+Author: Tyler Weaver
+Author-email: tylerjw@gmail.com
+Maintainer: Tyler Weaver
+Maintainer-email: tylerjw@gmail.com
+License: Apache License, Version 2.0, BSD
+Keywords: ROS
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: setuptools
+Requires-Dist: pyyaml
+Requires-Dist: unidiff
+Requires-Dist: black
+
+The ability to check code against style conventions using black
+and generate xUnit test result files.
