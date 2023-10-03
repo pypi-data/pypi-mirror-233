@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: satio-pc
+Version: 0.0.3
+Summary: Sentinel-2 features processing
+Author: Daniele Zanaga
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: azure-storage-blob
+Requires-Dist: boto3
+Requires-Dist: dask
+Requires-Dist: dask-image
+Requires-Dist: geopandas
+Requires-Dist: h5netcdf
+Requires-Dist: loguru
+Requires-Dist: numba
+Requires-Dist: python-dateutil
+Requires-Dist: rasterio
+Requires-Dist: rio-cogeo
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: shapely
+Requires-Dist: stackstac
+Requires-Dist: tqdm
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# satio-pc
+Compute Sentinel features on Planetary Computer
+
+## Install 
+
+```
+pip install git+https://github.com/dzanaga/satio-pc.git
+```
+
+## Usage
+
+Check [loading notebook](https://github.com/dzanaga/satio-pc/blob/main/notebooks/01-Load_S2_clean_timeseries_WorldCover.ipynb)
+
