@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redflag"
+dynamic = ["version"]
+requires-python = ">=3.8"
+authors = [{ name="Matt Hall", email="kwinkunks@gmail.com" },]
+description = "Safety net for machine learning pipelines."
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["machine learning", "data science", "quality assurance"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Development Status :: 4 - Beta",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "numpy<2.0",        # NumPy 2 will likely break some things.
+    "scipy!=1.10.0",    # Bug in stats.powerlaw.
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "mypy",
+    "types-setuptools",
+    "pytest",
+    "coverage[toml]",
+    "pytest-cov",
+    "sphinx",
+    "sphinxcontrib-apidoc",
+    "sphinx_copybutton",
+    "furo",
+    "myst_nb",
+    "jupyter",
+    "pandas",
+    "seaborn",
+]
+
+[project.urls]
+"documentation" = "https://scienxlab.org/redflag"
+"repository" = "https://github.com/scienxlab/redflag"
+
+[tool.setuptools_scm]
+write_to = "src/redflag/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.mypy]
+warn_return_any = true
+ignore_missing_imports = true
+exclude = ['docs', 'tests']
+
+[tool.pytest.ini_options]
+# pytest configuration: http://doc.pytest.org/en/latest/customize.html
+addopts = "--doctest-modules --ignore=docs --cov=redflag"
+filterwarnings = [
+    "ignore:pkg_resources is deprecated as an API:DeprecationWarning",
+    "ignore:Deprecated call to `pkg_resources.declare_namespace:DeprecationWarning",
+]
+
+[tool.coverage.run]
+# coverage configuration: https://coverage.readthedocs.io/
+omit = [
+    "src/redflag/__init__.py",
+    "src/redflag/_version.py",
+]
