@@ -1,0 +1,110 @@
+[project]
+name = "shushlog"
+description = "Simple logs supressor and filter"
+authors = [
+    { name = "cătălin", email = "catalin@roboces.dev" },
+]
+version = "0.1.0"
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+keywords = [
+    "logging",
+    "suppress",
+    "filter",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.license]
+text = "GPL-3.0-or-later"
+
+[project.urls]
+Homepage = "https://git.roboces.dev/catalin/shushlog"
+Repository = "https://git.roboces.dev/catalin/shushlog"
+Documentation = "https://git.roboces.dev/catalin/shushlog"
+Changelog = "https://git.roboces.dev/catalin/shushlog"
+
+[project.optional-dependencies]
+lint = [
+    "black>=23.9.1",
+    "ruff>=0.0.292",
+]
+test = [
+    "pytest>=7.4.2",
+    "anyio[trio]>=4.0.0",
+    "pytest-cov>=4.1.0",
+]
+linters = [
+    "mypy>=1.5.1",
+    "pyright>=1.1.329",
+]
+
+[tool.pdm.build]
+excludes = [
+    "**/.pytest_cache/**",
+    "tests/**",
+]
+includes = [
+    "shush",
+]
+
+[tool.pytest]
+mock_use_standalone_module = true
+
+[tool.pyright]
+reportMissingImports = false
+reportMissingTypeStubs = false
+
+[tool.ruff]
+extend-select = [
+    "W",
+    "C90",
+    "I",
+    "N",
+    "UP",
+    "S",
+    "BLE",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "DTZ",
+    "T10",
+    "EM",
+    "ISC",
+    "T20",
+    "PT",
+    "RSE",
+    "RET",
+    "SIM",
+    "PTH",
+    "ERA",
+    "PGH",
+    "PL",
+    "TRY",
+    "RUF",
+]
+extend-ignore = [
+    "S101",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
