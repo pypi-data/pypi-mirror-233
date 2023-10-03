@@ -1,0 +1,23 @@
+SpiNNFrontEndCommon==1!7.1.0
+matplotlib
+pyparsing<3.0.0,>=2.2.1
+quantities
+scipy
+csa
+
+[:python_version == "3.7"]
+pynn<0.10.0,>=0.9.1
+neo<0.10.0,>=0.5.2
+lazyarray<=0.4.0,>=0.2.9
+
+[:python_version >= "3.8"]
+pynn!=0.12.0,>=0.11
+neo
+lazyarray
+
+[test]
+SpiNNakerTestBase==1!7.1.0
+pytest-cov
+testfixtures
+mock
+graphviz
