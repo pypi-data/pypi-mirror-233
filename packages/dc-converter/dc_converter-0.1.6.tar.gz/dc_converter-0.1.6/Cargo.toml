@@ -1,0 +1,15 @@
+[package]
+name = "dc_converter"
+version = "0.1.6"
+edition = "2021"
+
+exclude = ["/.git", ".idea/", "data/"]
+
+[lib]
+name = "dc_converter"
+crate-type = ["cdylib"]
+
+[dependencies]
+dc_converter_tof = "0.1.12"
+pyo3 = "0.19.2"
+

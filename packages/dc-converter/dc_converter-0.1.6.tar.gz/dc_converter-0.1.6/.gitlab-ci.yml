@@ -1,0 +1,44 @@
+qodana:
+  only:
+    - main
+    - merge_requests
+  image:
+    name: jetbrains/qodana-python
+    entrypoint: [""]
+  variables:
+    QODANA_TOKEN: $qodana_token
+  script:
+    - qodana --save-report --results-dir=$CI_PROJECT_DIR/.qodana
+
+image: python:latest
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq libgl1-mesa-glx libopencv-dev clang libclang-dev
+
+  # Rust:
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  - . "$HOME/.cargo/env"
+
+  - python --version ; pip --version  # For debugging
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+  - maturin develop -r
+
+test:
+  script:
+    # Rust tests:
+    - cargo test
+
+    # Python tests:
+    - cd tests
+    - pytest
