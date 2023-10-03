@@ -1,0 +1,2 @@
+[console_scripts]
+validate = nandai.scripts.cli:cli

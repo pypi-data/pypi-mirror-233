@@ -1,0 +1,9 @@
+nandai/__init__.py,sha256=y055vAoeXygOmmn6Wsw2kUCOxr6ToVnw7m-bwV0yhSA,36
+nandai/api.py,sha256=cpU3Kn4gxhInRpSzqSoNeb9ndh9ittL6VKuK3NVIOEA,1982
+nandai/constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nandai/utils.py,sha256=MFAcBi3CdPubN30ciwIVrPXnBJ4D8euFT0cIOoGtHh4,386
+nandai/scripts/cli.py,sha256=wz7_mxzxPy27ka4CjKu6mtbKH-mc5R_8-LsgHdMjL_A,525
+nandai-0.1.0.dist-info/METADATA,sha256=JkN0X3rONTU_A39FpFd9RmPfUGaabAB2RoazmnbdsKo,315
+nandai-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+nandai-0.1.0.dist-info/entry_points.txt,sha256=wrkVZxB-5oFjDlJSN1Pajk4cYkx9Xh9p4aCPtfBRhl0,52
+nandai-0.1.0.dist-info/RECORD,,
