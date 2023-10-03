@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mpai-cae-arp
+Version: 0.5.3
+Summary: The MPAI CAE-ARP software API
+License: GPLv3
+Keywords: mpai,cae,arp,audio,processing,artificial intelligence
+Author: Matteo Spanio
+Author-email: dev2@audioinnova.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: grpcio-tools (>=1.59.0,<2.0.0)
+Requires-Dist: librosa (>=0.10.1,<0.11.0)
+Requires-Dist: numpy (>=1.24.4,<1.25.0)
+Requires-Dist: pydantic (>=2.4.0,<3.0.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Description-Content-Type: text/markdown
+
+# MPAI CAE-ARP API
+
+[![LICENSE](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://img.shields.io/badge/license-GPLv3-blue.svg)
+
+## Description
+
+This package provides a set of tools for common task in MPAI CAE-ARP standard. It is used in the official implementation of the standard and can be used as well to develop your own.
+
+## License
+
+This software is licensed under the GPLv3 license. See the [official site](http://www.gnu.org/licenses/gpl-3.0.html) for more information.
+
