@@ -1,0 +1,20 @@
+<div class="overflow-hidden mb-4">
+    <span class="text-xs sm:text-sm md:text-base font-medium text-gray-700 mb-2">
+        {{ label }}
+    </span>
+    {% for option in options %}
+    <div class="flex items-center mb-2">
+        <input 
+            type="radio" 
+            id="{{ name }}_{{ option }}" 
+            name="{{ name }}" 
+            value="{{ option }}" 
+            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+            {% if option == default_value %} checked {% endif %}
+        >
+        <label for="{{ name }}_{{ option }}" class="ml-3 block text-sm font-medium text-gray-900">
+            {{ option }}
+        </label>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,25 @@
+<div class="overflow-hidden mb-4">
+    <label for="{{ name }}" class="text-xs sm:text-sm md:text-base font-medium text-gray-700 mb-2 leading-tight">
+        {{ label }}
+    </label>
+    <input 
+        type="range" 
+        id="{{ name }}" 
+        name="{{ name }}" 
+        min="{{ min_value }}" 
+        max="{{ max_value }}" 
+        step="{{ step }}" 
+        value="{{ default_value }}" 
+        class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-500" 
+        oninput="updateOutput(this)"
+    >
+    <output for="{{ name }}" id="{{ name }}_output" class="text-sm text-gray-500">
+        {{ default_value }}
+    </output>
+</div>
+<script>
+    function updateOutput(slider) {
+        const output = document.getElementById(slider.id + "_output");
+        output.value = slider.value;
+    }
+</script>
