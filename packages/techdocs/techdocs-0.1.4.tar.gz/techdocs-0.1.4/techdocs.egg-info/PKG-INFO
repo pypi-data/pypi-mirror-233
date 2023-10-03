@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: techdocs
+Version: 0.1.4
+Summary: Code documentation generation CLI App
+Author-email: test <alfatrion123@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
