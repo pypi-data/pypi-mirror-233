@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: scalyca
+Version: 0.0.1
+Summary: Simple Console Application with Logging, Yaml Configuration and Argparse
+Home-page: https://github.com/sesquideus/scalyca
+Download-URL: https://pypi.org/project/scalyca/
+Author: Martin Baláž
+Author-email: martin.balaz@trojsten.sk
+License: MIT
+Keywords: framework,console
+License-File: LICENSE
+Requires-Dist: argparse
+Requires-Dist: pathlib
+Requires-Dist: pyyaml
+Requires-Dist: colorama
+Requires-Dist: dotmap
+Requires-Dist: schema
+
+A framework for creating simple non-interactive console applications that require basic logging and parsing command argument with optional peristent configuration
