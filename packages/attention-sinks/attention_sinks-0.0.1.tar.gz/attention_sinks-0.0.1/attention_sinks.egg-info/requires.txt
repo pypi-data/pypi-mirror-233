@@ -1,0 +1,10 @@
+torch
+transformers>=4.32.0
+
+[dev]
+pre-commit
+ruff
+black
+pytest
+pytest-cov
+spacy
