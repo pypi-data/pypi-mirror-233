@@ -1,0 +1,11 @@
+hexachromix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hexachromix/api.py,sha256=bw4NM4JtA8hpS1LXFdUwDBIC75BQ1P1zI744sYUCQMQ,326
+hexachromix/cli.py,sha256=nFDDUoFewZgpfMpd5pAJmwyXDhrdRhY7mXupCIs4w0E,9280
+hexachromix/core.cpython-39-darwin.so,sha256=mOd8zYLXWUXEQDCFa5K1AgzguYV3vQk0RXZyhI6tyyU,341696
+hexachromix/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hexachromix/tests/test_core.py,sha256=veI5hS_LTMx8vymDkNk44VHM9rMIMvta_Ar8KEznirg,1058
+hexachromix-0.2.1.dist-info/METADATA,sha256=bcY4G8xARY00PWSq5gYd0aqd3QajbePa0yKzXvdVhFI,314
+hexachromix-0.2.1.dist-info/WHEEL,sha256=5oVAcMeLDIh-o6T1c198ED7FPfUDusKMPVuKsxICWpw,113
+hexachromix-0.2.1.dist-info/entry_points.txt,sha256=hgtD4M9em58lMBHPoKtbbmX45HW-wk5rpz53lS3W9gE,58
+hexachromix-0.2.1.dist-info/top_level.txt,sha256=FcRii12D706H8d0Gi39Fj_sSSrmnzC4oLZUMUE7WYMc,12
+hexachromix-0.2.1.dist-info/RECORD,,
