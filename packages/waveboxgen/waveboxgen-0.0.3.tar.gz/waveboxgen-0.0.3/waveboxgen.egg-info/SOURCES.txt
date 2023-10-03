@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+waveboxgen/__init__.py
+waveboxgen/main.py
+waveboxgen.egg-info/PKG-INFO
+waveboxgen.egg-info/SOURCES.txt
+waveboxgen.egg-info/dependency_links.txt
+waveboxgen.egg-info/entry_points.txt
+waveboxgen.egg-info/top_level.txt
+waveboxgen/templates/__init__.py
+waveboxgen/utils/__init__.py
+waveboxgen/utils/converter.py
