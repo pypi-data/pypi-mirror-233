@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+pypowerline/__init__.py
+pypowerline/configs.py
+pypowerline/main.py
+pypowerline/segments.py
+pypowerline/static.py
+pypowerline/symbols.py
+pypowerline/utils.py
+pypowerline.egg-info/PKG-INFO
+pypowerline.egg-info/SOURCES.txt
+pypowerline.egg-info/dependency_links.txt
+pypowerline.egg-info/entry_points.txt
+pypowerline.egg-info/requires.txt
+pypowerline.egg-info/top_level.txt
