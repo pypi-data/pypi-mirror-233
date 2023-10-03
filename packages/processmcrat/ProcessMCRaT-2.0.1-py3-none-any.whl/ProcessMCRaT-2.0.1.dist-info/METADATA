@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: ProcessMCRaT
+Version: 2.0.1
+Summary: The ProcessMCRaT library is a python package that can be used to process the output of the MCRaT code.
+Home-page: https://github.com/parsotat/ProcessMCRaT
+Author: Tyler Parsotan
+Author-email: parsotat@umbc.edu
+License: MIT
+Keywords: astronomy radiation-transfer hydrodynamics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.3
+License-File: LICENSE
+Requires-Dist: astropy (>=4.2.1)
+Requires-Dist: cached-property (>=1.5.2)
+Requires-Dist: certifi (>=2020.12.5)
+Requires-Dist: cycler (>=0.10.0)
+Requires-Dist: h5py (>=3.2.1)
+Requires-Dist: kiwisolver (>=1.3.1)
+Requires-Dist: matplotlib (>=3.4.1)
+Requires-Dist: numexpr (>=2.7.3)
+Requires-Dist: numpy (>=1.20.2)
+Requires-Dist: Pillow (>=8.2.0)
+Requires-Dist: pyerfa (>=1.7.3)
+Requires-Dist: pyparsing (>=2.4.7)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: scipy (>=1.6.2)
+Requires-Dist: six (>=1.15.0)
+Requires-Dist: tables (>=3.6.1)
+Requires-Dist: gdown (>=4.3.0)
+Requires-Dist: joblib (>=1.2.0)
+
+====================
+ProcessMCRaT Library
+====================
+
+
+The ProcessMCRaT library is a python package that can be used to process the output of the MCRaT code.
+
+
+About The Project
+=================
+
+The ProcessMCRaT package allows for the outputs of the MCRaT simulations to be processed in a number of different ways. The package allows the user to quickly analyze the MCRaT simulation by conveniently creating a number of mock observations for a variety of observer viewing angles and then use those observations to calculate spectra, light curves, and polarizations. The package also includes convenience plotting functions that allow quick, convenient plotting of these various quantities to fully explore the MCRaT results. These functions are also meant to be examples of how to work with the outputs of the ProcessMCRaT library. Additionally, the package also includes support for analyzing the position of photons in a given hydrodynamic simulation, allowing for analysis of hydrodynamic structures and mock observables at the same time.
+
+There is also a Jupyter notebook that is included on Github that outlines the usage of the library, and many functionalities that the library offers. This notebook can be accessed by cloning the repository or loading the notebook in Binder at the following link `https://mybinder.org/v2/gh/parsotat/ProcessMCRaT/HEAD?filepath=notebooks%2Fprocessmcrat_example.ipynb <https://mybinder.org/v2/gh/parsotat/ProcessMCRaT/HEAD?filepath=notebooks%2Fprocessmcrat_example.ipynb>`_ . The detailed documentation for each function is still under development, but the Jupyter notebook covers the ways that each function can be used.
+
+
+Contact
+=======
+
+Tyler Parsotan - `Personal Website <https://http://sites.science.oregonstate.edu/~parsotat/>`_ - parsotat@umbc.edu
+
+Project Link: `https://github.com/parsotat/ProcessMCRaT <https://github.com/parsotat/ProcessMCRaT>`_
+
+
+Acknowledgements
+================
+
+* In using ProcessMCRaT and the MCRaT codes, we ask that you cite the following papers: 
+
+	* `Lazzati (2016) <https://doi.org/10.3847/0004\-637X/829/2/76>`_
+
+	* `Parsotan & Lazzati (2018) <https://doi.org/10.3847/1538\-4357/aaa087>`_
+
+	* `Parsotan et al. (2018) <https://doi.org/10.3847/1538\-4357/aaeed1>`_
+
+	* `Parsotan et. al. (2020) <https://doi.org/10.3847/1538\-4357/ab910f>`_
+       
+        * `Parsotan & Lazzati (2021) <https://doi.org/10.3847/1538-4357/ac2428>`_
+        
+        * `Parsotan & Lazzati (2022) <https://doi.org/10.3847/1538-4357/ac4093>`_
+
+
+
+
+
