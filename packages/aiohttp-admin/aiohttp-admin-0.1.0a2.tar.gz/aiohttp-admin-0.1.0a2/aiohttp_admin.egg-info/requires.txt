@@ -1,0 +1,11 @@
+aiohttp>=3.8.2
+aiohttp_security
+aiohttp_session
+cryptography
+pydantic<3,>2
+
+[:python_version < "3.12"]
+typing_extensions>=3.10
+
+[sa]
+sqlalchemy<3,>=2.0.4
