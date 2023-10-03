@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dagstream
+Version: 0.1.0
+Summary: 
+License: Apache-2.0
+Author: sakamoto
+Author-email: sakamoto@ricos.co.jp
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
