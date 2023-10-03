@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: foodframe
+Version: 0.0.2
+Summary: Standardize. Analyze. Impact.
+Home-page: https://github.com/annieklamar/foodframe
+Download-URL: https://github.com/annieklamar/foodframe/archive/v_002.tar.gz
+Author: Tushar Dalmia, Annie K. Lamar
+Author-email: kalamar@stanford.edu
+License: MIT
+Keywords: Food,foodbanks,nutrition,feeding america,hei
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt

@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+foodframe/__init__.py
+foodframe/categories.py
+foodframe/foodframe.py
+foodframe/hei.py
+foodframe/nutrition.py
+foodframe.egg-info/PKG-INFO
+foodframe.egg-info/SOURCES.txt
+foodframe.egg-info/dependency_links.txt
+foodframe.egg-info/requires.txt
+foodframe.egg-info/top_level.txt
