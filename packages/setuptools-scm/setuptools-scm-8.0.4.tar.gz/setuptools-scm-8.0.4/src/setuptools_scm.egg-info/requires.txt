@@ -1,0 +1,25 @@
+packaging>=20
+setuptools
+typing-extensions
+
+[:python_version < "3.11"]
+tomli>=1
+
+[docs]
+entangled_cli[rich]
+mkdocs
+mkdocs-entangled-plugin
+mkdocs-material
+mkdocstrings[python]
+pygments
+
+[rich]
+rich
+
+[test]
+build
+pytest
+rich
+wheel
+
+[toml]
