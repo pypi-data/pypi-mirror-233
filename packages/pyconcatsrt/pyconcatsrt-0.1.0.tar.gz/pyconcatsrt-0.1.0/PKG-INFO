@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pyconcatsrt
+Version: 0.1.0
+Summary: Concatenate multiple srt files into one srt.
+License: GPL-3.0-or-later
+Keywords: srt,concat
+Author: kurotom
+Author-email: 55354389+kurotom@users.noreply.github.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: chardet (>=5.2.0,<6.0.0)
+Project-URL: Bug Tracker, https://github.com/kurotom/PyConcatSrt/issues
+Description-Content-Type: text/markdown
+
+# PyConcatSRT
+
+Concatenate multiple SRT files into one, easily.
+
+# Available commands
+
+* `concatsrt` : cli PyConcatSRT
+* `concatsrt_gui` : gui PyConcatSRT
+
+
+# Install
+
+```bash
+$ pip install pyconcatsrt
+```
+
+# Usage
+
+```bash
+concatsrt [-h] -p PATH [-d DISCS] [-l LOG] [-o OUTPUT]
+```
+
+* PATH, path to file(s), or directory is required.
+

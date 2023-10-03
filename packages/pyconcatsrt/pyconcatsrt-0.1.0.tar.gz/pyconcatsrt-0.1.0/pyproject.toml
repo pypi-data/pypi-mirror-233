@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pyconcatsrt"
+version = "0.1.0"
+description = "Concatenate multiple srt files into one srt."
+authors = ["kurotom <55354389+kurotom@users.noreply.github.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{include = "src"}]
+keywords = ["srt", "concat"]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+chardet = "^5.2.0"
+
+[tool.poetry.scripts]
+concatsrt = 'src.run_cli:main'
+concatsrt_gui = 'src.run_cli:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kurotom/PyConcatSrt/issues"
