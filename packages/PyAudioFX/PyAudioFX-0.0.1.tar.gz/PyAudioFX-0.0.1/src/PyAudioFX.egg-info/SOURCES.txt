@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/PyAudioFX.egg-info/PKG-INFO
+src/PyAudioFX.egg-info/SOURCES.txt
+src/PyAudioFX.egg-info/dependency_links.txt
+src/PyAudioFX.egg-info/top_level.txt
+src/PyaudioFX/__init__.py
+src/PyaudioFX/audiopy.py
