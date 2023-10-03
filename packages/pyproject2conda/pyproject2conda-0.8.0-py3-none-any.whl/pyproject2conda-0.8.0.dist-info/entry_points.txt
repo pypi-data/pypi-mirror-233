@@ -1,0 +1,3 @@
+[console_scripts]
+p2c = pyproject2conda.cli:app
+pyproject2conda = pyproject2conda.cli:app
