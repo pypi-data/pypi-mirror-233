@@ -1,0 +1,3473 @@
+# Copyright (c) 2023 Blacknon. All rights reserved.
+# Use of this source code is governed by an MIT license
+# that can be found in the LICENSE file.
+# =======================================================
+
+# gTLD
+# ====================
+com:
+  server: whois.verisign-grs.com
+  template:
+    - common_relay.tpl
+    - common.tpl
+
+net:
+  server: whois.verisign-grs.com
+  template:
+    - common_relay.tpl
+    - common.tpl
+
+org:
+  server: whois.publicinterestregistry.org
+  template:
+    - common_relay.tpl
+    - common.tpl
+
+# other
+# ====================
+aaa:
+  server: whois.nic.aaa
+
+aarp:
+  server: whois.nic.aarp
+
+abb:
+  server: whois.nic.abb
+
+abbott:
+  server: whois.nic.abbott
+
+abbvie:
+  server: whois.nic.abbvie
+
+abc:
+  server: whois.nic.abc
+
+able:
+  server: whois.nic.able
+
+abogado:
+  server: whois.nic.abogado
+
+abudhabi:
+  server: whois.nic.abudhabi
+
+academy:
+  server: whois.identity.digital
+
+accenture:
+  server: whois.nic.accenture
+
+accountant:
+  server: whois.nic.accountant
+
+accountants:
+  server: whois.identity.digital
+
+aco:
+  server: whois.nic.aco
+
+actor:
+  server: whois.donuts.co
+
+ads:
+  server: whois.nic.ads
+
+adult:
+  server: whois.registrar.adult
+
+aeg:
+  server: whois.nic.aeg
+
+aero:
+  server: information.aerowhois
+
+aetna:
+  server: whois.nic.aetna
+
+afl:
+  server: whois.nic.afl
+
+africa:
+  server: whois.nic.africa
+
+agakhan:
+  server: whois.nic.agakhan
+
+agency:
+  server: whois.identity.digital
+
+aig:
+  server: whois.nic.aig
+
+airbus:
+  server: whois.nic.airbus
+
+airforce:
+  server: whois.donuts.co
+
+airtel:
+  server: whois.nic.airtel
+
+akdn:
+  server: whois.nic.akdn
+
+alibaba:
+  server: whois.nic.alibaba
+
+alipay:
+  server: whois.nic.alipay
+
+allfinanz:
+  server: whois.nic.allfinanz
+
+allstate:
+  server: whois.nic.allstate
+
+ally:
+  server: whois.nic.ally
+
+alsace:
+  server: whois.nic.alsace
+
+alstom:
+  server: whois.nic.alstom
+
+amazon:
+  server: whois.nic.amazon
+
+americanexpress:
+  server: whois.nic.americanexpress
+
+americanfamily:
+  server: whois.nic.americanfamily
+
+amex:
+  server: whois.nic.amex
+
+amfam:
+  server: whois.nic.amfam
+
+amica:
+  server: www.nic.amica
+
+amsterdam:
+  server: whois.nic.amsterdam
+
+analytics:
+  server: whois.nic.analytics
+
+android:
+  server: whois.nic.android
+
+anquan:
+  server: whois.nic.anquan
+
+anz:
+  server: whois.nic.anz
+
+aol:
+  server: whois.nic.aol
+
+apartments:
+  server: whois.identity.digital
+
+app:
+  server: whois.nic.app
+
+apple:
+  server: whois.nic.apple
+
+aquarelle:
+  server: whois.nic.aquarelle
+
+arab:
+  server: whois.nic.arab
+
+aramco:
+  server: whois.nic.aramco
+
+archi:
+  server: whois.identity.digital
+
+army:
+  server: whois.donuts.co
+
+art:
+  server: whois.nic.art
+
+arte:
+  server: whois.nic.arte
+
+asda:
+  server: whois.nic.asda
+
+asia:
+  server: whois.nic.asia
+
+associates:
+  server: whois.identity.digital
+
+athleta:
+  server: whois.nic.athleta
+
+attorney:
+  server: whois.donuts.co
+
+auction:
+  server: whois.donuts.co
+
+audi:
+  server: whois.nic.audi
+
+audible:
+  server: whois.nic.audible
+
+audio:
+  server: whois.nic.audio
+
+auspost:
+  server: whois.nic.auspost
+
+author:
+  server: whois.nic.author
+
+auto:
+  server: whois.nic.auto
+
+autos:
+  server: whois.nic.autos
+
+avianca:
+  server: whois.nic.avianca
+
+aws:
+  server: whois.nic.aws
+
+axa:
+  server: whois.nic.axa
+
+azure:
+  server: whois.nic.azure
+
+baby:
+  server: whois.nic.baby
+
+baidu:
+  server: whois.nic.baidu
+
+banamex:
+  server: whois.nic.banamex
+
+bananarepublic:
+  server: whois.nic.bananarepublic
+
+band:
+  server: whois.donuts.co
+
+bank:
+  server: whois.nic.bank
+
+bar:
+  server: whois.nic.bar
+
+barcelona:
+  server: whois.nic.barcelona
+
+barclaycard:
+  server: whois.nic.barclaycard
+
+barclays:
+  server: whois.nic.barclays
+
+barefoot:
+  server: whois.nic.barefoot
+
+bargains:
+  server: whois.identity.digital
+
+baseball:
+  server: whois.nic.baseball
+
+basketball:
+  server: whois.nic.basketball
+
+bauhaus:
+  server: whois.nic.bauhaus
+
+bayern:
+  server: whois.nic.bayern
+
+bbc:
+  server: whois.nic.bbc
+
+bbt:
+  server: whois.nic.bbt
+
+bbva:
+  server: whois.nic.bbva
+
+bcg:
+  server: whois.nic.bcg
+
+bcn:
+  server: whois.nic.bcn
+
+beats:
+  server: whois.nic.beats
+
+beauty:
+  server: whois.nic.beauty
+
+beer:
+  server: whois.nic.beer
+
+bentley:
+  server: whois.nic.bentley
+
+berlin:
+  server: whois.nic.berlin
+
+best:
+  server: whois.nic.best
+
+bestbuy:
+  server: whois.nic.bestbuy
+
+bet:
+  server: whois.identity.digital
+
+bharti:
+  server: whois.nic.bharti
+
+bible:
+  server: whois.nic.bible
+
+bid:
+  server: whois.nic.bid
+
+bike:
+  server: whois.identity.digital
+
+bing:
+  server: whois.nic.bing
+
+bingo:
+  server: whois.identity.digital
+
+bio:
+  server: whois.identity.digital
+
+biz:
+  server: whois.nic.biz
+
+black:
+  server: whois.identity.digital
+
+blackfriday:
+  server: whois.nic.blackfriday
+
+blockbuster:
+  server: whois.nic.blockbuster
+
+blog:
+  server: whois.nic.blog
+
+bloomberg:
+  server: whois.nic.bloomberg
+
+blue:
+  server: whois.identity.digital
+
+bms:
+  server: whois.nic.bms
+
+bmw:
+  server: whois.nic.bmw
+
+bnpparibas:
+  server: whois.nic.bnpparibas
+
+boats:
+  server: whois.nic.boats
+
+boehringer:
+  server: whois.nic.boehringer
+
+bofa:
+  server: whois.nic.bofa
+
+bom:
+  server: whois.nic.bom
+
+bond:
+  server: whois.nic.bond
+
+boo:
+  server: whois.nic.boo
+
+book:
+  server: whois.nic.book
+
+booking:
+  server: whois.nic.booking
+
+bosch:
+  server: whois.nic.bosch
+
+bostik:
+  server: whois.nic.bostik
+
+boston:
+  server: whois.nic.boston
+
+bot:
+  server: whois.nic.bot
+
+boutique:
+  server: whois.identity.digital
+
+box:
+  server: whois.nic.box
+
+bradesco:
+  server: whois.nic.bradesco
+
+bridgestone:
+  server: whois.nic.bridgestone
+
+broadway:
+  server: whois.nic.broadway
+
+broker:
+  server: whois.nic.broker
+
+brother:
+  server: whois.nic.brother
+
+brussels:
+  server: whois.nic.brussels
+
+build:
+  server: whois.nic.build
+
+builders:
+  server: whois.identity.digital
+
+business:
+  server: whois.identity.digital
+
+buy:
+  server: whois.nic.buy
+
+buzz:
+  server: whois.nic.buzz
+
+bzh:
+  server: whois.nic.bzh
+
+cab:
+  server: whois.identity.digital
+
+cafe:
+  server: whois.identity.digital
+
+cal:
+  server: whois.nic.cal
+
+call:
+  server: whois.nic.call
+
+calvinklein:
+  server: whois.nic.calvinklein
+
+cam:
+  server: whois.nic.cam
+
+camera:
+  server: whois.identity.digital
+
+camp:
+  server: whois.identity.digital
+
+canon:
+  server: whois.nic.canon
+
+capetown:
+  server: registry.net.zawhois
+
+capital:
+  server: whois.identity.digital
+
+capitalone:
+  server: whois.nic.capitalone
+
+car:
+  server: whois.nic.car
+
+caravan:
+  server: whois.nic.caravan
+
+cards:
+  server: whois.identity.digital
+
+care:
+  server: whois.identity.digital
+
+career:
+  server: whois.nic.career
+
+careers:
+  server: whois.identity.digital
+
+cars:
+  server: whois.nic.cars
+
+casa:
+  server: whois.nic.casa
+
+case:
+  server: whois.nic.case
+
+cash:
+  server: whois.identity.digital
+
+casino:
+  server: whois.identity.digital
+
+cat:
+  server: rdap.nic.cat
+
+catering:
+  server: whois.identity.digital
+
+catholic:
+  server: whois.nic.catholic
+
+cba:
+  server: whois.nic.cba
+
+cbn:
+  server: whois.nic.cbn
+
+cbre:
+  server: whois.nic.cbre
+
+cbs:
+  server: whois.nic.cbs
+
+center:
+  server: whois.identity.digital
+
+ceo:
+  server: whois.nic.ceo
+
+cern:
+  server: whois.nic.cern
+
+cfa:
+  server: whois.nic.cfa
+
+cfd:
+  server: whois.nic.cfd
+
+chanel:
+  server: whois.nic.chanel
+
+channel:
+  server: whois.nic.channel
+
+charity:
+  server: whois.nic.charity
+
+chase:
+  server: whois.nic.chase
+
+chat:
+  server: whois.identity.digital
+
+cheap:
+  server: whois.identity.digital
+
+chintai:
+  server: whois.nic.chintai
+
+christmas:
+  server: whois.nic.christmas
+
+chrome:
+  server: whois.nic.chrome
+
+church:
+  server: whois.identity.digital
+
+cipriani:
+  server: whois.nic.cipriani
+
+circle:
+  server: whois.nic.circle
+
+cisco:
+  server: whois.nic.cisco
+
+citadel:
+  server: whois.nic.citadel
+
+citi:
+  server: whois.nic.citi
+
+citic:
+  server: whois.nic.citic
+
+city:
+  server: whois.identity.digital
+
+cityeats:
+  server: whois.nic.cityeats
+
+claims:
+  server: whois.identity.digital
+
+cleaning:
+  server: whois.identity.digital
+
+click:
+  server: whois.nic.click
+
+clinic:
+  server: whois.identity.digital
+
+clinique:
+  server: whois.nic.clinique
+
+clothing:
+  server: whois.identity.digital
+
+cloud:
+  server: whois.nic.cloud
+
+club:
+  server: whois.nic.club
+
+clubmed:
+  server: whois.nic.clubmed
+
+coach:
+  server: whois.identity.digital
+
+codes:
+  server: whois.identity.digital
+
+coffee:
+  server: whois.identity.digital
+
+college:
+  server: whois.nic.college
+
+cologne:
+  server: whois.nic.cologne
+
+comcast:
+  server: whois.nic.comcast
+
+commbank:
+  server: whois.nic.commbank
+
+community:
+  server: whois.identity.digital
+
+company:
+  server: whois.identity.digital
+
+compare:
+  server: whois.nic.compare
+
+computer:
+  server: whois.identity.digital
+
+comsec:
+  server: whois.nic.comsec
+
+condos:
+  server: whois.identity.digital
+
+construction:
+  server: whois.identity.digital
+
+consulting:
+  server: whois.donuts.co
+
+contact:
+  server: whois.donuts.co
+
+contractors:
+  server: whois.identity.digital
+
+cooking:
+  server: whois.nic.cooking
+
+cool:
+  server: whois.identity.digital
+
+coop:
+  server: www.nic.coopwhois
+
+corsica:
+  server: whois.nic.corsica
+
+country:
+  server: whois.nic.country
+
+coupon:
+  server: whois.nic.coupon
+
+coupons:
+  server: whois.identity.digital
+
+courses:
+  server: whois.nic.courses
+
+cpa:
+  server: whois.nic.cpa
+
+credit:
+  server: whois.identity.digital
+
+creditcard:
+  server: whois.identity.digital
+
+creditunion:
+  server: whois.nic.creditunion
+
+cricket:
+  server: whois.nic.cricket
+
+crown:
+  server: whois.nic.crown
+
+crs:
+  server: whois.nic.crs
+
+cruise:
+  server: whois.nic.cruise
+
+cruises:
+  server: whois.identity.digital
+
+cuisinella:
+  server: whois.nic.cuisinella
+
+cymru:
+  server: whois.nic.cymru
+
+cyou:
+  server: whois.nic.cyou
+
+dabur:
+  server: whois.nic.dabur
+
+dad:
+  server: whois.nic.dad
+
+dance:
+  server: whois.donuts.co
+
+data:
+  server: whois.nic.data
+
+date:
+  server: whois.nic.date
+
+dating:
+  server: whois.identity.digital
+
+datsun:
+  server: whois.nic.datsun
+
+day:
+  server: whois.nic.day
+
+dclk:
+  server: whois.nic.dclk
+
+dds:
+  server: whois.nic.dds
+
+deal:
+  server: whois.nic.deal
+
+dealer:
+  server: whois.nic.dealer
+
+deals:
+  server: whois.identity.digital
+
+degree:
+  server: whois.donuts.co
+
+delivery:
+  server: whois.identity.digital
+
+dell:
+  server: whois.nic.dell
+
+deloitte:
+  server: whois.nic.deloitte
+
+delta:
+  server: whois.nic.delta
+
+democrat:
+  server: whois.donuts.co
+
+dental:
+  server: whois.identity.digital
+
+dentist:
+  server: whois.donuts.co
+
+desi:
+  server: whois.nic.desi
+
+design:
+  server: whois.nic.design
+
+dev:
+  server: whois.nic.dev
+
+dhl:
+  server: whois.nic.dhl
+
+diamonds:
+  server: whois.identity.digital
+
+diet:
+  server: whois.nic.diet
+
+digital:
+  server: whois.identity.digital
+
+direct:
+  server: whois.identity.digital
+
+directory:
+  server: whois.identity.digital
+
+discount:
+  server: whois.identity.digital
+
+discover:
+  server: whois.nic.discover
+
+dish:
+  server: whois.nic.dish
+
+diy:
+  server: whois.nic.diy
+
+dnp:
+  server: whois.nic.dnp
+
+docs:
+  server: whois.nic.docs
+
+doctor:
+  server: whois.identity.digital
+
+dog:
+  server: whois.identity.digital
+
+domains:
+  server: whois.identity.digital
+
+dot:
+  server: whois.nic.dot
+
+download:
+  server: whois.nic.download
+
+drive:
+  server: whois.nic.drive
+
+dtv:
+  server: whois.nic.dtv
+
+dubai:
+  server: whois.nic.dubai
+
+dunlop:
+  server: whois.nic.dunlop
+
+dupont:
+  server: whois.nic.dupont
+
+durban:
+  server: registry.net.zawhois
+
+dvag:
+  server: whois.nic.dvag
+
+dvr:
+  server: whois.nic.dvr
+
+earth:
+  server: whois.nic.earth
+
+eat:
+  server: whois.nic.eat
+
+eco:
+  server: whois.nic.eco
+
+edeka:
+  server: whois.nic.edeka
+
+education:
+  server: whois.identity.digital
+
+email:
+  server: whois.identity.digital
+
+emerck:
+  server: whois.nic.emerck
+
+energy:
+  server: whois.identity.digital
+
+engineer:
+  server: whois.donuts.co
+
+engineering:
+  server: whois.identity.digital
+
+enterprises:
+  server: whois.identity.digital
+
+epson:
+  server: whois.nic.epson
+
+equipment:
+  server: whois.identity.digital
+
+ericsson:
+  server: whois.nic.ericsson
+
+erni:
+  server: whois.nic.erni
+
+esq:
+  server: whois.nic.esq
+
+estate:
+  server: whois.identity.digital
+
+etisalat:
+  server: whois.nic.etisalat
+
+eurovision:
+  server: whois.nic.eurovision
+
+eus:
+  server: whois.nic.eus
+
+events:
+  server: whois.identity.digital
+
+exchange:
+  server: whois.identity.digital
+
+expert:
+  server: whois.identity.digital
+
+exposed:
+  server: whois.identity.digital
+
+express:
+  server: whois.identity.digital
+
+extraspace:
+  server: whois.nic.extraspace
+
+fage:
+  server: whois.nic.fage
+
+fail:
+  server: whois.identity.digital
+
+fairwinds:
+  server: whois.nic.fairwinds
+
+faith:
+  server: whois.nic.faith
+
+family:
+  server: whois.donuts.co
+
+fan:
+  server: whois.nic.fan
+
+fans:
+  server: whois.nic.fans
+
+farm:
+  server: whois.identity.digital
+
+farmers:
+  server: whois.nic.farmers
+
+fashion:
+  server: whois.nic.fashion
+
+fast:
+  server: whois.nic.fast
+
+fedex:
+  server: whois.nic.fedex
+
+feedback:
+  server: whois.nic.feedback
+
+ferrari:
+  server: whois.nic.ferrari
+
+ferrero:
+  server: whois.nic.ferrero
+
+fidelity:
+  server: whois.nic.fidelity
+
+fido:
+  server: whois.nic.fido
+
+film:
+  server: whois.nic.film
+
+final:
+  server: whois.nic.final
+
+finance:
+  server: whois.identity.digital
+
+financial:
+  server: whois.identity.digital
+
+fire:
+  server: whois.nic.fire
+
+firestone:
+  server: whois.nic.firestone
+
+firmdale:
+  server: whois.nic.firmdale
+
+fish:
+  server: whois.identity.digital
+
+fishing:
+  server: whois.nic.fishing
+
+fit:
+  server: whois.nic.fit
+
+fitness:
+  server: whois.identity.digital
+
+flickr:
+  server: whois.nic.flickr
+
+flights:
+  server: whois.identity.digital
+
+flir:
+  server: whois.nic.flir
+
+florist:
+  server: whois.identity.digital
+
+flowers:
+  server: whois.nic.flowers
+
+fly:
+  server: whois.nic.fly
+
+foo:
+  server: whois.nic.foo
+
+food:
+  server: whois.nic.food
+
+football:
+  server: whois.identity.digital
+
+ford:
+  server: whois.nic.ford
+
+forex:
+  server: whois.nic.forex
+
+forsale:
+  server: whois.donuts.co
+
+forum:
+  server: whois.nic.forum
+
+foundation:
+  server: whois.donuts.co
+
+fox:
+  server: whois.nic.fox
+
+free:
+  server: whois.nic.free
+
+fresenius:
+  server: whois.nic.fresenius
+
+frl:
+  server: whois.nic.frl
+
+frogans:
+  server: whois.nic.frogans
+
+frontdoor:
+  server: whois.nic.frontdoor
+
+frontier:
+  server: whois.nic.frontier
+
+ftr:
+  server: whois.nic.ftr
+
+fujitsu:
+  server: whois.nic.fujitsu
+
+fun:
+  server: whois.nic.fun
+
+fund:
+  server: whois.identity.digital
+
+furniture:
+  server: whois.identity.digital
+
+futbol:
+  server: whois.donuts.co
+
+fyi:
+  server: whois.identity.digital
+
+gal:
+  server: whois.nic.gal
+
+gallery:
+  server: whois.identity.digital
+
+gallo:
+  server: whois.nic.gallo
+
+gallup:
+  server: whois.nic.gallup
+
+game:
+  server: whois.nic.game
+
+games:
+  server: whois.donuts.co
+
+gap:
+  server: whois.nic.gap
+
+garden:
+  server: whois.nic.garden
+
+gay:
+  server: whois.nic.gay
+
+gbiz:
+  server: whois.nic.gbiz
+
+gdn:
+  server: whois.nic.gdn
+
+gea:
+  server: whois.nic.gea
+
+gent:
+  server: whois.nic.gent
+
+genting:
+  server: whois.nic.genting
+
+george:
+  server: whois.nic.george
+
+ggee:
+  server: whois.nic.ggee
+
+gift:
+  server: whois.nic.gift
+
+gifts:
+  server: whois.identity.digital
+
+gives:
+  server: whois.donuts.co
+
+giving:
+  server: :thenew.orggetfind-my-orgwhois
+
+glass:
+  server: whois.identity.digital
+
+gle:
+  server: whois.nic.gle
+
+global:
+  server: whois.identity.digital
+
+globo:
+  server: whois.nic.globo
+
+gmail:
+  server: whois.nic.gmail
+
+gmbh:
+  server: whois.identity.digital
+
+gmo:
+  server: whois.nic.gmo
+
+gmx:
+  server: whois.nic.gmx
+
+godaddy:
+  server: whois.nic.godaddy
+
+gold:
+  server: whois.identity.digital
+
+goldpoint:
+  server: whois.nic.goldpoint
+
+golf:
+  server: whois.identity.digital
+
+goo:
+  server: whois.nic.goo
+
+goodyear:
+  server: whois.nic.goodyear
+
+goog:
+  server: whois.nic.goog
+
+google:
+  server: whois.nic.google
+
+gop:
+  server: whois.nic.gop
+
+got:
+  server: whois.nic.got
+
+grainger:
+  server: whois.nic.grainger
+
+graphics:
+  server: whois.identity.digital
+
+gratis:
+  server: whois.identity.digital
+
+green:
+  server: whois.identity.digital
+
+gripe:
+  server: whois.identity.digital
+
+grocery:
+  server: whois.nic.grocery
+
+group:
+  server: whois.identity.digital
+
+guardian:
+  server: whois.nic.guardian
+
+gucci:
+  server: whois.nic.gucci
+
+guge:
+  server: whois.nic.guge
+
+guide:
+  server: whois.identity.digital
+
+guitars:
+  server: whois.nic.guitars
+
+guru:
+  server: whois.identity.digital
+
+hair:
+  server: whois.nic.hair
+
+hamburg:
+  server: whois.nic.hamburg
+
+hangout:
+  server: whois.nic.hangout
+
+haus:
+  server: whois.donuts.co
+
+hbo:
+  server: whois.nic.hbo
+
+hdfc:
+  server: whois.nic.hdfc
+
+hdfcbank:
+  server: whois.nic.hdfcbank
+
+health:
+  server: whois.nic.health
+
+healthcare:
+  server: whois.identity.digital
+
+help:
+  server: whois.nic.help
+
+helsinki:
+  server: whois.nic.helsinki
+
+here:
+  server: whois.nic.here
+
+hermes:
+  server: whois.nic.hermes
+
+hiphop:
+  server: whois.nic.hiphop
+
+hisamitsu:
+  server: whois.nic.hisamitsu
+
+hitachi:
+  server: whois.nic.hitachi
+
+hiv:
+  server: whois.nic.hiv
+
+hkt:
+  server: whois.nic.hkt
+
+hockey:
+  server: whois.identity.digital
+
+holdings:
+  server: whois.identity.digital
+
+holiday:
+  server: whois.identity.digital
+
+homedepot:
+  server: whois.nic.homedepot
+
+homegoods:
+  server: whois.nic.homegoods
+
+homes:
+  server: whois.nic.homes
+
+homesense:
+  server: whois.nic.homesense
+
+honda:
+  server: whois.nic.honda
+
+horse:
+  server: whois.nic.horse
+
+hospital:
+  server: whois.identity.digital
+
+host:
+  server: whois.nic.host
+
+hosting:
+  server: whois.nic.hosting
+
+hot:
+  server: whois.nic.hot
+
+hotels:
+  server: whois.nic.hotels
+
+hotmail:
+  server: whois.nic.hotmail
+
+house:
+  server: whois.identity.digital
+
+how:
+  server: whois.nic.how
+
+hsbc:
+  server: whois.nic.hsbc
+
+hughes:
+  server: whois.nic.hughes
+
+hyatt:
+  server: whois.nic.hyatt
+
+hyundai:
+  server: whois.nic.hyundai
+
+ibm:
+  server: whois.nic.ibm
+
+icbc:
+  server: whois.nic.icbc
+
+ice:
+  server: whois.nic.ice
+
+icu:
+  server: whois.nic.icu
+
+ieee:
+  server: whois.nic.ieee
+
+ifm:
+  server: whois.nic.ifm
+
+ikano:
+  server: whois.nic.ikano
+
+imamat:
+  server: whois.nic.imamat
+
+imdb:
+  server: whois.nic.imdb
+
+immo:
+  server: whois.identity.digital
+
+immobilien:
+  server: whois.donuts.co
+
+inc:
+  server: whois.nic.inc
+
+industries:
+  server: whois.identity.digital
+
+infiniti:
+  server: whois.nic.infiniti
+
+info:
+  server: whois.identity.digital
+
+ing:
+  server: whois.nic.ing
+
+ink:
+  server: whois.nic.ink
+
+institute:
+  server: whois.identity.digital
+
+insurance:
+  server: whois.nic.insurance
+
+insure:
+  server: whois.identity.digital
+
+international:
+  server: whois.identity.digital
+
+intuit:
+  server: whois.nic.intuit
+
+investments:
+  server: whois.identity.digital
+
+ipiranga:
+  server: whois.nic.ipiranga
+
+irish:
+  server: whois.identity.digital
+
+ismaili:
+  server: whois.nic.ismaili
+
+ist:
+  server: whois.nic.ist
+
+istanbul:
+  server: whois.nic.istanbul
+
+itau:
+  server: whois.nic.itau
+
+itv:
+  server: whois.nic.itv
+
+jaguar:
+  server: whois.nic.jaguar
+
+java:
+  server: whois.nic.java
+
+jcb:
+  server: whois.nic.jcb
+
+jeep:
+  server: whois.nic.jeep
+
+jetzt:
+  server: whois.identity.digital
+
+jewelry:
+  server: whois.identity.digital
+
+jio:
+  server: whois.nic.jio
+
+jll:
+  server: whois.nic.jll
+
+jmp:
+  server: whois.nic.jmp
+
+jnj:
+  server: whois.nic.jnj
+
+jobs:
+  server: webwhois.nic.jobs
+
+joburg:
+  server: registry.net.zawhois
+
+jot:
+  server: whois.nic.jot
+
+joy:
+  server: whois.nic.joy
+
+jpmorgan:
+  server: whois.nic.jpmorgan
+
+jprs:
+  server: whois.nic.jprs
+
+juegos:
+  server: whois.nic.juegos
+
+juniper:
+  server: whois.nic.juniper
+
+kaufen:
+  server: whois.donuts.co
+
+kddi:
+  server: whois.nic.kddi
+
+kerryhotels:
+  server: whois.nic.kerryhotels
+
+kerrylogistics:
+  server: whois.nic.kerrylogistics
+
+kerryproperties:
+  server: whois.nic.kerryproperties
+
+kfh:
+  server: whois.nic.kfh
+
+kia:
+  server: whois.nic.kia
+
+kids:
+  server: whois.afilias-srs.net
+
+kim:
+  server: whois.identity.digital
+
+kinder:
+  server: whois.nic.kinder
+
+kindle:
+  server: whois.nic.kindle
+
+kitchen:
+  server: whois.identity.digital
+
+kiwi:
+  server: whois.nic.kiwi
+
+koeln:
+  server: whois.nic.koeln
+
+komatsu:
+  server: whois.nic.komatsu
+
+kosher:
+  server: whois.nic.kosher
+
+kpmg:
+  server: whois.nic.kpmg
+
+kpn:
+  server: whois.nic.kpn
+
+krd:
+  server: whois.nic.krd
+
+kred:
+  server: whois.nic.kred
+
+kuokgroup:
+  server: whois.nic.kuokgroup
+
+kyoto:
+  server: whois.nic.kyoto
+
+lacaixa:
+  server: whois.nic.lacaixa
+
+lamborghini:
+  server: whois.nic.lamborghini
+
+lamer:
+  server: whois.nic.lamer
+
+lancaster:
+  server: whois.nic.lancaster
+
+land:
+  server: whois.identity.digital
+
+landrover:
+  server: whois.nic.landrover
+
+lanxess:
+  server: whois.nic.lanxess
+
+lasalle:
+  server: whois.nic.lasalle
+
+lat:
+  server: whois.nic.xyz
+
+latino:
+  server: whois.nic.latino
+
+latrobe:
+  server: whois.nic.latrobe
+
+law:
+  server: whois.nic.law
+
+lawyer:
+  server: whois.donuts.co
+
+lds:
+  server: whois.nic.lds
+
+lease:
+  server: whois.identity.digital
+
+leclerc:
+  server: whois.nic.leclerc
+
+lefrak:
+  server: whois.nic.lefrak
+
+legal:
+  server: whois.identity.digital
+
+lego:
+  server: whois.nic.lego
+
+lexus:
+  server: whois.nic.lexus
+
+lgbt:
+  server: whois.identity.digital
+
+lidl:
+  server: whois.nic.lidl
+
+life:
+  server: whois.identity.digital
+
+lifeinsurance:
+  server: whois.nic.lifeinsurance
+
+lifestyle:
+  server: whois.nic.lifestyle
+
+lighting:
+  server: whois.identity.digital
+
+like:
+  server: whois.nic.like
+
+lilly:
+  server: whois.nic.lilly
+
+limited:
+  server: whois.identity.digital
+
+limo:
+  server: whois.identity.digital
+
+lincoln:
+  server: whois.nic.lincoln
+
+link:
+  server: whois.nic.link
+
+lipsy:
+  server: whois.nic.lipsy
+
+live:
+  server: whois.donuts.co
+
+living:
+  server: whois.nic.living
+
+llc:
+  server: whois.identity.digital
+
+llp:
+  server: whois.uniregistry.netrdap
+
+loan:
+  server: whois.nic.loan
+
+loans:
+  server: whois.identity.digital
+
+locker:
+  server: whois.uniregsitry.net
+
+locus:
+  server: whois.nic.locus
+
+lol:
+  server: whois.nic.lol
+
+london:
+  server: whois.nic.london
+
+lotte:
+  server: whois.nic.lotte
+
+lotto:
+  server: whois.identity.digital
+
+love:
+  server: whois.nic.love
+
+lpl:
+  server: whois.nic.lpl
+
+lplfinancial:
+  server: whois.nic.lplfinancial
+
+ltd:
+  server: whois.identity.digital
+
+ltda:
+  server: whois.nic.ltda
+
+lundbeck:
+  server: whois.nic.lundbeck
+
+luxe:
+  server: whois.nic.luxe
+
+luxury:
+  server: whois.nic.luxury
+
+madrid:
+  server: whois.nic.madrid
+
+maif:
+  server: whois.nic.maif
+
+maison:
+  server: whois.identity.digital
+
+makeup:
+  server: whois.nic.makeup
+
+man:
+  server: whois.nic.man
+
+management:
+  server: whois.identity.digital
+
+mango:
+  server: whois.nic.mango
+
+map:
+  server: whois.nic.map
+
+market:
+  server: whois.donuts.co
+
+marketing:
+  server: whois.identity.digital
+
+markets:
+  server: whois.nic.markets
+
+marriott:
+  server: whois.nic.marriott
+
+marshalls:
+  server: whois.nic.marshalls
+
+mattel:
+  server: whois.nic.mattel
+
+mba:
+  server: whois.identity.digital
+
+mckinsey:
+  server: whois.nic.mckinsey
+
+med:
+  server: whois.nic.med
+
+media:
+  server: whois.identity.digital
+
+meet:
+  server: whois.nic.meet
+
+melbourne:
+  server: whois.nic.melbourne
+
+meme:
+  server: whois.nic.meme
+
+memorial:
+  server: whois.donuts.co
+
+men:
+  server: whois.nic.men
+
+menu:
+  server: whois.nic.menu
+
+merckmsd:
+  server: whois.nic.MERCKMSD
+
+miami:
+  server: whois.nic.miami
+
+microsoft:
+  server: whois.nic.microsoft
+
+mini:
+  server: whois.nic.mini
+
+mint:
+  server: whois.nic.mint
+
+mit:
+  server: whois.nic.mit
+
+mitsubishi:
+  server: whois.nic.mitsubishi
+
+mlb:
+  server: whois.nic.mlb
+
+mls:
+  server: whois.nic.mls
+
+mma:
+  server: whois.nic.mma
+
+mobi:
+  server: whois.identity.digital
+
+mobile:
+  server: whois.nic.mobile
+
+moda:
+  server: whois.donuts.co
+
+moe:
+  server: whois.nic.moe
+
+moi:
+  server: whois.nic.moi
+
+mom:
+  server: whois.nic.mom
+
+monash:
+  server: whois.nic.monash
+
+money:
+  server: whois.identity.digital
+
+monster:
+  server: nic.monsterwhois
+
+mormon:
+  server: whois.nic.mormon
+
+mortgage:
+  server: whois.donuts.co
+
+moscow:
+  server: whois.nic.moscow
+
+moto:
+  server: www.nic.moto
+
+motorcycles:
+  server: whois.nic.motorcycles
+
+mov:
+  server: whois.nic.mov
+
+movie:
+  server: whois.identity.digital
+
+msd:
+  server: whois.nic.msd
+
+mtn:
+  server: whois.nic.mtn
+
+mtr:
+  server: whois.nic.mtr
+
+museum:
+  server: www.whois.museum
+
+music:
+  server: whois.nic.music
+
+mutual:
+  server: whois.nic.mutual
+
+nab:
+  server: whois.nic.nab
+
+nagoya:
+  server: whois.nic.nagoya
+
+name:
+  server: whois.verisign-grs.com
+
+naspers:
+  server: whois.nic.naspers
+
+natura:
+  server: whois.nic.natura
+
+navy:
+  server: whois.donuts.co
+
+nba:
+  server: whois.nic.nba
+
+nec:
+  server: whois.nic.nec
+
+netbank:
+  server: whois.nic.netbank
+
+netflix:
+  server: whois.nic.netflix
+
+network:
+  server: whois.identity.digital
+
+neustar:
+  server: whois.nic.neustar
+
+new:
+  server: whois.nic.new
+
+news:
+  server: whois.donuts.co
+
+next:
+  server: whois.nic.next
+
+nextdirect:
+  server: whois.nic.nextdirect
+
+nexus:
+  server: whois.nic.nexus
+
+nfl:
+  server: whois.nic.nfl
+
+ngo:
+  server: :thenew.orggetfind-my-orgwhois
+
+nhk:
+  server: whois.nic.nhk
+
+nico:
+  server: whois.nic.nico
+
+nike:
+  server: whois.nic.nike
+
+nikon:
+  server: whois.nic.nikon
+
+ninja:
+  server: whois.donuts.co
+
+nissan:
+  server: whois.nic.nissan
+
+nissay:
+  server: whois.nic.nissay
+
+nokia:
+  server: whois.nic.nokia
+
+northwesternmutual:
+  server: whois.nic.northwesternmutual
+
+norton:
+  server: whois.nic.norton
+
+now:
+  server: whois.nic.now
+
+nowruz:
+  server: whois.nic.nowruz
+
+nowtv:
+  server: whois.nic.nowtv
+
+nra:
+  server: whois.nic.nra
+
+nrw:
+  server: whois.nic.nrw
+
+ntt:
+  server: whois.nic.ntt
+
+nyc:
+  server: whois.nic.nyc
+
+obi:
+  server: whois.nic.obi
+
+observer:
+  server: whois.donuts.co
+
+office:
+  server: whois.nic.office
+
+okinawa:
+  server: whois.nic.okinawa
+
+olayan:
+  server: whois.nic.olayan
+
+olayangroup:
+  server: whois.nic.olayangroup
+
+oldnavy:
+  server: whois.nic.oldnavy
+
+ollo:
+  server: whois.nic.ollo
+
+omega:
+  server: whois.nic.omega
+
+one:
+  server: whois.nic.one
+
+ong:
+  server: :thenew.orggetfind-my-orgwhois
+
+onl:
+  server: whois.nic.onl
+
+online:
+  server: whois.nic.online
+
+ooo:
+  server: whois.nic.ooo
+
+open:
+  server: whois.nic.open
+
+oracle:
+  server: whois.nic.oracle
+
+orange:
+  server: whois.nic.orange
+
+organic:
+  server: whois.identity.digital
+
+origins:
+  server: whois.nic.origins
+
+osaka:
+  server: whois.nic.osaka
+
+otsuka:
+  server: whois.nic.otsuka
+
+ott:
+  server: whois.nic.ott
+
+ovh:
+  server: whois.nic.ovh
+
+page:
+  server: whois.nic.page
+
+panasonic:
+  server: whois.nic.panasonic
+
+paris:
+  server: whois.nic.paris
+
+pars:
+  server: whois.nic.pars
+
+partners:
+  server: whois.identity.digital
+
+parts:
+  server: whois.identity.digital
+
+party:
+  server: whois.nic.party
+
+pay:
+  server: whois.nic.pay
+
+pccw:
+  server: whois.nic.pccw
+
+pet:
+  server: whois.identity.digital
+
+pfizer:
+  server: whois.nic.pfizer
+
+pharmacy:
+  server: whois.nic.pharmacy
+
+phd:
+  server: whois.nic.phd
+
+philips:
+  server: whois.nic.philips
+
+phone:
+  server: whois.nic.phone
+
+photo:
+  server: whois.nic.photo
+
+photography:
+  server: whois.identity.digital
+
+photos:
+  server: whois.identity.digital
+
+physio:
+  server: whois.nic.physio
+
+pics:
+  server: whois.nic.pics
+
+pictet:
+  server: whois.nic.pictet
+
+pictures:
+  server: whois.identity.digital
+
+pid:
+  server: whois.nic.pid
+
+pin:
+  server: whois.nic.pin
+
+ping:
+  server: whois.nic.ping
+
+pink:
+  server: whois.identity.digital
+
+pioneer:
+  server: whois.nic.pioneer
+
+pizza:
+  server: whois.identity.digital
+
+place:
+  server: whois.identity.digital
+
+play:
+  server: whois.nic.play
+
+playstation:
+  server: whois.nic.playstation
+
+plumbing:
+  server: whois.identity.digital
+
+plus:
+  server: whois.identity.digital
+
+pnc:
+  server: whois.nic.pnc
+
+pohl:
+  server: whois.nic.pohl
+
+poker:
+  server: whois.identity.digital
+
+politie:
+  server: whois.nic.politie
+
+porn:
+  server: whois.registrar.adult
+
+post:
+  server: registry.postwhois
+
+pramerica:
+  server: whois.nic.pramerica
+
+praxi:
+  server: whois.nic.praxi
+
+press:
+  server: whois.nic.press
+
+prime:
+  server: whois.nic.prime
+
+pro:
+  server: whois.identity.digital
+
+prod:
+  server: whois.nic.prod
+
+productions:
+  server: whois.identity.digital
+
+prof:
+  server: whois.nic.prof
+
+progressive:
+  server: whois.nic.progressive
+
+promo:
+  server: whois.identity.digital
+
+properties:
+  server: whois.identity.digital
+
+property:
+  server: whois.nic.property
+
+protection:
+  server: whois.nic.protection
+
+pru:
+  server: whois.nic.pru
+
+prudential:
+  server: whois.nic.prudential
+
+pub:
+  server: whois.donuts.co
+
+pwc:
+  server: whois.nic.pwc
+
+qpon:
+  server: whois.nic.qpon
+
+quebec:
+  server: whois.nic.quebec
+
+quest:
+  server: whois.nic.quest
+
+racing:
+  server: whois.nic.racing
+
+radio:
+  server: whois.nic.radio
+
+read:
+  server: whois.nic.read
+
+realestate:
+  server: whois.nic.realestate
+
+realtor:
+  server: whois.nic.realtor
+
+realty:
+  server: whois.nic.click
+
+recipes:
+  server: whois.identity.digital
+
+red:
+  server: whois.identity.digital
+
+redstone:
+  server: whois.nic.redstone
+
+redumbrella:
+  server: whois.nic.redumbrella
+
+rehab:
+  server: whois.donuts.co
+
+reise:
+  server: whois.identity.digital
+
+reisen:
+  server: whois.identity.digital
+
+reit:
+  server: whois.nic.reit
+
+reliance:
+  server: whois.nic.reliance
+
+ren:
+  server: whois.nic.ren
+
+rent:
+  server: whois.nic.rent
+
+rentals:
+  server: whois.identity.digital
+
+repair:
+  server: whois.identity.digital
+
+report:
+  server: whois.identity.digital
+
+republican:
+  server: whois.donuts.co
+
+rest:
+  server: whois.nic.rest
+
+restaurant:
+  server: whois.identity.digital
+
+review:
+  server: whois.nic.review
+
+reviews:
+  server: whois.donuts.co
+
+rexroth:
+  server: whois.nic.rexroth
+
+rich:
+  server: whois.nic.rich
+
+richardli:
+  server: whois.nic.richardli
+
+ricoh:
+  server: whois.nic.ricoh
+
+ril:
+  server: whois.nic.ril
+
+rio:
+  server: whois.nic.rio
+
+rip:
+  server: whois.donuts.co
+
+rocher:
+  server: whois.nic.rocher
+
+rocks:
+  server: whois.donuts.co
+
+rodeo:
+  server: whois.nic.rodeo
+
+rogers:
+  server: whois.nic.rogers
+
+room:
+  server: whois.nic.room
+
+rsvp:
+  server: whois.nic.rsvp
+
+ruhr:
+  server: whois.nic.ruhr
+
+run:
+  server: whois.identity.digital
+
+rwe:
+  server: whois.nic.rwe
+
+ryukyu:
+  server: whois.nic.ryukyu
+
+saarland:
+  server: whois.nic.saarland
+
+safe:
+  server: whois.nic.safe
+
+safety:
+  server: whois.nic.safety
+
+sakura:
+  server: whois.nic.sakura
+
+sale:
+  server: whois.donuts.co
+
+salon:
+  server: whois.identity.digital
+
+samsclub:
+  server: whois.nic.samsclub
+
+samsung:
+  server: whois.nic.samsung
+
+sandvik:
+  server: whois.nic.sandvik
+
+sandvikcoromant:
+  server: whois.nic.sandvikcoromant
+
+sanofi:
+  server: whois.nic.sanofi
+
+sap:
+  server: whois.nic.sap
+
+sarl:
+  server: whois.identity.digital
+
+sas:
+  server: whois.nic.sas
+
+save:
+  server: whois.nic.save
+
+saxo:
+  server: whois.nic.saxo
+
+sbi:
+  server: whois.nic.sbi
+
+sbs:
+  server: whois.nic.sbs
+
+sca:
+  server: whois.nic.sca
+
+scb:
+  server: whois.nic.scb
+
+schaeffler:
+  server: whois.nic.schaeffler
+
+schmidt:
+  server: whois.nic.schmidt
+
+scholarships:
+  server: whois.nic.scholarships
+
+school:
+  server: whois.identity.digital
+
+schule:
+  server: whois.identity.digital
+
+schwarz:
+  server: whois.nic.schwarz
+
+science:
+  server: whois.nic.science
+
+scot:
+  server: whois.nic.scot
+
+search:
+  server: whois.nic.search
+
+seat:
+  server: whois.nic.seat
+
+secure:
+  server: whois.nic.secure
+
+security:
+  server: whois.nic.security
+
+seek:
+  server: whois.nic.seek
+
+select:
+  server: whois.nic.select
+
+sener:
+  server: whois.nic.sener
+
+services:
+  server: whois.identity.digital
+
+seven:
+  server: whois.nic.seven
+
+sew:
+  server: whois.nic.sew
+
+sex:
+  server: whois.registrar.adult
+
+sexy:
+  server: whois.nic.sexy
+
+sfr:
+  server: whois.nic.sfr
+
+shangrila:
+  server: whois.nic.shangrila
+
+sharp:
+  server: whois.nic.sharp
+
+shaw:
+  server: whois.nic.shaw
+
+shell:
+  server: whois.nic.shell
+
+shia:
+  server: whois.nic.shia
+
+shiksha:
+  server: whois.identity.digital
+
+shoes:
+  server: whois.identity.digital
+
+shop:
+  server: whois.nic.shop
+
+shopping:
+  server: whois.identity.digital
+
+shouji:
+  server: whois.nic.shouji
+
+show:
+  server: whois.identity.digital
+
+showtime:
+  server: whois.nic.showtime
+
+silk:
+  server: whois.nic.silk
+
+sina:
+  server: whois.nic.sina
+
+singles:
+  server: whois.identity.digital
+
+site:
+  server: whois.nic.site
+
+ski:
+  server: whois.identity.digital
+
+skin:
+  server: whois.nic.skin
+
+sky:
+  server: whois.nic.sky
+
+skype:
+  server: whois.nic.skype
+
+sling:
+  server: whois.nic.sling
+
+smart:
+  server: whois.nic.smart
+
+smile:
+  server: whois.nic.smile
+
+sncf:
+  server: whois.nic.sncf
+
+soccer:
+  server: whois.identity.digital
+
+social:
+  server: whois.donuts.co
+
+softbank:
+  server: whois.nic.softbank
+
+software:
+  server: whois.donuts.co
+
+sohu:
+  server: whois.nic.sohu
+
+solar:
+  server: whois.identity.digital
+
+solutions:
+  server: whois.identity.digital
+
+song:
+  server: whois.nic.song
+
+sony:
+  server: whois.nic.sony
+
+soy:
+  server: whois.nic.soy
+
+spa:
+  server: whois.afilias-srs.net
+
+space:
+  server: whois.nic.space
+
+spot:
+  server: whois.nic.spot
+
+sport:
+  server: whois.nic.sport
+
+srl:
+  server: whois.nic.srl
+
+stada:
+  server: whois.nic.stada
+
+staples:
+  server: whois.nic.staples
+
+star:
+  server: whois.nic.star
+
+statebank:
+  server: whois.nic.statebank
+
+statefarm:
+  server: whois.nic.statefarm
+
+stc:
+  server: whois.nic.stc
+
+stcgroup:
+  server: whois.nic.stcgroup
+
+stockholm:
+  server: whois.nic.stockholm
+
+storage:
+  server: whois.nic.storage
+
+store:
+  server: whois.nic.store
+
+stream:
+  server: whois.nic.stream
+
+studio:
+  server: whois.donuts.co
+
+study:
+  server: whois.nic.study
+
+style:
+  server: whois.identity.digital
+
+sucks:
+  server: whois.nic.sucks
+
+supplies:
+  server: whois.identity.digital
+
+supply:
+  server: whois.identity.digital
+
+support:
+  server: whois.identity.digital
+
+surf:
+  server: whois.nic.surf
+
+surgery:
+  server: whois.identity.digital
+
+suzuki:
+  server: whois.nic.suzuki
+
+swatch:
+  server: whois.nic.swatch
+
+swiss:
+  server: whois.nic.swiss
+
+sydney:
+  server: whois.nic.sydney
+
+systems:
+  server: whois.identity.digital
+
+tab:
+  server: whois.nic.tab
+
+taipei:
+  server: whois.nic.taipei
+
+talk:
+  server: whois.nic.talk
+
+taobao:
+  server: whois.nic.taobao
+
+target:
+  server: whois.nic.target
+
+tatamotors:
+  server: whois.nic.tatamotors
+
+tatar:
+  server: whois.nic.tatar
+
+tattoo:
+  server: whois.nic.tattoo
+
+tax:
+  server: whois.identity.digital
+
+taxi:
+  server: whois.identity.digital
+
+tci:
+  server: whois.nic.tci
+
+tdk:
+  server: whois.nic.tdk
+
+team:
+  server: whois.identity.digital
+
+tech:
+  server: whois.nic.tech
+
+technology:
+  server: whois.identity.digital
+
+tel:
+  server: whois.tel
+
+temasek:
+  server: whois.nic.temasek
+
+tennis:
+  server: whois.identity.digital
+
+teva:
+  server: whois.nic.teva
+
+thd:
+  server: whois.nic.thd
+
+theater:
+  server: whois.identity.digital
+
+theatre:
+  server: whois.nic.theatre
+
+tiaa:
+  server: whois.nic.tiaa
+
+tickets:
+  server: whois.nic.tickets
+
+tienda:
+  server: whois.identity.digital
+
+tiffany:
+  server: whois.nic.tiffany
+
+tips:
+  server: whois.identity.digital
+
+tires:
+  server: whois.identity.digital
+
+tirol:
+  server: whois.nic.tirol
+
+tjmaxx:
+  server: whois.nic.tjmaxx
+
+tjx:
+  server: whois.nic.tjx
+
+tkmaxx:
+  server: whois.nic.tkmaxx
+
+tmall:
+  server: whois.nic.tmall
+
+today:
+  server: whois.identity.digital
+
+tokyo:
+  server: whois.nic.tokyo
+
+tools:
+  server: whois.identity.digital
+
+top:
+  server: whois.nic.top
+
+toray:
+  server: whois.nic.toray
+
+toshiba:
+  server: whois.nic.toshiba
+
+total:
+  server: whois.nic.total
+
+tours:
+  server: whois.identity.digital
+
+town:
+  server: whois.identity.digital
+
+toyota:
+  server: whois.nic.toyota
+
+toys:
+  server: whois.identity.digital
+
+trade:
+  server: whois.nic.trade
+
+trading:
+  server: whois.nic.trading
+
+training:
+  server: whois.identity.digital
+
+travel:
+  server: whois.donuts.co
+
+travelers:
+  server: whois.nic.travelers
+
+travelersinsurance:
+  server: whois.nic.travelersinsurance
+
+trust:
+  server: whois.nic.trust
+
+trv:
+  server: whois.nic.trv
+
+tube:
+  server: whois.nic.tube
+
+tui:
+  server: whois.nic.tui
+
+tunes:
+  server: whois.nic.tunes
+
+tushu:
+  server: whois.nic.tushu
+
+tvs:
+  server: whois.nic.tvs
+
+ubank:
+  server: whois.nic.ubank
+
+ubs:
+  server: whois.nic.ubs
+
+unicom:
+  server: whois.nic.unicom
+
+university:
+  server: whois.identity.digital
+
+uno:
+  server: whois.nic.uno
+
+uol:
+  server: whois.nic.uol
+
+ups:
+  server: whois.nic.ups
+
+vacations:
+  server: whois.identity.digital
+
+vana:
+  server: whois.nic.vana
+
+vanguard:
+  server: whois.nic.vanguard
+
+vegas:
+  server: whois.nic.vegas
+
+ventures:
+  server: whois.identity.digital
+
+verisign:
+  server: whois.nic.verisign
+
+versicherung:
+  server: whois.nic.versicherung
+
+vet:
+  server: whois.donuts.co
+
+viajes:
+  server: whois.identity.digital
+
+video:
+  server: whois.donuts.co
+
+vig:
+  server: whois.nic.vig
+
+viking:
+  server: whois.nic.viking
+
+villas:
+  server: whois.identity.digital
+
+vin:
+  server: whois.identity.digital
+
+vip:
+  server: whois.nic.vip
+
+virgin:
+  server: whois.nic.virgin
+
+visa:
+  server: whois.nic.visa
+
+vision:
+  server: whois.identity.digital
+
+viva:
+  server: whois.nic.viva
+
+vivo:
+  server: whois.nic.vivo
+
+vlaanderen:
+  server: whois.nic.vlaanderen
+
+vodka:
+  server: whois.nic.vodka
+
+volkswagen:
+  server: whois.nic.volkswagen
+
+volvo:
+  server: whois.nic.volvo
+
+vote:
+  server: whois.identity.digital
+
+voting:
+  server: whois.nic.voting
+
+voto:
+  server: whois.identity.digital
+
+voyage:
+  server: whois.identity.digital
+
+wales:
+  server: whois.nic.wales
+
+walmart:
+  server: whois.nic.walmart
+
+walter:
+  server: whois.nic.walter
+
+wang:
+  server: whois.nic.wang
+
+wanggou:
+  server: whois.nic.wanggou
+
+watch:
+  server: whois.identity.digital
+
+watches:
+  server: whois.identity.digital
+
+weather:
+  server: whois.nic.weather
+
+weatherchannel:
+  server: whois.nic.weatherchannel
+
+webcam:
+  server: whois.nic.webcam
+
+weber:
+  server: whois.nic.weber
+
+website:
+  server: whois.nic.website
+
+wedding:
+  server: whois.nic.wedding
+
+weibo:
+  server: whois.nic.weibo
+
+weir:
+  server: whois.nic.weir
+
+whoswho:
+  server: whois.nic.whoswho
+
+wien:
+  server: whois.nic.wien
+
+wiki:
+  server: whois.nic.wiki
+
+williamhill:
+  server: whois.nic.williamhill
+
+win:
+  server: whois.nic.win
+
+windows:
+  server: whois.nic.windows
+
+wine:
+  server: whois.identity.digital
+
+winners:
+  server: whois.nic.winners
+
+wme:
+  server: whois.nic.wme
+
+wolterskluwer:
+  server: whois.nic.wolterskluwer
+
+woodside:
+  server: whois.nic.woodside
+
+work:
+  server: whois.nic.work
+
+works:
+  server: whois.identity.digital
+
+world:
+  server: whois.identity.digital
+
+wow:
+  server: whois.nic.wow
+
+wtc:
+  server: whois.nic.wtc
+
+wtf:
+  server: whois.identity.digital
+
+xbox:
+  server: whois.nic.xbox
+
+xerox:
+  server: whois.nic.xerox
+
+xfinity:
+  server: whois.nic.xfinity
+
+xihuan:
+  server: whois.nic.xihuan
+
+xin:
+  server: whois.nic.xin
+
+xn--11b4c3d:
+  server: whois.nic.xn--11b4c3d
+
+xn--1ck2e1b:
+  server: whois.nic.xn--1ck2e1b
+
+xn--1qqw23a:
+  server: whois.nic.xn--1qqw23a
+
+xn--30rr7y:
+  server: whois.nic.xn--30rr7y
+
+xn--3bst00m:
+  server: whois.nic.xn--3bst00m
+
+xn--3ds443g:
+  server: whois.nic.xn--3ds443g
+
+xn--3pxu8k:
+  server: whois.nic.xn--3pxu8k
+
+xn--42c2d9a:
+  server: whois.nic.xn--42c2d9a
+
+xn--45q11c:
+  server: whois.nic.xn--45q11c
+
+xn--4gbrim:
+  server: whois.nic.xn--4gbrim
+
+xn--55qw42g:
+  server: whois.nic.公益
+
+xn--55qx5d:
+  server: whois.nic.xn--55qx5d
+
+xn--5su34j936bgsg:
+  server: whois.nic.xn--5su34j936bgsg
+
+xn--5tzm5g:
+  server: whois.nic.网站
+
+xn—6frz82g:
+  server: whois.identity.digital
+
+xn--6qq986b3xl:
+  server: whois.nic.xn--6qq986b3xl
+
+xn--80adxhks:
+  server: whois.nic.xn--80adxhks
+
+xn--80aqecdr1a:
+  server: whois.nic.xn--80aqecdr1a
+
+xn--80asehdb:
+  server: whois.nic.xn--80asehdb
+
+xn--80aswg:
+  server: whois.nic.xn--80aswg
+
+xn--8y0a063a:
+  server: whois.nic.联通
+
+xn--9dbq2a:
+  server: whois.nic.xn--9dbq2a
+
+xn--9et52u:
+  server: whois.nic.xn--9et52u
+
+xn--9krt00a:
+  server: whois.nic.微博
+
+xn--b4w605ferd:
+  server: whois.nic.淡马锡
+
+xn--bck1b9a5dre4c:
+  server: whois.nic.xn--bck1b9a5dre4c
+
+xn--c1avg:
+  server: :thenew.orggetfind-my-orgwhois
+
+xn--c2br7g:
+  server: whois.nic.xn--c2br7g
+
+xn--cck2b3b:
+  server: whois.nic.xn--cck2b3b
+
+xn--cckwcxetd:
+  server: whois.nic.xn--cckwcxetd
+
+xn--cg4bki:
+  server: whois.nic.삼성
+
+xn--czr694b:
+  server: whois.nic.xn--czr694b
+
+xn--czrs0t:
+  server: whois.identity.digital
+
+xn--czru2d:
+  server: whois.nic.xn--czru2d
+
+xn--d1acj3b:
+  server: whois.nic.xn--d1acj3b
+
+xn--eckvdtc9d:
+  server: whois.nic.xn--eckvdtc9d
+
+xn--efvy88h:
+  server: whois.nic.新闻
+
+xn--fct429k:
+  server: whois.nic.xn--fct429k
+
+xn--fhbei:
+  server: whois.nic.xn--fhbei
+
+xn--fiq228c5hs:
+  server: whois.nic.xn--fiq228c5hs
+
+xn--fiq64b:
+  server: whois.nic.xn--fiq64b
+
+xn--fjq720a:
+  server: whois.identity.digital
+
+xn--flw351e:
+  server: whois.nic.xn--flw351e
+
+xn--fzys8d69uvgm:
+  server: whois.nic.xn--fzys8d69uvgm
+
+xn--g2xx48c:
+  server: whois.nic.xn--g2xx48c
+
+xn--gckr3f0f:
+  server: whois.nic.xn--gckr3f0f
+
+xn--gk3at1e:
+  server: whois.nic.xn--gk3at1e
+
+xn--hxt814e:
+  server: whois.nic.xn--hxt814e
+
+xn--i1b6b1a6a2e:
+  server: :thenew.orggetfind-my-orgwhois
+
+xn--imr513n:
+  server: whois.nic.xn--imr513n
+
+xn--io0a7i:
+  server: whois.nic.xn--io0a7i
+
+xn--j1aef:
+  server: whois.nic.xn--j1aef
+
+xn--jlq480n2rg:
+  server: whois.nic.xn--jlq480n2rg
+
+xn--jvr189m:
+  server: whois.nic.xn--jvr189m
+
+xn--kcrx77d1x4a:
+  server: whois.nic.飞利浦
+
+xn--kput3i:
+  server: whois.nic.xn--kput3i
+
+xn--mgba3a3ejt:
+  server: whois.nic.xn--mgba3a3ejt
+
+xn--mgba7c0bbn0a:
+  server: whois.nic.العليان
+
+xn--mgbaakc7dvf:
+  server: whois.nic.xn--mgbaakc7dvf
+
+xn--mgbab2bd:
+  server: whois.nic.xn--mgbab2bd
+
+xn--mgbca7dzdo:
+  server: whois.nic.xn--mgbca7dzdo
+
+xn--mgbi4ecexp:
+  server: whois.nic.xn--mgbi4ecexp
+
+xn--mgbt3dhd:
+  server: whois.nic.xn--mgbt3dhd
+
+xn--mk1bu44c:
+  server: whois.nic.xn--mk1bu44c
+
+xn--mxtq1m:
+  server: whois.nic.政府
+
+xn--ngbc5azd:
+  server: whois.nic.xn--ngbc5azd
+
+xn--ngbe9e0a:
+  server: whois.nic.بيتك
+
+xn--ngbrx:
+  server: whois.nic.xn--ngbrx
+
+xn--nqv7f:
+  server: :thenew.orggetfind-my-orgwhois
+
+xn--nqv7fs00ema:
+  server: :thenew.orggetfind-my-orgwhois
+
+xn--nyqy26a:
+  server: whois.nic.xn--nyqy26a
+
+xn--otu796d:
+  server: whois.nic.xn--otu796d
+
+xn--p1acf:
+  server: whois.nic.рус
+
+xn--pssy2u:
+  server: whois.nic.xn--pssy2u
+
+xn--q9jyb4c:
+  server: whois.nic.xn--q9jyb4c
+
+xn--qcka1pmc:
+  server: whois.nic.xn--qcka1pmc
+
+xn--rhqv96g:
+  server: whois.nic.xn--rhqv96g
+
+xn--rovu88b:
+  server: whois.nic.xn--rovu88b
+
+xn--ses554g:
+  server: whois.nic.xn--ses554g
+
+xn--t60b56a:
+  server: whois.nic.xn--t60b56a
+
+xn--tckwe:
+  server: whois.nic.xn--tckwe
+
+xn--tiq49xqyj:
+  server: whois.nic.xn--tiq49xqyj
+
+xn--unup4y:
+  server: whois.identity.digital
+
+xn--vermgensberater-ctb:
+  server: whois.nic.xn--vermgensberater-ctb
+
+xn--vermgensberatung-pwb:
+  server: whois.nic.xn--vermgensberatung-pwb
+
+xn--vhquv:
+  server: whois.identity.digital
+
+xn--vuq861b:
+  server: whois.nic.信息
+
+xn--w4r85el8fhu5dnra:
+  server: whois.nic.xn--w4r85el8fhu5dnra
+
+xn--w4rs40l:
+  server: whois.nic.xn--w4rs40l
+
+xn--xhq521b:
+  server: whois.nic.xn--xhq521b
+
+xn--zfr164b:
+  server: whois.nic.政务
+
+xxx:
+  server: whois.registrar.adult
+
+xyz:
+  server: whois.nic.xyz
+
+yachts:
+  server: whois.nic.yachts
+
+yahoo:
+  server: whois.nic.yahoo
+
+yamaxun:
+  server: whois.nic.yamaxun
+
+yandex:
+  server: whois.nic.yandex
+
+yodobashi:
+  server: whois.nic.yodobashi
+
+yoga:
+  server: whois.nic.yoga
+
+yokohama:
+  server: whois.nic.yokohama
+
+you:
+  server: whois.nic.you
+
+youtube:
+  server: whois.nic.youtube
+
+yun:
+  server: whois.nic.yun
+
+zappos:
+  server: whois.nic.zappos
+
+zara:
+  server: whois.nic.zara
+
+zero:
+  server: whois.nic.zero
+
+zip:
+  server: whois.nic.zip
+
+zone:
+  server: whois.identity.digital
+
+zuerich:
+  server: whois.nic.zuerich
