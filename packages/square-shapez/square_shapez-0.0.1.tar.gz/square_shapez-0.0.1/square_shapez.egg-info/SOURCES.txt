@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+shapes_area/__init__.py
+shapes_area/shapes_area.py
+square_shapez.egg-info/PKG-INFO
+square_shapez.egg-info/SOURCES.txt
+square_shapez.egg-info/dependency_links.txt
+square_shapez.egg-info/top_level.txt
