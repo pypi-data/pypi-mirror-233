@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: geometron
+Version: 0.1.4
+Summary: Tools for operations on geometrical objects
+Author: O. Kaufmann
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+
+Tools for operations on geometrical objects
