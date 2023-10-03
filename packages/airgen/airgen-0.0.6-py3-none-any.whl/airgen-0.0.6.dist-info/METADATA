@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: airgen
+Version: 0.0.6
+Summary: Aerial robotics simulator
+Home-page: https://scaledfoundations.ai
+Author: Scaled Foundations
+Author-email: info@scaledfoundations.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8, <=3.11.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: rerun-sdk
+Requires-Dist: ivy
+Requires-Dist: ivy-vision ==0.0.1.post0
+Requires-Dist: ivy-mech ==0.0.1.post0
+Requires-Dist: msgpack >=1.0.0
+
+[![Build pip wheel](https://github.com/ScaledFoundations/pyairgen/actions/workflows/build_wheel.yaml/badge.svg?branch=main)](https://github.com/ScaledFoundations/pyairgen/actions/workflows/build_wheel.yaml)
+# Python API for airgen
+
