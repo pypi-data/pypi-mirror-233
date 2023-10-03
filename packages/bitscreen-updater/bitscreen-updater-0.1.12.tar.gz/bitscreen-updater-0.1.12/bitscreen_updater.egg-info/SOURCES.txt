@@ -1,0 +1,16 @@
+README.md
+setup.py
+bitscreen_updater/__init__.py
+bitscreen_updater/__main__.py
+bitscreen_updater/daemon.py
+bitscreen_updater/exceptions.py
+bitscreen_updater/filter_checker.py
+bitscreen_updater/provider_session.py
+bitscreen_updater/task_runner.py
+bitscreen_updater/updater.py
+bitscreen_updater.egg-info/PKG-INFO
+bitscreen_updater.egg-info/SOURCES.txt
+bitscreen_updater.egg-info/dependency_links.txt
+bitscreen_updater.egg-info/entry_points.txt
+bitscreen_updater.egg-info/requires.txt
+bitscreen_updater.egg-info/top_level.txt
