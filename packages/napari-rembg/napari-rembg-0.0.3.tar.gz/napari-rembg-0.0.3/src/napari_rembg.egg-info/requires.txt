@@ -1,0 +1,12 @@
+magicgui
+qtpy
+napari[all]>=0.4.16
+rembg
+
+[testing]
+tox
+pytest
+pytest-cov
+pytest-qt
+napari
+pyqt5

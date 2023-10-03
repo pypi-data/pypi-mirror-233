@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-rembg = napari_rembg:napari.yaml
