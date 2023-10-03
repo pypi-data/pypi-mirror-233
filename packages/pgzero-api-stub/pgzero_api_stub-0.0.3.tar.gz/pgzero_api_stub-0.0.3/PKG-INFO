@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pgzero_api_stub
+Version: 0.0.3
+Summary: a stub for pgzero
+Home-page: https://github.com/xxNull-lsk/pgzero_api_stub
+Author: liushengkun
+Author-email: xxnull@163.com
+License: MIT
+Classifier: Topic :: Games/Entertainment 
+Classifier: Topic :: Games/Entertainment :: Puzzle Games
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is a stub for pgzero.  
+It helps ides (such as vscode, pychram, and so on) provide better code hints and syntax checks.  
+它可以帮助IDE（如vscode、pychram等等）提供更好的代码提示和语法检查。  
+You only should type some like this:  
+您可以这样使用它：  
+```python
+from pgzero_api_stub import *
+import pgzrun
+```
+
+**Note**: `pgzero_api_stub` must be in front of `pgzrun`.  
+**注意**：`pgzero_api_stub`必须在`pgzrun`的前面。  

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pgzero_api_stub/__init__.py
+pgzero_api_stub.egg-info/PKG-INFO
+pgzero_api_stub.egg-info/SOURCES.txt
+pgzero_api_stub.egg-info/dependency_links.txt
+pgzero_api_stub.egg-info/requires.txt
+pgzero_api_stub.egg-info/top_level.txt
