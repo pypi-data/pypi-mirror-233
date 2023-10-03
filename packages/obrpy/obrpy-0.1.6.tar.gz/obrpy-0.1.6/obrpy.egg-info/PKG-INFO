@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: obrpy
+Version: 0.1.6
+Summary: This library is aimed for using Luna's OBR-4600 with Python.
+Home-page: https://github.com/temisAP
+Author: Andres Pedraza Rodriguez
+Author-email: a.pedraza@upm.es
+License: MIT
+Description-Content-Type: text/markdown
