@@ -1,0 +1,7 @@
+wagtail>=4.2.2
+shapely>=2.0.1
+geopandas>=0.12.2
+django-filter>=22.1
+django-countries>=7.5.1
+django-countries-geoextent>=0.0.1
+wagtail-cache>=2.3.0
