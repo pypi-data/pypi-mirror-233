@@ -1,0 +1,10 @@
+src/iottycloud/cloudapi.py,sha256=MyNrspjqv56c9MKFmk_LhDoXMFf9I162l7RwfXxr-DE,2927
+src/iottycloud/device.py,sha256=WsCIIwjQdYGRYVdnUbWC_Z9_xSW_M9DAu3sTiHA801Q,685
+src/iottycloud/errors.py,sha256=Px_lWbzdTF1UGr_OERNZxgbydN00clDKtuWf0cERBPY,375
+src/iottycloud/lightswitch.py,sha256=Ty_Gs4GCG2JtDKN4n4lCy-0BYcynQzRcpUQdvVhIr3E,739
+src/iottycloud/utils.py,sha256=7-LlG-0EXSeZahNEGsiMeWlasT-w34qVxkF5fApZ9mo,1303
+src/iottycloud/verbs.py,sha256=_R-oCvatu-YWEQx0CCfJUgKiXxtQLsBfuaKfaIWGDNA,392
+iottycloud-0.0.1.dist-info/METADATA,sha256=f-9NlHVZHxKnb44d3DWQDrGg6cBSfLU3pt2pONCX6TM,1333
+iottycloud-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+iottycloud-0.0.1.dist-info/licenses/LICENSE,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+iottycloud-0.0.1.dist-info/RECORD,,
