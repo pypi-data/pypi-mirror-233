@@ -1,0 +1,8 @@
+README.md
+setup.py
+preloader.egg-info/PKG-INFO
+preloader.egg-info/SOURCES.txt
+preloader.egg-info/dependency_links.txt
+preloader.egg-info/requires.txt
+preloader.egg-info/top_level.txt
+tests/test_preloader.py
