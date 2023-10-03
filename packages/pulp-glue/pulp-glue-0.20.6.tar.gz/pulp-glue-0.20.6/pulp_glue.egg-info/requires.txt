@@ -1,0 +1,2 @@
+packaging<24,>=20.0
+requests<2.32,>=2.24.0
