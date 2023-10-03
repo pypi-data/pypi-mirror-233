@@ -1,0 +1,8 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/area_calculator.py,sha256=zRhd9tdC3YPL7Dg1zKv_sLo564zgyWju0OAM_-blaFk,2932
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=TMRxKRwY709ZQAwgY6CiD0G2DXTZbIpWZ6Cooea42Bw,841
+geometriccalculatelib-1.0.0.dist-info/METADATA,sha256=upPXyYUoHfSHDD2ZmXEicfQ9nalurewreqzLXTNqPVY,168
+geometriccalculatelib-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+geometriccalculatelib-1.0.0.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+geometriccalculatelib-1.0.0.dist-info/RECORD,,
