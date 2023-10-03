@@ -1,0 +1,11 @@
+maturin==0.14.17
+black
+pytest
+pytest-kind
+requests
+pykube
+bump-my-version
+Sphinx
+twine
+flake8
+mypy
