@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: compose-x-render
+Version: 0.8.0
+Summary: Library & Tool to compile/merge compose files with top level extension fields
+License: MPL-2.0
+Keywords: compose-x,aws,jsonschema,docker,compose-spec
+Author: John Preston
+Author-email: john@compose-x.io
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: aws
+Requires-Dist: PyYAML (>=5,<7.0)
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: compose-x-common (>=1.2,<2.0)
+Requires-Dist: importlib-resources (>=6.1,<7.0)
+Requires-Dist: jsonschema (>=4.15,<4.18)
