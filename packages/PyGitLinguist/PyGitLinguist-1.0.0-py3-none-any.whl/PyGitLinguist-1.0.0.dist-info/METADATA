@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: PyGitLinguist
+Version: 1.0.0
+Summary: A python version of githubs Linguist - a tool to detect programming languages in a project
+Home-page: https://github.com/guy-nachshon/pylinguist
+Author: Guy Nachshon
+Author-email: guynachshon <guy.na8@gmail.com>
+Project-URL: Homepage, https://github.com/guynachshon/pylinguist
+Project-URL: Bug Tracker, https://github.com/guynachshon/pylinguist/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyLinguist
