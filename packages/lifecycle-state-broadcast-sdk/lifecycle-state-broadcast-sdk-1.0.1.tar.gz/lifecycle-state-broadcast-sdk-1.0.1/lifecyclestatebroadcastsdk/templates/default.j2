@@ -1,0 +1,140 @@
+{% macro extract_context_meta(data) %}
+    {% for key, value in data.items() %}
+        {% if value is mapping %}
+            {% if 'context' in key.lower() %}
+                {
+                    "id": "{{ value.get('id', '') }}",
+                    "endpoint": "{{ value.get('endpoint', value.get('Endpoint', '')) }}",
+                    "hostName": "{{ value.get('hostName', value.get('HostName', value.get('host', ''))) }}",
+                    "portNumber": {{ value.get('port', value.get('Port', value.get('portNumber', value.get('PortNumber', -1)))) }}
+                },
+            {% elif 'logginghandler' in key.lower() %}
+                {
+                    "id": "{{ value.get('id', '') }}",
+                    "endpoint": "{{ value.get('endpoint', value.get('Endpoint', value.get('logEndpoint', value.get('LogEndpoint', '')))) }}"
+                },
+            {% elif 'nonclusteredsettings' in key.lower() %}
+                {
+                    "id": "{{ value.get('id', value.get('Id', '')) }}",
+                    "hostName": "{{ value.get('hostName', value.get('HostName', value.get('host', ''))) }}",
+                    "portNumber": {{ value.get('port', value.get('Port', value.get('portNumber', value.get('PortNumber', -1)))) }}
+                },
+            {% elif 'pubsub' == key.lower() %}
+                {
+                    "id": "{{ value.get('id', value.get('Id', '')) }}",
+                    "projectId": "{{ value.get('projectId', value.get('ProjectId', '')) }}",
+                    "topicId": "{{ value.get('topicId', value.get('TopicId', '')) }}"
+                },
+            {% elif 'bigquery' == key.lower() %}
+                {
+                    "id": "{{ value.get('id', value.get('Id', '')) }}",
+                    "projectId": "{{ value.get('projectId', value.get('ProjectId', '')) }}",
+                    "dataset": "{{ value.get('dataset', value.get('dataSet', value.get('DataSet', ''))) }}"
+                },
+            {% endif %}
+            {{ extract_context_meta(value) }}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro extract_health_checks_meta(data) %}
+    {% for key, value in data.items() %}
+        {% if value is mapping %}
+            {% if 'httphealthcheck' in key.lower() %}
+                "httpHealthCheck": {
+                    "endpoint": "{{ value.get('endpoint', value.get('Endpoint', value.get('url', value.get('Url', '')))) }}",
+                    "portNumber": {{ value.get('portNumber', value.get('PortNumber', value.get('port', value.get('Port', -1)))) }}
+                },
+            {% elif 'tcphealthcheck' in key.lower() %}
+                "tcpHealthCheck": {
+                    "hostName": "{{ value.get('hostName', value.get('HostName', value.get('host', value.get('Host', '')))) }}",
+                    "portNumber": {{ value.get('portNumber', value.get('PortNumber', value.get('port', value.get('Port', -1)))) }}
+                },
+            {% endif %}
+            {{ extract_health_checks_meta(value) }}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro extract_rabbitmq_api_meta(data) %}
+    {% for key, value in data.items() %}
+        {% if value is mapping %}
+            {% if 'apioptions' == key.lower() %}
+                {
+                    "id": "{{ value.get('id', value.get('Id', '')) }}",
+                    "endpoint": "{{ value.get('url', value.get('Url', '')) }}"
+                },
+            {% endif %}
+            {{ extract_rabbitmq_api_meta(value) }}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro extract_rabbitmq_nodes(data) %}
+    {% if data is mapping %}
+        {% for key, value in data.items() %}
+            {% if value is sequence and value is not string %}
+                {% if 'nodes' == key.lower() %}
+                    {% for node in value %}
+                        {
+                            "id": "{{ node.get('name', node.get('Name', node.get('id', node.get('Id', '')))) }}",
+                            "hostName": "{{ node.get('hostName', node.get('HostName', '')) }}",
+                            "portNumber": {{ node.get('portNumber', node.get('PortNumber', node.get('port', node.get('Port', -1)))) }}
+                        },
+                    {% endfor %}
+                {% else %}
+                    {{ extract_rabbitmq_nodes(value) }}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{
+    "id":   {% if settings.id %}
+                "{{ settings.id }}"
+            {% elif settings.app and settings.app.id %}
+                "{{ settings.app.id }}"
+            {% elif settings.application and settings.application.id %}
+                "{{ settings.application.id }}"
+            {% elif settings.Application and settings.Application.Code %}
+                "{{ settings.Application.Code }}"
+             {% else %}
+                "{{ fallbacks.id }}"
+            {% endif %},
+    "name": {% if settings.name %}
+                "{{ settings.name }}"
+            {% elif settings.app and settings.app.name %}
+                "{{ settings.app.name }}"
+            {% elif settings.application and settings.application.name %}
+                "{{ settings.application.name }}"
+            {% elif settings.Application and settings.Application.Name %}
+                "{{ settings.Application.Name }}"
+            {% elif settings.service and settings.service.name %}
+                "{{ settings.service.name }}"
+            {% elif settings.app and settings.app.service and settings.app.service.name %}
+                "{{ settings.app.service.name }}"
+            {% else %}
+                "-"
+            {% endif %},
+    "description":  {% if settings.description %}
+                        "{{ settings.description }}"
+                    {% elif settings.app and settings.app.description %}
+                        "{{ settings.app.description }}"
+                    {% elif settings.application and settings.application.description %}
+                        "{{ settings.application.description }}"
+                    {% elif settings.Application and settings.Application.Description %}
+                        "{{ settings.Application.Description }}"
+                    {% elif settings.app and settings.app.service and settings.app.service.description %}
+                        "{{ settings.app.service.description }}"
+                    {% else %}
+                        "-"
+                    {% endif %},
+    "ipAddress":    {% if fallbacks.ipV4Address %}
+                        "{{ fallbacks.ipV4Address }}"
+                    {% else %}
+                        "127.0.0.1"
+                    {% endif %},
+    {{ extract_health_checks_meta(settings) }}
+    "dependsOn": {{ settings|discover_dependencies }}
+}

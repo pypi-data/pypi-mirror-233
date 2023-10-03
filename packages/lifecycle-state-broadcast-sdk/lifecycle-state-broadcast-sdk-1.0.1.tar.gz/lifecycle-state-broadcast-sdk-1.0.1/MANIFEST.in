@@ -1,0 +1,2 @@
+recursive-include lifecyclestatebroadcastsdk/templates *
+recursive-exclude * *.py[co]
