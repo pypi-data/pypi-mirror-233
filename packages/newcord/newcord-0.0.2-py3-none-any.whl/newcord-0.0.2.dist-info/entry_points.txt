@@ -1,0 +1,4 @@
+[console_scripts]
+nc=newcord.main:app
+newcord=newcord.main:app
+
