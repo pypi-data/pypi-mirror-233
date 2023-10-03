@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: komodo-cli
+Version: 0.0.2
+Summary: A CLI client for Komodo AI
+Home-page: https://github.com/kmushegi/puma_cli
+Author: kmushegi
+Author-email: mushegiani@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/kmushegi/puma_cli/archive/0.0.2.tar.gz
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Requires-Dist: click
+
+# komodo_cli
+
+A CLI client for Komodo AI
+
+## Project Features
+
+* [komodo_cli](http://komodo_cli.readthedocs.io/)
+* a starter [Click](http://click.pocoo.org/5/) command-line application
+* automated unit tests you can run with [pytest](https://docs.pytest.org/en/latest/)
+* a [Sphinx](http://www.sphinx-doc.org/en/master/) documentation project
+
+## Getting Started
+
+The project's documentation contains a section to help you
+[get started](https://komodo_cli.readthedocs.io/en/latest/getting_started.html) as a developer or
+user of the library.
+
+## Development Prerequisites
+
+If you're going to be working in the code (rather than just using the library), you'll want a few utilities.
+
+* [GNU Make](https://www.gnu.org/software/make/)
+* [Pandoc](https://pandoc.org/)
+
+## Resources
+
+Below are some handy resource links.
+
+* [Project Documentation](http://komodo_cli.readthedocs.io/)
+* [Click](http://click.pocoo.org/5/) is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary.
+* [Sphinx](http://www.sphinx-doc.org/en/master/) is a tool that makes it easy to create intelligent and beautiful documentation, written by Geog Brandl and licnsed under the BSD license.
+* [pytest](https://docs.pytest.org/en/latest/) helps you write better programs.
+* [GNU Make](https://www.gnu.org/software/make/) is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
+
+
+## Authors
+
+* **kmushegi** - *Initial work* - [github](https://github.com/kmushegi)
+
+See also the list of [contributors](https://github.com/kmushegi/puma_cli/contributors) who participated in this project.
+
+## LicenseCopyright (c) kmushegi
+
+All rights reserved.
+
