@@ -1,0 +1,146 @@
+Metadata-Version: 2.1
+Name: wolf_core
+Version: 2.0.1
+Summary: This is a core package for the Wolf project.
+License: GPL-3.0-or-later
+Author: sedelpeuch
+Author-email: sebastien@delpeuch.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: alabaster (==0.7.13)
+Requires-Dist: attrs (==23.1.0)
+Requires-Dist: babel (==2.12.1)
+Requires-Dist: build (==0.10.0)
+Requires-Dist: cachecontrol (==0.12.11)
+Requires-Dist: certifi (==2023.5.7)
+Requires-Dist: charset-normalizer (==3.1.0)
+Requires-Dist: cleo (==2.0.1)
+Requires-Dist: crashtest (==0.4.1)
+Requires-Dist: cryptography (==40.0.2)
+Requires-Dist: distlib (==0.3.6)
+Requires-Dist: docutils (==0.18.1)
+Requires-Dist: dulwich (==0.21.5)
+Requires-Dist: filelock (==3.12.0)
+Requires-Dist: html5lib (==1.1)
+Requires-Dist: idna (==3.4)
+Requires-Dist: imagesize (==1.4.1)
+Requires-Dist: importlib-metadata (==6.6.0)
+Requires-Dist: installer (==0.7.0)
+Requires-Dist: jaraco-classes (==3.2.3)
+Requires-Dist: jeepney (==0.8.0)
+Requires-Dist: jinja2 (==3.1.2)
+Requires-Dist: jsonschema (==4.17.3)
+Requires-Dist: keyring (==23.13.1)
+Requires-Dist: lockfile (==0.12.2)
+Requires-Dist: markdown-it-py (==2.2.0)
+Requires-Dist: markupsafe (==2.1.2)
+Requires-Dist: mdit-py-plugins (==0.3.5)
+Requires-Dist: mdurl (==0.1.2)
+Requires-Dist: more-itertools (==9.1.0)
+Requires-Dist: msgpack (==1.0.5)
+Requires-Dist: mysql-connector-python (==8.1.0)
+Requires-Dist: myst-parser (==1.0.0)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: pexpect (==4.8.0)
+Requires-Dist: pip (==22.0.0)
+Requires-Dist: pkginfo (==1.9.6)
+Requires-Dist: platformdirs (==3.5.1)
+Requires-Dist: poetry (==1.5.0)
+Requires-Dist: poetry-core (==1.6.0)
+Requires-Dist: poetry-plugin-export (==1.3.1)
+Requires-Dist: ptyprocess (==0.7.0)
+Requires-Dist: pycparser (==2.21)
+Requires-Dist: pygments (==2.15.1)
+Requires-Dist: pyproject-hooks (==1.0.0)
+Requires-Dist: pyrsistent (==0.19.3)
+Requires-Dist: pyyaml (==6.0)
+Requires-Dist: rapidfuzz (==2.15.1)
+Requires-Dist: requests (==2.30.0)
+Requires-Dist: requests-toolbelt (==1.0.0)
+Requires-Dist: schedule (==1.2.0)
+Requires-Dist: secretstorage (==3.3.3)
+Requires-Dist: shellingham (==1.5.0.post1)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: snowballstemmer (==2.2.0)
+Requires-Dist: sphinx (==5.3.0)
+Requires-Dist: sphinx-rtd-theme (==1.2.0)
+Requires-Dist: sphinxcontrib-applehelp (==1.0.2)
+Requires-Dist: sphinxcontrib-devhelp (==1.0.2)
+Requires-Dist: sphinxcontrib-htmlhelp (==2.0.0)
+Requires-Dist: sphinxcontrib-jquery (==4.1)
+Requires-Dist: sphinxcontrib-jsmath (==1.0.1)
+Requires-Dist: sphinxcontrib-qthelp (==1.0.3)
+Requires-Dist: sphinxcontrib-serializinghtml (==1.1.5)
+Requires-Dist: tomli (==2.0.1)
+Requires-Dist: tomlkit (==0.11.8)
+Requires-Dist: trove-classifiers (==2023.5.2)
+Requires-Dist: urllib3 (==1.26.15)
+Requires-Dist: virtualenv (==20.23.0)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: zipp (==3.15.0)
+Description-Content-Type: text/markdown
+
+# Projet Wolf-Core
+
+Wolf-Core Status
+
+Le projet Wolf est un projet ayant pour but de créer un environnement d'interconnexion entre les différents outils pouvant être utilisés dans la gestion d'associations, de projets
+etc
+
+## Installation
+
+Pour installer le projet, suivez les instructions ci-dessous :
+
+Clonez le projet sur votre machine en utilisant la commande suivante :
+bash
+
+```bash
+git clone git@github.com:sedelpeuch/wolf-core.git
+```
+
+### Installation
+
+Créez un environnement virtuel et installez le package :
+
+```bash
+python3 -m pip install virtualenv
+python3 -m virtualenv venv
+source venv/bin/activate
+pip install poetry
+poetry install
+
+```
+
+## Documentation
+
+La documentation complète du projet est disponible dans le répertoire /docs. Vous pouvez consulter cette documentation
+pour en savoir plus sur les
+fonctionnalités du projet et son utilisation.
+
+## Contributions
+
+Nous accueillons avec plaisir les contributions à notre projet ! Si vous souhaitez contribuer, veuillez suivre les
+étapes suivantes :
+
+- Forker le dépôt
+- Créer une nouvelle branche
+- Effectuer vos modifications
+- Valider vos changements
+- Pousser votre branche
+- Soumettre une pull request
+
+Nous apprécions les contributions de la communauté pour améliorer et faire évoluer le projet Wolf !
+
+## Licence
+
+Ce projet est distribué sous licence GPL3. Pour plus d'informations, veuillez consulter le fichier LICENSE.
+
+Nous espérons que le projet Wolf répondra à vos besoins de gestion des ressources internes. N'hésitez pas à nous
+contacter si vous avez des questions
+ou des commentaires. Merci de votre intérêt pour notre projet !
+
