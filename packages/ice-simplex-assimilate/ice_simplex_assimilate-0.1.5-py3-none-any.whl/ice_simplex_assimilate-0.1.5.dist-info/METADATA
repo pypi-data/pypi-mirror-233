@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ice-simplex-assimilate
+Version: 0.1.5
+Summary: 
+Author: Oscar Laird
+Author-email: olaird25@gmail.com
+Requires-Python: >=3.11,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pytest (>=7.3.2,<8.0.0)
+Requires-Dist: simplex-assimilate (>=0.2.0,<0.3.0)
+Requires-Dist: tqdm (>=4.65.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+
