@@ -1,0 +1,14 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+llamazure/__init__.py
+llamazure.tresource.egg-info/PKG-INFO
+llamazure.tresource.egg-info/SOURCES.txt
+llamazure.tresource.egg-info/dependency_links.txt
+llamazure.tresource.egg-info/namespace_packages.txt
+llamazure.tresource.egg-info/requires.txt
+llamazure.tresource.egg-info/top_level.txt
+llamazure/tresource/__init__.py
+llamazure/tresource/itresource.py
+llamazure/tresource/mp.py
+llamazure/tresource/tresource.py

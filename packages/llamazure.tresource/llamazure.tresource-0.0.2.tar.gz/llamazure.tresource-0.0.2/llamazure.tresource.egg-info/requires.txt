@@ -1,0 +1,1 @@
+llamazure.rid==0.0.5
