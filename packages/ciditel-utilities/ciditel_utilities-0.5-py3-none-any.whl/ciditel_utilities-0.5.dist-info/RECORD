@@ -1,0 +1,14 @@
+ciditel_utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ciditel_utilities/strings.py,sha256=WzQbyoLH-NGYpxY1wk_n3vCxbbxdbvo22cS6BzUBQT0,2518
+ciditel_utilities/validate.py,sha256=tdNhQc9Aq0ZV05vkyKRCDX_ZWe9OfSuQTahEAPUR1qo,2420
+utilities_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utilities_test/ciditel_utilities.py,sha256=Kkit9X-DHJ2S77kncCi_7VG8HSpYuyk9KFhrsiRiKFs,4564
+utilities_test/utilities.py,sha256=sgymzyK171AWJN6774VC676wWpuqqvmEY87H28mM4tw,2175
+verificaciones/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+verificaciones/strings.py,sha256=WzQbyoLH-NGYpxY1wk_n3vCxbbxdbvo22cS6BzUBQT0,2518
+verificaciones/validate.py,sha256=tdNhQc9Aq0ZV05vkyKRCDX_ZWe9OfSuQTahEAPUR1qo,2420
+ciditel_utilities-0.5.dist-info/LICENSE.txt,sha256=CJ6AH9DNjgJYoeH-ImoQRrstcCpTSaDvWg4jKzmilZQ,1067
+ciditel_utilities-0.5.dist-info/METADATA,sha256=Q6IwPDUc3Xd4xwt9_R1VpOQbpzCc0yaDrB3ljZcY27I,121
+ciditel_utilities-0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ciditel_utilities-0.5.dist-info/top_level.txt,sha256=_1PDprJ8U687-OoxQ7516eTglLV7bh5ZMuzC6MhjzVE,18
+ciditel_utilities-0.5.dist-info/RECORD,,
