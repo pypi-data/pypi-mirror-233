@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: saluda
+Version: 0.0.1
+Summary: Paquete de pruebas
+Home-page: https://github.com/jaimefeldman/saludador
+Author: jimix
+Author-email: jaimefel@arjancodes.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich >=13.5.3
+Provides-Extra: dev
+Requires-Dist: pytest >=7.0 ; extra == 'dev'
+Requires-Dist: twine >=4.0.2 ; extra == 'dev'
+
+# Projecto pruebas en python
+---
+Paquete que instala la aplicacion saluda, solo para probar como empaquetar con python usando dependencias y descargando desde PyPi.
+
+### Aspectos técnicos 
+
+
+Luego es importante incluir en el archivo `setup.py`
+
+`include_package_data=True,`
+
+
+
+## Instalación 
+
+### Dentro del direcotrio del proyecto pruebas ejecutar:
+```cmd
+## Uso
+
+
+## Contribuciones
+Son bienvenidos las peticiones de pull, vea primero la lista de asuntos en discución de que le gutaría modificar.
+
+## Liciencia
+[MIT](https://opensource.org/licenses/mit-license.php)
