@@ -1,0 +1,14 @@
+ambars_sudoku_solver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ambars_sudoku_solver/helpers/__init__.py,sha256=cO0abEoyvz6Y757-4PPhroB7OY-yKUwuId99Hdm9JdE,684
+ambars_sudoku_solver/helpers/errors.py,sha256=5fIndmcBQYc-xX0QvIoOC4kY8cYtFWSMq2VzTynTSqA,342
+ambars_sudoku_solver/helpers/generate_problems.py,sha256=LKJxzXe0ynagyFtSjy3C26kIDZzQyUgCKa5z6RLSn7U,3102
+ambars_sudoku_solver/helpers/timer.py,sha256=FqUdA6Q6EmDf8HwNRpbZBH5T2wJgnT0DtRU2nZEEvkc,369
+ambars_sudoku_solver/helpers/types.py,sha256=IZiliLeVxuEMrZPO_ksbAO7MFLlkXoFaw2PttOrPGiQ,329
+ambars_sudoku_solver/settings.py,sha256=OCAEBmQoTdW_HnKD9pzAjn2Tps9OKXU4H5bEFW9Gyik,508
+ambars_sudoku_solver/solvers/backtracking_solution.py,sha256=VOwmp14Ikb5aYghNPx8eGElILeiQDaSFNzLn4QyynOs,2078
+ambars_sudoku_solver/solvers/no_backtracking_solution.py,sha256=1XUuVEVifjq2TxUdZLB6kYBR-PMExDWMfXOppUl5jEU,1953
+ambars_sudoku_solver/sudoku_cube.py,sha256=D2C5hrnBB47V-8yTjhV1vvN3km-Ss7j0YTY78SmVDi8,5046
+ambars_sudoku_solver-0.1.0.dist-info/LICENSE,sha256=EWUwyzGEss5cZgn7b-eBzx5NvSEqNGl1T76mccwfeVc,1066
+ambars_sudoku_solver-0.1.0.dist-info/METADATA,sha256=mGn9_qIf8VtDbL6Os7hw-8oBYDcCxD0eFl6PS16THI4,839
+ambars_sudoku_solver-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+ambars_sudoku_solver-0.1.0.dist-info/RECORD,,

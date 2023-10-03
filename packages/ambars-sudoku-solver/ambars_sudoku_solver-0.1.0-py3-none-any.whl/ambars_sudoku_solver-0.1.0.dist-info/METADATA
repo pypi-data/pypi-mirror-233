@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ambars-sudoku-solver
+Version: 0.1.0
+Summary: Package for solving and creating sudoku problems
+License: MIT
+Author: Ambar Das
+Author-email: ambardeepdas@yahoo.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# Sudoku Helper Solver Package
+
+Pypi package for solving and creating sudoku problems.
+
+For a more in-depth look into the purpose and inspiration of the projecy please checkout the backed project that this package aims to serve
+[github.com --> sudoku-helper-solver-backend](https://github.com/DoctorrDeep/sudoku-helper-solver-backend)
+
+The end product of this package ends up in this website: [ambardas.nl](https://ambardas.nl)
+
