@@ -1,0 +1,11 @@
+pulp-glue==0.20.6
+click<8.1.4,>=8.0.0
+PyYAML<6.1,>=5.3
+schema<0.8,>=0.7.5
+toml<0.11,>=0.10.2
+
+[pygments]
+pygments
+
+[shell]
+click-shell~=2.1
