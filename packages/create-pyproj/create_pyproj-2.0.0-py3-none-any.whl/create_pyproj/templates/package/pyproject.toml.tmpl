@@ -1,0 +1,45 @@
+[project]
+authors = [
+  {name = "${author}", email = "${author_email}"},
+]
+description = "${description}"
+dynamic = ["version", "readme"]
+name = "${projectname}"
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md"}
+version = {file = "VERSION"}
+
+[tool.black]
+
+[tool.isort]
+profile = "black"
+
+[tool.docformatter]
+black = true
+in-place = true
+recursive = true
+style = "google"
+
+[tool.semantic_release]
+branch = "main"
+build_command = false
+commit_message = "automatically generated v{version}"
+commit_subject = "chore(release): {version} [skip ci]"
+commit_version_number = true
+gitlab_token_var = "GITLAB_TOKEN"
+hvcs = "gitlab"
+include_additional_files = "VERSION"
+pre_commit_command = "python scripts/pre_commit.py $(semantic-release print-version)"
+tag_commit = true
+upload_to_repository = false
+version_source = "tag"
+version_variable = "src/__init__.py:__version__"
+
+[tool.pytest.ini_options]
+addopts = "-vv -n auto --doctest-modules"
+log_file = "logs/pytest.log"
+log_file_level = "DEBUG"
+markers = ["dbmocked: mark a test as using a mocked database"]
+pythonpath = ["src", "test"]
+testpaths = ["test"]
