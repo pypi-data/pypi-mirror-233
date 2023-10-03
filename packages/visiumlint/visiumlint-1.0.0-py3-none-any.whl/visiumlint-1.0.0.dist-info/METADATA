@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: visiumlint
+Version: 1.0.0
+Summary: All of your favorite linters and formatters gathered in a single command.
+License-File: LICENSE
+Requires-Dist: black
+Requires-Dist: isort
+Requires-Dist: mypy
+Requires-Dist: pydocstyle
+Requires-Dist: pylint
+Requires-Dist: typer
+
