@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+aws_assume_role_otp/__init__.py
+aws_assume_role_otp/config.py
+aws_assume_role_otp/credentials.py
+aws_assume_role_otp/encryption.py
+aws_assume_role_otp/main.py
+aws_assume_role_otp/sts.py
+aws_assume_role_otp.egg-info/PKG-INFO
+aws_assume_role_otp.egg-info/SOURCES.txt
+aws_assume_role_otp.egg-info/dependency_links.txt
+aws_assume_role_otp.egg-info/entry_points.txt
+aws_assume_role_otp.egg-info/requires.txt
+aws_assume_role_otp.egg-info/top_level.txt

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "aws_assume_role_otp"
+version = "0.3"
+description = "A CLI tool to assume a role on AWS using MFA"
+authors = [
+  { name="Fábio Paiva", email="fabio@paiva.info" },
+]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/fabiopaiva/aws-assume-role-otp"
+"Bug Tracker" = "https://github.com/fabiopaiva/aws-assume-role-otp/issues"
+
+[project.scripts]
+aws-assume-role-otp = "aws_assume_role_otp.main:app"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
