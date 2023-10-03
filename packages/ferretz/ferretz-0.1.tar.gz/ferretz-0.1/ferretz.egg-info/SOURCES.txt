@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ferretz/__init__.py
+ferretz/ferretz.py
+ferretz.egg-info/PKG-INFO
+ferretz.egg-info/SOURCES.txt
+ferretz.egg-info/dependency_links.txt
+ferretz.egg-info/entry_points.txt
+ferretz.egg-info/top_level.txt
