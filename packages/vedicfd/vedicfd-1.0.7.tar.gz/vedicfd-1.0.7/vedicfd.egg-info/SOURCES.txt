@@ -1,0 +1,6 @@
+setup.py
+vedicfd.egg-info/PKG-INFO
+vedicfd.egg-info/SOURCES.txt
+vedicfd.egg-info/dependency_links.txt
+vedicfd.egg-info/requires.txt
+vedicfd.egg-info/top_level.txt
