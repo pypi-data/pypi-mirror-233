@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pyfmg_ng.egg-info/PKG-INFO
+pyfmg_ng.egg-info/SOURCES.txt
+pyfmg_ng.egg-info/dependency_links.txt
+pyfmg_ng.egg-info/requires.txt
+pyfmg_ng.egg-info/top_level.txt
