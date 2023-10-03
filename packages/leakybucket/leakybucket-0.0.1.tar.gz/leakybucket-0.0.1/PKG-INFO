@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: leakybucket
+Version: 0.0.1
+Summary: Template project for a hydrological model BMI for eWaterCycle.
+Author-email: Bart Schilperoort <b.schilperoort@esciencecenter.nl>
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Requires-Dist: bmipy
+Requires-Dist: netcdf4
+Requires-Dist: numpy
+Requires-Dist: xarray
