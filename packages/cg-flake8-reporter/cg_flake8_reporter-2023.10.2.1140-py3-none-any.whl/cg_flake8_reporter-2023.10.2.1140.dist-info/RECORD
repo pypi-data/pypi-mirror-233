@@ -1,0 +1,6 @@
+cg_flake8_reporter/__init__.py,sha256=nWGk8hqWGq7VZVsuZcnBUydh3BLt5VHg_FDSQiz5luY,136
+cg_flake8_reporter/plugin.py,sha256=zGdwsS12ub6wFwVX6_KvcBGm2KansgYQeu4zM65N5I4,8778
+cg_flake8_reporter-2023.10.2.1140.dist-info/METADATA,sha256=OVN1CsH2QjbgC8x0PuaURLeXbnr_QLDy-jkYVPpfHP4,4435
+cg_flake8_reporter-2023.10.2.1140.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+cg_flake8_reporter-2023.10.2.1140.dist-info/entry_points.txt,sha256=76eEL_t8HJ4UXU46Hqd_hAsHZqNeqrS5_P87QS1Iw94,71
+cg_flake8_reporter-2023.10.2.1140.dist-info/RECORD,,
