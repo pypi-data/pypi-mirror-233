@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dihub
+Version: 0.1.9
+Summary: DIHub is a dependency injection framework for Python
+Home-page: https://github.com/alfarih31/dihub
+License: BSD
+Author: Alfarih Faza
+Author-email: alfarihfz@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/alfarih31/dihub
+Description-Content-Type: text/markdown
+
+# DIHub
+
+DIHub is a dependency injection framework for Python
