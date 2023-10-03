@@ -1,0 +1,3 @@
+[console_scripts]
+apm=apm4py.cli:main
+

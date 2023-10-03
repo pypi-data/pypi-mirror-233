@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: apm4py
+Version: 0.1.13
+Summary: apm4py is a Python API for Appian Process Mining (APM)
+Author: Appian
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pandas (>=2.0.3,<3.0.0)
+Requires-Dist: polars (>=0.18.4,<0.19.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: tqdm (>=4.65.0,<5.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# apm4py
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg
+)](https://www.python.org/downloads/release/python-374/)
+[![apm4py](https://img.shields.io/badge/apm4py-v0.2.1-blue)](https://pypi.org/project/apm4py/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/lanalabs/apm4py/graphs/commit-activity)
+
+apm4py is Python API for [Appian Process Mining](https://appian.com/). It focuses on resource management, but provides methods that can be used to access the processed data as well.
+
+This package is still in initial development state. Anything may change at any time. The public API should not be considered stable.
+
+## Installation
+
+You can install apm4py directly from PyPi with e.g. 
+
+```bash
+$ pip install apm4py
+```
+
+# How to get started
+
+To connect with an api at e.g. 'https://cloud-backend.lanalabs.com', first create an API with
+
+```python
+from apm4py import create_api
+
+api = create_api('https', 'cloud-backend.lanalabs.com', API_KEY)
+```
+
+# Using the Command Line
+
+Command line currently only supports uploading event logs. Four files for the event log have to be in one folder and follow the convention:
+* event log CSV has "event" in the file name
+* case attribute CSV has "case" in the file name
+* event log semantics json have "event" in the file name
+* case attribute log semantics json have "case" in the file name
+
+See ./tests/data/incident_management as an example.
+
+To install the CLI globally, use [pipx](https://pypa.github.io/pipx/installation/):
+```bash
+pipx install apm4py
+apm upload --name "Incident Management" tests/data/incident_management
+apm list-logs
+```
+
+It will prompt you for host settings on the first run and also supports having multiple profiles with different hosts. Similar as the aws-cli. Profiles are saved in `~/.apm/`.
+
+If you want to run the command line client from source, you have to prepend `poetry run` before any `apm` command. For example `poetry run apm list-logs`.
+
+## Growing event logs
+
+apm4py comes with a utility called `log grower` that allows to grow existing event logs by copying there content as many times as wanted. While copying the events and cases it makes sure to alter the CaseIDs so that new cases are created. Thereby, the structure of the event log is preserved. That is, the number of activities and the number of variants stay the same. 
+
+It expects an existing event log with four files in one folder as described above. In order to generate a 10 times larger event log from the incident management data set provided in the test data of this repository, you can run
+
+```bash
+apm grow-log ./tests/data/incident_management \
+    --csv-separator ";" \
+    --output-csv \
+    --growth-factor 10
+```
+
+
+# Building and installing from source
+```bash
+poetry install
+poetry build
+pip install /dist/apm4py-0.X.Y-py3-none-any.whl
+```
+
+
+# How to contribute
+
+See the details in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+# License
+
+[Apache License 2.0](http://www.apache.org/licenses/)
+
+
