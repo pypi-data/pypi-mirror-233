@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "problem_bank_helpers"
+version = "0.2.4"
+description = "Helpful utilities for the open problem bank."
+authors = ["Firas Moosvi and Jake Bobowski"]
+license = "MIT"
+readme = "README.md"
+documentation = "https://problem_bank_helpers.readthedocs.io/en/latest/"
+homepage = "https://github.com/open-resources/problem_bank_helpers"
+repository = "https://github.com/open-resources/problem_bank_helpers"
+include = [{ path = "data/", format = ["sdist", "wheel"]}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sigfig = "^1.1.9"
+numpy = "^1.20.3"
+pandas = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
