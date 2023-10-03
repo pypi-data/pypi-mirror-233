@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import os
+import re
+from fire import Fire
+from functools import partial
+
+from traxix.trixli.utils import _f, match_in_file, _ex
+
+
+def fr(*regexps, x=None, e=None, p=".", i=None, ml: int = 200):
+    """
+    Equivalent to find $p -name "*\.$e" -exec grep -nH $regexps '{}' \;
+    but shorter and allow multiple regexps
+
+    Args
+    e: file name contains
+    x: extension of files
+    p: path from where to walk
+    i: ignore files
+    ml: max line length
+    """
+    e = _ex(e, x)
+
+    compiled_re = [re.compile("(" + str(regexp) + ")") for regexp in regexps]
+    _f(
+        paths=e,
+        p=p,
+        functor=partial(match_in_file, max_len=ml, compiled_re=compiled_re),
+        ignore=i,
+    )
+
+
+if __name__ == "__main__":
+    Fire(fr)

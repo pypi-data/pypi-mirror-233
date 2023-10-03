@@ -1,0 +1,22 @@
+# from chatGP
+import sys
+import base64
+import json
+
+
+line = ""
+for chunk in sys.stdin:
+    line += chunk.strip()
+    print(line)
+
+print(f"--{line}--")
+
+decoded_data = base64.b64decode(input_data).decode("utf-8")
+
+
+try:
+    decoded_data = json.loads(decoded_data)
+except ValueError:
+    pass
+
+print(decoded_data)

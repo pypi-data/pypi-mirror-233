@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import os
+import re
+
+from fire import Fire
+from traxix.trixli.utils import _f, _ex
+
+
+def printer(path):
+    print(path)
+
+
+def f(*args, p=".", x=None, i=None):
+    """
+    find all the path matching all the *args given
+    Args:
+    p: path from where to begin
+    e: file extension
+
+    Example:
+    f foo bar
+    is equivalent to find . |grep foo |grep bar
+
+    f -p /tmp -e py hello world
+    find /tmp -name "*.py" |grep hello |grep world
+    """
+
+    e = _ex(args, x)
+
+    _f(paths=e, p=p, functor=printer, ignore=i)
+
+
+if __name__ == "__main__":
+    Fire(f)

@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import os
+import re
+
+from fire import Fire
+from traxix.trixli.utils import _f
+
+
+def functor(path):
+    print(path)
+
+
+def fp(p, *args, e=None):
+    if e:
+        args = list(args)
+        args.append(f"{e}$")
+    _f(*args, p=p, functor=functor)
+
+
+if __name__ == "__main__":
+    Fire(fp)

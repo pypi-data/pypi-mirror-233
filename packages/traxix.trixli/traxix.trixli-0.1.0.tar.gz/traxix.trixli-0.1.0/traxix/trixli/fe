@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+
+import os
+import re
+from functools import partial
+from fire import Fire
+from traxix.trixli.utils import _f, _ex
+
+
+def functor(accumulator, path):
+    print(len(accumulator), path)
+    accumulator.append(path)
+
+
+def open_file(filepath):
+    editor = os.environ["EDITOR"]
+    os.system(f"{editor} {filepath} &")
+
+
+def fe(*args, p=".", x=None):
+    """List files matching and ofer to open them with emacsclient"""
+
+    e = _ex(args, x)
+    results = []
+    accumulator = []
+
+    try:
+        _f(paths=e, p=p, functor=partial(functor, accumulator=accumulator))
+    except KeyboardInterrupt:
+        pass
+
+    if len(accumulator) == 1:
+        open_file(accumulator[0])
+        return
+
+    if len(accumulator) == 0:
+        return
+
+    file_to_open = input("file to open: ")
+    if file_to_open == "":
+        file_to_open = "0"
+    open_file(accumulator[int(file_to_open)])
+
+
+if __name__ == "__main__":
+    Fire(fe)
