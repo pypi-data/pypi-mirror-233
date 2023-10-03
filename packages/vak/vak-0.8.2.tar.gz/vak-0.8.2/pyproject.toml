@@ -1,0 +1,85 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "vak"
+description = "a neural network toolbox for animal vocalizations and bioacoustics"
+version = "0.8.2"
+authors = [
+    {name = "David Nicholson", email = "nickledave@users.noreply.github.com"}
+]
+classifiers = [
+        'License :: OSI Approved :: BSD License',
+        'Development Status :: 5 - Production/Stable',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: Implementation :: CPython'
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+    "attrs >=19.3.0",
+    "crowsetta >=3.4.0, <4.0.0",
+    "dask >=2.10.1",
+    "evfuncs >=0.3.4",
+    "joblib >=0.14.1",
+    "matplotlib >=3.3.3",
+    "numpy >=1.18.1",
+    "scipy >=1.4.1",
+    "SoundFile >=0.10.3",
+    "pandas >=1.0.1",
+    "tensorboard >=2.8.0",
+    "toml >=0.10.2",
+    "torch >=1.7.1",
+    "torchvision >=0.5.0",
+    "tqdm >=4.42.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "twine >=3.3.0",
+    "black >=20.8b1",
+    "ipython >=7.0"
+]
+test = [
+    "pytest >=6.2.1",
+    "pytest-cov >=2.11.1",
+    "tweetynet >=0.7.0",
+]
+doc = [
+    "furo >=2022.1.2",
+    "myst-parser >=0.17.0",
+    "sphinx >=3.4.1",
+    "sphinxext-opengraph >=0.5.1",
+    "sphinx-autobuild >=2021.3.14",
+    "sphinx-copybutton >=0.4.0",
+    "sphinx-tabs >=3.4.1",
+]
+
+[project.urls]
+Source = "https://github.com/vocalpy/vak"
+Documentation = "https://vak.readthedocs.io"
+
+[project.scripts]
+vak = 'vak.__main__:main'
+
+[project.entry-points."vak.models"]
+TeenyTweetyNetModel = 'vak.models.teenytweetynet:TeenyTweetyNetModel'
+
+[project.entry-points."vak.metrics"]
+Accuracy = 'vak.metrics.Accuracy'
+Levenshtein = 'vak.metrics.Levenshtein'
+SegmentErrorRate = 'vak.metrics.SegmentErrorRate'
+
+[tool.flit.sdist]
+exclude = [
+    "tests/data_for_tests"
+]
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore:::.*torch.utils.tensorboard",]
