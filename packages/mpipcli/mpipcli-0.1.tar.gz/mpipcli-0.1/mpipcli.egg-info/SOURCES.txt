@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mpip/__init__.py
+mpip/cli.py
+mpipcli.egg-info/PKG-INFO
+mpipcli.egg-info/SOURCES.txt
+mpipcli.egg-info/dependency_links.txt
+mpipcli.egg-info/entry_points.txt
+mpipcli.egg-info/requires.txt
+mpipcli.egg-info/top_level.txt
