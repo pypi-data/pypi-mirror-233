@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: superduperreload
+Version: 0.0.2
+Summary: IPyflow-friendly autoreload algorithm
+Home-page: https://github.com/ipyflow/superduperreload
+Author: Stephen Macke
+Author-email: stephen.macke@gmail.com
+License: BSD-3-Clause
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+Provides-Extra: typecheck
+Provides-Extra: test
+Provides-Extra: dev
+License-File: LICENSE
+License-File: COPYING.rst
+
+# Superduperreload
+
+
+[![](https://github.com/ipyflow/superduperreload/workflows/superduperreload/badge.svg)](https://github.com/ipyflow/superduperreload/actions)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+About
+-----
+Superduperreload is an IPyflow-friendly autoreload algorithm.

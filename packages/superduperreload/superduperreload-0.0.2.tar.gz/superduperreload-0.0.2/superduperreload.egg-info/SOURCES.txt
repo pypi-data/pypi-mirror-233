@@ -1,0 +1,16 @@
+COPYING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+core/superduperreload/_version.py
+superduperreload.egg-info/PKG-INFO
+superduperreload.egg-info/SOURCES.txt
+superduperreload.egg-info/dependency_links.txt
+superduperreload.egg-info/not-zip-safe
+superduperreload.egg-info/requires.txt
+superduperreload.egg-info/top_level.txt

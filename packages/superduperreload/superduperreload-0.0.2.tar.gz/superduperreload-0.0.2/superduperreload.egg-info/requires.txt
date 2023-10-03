@@ -1,0 +1,12 @@
+superduperreload-core==0.0.2
+ipykernel
+ipython
+
+[dev]
+superduperreload-core[dev]
+
+[test]
+superduperreload-core[test]
+
+[typecheck]
+superduperreload-core[typecheck]
