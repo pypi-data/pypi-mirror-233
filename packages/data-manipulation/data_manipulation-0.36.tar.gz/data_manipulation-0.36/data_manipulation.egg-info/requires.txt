@@ -1,0 +1,10 @@
+beautifulsoup4
+django
+lxml
+matplotlib
+mysql-connector-python
+pandas
+psycopg2
+pyspark
+tqdm
+xlsxwriter
