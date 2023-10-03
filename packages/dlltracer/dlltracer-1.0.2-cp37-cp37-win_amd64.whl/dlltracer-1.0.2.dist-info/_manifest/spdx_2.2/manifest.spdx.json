@@ -1,0 +1,178 @@
+{
+  "files": [
+    {
+      "fileName": "./dlltracer-1.0.2.dist-info/WHEEL",
+      "SPDXID": "SPDXRef-File--dlltracer-1.0.2.dist-info-WHEEL-840D3112BBD2FB2E2B8BEE6B8CDFE72BA278CCA5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "361c34085d04844bd2767281da6b4ba5a022066612ecfc99b4e3cae29ae9f700"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "840d3112bbd2fb2e2b8bee6b8cdfe72ba278cca5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./dlltracer/__init__.py",
+      "SPDXID": "SPDXRef-File--dlltracer---init--.py-2C832A468E40747AC627B027480D3E855100FBFD",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "27277f50653d531b6374584071a3ac4051d6ffae8f730a85b4b808cdcd4f7b0b"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "2c832a468e40747ac627b027480d3e855100fbfd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./dlltracer/_native.cp37-win_amd64.pyd",
+      "SPDXID": "SPDXRef-File--dlltracer--native.cp37-win-amd64.pyd-404240EB8CDF92208F6863CD871194C710ED7003",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b89a1b56c4814a90412b1a260452f7c596cab6705222edd84ff670c93d45c2aa"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "404240eb8cdf92208f6863cd871194c710ed7003"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./__state.txt",
+      "SPDXID": "SPDXRef-File----state.txt-BEAF358738EB578E1F1F6F7408F3562EC42A1CE9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "db0065b06761f9286c67f6285d240a7c19864e60f650e0fc333b0a44362f80bb"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "beaf358738eb578e1f1f6f7408f3562ec42a1ce9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./dlltracer-1.0.2.dist-info/METADATA",
+      "SPDXID": "SPDXRef-File--dlltracer-1.0.2.dist-info-METADATA-583DA89978D7B39ABCC13BCEFEF213CFEA605CC4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c08f5feb12a8d2c3a936d8f7c80f8880113b339b6e0e1c9d115d4ea774a5e5db"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "583da89978d7b39abcc13bcefef213cfea605cc4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Azure Pipelines Hosted Image win22",
+      "SPDXID": "SPDXRef-Package-A15567A9529B64F1D7D948030B4E9884C2C8217C5DE448A6D79DFEAFC4592D66",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "20230910.1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "https://github.com/actions/virtual-environments"
+        }
+      ],
+      "supplier": "Organization: Microsoft/GitHub"
+    },
+    {
+      "name": "dlltracer-python",
+      "SPDXID": "SPDXRef-RootPackage",
+      "downloadLocation": "NOASSERTION",
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "dbf3af7c4a6adc9c33ccc9c0824663c81f4e2282"
+      },
+      "filesAnalyzed": true,
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "22638199",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:swid/Microsoft/sbom.microsoft/dlltracer-python@22638199?tag_id=baa11594-5134-4a62-b715-d05670e3eb63"
+        }
+      ],
+      "supplier": "Organization: Microsoft",
+      "hasFiles": [
+        "SPDXRef-File--dlltracer-1.0.2.dist-info-METADATA-583DA89978D7B39ABCC13BCEFEF213CFEA605CC4",
+        "SPDXRef-File----state.txt-BEAF358738EB578E1F1F6F7408F3562EC42A1CE9",
+        "SPDXRef-File--dlltracer--native.cp37-win-amd64.pyd-404240EB8CDF92208F6863CD871194C710ED7003",
+        "SPDXRef-File--dlltracer---init--.py-2C832A468E40747AC627B027480D3E855100FBFD",
+        "SPDXRef-File--dlltracer-1.0.2.dist-info-WHEEL-840D3112BBD2FB2E2B8BEE6B8CDFE72BA278CCA5"
+      ]
+    }
+  ],
+  "externalDocumentRefs": [],
+  "relationships": [
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-A15567A9529B64F1D7D948030B4E9884C2C8217C5DE448A6D79DFEAFC4592D66",
+      "spdxElementId": "SPDXRef-RootPackage"
+    }
+  ],
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "dlltracer-python 22638199",
+  "documentNamespace": "https://sbom.microsoft/1:EUb7DmXV0UyaZH1sttfV8A:GhnJPVwbaUqA5z9BiAg2UA/14881:22638199/1iW7nkmIJkG6y8GVxkxxuA",
+  "creationInfo": {
+    "created": "2023-10-02T11:40:24Z",
+    "creators": [
+      "Organization: Microsoft",
+      "Tool: Microsoft.SBOMTool-1.6.2"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-RootPackage"
+  ]
+}
