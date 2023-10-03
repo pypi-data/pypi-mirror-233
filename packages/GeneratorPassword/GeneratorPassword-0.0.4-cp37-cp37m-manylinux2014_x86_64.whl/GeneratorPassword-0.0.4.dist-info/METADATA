@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: GeneratorPassword
+Version: 0.0.4
+Summary: GeneratorPassword - Random password generator Library for Python.
+Home-page: https://github.com/AyiinXd/GeneratorPassword
+Author: AyiinXd
+Author-email: ayingaming98@gmail.com
+License: GNU Affero General Public License v3.0 (AGPL-3.0)
+Project-URL: Bug Tracker, https://github.com/AyiinXd/GeneratorPassword/issues
+Project-URL: Documentation, https://generator_password.tech
+Project-URL: Source Code, https://github.com/AyiinXd/GeneratorPassword
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp ==3.8.5
+Requires-Dist: html2text
+Requires-Dist: requests
+
+<h1 align="center">✨ 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗼𝗿 𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱 ✨</h1>
+
+
+# Installation
+
+```
+pip install -U GeneratorPassword
+```
+
+# ========×========
+
+
+
+# Updates & Support
+
+Follow Channel [@AyiinChannel](https://t.me/AyiinChannel) for info Update and Join To Group [@AyiinChat](https://t.me/AyiinChats) for discussion, bug reporting, and help with Generator Password.
+
+
+# © Credits
+-  [AyiinXd](https://github.com/AyiinXd)
+
+
+# License
+[![License](https://www.gnu.org/graphics/agplv3-155x51.png)](LICENSE)    
+Generator Password is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html) v3 or later.
+# ========×========
+
+
