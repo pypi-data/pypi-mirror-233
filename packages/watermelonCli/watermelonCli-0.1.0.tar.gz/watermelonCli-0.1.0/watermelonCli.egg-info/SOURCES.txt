@@ -1,0 +1,7 @@
+setup.py
+watermelonCli/__init__.py
+watermelonCli/message.py
+watermelonCli.egg-info/PKG-INFO
+watermelonCli.egg-info/SOURCES.txt
+watermelonCli.egg-info/dependency_links.txt
+watermelonCli.egg-info/top_level.txt
