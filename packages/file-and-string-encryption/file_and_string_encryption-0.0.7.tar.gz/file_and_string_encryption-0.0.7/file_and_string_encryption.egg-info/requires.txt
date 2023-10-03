@@ -1,0 +1,4 @@
+cryptography
+passlib
+colorful_terminal
+easy_tasks
