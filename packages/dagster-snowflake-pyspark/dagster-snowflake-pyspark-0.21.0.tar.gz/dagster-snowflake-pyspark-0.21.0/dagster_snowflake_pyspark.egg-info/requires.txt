@@ -1,0 +1,6 @@
+dagster==1.5.0
+dagster-snowflake==0.21.0
+pyspark
+requests
+sqlalchemy!=1.4.42
+snowflake-sqlalchemy>=1.2
