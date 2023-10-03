@@ -1,0 +1,155 @@
+Códigos para git:
+
+git add -->
+git commit -m "Agregar un mensaje directamente al commit"
+git commit -a -m "Stage un cambio y hacer commit directamente con un mensaje"
+
+git status
+
+# Git LOG
+git log
+git log --graph --oneline
+
+# CORRECCIONES
+git checkout
+git reset HEAD --> opuesto de add
+git commit --amend
+git revert     --> opuesto de commit
+
+# BRANCHES
+
+git branch "new_branch_name"
+git branch -a --> permite ver todas las branches remotas
+git checkout "new_branch_name"
+git checkout -b "new_branch_name"
+
+git branch -d "Name" --> delete a BRANCHES
+git branch -D "Name" --> eliminar aún si no has hecho merge de los cambios
+
+git stash --> almacenar estado de branch antes de cambiar a otro branch
+git sash pop --> recuperar estados del branch que no se hayan hecho commit
+
+git merge "Name_branch"
+
+# MERGE CONFLICTS
+
+chmod +x all_checks.py --> ajustar interpretador de código, solo para linux
+
+git config -l
+git config core.editore <nombre_del_editor_de_texto>
+git config --global user.name "Rada"
+git config --global user.email "aherrada@uninorte.edu.co"
+
+#WINDOWS
+git config core.editor notepad
+git config core.editor "code --wait"
+git config format.commitMessageColumns 72
+
+git rm <archivo>
+
+
+
+LINUX
+git mv <old_name> <new_name>
+git cp
+./ --> al correr un script para asignarle su interpretador
+
+echo "Frase" > archivo.txt
+>> --> solo lo agrega sin sobre escribir
+
+
+
+# Ignorar ciertos archivos al hacer el (cuando tienen un . es porque están ocultos)
+echo .DS_STORE > .gitignore
+
+
+#Cheat text
+
+git commit -a --> Stages files automatically
+
+git log -p --> Produces patch text (diff)
+
+git show --> Shows various objects
+
+git diff --> Is similar to the Linux `diff` command, and can show the differences in various commits
+
+git diff --staged --> An alias to --cached, this will show all staged files compared to the named commit
+
+git add -p -->Allows a user to interactively review patches to add to the current commit
+
+git mv --> Similar to the Linux `mv` command, this moves a file
+
+git rm --> Similar to the Linux `rm` command, this deletes, or removes a file
+
+# GIT BRANCH CHEAT SHEET
+
+git branch --> Used to manage branches
+
+git branch <name> --> Creates the branch
+
+git branch -d <name> --> Deletes the branch
+
+git branch -D <name> --> Forcibly deletes the branch
+
+git checkout <branch>  --> Switches to a branch.
+
+git checkout -b <branch> --> Creates a new branch and switches to it.
+
+git merge <branch> --> Merge joins branches together.
+
+git merge --abort --> If there are merge conflicts (meaning files are incompatible), --abort can be used to abort the merge action.
+
+git log --graph --oneline --> This shows a summarized view of the commit history for a repo.
+
+
+
+#WINDOWS PAGER
+
+git config core.pager less -R -+X
+git config core.pager cat
+git config --global --replace-all core.pager cat
+
+
+
+
+
+
+
+
+# Git-hub
+git clone <URL>  --> Crear repositorio
+git push         --> Enviar cambios
+git pull         --> Actualizar
+git push -u -f origin master
+
+
+git config --global credential.helper cache
+
+git remote -v
+git remote show origin
+git branch -r  --> Muestra las branches remotas
+
+
+## MERGE remote/local
+git fetch
+git merge origin/main
+git log remotename/branchname --graph --oneline
+git log -p origin/main
+
+## Adding branch to remote
+git push -u origin <branchName>
+
+git remote add upstream https://github.com/[git-username]/[repo]
+
+
+## rebasing
+
+git add .
+git rebase --continue
+git rebase --abort
+
+git push --delete origin refactor
+git branch -d refactor
+
+## Tracking issues
+Closes #1
