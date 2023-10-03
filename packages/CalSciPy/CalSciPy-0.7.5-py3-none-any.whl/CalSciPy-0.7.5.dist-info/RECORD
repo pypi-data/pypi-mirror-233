@@ -1,0 +1,17 @@
+CalSciPy/__init__.py,sha256=KSGwV7pzu6cAmj5KpJ0jGHVCevxCaP8_01aduub7RhY,306
+CalSciPy/_backports.py,sha256=VOdX6ERMgjeS4LjFcG8gJ-J61UJztHMcfJEcRWz0uT8,1438
+CalSciPy/_calculations.py,sha256=8Ke7RdAVGyk3ikaxY4ttgtOv4u11RAHSF-tKR-dhykM,6034
+CalSciPy/_files.py,sha256=Aoc9iM2EHCS1zI39Nn1ww8yaIMDDhY20GSX3ZFhk7Dc,2884
+CalSciPy/_helpers.py,sha256=rWQIEdFS_Iz0IWyvex7nz0I4nfLQ04FdiAx9YbJQZgA,2167
+CalSciPy/_validators.py,sha256=2LlSWE_U4WUFnZX5bKH2qPx8vt5Aaf6TMIU8lwmEz04,7344
+CalSciPy/_visual.py,sha256=xGdjfJ6RbeYxqC6ghu4xRy7Lmg6EjO-yuNl6eP5hxwo,1921
+CalSciPy/color_scheme.py,sha256=jjmMRDg4Tgo3sc759r7QhDFZ10SAXiGK14DWXU9UyHE,5594
+CalSciPy/conversion.py,sha256=Kvl2eDuF0jMPRApIKfoBS3hIaruhAiXnTCe6bh68B-U,2900
+CalSciPy/io_tools.py,sha256=8ECd_4Vmmfe3fbKgQ3QKNAxQqEmntRf-B54Rqu2nSY4,13861
+CalSciPy/optogenetics.py,sha256=nZgd3al3bib9-CtWylW5ppX_gA8CJbVOTGI9zcu0IW8,15085
+CalSciPy/version.py,sha256=Mx17s72CPmMRYZVklNKwX6Iabj7xWLpX9hNnwhFoBGI,357
+CalSciPy-0.7.5.dist-info/LICENSE,sha256=LsooDY8WX_UNzOV9uYvGPH6NkUlZfLfiX7GUKZLGiDA,1094
+CalSciPy-0.7.5.dist-info/METADATA,sha256=HwDQao2ZmxmQ6uybAVTSdgaGMyAexiguTkAENSl4cdI,8494
+CalSciPy-0.7.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+CalSciPy-0.7.5.dist-info/top_level.txt,sha256=7QrgN5NdNzqarMS3nKrzYHiiG8WIwwtGExzFGDuGtiQ,9
+CalSciPy-0.7.5.dist-info/RECORD,,
