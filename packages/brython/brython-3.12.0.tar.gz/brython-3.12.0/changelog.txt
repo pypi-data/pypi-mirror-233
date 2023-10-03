@@ -1,0 +1,154 @@
+New features
+============
+The main new features in this release are:
+
+1. the implementation of Python 3.12, notably:
+  - PEP 701, f-strings in the grammar
+  - PEP 695, type parameter syntax and the type statement
+  - Improved ‘Did you mean …’ suggestions for NameError, ImportError, and
+    SyntaxError exceptions
+
+2. the optional removal of the attribute "onload = brython(options)" of the
+<body> tag, replaced by setting page-level options with tag <brython-options>
+or per-script options as attributes of the <script> tag
+
+3. more consistent interface between Brython and Javascript
+
+Implementation
+==============
+- implement a mechanism that removes the need to call brython() in the <body>
+  tag. More information in the Discussions page
+  ('Removing <body onload="brython()">')
+- replace all occurrences of $B.debug by $B.get_option('debug'), using the
+  attribute 'debug' of <script> tags when specified
+- import-related information is computed for each script, depending of options
+  such as "pythonpath"
+- refactor function brython(), delegate part of it to new function
+  `run_scripts(scripts)`; use `run_scripts()` when injecting a new Python
+  script dynamically. Related to issue #2215.
+- dispatch "load" event when a web worker with attribute "src" is loaded.
+  Related to issue #2215.
+- if brython is called with attribute "ids" (brython({ids=["s1", "s2"]})),
+  use querySelector on ids instead of the scripts stored in python_scripts; in
+  some cases, the type of scripts can change after python_scripts has been
+  initialized (cf. example in discussion #2229)
+
+- set attribute __spec__ for modules imported from VFS. Related to issue #2195.
+- change detection of Python scripts : use a first MutationObserver to store
+  them before brython() is called, then another one for scripts injected
+  dynamically. The callback of the second observer calls brython() to process
+  the injected scripts. Related to issue #2215.
+- if brython.js is inserted after scripts with type="text/python", add them to
+  array python_scripts
+- inserting a new script dynamically triggers a load event. Add function
+  $B.get_debug(filename) for scripts where debug level is set in the
+  attributes of the <script> tag. Related to issue #2215.
+- make_dist.py requires the same version as Brython version
+- add execution option "args" (equivalent of command-line arguments, available
+  as sys.argv)
+- for Javascript Arrays coming from Javascript code (typically referenced by
+  `window.jslist`), don't set attribute __class__ but a boolean $is_js_list.
+  Cf. discussion #2226.
+- dir(obj) uses attribute getattr(type(obj), '__dir__'), not
+  `getattr(obj, '__dir__')`
+- Javascript Arrays get attribute $is_js_array.
+- remove attributes __len__ of JSObj
+- create 2 subclasses of JSObj:
+  - SizedJSObj with __len__ for objects that have .length
+  - IterableJSObj for objects with attribute Symbol.iterator (related to issue
+    #2219)
+- to test if len() applies to a JS object, check the attribute length on the
+  object's prototype, not the object itself
+- add __contains__ to JSObj, translated to JS operator "in". JSOBj.__getitem__
+  throws KeyError instead of AttributeError if key doesn't exist. Related to
+  issue #2245
+- change method __eq__ of JSObj instances for functions. Related to issue
+  #2249
+- fixes inconsistencies in management of Javascript null and undefined.
+  Related to issue #2248.
+- don't convert null to None in pyobj2jsobj()
+
+- add method Module.__dir__, uses function __dir__() if defined in the module
+- $B.get_class() in py_utils.js delegates choice of JSObject subclass to
+  $B.get_jsobj_class() in js_objects.js
+- transform Javascript errors into instances of built-in class
+  JavascriptError. Use JS stack trace in error reporting.
+- remove unused reference to undefined window value (by Evan Mallory)
+- fix float->int conversion; use Python 3.11 for scripts on Travis (id.)
+- convert remaining NameError.$factory to $B.name_error (id.)
+- add and document __BRYTHON__.getPythonModule, .pythonToJS, .runPythonSource,
+  meant to be used in Javascript programs to access Brython data
+- add information to classes inheriting Javascript classes. Related to issue
+  #2244
+- in iter(), if an object has __getitem__ but len() throws an exception,
+  raise TypeError('object is not iterable')
+- make_js_iterator takes __getitem__ from object class, not from object itself
+- for DOMNode attributes, don't transform value "null" to "None"
+
+Bug fixes
+=========
+- bug when passing a dictionary to ajax.get(data=x)
+- "f(x is A, b)" was interpreted as "f(x is (A, b))" instead of
+  "f((x is A), b)"
+
+Issues
+- #2212 : Warning: 'src' is a property of element.style
+- #2217 : Brython console crash with type(lambda)
+- #2220 : dict.setdefault() does not work on **kwargs
+- #2227 : can't check if a null javascript object is None
+- #2228 : int(0.0000005) returns 5 instead of 0
+- #2232 : Brython fails to parse invalid code containing "is not in"
+- #2237 : AttributeError suggestions are not being displayed in stack traces
+- #2247 : when doing inheritance : bases[0].$js_func is undefined
+- #2251 : Creating async callbacks in Brython for JS function
+- #2252 : async/defer on brython.js : ModuleNotFoundError: No module named
+  'browser.webcomponent'
+
+Brython site
+============
+- in brython_test_utils/unittest.py, set sys.path so that "import tester"
+  succeeds in tests
+- make_doc.py puts static docs in a folder per major version (3.11, 3.12 etc)
+- the link "Documentation" in header.py points to this directory
+- put version number in documentation pages
+- implement "Did you forget ?" suggestions for editor and console
+
+Github site
+===========
+- experimental - create script tests/test_pages.py to generate HTML pages with
+  Python scripts, open them in a web browser, make the Python script send an
+  Ajax request to a url served by bihan_app.py and check the result.
+  Used to test options settings (debug, cache etc.) in various places
+  (argument of brython(), <brython-options>, attributes of <script>)
+- add script make_travis_config.py, called by make_release.py to update the
+  Travis configuration file (.travis.yml) with the appropriate Python version.
+  Related to PR #2243
+
+Demos
+=====
+- rewrite the Mandelbrot webworker demo with worker.create_worker instead
+  of worker.Worker
+- remove onload="brython()" from all examples in the gallery
+- add examples of dynamic insertion of Python scripts in the page
+
+Standard distribution
+=====================
+- upgrade to Python 3.12
+- fix bug in worker.Worker. Mark the class as deprecated.
+- sys.path uses current filename and sets $B.import_info[filename]
+- add and document parameter "options" of webcomponent.define(). Related to
+  issues #2234 and #2239.
+- rewrite html.tags with the usual dict API. Create a tag name for web
+  components. Related to issue #2234
+- change test in browser.local_storage.py (javascript.NULL instead of None)
+
+Documentation
+=============
+- add a reference to javascript.JSObject in the documentation of module
+  javascript
+- document the changes in options management and the removal of
+  `<body onload="brython()">`
+- document exception handling in Javascript code (class JavascriptError)
+- update documentation of interaction between Javascript and Brython. Change
+  section title "Using Javascript objects and libraries" to "Interactions
+  with Javascript"
