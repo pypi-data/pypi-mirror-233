@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mp_ephem
+Version: 0.13.0
+Summary: BK Orbfit
+Home-page: http://github.com/OSSOS/liborbfit
+Author: JJ Kavelaars (jjk@uvic.ca), Michele Bannister (micheleb@uvic.ca)
+Maintainer: M Bannister and JJ Kavelaars
+Maintainer-email: jjk@uvic.ca
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Description-Content-Type: text/x-rst
+Requires-Dist: astropy
+Requires-Dist: pyerfa
+Requires-Dist: numpy
+Requires-Dist: requests
+
+See http://www.ossos-survey.org/ for science details.
