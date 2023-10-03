@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: q1pulse
+Version: 0.11.1
+Author: Sander de Snoo
+Requires-Python: >=3.7
+License-File: LICENSE
