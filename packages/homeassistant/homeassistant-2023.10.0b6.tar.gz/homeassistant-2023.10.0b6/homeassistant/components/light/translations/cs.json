@@ -1,0 +1,108 @@
+{
+    "device_automation": {
+        "action_type": {
+            "brightness_decrease": "Sn\u00ed\u017eit jas {entity_name}",
+            "brightness_increase": "Zv\u00fd\u0161it jas {entity_name}",
+            "flash": "Bliknout {entity_name}",
+            "toggle": "P\u0159epnout {entity_name}",
+            "turn_off": "Vypnout {entity_name}",
+            "turn_on": "Zapnout {entity_name}"
+        },
+        "condition_type": {
+            "is_off": "{entity_name}: je vypnuto",
+            "is_on": "{entity_name}: je zapnuto"
+        },
+        "trigger_type": {
+            "changed_states": "{entity_name} bylo zapnuto nebo vypnuto",
+            "turned_off": "{entity_name} bylo vypnuto",
+            "turned_on": "{entity_name} bylo zapnuto"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "name": "Sv\u011btlo",
+            "state": {
+                "off": "Vypnuto",
+                "on": "Zapnuto"
+            },
+            "state_attributes": {
+                "brightness": {
+                    "name": "Jas"
+                },
+                "color_mode": {
+                    "name": "Re\u017eim barev",
+                    "state": {
+                        "brightness": "Jen jas",
+                        "color_temp": "Teplota barvy",
+                        "hs": "HS",
+                        "onoff": "ZAP./VYP.",
+                        "rgb": "RGB",
+                        "rgbw": "RGBW",
+                        "rgbww": "RGBWW",
+                        "unknown": "Nezn\u00e1m\u00fd",
+                        "white": "B\u00edl\u00e1",
+                        "xy": "XY"
+                    }
+                },
+                "color_temp": {
+                    "name": "Teplota barvy (v miredech)"
+                },
+                "color_temp_kelvin": {
+                    "name": "Teplota barvy (v Kelvinech)"
+                },
+                "effect": {
+                    "name": "Efekt"
+                },
+                "effect_list": {
+                    "name": "Dostupn\u00e9 efekty"
+                },
+                "max_color_temp_kelvin": {
+                    "name": "Maxim\u00e1ln\u00ed teplota barvy (v Kelvinech)"
+                },
+                "max_mireds": {
+                    "name": "Maxim\u00e1ln\u00ed teplota barvy (v miredech)"
+                },
+                "min_color_temp_kelvin": {
+                    "name": "Minim\u00e1ln\u00ed teplota barvy (v Kelvinech)"
+                },
+                "min_mireds": {
+                    "name": "Minim\u00e1ln\u00ed teplota barvy (v miredech)"
+                },
+                "supported_color_modes": {
+                    "name": "Dostupn\u00e9 re\u017eimy barev",
+                    "state": {
+                        "brightness": "Jen jas",
+                        "color_temp": "Teplota barvy",
+                        "hs": "HS",
+                        "onoff": "ZAP./VYP.",
+                        "rgb": "RGB",
+                        "rgbw": "RGBW",
+                        "rgbww": "RGBWW",
+                        "unknown": "Nezn\u00e1m\u00fd",
+                        "white": "B\u00edl\u00e1",
+                        "xy": "XY"
+                    }
+                }
+            }
+        }
+    },
+    "issues": {
+        "platform_integration_no_support": {
+            "description": "Platforma {platform} pro integraci {domain} nepodporuje nastaven\u00ed platformy.\n\nOdeberte ji z konfigurace a restartujte Home Assistanta, abyste tento probl\u00e9m vy\u0159e\u0161ili.",
+            "title": "Podpora platformy nen\u00ed podporov\u00e1na"
+        }
+    },
+    "selector": {
+        "color_name": {
+            "options": {
+                "homeassistant": "Home Assistant"
+            }
+        }
+    },
+    "services": {
+        "turn_on": {
+            "name": "Zapnout"
+        }
+    },
+    "title": "Sv\u011btlo"
+}

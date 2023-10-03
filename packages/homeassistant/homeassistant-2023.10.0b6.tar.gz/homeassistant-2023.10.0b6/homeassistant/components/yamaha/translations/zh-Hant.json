@@ -1,0 +1,22 @@
+{
+    "services": {
+        "enable_output": {
+            "fields": {
+                "enabled": {
+                    "name": "\u5df2\u555f\u7528"
+                },
+                "port": {
+                    "name": "\u901a\u8a0a\u57e0"
+                }
+            }
+        },
+        "select_scene": {
+            "fields": {
+                "scene": {
+                    "name": "\u5834\u666f"
+                }
+            },
+            "name": "\u9078\u64c7\u5834\u666f"
+        }
+    }
+}

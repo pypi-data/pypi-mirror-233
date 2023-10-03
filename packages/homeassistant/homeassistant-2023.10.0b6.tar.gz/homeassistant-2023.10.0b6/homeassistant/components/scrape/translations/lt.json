@@ -1,0 +1,33 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "payload": "Naudinga apkrova"
+                },
+                "data_description": {
+                    "payload": "Naudinga apkrova, kuri\u0105 reikia naudoti, kai metodas yra POST"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "resource": {
+                "data": {
+                    "payload": "Naudinga apkrova"
+                },
+                "data_description": {
+                    "payload": "Naudinga apkrova, kuri\u0105 reikia naudoti, kai metodas yra POST"
+                }
+            }
+        }
+    },
+    "selector": {
+        "device_class": {
+            "options": {
+                "ph": "pH"
+            }
+        }
+    }
+}
