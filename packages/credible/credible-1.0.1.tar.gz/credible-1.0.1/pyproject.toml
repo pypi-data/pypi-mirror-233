@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: Copyright © 2023 Idiap Research Institute <contact@idiap.ch>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credible"
+version = "1.0.1"
+requires-python = ">=3.10"
+description = "This library contains implementations of some scikit-learn metrics with confidence intervals"
+readme = "README.md"
+license = { text = "GNU General Public License v3 (GPLv3)" }
+authors = [{ name = "Andre Anjos", email = "andre.anjos@idiap.ch" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["numpy", "scipy", "matplotlib", "scikit-learn"]
+
+[project.urls]
+documentation = "https://credible.readthedocs.io/en/v1.0.1/"
+homepage = "https://pypi.org/project/credible"
+repository = "https://gitlab.idiap.ch/biosignal/software/credible"
+changelog = "https://gitlab.idiap.ch/biosignal/software/credible/-/releases"
+
+[project.optional-dependencies]
+qa = ["pre-commit"]
+doc = [
+  "sphinx",
+  "furo",
+  "sphinx-autodoc-typehints",
+  "auto-intersphinx",
+  "sphinx-copybutton",
+  "sphinx-inline-tabs",
+]
+test = ["pytest", "pytest-cov", "coverage"]
+
+[tool.setuptools]
+zip-safe = true
+package-dir = { "" = "src" }
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.isort]
+profile = "black"
+line_length = 80
+order_by_type = true
+lines_between_types = 1
+
+[tool.black]
+line-length = 80
+
+[tool.pytest.ini_options]
+addopts = [
+  "--cov=credible",
+  "--cov-report=term-missing",
+  "--import-mode=append",
+]
+junit_logging = "all"
+junit_log_passing_tests = false

@@ -1,0 +1,4 @@
+py:class numpy.int64
+py:class numpy.float64
+py:class numpy._typing._nested_sequence._NestedSequence
+py:class numpy._typing._array_like._SupportsArray
