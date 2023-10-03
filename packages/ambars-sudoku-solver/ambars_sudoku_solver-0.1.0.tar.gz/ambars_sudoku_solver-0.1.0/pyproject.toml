@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "ambars-sudoku-solver"
+version = "0.1.0"
+description = "Package for solving and creating sudoku problems"
+authors = ["Ambar Das <ambardeepdas@yahoo.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "ambars_sudoku_solver" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.3.0"
+pre-commit = "^3.3.2"
+pycln = "^2.1.3"
+pytest = "^7.3.1"
+pylint = "^2.17.6"
+
+#[[tool.poetry.source]]
+#name = "testpypi"
+#url = "https://test.pypi.org/legacy/"
+#priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/'''
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.10"
+
+[tool.pycln]
+all = true
+skip-imports = [".venv"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
