@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: typer-common-functions
+Version: 0.0.7
+Summary: Commonly used Functions around the Typer CLI Library
+Home-page: https://github.com/OpenJKSoftware/typer-common-functions
+License: LGPL-3
+Keywords: cli,typer
+Author: Joshua Kreuder
+Author-email: joshua_kreuder@outlook.com
+Requires-Python: >=3.8,<3.12
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: typer[all] (>=0.7.0,<1.0.0)
+Project-URL: Repository, https://github.com/OpenJKSoftware/typer-common-functions
+Description-Content-Type: text/markdown
+
+# Typer Common Functions
+
+Some Helpful Functions around the wonderful CLI Library [Typer](https://typer.tiangolo.com/)
+
