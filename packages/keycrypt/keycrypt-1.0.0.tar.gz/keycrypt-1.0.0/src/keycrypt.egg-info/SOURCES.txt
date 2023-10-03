@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/keycrypt.py
+src/keycrypt.egg-info/PKG-INFO
+src/keycrypt.egg-info/SOURCES.txt
+src/keycrypt.egg-info/dependency_links.txt
+src/keycrypt.egg-info/top_level.txt
