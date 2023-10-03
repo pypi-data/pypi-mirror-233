@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bane
+Version: 4.9.2
+Summary: cyber security library, penetration testing module
+Home-page: https://github.com/AlaBouali/bane
+Author: AlaBouali
+Author-email: trap.leader.123@gmail.com
+License: MIT License
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License 
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
