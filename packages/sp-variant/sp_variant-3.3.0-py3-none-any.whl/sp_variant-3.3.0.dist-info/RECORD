@@ -1,0 +1,11 @@
+sp_variant/__init__.py,sha256=w0B7uyYGmcH6SEogdJLSvZ17v8r5JWV2Tp7207tSHOc,457
+sp_variant/__main__.py,sha256=iJPC4b2TOV3M9j1pGIjkA-OthweUdK5p9HAfUl_1erM,13200
+sp_variant/defs.py,sha256=oxEUy7F2wID6MLU1j70OQO6eg2-axb0HGwpH4wYkorU,5131
+sp_variant/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sp_variant/variant.py,sha256=66dpH0OyUDG-bLfc0ihUwjDvPIx5URHfTgAehjx23Pw,5654
+sp_variant/vbuild.py,sha256=JQfMkLjZtxKd0VjBX2_BNGBK5lwBoRxSBg6zsJDbsWs,29689
+sp_variant/yaiparser.py,sha256=CW0iOeD_JggtWquvv63OTRS2xek778wCWHRlGXphWGg,4486
+sp_variant-3.3.0.dist-info/METADATA,sha256=AM3VPzm3bbn5CEZl1xvUqRQ1TIowU8bklZl8hy-3f0I,3555
+sp_variant-3.3.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+sp_variant-3.3.0.dist-info/entry_points.txt,sha256=6IJlFlC4MkvTuJSJfkIv-t8I2aZ6PgUxEJsCB_VaZOA,56
+sp_variant-3.3.0.dist-info/RECORD,,
