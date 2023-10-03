@@ -1,0 +1,14 @@
+_version.py,sha256=wKJ9AEXjP1VtPK76m6KJdGxevp57CpQ7Dp50hg3UAd4,276
+binda.py,sha256=r6Dhk3I8asmdGZDICr21IpdGoMzyvskOPJR3c7Wm79g,14072
+example/PHOTO.JPG,sha256=9-8i0Op9a6dBJ8OD-U3uD3nnI0X6x7U2Yjxjqbtmf6E,3459084
+example/PHOTO_EDITED.JPG,sha256=v7YjWWV7L7LQSw9G2vkGzU8Jbjwy6ZOy-bUU7fMbLDA,3459084
+example/example.ipynb,sha256=2Ih66Bvs-SI8aBGUZAQQxTQNblK8b22iDkHZ7NuNOpw,21362
+example/usage.ipynb,sha256=n0yNS-Xcstyx22JY6CnLgN5--psbazXZ1SUcOvBvUBI,7617
+example/img/repeating_structure.png,sha256=xwl38UyEBCyqyjXT_XycNB7emEr6O26zRWUowKctpDI,15246
+example/img/repeating_structure_changed.png,sha256=vzq_ay1zBRSuDp8eW9Agg6w7q32sTBcG7Qp6hitb7uU,15780
+example/img/single_structure.png,sha256=QxOeafWOxPHyOO3DsgYlzAxnOtn-Abpu1uzUPrK5Kws,7255
+binda-1.0.22.dist-info/METADATA,sha256=0m9Awd7NIlY8YOb3-cxThnA_WnlWbFXZcaSFmA-4Fxg,7051
+binda-1.0.22.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+binda-1.0.22.dist-info/entry_points.txt,sha256=bbm6Kk0uxP8-qNfbFiNj-fOr7p04anVb-0W2S-SsYjw,41
+binda-1.0.22.dist-info/licenses/LICENSE,sha256=ED0t5eM_QSJ9383tRzNiUl916PtNFKjS7v3bAsZIr1w,1066
+binda-1.0.22.dist-info/RECORD,,
