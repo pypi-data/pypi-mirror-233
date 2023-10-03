@@ -1,0 +1,12 @@
+metaip/__init__.py,sha256=VVxjcULTvA0Xt7hvCJqxOmF3gbKbRzI6EwUg_LgbZS4,1141
+metaip/__main__.py,sha256=DTzvcWhwC5jJQxFwqYcrn1jix11nU19h9fonn_x_VF4,52
+metaip/cli.py,sha256=i6efZBO63v835DMRrVVvpb4qJgA_H70k3-MVluSzroI,735
+metaip/exceptions.py,sha256=2Z8Rt6gGSgMy4msPu2smkA01g9203o7OOopYSgSd64c,1407
+metaip/metaip.py,sha256=UBexEXZt5kpPGRfR1oOlAy11U038yVrMPG8ux7OPnyg,2994
+metaip/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metaip-0.1.0.dist-info/LICENSE,sha256=wdDNqaLtDFznKJIbjCAlEMg15k6oqIf_bHrH_U9O3pc,1095
+metaip-0.1.0.dist-info/METADATA,sha256=VEU4XE7GFD-s84InHfWyH7mOBZbt6TskBP6UvHtf54M,11501
+metaip-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+metaip-0.1.0.dist-info/entry_points.txt,sha256=aMTtNw1o8xQt_CXfoTKk_PGBS4Kup3c959Lo9zdP2ek,46
+metaip-0.1.0.dist-info/top_level.txt,sha256=SbNFy7ZQL4M1AKAaoBfRWsLC0ruJMWJO1tr8OgJ3kAA,7
+metaip-0.1.0.dist-info/RECORD,,
