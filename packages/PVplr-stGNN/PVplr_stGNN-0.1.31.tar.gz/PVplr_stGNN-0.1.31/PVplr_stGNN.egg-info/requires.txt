@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+scipy
+torch
+tensorflow
+keras
+torch-geometric
+
+[dev]
+setuptools
+wheel
+pytest

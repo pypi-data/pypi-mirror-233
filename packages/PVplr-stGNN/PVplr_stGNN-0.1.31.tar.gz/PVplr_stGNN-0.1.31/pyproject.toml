@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "PVplr_stGNN"
+version = "0.1.31"
+authors = [
+  {name="Yangxin Fan", email="yxf451@case.edu" } ]
+description = "PV Performance Loss Rate Estimation using Spatio-temporal Graph Neural Networks"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Yangxin666/STD-GAE"
+"Bug Tracker" = "https://github.com/Yangxin666/STD-GAE/issues"
