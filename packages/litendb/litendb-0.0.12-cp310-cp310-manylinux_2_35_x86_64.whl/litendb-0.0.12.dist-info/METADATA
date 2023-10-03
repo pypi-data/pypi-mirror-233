@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: litendb
+Version: 0.0.12
+Summary: Big Data Analytics Toolset
+Home-page: https://github.com/liten/
+Author: HK Verma
+Author-email: hkverma@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cython (==3.0.2)
+Requires-Dist: graphviz
+Requires-Dist: numpy
+Requires-Dist: pyarrow (==13.0.0)
+Requires-Dist: tbb-devel
+
+## Python Liten 
+
+
