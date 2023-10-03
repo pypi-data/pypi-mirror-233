@@ -1,0 +1,10 @@
+seavoice_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seavoice_sdk/audio.py,sha256=SzaVeMNrtiL5fkGA8kORrS9wtgL_ZPM42URqu64EWss,6860
+seavoice_sdk/logger.py,sha256=IRHHVb2RYUSAPEzQxjL6F9CxxtoKhlSvMyRfasa_Xvk,2987
+seavoice_sdk/speech.py,sha256=HdSfBi2daafHTJ0tG1F8vkPXaot9PsyZCaHbVeVtFIQ,49358
+seavoice_sdk/utils.py,sha256=4t2OJKabRzeJImo0A7zqVCp3u5wdIfPdD_TNJqWoQNY,4146
+seavoice_sdk-0.2.15.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+seavoice_sdk-0.2.15.dist-info/METADATA,sha256=XVG-6aBUOUsOoBwzZ8LO86hhZrtNl7V_a5UOxT0g0FY,11647
+seavoice_sdk-0.2.15.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+seavoice_sdk-0.2.15.dist-info/top_level.txt,sha256=3Kdr1KyuKOYg9aM20e0IgH2ixIeggGHJUiVeCJ3bD7w,13
+seavoice_sdk-0.2.15.dist-info/RECORD,,
