@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ferretz
+Version: 0.1
+Summary: A Python package to create "enhance.pet" compliant package folder structures
+Home-page: https://github.com/LalithShiyam/ferretz
+Author: Lalith Kumar Shiyam Sundar
+Author-email: lalith.shiyamsundar@meduniwien.ac.at
+License: MIT
+Keywords: enhance.pet,package creation,Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+![Ferret-logo.png](./Images/Ferret-logo.png)
+# FERRET
+FERRET - Framework for Enhance: Organized Workflow Library
