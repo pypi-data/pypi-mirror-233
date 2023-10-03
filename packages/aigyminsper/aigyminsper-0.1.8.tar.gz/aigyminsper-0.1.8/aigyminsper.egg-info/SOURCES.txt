@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+aigyminsper/__init__.py
+aigyminsper.egg-info/PKG-INFO
+aigyminsper.egg-info/SOURCES.txt
+aigyminsper.egg-info/dependency_links.txt
+aigyminsper.egg-info/top_level.txt
+aigyminsper/search/CSPAlgorithms.py
+aigyminsper/search/Graph.py
+aigyminsper/search/SearchAlgorithms.py
+aigyminsper/search/__init__.py
