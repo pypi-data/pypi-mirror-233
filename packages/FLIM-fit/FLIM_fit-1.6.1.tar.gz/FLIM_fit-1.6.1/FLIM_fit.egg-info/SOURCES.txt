@@ -1,0 +1,9 @@
+setup.py
+FLIM_fit/GUI.py
+FLIM_fit/__init__.py
+FLIM_fit.egg-info/PKG-INFO
+FLIM_fit.egg-info/SOURCES.txt
+FLIM_fit.egg-info/dependency_links.txt
+FLIM_fit.egg-info/entry_points.txt
+FLIM_fit.egg-info/requires.txt
+FLIM_fit.egg-info/top_level.txt
