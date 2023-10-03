@@ -1,0 +1,10 @@
+loris_log/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loris_log/boto3Client.py,sha256=qU_H4AqNqXv25LW0DXkQvv9pp4a8oH7wVQNV1whvZ5Q,7103
+loris_log/customLog.py,sha256=0suuaFPLwqQUsSgjFejhkbi4Ci6u4u19UDB1NE9Jz_M,15848
+loris_log/ftpClient.py,sha256=PwkfCO7hu6iQQEnRPamxp0Gcz7bYhmMSZzgIIePBlVw,12456
+loris_log/myException.py,sha256=nE3WiAmT51zArvAGbvBnl1EmwG2AR8Xu_HZFWJ6QcDc,3174
+loris_log-0.2.2.post1.dist-info/LICENSE.txt,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+loris_log-0.2.2.post1.dist-info/METADATA,sha256=aPalNWKtDYRRz7EAL-xDk4PghLj8gtBd33QmcKpywaA,28714
+loris_log-0.2.2.post1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+loris_log-0.2.2.post1.dist-info/top_level.txt,sha256=8Bi_ubqndcCcYcotpXS6NlAxuzCupqh9WBWYPt9Nkek,10
+loris_log-0.2.2.post1.dist-info/RECORD,,
