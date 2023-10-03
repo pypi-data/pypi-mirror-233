@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: supercalculator
+Version: 0.1.1
+Summary: A high precision calculator
+Home-page: 
+Author: Raymond Grottodden
+Author-email: raymondgrotto651@gmail.com
+License: MIT
+Keywords: calculator
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+This is a super calculator that is designed to do calculations with numbers from very large numbers, or very small decimals.
+
+Change Log
+==========
+
+0.1.0 (10/1/2023)
+-----------------
+- Initial Release
+
+0.1.1 (10/2/2023)
+-----------------
+- Added functionality to equation builder.
+- Added functions / limits
