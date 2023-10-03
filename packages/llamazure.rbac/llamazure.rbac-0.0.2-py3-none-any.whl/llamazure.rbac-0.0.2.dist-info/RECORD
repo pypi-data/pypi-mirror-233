@@ -1,0 +1,10 @@
+llamazure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/rbac/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/rbac/repository.py,sha256=vatkQeP0XBohbhJ1k9QWJIqWOY-Y0XCxXZyUkLWukGM,778
+llamazure/rbac/resources.py,sha256=TCLXNiul2Rm22-yqUGjfA0s53q-ClREE1VW-sTD-eVc,1699
+llamazure/rbac/roles.py,sha256=bENO8LuCUd26PmWzLbTrnt3Wd-8coUwWU2EA6W6eX60,11018
+llamazure.rbac-0.0.2.dist-info/METADATA,sha256=ZkqXtv4MRrNHgKWizxpNy_GlWebCXMUvul5a8M7Y_wk,2889
+llamazure.rbac-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+llamazure.rbac-0.0.2.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamazure.rbac-0.0.2.dist-info/top_level.txt,sha256=4gbH0fcRQb_rEVCcLYRu_D2cVCdf0VYVCIi_f0PiMq4,10
+llamazure.rbac-0.0.2.dist-info/RECORD,,
