@@ -1,0 +1,14 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+llamazure/__init__.py
+llamazure.rbac.egg-info/PKG-INFO
+llamazure.rbac.egg-info/SOURCES.txt
+llamazure.rbac.egg-info/dependency_links.txt
+llamazure.rbac.egg-info/namespace_packages.txt
+llamazure.rbac.egg-info/requires.txt
+llamazure.rbac.egg-info/top_level.txt
+llamazure/rbac/__init__.py
+llamazure/rbac/repository.py
+llamazure/rbac/resources.py
+llamazure/rbac/roles.py

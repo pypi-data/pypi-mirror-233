@@ -1,0 +1,4 @@
+llamazure.azrest==0.0.1
+llamazure.msgraph==0.0.1
+llamazure.rid==0.0.4
+pydantic>=2.0
