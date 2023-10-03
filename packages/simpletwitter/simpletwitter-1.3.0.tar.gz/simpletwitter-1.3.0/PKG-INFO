@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: simpletwitter
+Version: 1.3.0
+Summary: Python package for making twitter bot with less code
+Home-page: UNKNOWN
+Author: Abipravi
+Author-email: darkparadise877@gmail.com
+License: UNKNOWN
+Project-URL: Homepage, https://github.com/pravee42/Twitter_bot_module
+Description: This package can be used to make your own twitter bot with less code <br />
+        
+        _import the package using pip install_ <br />
+        
+        `pip install simpletwitter`
+        
+        PyPi Link :
+        [https://pypi.org/project/simpletwitter/](https://pypi.org/project/simpletwitter/)
+        
+        Google Groups Link: 
+        [https://groups.google.com/g/simpletwitter](https://groups.google.com/g/simpletwitter)
+        
+        [![Downloads](https://static.pepy.tech/personalized-badge/simpletwitter?period=total&units=international_system&left_color=black&right_color=brightgreen&left_text=Users%20Total)](https://pepy.tech/project/simpletwitter)
+        [![Downloads](https://static.pepy.tech/personalized-badge/simpletwitter?period=month&units=international_system&left_color=black&right_color=brightgreen&left_text=Users%20This%20Month)](https://pepy.tech/project/simpletwitter)
+        [![Downloads](https://static.pepy.tech/personalized-badge/simpletwitter?period=week&units=international_system&left_color=black&right_color=brightgreen&left_text=Users%20This%20Week)](https://pepy.tech/project/simpletwitter)
+        [![Downloads](https://static.pepy.tech/personalized-badge/simpletwitter?period=total&units=none&left_color=black&right_color=brightgreen&left_text=User%20in%20Numbers)](https://pepy.tech/project/simpletwitter)
+        
+        `usage:`
+        
+        ```
+        from simpletwitter import SimpleTwitter
+        bot = SimpleTwitter(email, password, no_of_tweets, username)
+        bot.login()
+        bot.like_tweet(hashtags) #like the twitte
+        bot.unlike_liked_tweets(5) #unlike the liked tweet
+        bot.tweet(tweetmessage) #put some tweet
+        ```
+        
+        ### Users Currently Using as of (03-10-2023):
+        
+        | **Total Downloads** | **Monthly Downloads** | **Weekly Downloads** |
+        | ------------------- | --------------------- | -------------------- |
+        | 16,455              | 279                   | 169                  |
+        
+        ### Current Version 1.2.6
+        
+        ### Users Graph
+        
+        ![image](https://github.com/pravee42/simpletwitter/assets/65100038/08ac5b6c-5137-482e-8824-ff712a177379)
+        
+        #### Packages used
+        
+        | **Tool Name** | **Purpose**       |
+        | ------------- | ----------------- |
+        | Selenium      | Chrome Automation |
+        
+        | Feature Update | 3 feature update added on 3rd October 2023                               |
+        | -------------- | ------------------------------------------------------------------ |
+        | Update 1       | `Added function to retweet`                                        |
+        | Update 2       | `Added feature to like the top tweets of the particular hash tags` |
+        | Update 3       | `Added Tech News feature to post news on twitter account` |
+        | Update 4       | `Can able to post Linked in content into a tweet using AI summarizer tool from **Hugging Face.io**` |
+        
+        #### Code Usage of Updates
+        
+        ---
+        
+        ##### Update 1
+        
+        ```
+        from simpletwitter import SimpleTwitter
+        bot = SimpleTwitter(email, password, no_of_tweets, username)
+        bot.login()
+        hashtags = ["#reactjs", "abipravi"]
+        bot.only_like_top_tweet(hashtags)
+        ```
+        
+        ##### Update 2
+        
+        ```
+        from simpletwitter import SimpleTwitter
+        bot = SimpleTwitter(email, password, no_of_tweets, username)
+        bot.login()
+        hashtags = ["#reactjs", "abipravi"]
+        bot.retweet(hashtags)
+        ```
+        
+        ##### Update 3
+        
+        Post Tech News from [NEWSAPI](https://newsapi-abipravi.herokuapp.com/tech)
+        
+        ```
+        from simpletwitter import SimpleTwitter
+        bot = SimpleTwitter(email, password, no_of_tweets, username)
+        bot.login()
+        no_of_news_to_be_posted = 1
+        # if no of tweets to be posted ==> 1 {Post 12 news} it will post '12' news for value =>> 1 <<=
+        x = bot.post_tech_news(no_of_news_to_be_posted)
+        ```
+        
+        ##### Update 4
+        
+        Post **LinkedIn** Content from URL into Twitter **Tweet**
+        
+        ```
+        from simpletwitter import SimpleTwitter
+        bot = SimpleTwitter(email, password, no_of_tweets, username)
+        bot.login()
+        bot.postLinkedIn(Url)
+        ```
+        
+        #### Features
+        
+        - [ ] Scrape Data for analytics
+        - [x] Tech News post in Twitter
+        - [ ] Twitter APi also using Twitter API keys
+        - [ ] Create a web Admin Dashboard for the Twitter Automation
+        - [x] Linked in to Twitter Post
+        
+Keywords: python,first package,twitter,twitterbot_abipravi,make you own bot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
