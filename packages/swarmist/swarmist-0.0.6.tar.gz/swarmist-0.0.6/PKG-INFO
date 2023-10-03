@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: swarmist
+Version: 0.0.6
+Summary: A DSL for building metaheuristics
+Home-page: https://github.com/kafm/swarmist
+Author: Kevin Martins
+License: MIT
+Keywords: swarmist,metaheuristics,optimization,dsl
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >= 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Swarmist
+
+A Domain Specific Language (DSL) for building metaheuristic algorithms to solve single-objective continuous optimization over real domains. 
+
+## Examples
+
+Examples can be found in [swarmist/examples](https://github.com/kafm/swarmist/tree/main/examples).
+
+## Installation
+
+Swarmist is available at the [Python Package Index](https://pypi.org/project/swarmist/).
+
+```python
+# PyPI
+pip install swarmist
+```
+
+Swarmist supports Python 3.10 or newer.
+
+## Documentation
+
+Coming soon...
