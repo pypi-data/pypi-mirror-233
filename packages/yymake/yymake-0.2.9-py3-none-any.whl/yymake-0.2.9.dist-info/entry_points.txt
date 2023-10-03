@@ -1,0 +1,2 @@
+[console_scripts]
+ya = yaya:process
