@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: nicola-student-tracker
+Version: 0.0.2
+Summary: Simple package to display student progress.
+License: MIT
+Author: michael
+Author-email: michael__brown@tutanota.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: black (>=23.9.1,<24.0.0)
+Requires-Dist: dash (>=2.13.0,<3.0.0)
+Requires-Dist: dash-bootstrap-components (>=1.5.0,<2.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.0,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.0.3,<3.0.0)
+Requires-Dist: pytest (>=7.4.2,<8.0.0)
+Requires-Dist: pytest-cov (>=4.1.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Attendance Tracker #
+
+Generates a dashboard to monitor student attendance across several subjects.
+
+## How to use ##
+
+### Installation ###
+1. Create a new project with a virtual environment (Python 3.10).
+2. Activate the virtual environment.
+3. Install the package using: `pip install nicola-student-tracker`.
+
+### Initialise Project ###
+In the project root terminal type:
+```shell
+nicola init
+```
+
+### Run Application ###
+In a terminal in the root directory, type:
+```shell
+nicola dashboard
+```
+
+This will start the application in a web browser at: http://127.0.0.1:8050/
+
+## Amend Data ##
+The project initialises with dummy data contained in `./data/attendance.xlsx`. You can amend this data to suit your needs.
