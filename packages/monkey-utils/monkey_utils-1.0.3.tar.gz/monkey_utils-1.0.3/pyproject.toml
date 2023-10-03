@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "monkey_utils"
+version = "1.0.3"
+description = "Common function for Python project at Monkey"
+authors = ["Trung.HM <trung.hoang@monkey.edu.vn>"]
+license = "LICENSE.txt"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+boto3 = "^1.28.57"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
