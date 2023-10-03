@@ -1,0 +1,2 @@
+[console_scripts]
+dtbell = dtbell.app:entry_point
