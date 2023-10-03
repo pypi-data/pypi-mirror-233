@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cartonml-nightly
+Version: 0.0.1.dev20231003
+Requires-Dist: numpy >= 1.16.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+Python bindings for Carton.
+
+The `python` subfolder contains the python code and `src` contains rust
