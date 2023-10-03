@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dammcheck
+Version: 0.1.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: Implementation of the Damm Algorithm in various bases/alphabets
+Author: Jesse Wallace
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/J-Wall/dammcheck
+
+Dammcheck
+=========
+
+Implementation of the [Damm Algorithm](https://en.wikipedia.org/wiki/Damm_algorithm)
+in various bases/alphabets.
+
+Usage
+-----
+
+```
+import dammcheck
+
+# List available built-in alphabets
+dammcheck.builtin_alphabets()
+
+# Calculate the Damm check digit using a built-in alphabet
+dammcheck.damm("ABC", alphabet="base32crockford")
+
+# Or a custom alphabet
+dammcheck.damm("TATA", custom_alphabet="ACGT")
+```
+
