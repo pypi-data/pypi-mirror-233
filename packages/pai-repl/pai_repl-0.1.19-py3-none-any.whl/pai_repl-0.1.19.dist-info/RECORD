@@ -1,0 +1,17 @@
+pai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pai/cli.py,sha256=vVDOHXvg8g5TQXfLB7Mam3yqoMfvtgGxbHNve6N5VC0,1431
+pai/code_exec.py,sha256=3-BNUIIm59yppJwHdZaZRK_rXG9tY85D8TN3goHilA8,3002
+pai/console.py,sha256=gVV6D2hNjqod4rz3WbZ-xcnjeHMV0KpvAwi7XwCu84k,7931
+pai/history.py,sha256=LFmvEZgOO8FQwk4Qie7g-Agytbm6o-CLtjW6-aWyBco,2883
+pai/llms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pai/llms/chat_gpt.py,sha256=8awFejDue4oC07ApMA6bI4qEeVvtz3gRIEoV3KvXuwY,7604
+pai/llms/fake.py,sha256=-TWmBL8OEeK3dJKV40tS9Zat4wz-mx4WTmizFBvl3xc,1152
+pai/llms/llama.py,sha256=JagbtOCqlnMDrBl8nocGo3_CeecKTkKNxDrxPNe7_IQ,2310
+pai/llms/llm_protocol.py,sha256=57oxIzwEoOTOFc1c5BFuuu25CTzlfwO8OLL6v-2vwjY,1005
+pai/repl.py,sha256=gZ3QZPqRfqHDAUm3pHvX7ZLMBJXqxwZ6Czn2wCmL7uU,8513
+pai/version.py,sha256=E4evYHPUeEAfDDpmwmcXLvLYZ3eKph8CLIHXmxwokSY,19
+pai_repl-0.1.19.dist-info/LICENSE.md,sha256=zgISxP21oPgKEIhPtOmJVfOz9eNfUqXQIrbIvox_zFE,1066
+pai_repl-0.1.19.dist-info/METADATA,sha256=hSFpEZZMOjfPBjjkmqrtT5dz_pbmHRX6EN2Cmu8BQwY,3754
+pai_repl-0.1.19.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pai_repl-0.1.19.dist-info/entry_points.txt,sha256=KNww87hpFnkT2osNiCPLmXzW5OUcgLDkIkPoLIxA6i0,36
+pai_repl-0.1.19.dist-info/RECORD,,
