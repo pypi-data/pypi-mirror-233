@@ -1,0 +1,10 @@
+cached_historical_data_fetcher/__init__.py,sha256=5wh2n2WFyKN__w3QHCwCgnHZw1WMQnlzzY8ex5VOTwY,263
+cached_historical_data_fetcher/cache/__init__.py,sha256=mN9W01HbPMXdzSbby6XD2mwr1RQQc7FVkcc27Um-Pt0,240
+cached_historical_data_fetcher/cache/base.py,sha256=ZvRobwWapHC0WurhZknYP-3KEaeExGkv7vG6jFuy1Tg,6287
+cached_historical_data_fetcher/cache/chunk.py,sha256=saWgUSaDcRhkrUVQ4PQZkbGqs2ghGcOKi_YFu19Z3no,7747
+cached_historical_data_fetcher/io.py,sha256=erWFOuhJT-etxbu2Yl8X8g0C2OE4O3f50nUWO3AcXOM,4042
+cached_historical_data_fetcher/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cached_historical_data_fetcher-0.1.0.dist-info/LICENSE,sha256=m29QcWlWxyRg3K0d5IYXR0DjEY-G5xMljZvO5Mewth8,1078
+cached_historical_data_fetcher-0.1.0.dist-info/METADATA,sha256=tywIDYZ_7ic8j0Nmm1_SGa8KjeBuhWiRymaVt1Nskf0,6720
+cached_historical_data_fetcher-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+cached_historical_data_fetcher-0.1.0.dist-info/RECORD,,
