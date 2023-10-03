@@ -1,0 +1,6 @@
+numpy
+matplotlib
+opencv-python
+pythonperlin
+seaborn
+requests
