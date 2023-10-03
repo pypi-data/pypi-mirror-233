@@ -1,0 +1,14 @@
+bitscreen_updater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitscreen_updater/__main__.py,sha256=BStxG_Y3nVnlpjvltGmQx9FHgY3XT4y3NoXypsqMZZU,4113
+bitscreen_updater/daemon.py,sha256=a7I4Kr_9i8oNSIMjExYSYtxuMycmz09TqpGXXNi0n8o,3731
+bitscreen_updater/exceptions.py,sha256=Cs4kYXCy3rr0DZuxQcYz-aQKZo1o6662DcH7M1WL11w,148
+bitscreen_updater/filter_checker.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitscreen_updater/provider_session.py,sha256=0fE1JwLOxGg9if4174UynntM2IF5TxuzE9WYZhRGbGU,5976
+bitscreen_updater/task_runner.py,sha256=PLFhGCrRkhgW1bc9yr-XqtKxdqQheJeCeNsA2xcd1sg,938
+bitscreen_updater/updater.py,sha256=VzbC9kPIWUDiJ2mciLSuvD8dg4r0EvWBKKo7yQS9GTQ,5253
+bitscreen_updater-0.1.12.dist-info/METADATA,sha256=rkKv04EAqXlADWthsec62gZ2Vp5kjCCmPz9bpczlikc,4315
+bitscreen_updater-0.1.12.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bitscreen_updater-0.1.12.dist-info/dependency_links.txt,sha256=Yqt2t2LVWFuW0lPReQfQ51GjXdzOYRe9TcWkyNrRZsI,115
+bitscreen_updater-0.1.12.dist-info/entry_points.txt,sha256=QeqYI-4tjF_frKdJvr6ZgOY9IGte7sCX-0YuNrQ0buA,89
+bitscreen_updater-0.1.12.dist-info/top_level.txt,sha256=2rqAg4qf_-oaBjwF0vHMjCgcwpphYEVSIRgpF-yuVjA,18
+bitscreen_updater-0.1.12.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bitscreen-updater=bitscreen_updater.__main__:main
+    
