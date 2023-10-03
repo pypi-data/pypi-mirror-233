@@ -1,0 +1,201 @@
+{
+    "wstl": {
+        "title": "HEA Trash Microservice",
+        "actions": [
+            {
+                "name": "heaserver-awss3trash-item-permanently-delete",
+                "description": "Permanently delete this item",
+                "type": "unsafe",
+                "action": "remove",
+                "target": "item read cj",
+                "prompt": "Permanently delete"
+            },
+            {
+                "name": "heaserver-awss3trash-do-empty-trash",
+                "description": "Empty the trash",
+                "type": "unsafe",
+                "action": "remove",
+                "target": "read cj",
+                "prompt": "Empty trash"
+            },
+            {
+                "name": "heaserver-awss3trash-item-restore",
+                "description": "Put this item back",
+                "type": "safe",
+                "action": "update",
+                "target": "item read cj",
+                "prompt": "Restore"
+            },
+            {
+                "name": "heaserver-awss3trash-item-get-self",
+                "description": "View this item",
+                "type": "safe",
+                "action": "read",
+                "target": "item read cj",
+                "prompt": "View"
+            },
+            {
+                "name": "heaserver-awss3trash-item-get-volume",
+                "description": "View this item's volume",
+                "type": "safe",
+                "action": "read",
+                "target": "item read cj",
+                "prompt": "View volume"
+            },
+            {
+                "name": "heaserver-awss3trash-item-get-awsaccount",
+                "description": "View this item's AWS account",
+                "type": "safe",
+                "action": "read",
+                "target": "item read cj",
+                "prompt": "View account"
+            },
+            {
+                "name": "heaserver-awss3trash-item-get-open-choices",
+                "description": "Open this item",
+                "type": "safe",
+                "action": "read",
+                "target": "item read cj",
+                "prompt": "Open"
+            },
+            {
+                "name": "heaserver-awss3trash-item-open-default",
+                "description": "Open this item",
+                "type": "safe",
+                "action": "read",
+                "target": "item read cj",
+                "prompt": "Open"
+            },
+            {
+                "name": "heaserver-awss3trash-item-get-properties",
+                "description": "View and edit this item's properties",
+                "type": "safe",
+                "target": "item cj-template",
+                "action": "read",
+                "prompt": "Properties",
+                "inputs": [
+                    {
+                        "name": "id",
+                        "prompt": "Id",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "display_name",
+                        "prompt": "Name",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "original_location",
+                        "prompt": "Original location",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "type",
+                        "prompt": "Type",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "description",
+                        "prompt": "Description",
+                        "type": "textarea",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "size",
+                        "prompt": "Size in bytes",
+                        "hea": {
+                            "display": false
+                        }
+                    },
+                    {
+                        "name": "human_readable_size",
+                        "prompt": "Size",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "storage_class",
+                        "prompt": "Storage class",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "s3_uri",
+                        "prompt": "S3 URI",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "mime_type",
+                        "prompt": "MIME Type",
+                        "readOnly": true
+                    },
+                    {
+                        "name": "owner",
+                        "prompt": "Owner",
+                        "type": "select",
+                        "hea": {
+                            "optionsFromUrl": {
+                                "path": "people/",
+                                "value": "id",
+                                "text": "display_name"
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    {
+                        "name": "created",
+                        "prompt": "Created",
+                        "readOnly": true,
+                        "hea": {
+                            "type": "datetime"
+                        }
+                    },
+                    {
+                        "name": "modified",
+                        "prompt": "Modified",
+                        "readOnly": true,
+                        "hea": {
+                            "type": "datetime"
+                        }
+                    },
+                    {
+                        "name": "source",
+                        "prompt": "Source",
+                        "readOnly": true
+                    },
+                    {
+                        "hea": {
+                            "section": "shares",
+                            "sectionPrompt": "Shares",
+                            "optionsFromUrl": {
+                                "path": "people/",
+                                "value": "id",
+                                "text": "display_name"
+                            }
+                        },
+                        "name": "user",
+                        "prompt": "User",
+                        "readOnly": true,
+                        "type": "select"
+                    },
+                    {
+                        "hea": {
+                            "section": "shares",
+                            "cardinality": "multiple"
+                        },
+                        "name": "permissions",
+                        "prompt": "Permissions",
+                        "type": "select",
+                        "suggest": [
+                            {"value":  "COOWNER", "text":  "Co-owner"},
+                            {"value":  "CREATOR", "text":  "Creator"},
+                            {"value":  "DELETER", "text":  "Deleter"},
+                            {"value":  "EDITOR", "text":  "Editor"},
+                            {"value":  "SHARER", "text":  "Sharer"},
+                            {"value":  "VIEWER", "text":  "Viewer"}
+                        ],
+                        "readOnly": true
+                    }
+                ]
+            }
+        ]
+    }
+}

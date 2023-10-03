@@ -1,0 +1,2 @@
+[console_scripts]
+heaserver-trash-aws-s3 = heaserver.trashawss3.service:main
