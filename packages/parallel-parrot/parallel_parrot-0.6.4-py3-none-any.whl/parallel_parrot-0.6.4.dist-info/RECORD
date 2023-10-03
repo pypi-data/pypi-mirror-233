@@ -1,0 +1,17 @@
+parallel_parrot/__init__.py,sha256=MKa-5zbcBfxui9Uk7FkXAYAFX7WUvwvf3w0quATboFE,598
+parallel_parrot/core.py,sha256=wvStdA3Pdj9E_oDBqPQ-EgIeHDMi164DEBdWegri0u8,3737
+parallel_parrot/format_openai_fine_tuning.py,sha256=kR-O5wW6fvrvycJsNBZvd6hC38fjYjGfNrz4My6fHgY,5490
+parallel_parrot/openai_api.py,sha256=Hxxz8uHDqFP251g0yr80Qp6pLOXeamDfQutPCkeKLRk,18954
+parallel_parrot/openai_data_interface.py,sha256=pv9_k_PjIpvlHNMY4JOTu4-xIaWcXD459Ty5k3GakIg,8396
+parallel_parrot/openai_util.py,sha256=gHQ7iV9FIlz_5mIKPMHqkhvDMmx1aRBPIFgqRrbv1Kw,338
+parallel_parrot/prompt_templates.py,sha256=ozT93FXuHeNOBaFYVxwGIkHJz1gg39GrVBPRA23amsQ,1340
+parallel_parrot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parallel_parrot/types.py,sha256=ZqCLqa4UZTjZgLLVcZTQoShsB1e_V_nAmA6jWvlJc2E,2070
+parallel_parrot/util.py,sha256=XyDpMQNZLvOxU2srYpXRqgf7-SgMRckU1BwawTuxvWA,352
+parallel_parrot/util_dictlist.py,sha256=O_U-poRdAWd14EUm2rAdUFGkopMkQgXv2vQilk01Rmo,2903
+parallel_parrot/util_pandas.py,sha256=PQyif9pqNPyAQp4XqFVC-0pgRJ8Df_1rovBLLuh7D4Q,2296
+parallel_parrot/util_template.py,sha256=WtDYyLsFxliBi9T-9d3pzXrsn_8LZNxaE74MK3TIDMY,2060
+parallel_parrot-0.6.4.dist-info/LICENSE,sha256=tXMhHzASM5GYXo5lXJhFW_ZmIp6Q-7muYkAQLWy4hJY,1065
+parallel_parrot-0.6.4.dist-info/METADATA,sha256=24pqGVlEAZPfZPdV6T5Tk9z1qdja6zQrbtI9lat2U9g,15508
+parallel_parrot-0.6.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+parallel_parrot-0.6.4.dist-info/RECORD,,
