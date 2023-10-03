@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+scilight/__init__.py
+scilight.egg-info/PKG-INFO
+scilight.egg-info/SOURCES.txt
+scilight.egg-info/dependency_links.txt
+scilight.egg-info/top_level.txt
