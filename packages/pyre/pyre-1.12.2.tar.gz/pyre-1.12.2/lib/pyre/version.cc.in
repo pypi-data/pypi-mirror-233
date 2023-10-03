@@ -1,0 +1,18 @@
+// -*- C++ -*-
+// -*- coding: utf-8 -*-
+//
+// michael a.g. aïvázis <michael.aivazis@para-sim.com>
+// (c) 1998-2023 all rights reserved
+
+// my declarations
+#include "version.h"
+
+// the pyre version tuple
+auto
+pyre::version::version() -> version_t
+{
+    // build and return the version tuple as it was seen at the time {libpyre} was compiled
+    return version_t { major, minor, micro, revision };
+}
+
+// end of file

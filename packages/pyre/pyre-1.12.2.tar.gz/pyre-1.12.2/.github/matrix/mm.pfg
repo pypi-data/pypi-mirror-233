@@ -1,0 +1,23 @@
+;
+; michael a.g. aïvázis <michael.aivazis@para-sim.com>
+; (c) 1998-2023 all rights reserved
+
+mm:
+    ; targets
+    target = {pyre.environ.target},shared
+
+    ; compilers
+    compilers = {pyre.environ.suite}, python/python3
+
+    ; final products
+    prefix = {pyre.env.HOME}/products
+    ; intermediate build products
+    bldroot = {pyre.env.HOME}/build
+
+    ; other settings
+    ; the location of the configuration file
+    runcfg = .github/matrix
+    ; the name of the make utility
+    make = make
+
+; end of file

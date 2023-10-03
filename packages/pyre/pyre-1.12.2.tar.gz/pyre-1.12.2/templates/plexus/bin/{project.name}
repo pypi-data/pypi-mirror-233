@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- Python -*-
+# -*- coding: utf-8 -*-
+#
+# {project.authors}
+# (c) {project.span} all rights reserved
+
+
+# get the package
+import {project.name}
+
+# build an instance of the app
+app = {project.name}.shells.{project.name}(name='{project.name}.app')
+# invoke it
+status = app.run()
+# and pass its exit status on to the shell
+raise SystemExit(status)
+
+
+# end of file

@@ -1,0 +1,38 @@
+# ignore rules
+
+/.bzr
+*~
+
+# machine-dependent config
+/.mm/config.def
+
+# the default build locations (mm)
+/builds
+/products
+# the default build locations (cmake)
+/build
+
+# auctex lint
+/doc/**/auto
+# tex lint
+/doc/**/*.aux
+/doc/**/*.bbl
+/doc/**/*.blg
+/doc/**/*.log
+/doc/**/*.nav
+/doc/**/*.out
+/doc/**/*.snm
+/doc/**/*.toc
+/doc/**/*.vrb
+# ignore pdfs
+/doc/**/*.pdf
+# but not those that are figures
+!doc/**/figures/*.pdf
+
+# mac folder attributes 
+**.DS_Store
+
+# python cache
+**__pycache__
+
+# end of file
