@@ -1,0 +1,2 @@
+[console_scripts]
+rearrange_fis_data = fis_data.rearrange_fis_data:main
