@@ -1,0 +1,9 @@
+click
+cssselect
+gcsa>=0.4.0
+lxml
+
+[testing]
+flake8
+mypy
+pytest
