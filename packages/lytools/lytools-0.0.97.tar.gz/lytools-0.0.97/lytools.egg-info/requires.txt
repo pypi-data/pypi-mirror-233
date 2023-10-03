@@ -1,0 +1,11 @@
+matplotlib
+numpy
+scipy
+gdal
+tqdm
+pandas
+seaborn
+scikit-learn
+requests
+outdated
+basemap
