@@ -1,0 +1,14 @@
+What's new in version 1.2.2
+===========================
+Version available since 8th November 2021
+
+
+Bug fixed
+---------
+- Including freeOutputs attribute leads to change optimization results.
+
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

@@ -1,0 +1,19 @@
+What’s new in version 1.1.0
+===========================
+Version available since 28th May 2021
+
+Bug fixed
+---------
+Changes
+------------
+In Tools.py, class Structlist replaces "flatten" and "unflattened" functions.
+
+New Features
+------------
+- Optimization problems with "mixed" constraints (scalars and vectorials) and/or mixed inputs can be solved.
+
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

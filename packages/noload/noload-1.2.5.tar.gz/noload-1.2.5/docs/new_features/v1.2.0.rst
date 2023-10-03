@@ -1,0 +1,20 @@
+What's new in version 1.2.0
+===========================
+Version available since 18th October 2021
+
+Bug fixed
+---------
+- np.array matrices in models crashed the algorithm.
+
+Changes
+------------
+
+New Features
+------------
+- To give specifications, users can also use dictionaries for variables and constraints instead of two lists for each (names + values).
+
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

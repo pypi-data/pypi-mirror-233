@@ -1,0 +1,31 @@
+What's new in version 1.2.5
+===========================
+Version available since 2nd October 2023
+
+
+New Features
+------------
+- A new attribute "debug" in Spec class, to print values and gradient at each iteration of the optimization.
+- method of Iteration class, print, returns a dataframe, more exploitable.
+- method of Result class, plotResults, plots one variable per figure with their
+bounds as horizontal curves, to help users to debug. It can also print vectorial
+inputs and constraints.
+- a new method of result class, plotPareto, to display Pareto Front easier.
+- a new method of result class, addParetoList, to display several Pareto Front in one graph.
+- constraints are displayed on the Pareto Front.
+- method plotXY of iteration class displays two outputs per graph, and is able to display vectorial outputs.
+- a new function, optim2d_weighting, to solve bi-objective optimisation problems with ponderation method
+(a parameter 'method2d' is added on the optim.run function to switch between methods).
+- handle exceptions when specifications variable does not belong to the model outputs.
+- Normalization of inputs, outputs and gradients before optimization, to help algorithm to converge.
+- When optimization does not converge, new initial random point is printed.
+- New test files 'checkJacobian' and 'testSLSQP' to compare analytical jacobian and Autograd's one.
+- 'ExportToXML' function also writes specifications of the optimization problem in the XML file.
+- 'exclude_dominated_points' function in multi_objective files to delete 'bad' points in pareto front.
+- New files 'gui1', 'gui2' and 'OpenGUI' in GUI folder, to create a Graphical User Interface to call after running optimization.
+
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

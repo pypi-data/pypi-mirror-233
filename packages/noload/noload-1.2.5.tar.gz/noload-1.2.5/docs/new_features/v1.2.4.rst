@@ -1,0 +1,13 @@
+What's new in version 1.2.4
+===========================
+Version available since 13th December 2021
+
+
+New Features
+------------
+- A new function in 'analyse' package, computeJacobian, to display gradients of outputs according to given inputs.
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

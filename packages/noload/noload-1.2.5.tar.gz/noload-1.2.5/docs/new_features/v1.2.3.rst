@@ -1,0 +1,17 @@
+What's new in version 1.2.3
+===========================
+Version available since 1st December 2021
+
+
+Bug fixed
+---------
+- freeOutputs were not saved in the multi-objective case.
+
+New Features
+------------
+- A new method of Wrapper class, getIteration, to return the inputs and outputs of an iteration.
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant

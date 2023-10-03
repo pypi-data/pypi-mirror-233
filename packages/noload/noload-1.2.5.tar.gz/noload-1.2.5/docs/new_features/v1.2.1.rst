@@ -1,0 +1,14 @@
+What's new in version 1.2.1
+===========================
+Version available since 3rd November 2021
+
+
+New Features
+------------
+- Add XML export for GeomMaker.
+
+
+Contributors
+------------
+Lucas Agobert
+Benoit Delinchant
