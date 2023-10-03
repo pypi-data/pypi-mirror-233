@@ -1,0 +1,17 @@
+PhysioKit2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PhysioKit2/banner.png,sha256=2Z59j32d1_7tDa1WTf1xJpaAEZ03nERy_HjXP4o5-xI,42512
+PhysioKit2/color_bar.png,sha256=KkxrT2m6BilTwYdeKABaD1ngWCRs9tJ9iKSl9QkFTTY,3095
+PhysioKit2/form.ui,sha256=5JUyXOrN0A6fihlLn7gYDMvWZadlSJNswKdsnMRTubQ,21985
+PhysioKit2/main.py,sha256=OUdh0bvVCXQObfY3D5znQ3Q2lIUIn5vedtlPalBLkcU,36554
+PhysioKit2/register_dummy.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PhysioKit2/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PhysioKit2/utils/biofeedback_vis.py,sha256=5FfHgDBn5lFBR7Ge0TNRjZHdpBMvYcRSrERMp4hUTbg,6155
+PhysioKit2/utils/data_processing_lib.py,sha256=I1oGqPNczHAdOEqe9aI41ciWVRrqyxyoeYd-fY4TR9U,1877
+PhysioKit2/utils/devices.py,sha256=SdiYcFXUItJYDVTFFzQ8ermcO6yzNTNhMvc8NuS7lc0,1003
+PhysioKit2/utils/external_sync.py,sha256=Fr3FKBtOoXAIksWNEoGDDor4TqXQFZKgLzxpiUHAlx4,4006
+PhysioKit2/utils/load_data.py,sha256=Wy4rnM2BDWZQBeBfXXsJLjeCepUbl4exgJgVdw9LRAU,2186
+PhysioKit2-1.6.2.2.dist-info/LICENSE,sha256=4-WPjgWQvEK2D8ni35U6ZRnp4UCX-2MZFFCWWGx2ifY,1084
+PhysioKit2-1.6.2.2.dist-info/METADATA,sha256=6XiyXZ8LsoHuwKm3SS7A6zTEtJj4njzfpHGsQ95iQ2I,12418
+PhysioKit2-1.6.2.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+PhysioKit2-1.6.2.2.dist-info/top_level.txt,sha256=ILylcDA-FKD_MZYSkPOxsnnxIlja-VyYIQF4e9PpEhU,11
+PhysioKit2-1.6.2.2.dist-info/RECORD,,
