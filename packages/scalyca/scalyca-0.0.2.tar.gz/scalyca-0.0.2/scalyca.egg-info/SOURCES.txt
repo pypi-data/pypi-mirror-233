@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+scalyca/__init__.py
+scalyca/colour.py
+scalyca/configuration.py
+scalyca/exceptions.py
+scalyca/logger.py
+scalyca/scala.py
+scalyca/scalyca.py
+scalyca/test_scala.py
+scalyca/utilities.py
+scalyca.egg-info/PKG-INFO
+scalyca.egg-info/SOURCES.txt
+scalyca.egg-info/dependency_links.txt
+scalyca.egg-info/requires.txt
+scalyca.egg-info/top_level.txt
