@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+microSWIFTtelemetry/__init__.py
+microSWIFTtelemetry/pull_telemetry.py
+microSWIFTtelemetry/version.py
+microSWIFTtelemetry.egg-info/PKG-INFO
+microSWIFTtelemetry.egg-info/SOURCES.txt
+microSWIFTtelemetry.egg-info/dependency_links.txt
+microSWIFTtelemetry.egg-info/requires.txt
+microSWIFTtelemetry.egg-info/top_level.txt
+microSWIFTtelemetry/sbd/__init__.py
+microSWIFTtelemetry/sbd/compile_sbd.py
+microSWIFTtelemetry/sbd/definitions.py
+microSWIFTtelemetry/sbd/read_sbd.py

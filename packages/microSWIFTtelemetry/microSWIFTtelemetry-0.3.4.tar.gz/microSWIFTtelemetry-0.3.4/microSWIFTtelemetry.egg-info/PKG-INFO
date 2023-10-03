@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: microSWIFTtelemetry
+Version: 0.3.4
+Summary: microSWIFTtelemetry: Python-based functionality for pulling telemetry from the microSWIFT wave buoy.
+Home-page: https://github.com/SASlabgroup/microSWIFTtelemetry
+Download-URL: 
+Author: Jacob Davis
+Author-email: davisjr@uw.edu
+Maintainer: Jacob Davis
+Maintainer-email: davisjr@uw.edu
+License: MIT
+Platform: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires: matplotlib
+Requires: numpy
+Requires: pandas
+Requires: xarray
+Requires-Python: >= 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+
+microSWIFTtelemetry
+===================
+Python-based functionality for pulling telemetry from the microSWIFT wave buoy.
+
+.. _README: https://github.com/SASlabgroup/microSWIFTtelemetry/blob/main/README.md
+
+License
+=======
+``microSWIFTtelemetry`` is licensed under the terms of the MIT license. See the file
+"LICENSE" for information on the history of this software, terms & conditions
+for usage, and a DISCLAIMER OF ALL WARRANTIES.
+
+All trademarks referenced herein are property of their respective holders.
+
+Copyright (c) 2022--, Jacob Davis, University of Washington
