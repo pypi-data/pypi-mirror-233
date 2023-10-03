@@ -1,0 +1,16 @@
+sum_dirac_dfcoef/__about__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+sum_dirac_dfcoef/__init__.py,sha256=JRNs1BDrLpF1Zlh6z3RMlYehkiiSvYWK0QCSboaUroE,49
+sum_dirac_dfcoef/__main__.py,sha256=-7l5aXUqfkSqy8ZsfjCoFzD9x3WtuShhVdH2uy6AY-U,117
+sum_dirac_dfcoef/args.py,sha256=DheW_goA1sdJHQSNCdx2jmZGUtyVN-Fl8LywinlX7oQ,2572
+sum_dirac_dfcoef/atoms.py,sha256=YDdpG2cFM-boUh98CXbzfi793DX09TDmfmYGcn9Xevc,3933
+sum_dirac_dfcoef/coefficient.py,sha256=Rw7OXNJ7KqL3BjB7njVz2nA70jIcbiOTLz-t-YNxnDI,4345
+sum_dirac_dfcoef/data.py,sha256=UC6avi2hLPT-wDV8omHo-NV3Yoar1SW_EBDIUkSPBs0,1436
+sum_dirac_dfcoef/functions_info.py,sha256=XMy_FcEwIZhk5Sqf7rSkr6Hh7NS-B9Ty7VF2N0nDjOs,9948
+sum_dirac_dfcoef/subshell.py,sha256=v02SfVXrrOVlvDwQ2oc8MIklWQP60PqFS9sNiPH2tHA,2155
+sum_dirac_dfcoef/sum_dirac_dfcoef.py,sha256=ROGZa7Q9vq1N0_R8npVKVG6XoGlU3m9LsI65tuv3L7Q,10605
+sum_dirac_dfcoef/utils.py,sha256=xbhnaWTEEkjGVPLMpTAkxQQLn3zjXSv54bjiXlftF1Q,313
+sum_dirac_dfcoef-1.0.2.dist-info/METADATA,sha256=pz4CEWFpqSCsO2b7EQgfqi7Xrf17rWcBcTc81R2Rp9Q,5750
+sum_dirac_dfcoef-1.0.2.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+sum_dirac_dfcoef-1.0.2.dist-info/entry_points.txt,sha256=mqf9DsJLgOUf8B2zflDnwfWZ839IPKG6CUjPN_3DuKw,59
+sum_dirac_dfcoef-1.0.2.dist-info/licenses/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+sum_dirac_dfcoef-1.0.2.dist-info/RECORD,,
