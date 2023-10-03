@@ -1,0 +1,15 @@
+sifeng/__init__.py,sha256=nYlhwf3gU5BNawwL48DD1mAxnjBqKFqhscT3_3vNSZQ,23
+sifeng/__version__.py,sha256=0GiXk3J225fjjl7mgTcHJdOhfn_FWyLVJ4hnuKqxmbU,67
+sifeng/fetcher.py,sha256=clHDNfkzlRfafa85d9h-p5udetLxrm1G0CRplOOOJrI,5742
+sifeng/dl/__init__.py,sha256=4snl0sOzZY3V4eAe3J1elvhJFFmm_RWLqUYU0JQ0mEw,91
+sifeng/dl/tools.py,sha256=IKLdDvJyqJhn3XlFtoODQayEAcH6gGvDBNYoLTZ9TVE,7650
+sifeng/dl/training.py,sha256=nFVzk_-2FeZlXYFAHDRQ-YqpDvDu-W6tkzfakvQrd90,9512
+sifeng/dl/modules/__init__.py,sha256=PTCz03-kFeMl1JyQHHRPczjdJs_-Bw5mGQx0wXJLZlg,2522
+sifeng/dl/modules/mdl.py,sha256=jk8EaEVZo2CG0jUDRY-mbCAxTrIU4eL64MgO0ji0BRQ,13643
+sifeng/nn/__init__.py,sha256=RTLkEF59NcMwc8eYupowl-2WXHPqr0IqVxH6Ixm4jUM,29
+sifeng/nn/modelstat.py,sha256=2V8i7fcP4lNUXQ8KwrMB-aiALDKzaOgk66SwgXvUBp4,4146
+sifeng-0.2.13.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+sifeng-0.2.13.dist-info/METADATA,sha256=iBDuRyVrWs8LmXdgM8teqE7NNNiuQHlS8NjbGN4HqGs,4662
+sifeng-0.2.13.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+sifeng-0.2.13.dist-info/top_level.txt,sha256=GioKqFWLDv5FZidU0yrQRAQnaAxSqLPtjD5K2jBc1fs,7
+sifeng-0.2.13.dist-info/RECORD,,
