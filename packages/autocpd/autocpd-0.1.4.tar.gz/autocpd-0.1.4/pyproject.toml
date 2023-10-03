@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autocpd"
+version = "0.1.4"
+authors = [
+    { name="Jie Li, et al.", email="j.li196@lse.ac.uk" },
+    { name="Paul Fearnhead", email="p.fearnhead@lancaster.ac.uk"},
+    {name="Piotr Fryzlewicz", email="p.fryzlewicz@lse.ac.uk"},
+    {name="Tengyao Wang", email="t.wang59@lse.ac.uk"}
+]
+maintainers = [{ name="Jie Li", email="j.li196@lse.ac.uk" },]
+
+description = "The implementation of algorithm in AutoCPD"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    'matplotlib',
+    'numpy',
+    'pandas',
+    'scipy',
+    'scikit-learn',
+    'statsmodels',
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+# ...
+# By default, include-package-data is true in pyproject.toml, so you do
+# NOT have to specify this line.
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Homepage" = "https://github.com/Jieli12/AutoCPD"
+"Documentation" = "https://autocpd.readthedocs.io/en/latest/"
+"Bug Tracker" = "https://github.com/Jieli12/AutoCPD/issues"
