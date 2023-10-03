@@ -1,0 +1,47 @@
+[project]
+name = "stellarmesh"
+version = "0.3.0"
+authors = [{ name = "Alex Keon" }]
+description = "GMSH wrapper and DAGMC geometry creator."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["gmsh", "numpy", "pymoab", "pymmg"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+select = [
+    "E",
+    "W",
+    "I",
+    "N",
+    "A",
+    "B",
+    "F",
+    "D",
+    "FBT",
+    "C4",
+    "SIM",
+    "TD",
+    "PL",
+    "TRY",
+    "NPY",
+    "PERF",
+    "RUF",
+]
+ignore = [
+    "TRY003",  # Exception with string (vs. defining custom exception)
+    "PLR2004", # Magic number
+]
+target-version = "py39"
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.pyright]
+pythonVersion = "3.9"
+
+[tool.black]
+target-version = ["py39", "py310", "py311"]
