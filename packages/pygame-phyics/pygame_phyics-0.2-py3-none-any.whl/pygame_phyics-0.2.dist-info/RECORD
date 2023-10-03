@@ -1,0 +1,15 @@
+pygame_phyics/__init__.py,sha256=iHnsVlsNXNX75BthhKFadLR9QbNc718ILyUojcKfoPE,489
+pygame_phyics/error.py,sha256=5ElHiNdUvA2rjVvVd3vp9ssVjg5WMlh8huPCpU2uvUE,359
+pygame_phyics/event.py,sha256=V2PZY86IekH3GlKSZNSyZvRlG-b1-7cThAuMVgsQQLk,370
+pygame_phyics/game.py,sha256=XPDSQWIWRv0qYce6eJsEg5XWBXt_BT_4BULEwJXoVsE,3439
+pygame_phyics/input.py,sha256=7wAr-9vE5_d3UQR0jXwHqiYhylW-ZrbGvPqGtTjinpY,1138
+pygame_phyics/instantiate.py,sha256=Gru4dvxftrdl51P2GJRpb7ytbgU7f6MnLwaqkJQjsEw,1660
+pygame_phyics/manger.py,sha256=O3moeAVn70s5Xn4vW-SzvU-p-zLKds-JxdMTj8-97xM,227
+pygame_phyics/mouse.py,sha256=LF9MlIHpq0izc2J7kIJnwKrJE6Zi8BJYY6qDukr_VDY,875
+pygame_phyics/object.py,sha256=GHezaL7oTCHKWznRrlJbhRqrfr5XJWAnD4BsYKGL_FQ,11312
+pygame_phyics/scene.py,sha256=MHAEdaEEVrqlZdoYPWXtkJTTQhQs_FnV-8D5K99iOkM,2185
+pygame_phyics/sheet.py,sha256=DZlxfrkC2Y5J4cU1nQTAzmG2nP8yqZDc_XbtU6jCK9Y,847
+pygame_phyics-0.2.dist-info/METADATA,sha256=XUCqe6oShYZiBIo_50HV2slxlQOxFzmoeRcIADehi4A,219
+pygame_phyics-0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pygame_phyics-0.2.dist-info/top_level.txt,sha256=f8ullZ7D7m0xVxZCVTMrE42CL2NWJ08XQgMBw90_KRU,14
+pygame_phyics-0.2.dist-info/RECORD,,
