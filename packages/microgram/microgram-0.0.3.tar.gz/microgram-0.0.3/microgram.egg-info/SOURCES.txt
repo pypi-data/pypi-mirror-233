@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+microgram/__init__.py
+microgram/bot.py
+microgram/chunking.py
+microgram/text.py
+microgram.egg-info/PKG-INFO
+microgram.egg-info/SOURCES.txt
+microgram.egg-info/dependency_links.txt
+microgram.egg-info/requires.txt
+microgram.egg-info/top_level.txt
