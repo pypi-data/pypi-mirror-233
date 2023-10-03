@@ -1,0 +1,9 @@
+kataria/__init__.py,sha256=f9C1atvYWUnyCz53pWraP-KyNThrHeW_e6Deu1YO9Uw,578
+kataria/common.py,sha256=W9EChGxsLq8an008sb5PKmkkbwYzv52gMVkcpZhluSM,458
+kataria/iterable.py,sha256=4gUFdGA6WWGKjiLPyj_vBlAA6z8YdPPKHnvUOPvjPy4,15653
+kataria/option.py,sha256=UJ1yyqcLQL5z6tm2n2WIM2mQQH26p6_81xtAXLN0wFE,5324
+kataria/result.py,sha256=5ZuTMUiFsrcyb4ETOEQOgAoTw96X5EF_j3xtoS3cgyQ,4647
+kataria-0.1.0.dist-info/LICENSE,sha256=qV1EVopFn6nEXmaebV3lRcz3qni0VxthCMy9j0KRw2w,1061
+kataria-0.1.0.dist-info/METADATA,sha256=h_4Y8LqOkGDEBalzAlgXOVEnlCiJSvxRZxokZgx0V38,1316
+kataria-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+kataria-0.1.0.dist-info/RECORD,,
