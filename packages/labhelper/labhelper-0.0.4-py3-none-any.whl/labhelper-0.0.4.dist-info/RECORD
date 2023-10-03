@@ -1,0 +1,12 @@
+lab_helper/__init__.py,sha256=ryZLAkb4jCxG8e3sbDd7T7C6nafjlxkLmE2xS9QoIzI,75
+lab_helper/pandas_utils.py,sha256=WST56TMV-kKWqPIP9-Ttzmx3orcPZ_HTiepC6lySs5o,1728
+lab_helper/stats.py,sha256=kdGz6I6zWsOwRm9m2I-XzQgEWpTB2xEPaS6Ypb7k5UM,651
+lab_helper/symbolic.py,sha256=zFgSsbfX2Gpf8u66DoFfi3xRK_-6LwjalAtx-9NNYo4,2714
+labhelper/__init__.py,sha256=ryZLAkb4jCxG8e3sbDd7T7C6nafjlxkLmE2xS9QoIzI,75
+labhelper/pandas_utils.py,sha256=zsgOYatEqWN3WPHG-YrTK0PoaoaoSN7VOVNvR-6US6Y,2843
+labhelper/stats.py,sha256=2xBSxPADqLTXhZkQxb0TluWQwOfkBLMwo5AjbIF1DFU,1694
+labhelper/symbolic.py,sha256=WPIqn6WSRX5jSksboF025ERt1HCiqG0MfLsFKY6GVO4,10938
+labhelper-0.0.4.dist-info/METADATA,sha256=GRd4nOR1Qn71-J6k_ymaQ0p5erCTy2Fcig9ErHxWC_Q,891
+labhelper-0.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+labhelper-0.0.4.dist-info/top_level.txt,sha256=YkaxkZJS1a1P-kNqcs5xvt3GbeSdImXj1Vc56ui_FBk,10
+labhelper-0.0.4.dist-info/RECORD,,
