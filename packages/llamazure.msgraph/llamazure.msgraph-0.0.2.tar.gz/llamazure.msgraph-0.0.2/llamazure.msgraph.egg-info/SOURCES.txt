@@ -1,0 +1,14 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+llamazure/__init__.py
+llamazure.msgraph.egg-info/PKG-INFO
+llamazure.msgraph.egg-info/SOURCES.txt
+llamazure.msgraph.egg-info/dependency_links.txt
+llamazure.msgraph.egg-info/namespace_packages.txt
+llamazure.msgraph.egg-info/requires.txt
+llamazure.msgraph.egg-info/top_level.txt
+llamazure/msgraph/__init__.py
+llamazure/msgraph/codec.py
+llamazure/msgraph/models.py
+llamazure/msgraph/msgraph.py
