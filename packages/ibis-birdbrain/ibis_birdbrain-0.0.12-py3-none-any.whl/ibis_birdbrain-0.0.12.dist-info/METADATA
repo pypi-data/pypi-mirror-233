@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ibis-birdbrain
+Version: 0.0.12
+Summary: data + AI
+Project-URL: Homepage, https://github.com/ibis-project/ibis-birdbrain
+Project-URL: Bug Tracker, https://github.com/ibis-project/ibis-birdbrain/issues
+Author-email: Cody <cody@dkdc.dev>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: html2text
+Requires-Dist: ibis-framework[deltalake,duckdb,polars]
+Requires-Dist: ipython
+Requires-Dist: marvin[ddg]~=1.3.0
+Requires-Dist: openai
+Requires-Dist: pillow
+Requires-Dist: plotly
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: streamlit
+Requires-Dist: toml
+Requires-Dist: typer[all]
+Description-Content-Type: text/markdown
+
+# Ibis Birdbrain
+
+The portable Python AI-powered data bot for your data project. Currently under construction by slow humans and highly experimental.
+
+Powered by [Ibis](https://ibis-project.org), your data platform, [Marvin](https://github.com/prefectHQ/marvin), and your AI platform.
