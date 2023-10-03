@@ -1,0 +1,6 @@
+[console_scripts]
+lollms-console = lollms.apps.console:main
+lollms-gandalf = lollms.apps.gandalf:main
+lollms-playground = lollms.apps.playground:main
+lollms-server = lollms.apps.server:main
+lollms-settings = lollms.apps.settings:main
