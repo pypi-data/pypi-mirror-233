@@ -1,0 +1,14 @@
+pastasoss/__init__.py,sha256=rrRnP-hYZ-x3KPq7j5psjNFpy7C4RvaAhJdYtswYJME,50
+pastasoss/soss_traces.py,sha256=IzmoqKxyTmZOY84yluJU9lrUjDLLNzeRqv19nfKD7QA,6555
+pastasoss/wavecal.py,sha256=XdwIUkofgDl4GfmauFTGRtggKijq8Apy6foQZbk820k,8510
+pastasoss/data/jwst_niriss_gr700xd_order1_trace_refmodel.txt,sha256=glyfGu7DcMX3OaLgvDpYCsTAnm4B0WtVBt1ttGC5hlQ,38351
+pastasoss/data/jwst_niriss_gr700xd_order2_trace_refmodel.txt,sha256=n8PsSnhuRqIjuuXZ30Ieod7o3gHqVxMocrIOF2V2sCA,23025
+pastasoss/data/jwst_niriss_gr700xd_wavelength_model_order1.json,sha256=aByfokpfByg2zV3v1BG3MDi37hKiZ-cPKfrGMnwrc_k,2570
+pastasoss/data/jwst_niriss_gr700xd_wavelength_model_order2.json,sha256=bIKUo6eoVVtNsC5VcANHGboxO23t1drENWgqfNsZCnk,1841
+pastasoss/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pastasoss/tests/test_pastasoss.py,sha256=k_f2xxpEvgD7I5SPM504VNMjDI6l2rX6Q4CzB1cct2M,258
+pastasoss-1.1.0.dist-info/LICENSE,sha256=9ymYW_6SmzaKrwn--x588rt_knC6VyKF87p_ftpd3zI,1561
+pastasoss-1.1.0.dist-info/METADATA,sha256=WZEW9MP8P60QpJtIZXT_vPcYa73af7fBT1HNy5u_bdM,4393
+pastasoss-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pastasoss-1.1.0.dist-info/top_level.txt,sha256=xlGDNVkSADXDnr1_9I731-WG7_9cFvYucOieOmDom-E,10
+pastasoss-1.1.0.dist-info/RECORD,,
