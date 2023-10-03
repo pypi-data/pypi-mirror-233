@@ -1,0 +1,10 @@
+README.md
+setup.py
+gpt4all_tone/__init__.py
+gpt4all_tone/gpt4all_tone.py
+gpt4all_tone.egg-info/PKG-INFO
+gpt4all_tone.egg-info/SOURCES.txt
+gpt4all_tone.egg-info/dependency_links.txt
+gpt4all_tone.egg-info/entry_points.txt
+gpt4all_tone.egg-info/requires.txt
+gpt4all_tone.egg-info/top_level.txt
