@@ -1,0 +1,17 @@
+usls/__init__.py,sha256=6LchjIeEx6Nz6shWIkP75Qd_cEXmVCxEp4XIqjHJ2ik,250
+usls/cli.py,sha256=hXP3c0TjtgjTVljFdkNwHaGtPRr8NVCL18mdDcH2qTA,15526
+usls/src/__init__.py,sha256=AJcbAYdfIPc2WPmqUt6Lu54CruLsozFr-5M1j2gdQms,120
+usls/src/cleanup.py,sha256=1ZvqMvGzcyf3Zxf_upvrGwMiNTjN9x2jEkAwAY3zfn4,7249
+usls/src/dataloader.py,sha256=7eU27-RZEXTEVkvDP5GAZahFuR11Pc3f8fGalrLIO_Y,10784
+usls/src/feature_extractor.py,sha256=JrYph2vTvkhgjaN25j26LAZLMe6NNBAUad7bWYvM0Ck,2252
+usls/src/labelling.py,sha256=DamBCVejwa-glfY9-A0P3ZanP-3O2aIaZkvcxCzGKsM,40272
+usls/src/run.py,sha256=Vt9q7RmNg7ksiLVQ34sqYV2RdE2x9lOLSta8d3UM3ks,4282
+usls/src/spider.py,sha256=Xt9c0DE4fgNbpFN78KfE8KVImO_2MVqLPEW8MInbmT4,3682
+usls/src/utils.py,sha256=MqHXLlIp0spGdYIDkGonEKJgJmdJIEQE8QyAhfan9C0,55054
+usls/src/video_tools.py,sha256=rzRIdPQOXRWVOWLVXUeujbb8s7HsbcFVg9nsbOOCdrs,9523
+usls-0.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+usls-0.3.0.dist-info/METADATA,sha256=8e6vkm5XV2Y_4z4oOHnpsr7jcdNc5sBSUxEpZp6X-fU,493
+usls-0.3.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+usls-0.3.0.dist-info/entry_points.txt,sha256=NtT7OjVpekraB5xlzXzTbTQ9q8VOKMUrByrtciZMJms,34
+usls-0.3.0.dist-info/top_level.txt,sha256=oS7b-J2DgqOuJIQaKnSyirCC_Rt6yeQCLkbNqh2H_DM,5
+usls-0.3.0.dist-info/RECORD,,
