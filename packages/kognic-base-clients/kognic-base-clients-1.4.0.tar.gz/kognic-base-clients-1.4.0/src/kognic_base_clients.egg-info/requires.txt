@@ -1,0 +1,5 @@
+kognic-auth<4,>=3.0.0
+requests<3,>=2.23.0
+pydantic<2,>=1.10.0
+pyhumps<4,>=3.5.0
+httpx<1,>=0.20
