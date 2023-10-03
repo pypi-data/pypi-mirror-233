@@ -1,0 +1,7 @@
+dask
+dask.distributed
+matplotlib
+numpy
+pandas
+rasterio
+scikit-learn
