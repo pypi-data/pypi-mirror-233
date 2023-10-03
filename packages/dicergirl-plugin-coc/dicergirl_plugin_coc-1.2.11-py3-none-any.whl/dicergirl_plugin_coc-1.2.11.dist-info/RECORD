@@ -1,0 +1,17 @@
+dicergirl/coc/__init__.py,sha256=cLxrYLdMI5mHKXtjdKUxQV-9meVjWpE1t8MTHaAMxqk,717
+dicergirl/coc/coccards.py,sha256=r23yRgN63kA7beUimOaL2mg95Mn0pnEA9sa1HWIr15c,765
+dicergirl/coc/cocutils.py,sha256=_qhi36lHAHoiWC54RS1tLK0XdgYfYxd8TFjfvBwPaA4,10078
+dicergirl/coc/investigator.py,sha256=DmP2BWTkGqVMJgoDcg2nXC6L29uel_cdErqtmYKkM1I,6281
+dicergirl/coc/madness.py,sha256=yaPhMByh1aD77ouOguge7tKn145Ffru8AyiTs2F1UH4,18346
+dicergirl/coc/nbhandlers.py,sha256=JFi1_4ug3xqVdLDShh58jxmSIka4d4PRzc4YpaRCPpc,4605
+dicergirl/plugins/coc/__init__.py,sha256=OzCYh9Y77dCKBNDsMnTr5hvvnmNW6K23XV4su9JShJ0,718
+dicergirl/plugins/coc/coccards.py,sha256=r23yRgN63kA7beUimOaL2mg95Mn0pnEA9sa1HWIr15c,765
+dicergirl/plugins/coc/cocutils.py,sha256=NmqfJop0uXmsxgCgpP_i-oE2lJJ8k3k2JVH_i5D0Rvs,10561
+dicergirl/plugins/coc/investigator.py,sha256=KRZtCTVVeHomqTwXFpjiY311hxgGtBlOyrbvt8xSNNg,6371
+dicergirl/plugins/coc/madness.py,sha256=yaPhMByh1aD77ouOguge7tKn145Ffru8AyiTs2F1UH4,18346
+dicergirl/plugins/coc/nbhandlers.py,sha256=cGZEeCBlJPEp9IUG2dlz9Vx4xBbnEYVtzc1aWSA-2c0,4665
+dicergirl_plugin_coc-1.2.11.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+dicergirl_plugin_coc-1.2.11.dist-info/METADATA,sha256=Lsq4Mw9g-rS1Ub1uFu00XZFVVhy5BIgNBna2ii64HJI,574
+dicergirl_plugin_coc-1.2.11.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+dicergirl_plugin_coc-1.2.11.dist-info/top_level.txt,sha256=6IQjIkhzNfgWRIZpWDup2GWb_eDA9MHWmg6lw_PCX84,10
+dicergirl_plugin_coc-1.2.11.dist-info/RECORD,,
