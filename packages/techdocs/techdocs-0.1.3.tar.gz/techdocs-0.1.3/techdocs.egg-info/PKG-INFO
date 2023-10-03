@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: techdocs
+Version: 0.1.3
+Summary: Code documentation generation CLI App
+Author-email: Mayuresh Agashe <mayureshagashe2002@gmail.com>, Hemanth Sai Garladinne <hemanth.sai3187@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
