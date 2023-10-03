@@ -1,0 +1,1 @@
+rdflib-endpoint@git+https://github.com/vemonet/rdflib-endpoint@main
