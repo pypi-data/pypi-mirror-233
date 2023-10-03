@@ -1,0 +1,13 @@
+differt2d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+differt2d/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+differt2d/abc.py,sha256=PCDT2xcKmDoiZQILDZtmuOd3cyxYa3hvr4y1_JRtStw,7132
+differt2d/defaults.py,sha256=cM2tG4f24C45k_NWkSAcsBjdMUkS5nmWy9DTCKQbeV4,502
+differt2d/geometry.py,sha256=jfe610ZrPVO0UvjS67gZ9M8p9_II8nXjNfCtnlp1Mg0,29640
+differt2d/logic.py,sha256=AGotP1rOPkm8TBMWzYKTFqZLncM4mV9oCfdLtwRuYPk,16291
+differt2d/optimize.py,sha256=JpE2d_90t_YfYm4Jgx_RBblp0AE8w7m668TGZzPNd5k,6251
+differt2d/scene.py,sha256=FOs-whPe8-pwhmnl6SAt6i3Sc1eJ867GBvVoV6MTHDk,36820
+differt2d/utils.py,sha256=W57UOuQs0_Iel-j0bGYIOLCvmSFWqEZXpZKAehpOvN8,2903
+differt2d-0.1.0.dist-info/LICENSE.md,sha256=2c9mltbrFFLc-ydoMyORIhptS6eb4n1IrmunskJnBcM,1073
+differt2d-0.1.0.dist-info/METADATA,sha256=gdwWoTsSfMrfhp7cRc-hHWKW74ddVYWolzGtXpIf_hc,5007
+differt2d-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+differt2d-0.1.0.dist-info/RECORD,,
