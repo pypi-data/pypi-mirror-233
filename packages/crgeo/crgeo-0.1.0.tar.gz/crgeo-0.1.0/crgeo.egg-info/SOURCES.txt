@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+commonroad_geometric/__init__.py
+crgeo.egg-info/PKG-INFO
+crgeo.egg-info/SOURCES.txt
+crgeo.egg-info/dependency_links.txt
+crgeo.egg-info/requires.txt
+crgeo.egg-info/top_level.txt
