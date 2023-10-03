@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pypi.md
+pyproject.toml
+src/JUtils/AutoDoc.py
+src/JUtils/JArr.py
+src/JUtils/JColors.py
+src/JUtils/JConst.py
+src/JUtils/JConv.py
+src/JUtils/JNum.py
+src/JUtils/JOut.py
+src/JUtils/JStr.py
+src/JUtils/__init__.py
+src/JUtils.egg-info/PKG-INFO
+src/JUtils.egg-info/SOURCES.txt
+src/JUtils.egg-info/dependency_links.txt
+src/JUtils.egg-info/top_level.txt
