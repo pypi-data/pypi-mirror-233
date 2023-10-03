@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: iec61850
+Version: 1.5.1.post0
+Summary: Compiled, packaged python bindings for https://github.com/mz-automation/libiec61850. License same as mz-automation/libiec61850. Use at your own risk.
+License-File: COPYING
+
