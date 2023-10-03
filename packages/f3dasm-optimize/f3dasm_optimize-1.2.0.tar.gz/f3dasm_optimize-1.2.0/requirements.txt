@@ -1,0 +1,9 @@
+f3dasm>=1.4.0
+GPyOpt
+GPy
+tensorflow
+pygmo; platform_system == "Linux"
+nevergrad
+evosax==0.1.4
+jax==0.4.13
+jaxlib==0.4.13

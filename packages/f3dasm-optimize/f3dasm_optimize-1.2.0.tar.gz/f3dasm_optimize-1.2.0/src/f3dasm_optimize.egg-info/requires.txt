@@ -1,0 +1,11 @@
+f3dasm>=1.4.0
+GPyOpt
+GPy
+tensorflow
+nevergrad
+evosax==0.1.4
+jax==0.4.13
+jaxlib==0.4.13
+
+[:platform_system == "Linux"]
+pygmo
