@@ -1,0 +1,6 @@
+README.md
+setup.py
+simplecolor.egg-info/PKG-INFO
+simplecolor.egg-info/SOURCES.txt
+simplecolor.egg-info/dependency_links.txt
+simplecolor.egg-info/top_level.txt
