@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2021 - 2023  StorPool <support@storpool.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
+[format.version]
+major = 0
+minor = 1
+
+[repo.contrib]
+url = "http://10.42.6.1:9999/"
+slug = "sp-contrib"
+
+[repo.staging]
+url = "http://10.42.6.1:9999/"
+slug = "sp-staging"
+
+[repo.infra]
+url = "http://10.42.6.1:9999/"
+slug = "sp-infra"
