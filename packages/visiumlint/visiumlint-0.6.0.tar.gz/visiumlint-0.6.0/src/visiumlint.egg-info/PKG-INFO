@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: visiumlint
+Version: 0.6.0
+Summary: All of your favorite linters and formatters gathered in a single command.
+License-File: LICENSE
