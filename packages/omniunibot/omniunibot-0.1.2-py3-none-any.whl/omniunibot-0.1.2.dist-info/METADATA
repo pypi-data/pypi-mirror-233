@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: omniunibot
+Version: 0.1.2
+Summary: A universal multiplatform message bot
+Home-page: https://github.com/yttty/omniunibot
+License: MIT
+Author: yttty
+Author-email: yttty@noreply.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: loguru (>=0.6.0,<0.7.0)
+Requires-Dist: pyzmq (>=24.0.0,<25.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: slack-sdk (>=3.21.3,<4.0.0)
+Project-URL: Repository, https://github.com/yttty/omniunibot
+Description-Content-Type: text/markdown
+
+# omniunibot
+
+<!-- [![Upload Python Package](https://github.com/yttty/omniunibot/actions/workflows/python-publish.yml/badge.svg)](https://github.com/yttty/omniunibot/actions/workflows/python-publish.yml) -->
+
+### 🤖 An omnipotent universal message bot library for python
+
+- Supported platforms
+  - Feishu
+  - Slack
+  - Dingtalk
+- Features
+  - Non-blocking mode for sending messages
+  - Send to multiple platforms with one-line code
+
+### 💻 Installation
+
+- *(via pip)* `pip install -U omniunibot`
+- *(via source)* clone this repo && `pip install .`
+
+### 📜 Usage
+
+1. Prepare a config file
+    - Default config path: `$HOME/configs/omniunibot.json`
+    - Config example
+
+        ```json
+        {
+            "server": {
+                "bind": "tcp://*:58655",
+                "interval": 0.5
+            },
+            "client": {
+                "bind": "tcp://localhost:58655"
+            },
+            "log": {
+                "level": "DEBUG",
+                "dir": "/home/ubuntu/logs/omniunibot",
+            },
+            "channel_groups": {
+                "test_channels": [
+                    {
+                        "platform": "Slack",
+                        "webhook": "https://hooks.slack.com/services/xxxx/xxxx/xxxx"
+                    },
+                    {
+                        "platform": "Lark",
+                        "webhook": "https://open.feishu.cn/open-apis/bot/v2/hook/1a166e72-xxxx-xxxx-xxxx-3ae4f0fb51b7",
+                        "secret": "xxx"
+                    },
+                    {
+                        "platform": "DingTalk",
+                        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=xxx",
+                        "secret": "xxx"
+                    }
+                ]
+            }
+        }
+        ```
+
+2. Start the bot server
+
+    ```sh
+    python -m omniunibot.server
+    ```
+
+3. Use the client-side code in your code
+    - Example: [./example/client_example.py](./example/client_example.py)
+
