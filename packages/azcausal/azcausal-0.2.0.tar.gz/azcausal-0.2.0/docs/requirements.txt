@@ -1,0 +1,9 @@
+sphinx==4.2
+sphinx_rtd_theme
+nbsphinx
+pandoc
+markupsafe==2.0.1
+papermill
+ipykernel
+sphinx_copybutton
+sphinxcontrib-bibtex

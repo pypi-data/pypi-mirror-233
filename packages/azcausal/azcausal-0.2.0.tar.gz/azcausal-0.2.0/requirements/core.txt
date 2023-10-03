@@ -1,0 +1,9 @@
+numpy >= 1.2
+pandas
+scipy
+tqdm
+matplotlib>=3.6
+seaborn
+statsmodels
+linearmodels
+joblib >= 1.3
