@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name:  enhanced-experiences-sdk
+Version: 10.0.103
+Summary: Security research package
+Home-page: UNKNOWN
+Author: whybee
+Author-email: whybee@wearehackerone.com
+License: UNKNOWN
+Description: This package is meant for security research purposes and does not contain any useful code.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Description-Content-Type: text/markdown
