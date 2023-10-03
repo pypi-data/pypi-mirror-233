@@ -1,0 +1,10 @@
+mcp4161/__init__.py,sha256=uBb9JmoHR6rnDSKoJu_z2gsBIy9tPMNdaSSagGMDHBQ,59
+mcp4161/driver.py,sha256=GwnpR1pABt5paprUSULxjdIts5AXjg9FsYHYaWF-zU8,7265
+mcp4161/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp4161/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp4161/tests/test_driver.py,sha256=pOBpQEbHdIznvlynyxY4B_Pj4cjT6W2Fic_De5V3XTo,2572
+mcp4161-0.0.0.dev6.dist-info/LICENSE,sha256=xXaRiJXWn1Zi8fTCyU0EXjchITEV-R2HZDi19hD_Wrg,1078
+mcp4161-0.0.0.dev6.dist-info/METADATA,sha256=9LX4KB7E6cjgrRjlGxTxL2CBGwqdFmdcZs64_XjPd8A,1381
+mcp4161-0.0.0.dev6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mcp4161-0.0.0.dev6.dist-info/top_level.txt,sha256=csEYBvQhnTmsC8bBa3nCpkaRZZ09J3g2UlXEj5wylQ8,8
+mcp4161-0.0.0.dev6.dist-info/RECORD,,
