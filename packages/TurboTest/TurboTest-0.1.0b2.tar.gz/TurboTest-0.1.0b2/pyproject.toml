@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TurboTest"
+version = "0.1.0b2"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Nicholas Valentinus", email = "nicho@scapeville.com"}]
+
+[tool.setuptools.packages.find]
+exclude = ["_etc*"]
+
+[project.urls]
+Repository = "https://github.com/nvfp/TurboTest"
+
+[project.scripts]
+tt = "tt.__main__:main"
