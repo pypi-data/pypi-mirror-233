@@ -1,0 +1,12 @@
+biomodels/__init__.py,sha256=3-LzDnuF_zhqfqvP5utDKnq9Tx9sVcDnWUBn8Hz3I7o,211
+biomodels/common.py,sha256=21PZgwt2AtzEXMfMfImD4CB3wxUT3qAhj2FN-QJx_CA,942
+biomodels/identifiers.py,sha256=UGt97CQxm1YOrzA8ZOcBFpAtU6pAKAAWRxnhKGgajbo,427
+biomodels/metadata.py,sha256=iiLN_qLKLZmJ1J2ZSOv866LCP_58C5KSuK2SGms9NcE,2735
+biomodels/omex.py,sha256=dyNr1msP9n9VkhAw3OWsWVX6wV_AlIJ15bo_iBLKgJM,2276
+biomodels/tests/test_common.py,sha256=4jJtohlcVXYqR9dtcRXHkq6lQw44nMKu5P0oVXOoAPk,303
+biomodels/tests/test_download.py,sha256=Zk-dT0DOSE5Yq6dhSr6HNmkuJn_cXaG1XBwOeE-1YDs,1700
+biomodels-0.1.0.dist-info/LICENSE,sha256=ZndmYw92FBu6DpY8115i_vHFZWd0sXozuU0xSYHQyt0,1073
+biomodels-0.1.0.dist-info/METADATA,sha256=DTGeQ9clkRMAtTgY1jK-i7Gp7GwP5Up0kcZGvuem5h0,7821
+biomodels-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+biomodels-0.1.0.dist-info/top_level.txt,sha256=6HL48yMjPnwvZb7VzpjELWo7l5Jqpu1qIUYg_y0IFrQ,10
+biomodels-0.1.0.dist-info/RECORD,,
