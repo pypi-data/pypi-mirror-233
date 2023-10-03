@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: djangocms-htmlsitemap
+Version: 1.1.3
+Summary: A Django CMS plugin for building HTML sitemaps showing organized lists of CMS pages.
+Home-page: https://gitlab.com/kapt/open-source/djangocms-htmlsitemap
+License: BSD-3-Clause
+Author: Kapt dev team
+Author-email: dev@kapt.mobi
+Requires-Python: >3.8
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=1.11)
+Requires-Dist: django-cms (>=3.8)
+Project-URL: Repository, https://gitlab.com/kapt/open-source/djangocms-htmlsitemap
+Description-Content-Type: text/markdown
+
+# djangocms-htmlsitemap
+
+[![Latest Version](http://img.shields.io/pypi/v/djangocms-htmlsitemap.svg?style=flat-square)](https://pypi.python.org/pypi/djangocms-htmlsitemap/)
+[![License](http://img.shields.io/pypi/l/djangocms-htmlsitemap.svg?style=flat-square)](https://pypi.python.org/pypi/djangocms-htmlsitemap/)
+
+
+*A Django CMS plugin for building HTML sitemaps showing organized lists of CMS pages.*
+
+## Requirements
+
+Python 3.8.1+, Django 1.11+, Django-CMS 3.8+.
+
+## Installation
+
+Just run:
+```sh
+pip install djangocms-htmlsitemap
+```
+
+Once installed you just need to add `djangocms_htmlsitemap` to `INSTALLED_APPS` in your project's settings module:
+```py
+INSTALLED_APPS = (
+    # other apps
+    'djangocms_htmlsitemap',
+)
+```
+
+Then install the models:
+```py
+python manage.py migrate djangocms_htmlsitemap
+```
+
+*Congrats! You’re in.*
+
+## Authors
+
+Kapt <dev@kapt.mobi> and [contributors](https://github.com/kapt-labs/djangocms-htmlsitemap/contributors)
+
+## License
+
+BSD. See `LICENSE` for more details.
+
