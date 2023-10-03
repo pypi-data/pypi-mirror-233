@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pymonitors
+Version: 1.0.1
+Summary: PyMonitors: a Python library to obtain info about available screens (monitors).
+Home-page: https://github.com/cloudstrife9999/pymonitors
+Author: Emanuele Uliana
+Author-email: vw@dicelab-rhul.org
+License: GNU3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyjoptional (>=1.1.0)
+Requires-Dist: wheel
+
+# PyMonitors
+
+A Python library to programatically get your monitor's resolution info.
+
+It supports multiple strategies:
+
+- `xrandr`: Linux only, requires `x11-xserver-utils` to be installed.
+- `appkit`: MacOS only, requires `pyobjc`, `AppKit`, and `cairo` to be installed.
+- `mswindows`: Windows only, requires the Powershell to be installed.
+
+## Usage
+
+```python
+from pymonitors import get_monitors
+
+
+for monitor in get_monitors():
+    width: int = monitor.width
+    height: int = monitor.height
+
+    print(f"Monitor {monitor.name} has resolution {width}x{height}.")
+```
