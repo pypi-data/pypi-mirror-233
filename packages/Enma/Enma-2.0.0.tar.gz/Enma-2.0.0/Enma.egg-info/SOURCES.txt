@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+Enma.egg-info/PKG-INFO
+Enma.egg-info/SOURCES.txt
+Enma.egg-info/dependency_links.txt
+Enma.egg-info/not-zip-safe
+Enma.egg-info/requires.txt
+Enma.egg-info/top_level.txt
+enma/__init__.py
