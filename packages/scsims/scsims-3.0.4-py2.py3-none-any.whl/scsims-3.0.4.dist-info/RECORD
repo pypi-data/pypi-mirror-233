@@ -1,0 +1,15 @@
+scsims/__init__.py,sha256=Se_kEvIekvvf5dH5WFo6DEFURtRf0pXesv-LC5CxbBk,331
+scsims/data.py,sha256=XGyVOvbEJKkYYWXHUlEbOUlAi1cgq8R4P948zp34MpA,7225
+scsims/inference.py,sha256=jq7NZOMZvFqN6NILwqb4iRxH6ePdzMzey8tUDBB7HB0,952
+scsims/lightning_train.py,sha256=05xpZjZ-Z6NtmQy2xtW5Pi0nmQbwjCiYRoGvH_qoMdA,3432
+scsims/model.py,sha256=wwUP8hOe394_kqgK_mNqFh-s7LyqtfG0gB2hEwTl_Zs,17626
+scsims/networking.py,sha256=L4cMfAc4pUS2DJ15JPy1LuGQDco0Qd1Wy6-9x2zYx5Y,1850
+scsims/pretraining.py,sha256=L2zGqm2qyOavYcLR6aqXtpgGLa1VKMEDgpCwgSw0cNU,7732
+scsims/scvi_api.py,sha256=oAYbgjTEncAbtikHZELuYS7pIluTrYEOVV7Wn0PFhBQ,5284
+scsims/temperature_scaling.py,sha256=epn5ypPyr3pB-iWS8mPFwQq0LD5mcyqJXrTxSr9HF3k,4738
+scsims/tests.py,sha256=l-61bbGrO_Unojc_ROT390EtRd4f4UCIFJGolRUiW2M,2901
+scsims-3.0.4.dist-info/LICENSE,sha256=q5JehC2dkm0m3pjIh0blNThfEi-_CsWmaRDta5svlYo,1082
+scsims-3.0.4.dist-info/METADATA,sha256=73Cc2oaV63Dsmmm1_ShlOUneyBmVCpjmHvshy2UVkOg,8905
+scsims-3.0.4.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+scsims-3.0.4.dist-info/top_level.txt,sha256=ho3eoso2c0FTD448YKhdwobKvfbJxXBrOcb9AB415n4,7
+scsims-3.0.4.dist-info/RECORD,,
