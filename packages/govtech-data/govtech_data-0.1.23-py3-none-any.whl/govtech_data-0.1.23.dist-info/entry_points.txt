@@ -1,0 +1,3 @@
+[console_scripts]
+generate-models=tools.models:generate_models
+
