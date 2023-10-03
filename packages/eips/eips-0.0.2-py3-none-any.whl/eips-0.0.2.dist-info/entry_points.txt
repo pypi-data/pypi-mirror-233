@@ -1,0 +1,2 @@
+[console_scripts]
+eips = eips.cli:main

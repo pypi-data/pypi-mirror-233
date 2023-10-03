@@ -1,0 +1,16 @@
+eips/__init__.py,sha256=eXDCqIzXv5DmI1_p9AxcQWXRCtjLJaEJudN5Hi6x0Us,137
+eips/__main__.py,sha256=nv-cDvnSk7iBSGctJQlY0kUutZuJdaZyqi30nQj8lgw,65
+eips/cli.py,sha256=dYAjA0ZWWrmthbaIYiiA_iU330p11QIB-btz-KLWWkE,1568
+eips/const.py,sha256=V5upxbokY4xwi2UynKf0hMaA8DMfCrhBibu32oZwlOA,216
+eips/eips.py,sha256=FP8EEBf7fbmSIyT9AUFJCeAm9BVHesIbrdHBFr73-rI,3969
+eips/enum.py,sha256=kN1rDmTU3FJ2sTrCKz0kD-yoZDAWsVOST-eZDS0g28E,1788
+eips/git.py,sha256=Smv4YZ7kLdZqvCDv3hv5jXWFOu-_Ll-Kj4KWM1owz7k,1075
+eips/logging.py,sha256=K1QzcTKS-4clipG3BiGrZo4Ggg8y_QY3PYVvSA0LfiY,2236
+eips/object.py,sha256=baXcRKevP9QaqvBzb-Oqf-6373EggB5ljDP3IvQvf4I,2158
+eips/parsing.py,sha256=ON3L5n_1Y5vn5b7pJw6BbTm6N03F7xzpoaPXpJ-Moxs,3024
+eips/util.py,sha256=FqrQWrybL2aXPmREFTVopnNbFRVCfdxybktoBvhAjhQ,317
+eips-0.0.2.dist-info/METADATA,sha256=6cje94JB_1ViZJCfJEKSlsBqsmAzV4nc2_tcroox_YM,3158
+eips-0.0.2.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+eips-0.0.2.dist-info/entry_points.txt,sha256=gFfYAtNWflXmzpC4HSruaoK0KIQJIsvVvyJXElIwA6M,39
+eips-0.0.2.dist-info/licenses/LICENSE,sha256=IrVf8Cik_lrkevSTIg4HNeK2qdoCx0VV8ur2zpUY3U0,1062
+eips-0.0.2.dist-info/RECORD,,
