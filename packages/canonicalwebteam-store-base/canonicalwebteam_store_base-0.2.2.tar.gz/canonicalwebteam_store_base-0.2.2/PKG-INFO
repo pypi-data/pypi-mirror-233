@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: canonicalwebteam-store-base
+Version: 0.2.2
+Summary: An application base for all stores
+License: GPL3
+Author: Canonical Webteam
+Author-email: webteam@canonical.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Flask-WTF (>=1.0.1,<2.0.0)
+Requires-Dist: canonicalwebteam.flask-base (>=1.1.0,<2.0.0)
+Requires-Dist: canonicalwebteam.store-api (>=4.0.0,<5.0.0)
+Requires-Dist: flake8 (>=6.0.0,<7.0.0)
+Requires-Dist: pipenv (>=2022.12.19,<2023.0.0)
+Requires-Dist: python-dotenv (>=0.20.0,<0.21.0)
+Requires-Dist: responses (>=0.22.0,<0.23.0)
+Requires-Dist: talisker (>=0.21.3,<0.22.0)
+Description-Content-Type: text/markdown
+
+# Canonical Webteam Store-base
+
+## About
+
+This is the base application for all stores. Each store is registered as a blueprint when the app is initialized, other configs and blueprints that are store-specific are also registered on the app. This allows for uniformity of certain endpoints and functionalities across all stores and also allows for extension and customization of endpoints and features that are store specific. See Usage section for example.
+
+## How to Install
+To install this extension as a requirement in your project, you can use PIP:
+`pip install canonicalwebteam.store-base`
+
+## Development
+
+The package leverages poetry for dependency management.
+
+## Testing
+
+All tests can be run with `poetry run python3 -m unittest discover tests`.
+
+Note: You might have to do `poetry install` before running the command above.
+
+## Usage
+
+```
+from canonicalwebteam.store_base.app import create_app
+
+import store-specific blueprint
+import store-specific utility processor
+
+app = create_app(
+    "app_name",
+    store_bp=store-specific blueprint,
+    utility_processor=store-specific utility_processor,
+)
+
+app.static_folder=app_static_folder
+app.template_folder=app_template_folder
+app.static_url_path=app_static_url_path
+
+all other store blueprints and configurations should be registered here
+
+```
