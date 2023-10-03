@@ -1,0 +1,3 @@
+[console_scripts]
+faa2png = fasta2png.faa2png:main
+fna2png = fasta2png.fna2png:main

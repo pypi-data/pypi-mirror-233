@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+fasta2png/__init__.py
+fasta2png/faa2png.py
+fasta2png/fna2png.py
+fasta2png.egg-info/PKG-INFO
+fasta2png.egg-info/SOURCES.txt
+fasta2png.egg-info/dependency_links.txt
+fasta2png.egg-info/entry_points.txt
+fasta2png.egg-info/not-zip-safe
+fasta2png.egg-info/requires.txt
+fasta2png.egg-info/top_level.txt
