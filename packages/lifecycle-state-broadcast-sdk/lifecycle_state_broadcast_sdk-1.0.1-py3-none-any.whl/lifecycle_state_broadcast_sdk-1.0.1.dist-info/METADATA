@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lifecycle-state-broadcast-sdk
+Version: 1.0.1
+Summary: Lifecycle state broadcast SDK 4 Python.
+Home-page: https://dev.azure.com/location-world/Zookeeper/_git/lifecycle-state-broadcast-sdk.py
+Author: Location World
+Author-email: info@location-world.com
+License: MPL-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2
+
+# Lifecycle state broadcast SDK
+
+Python SDK version for the Lifecycle state broadcast Restful API
