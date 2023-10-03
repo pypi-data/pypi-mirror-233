@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: eazyplotly
+Version: 0.4.0
+Summary: Package to make the use of Plotly library easier
+Home-page: https://github.com/saeidalz13/eazyplotly
+Author: Saeid Alizadeh
+Author-email: saeidalz96@gmail.com
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: plotly
+Requires-Dist: pandas
+
