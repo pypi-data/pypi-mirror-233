@@ -1,0 +1,13 @@
+attention_sinks/__init__.py,sha256=MaxZmp67D3ssyqy3xODWLCw8aPpADSxkRt-y0dCw0ME,272
+attention_sinks/attention_sink_kv_cache.py,sha256=q4FCz6IQ-8WaYttlaL-nkVa7C3Axqp1KI0nT5eutZcA,3799
+attention_sinks/models/__init__.py,sha256=EWetE90We-byXoQ3029moq3JThx-gijusSjUPuf53Fo,132
+attention_sinks/models/auto/__init__.py,sha256=AeLp8VIEOHpYJdGFcS4SnEx-_rbSjkjHyTL9AEF8SKc,60
+attention_sinks/models/auto/modeling_auto.py,sha256=HmWLC9E-dG_lG6qtwHrOQasNNse4PuY6ye1tUDxkuwA,1104
+attention_sinks/models/llama/__init__.py,sha256=8Lh58IklPgHU-Mm332GoP6oErYKoti71LelUe2kc-iU,90
+attention_sinks/models/llama/modeling_llama.py,sha256=e0oWyjFM3qIFikIDGs1SnmZnuzD0odsEoOUNfuRlX0M,4004
+attention_sinks/models/llama/pos_shift.py,sha256=CQ6EhbhB1Yuz9cGlspm2SqDR_Y-a5RMKwZfuQK0pYqU,6043
+attention_sinks-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+attention_sinks-0.0.1.dist-info/METADATA,sha256=BDW63RCYbzWQ4XouuLL4EYlC4vIMCJkvBCZx4lKhd40,2412
+attention_sinks-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+attention_sinks-0.0.1.dist-info/top_level.txt,sha256=4HcJFFllFRtxgOMDV_hpVZ79cIG3Tp9VIITSDpDKUzM,16
+attention_sinks-0.0.1.dist-info/RECORD,,
