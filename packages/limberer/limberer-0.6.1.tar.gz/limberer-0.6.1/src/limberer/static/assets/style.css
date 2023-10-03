@@ -1,0 +1,68 @@
+@page {
+  @bottom-right {
+    background: #B57EDC;
+    color: #ffffff;
+  }
+  @bottom-center {
+    content: "© <year> Example Corp.";
+  }
+}
+
+html {
+  color: black;
+  font-family: Comic Sans MS;
+  line-height: 1.25;
+}
+
+table:not(.highlighttable) {
+  border: 1px solid #c0c0c0;
+}
+
+table:not(.highlighttable) th {
+  border: 1px solid #c0c0c0;
+}
+
+table:not(.highlighttable) td {
+  border: 1px solid #c0c0c0;
+}
+
+table:not(.highlighttable) th {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+table:not(.highlighttable) tr:nth-child(even) {
+    background-color: #E7E9EB;
+}
+table:not(.highlighttable) tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table:not(.highlighttable) td {
+  min-height: 1rem;
+}
+
+#cover>div#who {
+  background: #B57EDC;
+  color: white;
+}
+
+sup {
+  vertical-align: top;
+}
+
+article ul li::before {
+  color: #E6E6FA;
+}
+
+.footnotes hr {
+  border: 1px solid red;
+}
+
+table.highlighttable th.filename {
+  border-bottom: 1px solid #c0c0c0;
+}
+table.highlighttable td.code {
+  width: 100%;
+}
