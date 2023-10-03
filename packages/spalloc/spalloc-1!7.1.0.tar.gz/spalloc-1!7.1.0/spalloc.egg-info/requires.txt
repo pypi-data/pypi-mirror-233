@@ -1,0 +1,6 @@
+jsonschema
+SpiNNUtilities==1!7.1.0
+
+[test]
+pytest-cov
+mock
