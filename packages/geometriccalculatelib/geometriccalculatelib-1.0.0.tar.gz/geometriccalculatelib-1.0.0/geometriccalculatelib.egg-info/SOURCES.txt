@@ -1,0 +1,9 @@
+setup.py
+geometriccalculatelib.egg-info/PKG-INFO
+geometriccalculatelib.egg-info/SOURCES.txt
+geometriccalculatelib.egg-info/dependency_links.txt
+geometriccalculatelib.egg-info/top_level.txt
+src/__init__.py
+src/area_calculator.py
+tests/__init__.py
+tests/test.py
