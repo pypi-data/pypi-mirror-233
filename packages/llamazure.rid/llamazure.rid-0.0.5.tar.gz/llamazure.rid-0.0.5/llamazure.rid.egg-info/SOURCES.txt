@@ -1,0 +1,14 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+llamazure/__init__.py
+llamazure.rid.egg-info/PKG-INFO
+llamazure.rid.egg-info/SOURCES.txt
+llamazure.rid.egg-info/dependency_links.txt
+llamazure.rid.egg-info/namespace_packages.txt
+llamazure.rid.egg-info/top_level.txt
+llamazure/rid/__init__.py
+llamazure/rid/conv.py
+llamazure/rid/mp.py
+llamazure/rid/rid.py
+llamazure/rid/util.py
