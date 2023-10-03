@@ -1,0 +1,12 @@
+humble_database/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+humble_database/_modidx.py,sha256=sNQBhpp6wmL52C-ryxB4NAjm_FWsVcxI_PZJZJmI_w0,4300
+humble_database/core.py,sha256=h0xuOkMthhiprdI6MpkThjTTUIb8i3FJxXd_ICEchLw,192
+humble_database/data_model.py,sha256=C7Vg1httfobpyGTr_DB29SJ7bLGAESzosAEwq__y0tk,2784
+humble_database/database.py,sha256=B2vCUhqoDGMhF8W2F2c7YCNsYkkZW5CO5-fstef3spM,4784
+humble_database/utils.py,sha256=eOiAjCcbzuHnhx0fSpzkDkHFbVYkgdxWZnLBGBWmG_Q,823
+humble_database-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+humble_database-0.0.1.dist-info/METADATA,sha256=-i65e5AHt7UtgeWFEZHRUbO-7OKApRWeOvxWRKdQEzY,15222
+humble_database-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+humble_database-0.0.1.dist-info/entry_points.txt,sha256=OjDtF50v2Ptbw04L2lowU4nhrEG7FAg740BvjMvuaJI,52
+humble_database-0.0.1.dist-info/top_level.txt,sha256=xCA1HQT4j_MlcxdXDl-oe-nd6oxWJUeHNUjBAzYPE74,16
+humble_database-0.0.1.dist-info/RECORD,,

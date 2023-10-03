@@ -1,0 +1,2 @@
+[nbdev]
+humble_database = humble_database._modidx:d
