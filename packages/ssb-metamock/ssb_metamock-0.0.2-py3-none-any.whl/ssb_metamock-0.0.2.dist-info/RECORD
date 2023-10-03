@@ -1,0 +1,12 @@
+metamock/__init__.py,sha256=yHkeCsDFX1sSIqLgzn47TXY7R6kjuMepgFmAdloVcrE,16
+metamock/__main__.py,sha256=UaGAiTuKPciendh0CzXK9XPIqvUcNnWe_dMv_1QBX2c,98
+metamock/api_manager.py,sha256=TeTN7_aKBcmPW28CFSm0P4-DfDt6up9k31jmEUqNf5c,557
+metamock/app.py,sha256=w5gamHJ3UNI4ihwERU_OXgOAEY6xIfmY-FRoXUuwohs,4630
+metamock/faker_data.py,sha256=uGoaGN0GL64o36YpkxdUd3TE2dnmy1E_wdFzIW06S6c,3210
+metamock/klass_classifications_data.py,sha256=X-2-bJpCllIhP-lJyVMaDpGdRC191APG1lHRRYVArAk,2796
+metamock/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssb_metamock-0.0.2.dist-info/LICENSE,sha256=q_o92xpDOc-dKUlIsezi7m7AXafBqhPaPrVUcFpNxLk,1073
+ssb_metamock-0.0.2.dist-info/METADATA,sha256=fSVY3FXZTRQ9dceICiKG31-0gkVR690O97zraa3vceA,4714
+ssb_metamock-0.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+ssb_metamock-0.0.2.dist-info/entry_points.txt,sha256=6PSGlbjuuMDHagv-wmKx6K0TPMiNhdqqx5Xl1NuSoq4,51
+ssb_metamock-0.0.2.dist-info/RECORD,,
