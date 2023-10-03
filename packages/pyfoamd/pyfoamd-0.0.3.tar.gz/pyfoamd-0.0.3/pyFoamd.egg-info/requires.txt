@@ -1,0 +1,4 @@
+pint
+pandas
+rich
+ipython
