@@ -1,0 +1,10 @@
+llamazure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/msgraph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/msgraph/codec.py,sha256=78vht3KZl9ZEzwGg7sGcXOW13gv6fSn7ejbDjmB2M5w,2437
+llamazure/msgraph/models.py,sha256=B5kf1Ime_dZ-i0Y6t7VE5Hghbey88pDhNQjMrtluw1k,1543
+llamazure/msgraph/msgraph.py,sha256=xc-Aiyix7_wED2aPwYYxIfu_yrStsycRG1IDcBAjW48,2551
+llamazure.msgraph-0.0.1.dist-info/METADATA,sha256=b0EJi-xA-r3g145dwAfttF8f56Q9o-WVQP7dnp5zQ6g,2407
+llamazure.msgraph-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+llamazure.msgraph-0.0.1.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamazure.msgraph-0.0.1.dist-info/top_level.txt,sha256=4gbH0fcRQb_rEVCcLYRu_D2cVCdf0VYVCIi_f0PiMq4,10
+llamazure.msgraph-0.0.1.dist-info/RECORD,,
