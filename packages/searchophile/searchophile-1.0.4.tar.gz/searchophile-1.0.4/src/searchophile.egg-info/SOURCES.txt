@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+src/searchophile/__init__.py
+src/searchophile/__main__.py
+src/searchophile/search.py
+src/searchophile.egg-info/PKG-INFO
+src/searchophile.egg-info/SOURCES.txt
+src/searchophile.egg-info/dependency_links.txt
+src/searchophile.egg-info/entry_points.txt
+src/searchophile.egg-info/requires.txt
+src/searchophile.egg-info/top_level.txt
