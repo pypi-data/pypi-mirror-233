@@ -1,0 +1,10 @@
+README.md
+setup.py
+eazyplotly/__init__.py
+eazyplotly/constants.py
+eazyplotly/eazyplotly.py
+eazyplotly.egg-info/PKG-INFO
+eazyplotly.egg-info/SOURCES.txt
+eazyplotly.egg-info/dependency_links.txt
+eazyplotly.egg-info/requires.txt
+eazyplotly.egg-info/top_level.txt
