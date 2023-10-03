@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+zarrdataset/__init__.py
+zarrdataset/_augs.py
+zarrdataset/_imageloaders.py
+zarrdataset/_maskfuncs.py
+zarrdataset/_samplers.py
+zarrdataset/_utils.py
+zarrdataset/_zarrdataset.py
+zarrdataset.egg-info/PKG-INFO
+zarrdataset.egg-info/SOURCES.txt
+zarrdataset.egg-info/dependency_links.txt
+zarrdataset.egg-info/requires.txt
+zarrdataset.egg-info/top_level.txt
