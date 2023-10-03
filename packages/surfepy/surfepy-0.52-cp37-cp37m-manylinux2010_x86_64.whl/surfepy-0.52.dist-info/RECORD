@@ -1,0 +1,11 @@
+surfepy.libs/libsurfe_lib-7d585b9e.so,sha256=_CmofyhJFs1ndYw7eoQy1qf1wiyI49wXGmGCtJSBiHg,899552
+surfepy.libs/libmath_lib-40f097f0.so,sha256=2Pmc7VImveM3n3hbSQaPpzthsthY1UV1rTgkkj6idz4,227264
+surfepy.libs/libgomp-f7e03b3e.so.1.0.0,sha256=GzmXB1qluHXQUhlsmNKuWncNm8Jezfq1jt5rKrV_8kQ,93080
+surfepy/_surfepy.cpython-37m-x86_64-linux-gnu.so,sha256=m24C6QlnuNvOUPE0BShyUBy15szYhgV9JydgLcEbInk,190672
+surfepy/__init__.py,sha256=Rya6-WBap8DLyQgN_jVJadYr2GuPi7vk1bx-StE6j40,595
+surfepy/libsurfe_lib.so,sha256=fVhbnmfOs4zsNqSZ_tn5zYmzNT2TVU6N0Zer6FwgORg,713272
+surfepy/libmath_lib.so,sha256=QPCX8OmZXqJFu7UgN6roZbTlFCUMfeGkD5xNuV4mIYA,194752
+surfepy-0.52.dist-info/top_level.txt,sha256=h-xUpGoD5ySz2YR5yoscTMJMoxJJP8Uk4SBlf-TeepA,8
+surfepy-0.52.dist-info/WHEEL,sha256=tGRVVpiZF7VZ9hGHcZ7826YTnoCVt6lt1el5jJGB7l0,106
+surfepy-0.52.dist-info/RECORD,,
+surfepy-0.52.dist-info/METADATA,sha256=kmNde20al3pfCK5Tak9PCPkHLlHFkHwUZZDkOJaP92c,228
