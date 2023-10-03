@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+viNtik123Vita.egg-info/PKG-INFO
+viNtik123Vita.egg-info/SOURCES.txt
+viNtik123Vita.egg-info/dependency_links.txt
+viNtik123Vita.egg-info/top_level.txt
