@@ -1,0 +1,130 @@
+experiment:
+  params:
+    # Operation mode. It must be one of the following:
+    #   train:
+    #     Train and test the model using the input data. Log the trained model.
+    #     Calculate various metrics.
+    #
+    #   test:
+    #     Reload a trained model and test it on the input data. Calculate
+    #     various metrics.
+    #
+    #   predict:
+    #     Reload a trained model and use it to make predictions on the input
+    #     data. Log the predictions as an artifact.
+    mode: train
+
+    # The MLflow run ID of a previous training run. In training and prediction
+    # modes, the model and ChemFeat feature sets will be reloaded from this run.
+    # The MLflow tracking URI and other configurations can be set via
+    # environment variables:
+    # https://gitlab.inria.fr/jrye/hydronaut#standard-environment-variables
+    mlflow_run_id: null
+
+    # The relative path to a directory in which to store intermediate data
+    # files.
+    data_dir: data
+
+    # The number of jobs to use for parallel computations such as feature
+    # calculations.
+    n_jobs: ${n_cpu:}
+
+    # ChemFeat feature-set configuration as a list of dicts specifying the
+    # different feature sets to use. For details, consult the ChemFeat
+    # documentation:
+    # https://jrye.gitlabpages.inria.fr/chemfeat/gen_feature_set_configuration.html
+    chemfeat_features:
+      - name: qed
+      - name: rdkdesc
+      - name: secfp
+        size: 2048
+
+    # ChemFeat supports custom user functions for converting InChIs to rdkit Mol
+    # objects. These should be registered using
+    # chemfeat.features.manager.FeatureManager.register_inchi_to_mol.
+    inchi_to_mol: null
+
+    # The InChILoader is the class that loads the input data. The data must be
+    # a CSV file with a column containing InChI values. It may also optionally
+    # contain target values for training and testing a model as well as feature
+    # columns to concatenate with the features calculated using the ChemFeat
+    # package.
+    #
+    # This section is passed through directly as keywords to the instantiation
+    # of an InChILoader. See the InChILoader API documentation for details.
+    InChILoader:
+      # The input path. This is the only required argument, although target
+      # columns must be specified for training and testing models.
+      path: data/input.csv
+
+      # The name of the column with the InChI values.
+      inchi_column: inchi
+
+      # A dict of keyword arguments for instantiating an instance of
+      # ColumnSpecifier. It is required to specify targets for training and
+      # testing and can be used to optionally include custom features alongside
+      # the configured ChemFeat features. See the API documentation of
+      # ColumnSpecifier for details.
+      column_specifier:
+        # The list of column names containing categoric targets for classifiers.
+        cat_targets:
+          - my_class
+
+    # A map of numeric target column names to integers specifying the number of
+    # bins to use when binning numeric targets. The bins are then treated as
+    # categories for balancing the training set and for plotting. This may also
+    # be specified as a list of 2-element lists if the column names are cannot
+    # be used as valid YAML keys.
+    column_bins: ${experiment.params.column_bins}
+
+    # If True, plot features calculated with ChemFeat. Numeric features are
+    # plotted as violin charts per binned target category. Categoric features
+    # are plotted as counts of categories using stacked bar charts per binned
+    # target category. Each feature set generates a separate image.
+    plot_features: true
+
+    # Model configuration
+    model:
+      # The name of a registered model. Models must be declared as subclasses of
+      # ModelBase and then registered with the declared subclass' register
+      # method.
+      name: MyModel
+
+      # For testing and prediction, the path to a trained model is required.
+      # This will be set automatically in test and prediction modes based on the
+      # MLflow run ID set in experiment.params.mlflow_run_id and should not be
+      # changed here.
+      path: null
+
+      # A list of registered scorers to use for logging metrics. These must be
+      # either built-in Sklearn scorers or scoreres created with
+      # sklearn.metrics.make_scorer and registered with
+      # molpred.model.scoring.register_scorer.
+      scorers:
+        - accuracy
+        - balanced_accuracy
+
+      # Model-specific parameter. The ModelBase subclass specified by the "name"
+      # field above can use this field for any and all internal configuration.
+      # All model-specific hyperparameters should be set here.
+      params: null
+
+    # A list of logged metrics to use as the objective values for Hydronaut. In
+    # addition to any custom metrics created with the scorers configured above,
+    # the framework also defines "train_score" and "test_score" metrics that
+    # result from the training and testing steps if they are run.
+    objective_values:
+      - train_score
+
+    # Configure the train-test split.
+    train_test_split:
+      # The size of the training set relative to the input data.
+      train_size: 0.75
+
+      # Attempt to balance the targets in the training set.
+      balanced: true
+
+    plot:
+      # If True, plot chemfeat features of the input data when training or
+      # testing.
+      chemfeat_features: true
