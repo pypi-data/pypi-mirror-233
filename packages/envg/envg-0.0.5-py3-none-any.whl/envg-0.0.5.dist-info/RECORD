@@ -1,0 +1,13 @@
+envg/__init__.py,sha256=hcyqvs3rHd-ihUqrjIfC0sqmm2ioH4pycMa0XD0iK4k,605
+envg/default.py,sha256=pMgD_j3ziNc0VNIVCHArrjsNxqjrOXMwGFtXaKh8SYQ,439
+envg/env.py,sha256=bLIc7m3EKAABHWDACN1Hyc7KPLP8zuXPwte3NwyKR8I,20881
+envg/main.py,sha256=meLRmp7SlS7iZ77YgOKBTA0-R11hEJtK_PCY5o8KG-E,3872
+envg/misc.py,sha256=uTG_OPskoO_riIay2WHlWq-10Jg3fg4jsPaJOmG64K4,880
+envg/osrelease.py,sha256=9ZhoQmCwYOILCYFeUjYx64aMwh4mcXGmOuR-Ol29PA4,3461
+envg/secrets.py,sha256=LzmoGl0cUnw5-g_98KJM-lKdOny_hNpxBRkO8bKAwbI,2383
+envg/system.py,sha256=9ZhoQmCwYOILCYFeUjYx64aMwh4mcXGmOuR-Ol29PA4,3461
+envg-0.0.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+envg-0.0.5.dist-info/METADATA,sha256=7BPJFd8whBhF7Zruq7R5sTdsgTipkFGNg2RN3M2PktA,1836
+envg-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+envg-0.0.5.dist-info/top_level.txt,sha256=7cDHItCYgdSz3ChxE1919_N85Y0buCiK7tVimUh4-WM,5
+envg-0.0.5.dist-info/RECORD,,
