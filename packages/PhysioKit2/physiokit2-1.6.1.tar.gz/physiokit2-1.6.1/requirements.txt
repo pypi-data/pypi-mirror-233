@@ -1,0 +1,11 @@
+matplotlib==3.7.1
+neurokit2==0.2.6
+numpy==1.26.0
+opencv_contrib_python==4.7.0.72
+pyserial==3.5
+PySide6==6.5.1
+PySide6==6.5.2
+PySide6_Addons==6.5.1
+PySide6_Essentials==6.5.1
+scipy==1.11.3
+setuptools==68.2.2

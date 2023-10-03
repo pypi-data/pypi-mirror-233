@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "PhysioKit2"
+version = "1.6.1"
+authors = [
+  {name="Jitesh Joshi", email="jitesh.joshi.20@ucl.ac.uk"},
+  {name="Katherine Wang", email="katherine.wang.19@ucl.ac.uk"},
+  {name="Youngjun Cho", email="youngjun.cho@ucl.ac.uk"}
+]
+description = "PhysioKit is a novel physiological computing toolkit which is open-source, accessible and affordable. HCI hobbyists and practitioners can easily access physiological sensing channels that help monitor our physiological signatures and vital signs including heart rate, heart rate variability, breathing rate, electrodermal activities. The toolkit works with a low-cost micro-controller such as Arduino. Currently, it supports acquiring EDA, Resp and PPG using any low-cost Arduino board."
+
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  'matplotlib',
+  'neurokit2',
+  'numpy',
+  'opencv_contrib_python',
+  'pyserial',
+  'PySide6',
+  'PySide6',
+  'PySide6_Addons',
+  'PySide6_Essentials',
+  'scipy',
+  'setuptools'
+]
+
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+PhysioKit2 = ["*.png"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/PhysiologicAILab/PhysioKit"
+"Bug Tracker" = "https://github.com/PhysiologicAILab/PhysioKit/issues"
