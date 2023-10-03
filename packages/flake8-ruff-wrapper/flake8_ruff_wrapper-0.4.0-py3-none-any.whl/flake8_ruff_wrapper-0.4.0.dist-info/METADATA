@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: flake8-ruff-wrapper
+Version: 0.4.0
+Summary: Invoke ruff using flake8 options
+Project-URL: Homepage, https://github.com/fsouza/flake8-ruff-wrapper
+License: ISC
+License-File: LICENSE
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.8
+Requires-Dist: flake8>=6.1.0
+Requires-Dist: ruff>=0.0.292
+Requires-Dist: toml>=0.10.2
+Description-Content-Type: text/markdown
+
+# flake8-ruff-wrapper
+
+This is a package that allows you to use
+[ruff](https://github.com/charliermarsh/ruff) as a replacement to
+[flake8](https://github.com/PyCQA/flake8) without migrating your configuration to pyproject.toml and keeping the config format
+
+It actually depends on flake8 and ruff and simply bridges the two tools.
+
+Usage:
+
+```
+% cat .flake8
+[flake8]
+ignore = E203,W503
+max-line-length = 88
+% flake8-ruff some_file.py
+# invokes ruff with configuration that matches the settings defined in .flake8
+```
+
+## Using with pre-commit
+
+See [pre-commit](https://github.com/pre-commit/pre-commit) for instructions
+
+Sample `.pre-commit-config.yaml`
+
+```yaml
+-   repo: https://github.com/fsouza/flake8-ruff-wrapper
+    rev: v0.2.0
+    hooks:
+    -   id: flake8-ruff
+```

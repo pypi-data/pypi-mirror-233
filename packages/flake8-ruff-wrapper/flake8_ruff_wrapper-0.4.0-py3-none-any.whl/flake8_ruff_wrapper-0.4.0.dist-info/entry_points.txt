@@ -1,0 +1,2 @@
+[console_scripts]
+flake8-ruff = flake8_ruff.cli:main

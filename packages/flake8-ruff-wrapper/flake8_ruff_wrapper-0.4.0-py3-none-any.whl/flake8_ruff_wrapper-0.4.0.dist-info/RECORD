@@ -1,0 +1,8 @@
+flake8_ruff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake8_ruff/cli.py,sha256=hNyh7D80N65p1m7aT_mfMUgZ3A2xqgI34wzgS1WllJo,3899
+flake8_ruff/rules.py,sha256=ghfkmKOTt-J6It4xKh-SOWhcS6cfVFjFVW9BE6olJFQ,1462
+flake8_ruff_wrapper-0.4.0.dist-info/METADATA,sha256=WZctnQuyNVhybhCls3pNzQUvCUJ0NGhNhZ8ylD2InMI,1690
+flake8_ruff_wrapper-0.4.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+flake8_ruff_wrapper-0.4.0.dist-info/entry_points.txt,sha256=TrYnTt84YIl_yBxl09PQRr0FqUPktP7jGaJ9CmnFzuM,53
+flake8_ruff_wrapper-0.4.0.dist-info/licenses/LICENSE,sha256=5RMJ44tcDGSEK6edzFmVGjOJ9aaUNP8rNBMdV5U2uug,728
+flake8_ruff_wrapper-0.4.0.dist-info/RECORD,,
