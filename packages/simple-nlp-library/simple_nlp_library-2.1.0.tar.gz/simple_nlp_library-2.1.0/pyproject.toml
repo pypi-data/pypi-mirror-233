@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple_nlp_library"
+version = "2.1.0"
+authors = [
+  { name="Marek Michalik", email="marekmichalik43@gmail.com" },
+]
+description = "Simple NLP library"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/marekm4/simple_nlp_library"
+"Bug Tracker" = "https://github.com/marekm4/simple_nlp_library/issues"
