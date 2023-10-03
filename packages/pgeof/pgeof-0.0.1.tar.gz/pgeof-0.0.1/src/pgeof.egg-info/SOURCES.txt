@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+./src/pgeof_cpy.cpp
+include/pgeof.hpp
+src/pgeof.egg-info/PKG-INFO
+src/pgeof.egg-info/SOURCES.txt
+src/pgeof.egg-info/dependency_links.txt
+src/pgeof.egg-info/requires.txt
+src/pgeof.egg-info/top_level.txt
