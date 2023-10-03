@@ -1,0 +1,9 @@
+appdirs
+numpy
+pyyaml
+requests
+
+[test]
+pytest-cov
+testfixtures
+httpretty!=1.0.0
