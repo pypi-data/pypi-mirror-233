@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: awsume-yubikey-plugin
+Version: 1.2.2
+Summary: Automates awsume MFA entry via YubiKey CLI.
+Home-page: https://github.com/xeger/awsume-yubikey-plugin
+Author: Tony Spataro
+Author-email: pypi@tracker.xeger.net
+License-File: LICENSE
+
