@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "binda"
+dynamic = ["version"]
+authors = [
+  { name="Jamie Cash", email="jlcash@gmail.com" },
+]
+description = "Read and write binary data using Pandas"
+readme = "README.md"
+dependencies = [
+  'pandas',
+  'numpy',
+
+  'build', # Building the package
+  'hatchling', # Build system
+  'hatch-vcs', # Auto version numbering from GitHub
+  'twine', # Publishing to PyPi
+  'pdoc', # Generating docs from docstrings
+  'flake8', # Build tests
+  'pytest' # Build tests
+]
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+keywords = ["data", "analytics", "binary", "pandas", "hex", "hexadecimal"] 
+license = {file = "LICENSE"}
+
+[project.urls]
+"Homepage" = "https://github.com/jamiecash/binda"
+"Bug Tracker" = "https://github.com/jamiecash/binda/issues"
+"Documentation" = "https://jamiecash.github.io/binda/binda.html"
+
+[project.scripts]
+hatch = "hatch.cli:main"
+
+# Tests and coverage
+[tool.coverage.report]
+fail_under = 80
+
+[tool.coverage.run]
+branch = true
+include = ["src/*"]
+command_line = "-m unittest discover -s tests/"
+
+# Build
+[tool.hatch.build]
+sources = ["src"]
+include = [
+  "example/*",
+  "binda.py"  # This will be in the root as [sources] will extract it from src.
+]
+
+# Versioning
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
+
+[tool.hatch.version.raw-options]
+version_scheme = "python-simplified-semver"
+git_describe_command = ["git", "describe", "--tags", "--abbrev=0"]
