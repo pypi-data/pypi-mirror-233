@@ -1,0 +1,11 @@
+dslclib/__init__.py,sha256=CUo_ONmfJTFqoAxcm6Go4LtvWJbea8iDNjhitSctDU8,376
+dslclib/src/__init__.py,sha256=9F5o1AEE7nlyczk--i-jTyQnO8Di8672beXH8K8XPdQ,433
+dslclib/src/base.py,sha256=qTi2Dt43h1wj2P6yidjlq9a0YngdCSdkSiwuMszRISQ,3206
+dslclib/src/body_controller.py,sha256=l9h5JAycb6pjjj8aNsCYQXZm7erjiHjZpgTJ5QuLVb8,11759
+dslclib/src/expression_controller.py,sha256=YX3GVleqLp_uS8Esfz9GfSRiPaVFU9-76cXgHjB_ZO8,5915
+dslclib/src/face_recognition.py,sha256=3m5AtPekMyaKIXXhrVmN2BMqMfT9pYG6lfV12zW7lEA,12453
+dslclib/src/speech_recognition.py,sha256=zSBAvZxPSmTJJIJ4ZNy8Lcn2NL7TJbeyYEhSGHSMy_Y,4336
+dslclib/src/tts.py,sha256=td_1uBJib4EKTCie7j-tMB96DHJaCznt4B_rOKZQUJA,7716
+dslclib-0.3.0.dist-info/METADATA,sha256=t73PzkAg0JMx4Oh-afhA1yk3MjhKekWbOop5dOgQ6EE,1916
+dslclib-0.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+dslclib-0.3.0.dist-info/RECORD,,
