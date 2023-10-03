@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+tgbotstat/__init__.py
+tgbotstat/tgbotstat.py
+tgbotstat.egg-info/PKG-INFO
+tgbotstat.egg-info/SOURCES.txt
+tgbotstat.egg-info/dependency_links.txt
+tgbotstat.egg-info/top_level.txt
