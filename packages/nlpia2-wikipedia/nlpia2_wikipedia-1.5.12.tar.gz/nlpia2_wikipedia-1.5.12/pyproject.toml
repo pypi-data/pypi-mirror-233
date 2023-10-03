@@ -1,0 +1,64 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "nlpia2_wikipedia"
+version = "1.5.12"
+description = "Updated version of `wikipedia` package because original repo has been abandoned since 2014."
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+authors = [
+    "Hobson Lane <hobson@tangibleai.com>",
+    ]
+homepage = "https://gitlab.com/tangibleai/community/nlpia2_wikipedia"
+repository = "https://gitlab.com/tangibleai/community/nlpia2_wikipedia"
+documentation = "https://gitlab.com/tangibleai/community/nlpia2_wikipedia"
+packages = [
+    {include="wikipedia", from="src"},
+    ]
+
+keywords = [
+    'wiki',
+    'Wikipedia',
+    'WikiData',
+    'WikiText',
+    'scraping',
+    'API',
+    'wrapper',
+    'crawler',
+    'markdown',
+    'html',
+    'parser'
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+    "Natural Language :: English",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Wiki",
+]
+
+[tool.poetry.build]
+generate-setup-file = true
+
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+poetry = ">=1.1"
+beautifulsoup4 = ">=4.11"
+requests = ">=2.0,<3.0.0"
+pandas = ">=1.5.3,<2.0.0"
+
+[tool.poetry.dev-dependencies]
+tox = ">=3.18"
+pytest = ">=6.2.0"
+pytest-cov = ">=3.0.0"
+pydocstyle = ">=5.1.1"
+Sphinx = ">=4.4.0"
+
