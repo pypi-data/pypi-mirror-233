@@ -1,0 +1,9 @@
+go_project_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+go_project_cli/examples/example.py,sha256=zQv-ANfI9yk6byLQQEVhpl6yQG4qRXL4YFnyX_k5--8,44
+go_project_cli/main.py,sha256=e2KhrGwTBzYl54Km83yR2V-hq7ilosqVELLM_eMNX48,440
+go_project_cli/utils.py,sha256=JRAse_VLtL6U7hZ2K_IeFSCmRPwF77S1kQ95U1UpGTM,2045
+go_project_cli-0.2.6.dist-info/LICENSE,sha256=DfpfkjZvWv5I0C9RJqUEyZHZHaCE8vuLVe3gPUqv5CM,1066
+go_project_cli-0.2.6.dist-info/METADATA,sha256=JsvGxGmd4PbF-hYmzcqfFfXym1bNuLKdDNhI-tdcPm8,566
+go_project_cli-0.2.6.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+go_project_cli-0.2.6.dist-info/entry_points.txt,sha256=DcOS_Bkyqy5kzKYxfTkN10eXUTQ766yGlANViOGnwZk,54
+go_project_cli-0.2.6.dist-info/RECORD,,
