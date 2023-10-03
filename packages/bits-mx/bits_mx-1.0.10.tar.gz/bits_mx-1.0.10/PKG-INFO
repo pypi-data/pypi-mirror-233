@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bits-mx
+Version: 1.0.10
+Summary: BITS MX
+Home-page: https://github.com/broadinstitute/bits-mx.git
+License: BSD-3-Clause
+Keywords: bits,mx
+Author: Lukas Karlsson
+Author-email: karlsson@broadinstitute.org
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: bits-ldap
+Requires-Dist: bits-mongo
+Project-URL: Repository, https://github.com/broadinstitute/bits-mx.git
+Description-Content-Type: text/markdown
+
+# bits-mx
+BITS MX Package
+
