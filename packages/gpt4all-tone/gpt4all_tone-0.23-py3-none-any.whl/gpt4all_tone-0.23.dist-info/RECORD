@@ -1,0 +1,9 @@
+gpt4all_code_review/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpt4all_code_review/gpt4all_code_review.py,sha256=9iV3eZqW57TPedsx2ef1euHYF-AxnKhenHhVGQUxiLo,6308
+gpt4all_tone/__init__.py,sha256=imRkcaT1gZaxnUqyqYa7uQw6ivZZ7nDntjdOpG0N_kc,39
+gpt4all_tone/gpt4all_tone.py,sha256=HvPmkn7g-MtfEDtM5AJaBBDXY6xN1DzxpIjmlJcpjVM,3129
+gpt4all_tone-0.23.dist-info/METADATA,sha256=4g9U7zLLy_QEFda-uLXmtg3bWwYtRaxFikbFF6e-_gs,1489
+gpt4all_tone-0.23.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+gpt4all_tone-0.23.dist-info/entry_points.txt,sha256=nMIEjO7p68kP8AgSrnWHeAHFXPGWAiEJt3CDiBMD0ak,64
+gpt4all_tone-0.23.dist-info/top_level.txt,sha256=9Ez8if_nDY_AQRQoqk0gzYEB0ANUnjkkOsEFvNi9fyE,13
+gpt4all_tone-0.23.dist-info/RECORD,,
