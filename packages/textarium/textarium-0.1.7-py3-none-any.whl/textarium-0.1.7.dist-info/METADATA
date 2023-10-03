@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: textarium
+Version: 0.1.7
+Summary: Textarium is a Python package for text analysis
+License: MIT
+Author: 6b656b
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: prettytable (>=3.9.0,<4.0.0)
+Requires-Dist: pymorphy2 (>=0.9.1,<0.10.0)
+Requires-Dist: pymorphy2-dicts (>=2.4.393442.3710985,<3.0.0.0)
+Requires-Dist: pytest (>=7.1.3,<8.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: razdel (>=0.5.0,<0.6.0)
+Requires-Dist: setuptools (>=65.6.3,<66.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+# textarium: easy-to-use Python package for text analysis.
+[![PyPI Latest Release](https://img.shields.io/pypi/v/textarium)](https://pypi.org/project/textarium/)
+[![License](https://img.shields.io/pypi/l/textarium)](https://github.com/6b656b/textarium/blob/main/LICENSE)
+[![Activity](https://img.shields.io/github/commit-activity/m/6b656b/textarium)](https://github.com/6b656b/textarium/pulse)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+
+## What is it?
+
+**textarium** is a Python package that provides flexible text analysis functions designed to 
+make text analysis intuitive and easy. It aims to be the high-level tool for
+preparing text-data and complex analysis or NLP modeling.
+
+## Installation
+Binary installer for the latest released version are available at the [Python
+Package Index (PyPI)](https://pypi.org/project/textarium).
+
+```sh
+# Type this in your command-line
+pip install textarium
+```
+
+## Getting started
+
+```py
+from textarium import Text
+import nltk
+nltk.download('wordnet')
+
+s = "This a text example. You can preprocess and analyze it with this package."
+text = Text(s, lang='en')
+text.prepare()
+
+print(text.prepared_text)
+```
+```py
+from textarium import Corpus
+import nltk
+nltk.download('wordnet')
+
+txts = [
+    "Hello! My name is Mr.Parker.",
+    "I have a website https://parker.com.",
+    "It has about 5000 visitors per day.",
+    "I track it with a simple html-block like this:",
+    "<div>Google.Analytics</div>",
+]
+c = Corpus(txts, lang='en')
+c.info()
+
+c = c.filter(condition=lambda x: len(x.split() > 5), attribute="raw_text")
+c.info()
+
+c.prepare()
+
+print(c)
+```
+
+## Documentation
+The official documentation is hosted on Github.io: https://6b656b.github.io/textarium
+## License
+[MIT](LICENSE)
