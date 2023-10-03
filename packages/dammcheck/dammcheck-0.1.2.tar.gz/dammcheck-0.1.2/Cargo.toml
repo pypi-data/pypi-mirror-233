@@ -1,0 +1,23 @@
+[package]
+name = "dammcheck"
+version = "0.1.2"
+authors = ["Jesse Wallace"]
+edition = "2021"
+readme = "Readme.md"
+repository = "https://github.com/J-Wall/dammcheck"
+licence = "MIT"
+license-file = "LICENSE"
+description = "Implementation of the Damm Algorithm in various bases/alphabets"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "dammcheck"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19"
+strum = { version = "0.25", features= ["derive"] }
+
+[features]
+extension-module = ["pyo3/extension-module"]
+default = ["extension-module"]
