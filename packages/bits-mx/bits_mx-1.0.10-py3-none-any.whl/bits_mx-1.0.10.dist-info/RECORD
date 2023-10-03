@@ -1,0 +1,11 @@
+bits/__init__.py,sha256=EtOD91ivU_kXxRA8lopap-Ihis3DvCkFVpiaQIdypM4,89
+bits/mx/__init__.py,sha256=VjHmszePmnMzo6_w0yBFqGotkaGcJ8wj0oLgJcuPOsk,712
+bits/mx/gnarwl.py,sha256=NFegwnMARokWnS70z5-T7QUXEue0iWC1asKG92hq_CI,2506
+bits/mx/google.py,sha256=E-ZR8lu7sV7-AIWypjYBco2TpH8z9dOe-8T43v4vwvo,3046
+bits/mx/groups.py,sha256=wM3fkjjDGBqLzUE01rVpd7s7JkujOxUUqHizv7b3DN4,2524
+bits/mx/localmail.py,sha256=8Q8Mgi9NIu4gII8543Bu4_TgfpXDuz9RgA88jH8-DDM,1954
+bits/mx/nicknames.py,sha256=sLIR8yJnK9wguw7AY7imGOHdZZldKGLyFM0JbPVHfe8,2602
+bits/mx/update.py,sha256=1mmPEGP5bTDCc_R6FxBHNdPUIHicuAJl1zEy7yu_Ya0,8022
+bits_mx-1.0.10.dist-info/METADATA,sha256=VhTOCMWwwa0zy34CRYMvnszgtxXjdPvZNjy4IB56PaE,800
+bits_mx-1.0.10.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bits_mx-1.0.10.dist-info/RECORD,,
