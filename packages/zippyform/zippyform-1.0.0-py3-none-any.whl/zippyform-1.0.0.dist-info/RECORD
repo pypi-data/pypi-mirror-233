@@ -1,0 +1,15 @@
+zippy_form/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zippy_form/event_test.py,sha256=Aey7YZzjKnaKXzIBpsrf6LR4Babm0VSTBjSnWkKxdA4,346
+zippy_form/event_webhook_triggers.py,sha256=4g9t9HTEJs8qRnmTkXbXSvDCXdzrAIiGqc0_VT04984,1529
+zippy_form/models.py,sha256=ITXZ2ixza5HeqVveRDamz98etwmfWCy65yc1H-yIzTA,5388
+zippy_form/permissions.py,sha256=aZAcUjWqSdxW0Mjl-Isyxe9xMKm1YcDg7j7yfLYT8MI,1430
+zippy_form/serializers.py,sha256=F7Mf9mN2tVLZqSwFvtZvyEyXy2zC-hPKRhp65ugnjng,22335
+zippy_form/urls.py,sha256=LvFubIBdnzPMVdLuMlXlTo-sJZWp-CwUzCkI8AEM6ZI,2208
+zippy_form/utils.py,sha256=nTOtzsO-J0TMthj-GOEfhLZaEgQHINXS_mli5r0tcGk,2338
+zippy_form/validation_rule.py,sha256=9IAeuyUmE53d9A12C1IzGtKyDVWjkwHat5OGBXzIF30,5170
+zippy_form/validation_rule_schema.py,sha256=mijeBXSKWTuKO23fXftAHLt4gxBwm27CD2fYR4rS8sA,8462
+zippy_form/views.py,sha256=mx7HbegsNTqJpQKYoq4kZpThoYcO15v6IPflONywtMc,67585
+zippyform-1.0.0.dist-info/METADATA,sha256=n2yy6LHFKbIuKiQNqcSpdMSrEDnN3Uk6IQNcXM3L1Zk,11431
+zippyform-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+zippyform-1.0.0.dist-info/top_level.txt,sha256=hfm2eCQMGohQAq8nCnoxf4rG3lAg0gqJYGrKbyZsrjk,11
+zippyform-1.0.0.dist-info/RECORD,,
