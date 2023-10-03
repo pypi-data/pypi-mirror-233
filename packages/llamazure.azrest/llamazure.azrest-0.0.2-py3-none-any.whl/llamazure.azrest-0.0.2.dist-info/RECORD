@@ -1,0 +1,9 @@
+llamazure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/azrest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/azrest/azrest.py,sha256=6RVED3S9ZqeJkBw4kYFuJuXpZjTjdw4dQVbH1C9AnUA,1677
+llamazure/azrest/openapi.py,sha256=d-BFluyF2iNfKXISXc0x8nBt4JWX5-fFKpy5L0Dhx0Y,1276
+llamazure.azrest-0.0.2.dist-info/METADATA,sha256=d2UYj3E3Z3nJR_NJFNEkwZcbx5PL2exEFMc4eWPR7Og,707
+llamazure.azrest-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+llamazure.azrest-0.0.2.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamazure.azrest-0.0.2.dist-info/top_level.txt,sha256=4gbH0fcRQb_rEVCcLYRu_D2cVCdf0VYVCIi_f0PiMq4,10
+llamazure.azrest-0.0.2.dist-info/RECORD,,

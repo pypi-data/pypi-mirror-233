@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: llamazure.azrest
+Version: 0.0.2
+Summary: Azure REST client
+Author: Daniel Goldman
+License: Round Robin 2.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Classifier: Topic :: Internet :: Log Analysis
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (>=2.0)
+Requires-Dist: requests (<3,>=2)
+Requires-Dist: types-requests
+
+# llamazure.azrest : A REST client for the Azure API
+
+Don't use this yet it's not good.
