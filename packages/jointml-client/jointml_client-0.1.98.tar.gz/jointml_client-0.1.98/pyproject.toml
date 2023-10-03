@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "jointml-client"
+version = "0.1.98"
+description = "The package provides an interface for working with the https://jointml.ru/ platform."
+repository = "https://github.com/joint-ml/client_package"
+authors = []
+readme = "README.md"
+packages = [{include = "joint_ml"},]
+exclude = [".idea", ".git*", ".gitignore"]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pandas = "^2.1.0"
+clint = "^0.5.1"
+colorama = "^0.4.6"
+pyfiglet = "^1.0.2"
+torch = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
