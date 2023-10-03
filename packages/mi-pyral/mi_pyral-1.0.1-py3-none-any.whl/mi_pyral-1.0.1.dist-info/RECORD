@@ -1,0 +1,17 @@
+pyral/__init__.py,sha256=VAHPzEVbVY57udXNeljbTM8BnJ-ZHOJ6hSmLAd4CYgA,17
+pyral/__main__.py,sha256=eGLySLkjH8BLozR_XhKnP5BGCbYhK9zZ0swT1WTKZmA,1627
+pyral/database.py,sha256=mOcv-i-kkJsadfbpwturq14t5JWQSEMSpUMo3Vqlssk,5776
+pyral/exceptions.py,sha256=XexjJdjMbotVPX_SzC5xw9j7Zt4-qiEfT1mohhN_8FQ,875
+pyral/log.conf,sha256=8EDDD6f3eue1IX80FBHJIyI2-mGN7Bycd3dSEeSWo-M,807
+pyral/print_table.py,sha256=WOjhEc07YgB9RLsOVDfmO3PvMAzQ6j1ivoKo3HanKUQ,2820
+pyral/relation.py,sha256=OEKQ2zWY9n1cxcbIwKl6UZriHKYOlcA80I9fAxNO4Qo,21871
+pyral/relvar.py,sha256=kpD9KerYeBbUmH-WqPruyKjrUQcANL0QlM4B51Lqke0,19836
+pyral/rtypes.py,sha256=5Sgrb-5PEOCt1vid5jRlfmqCBwuh7t8240ZjJKAJcg0,435
+pyral/transaction.py,sha256=cxSFjIMVLs1vuorWvVe0iGdlxqPwRDgTRaHuZS1ntO4,3038
+pyral/tcl_scripts/init_TclRAL.tcl,sha256=qUGu3fqt4lQVuwRXlfT7CfMCHeV--DeHCxENX34YR-w,387
+mi_pyral-1.0.1.dist-info/LICENSE,sha256=kL0xVrwl2i3Pk9mQXAVAPANCTaLGGOsoXgvqW7TBs20,1072
+mi_pyral-1.0.1.dist-info/METADATA,sha256=CZ2BhRnPSo3r7k8AyDs8QvZ7ow8IwGRPphq2SCZGpBA,2312
+mi_pyral-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mi_pyral-1.0.1.dist-info/entry_points.txt,sha256=PLncHf5Ip4tOadSOdBht6cD3zSqyQb2dTH_X6Wywg8w,47
+mi_pyral-1.0.1.dist-info/top_level.txt,sha256=z5xDgydftSrs_zxpkp-OIra6iRbqDfpjgqkOslRYQg4,6
+mi_pyral-1.0.1.dist-info/RECORD,,
