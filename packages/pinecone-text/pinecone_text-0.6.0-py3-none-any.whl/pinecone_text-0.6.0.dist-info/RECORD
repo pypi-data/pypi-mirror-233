@@ -1,0 +1,16 @@
+pinecone_text/__init__.py,sha256=Sc4z8LRVFMwJUoc_DPVUriSXTZ6PO9MaJ80PhRbKyB8,34
+pinecone_text/dense/__init__.py,sha256=z2dXOEqDz5DGweUj9jZPWX9SqdOnDfj-eVZLyBSV9vY,111
+pinecone_text/dense/base_dense_ecoder.py,sha256=_slERmJD6-3cBvZwS2UipHe8ucGWXA__TXgqBTFwYUQ,764
+pinecone_text/dense/openai_encoder.py,sha256=yWwI2Faqhy4WE1MpuplQvOEo0FN5x7ky1fV8IzlBalg,1968
+pinecone_text/dense/sentence_transformer_encoder.py,sha256=GSAUbI68t6F5oi9t-wnfVkj6TpfVzCFQaXw5U7RsaHU,2785
+pinecone_text/hybrid/__init__.py,sha256=UWIQ1PGBXXCAiQwetfV6q2Wu7h7l0IKG0A8ku6JhbXo,67
+pinecone_text/hybrid/hybrid_convex.py,sha256=YGAKxnVVyLA2s9ND0JZSC4U-oRfgURVzQo_bmXwXto8,999
+pinecone_text/sparse/__init__.py,sha256=oPdBL6_baa1VncBDwel04f9Aqhyb3akAIuq3HgtRmrA,1705
+pinecone_text/sparse/base_sparse_encoder.py,sha256=YFiH6jQMFjE3CFw83FsQlKu6i5Jcbu-PHKX68XqqyPI,818
+pinecone_text/sparse/bm25_encoder.py,sha256=wFvw6JsN57fc_8p7SN-Mt92fYP_VS6DMVaB-_ZxOsIQ,9727
+pinecone_text/sparse/bm25_tokenizer.py,sha256=eKtOjD9hnaVkpPEcLWiy65ektY6vFFmfrJSflpL95QQ,1899
+pinecone_text/sparse/splade_encoder.py,sha256=Jw-9XOqt3z8SQjHNeoANGK1QDCOLPeYmMKG86ks1DDQ,4128
+pinecone_text-0.6.0.dist-info/LICENSE.txt,sha256=RTGQ9yAfDWbfAlPjlwnY1hq2lsDgVvg06AcnocEIbHg,12229
+pinecone_text-0.6.0.dist-info/METADATA,sha256=i0Wd6GJEkiI3ulsf-Mr2eP6mI3IKGMwsgkcoN7uLYNA,8532
+pinecone_text-0.6.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pinecone_text-0.6.0.dist-info/RECORD,,
