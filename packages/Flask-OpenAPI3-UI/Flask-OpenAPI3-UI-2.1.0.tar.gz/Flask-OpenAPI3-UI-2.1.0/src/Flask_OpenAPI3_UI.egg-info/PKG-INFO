@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: Flask-OpenAPI3-UI
+Version: 2.1.0
+Summary: Next generation OpenAPI v3 Integration for Flask based APIs. Based on Flasgger.
+Author-email: Overflow Digital <team@overflow.digital>
+Maintainer-email: Katerina Tiddy <katerina@overflow.digital>, Joshua Thompson-Lindley <joshua@overflow.digital>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2022 Overflow Digital
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: repository, https://github.com/overflowdigital/Flask-OpenAPI/
+Keywords: flask,swagger,openapi,python,api,rest,openapi3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask>=2.1.2
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: jsonschema>=4.17.0
+Requires-Dist: mistune>=3.0.0
+Requires-Dist: six>=1.16.0
+
+# Flask-OpenAPI3-UI
+
+[![Python](https://img.shields.io/badge/python-3.6.1-blue.svg)](https://img.shields.io/badge/python-3.6.1-blue.svg)
+[![PyPi](https://img.shields.io/pypi/v/Flask-OpenAPI3-UI.svg)](https://pypi.python.org/pypi/Flask-OpenAPI3-UI)
+[![PyPi](https://img.shields.io/pypi/dm/Flask-OpenAPI3-UI.svg)](https://pypi.python.org/pypi/Flask-OpenAPI3-UI)
+[![Flask-OpenAPI3-UI](https://snyk.io/advisor/python/Flask-OpenAPI3-UI/badge.svg)](https://snyk.io/advisor/python/Flask-OpenAPI3-UI)
+
+Next generation OpenAPI v3 Integration for Flask based APIs. Based on Flasgger.
+
+## Install
+```
+pip install Flask-OpenAPI3-UI
+```
+
+## Usage
+You can start your Swagger spec with any default data providing a template:
+```python
+from flask_openapi import Swagger
+
+def main():
+  app = create_app()
+  app.config['SWAGGER'] = {
+      "uiversion": 3,
+      "openapi": "3.0.3",
+      "info": {
+          "title": "API documentation",
+          "description": "API docs for ",
+          "version": 1.0.0
+      },
+      "swagger_ui": True,
+      "basePath": "/api",  # base bash for blueprint registration
+      "components": {
+          "securitySchemes": {
+              "bearerAuth": {
+                  "type": "http",
+                  "scheme": "bearer",
+                  "bearerFormat": "JWT"
+              }
+          }
+      },
+      "title": "API docs",
+      "optional_fields": ["components", "tags", "paths"],
+      "doc_dir": "/home/admin/flaskapp/src/api/",
+  }
+  Swagger(app=app)
+```
+And then the template is the default data unless some view changes it. You can also provide all your specs as template and have no views. Or views in external APP.
