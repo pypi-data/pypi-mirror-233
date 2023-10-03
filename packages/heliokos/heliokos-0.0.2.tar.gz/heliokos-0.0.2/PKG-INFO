@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: heliokos
+Version: 0.0.2
+Summary: A knowledge organization system (KOS) service for Heliophysics
+Project-URL: Homepage, https://github.com/polyneme/heliokos
+Project-URL: Bug Tracker, https://github.com/polyneme/heliokos/issues
+Author-email: Donny Winston <donny@polyneme.xyz>
+License-File: LICENSE
+Keywords: RDF,SKOS
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: fastapi
+Requires-Dist: jinja2
+Requires-Dist: rdflib
+Requires-Dist: toolz
+Requires-Dist: uvicorn[standard]
+Description-Content-Type: text/markdown
+
+# heliokos
+A knowledge organization system (KOS) service for Heliophysics
