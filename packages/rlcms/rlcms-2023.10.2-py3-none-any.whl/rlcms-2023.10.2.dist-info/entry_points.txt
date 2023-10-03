@@ -1,0 +1,6 @@
+[console_scripts]
+composite = rlcms.cli.composite:main
+landcover = rlcms.cli.landcover:main
+primitives = rlcms.cli.primitives:main
+sample_pts = rlcms.cli.sample_pts:main
+train_test = rlcms.cli.train_test:main
