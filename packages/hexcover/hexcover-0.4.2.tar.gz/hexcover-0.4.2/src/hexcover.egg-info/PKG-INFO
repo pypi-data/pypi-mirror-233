@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: hexcover
+Version: 0.4.2
+Summary: Given a centroid and side length, tile an area with regular flat hexagons
+Author-email: Stephan Hügel <urschrei@gmail.com>
+License: # Blue Oak Model License
+        
+        Version 1.0.0
+        
+        ## Purpose
+        
+        This license gives everyone as much permission to work with
+        this software as possible, while protecting contributors
+        from liability.
+        
+        ## Acceptance
+        
+        In order to receive this license, you must agree to its
+        rules.  The rules of this license are both obligations
+        under that agreement and conditions to your license.
+        You must not do anything with this software that triggers
+        a rule that you cannot or will not follow.
+        
+        ## Copyright
+        
+        Each contributor licenses you to do everything with this
+        software that would otherwise infringe that contributor's
+        copyright in it.
+        
+        ## Notices
+        
+        You must ensure that everyone who gets a copy of
+        any part of this software from you, with or without
+        changes, also gets the text of this license or a link to
+        <https://blueoakcouncil.org/license/1.0.0>.
+        
+        ## Excuse
+        
+        If anyone notifies you in writing that you have not
+        complied with [Notices](#notices), you can keep your
+        license by taking all practical steps to comply within 30
+        days after the notice.  If you do not do so, your license
+        ends immediately.
+        
+        ## Patent
+        
+        Each contributor licenses you to do everything with this
+        software that would otherwise infringe any patent claims
+        they can license or become able to license.
+        
+        ## Reliability
+        
+        No contributor can revoke this license.
+        
+        ## No Liability
+        
+        ***As far as the law allows, this software comes as is,
+        without any warranty or condition, and no contributor
+        will be liable to anyone for any damages related to this
+        software or this license, under any kind of legal claim.***
+        
+Project-URL: Repository, https://github.com/urschrei/hexcover
+Project-URL: Tracker, https://github.com/urschrei/hexcover/issues
+Keywords: Geo,Telecoms,Hexagon,GIS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.11.0
+Requires-Dist: shapely>=1.7.0
+Provides-Extra: test
+Requires-Dist: pytest>=7.4.2; extra == "test"
+
+# Hexcover
+A small utility package which calculates a regular hexagonal tiling for an area, given a centroid as a Shapely [Point](https://shapely.readthedocs.io/en/latest/manual.html#Point), and a side length.
+
+# Installation
+`Hexcover` is available on PyPI:  
+`pip install hexcover`
+
+# Usage
+```python
+
+from shapely.geometry import Point
+from hexcover.util import hexagon_coverage
+
+# centroid
+c = Point(0.0, 0.0)
+coverage = hexagon_coverage(c, 10)
+
+# coverage is a namedtuple of seven polygons. The first entry is the central polygon.
+# Subsequent entries begin directly above the central polygon, and proceed clockwise.
+```
+The returned `namedtuple` has seven fields:
+
+- `centre`
+- `top`
+- `topright`
+- `bottomright`
+- `bottom`
+- `bottomleft`
+- `topleft`
+
+## Examples
+There's an example [notebook](hexcover.ipynb), and a sample output [GeoJSON file](coverage.geojson) showing the result of covering the [Crystal Palace Transmitting Station](https://en.wikipedia.org/wiki/Crystal_Palace_transmitting_station) with 100-metre hexagons.
+
+# Input Coordinates
+A **projected** coordinate system must be used. Don't give input in e.g. WGS84
+
+# Requirements
+`Shapely` >= 1.6.3
+
+# License
+[The Blue Oak Model License 1.0](LICENSE.md)
+
+# DOI
+[![DOI](https://zenodo.org/badge/194419900.svg)](https://zenodo.org/badge/latestdoi/194419900)
