@@ -1,0 +1,28 @@
+from enum import Enum
+
+
+class Symbol(Enum):
+    DETACHED = "\u2693"
+    AHEAD = "\u2B06"
+    BEHIND = "\u2B07"
+    STAGED = "\u2714"
+    CHANGED = "\u270E"
+    NEW = "?"
+    CONFLICTED = "\u273C"
+    STASH = "\u2398"
+    GIT = "\uE0A0"
+    HG = "\u263F"
+    BZR = "\u2B61\u20DF"
+    FOSSIL = "\u2332"
+    SVN = "\u2446"
+    SEPARATOR = "\u25B6"
+    SEPARATOR_B = "\uE0B0"
+    SEPARATOR_THIN = "\u276F"
+    SEPARATOR_THIN_B = "\uE0B1"
+    LOCK = "\uE0A2"
+    FOLDER = "\U0001F5C1"
+    VIRTUAL_ENV = "\U0001F40D"
+    BATTERY = "\U0001F50C"
+    ELLIPSIS = "\u2026"
+    BAT = "\u26A1"
+    UP = "\u2191"
