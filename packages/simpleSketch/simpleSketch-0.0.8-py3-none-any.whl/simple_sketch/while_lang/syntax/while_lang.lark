@@ -1,0 +1,121 @@
+//------------------------------------------------------------------------------------------------
+// File: while_lang.lark
+//
+// Description: Grammar for the (typed) while language (while_lang).
+// Using the Lark parser ( https://github.com/lark-parser/lark )
+//
+// Author: Maher Bisan (maherbisan95@gmail.com)
+//
+//------------------------------------------------------------------------------------------------
+
+
+?start: statements
+
+?statements: statement 
+|  statements statement -> seq
+
+?statement: "skip" ";" -> skip_stmt
+|  declaration
+|  assignment
+// |  "if" "(" expr ")" block [ "else" block ] -> ifelse_stmt
+|  "if" "(" expr ")" block ("else" block )? -> ifelse_stmt
+|  "while" "(" expr ")" block -> while_stmt
+// |  "while" expr "invariant" inv "do" s1 -> while_invariant // TODO
+|  "assert" "(" expr ")" ";" -> assert_stmt
+|  "assume" "(" expr ")" ";" -> assume_stmt
+|  block
+| ";" -> empty_stmt
+
+block: "{" statements "}" -> block_stmt
+
+// FIXME: no need for size in `array_type` (i.e. `array_type: "Array" type_ "[" positive_int "]"`).
+// XXX Use it for `Vector` (z3.Vector) type (i.e. `array_type: "Vector" type_ "[" positive_int "]"`)
+?declaration: type_ var (":=" expr)? ";" -> var_decl
+// For array declarations
+|   array_type var "[" positive_int "]" (":=" "[" expr_list "]")? ";" -> array_decl // FIXME
+|   array_type var ";" -> array_decl2
+|   array_type var ":=" var ";" -> array_decl3 //FIXME for case `Array int B := A;`
+
+assignment: var ":=" expr ";" -> var_assign
+|   var ":=" "[" expr_list "]" ";" -> array_assign // FIXME
+|   var "[" expr "]" ":=" expr ";" -> array_pos_assign
+
+expr_list: expr ("," expr)* -> expr_list
+
+array_type: "Array" type_
+
+type_: "int" 
+|   "float"
+|   "bool"
+
+
+?expr: expr BOOL_OP expr  -> andor_expr
+| NOT expr         -> not_expr
+| expr REL_OP expr  -> rel_expr
+| expr ADD_SUB expr -> addsub_expr
+| expr MUL_DIV expr -> muldiv_expr
+| expr POW expr     -> pow_expr
+//  # FIXME: add`modulus` operator `%`
+| atom           
+            
+
+?atom: "(" expr ")" -> bracket_expr
+|   var
+|   hole //FIXME: check how to create holes with diffrent type
+|   var "[" expr "]" -> array_access
+|   positive_int
+|   int_
+|   float_
+|   bool_
+
+// '??' is the default type for holes (i.e. `int`)
+hole: "??" | "int?" | "float?" | "bool?" | "array?" -> hole
+
+?var: VAR_ID -> var_id
+// |   var "[" expr "]" -> array_access
+
+
+positive_int: POSITIVE_INT -> positive_int
+int_: INT -> int_
+float_: FLOAT -> float_
+bool_: "True" | "False"
+
+
+
+// TODO: Handle the `inv` rules
+// ?inv:  expr                      -> invariant
+// |   "not" inv                 -> not_invariant
+// |   inv "and" inv             -> and_invariant
+// |   inv "or" inv              -> or_invariant
+// |   "(" inv ")"               -> bracket_invariant
+
+
+NOT.0: "not" // TODO: check if it is correct properly it is not correct
+BOOL_OP.1: "and" | "or"
+REL_OP.2: "!=" | "==" | "<=" | ">=" | "<" | ">"
+ADD_SUB.3: "+" | "-"
+MUL_DIV.4: "*" | "/"
+POW.4: "**" 
+
+
+POSITIVE_INT.1: /[1-9][0-9]*/ | /0/
+// TODO: check what is the correct way for `INT` (with or without the `?`)
+INT.0: ["+"|"-"]? POSITIVE_INT 
+// INT: ["+"|"-"] POSITIVE_INT 
+FLOAT: ["+"|"-"]? POSITIVE_INT "." POSITIVE_INT
+
+
+
+KEYWORD: /if|else|else|while|skip|assert|assume|int|float|bool|Array|not|and|or|True|False|invariant/
+LETTER: /[a-zA-Z]/
+DIGIT: /[0-9]/
+ID: ("_"|LETTER)("_"|LETTER|DIGIT)*
+VAR_ID: /(?!(/KEYWORD/)\b)/ID
+
+
+
+
+// %import common.CNAME -> ID // ("_"|LETTER) ("_"|LETTER|DIGIT)*
+%import common.CNAME // ("_"|LETTER) ("_"|LETTER|DIGIT)*
+%import common.WS
+%ignore WS
