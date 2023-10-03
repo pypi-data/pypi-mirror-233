@@ -1,0 +1,6 @@
+setup.py
+zoltar/__init__.py
+zoltar.egg-info/PKG-INFO
+zoltar.egg-info/SOURCES.txt
+zoltar.egg-info/dependency_links.txt
+zoltar.egg-info/top_level.txt
