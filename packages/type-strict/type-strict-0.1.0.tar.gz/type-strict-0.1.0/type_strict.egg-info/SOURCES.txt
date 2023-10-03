@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+type_strict/__init__.py
+type_strict/strict.py
+type_strict.egg-info/PKG-INFO
+type_strict.egg-info/SOURCES.txt
+type_strict.egg-info/dependency_links.txt
+type_strict.egg-info/top_level.txt
