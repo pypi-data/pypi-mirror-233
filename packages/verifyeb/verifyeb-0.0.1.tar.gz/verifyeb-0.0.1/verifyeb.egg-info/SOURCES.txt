@@ -1,0 +1,5 @@
+setup.py
+verifyeb.egg-info/PKG-INFO
+verifyeb.egg-info/SOURCES.txt
+verifyeb.egg-info/dependency_links.txt
+verifyeb.egg-info/top_level.txt
