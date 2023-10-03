@@ -1,0 +1,1362 @@
+# Copyright (c) 2023 Blacknon. All rights reserved.
+# Use of this source code is governed by an MIT license
+# that can be found in the LICENSE file.
+# =======================================================
+
+# ccTLD
+# ====================
+## ac
+ac:
+  server: whois.nic.ac
+  template:
+    - common.tpl
+
+## ad
+ad:
+
+## ae
+ae:
+  server: whois.aeda.net.ae
+  template:
+    - cctld/ae.tpl
+
+## af
+af:
+  server: whois.nic.af
+  template:
+    - common.tpl
+
+## ag
+ag:
+  server: whois.nic.ag
+  template:
+    - common.tpl
+
+## ai
+ai:
+  server: whois.nic.ai
+  template:
+    - common_2.tpl
+
+## al
+al:
+
+## am
+# NOTE: AM TLD whois server #1
+am:
+  server: whois.amnic.net
+  template:
+    - cctld/am.tpl
+
+## an
+an:
+
+## ao
+ao:
+
+## aq
+aq:
+
+## ar
+ar:
+  server: whois.nic.ar
+  template:
+    - cctld/ar.tpl
+
+## as
+as:
+  server: whois.nic.as
+  template:
+    - cctld/as.tpl
+
+## at
+at:
+  server: whois.nic.at
+  template:
+    - cctld/at.tpl
+
+## au
+au:
+  server: whois.auda.org.au
+  template:
+    - cctld/au.tpl
+
+## aw
+aw:
+  server: whois.nic.aw
+  template:
+    - cctld/aw.tpl
+
+## ax
+ax:
+  server: whois.ax
+  template:
+    - cctld/ax.tpl
+
+## az
+az:
+
+## ba
+ba:
+
+## bb
+bb:
+
+## bd
+bd:
+
+## be
+# NOTE: .be Whois Server 6.1
+be:
+  server: whois.dns.be
+  template:
+    - cctld/be.tpl
+
+## bf
+bf:
+
+## bg
+bg:
+  server: whois.register.bg
+  template:
+    - cctld/bg.tpl
+
+## bh
+bh:
+
+## bi
+bi:
+  server: whois1.nic.bi
+  template:
+    - common.tpl
+
+## bl
+bl:
+
+## bm
+bm:
+
+## bn
+# NOTE: BNNIC WHOIS Server
+bn:
+  server: whois.bnnic.bn
+  template:
+    - cctld/bn.tpl
+
+
+## bo
+# NOTE: not working from japan.
+bo:
+  server: whois.nic.bo
+
+## bq
+bq:
+
+## br
+br:
+  server: whois.registro.br
+  template:
+    - cctld/br.tpl
+
+## bs
+bs:
+
+## bt
+bt:
+
+## bv
+bv:
+
+## bw
+bw:
+  server: whois.nic.net.bw
+  trace_whois: False
+  template:
+    - common_2.tpl
+
+## by
+by:
+  server: whois.cctld.by
+  template:
+    - cctld/by.tpl
+
+## bz
+bz:
+
+## ca
+ca:
+  server: whois.cira.ca
+  template:
+    - common.tpl
+
+## cat
+cat:
+  server: whois.nic.cat
+  template:
+    - common.tpl
+
+## cc
+cc:
+  server: ccwhois.verisign-grs.com
+  template:
+    - common.tpl
+
+## cd
+cd:
+
+## cf
+# NOTE: not working from japan.
+cf:
+  server: whois.dot.cf
+
+## cg
+cg:
+
+## ch
+# NOTE: not working from japan.
+ch:
+  server: whois.nic.ch
+
+## ci
+ci:
+  server: whois.nic.ci
+  template:
+    - common.tpl
+
+## ck
+ck:
+
+## cl
+# NOTE: NIC Chile Whois server
+cl:
+  server: whois.nic.cl
+  template:
+    - cctld/cl.tpl
+
+## cm
+cm:
+
+## cn
+cn:
+  server: whois.cnnic.cn
+  template:
+    - cctld/cn.tpl
+
+## co
+# TODO: うまく取れてないかも？あとでチェック
+co:
+  server: whois.nic.co
+  template:
+    - common.tpl
+
+## cr
+# NOTE: Whoisd Server Version: 3.12.2
+cr:
+  server: whois.nic.cr
+  template:
+    - whoisd_server.tpl
+
+## cu
+cu:
+
+## cv
+cv:
+
+## cw
+cw:
+
+## cx
+cx:
+  server: whois.nic.cx
+  template:
+    - common.tpl
+
+## cy
+cy:
+
+## cz
+# NOTE: Whoisd Server Version: 3.12.2
+cz:
+  server: whois.nic.cz
+  template:
+    - whoisd_server.tpl
+
+## de
+# NOTE: なぜかwhoisコマンドより取れるデータが少ない...
+de:
+  server: whois.denic.de
+  template:
+    - cctld/de.tpl
+
+## dj
+dj:
+
+## dk
+dk:
+  server: whois.punktum.dk
+  template:
+    - cctld/dk.tpl
+
+## dm
+dm:
+  server: whois.dmdomains.dm
+  template:
+    - common.tpl
+
+## do
+do:
+  server: whois.nic.do
+  template:
+    - common.tpl
+
+## dz
+# NOTE: not working from japan.
+dz:
+  server: whois.nic.dz
+
+## ec
+# NOTE: not working from japan.
+ec:
+  server: whois.nic.ec
+
+## ee
+ee:
+  server: whois.tld.ee
+  template:
+    - cctld/ee.tpl
+
+## eg
+eg:
+
+## eh
+eh:
+
+## er
+er:
+
+## es
+# NOTE: not working from japan.
+es:
+  server: whois.nic.es
+
+## et
+et:
+
+## eu
+eu:
+  server: whois.eu
+  template:
+    - cctld/eu.tpl
+
+## eus
+eus:
+  server: whois.nic.eus
+  template:
+    - common.tpl
+
+## fi
+fi:
+  server: whois.fi
+  template:
+    - cctld/fi.tpl
+
+## fj
+fj:
+  server: www.whois.fj
+  template:
+    - common.tpl
+
+## fk
+fk:
+
+## fm
+fm:
+  server: whois.nic.fm
+  template:
+    - common.tpl
+
+## fo
+fo:
+  server: whois.nic.fo
+  template:
+    - common.tpl
+
+## fr
+# NOTE: AFNIC Whois server
+fr:
+  server: whois.nic.fr
+  template:
+    - afnic.tpl
+
+## ga
+ga:
+
+## gal
+gal:
+  server: whois.nic.gal
+  template:
+    - common.tpl
+
+## gd
+gd:
+  server: whois.nic.gd
+  template:
+    - common.tpl
+
+## ge
+ge:
+  server: whois.nic.ge
+  template:
+    - cctld/ge.tpl
+
+## gf
+# NOTE: Java Whois Server 0.4.1.3
+gf:
+  server: whois.mediaserv.net
+  template:
+    - java_whois_server.tpl
+
+## gg
+# WHOIS lookup
+gg:
+  server: whois.gg
+  template:
+    - cctld/gg.tpl
+
+## gh
+gh:
+
+## gi
+gi:
+  server: whois2.afilias-grs.net
+  template:
+    - common.tpl
+
+## gl
+gl:
+  server: whois.nic.gl
+  template:
+    - common.tpl
+
+## gm
+gm:
+
+## gn
+gn:
+
+## gp
+# NOTE: not working from japan.
+gp:
+  server: whois.nic.gp
+
+## gq
+# NOTE: not working from japan.
+gq:
+  server: whois.dominio.gq
+
+## gr
+gr:
+
+## gs
+gs:
+  server: whois.nic.gs
+  template:
+    - common.tpl
+
+## gt
+gt:
+
+## gu
+gu:
+
+## gw
+gw:
+
+## gy
+# NOTE: not working from japan.
+gy:
+  server: whois.registry.gy
+
+## hk
+hk:
+  server: whois.hkirc.hk
+  template:
+    - cctld/hk.tpl
+
+## hm
+# NOTE: not working from japan.
+hm:
+  server: whois.registry.hm
+
+## hn
+hn:
+  server: whois.nic.hn
+  template:
+    - common.tpl
+
+## hr
+hr:
+  server: whois.dns.hr
+  template:
+    - common.tpl
+
+## ht
+ht:
+  server: whois.nic.ht
+  template:
+    - common.tpl
+
+## hu
+# NOTE: Whois server 3.0
+hu:
+  server: whois.nic.hu
+  template:
+    - cctld/hu.tpl
+
+## id
+id:
+  server: whois.id
+  template:
+    - cctld/id.tpl
+
+## ie
+ie:
+  server: whois.weare.ie
+  template:
+    - common.tpl
+
+## il
+il:
+  server: whois.isoc.org.il
+  template:
+    - cctld/il.tpl
+
+## im
+im:
+  server: whois.nic.im
+  template:
+    - cctld/im.tpl
+
+## in
+in:
+  server: whois.registry.in
+  template:
+    - common.tpl
+
+## io
+io:
+  server: whois.nic.io
+  template:
+    - common.tpl
+
+## iq
+# NOTE: not working from japan.
+iq:
+  server: whois.cmc.iq
+
+## ir
+# NOTE: IRNIC Whois server v1.6.2
+ir:
+  server: whois.nic.ir
+  template:
+    - cctld/ir.tpl
+
+## is
+# NOTE: ISNIC Whois server
+is:
+  server: whois.isnic.is
+  template:
+    - cctld/is.tpl
+
+## it
+it:
+  server: whois.nic.it
+  template:
+    - cctld/it.tpl
+
+## je
+# NOTE: WHOIS lookup
+je:
+  server: whois.je
+  template:
+    - cctld/je.tpl
+
+## jm
+jm:
+
+## jo
+jo:
+
+## jp
+jp:
+  server: whois.jprs.jp
+  template:
+    - cctld/jp.tpl
+
+ac.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+ad.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+co.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+ed.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+go.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+gr.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+lg.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+ne.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+or.jp:
+  server: whois.jprs.jp
+  template:
+    - xx.jp.tpl
+
+## ke
+ke:
+  server: whois.kenic.or.ke
+  template:
+    - common.tpl
+
+## kg
+kg:
+  server: whois.kg
+  template:
+    - cctld/kg.tpl
+
+## kh
+kh:
+
+## ki
+# NOTE: not working from japan.
+ki:
+  server: whois.nic.ki
+
+## km
+km:
+
+## kn
+kn:
+  server: whois.nic.kn
+  template:
+    - common.tpl
+
+## kp
+kp:
+
+## kr
+kr:
+  server: whois.kr
+  template:
+    - cctld/kr.tpl
+
+## kw
+kw:
+
+## ky
+ky:
+  server: whois.kyregistry.ky
+  template:
+    - common.tpl
+
+## kz
+kz:
+  server: whois.nic.kz
+  template:
+    - cctld/kz.tpl
+
+## la
+la:
+  server: whois.nic.la
+  template:
+    - common.tpl
+
+## lb
+lb:
+  server: whois.lbdr.org.lb
+  template:
+    - common.tpl
+
+## lc
+lc:
+
+## li
+# NOTE: not working from japan.
+li:
+  server: whois.nic.li
+
+## lk
+lk:
+
+## lr
+lr:
+
+## ls
+# NOTE: Whoisd Server Version: 3.10.2
+ls:
+  server: whois.nic.ls
+  template:
+    - whoisd_server.tpl
+
+## lt
+lt:
+  server: whois.domreg.lt
+  template:
+    - cctld/lt.tpl
+
+## lu
+lu:
+  server: whois.dns.lu
+  template:
+    - cctld/lu.tpl
+
+## lv
+lv:
+  server: whois.nic.lv
+  template:
+    - cctld/lv.tpl
+
+## ly
+ly:
+  server: whois.nic.ly
+  template:
+    - common.tpl
+
+## ma
+ma:
+  server: whois.registre.ma
+  template:
+    - common.tpl
+
+## mc
+mc:
+
+## md
+md:
+  server: whois.nic.md
+  template:
+    - cctld/md.tpl
+
+## me
+me:
+  server: whois.nic.me
+  template:
+    - common.tpl
+
+## mf
+mf:
+
+## mg
+mg:
+  server: whois.nic.mg
+  template:
+    - common.tpl
+
+## mh
+mh:
+
+## mk
+# NOTE: Whoisd Server Version: 3.9.0
+mk:
+  server: whois.marnet.mk
+  template:
+    - whoisd_server.tpl
+
+## ml
+# NOTE: not working from japan.
+ml:
+  server: whois.nic.ml
+
+## mm
+mm:
+  server: whois.registry.gov.mm
+  template:
+    - common.tpl
+
+## mn
+# NOTE: not working from japan.
+mn:
+  server: whois.nic.mn
+  template:
+    - common.tpl
+
+## mo
+# NOTE: % Monic Whois Server Version 1.0
+mo:
+  server: whois.monic.mo
+  template:
+    - cctld/mo.tpl
+
+## mp
+mp:
+
+## mq
+# NOTE: Java Whois Server
+mq:
+  server: whois.mediaserv.net
+  template:
+    - java_whois_server.tpl
+
+## mr
+mr:
+  server: whois.nic.mr
+  template:
+    - common.tpl
+
+## ms
+# NOTE: not working from japan.
+ms:
+  server: whois.nic.ms
+
+## mt
+mt:
+
+## mu
+mu:
+  server: whois.nic.mu
+  template:
+    - common.tpl
+
+## mv
+mv:
+
+## mw
+# NOTE: Whoisd Server
+mw:
+  server: whois.nic.mw
+  template:
+    - whoisd_server.tpl
+
+## mx
+mx:
+  server: whois.mx
+  template:
+    - cctld/mx.tpl
+
+## my
+# NOTE: not working from japan.
+my:
+  server: whois.mynic.my
+
+## mz
+mz:
+  server: whois.nic.mz
+  template:
+    - common.tpl
+
+## na
+na:
+  server: whois.na-nic.com.na
+  template:
+    - common.tpl
+
+## nc
+# NOTE: OPT Whois
+nc:
+  server: whois.nc
+  template:
+    - cctld/nc.tpl
+
+## ne
+ne:
+
+## nf
+nf:
+  server: whois.nic.nf
+  template:
+    - common.tpl
+
+## ng
+ng:
+  server: whois.nic.net.ng
+  template:
+    - common.tpl
+
+## ni
+ni:
+
+## nl
+nl:
+  server: whois.domain-registry.nl
+  template:
+    - cctld/nl.tpl
+
+## no
+# NOTE: Record maintained by: SIDN BV
+.no:
+  server: whois.norid.no
+  template:
+    - cctld/no.tpl
+
+## np
+np:
+
+## nr
+nr:
+
+## nu
+# NOTE: The Swedish Internet Foundation.
+nu:
+  server: whois.iis.nu
+  template:
+    - cctld/nu.tpl
+
+## nz
+nz:
+  server: whois.irs.net.nz
+  template:
+    - common.tpl
+
+## om
+om:
+  server: whois.registry.om
+  template:
+    - cctld/om.tpl
+
+## pa
+pa:
+
+## pe
+pe:
+  server: kero.yachay.pe
+  template:
+    - common.tpl
+
+## pf
+pf:
+  server: whois.registry.pf
+  template:
+    - cctld/pf.tpl
+
+## pg
+pg:
+
+## ph
+ph:
+
+## pk
+pk:
+  server: whois.pknic.net.pk
+  template:
+    - cctld/pk.tpl
+
+## pl
+pl:
+  server: whois.dns.pl
+  strip: True
+  template:
+    - cctld/pl.tpl
+
+## pm
+# NOTE: AFNIC Whois server
+pm:
+  server: whois.nic.pm
+  template:
+    - afnic.tpl
+
+## pn
+pn:
+
+## pr
+pr:
+  server: whois.afilias-srs.net
+  template:
+    - common.tpl
+
+## ps
+ps:
+
+## pt
+# NOTE: not working from japan.
+pt:
+  server: whois.dns.pt
+
+## pw
+pw:
+  server: whois.nic.pw
+  template:
+    - common.tpl
+
+## py
+py:
+
+## qa
+qa:
+  server: whois.registry.qa
+  template:
+    - cctld/qa.tpl
+
+## re
+# NOTE: AFNIC Whois server
+re:
+  server: whois.nic.re
+  template:
+    - afnic.tpl
+
+## ro
+ro:
+  server: whois.rotld.ro
+  template:
+    - cctld/ro.tpl
+
+## rs
+rs:
+  server: whois.rnids.rs
+  template:
+    - cctld/rs.tpl
+
+## ru
+# NOTE: TCI Whois Service
+ru:
+  server: whois.tcinet.ru
+  template:
+    - cctld/ru.tpl
+
+## rw
+rw:
+  server: whois.ricta.org.rw
+  template:
+    - common.tpl
+
+## sa
+# NOTE: SaudiNIC Whois server
+sa:
+  server: whois.nic.net.sa
+  template:
+    - cctld/sa.tpl
+
+## sb
+sb:
+  server: whois.nic.net.sb
+  template:
+    - common.tpl
+
+## sc
+sc:
+  server: whois2.afilias-grs.net
+  template:
+    - common.tpl
+
+## sd
+sd:
+
+## se
+# NOTE: The Swedish Internet Foundation
+se:
+  server: whois.iis.se
+  template:
+    - cctld/se.tpl
+
+## sg
+sg:
+  server: whois.sgnic.sg
+  template:
+    - cctld/sg.tpl
+
+## sh
+sh:
+  server: whois.nic.sh
+  template:
+    - common.tpl
+
+## si
+# NOTE: The WHOIS service offered by Arnes
+si:
+  server: whois.register.si
+  template:
+    - cctld/si.tpl
+
+## sj
+sj:
+
+## sk
+sk:
+  server: whois.sk-nic.sk
+  template:
+    - cctld/sk.tpl
+
+## sl
+sl:
+
+## sm
+sm:
+  server: whois.nic.sm
+  template:
+    - cctld/sm.tpl
+
+## sn
+sn:
+  server: whois.nic.sn
+  template:
+    - cctld/sn.tpl
+
+## so
+so:
+  server: whois.nic.so
+  template:
+    - common.tpl
+
+## sr
+sr:
+
+## ss
+ss:
+  server: whois.nic.ss
+  template:
+    - common.tpl
+
+## st
+# NOTE: Whois Server Version 3.2.2
+st:
+  server: whois.nic.st
+  template:
+    - cctld/st.tpl
+
+## sv
+sv:
+
+
+## sx
+sx:
+  server: whois.sx
+  template:
+    - common.tpl
+
+## sy
+sy:
+  server: whois.tld.sy
+  template:
+    - cctld/sy.tpl
+
+## sz
+sz:
+
+
+## tc
+tc:
+  server: whois.nic.tc
+  template:
+    - cctld/tc.tpl
+
+## td
+td:
+  server: whois.nic.td
+  template:
+    - common.tpl
+
+## tf
+# NOTE: AFNIC Whois server
+tf:
+  server: whois.nic.tf
+  template:
+    - afnic.tpl
+
+## tg
+# NOTE: Java Whois Server 0.4.1.3
+tg:
+  server: whois.nic.tg
+  template:
+    - cctld/tg.tpl
+
+## th
+# NOTE: Whois Server Version 2.1.7
+th:
+  server: whois.thnic.co.th
+  template:
+    - cctld/th.tpl
+
+## tj
+tj:
+
+## tk
+# NOTE: not working from japan.
+tk:
+  server: whois.dot.tk
+
+## tl
+tl:
+  server: whois.nic.tl
+  template:
+    - common.tpl
+
+## tm
+tm:
+  server: whois.nic.tm
+  template:
+    - cctld/tm.tpl
+
+## tn
+tn:
+  server: whois.ati.tn
+  template:
+    - cctld/tn.tpl
+
+## to
+# NOTE: whoisd V1.1
+# NOTE: 中身なさすぎなのでとりあえず対応しない
+to:
+  server: whois.tonic.to
+
+## tp
+tp:
+
+## tr
+tr:
+  server: whois.trabis.gov.tr
+  template:
+    - cctld/tr.tpl
+
+## tt
+tt:
+
+## tv
+tv:
+  server: whois.nic.tv
+  template:
+    - common.tpl
+
+## tw
+tw:
+  server: whois.twnic.net.tw
+  template:
+    - cctld/tw.tpl
+
+## tz
+# NOTE: Whoisd Server Version: 3.10.2
+tz:
+  server: whois.tznic.or.tz
+  template:
+    - whoisd_server.tpl
+
+## ua
+ua:
+  server: whois.ua
+  template:
+    - cctld/ua.tpl
+
+## ug
+ug:
+  server: whois.co.ug
+  template:
+    - cctld/ug.tpl
+
+## uk
+uk:
+  server: whois.nic.uk
+  template:
+    - cctld/uk.tpl
+
+## us
+us:
+  server: whois.nic.us
+  template:
+    - common.tpl
+
+## uy
+# NOTE: not working from japan.
+uy:
+  server: whois.nic.org.uy
+
+## uz
+# NOTE: The Whois Server (ver. 1.0) of ccTLD.UZ
+uz:
+  server: whois.cctld.uz
+  template:
+    - cctld/uz.tpl
+
+## va
+va:
+
+## vc
+vc:
+  server: whois2.afilias-grs.net
+  template:
+    - common.tpl
+
+## ve
+# NOTE: Whoisd Server Version: 3.12.1
+ve:
+  server: whois.nic.ve
+  template:
+    - whoisd_server.tpl
+
+## vg
+vg:
+  server: whois.nic.vg
+  template:
+    - common.tpl
+
+## vi
+vi:
+
+## vn
+vn:
+
+## vu
+vu:
+  server: whois.dnrs.vu
+  template:
+    - common.tpl
+
+## wf
+# NOTE: AFNIC Whois server
+wf:
+  server: whois.nic.wf
+  template:
+    - afnic.tpl
+
+## ws
+# NOTE: not working from japan.
+ws:
+  server: whois.website.ws
+
+## ye
+ye:
+  server: whois.y.net.ye
+  template:
+    - cctld/ye.tpl
+
+## yt
+# NOTE: AFNIC Whois server
+yt:
+  server: whois.nic.yt
+  template:
+    - afnic.tpl
+
+## za
+za:
+
+## zm
+zm:
+  server: whois.zicta.zm
+  template:
+    - common.tpl
+
+## zw
+zw:

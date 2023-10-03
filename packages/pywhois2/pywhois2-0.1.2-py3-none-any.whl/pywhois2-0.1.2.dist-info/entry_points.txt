@@ -1,0 +1,2 @@
+[console_scripts]
+whois2 = pywhois2:main

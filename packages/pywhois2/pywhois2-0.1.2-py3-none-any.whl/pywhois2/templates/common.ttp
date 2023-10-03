@@ -1,0 +1,97 @@
+## Copyright (c) 2023 Blacknon. All rights reserved.
+## Use of this source code is governed by an MIT license
+## that can be found in the LICENSE file.
+## =======================================================
+
+<group>
+Domain Name: {{ domain_name | lower | _line_ | strip('\n') | strip('\r') }}
+
+Registry Domain ID: {{ registry_domain_id | lower }}
+Registrar WHOIS Server: {{ registrar_whois_server | lower }}
+Registrar URL: {{ registrar_whois_url | lower }}
+
+Updated Date: {{ updated | _line_ | strip('\n') | strip('\r') }}
+Creation Date: {{ creation | _line_ | strip('\n') | strip('\r') }}
+
+Registrar Registration Expiration Date: {{ expiration | _line_ | strip('\n') | strip('\r') }}
+Registrar: {{ registrar_name | _line_ | strip('\n') | strip('\r') }}
+Registrar IANA ID: {{ registrar_id }}
+Registrar Abuse Contact Email: {{ registrar_email }}
+Registrar Abuse Contact Phone: {{ registrar_phone }}
+
+Reseller: {{ reseller_name | _line_ | strip('\n') | strip('\r') }}
+<group name="reseller_address">
+Reseller Street Address: {{ reseller_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Reseller Other Address Info: {{ reseller_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+</group>
+Reseller Country: {{ reseller_company | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Reseller Phone: {{ reseller_phone | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Reseller Fax: {{ reseller_fax | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Reseller Customer Service Email: {{ reseller_email | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+
+Domain Status: {{ domain_status | _line_ | strip('\n') | strip('\r') | joinmatches("\n") }}
+
+Registry Registrant ID: {{ registrant_id | _line_ | strip('\n') | strip('\r') }}
+Registrant Name: {{ registrant_name | _line_ | strip('\n') | strip('\r') }}
+Registrant Organization: {{ registrant_organization | _line_ | strip('\n') | strip('\r') }}
+<group name="registrant_address">
+Registrant Street: {{ registrant_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Registrant City: {{ registrant_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Registrant State/Province: {{ registrant_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+</group>
+Registrant Postal Code: {{ registrant_zip_code | _line_ | strip('\n') | strip('\r') }}
+Registrant Country: {{ registrant_country | _line_ | strip('\n') | strip('\r') }}
+Registrant Phone: {{ registrant_phone | _line_ | strip('\n') | strip('\r') }}
+Registrant Phone Ext: {{ registrant_phone_ext | _line_ | strip('\n') | strip('\r') }}
+Registrant Fax: {{ registrant_fax | _line_ | strip('\n') | strip('\r') }}
+Registrant Fax Ext: {{ registrant_fax_ext | _line_ | strip('\n') | strip('\r') }}
+Registrant Email: {{ registrant_email | _line_ | strip('\n') | strip('\r') }}
+
+Registry Admin ID: {{ admin_id | _line_ | strip('\n') | strip('\r') }}
+Admin Name: {{ admin_name | _line_ | strip('\n') | strip('\r') }}
+Admin Organization: {{ admin_organization | _line_ | strip('\n') | strip('\r') }}
+<group name="admin_address">
+Admin Street: {{ admin_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Admin City: {{ admin_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Admin State/Province: {{ admin_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+</group>
+Admin Postal Code: {{ admin_zip_code | _line_ | strip('\n') | strip('\r') }}
+Admin Country: {{ admin_country | _line_ | strip('\n') | strip('\r') }}
+Admin Phone: {{ admin_phone | _line_ | strip('\n') | strip('\r') }}
+Admin Phone Ext:
+Admin Fax: {{ admin_fax | _line_ | strip('\n') | strip('\r') }}
+Admin Fax Ext:
+Admin Email: {{ admin_email | _line_ | strip('\n') | strip('\r') }}
+
+Registry Tech ID: {{ tech_id | _line_ | strip('\n') | strip('\r') }}
+Tech Name: {{ tech_name | _line_ | strip('\n') | strip('\r') }}
+Tech Organization: {{ tech_organization | _line_ | strip('\n') | strip('\r') }}
+<group name="tech_address">
+Tech Street: {{ tech_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Tech City: {{ tech_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Tech State/Province: {{ tech_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+</group>
+Tech Postal Code: {{ tech_zip_code | _line_ | strip('\n') | strip('\r') }}
+Tech Country: {{ tech_country | _line_ | strip('\n') | strip('\r') }}
+Tech Phone: {{ tech_phone | _line_ | strip('\n') | strip('\r') }}
+Tech Phone Ext:
+Tech Fax: {{ tech_fax | _line_ | strip('\n') | strip('\r') }}
+Tech Fax Ext:
+Tech Email: {{ tech_email | _line_ | strip('\n') | strip('\r') }}
+
+Registry Billing ID: {{ billing_id | _line_ | strip('\n') | strip('\r') }}
+Billing Name: {{ billing_name | _line_ | strip('\n') | strip('\r') }}
+Billing Organization: {{ billing_organization | _line_ | strip('\n') | strip('\r') }}
+<group name="billing_address">
+Billing Street: {{ billing_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+Billing City: {{ billing_address | _line_ | strip('\n') | strip('\r') | joinmatches(" ") }}
+</group>
+Billing Postal Code: {{ billing_zip_code | _line_ | strip('\n') | strip('\r') }}
+Billing Country: {{ billing_country | _line_ | strip('\n') | strip('\r') }}
+Billing Phone: {{ billing_phone | _line_ | strip('\n') | strip('\r') }}
+Billing Email:  {{ billing_email | _line_ | strip('\n') | strip('\r') }}
+
+Name Server: {{ name_servers | _line_ | strip('\n') | strip('\r') | to_list | joinmatches }}
+DNSSEC: {{ dnssec | _line_ | strip('\n') | strip('\r') }}
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+</group>
