@@ -1,0 +1,15 @@
+techdocs/__init__.py,sha256=R5TtpJu7Qu6sOarfDpp-5Oyy8Pi2Ir3VewCvsCQiAgo,21
+techdocs/cli.py,sha256=Wq8aeUluprwGymd_8KL5nx3iSgZh8HfJeE8rcLwudNw,1664
+techdocs/dtypes.py,sha256=0pYh9auq-KaagF7QwmZweXgsgt_MzkSuiv6mTTH_zgA,131
+techdocs/ops.py,sha256=euP762t37vHs6Ig-Dj5HT2LQnc0IgIIpK3lda7-jqAI,4172
+techdocs/test.py,sha256=sUDGipSOYT77XpsNyHSLkasQxjs4Imy5a72gqQvaL6c,433
+techdocs/signatures/subcommand_signatures.json,sha256=PVQ6DEqFLj7GjEG6hGxOK9thPaPmDgKmMEtIbVQnJYM,1904
+techdocs/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+techdocs/utils/functools.py,sha256=c4TBhwKFkugPDdetoDIPUl5eJrjurMK3wKZW2worIcM,2803
+techdocs/utils/parse.py,sha256=fWdlf6Llk-9G22ceEszppxqambB_Gl8_ftetBSfYRE0,1571
+techdocs-0.1.3.data/data/subcommand_signatures.json,sha256=PVQ6DEqFLj7GjEG6hGxOK9thPaPmDgKmMEtIbVQnJYM,1904
+techdocs-0.1.3.dist-info/METADATA,sha256=hlG0eVhaPW4OTM5eX27bLOQZDSdIye-qt4DQd00nioE,310
+techdocs-0.1.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+techdocs-0.1.3.dist-info/entry_points.txt,sha256=Ua27emgFDkjaFQa4llx-KL-qjpdOaX8cqH_wbBtGRbs,47
+techdocs-0.1.3.dist-info/top_level.txt,sha256=otcHvC13w-GsTyFJQkpO-mQR0yTOpNMwSQ-uUAEaKwc,9
+techdocs-0.1.3.dist-info/RECORD,,
