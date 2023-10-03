@@ -1,0 +1,188 @@
+{% extends "wagtailadmin/base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load wagtailadmin_tags wagtailimages_tags static %}
+{% block titletag %}{% blocktrans with title=page.get_admin_display_title %}Admin Boundary Data{{ title }}
+{% endblocktrans %}{% endblock %}
+{% block extra_css %}
+    {{ block.super }}
+    <link href="https://unpkg.com/maplibre-gl@3.1.0/dist/maplibre-gl.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    {% trans "Administrative Boundaries Data" as header_str %}
+
+    {% if countries %}
+        {% include "wagtailadmin/shared/header.html" with title=header_str icon="map" action_url=load_boundary_url action_text="Add Boundary" %}
+    {% else %}
+        {% include "wagtailadmin/shared/header.html" with title=header_str icon="map" %}
+    {% endif %}
+
+    <div class="nice-padding">
+        <div style="margin-top: 40px;">
+            {% if countries %}
+                <div class="w-field__input" style="margin-bottom: 20px">
+                    <select id="country_selector">
+                        <option value="all">All Countries</option>
+                        {% for country in countries %}
+                            <option value="{% if use_country_alpha3 %}{{ country.country.alpha3 }}{% else %}
+                                {{ country.country.code }}{% endif %}"
+                                    data-info="{{ country.country_info_str }}">{{ country.country.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id="preview-map" style="height: 600px;width: 100%"></div>
+
+            {% else %}
+                <div class="help-block help-warning">
+                    <svg class="icon icon-warning icon" aria-hidden="true">
+                        <use href="#icon-warning"></use>
+                    </svg>
+                    <div style="font-size: 16px">
+                        No country has been set yet. Please add a country from
+                        <a href="{{ settings_url }}"> boundary settings </a>
+                        to load or preview data
+                    </div>
+                </div>
+
+                <a href="{{ settings_url }}" class="button bicolor button--icon button-secondary"><span
+                        class="icon-wrapper">
+                    <svg class="icon icon-cog icon" aria-hidden="true">
+                        <use href="#icon-cog"></use>
+                    </svg>
+                </span>Add Country from Settings </a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="https://unpkg.com/maplibre-gl@3.1.0/dist/maplibre-gl.js"></script>
+    <script>
+
+        const mapConfig = {{ mapConfig | safe }};
+
+        const {combinedBbox, boundaryTilesUrl} = mapConfig
+
+        let bounds
+
+
+        if (combinedBbox && !!combinedBbox.length) {
+            bounds = [[combinedBbox[0], combinedBbox[1]], [combinedBbox[2], combinedBbox[3]]]
+        }
+
+
+        const defaultStyle = {
+            'version': 8,
+            'sources': {
+                'carto-dark': {
+                    'type': 'raster',
+                    'tiles': [
+                        "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+                        "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+                        "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+                        "https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png"
+                    ]
+                },
+                'carto-light': {
+                    'type': 'raster',
+                    'tiles': [
+                        "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+                        "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+                        "https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+                        "https://d.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"
+                    ]
+                },
+                'wikimedia': {
+                    'type': 'raster',
+                    'tiles': [
+                        "https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+                    ]
+                }
+            },
+            'layers': [{
+                'id': 'carto-light-layer',
+                'source': 'carto-light',
+
+
+                'type': 'raster',
+                'minzoom': 0,
+                'maxzoom': 22
+            }]
+        }
+        $(document).ready(async function () {
+            const map = new maplibregl.Map({
+                container: "preview-map",
+                style: defaultStyle,
+                doubleClickZoom: false,
+            });
+
+            await new Promise((resolve) => map.on("load", resolve));
+
+            // add source
+            map.addSource("admin-boundary-source", {
+                    type: "vector",
+                    tiles: [boundaryTilesUrl],
+                }
+            )
+
+            // add layer
+            map.addLayer({
+                'id': 'admin-boundary-fill',
+                'type': 'fill',
+                'source': 'admin-boundary-source',
+                "source-layer": "default",
+                'paint': {
+                    'fill-color': "#fff",
+                    'fill-opacity': 0,
+                }
+            });
+
+            map.addLayer({
+                'id': 'admin-boundary-line',
+                'type': 'line',
+                'source': 'admin-boundary-source',
+                "source-layer": "default",
+                'paint': {
+                    "line-color": "#444444",
+                    "line-width": 0.7,
+                }
+            });
+
+            if (bounds) {
+                map.fitBounds(bounds, {padding: 50})
+            }
+
+
+            $("#country_selector").on("change", function () {
+                const countryInfo = $(this).find(':selected').data('info')
+
+                if (countryInfo) {
+                    const {bbox} = countryInfo
+                    const countryCode = $(this).val()
+                    setToCountry(bbox, countryCode)
+                } else {
+                    setToCountry(combinedBbox)
+                }
+            })
+
+            const setToCountry = (bbox, countryCode = null) => {
+                if (bbox) {
+                    const bounds = [[bbox[0], bbox[1]], [bbox[2], bbox[3]]]
+                    map.fitBounds(bounds)
+                }
+
+                if (countryCode) {
+                    const adminFilter = ["==", "gid_0", countryCode]
+                    map.setFilter("admin-boundary-fill", adminFilter)
+                    map.setFilter("admin-boundary-line", adminFilter)
+                } else {
+                    map.setFilter("admin-boundary-fill", null)
+                    map.setFilter("admin-boundary-line", null)
+                }
+            }
+        })
+
+    </script>
+{% endblock %}
