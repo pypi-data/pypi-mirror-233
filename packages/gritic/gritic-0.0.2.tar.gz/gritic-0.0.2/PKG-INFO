@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gritic
+Version: 0.0.2
+Summary: A module to time complex copy number gains in cancer genomes
+Home-page: https://github.com/VanLoo-lab/gritic
+Download-URL: https://github.com/VanLoo-lab/gritic/archive/refs/tags/v.0.02.tar.gz
+Author: Toby Baker
+Author-email: toby.baker@crick.ac.uk
+Maintainer: Toby Baker
+Maintainer-email: toby.baker@crick.ac.uk
+License: GNU AFFERO GENERAL PUBLIC LICENSE Version 3
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
