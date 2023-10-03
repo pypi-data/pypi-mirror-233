@@ -1,0 +1,7 @@
+INHERIT: mkdocs_basic.yml
+markdown_extensions:
+- mkdocs-click
+
+plugins:
+- mknodes:
+    build_fn: mkdocs_mknodes.manual.multi_project:build
