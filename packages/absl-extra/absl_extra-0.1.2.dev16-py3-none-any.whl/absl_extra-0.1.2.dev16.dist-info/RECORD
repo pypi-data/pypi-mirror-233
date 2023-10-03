@@ -1,0 +1,14 @@
+absl_extra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+absl_extra/callbacks.py,sha256=bTEs8zTCO-zoESUSPEJX6udgDSswoxxQfYMRY9iLTwQ,2105
+absl_extra/clu_utils.py,sha256=JuuH0E_5i6-TXMuowcWcpW1dUF7LS1Bt_Hs7dQKHvRA,3526
+absl_extra/cuda_utils.py,sha256=70szMz_1z2tCmjphDwSDf6mv1IzE4IHXC5NlKoha_50,3925
+absl_extra/flax_utils.py,sha256=eZTZ3dhDfn3x0TR-wG0WK4txjNGe15AKi-IGo73pX1I,23845
+absl_extra/logging_utils.py,sha256=P9_NFxTL9WhZlGAqwL5K5XKe7JTfkrq-x17pQa3EO-Y,4567
+absl_extra/notifier.py,sha256=hVz8DhXu6tsthMX_akzy-esS6QGRqeXnXIBZG8-6PPQ,3314
+absl_extra/py.typed,sha256=zlBhTdAQBRfJxeJXD-QnlXiZYsiAJYYkr3mbEsmwSac,64
+absl_extra/tasks.py,sha256=6vlzBl8Udqb_TFeFZoxW6wOYIGCEp63cLxa2C-xrkPo,3924
+absl_extra/tf_utils.py,sha256=WQUyM9bIl2bvAHcFku6COK6l1b31HML_btAGErmzo7M,4450
+absl_extra/typing_utils.py,sha256=ZTJNv2sNQ-e-MZJ8h7B5AY6opPpeXnyxcryZBFxFk70,143
+absl_extra-0.1.2.dev16.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+absl_extra-0.1.2.dev16.dist-info/METADATA,sha256=CYJ0Wy4bUC0NL00lUB86aTiQ17NeN-0y7pjlC2e1Yjo,2717
+absl_extra-0.1.2.dev16.dist-info/RECORD,,
