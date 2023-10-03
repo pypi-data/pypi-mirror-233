@@ -1,0 +1,7 @@
+README.rst
+setup.cfg
+setup.py
+inv_dupli_check.egg-info/PKG-INFO
+inv_dupli_check.egg-info/SOURCES.txt
+inv_dupli_check.egg-info/dependency_links.txt
+inv_dupli_check.egg-info/top_level.txt

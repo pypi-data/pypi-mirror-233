@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: inv-dupli-check
+Version: 0.1
+Summary: Invoice Duplication Checker
+Home-page: UNKNOWN
+Author: agga
+Author-email: hanzawnyineonline@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
