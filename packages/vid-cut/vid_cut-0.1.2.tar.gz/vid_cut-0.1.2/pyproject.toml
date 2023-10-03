@@ -1,0 +1,20 @@
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "vid-cut"
+version = "0.1.2"
+authors = ["MrMultiMediator"]
+license = "MIT"
+description = "A package for editing video files."
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+docopt = "^0.6.2"
+
+[tool.poetry.scripts]
+run_vid_cut = 'vid_cut.vidcut:run'
+get_video_duration = 'vid_cut.get_video_duration:gvd'
+convert_to_seconds = 'vid_cut.get_video_duration:cts'
