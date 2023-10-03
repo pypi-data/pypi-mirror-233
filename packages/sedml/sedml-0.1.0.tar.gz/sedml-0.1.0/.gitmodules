@@ -1,0 +1,3 @@
+[submodule "src/sedml/tests/sed-ml"]
+	path = src/sedml/tests/sed-ml
+	url = http://github.com/maurosilber/sed-ml

@@ -1,0 +1,8 @@
+pydantic_xml
+lxml
+rich
+typing_extensions
+
+[test]
+pytest
+biomodels>=0.2.0
