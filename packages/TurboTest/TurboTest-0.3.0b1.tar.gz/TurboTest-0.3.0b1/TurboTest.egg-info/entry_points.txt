@@ -1,0 +1,2 @@
+[console_scripts]
+turbotest = TurboTest.__main__:main
