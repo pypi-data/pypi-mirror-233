@@ -1,0 +1,17 @@
+django_frontify/__init__.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+django_frontify/fields.py,sha256=XRESb6fSo8pVoujx8gAS7fhUVmBh5cn5haxRPHlJ750,9206
+django_frontify/djangocms_frontify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_frontify/djangocms_frontify/cms_plugins.py,sha256=n-ub4Z-5r5_viUWztTjZtJdZFIFdQzjWeyiP2JyfmiQ,468
+django_frontify/djangocms_frontify/models.py,sha256=S7MtY4NMTcX33HgPuG0bm2RHegmUZmC4PXfqZjAdVh0,1196
+django_frontify/djangocms_frontify/migrations/0001_initial.py,sha256=biMiCddZyKM2_wJPSrvcpiHJH-yChED5m6TdcH0rByM,1434
+django_frontify/djangocms_frontify/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_frontify/static/django_frontify/widget.css,sha256=Cdtk0Mt8nNIM35n4cJqdxAPhK6NkN0m0fU3qK_UI4Mc,1664
+django_frontify/static/django_frontify/widget.js,sha256=JgV7c-mOoCJEN6mntlrNy3AdCgUpB70IKFzs5hf8MrE,4421
+django_frontify/templates/admin/django_frontify/widgets/admin_file.html,sha256=kgKE5RklhzvQCgU1rfLTwvCtCT8xsLJ1kQPPY9yLI_w,4421
+django_frontify/templates/django_frontify/plugins/image.html,sha256=vYb2LxEW6ftpK3ollurTppd_FWpeTn58GhznHBKMD4Q,63
+django_frontify/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_frontify/templatetags/frontify_tags.py,sha256=5CvFxjhSfjmjTlxD7XVmGrhwOz_rGax2ppgyiKV4S4g,708
+django_frontify-0.4.0.dist-info/METADATA,sha256=ymLwH6KrJSORQBV7wqGNOdS1GzOa4Ii3KSIiDcrSgi0,2876
+django_frontify-0.4.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+django_frontify-0.4.0.dist-info/top_level.txt,sha256=yyFmSxze3YjPZZm9Nfy-0bXBsTtczn0N1zBeyhHiYAA,16
+django_frontify-0.4.0.dist-info/RECORD,,
