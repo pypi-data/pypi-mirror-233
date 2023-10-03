@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kompress
+Version: 0.1.20231002
+Provides-Extra: linting
+Requires-Dist: pytest ; extra == 'linting'
+Requires-Dist: mypy ; extra == 'linting'
+Requires-Dist: lxml ; extra == 'linting'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+

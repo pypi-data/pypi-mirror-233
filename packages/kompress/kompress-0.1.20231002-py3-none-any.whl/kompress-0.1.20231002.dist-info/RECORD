@@ -1,0 +1,9 @@
+kompress/__init__.py,sha256=GKuD8HnkvDnBt0rirDJvJIU7mTB1kh1nDz4A2uPq6Lo,8424
+kompress/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kompress/tests/__init__.py,sha256=GFgkAv048tHCZqb1UnWF-CZ_Epb195ACqoZteZifq0I,258
+kompress/tests/kompress.py,sha256=Cu_hTNePk_C9YtLpCdPSWxxcZo_QHv7BIhQ1BjizlRM,4181
+kompress/tests/structure_data/gdpr_export.zip,sha256=OFgCA4BylTltab0CKB8tvGZgtQRmkvDHmd7vBe_b1xE,1273
+kompress-0.1.20231002.dist-info/METADATA,sha256=-SO-dEuQzgq32Ny7jF6u75PhC38cgsyKOp76rSsIWFI,276
+kompress-0.1.20231002.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kompress-0.1.20231002.dist-info/top_level.txt,sha256=qJ3tmFJW1Y9fFNnKhAutGBBIINzBZ979cnIftWQZ66s,9
+kompress-0.1.20231002.dist-info/RECORD,,
