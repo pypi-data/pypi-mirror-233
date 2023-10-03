@@ -1,0 +1,14 @@
+LICENSE,sha256=TKV7yBd1cSNHmAoekbSaFovXs9M4npCmUQGLQToQgus,1073
+README.md,sha256=5FieKMclyqnNgfBeX4Gi8gArYENNtZZS1zrdpN6OxOs,2926
+django_modern_user/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_modern_user/admin.py,sha256=OLQ3BXIurRzO9vCczEL8NgditPF9ee1Yevpim5jmQ9g,1288
+django_modern_user/apps.py,sha256=fX7R8KMwok4XzqrP1SuORw534grdi2WOeLRnUdazJhM,166
+django_modern_user/migrations/0001_initial.py,sha256=GCgJGCdvNszd4OOQyKXFizY05wqk6aW46ezi8I2WW8Q,3715
+django_modern_user/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_modern_user/models.py,sha256=OEKZNbdxhxQGCgfoVnT_ng-gVanEuvcKFyM5lXrU9LM,2695
+django_modern_user/tests.py,sha256=864zk4YVy50OUzVbbRM6SNnDb083l_rDLWKI1PgKzTU,4013
+django_modern_user/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_modern_user-0.2.7.dist-info/LICENSE,sha256=TKV7yBd1cSNHmAoekbSaFovXs9M4npCmUQGLQToQgus,1073
+django_modern_user-0.2.7.dist-info/METADATA,sha256=ZdnXRL9EGA89Es8Q47WrLc3n_LM_L3ELLVo2A9Oq2q0,3675
+django_modern_user-0.2.7.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+django_modern_user-0.2.7.dist-info/RECORD,,
