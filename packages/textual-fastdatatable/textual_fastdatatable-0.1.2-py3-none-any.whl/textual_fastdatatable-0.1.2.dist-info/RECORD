@@ -1,0 +1,9 @@
+textual_fastdatatable/__init__.py,sha256=mVoR905EmcXOrd2XuortQ-M0r-R4coZa6o0K50EH9wA,242
+textual_fastdatatable/__main__.py,sha256=MCHggh2_5bHEjL9lpaIdZLagVZ_w7EuKmX89VFrAPOU,355
+textual_fastdatatable/backend.py,sha256=0vqXW3jsU1Lg42ItEUXOaEvvSN_pIw8h6bzkw3vY9L8,8719
+textual_fastdatatable/data_table.py,sha256=edH568eZ9suRVHQxZgMZr4M4oyD9dPw2mzradr7r94c,87342
+textual_fastdatatable/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_fastdatatable-0.1.2.dist-info/LICENSE,sha256=Wdf1mXEX48JTe3Unchs3u8M7sUOB6v0fGsMI5WP7bB4,1068
+textual_fastdatatable-0.1.2.dist-info/METADATA,sha256=E_JYjLwo1HF4plozPZXJU8nW1OsDfYbnp1wLYZFkd9Q,3488
+textual_fastdatatable-0.1.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+textual_fastdatatable-0.1.2.dist-info/RECORD,,
