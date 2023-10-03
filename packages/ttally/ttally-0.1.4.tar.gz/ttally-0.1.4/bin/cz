@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+# prompts me with fzf to pick something from my 'food' model
+# if the PROMPT_DATETIME envvar is set, prompts for datetime instead
+
+set -o pipefail
+
+abort() {
+	# shellcheck disable=SC2059
+	printf "$@" 1>&2
+	exit 1
+}
+
+havecmd() {
+	local BINARY ERRMSG
+	BINARY="${1:?Must provide command to check}"
+	command -v "${BINARY}" >/dev/null 2>&1 || {
+		ERRMSG="cz requires '${BINARY}', could not find that on your \$PATH"
+		[[ -n "$2" ]] && ERRMSG="${ERRMSG}. $2"
+		abort '%s\n' "${ERRMSG}"
+	}
+}
+
+havecmd jq
+havecmd fzf
+havecmd awk
+havecmd chomp 'Install from https://github.com/seanbreckenridge/chomp'
+havecmd fzfcache 'Install from https://github.com/seanbreckenridge/fzfcache'
+
+add_to_food() {
+	local JSON_DATA TEMPFILE
+	JSON_DATA="$(jq -n --arg FOODNAME "$1" --arg CALORIES "$2" --arg WATER "$3" \
+		'{"food": $FOODNAME, "calories": $CALORIES | tonumber, "water": $WATER | tonumber}')" || return $?
+	[[ -n "$4" ]] && JSON_DATA="$(jq --arg TIMESTAMP "$4" '. + {"when": $TIMESTAMP | tonumber}' <<<"${JSON_DATA}")"
+	TEMPFILE="$(mktemp)"
+	jq --slurp <<<"${JSON_DATA}" >"${TEMPFILE}"
+	python3 -m ttally from-json --partial food --file "${TEMPFILE}" || return $?
+	rm "${TEMPFILE}"
+}
+
+# print saved items from cache, and any new items; removing any duplicates
+fooditems() {
+	fzfcache "python3 -m ttally export food --stream | jq -r '\"\(.food)|\(.calories)|\(.water)\"' | sort | uniq -c | sort -rn | chomp | cut -d' ' -f2-"
+}
+
+main() {
+	local SELECTED WHEN
+	local -a CHOSEN
+
+	# pick an item using fzf
+	SELECTED="$(fooditems | fzf -q "$*" --header='What to add to calories?')" || abort "Didn't select anything to add to calories...\n"
+
+	# split into array
+	readarray -d "|" -t CHOSEN <<<"${SELECTED/$'\n'/}" || abort 'Error splitting chosen line into parts\n'
+
+	# add item to food
+	[[ -z "${PROMPT_DATETIME}" ]] && WHEN="$(date +'%s')"
+	add_to_food "${CHOSEN[0]}" "${CHOSEN[1]}" "${CHOSEN[2]}" "${WHEN:-}" || return $?
+
+	# print recent items so I can review
+	[[ -n "${SKIP_RECENT}" ]] || python3 -m ttally recent food
+}
+
+main "$@" || exit $?

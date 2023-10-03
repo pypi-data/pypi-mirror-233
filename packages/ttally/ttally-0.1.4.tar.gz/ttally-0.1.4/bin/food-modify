@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+
+import sys
+import json
+import subprocess
+import shlex
+from typing import Any, Optional
+
+import click
+from autotui.fileio import namedtuple_sequence_dumps
+from autotui.pick import pick_namedtuple
+from ttally.__main__ import ext
+from ttally.config import Food  # type: ignore
+
+
+@click.command()
+@click.option(
+    "--scale/--no-scale",
+    help="scale quantity based on new calories/water amounts",
+    default=True,
+    is_flag=True,
+)
+@click.option(
+    "--rename",
+    help="rename food instead of scaling",
+    default=False,
+    is_flag=True,
+    show_default=True,
+)
+def main(scale: bool, rename: bool) -> None:
+    """
+    updates the water/calorie count for a food and fix the old quantities based on new calorie count
+    """
+    # merge data into single file
+    subprocess.run(shlex.split("ttally merge food --sort-key when"), check=True)
+
+    # pick
+    food: list[Food] = list(ext.glob_namedtuple(Food))
+    picked: Optional[Food] = pick_namedtuple(food)
+    if picked is None:
+        click.echo("No food picked", err=True)
+        sys.exit(1)
+
+    click.echo(picked, err=True)
+
+    # update and fix quantity based on new calories ratio
+    data = json.loads(namedtuple_sequence_dumps(food))
+    edited_list: list[dict[str, Any]] = []
+    assert isinstance(picked, Food)
+    if rename is True:
+        change_text_to = click.edit(picked.food)
+        assert change_text_to is not None
+        for blob in data:
+            if blob["food"] == picked.food:
+                click.echo(f"Before: {blob}", err=True)
+                blob["food"] = change_text_to.strip()
+                click.echo(f"After: {blob}", err=True)
+            edited_list.append(blob)
+    else:
+        # prompt calories/water
+        cals = int(click.prompt("Calories", type=int))
+        water = int(click.prompt("Water", type=int))
+
+        for blob in data:
+            if blob["food"] == picked.food:
+                assert "calories" in blob and "water" in blob and "quantity" in blob
+                click.echo(f"Before: {blob}", err=True)
+                blob["calories"] = cals
+                blob["water"] = water
+                if scale:
+                    if cals == 0:
+                        blob["quantity"] = blob["quantity"] / (water / picked.water)
+                    else:
+                        blob["quantity"] = blob["quantity"] / (cals / picked.calories)
+                click.echo(f"After: {blob}", err=True)
+            edited_list.append(blob)
+
+    assert len(edited_list) == len(data)
+
+    # write back to merged file
+    ext.ttally_merged_path("food").write_text(json.dumps(edited_list))
+
+
+if __name__ == "__main__":
+    main()

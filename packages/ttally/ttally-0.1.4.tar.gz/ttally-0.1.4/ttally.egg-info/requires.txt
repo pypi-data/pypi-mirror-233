@@ -1,0 +1,7 @@
+autotui>=0.4.6
+click>=8.0
+more-itertools>=8.0
+
+[testing]
+flake8
+mypy
