@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/jsprint/__init__.py
+src/jsprint.egg-info/PKG-INFO
+src/jsprint.egg-info/SOURCES.txt
+src/jsprint.egg-info/dependency_links.txt
+src/jsprint.egg-info/top_level.txt
