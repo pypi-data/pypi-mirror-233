@@ -1,0 +1,9 @@
+langserve/__init__.py,sha256=uDRiAg_4NzVyU6Yaz4YN2a0JlaQihvKK2oxMGAODsk8,437
+langserve/client.py,sha256=gQMNMDIIzG2pWol9DW-8EVljYH_bnUSvEfJ14mrEXDk,14415
+langserve/serialization.py,sha256=UzQIxHLi9J9L00U3VNdPLNceWABEafUp-OA7R4qqJJQ,2614
+langserve/server.py,sha256=xhrzOe0pe3p2cuLgZ5hJOJAxDvPxTwGCuUr0yQV9MIo,7789
+langserve/validation.py,sha256=Ho64MyM16SpJ78LWxRNrAZryfxQ1t-9LFa9-KTi8Yeg,3345
+langserve-0.0.3.dist-info/LICENSE,sha256=hwaSWWowpcokC-wQ-NA4ju1fe7zKV3ql1evGDE9dvF4,3757
+langserve-0.0.3.dist-info/METADATA,sha256=DDCH01zeRyPYkgOKsMG5vXAxKrnFQg2ASyHBD881RNY,3541
+langserve-0.0.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+langserve-0.0.3.dist-info/RECORD,,
