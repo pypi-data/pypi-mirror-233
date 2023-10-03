@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/rutube.py
+src/rutube_downloader.egg-info/PKG-INFO
+src/rutube_downloader.egg-info/SOURCES.txt
+src/rutube_downloader.egg-info/dependency_links.txt
+src/rutube_downloader.egg-info/top_level.txt
