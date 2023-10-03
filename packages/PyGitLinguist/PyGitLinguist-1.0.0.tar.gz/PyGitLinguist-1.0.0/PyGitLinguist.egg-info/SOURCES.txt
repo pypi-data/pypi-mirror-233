@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PyGitLinguist.egg-info/PKG-INFO
+PyGitLinguist.egg-info/SOURCES.txt
+PyGitLinguist.egg-info/dependency_links.txt
+PyGitLinguist.egg-info/top_level.txt
