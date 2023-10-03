@@ -1,0 +1,8 @@
+Lemoncheesecake includes 3rd party software, licensed under the MIT License (https://opensource.org/licenses/MIT):
+- jQuery - Copyright jQuery Foundation and other contributors (https://jquery.org/)
+- Bootstrap - Copyright Twitter (http://getbootstrap.com)
+- Slate - Copyright Thomas Mark (thomas@bootswatch.com) (https://bootswatch.com/slate/)
+
+Code without explicit license:
+- terminalsize.py - https://gist.github.com/jtriley/1108174
+- orderedset.py - http://code.activestate.com/recipes/576694-orderedset/ (Raymond Hettinger)

@@ -1,0 +1,17 @@
+colorama
+python-slugify
+termcolor
+terminaltables
+typing
+
+[junit]
+lxml
+
+[reportportal]
+reportportal-client~=3.0
+
+[slack]
+slacker
+
+[xml]
+lxml
