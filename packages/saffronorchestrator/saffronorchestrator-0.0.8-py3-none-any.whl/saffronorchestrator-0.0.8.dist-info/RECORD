@@ -1,0 +1,7 @@
+saffronorchestrator/__init__.py,sha256=O4LUreCzwe0OPkAYZp6d-raBpONRSSepQQHv6QeaEJA,78
+saffronorchestrator/orchestration.py,sha256=vFpXa6Vk6-2AWU6W82iT8WSj6FcSfY0hYqUW2aPObYA,2556
+saffronorchestrator/tests/test_main.py,sha256=FWM3GLVE6kUXXy3apxiqJKc3vG34P8hJF05tDPeBuXw,7174
+saffronorchestrator-0.0.8.dist-info/METADATA,sha256=bYpk6m3g8FtmrrrXoD1dhBoAy8vZb9AOp2Jz56WC0LU,508
+saffronorchestrator-0.0.8.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+saffronorchestrator-0.0.8.dist-info/top_level.txt,sha256=a7Cyw3HJegsTPFz82trtaqLDkgY7fzJoRvNyLRnBsnE,20
+saffronorchestrator-0.0.8.dist-info/RECORD,,
