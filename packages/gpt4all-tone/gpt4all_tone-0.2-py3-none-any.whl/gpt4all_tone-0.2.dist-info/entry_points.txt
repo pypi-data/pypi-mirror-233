@@ -1,0 +1,2 @@
+[console_scripts]
+gpt4all_tone = gpt4all_tone.gpt4all_tone:main
