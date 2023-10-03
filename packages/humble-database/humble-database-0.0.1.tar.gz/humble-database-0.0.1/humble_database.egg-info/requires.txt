@@ -1,0 +1,9 @@
+fastcore
+pandas
+sqlalchemy
+pydantic
+pydantic-settings
+json2html
+
+[dev]
+psycopg2
