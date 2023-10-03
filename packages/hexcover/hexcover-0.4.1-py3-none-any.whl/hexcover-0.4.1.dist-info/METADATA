@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: hexcover
+Version: 0.4.1
+Summary: Given a centroid and side length, tile an area with regular flat hexagons
+Author-email: Stephan Hügel <urschrei@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2019 Stephan Hügel
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+Project-URL: Repository, https://github.com/urschrei/hexcover
+Project-URL: Tracker, https://github.com/urschrei/hexcover/issues
+Keywords: Geo,Telecoms,Hexagon,GIS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy >=1.11.0
+Requires-Dist: shapely >=1.7.0
+Provides-Extra: test
+Requires-Dist: pytest >=7.4.2 ; extra == 'test'
+
+# Hexcover
+A small utility package which calculates a regular hexagonal tiling for an area, given a centroid as a Shapely [Point](https://shapely.readthedocs.io/en/latest/manual.html#Point), and a side length.
+
+# Installation
+`Hexcover` is available on PyPI:  
+`pip install hexcover`
+
+# Usage
+```python
+
+from shapely.geometry import Point
+from hexcover.util import hexagon_coverage
+
+# centroid
+c = Point(0.0, 0.0)
+coverage = hexagon_coverage(c, 10)
+
+# coverage is a namedtuple of seven polygons. The first entry is the central polygon.
+# Subsequent entries begin directly above the central polygon, and proceed clockwise.
+```
+The returned `namedtuple` has seven fields:
+
+- `centre`
+- `top`
+- `topright`
+- `bottomright`
+- `bottom`
+- `bottomleft`
+- `topleft`
+
+## Examples
+There's an example [notebook](hexcover.ipynb), and a sample output [GeoJSON file](coverage.geojson) showing the result of covering the [Crystal Palace Transmitting Station](https://en.wikipedia.org/wiki/Crystal_Palace_transmitting_station) with 100-metre hexagons.
+
+# Input Coordinates
+A **projected** coordinate system must be used. Don't give input in e.g. WGS84
+
+# Requirements
+`Shapely` >= 1.6.3
+
+# License
+[The Blue Oak Model License 1.0](LICENSE.md)
+
+# DOI
+[![DOI](https://zenodo.org/badge/194419900.svg)](https://zenodo.org/badge/latestdoi/194419900)
