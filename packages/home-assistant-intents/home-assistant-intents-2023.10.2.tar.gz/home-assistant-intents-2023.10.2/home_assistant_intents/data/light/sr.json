@@ -1,0 +1,92 @@
+{
+  "language": "sr",
+  "intents": {
+    "HassLightSet": {
+      "data": [
+        {
+          "sentences": [
+            "[<подеси>] <име> [на] <осветљеност>",
+            "<подеси> [осветљење | јачину [светла] | светло] <име> на <осветљеност> [снаге | јачине | светлине]"
+          ],
+          "response": "brightness",
+          "requires_context": {
+            "domain": "light"
+          }
+        },
+        {
+          "sentences": [
+            "[<подеси>] [осветљење | јачину [светла] | светло] у <област> на <осветљеност>"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "<подеси> [[јачину | интензитет] светл(а|о) у | осветљење у] <област> [на] <осветљеност> [снаге | јачине | светлине]",
+            "<подеси> <област> на <осветљеност>"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "<подеси> <име> на {brightness_level:brightness}",
+            "<подеси> [осветљеност|осветљење|јачину|интезитет] <име> на {brightness_level:brightness} [снаге | јачине | светлине]",
+            "<подеси> [осветљеност|осветљење|јачину|интезитет] [<светла>] <област> на {brightness_level:brightness} [снаге | јачине | светлине]"
+          ],
+          "requires_context": {
+            "domain": "light"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "[<подеси>] (осветљеност|осветљење|јачину|интезитет) <област> на {brightness_level:brightness}",
+            "[<подеси>] (осветљеност|осветљење|јачину|интезитет) <област> на {brightness_level:brightness}",
+            "<област> [<подеси>] (осветљеност|осветљење|јачину|интезитет) на {brightness_level:brightness}"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "<подеси> боју <име> [на|у] {color}",
+            "<подеси> <име> [на|у] {color} [боју]",
+            "<подеси> [боју] [свих] <светла> у <област> [на|у] {color}"
+          ],
+          "requires_context": {
+            "domain": "light"
+          },
+          "response": "color"
+        },
+        {
+          "sentences": [
+            "<подеси> свуда [боју] <светла> [у <област>] [на|у] {color}",
+            "<подеси> сва <светла> [<област>] [на|у] {color} [боју]",
+            "<подеси> [боју] [свих] <светла> у <област> [на|у] {color}"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "color"
+        }
+      ]
+    }
+  },
+  "responses": {
+    "intents": {
+      "HassLightSet": {
+        "brightness": "Јачина осветљености за светло {{ slots.name }} је постављена на {{ slots.brightness }}",
+        "brightness_area": "Јачина осветљености за област {{ slots.area }} је постављена на {{ slots.brightness }}",
+        "color": "Боја за светло {{ slots.name }} је постављена на {{ slots.color }}",
+        "color_area": "Боја светла за област {{ slots.area }} је постављена на {{ slots.color }}"
+      }
+    }
+  }
+}

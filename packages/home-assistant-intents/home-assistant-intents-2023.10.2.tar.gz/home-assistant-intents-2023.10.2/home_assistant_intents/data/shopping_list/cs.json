@@ -1,0 +1,26 @@
+{
+  "language": "cs",
+  "intents": {
+    "HassShoppingListAddItem": {
+      "data": [
+        {
+          "sentences": [
+            "(dej|přidej|připiš) <item> <my_list>"
+          ],
+          "response": "item_added",
+          "expansion_rules": {
+            "my_list": "(do [mého] [nákupního] seznamu|na [můj] [nákupní] seznam)",
+            "item": "{shopping_list_item:item}"
+          }
+        }
+      ]
+    }
+  },
+  "responses": {
+    "intents": {
+      "HassShoppingListAddItem": {
+        "item_added": "Přidáno: {{ slots.item }}"
+      }
+    }
+  }
+}

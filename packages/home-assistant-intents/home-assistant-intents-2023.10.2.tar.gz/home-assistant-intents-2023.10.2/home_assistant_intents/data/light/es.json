@@ -1,0 +1,82 @@
+{
+  "language": "es",
+  "intents": {
+    "HassLightSet": {
+      "data": [
+        {
+          "sentences": [
+            "<establece_sube_baja> [el] brillo [de] <name> [a|al|en] <brightness>",
+            "<establece_sube_baja> <name> [a | al | con] brillo <brightness>",
+            "<establece_sube_baja> <name> [a|al] <brightness>",
+            "<establece_sube_baja> <name> con brillo [al|a|en] <brightness>"
+          ],
+          "response": "brightness",
+          "requires_context": {
+            "domain": "light"
+          }
+        },
+        {
+          "sentences": [
+            "<establece_sube_baja> [el] brillo <area> [a|al] <brightness>",
+            "<establece_sube_baja> <area> [a|al] brillo <brightness>",
+            "<establece_sube_baja> <area> [a|al] <brightness>"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "[<establece_sube_baja>] [el] brillo [de] <name> a[l] {brightness_level:brightness}",
+            "[<establece_sube_baja>] <name> al brillo {brightness_level:brightness}",
+            "[<establece_sube_baja>] <name> al {brightness_level:brightness} [de] brillo"
+          ],
+          "requires_context": {
+            "domain": "light"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "[<establece_sube_baja>] [el] brillo <area> a[l] {brightness_level:brightness}",
+            "[<establece_sube_baja>] <area> al brillo {brightness_level:brightness}",
+            "[<establece_sube_baja>] <area> al {brightness_level:brightness} [de] brillo"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "brightness"
+        },
+        {
+          "sentences": [
+            "<establece> <name> [a | al | en] [color] {color}",
+            "<establece> [[el] color [de]] <name> (a | al | en) {color}"
+          ],
+          "requires_context": {
+            "domain": "light"
+          },
+          "response": "color"
+        },
+        {
+          "sentences": [
+            "<establece> [[el] color de] (<area> | [todas] las luces <area>) [a | al | en] {color}",
+            "<establece> (<area> | [todas] las luces <area>) [a | al | en] [color] {color}"
+          ],
+          "slots": {
+            "name": "all"
+          },
+          "response": "color"
+        }
+      ]
+    }
+  },
+  "responses": {
+    "intents": {
+      "HassLightSet": {
+        "brightness": "Brillo establecido",
+        "color": "Color establecido"
+      }
+    }
+  }
+}

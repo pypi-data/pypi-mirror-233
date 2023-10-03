@@ -1,0 +1,26 @@
+{
+  "language": "ru",
+  "intents": {
+    "HassShoppingListAddItem": {
+      "data": [
+        {
+          "sentences": [
+            "добав(ить|ь) <item> в [мой] список покупок",
+            "нужно купить <item> "
+          ],
+          "response": "item_added",
+          "expansion_rules": {
+            "item": "{shopping_list_item:item}"
+          }
+        }
+      ]
+    }
+  },
+  "responses": {
+    "intents": {
+      "HassShoppingListAddItem": {
+        "item_added": "Добавляю {{ slots.item }}"
+      }
+    }
+  }
+}
