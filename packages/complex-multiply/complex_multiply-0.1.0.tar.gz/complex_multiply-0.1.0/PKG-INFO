@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: complex_multiply
+Version: 0.1.0
+Summary: Demo library
+Home-page: https://complex-multiply.readthedocs.io/
+Author: Sami Ansari
+Author-email: samii.ansari@hotmail.com
+License: MIT
+Description: 
+        # Complex multiply
+        
+        Publishing my first library!
+        
+        ## Installation
+        
+        `pip install complex-multiply`
+        
+        ## Get started
+        
+        How to multiply one number by another with this library:
+        
+        ```
+        from complex_multiply import Multiplication
+            
+        # Instantiate a Multiplication object
+        multiplication = Multiplication(2)
+        
+        # Call the multiply method
+        print(multiplication.multiply(5))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
