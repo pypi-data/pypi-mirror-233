@@ -1,0 +1,11 @@
+statuspage {
+    min-height: 25em;
+}
+
+splitbutton {
+    min-width: 5em;
+}
+
+.bridgeslist {
+    min-height: 15em;
+}

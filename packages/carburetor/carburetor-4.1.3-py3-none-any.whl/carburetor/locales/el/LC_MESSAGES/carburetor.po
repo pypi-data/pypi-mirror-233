@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# george k <norhorn@gmail.com>, 2020.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2020, 2022, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 01:44+0330\n"
+"PO-Revision-Date: 2023-04-23 10:46+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/carburetor/"
+"translations/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: carburetor/actions.py:94
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Αποσύνδεση…"
+
+#: carburetor/actions.py:98
+#, fuzzy
+msgid "Connecting…"
+msgstr "Σύνδεση…"
+
+#: carburetor/actions.py:110
+msgid "You have a new identity!"
+msgstr "Έχετε νέα ταυτότητα!"
+
+#: carburetor/actions.py:112
+#, fuzzy
+msgid "Tractor is not running!"
+msgstr "Το τρακτέρ δεν λειτουργεί!"
+
+#: carburetor/actions.py:196
+#, fuzzy
+msgid "Stopped"
+msgstr "Σταμάτησε"
+
+#: carburetor/actions.py:199
+#, fuzzy
+msgid "_Connect"
+msgstr "_Σύνδεση"
+
+#: carburetor/actions.py:211
+#, fuzzy
+msgid "Tractor is stopped"
+msgstr "Το τρακτέρ έχει σταματήσει"
+
+#: carburetor/actions.py:220
+#, fuzzy
+msgid "Running"
+msgstr "Τρέχων"
+
+#: carburetor/actions.py:223
+#, fuzzy
+msgid "_Disconnect"
+msgstr "Α_ποσύνδεση"
+
+#: carburetor/actions.py:233
+#, fuzzy
+msgid "Tractor is running"
+msgstr "Το τρακτέρ τρέχει"
+
+#: carburetor/config.py:37 carburetor/ui/about.ui:23 carburetor/ui/main.ui:33
+msgid "Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/handler.py:112
+msgid "Austria"
+msgstr "Αυστρία"
+
+#: carburetor/handler.py:113
+msgid "Bulgaria"
+msgstr "Βουλγαρία"
+
+#: carburetor/handler.py:114
+msgid "Canada"
+msgstr "Καναδάς"
+
+#: carburetor/handler.py:115
+msgid "Switzerland"
+msgstr "Ελβετία"
+
+#: carburetor/handler.py:116
+msgid "Czech"
+msgstr "Τσεχικά"
+
+#: carburetor/handler.py:117
+msgid "Germany"
+msgstr "Γερμανία"
+
+#: carburetor/handler.py:118
+msgid "Spain"
+msgstr "Ισπανία"
+
+#: carburetor/handler.py:119
+msgid "Finland"
+msgstr "Φινλανδία"
+
+#: carburetor/handler.py:120
+msgid "France"
+msgstr "Γαλλία"
+
+#: carburetor/handler.py:121
+msgid "Ireland"
+msgstr "Ιρλανδία"
+
+#: carburetor/handler.py:122
+msgid "Moldova"
+msgstr "Μολδαβία"
+
+#: carburetor/handler.py:123
+msgid "Netherlands"
+msgstr "Ολλανδία"
+
+#: carburetor/handler.py:124
+msgid "Norway"
+msgstr "Νορβηγία"
+
+#: carburetor/handler.py:125
+msgid "Poland"
+msgstr "Πολωνία"
+
+#: carburetor/handler.py:126
+msgid "Romania"
+msgstr "Ρουμανία"
+
+#: carburetor/handler.py:127
+msgid "Seychelles"
+msgstr "Σεϋχέλλες"
+
+#: carburetor/handler.py:128
+msgid "Sweden"
+msgstr "Σουηδία"
+
+#: carburetor/handler.py:129
+msgid "Singapore"
+msgstr "Σιγκαπούρη"
+
+#: carburetor/handler.py:130
+msgid "Russia"
+msgstr "Ρωσία"
+
+#: carburetor/handler.py:131
+msgid "Ukraine"
+msgstr "Ουκρανία"
+
+#: carburetor/handler.py:132
+msgid "United Kingdom"
+msgstr "Ηνωμένο Βασίλειο"
+
+#: carburetor/handler.py:133
+msgid "United States"
+msgstr "Ηνωμένες Πολιτείες"
+
+#: carburetor/handler.py:148
+msgid "Auto (Best)"
+msgstr "Αυτόματο (καλύτερο)"
+
+#: carburetor/handler.py:238 carburetor/ui/preferences.ui:140
+#, fuzzy
+msgid "None"
+msgstr "Κανένα"
+
+#: carburetor/handler.py:239
+#, fuzzy
+msgid "Vanilla"
+msgstr "Βανίλια"
+
+#: carburetor/handler.py:240
+#, fuzzy
+msgid "Obfuscated"
+msgstr "Θολωμένη"
+
+#: carburetor/handler.py:309
+#, fuzzy
+msgid "translator-credits"
+msgstr "Nikolaos Charonitakis <nikosx@gmail.com>"
+
+#: carburetor/tasks.py:138
+#, fuzzy
+msgid "Tractor is connected"
+msgstr "Το τρακτέρ είναι συνδεδεμένο"
+
+#: carburetor/tasks.py:140
+#, fuzzy
+msgid "Tractor couldn't connect"
+msgstr "Το τρακτέρ δεν μπορούσε να συνδεθεί"
+
+#: carburetor/ui/about.ui:24
+#, fuzzy
+msgid "GTK frontend for Tractor"
+msgstr "GTK frontend για τρακτέρ"
+
+#: carburetor/ui/about.ui:25
+msgid "Copyright © 2019-2023, Tractor Team"
+msgstr "Πνευματικά δικαιώματα © 2019-2023, Tractor Team"
+
+#: carburetor/ui/main.ui:32
+#, fuzzy
+msgid "For Tractor"
+msgstr "Για τρακτέρ"
+
+#: carburetor/ui/main.ui:94
+#, fuzzy
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: carburetor/ui/main.ui:98
+#, fuzzy
+msgid "About Carburetor"
+msgstr "Σχετικά με το καρμπυρατέρ"
+
+#: carburetor/ui/main.ui:102
+#, fuzzy
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: carburetor/ui/main.ui:110
+msgid "_New ID"
+msgstr "_Νέο ID"
+
+#: carburetor/ui/main.ui:114
+#, fuzzy
+msgid "_Check connection"
+msgstr "_Έλεγχος σύνδεσης"
+
+#: carburetor/ui/main.ui:118
+#, fuzzy
+msgid "_Toggle proxy on system"
+msgstr "_Εναλλαγή διακομιστή μεσολάβησης στο σύστημα"
+
+#: carburetor/ui/preferences.ui:28
+#, fuzzy
+msgid "General"
+msgstr "Γενικά"
+
+#: carburetor/ui/preferences.ui:31
+msgid "Exit Node"
+msgstr "Κόμβος εξόδου"
+
+#: carburetor/ui/preferences.ui:35
+msgid "The country you want to connect from"
+msgstr "Η χώρα από την οποία θέλετε να συνδεθείτε"
+
+#: carburetor/ui/preferences.ui:36
+#, fuzzy
+msgid "Exit Country"
+msgstr "Έξοδος από τη χώρα"
+
+#: carburetor/ui/preferences.ui:45
+msgid "Accept Connections"
+msgstr "Αποδοχή σύνδεσης"
+
+#: carburetor/ui/preferences.ui:48
+msgid "Allow external devices to use this network"
+msgstr ""
+"Πότε επιτρέπεται ή όχι σε εξωτερικές συσκευές να χρησιμοποιούν αυτό το δίκτυο"
+
+#: carburetor/ui/preferences.ui:64
+#, fuzzy
+msgid "Ports"
+msgstr "Θύρες"
+
+#: carburetor/ui/preferences.ui:67
+msgid "Socks Port"
+msgstr "θύρα Socks"
+
+#: carburetor/ui/preferences.ui:70
+#, fuzzy
+msgid "Local port on which Tractor would be listen"
+msgstr "Τοπικό λιμάνι στο οποίο θα ακούτε το Tractor"
+
+#: carburetor/ui/preferences.ui:84
+msgid "DNS Port"
+msgstr "θύρα DNS"
+
+#: carburetor/ui/preferences.ui:87
+#, fuzzy
+msgid "Local port on which you would have an anonymous name server"
+msgstr "Τοπική θύρα στην οποία θα έχετε έναν ανώνυμο διακομιστή ονομάτων"
+
+#: carburetor/ui/preferences.ui:101
+msgid "HTTP Port"
+msgstr "θύρα HTTP"
+
+#: carburetor/ui/preferences.ui:104
+#, fuzzy
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "Τοπική θύρα στην οποία θα ακούγεται ένα τούνελ HTTP"
+
+#: carburetor/ui/preferences.ui:121 carburetor/ui/preferences.ui:152
+#, fuzzy
+msgid "Bridges"
+msgstr "Γέφυρες"
+
+#: carburetor/ui/preferences.ui:124
+#, fuzzy
+msgid "Type"
+msgstr "Τύπος"
+
+#: carburetor/ui/preferences.ui:128
+#, fuzzy
+msgid "Type of bridge"
+msgstr "Τύπος γέφυρας"
+
+#: carburetor/ui/preferences.ui:135
+#, fuzzy
+msgid "Client Transport Plugin"
+msgstr "Προσθήκη μεταφοράς πελατών"
+
+#: carburetor/ui/preferences.ui:174
+msgid "_Save"
+msgstr "_Αποθήκευση"
+
+#: carburetor/ui/preferences.ui:175
+#, fuzzy
+msgid "Save Bridges as a file in your local configs"
+msgstr "Αποθηκεύστε τα Bridges ως αρχείο στις τοπικές ρυθμίσεις παραμέτρων σας"
+
+#: carburetor/ui/preferences.ui:194
+#, fuzzy
+msgid "Please check the syntax of bridges"
+msgstr "Ελέγξτε τη σύνταξη των γεφυρών"
+
+#: carburetor/ui/preferences.ui:195
+#, fuzzy
+msgid "Can not save the bridges"
+msgstr "Δεν μπορώ να σώσω τις γέφυρες"
+
+#, fuzzy
+#~ msgid "Source Code"
+#~ msgstr "Πηγαίος κώδικας"
+
+#, fuzzy
+#~ msgid "_Cancel"
+#~ msgstr "Γαλλία"
+
+#, fuzzy
+#~ msgid "Use obfs4proxy"
+#~ msgstr "Αφαίρεση διακομιστή μεσολάβησης"
+
+#~ msgid "Start"
+#~ msgstr "Έναρξη"
+
+#~ msgid "Stop"
+#~ msgstr "Τερματισμός"
+
+#~ msgid "stopping…"
+#~ msgstr "διακοπή…"
+
+#~ msgid "starting…"
+#~ msgstr "εκκίνηση…"
+
+#~ msgid "Unset Proxy"
+#~ msgstr "Αφαίρεση διακομιστή μεσολάβησης"
+
+#~ msgid "Set Proxy"
+#~ msgstr "Ορισμός διακομιστή μεσολάβησης"
+
+#~ msgid "<b>Use bridges</b>"
+#~ msgstr "<b>Χρήση γεφυρών</b>"
+
+#~ msgid "Bridges:"
+#~ msgstr "Γέφυρες:"

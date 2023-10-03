@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.14.0 -->
+<!-- Danial Behzadi <dani.behzi@ubuntu.com>, 2022-2023 -->
+<interface domain="carburetor">
+  <!-- interface-name caburetor.ui -->
+  <!-- interface-description This file is part of Carburetor. -->
+  <!-- interface-copyright Carburetor is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Carburetor is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Carburetor.  If not, see <http://www.gnu.org/licenses/>. -->
+  <!-- interface-authors Danial Behzadi <dani.behzi@ubuntu.com> -->
+  <requires lib="gio" version="2.0"/>
+  <requires lib="gtk" version="4.10"/>
+  <requires lib="libadwaita" version="1.2"/>
+  <object class="AdwApplicationWindow" id="MainWindow">
+    <signal name="realize" handler="on_mainpage_realize"/>
+    <child>
+      <object class="GtkBox" id="MainBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwHeaderBar" id="HeaderBar">
+            <property name="title-widget">HeaderTitle</property>
+            <child type="title">
+              <object class="AdwWindowTitle" id="HeaderTitle">
+                <property name="subtitle" translatable="yes">For Tractor</property>
+                <property name="title" translatable="yes">Carburetor</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="MenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">AppMenu</property>
+              </object>
+            </child>
+            <child type="start">
+              <object class="AdwSplitButton" id="SplitButton">
+                <property name="action-name">app.connect</property>
+                <property name="halign">center</property>
+                <property name="label" translatable="yes">_Connect</property>
+                <property name="menu-model">ActionMenu</property>
+                <property name="use-underline">True</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkOverlay" id="ProgressOverlay">
+            <child type="overlay">
+              <object class="GtkProgressBar" id="ProgressBar">
+                <property name="valign">start</property>
+                <style>
+                  <class name="osd"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="AdwToastOverlay" id="ToastOverlay">
+                <child>
+                  <object class="AdwStatusPage" id="MainPage">
+                    <property name="hexpand">True</property>
+                    <property name="icon-name">process-stop-symbolic</property>
+                    <property name="title" translatable="yes">Stopped</property>
+                    <property name="vexpand">True</property>
+                    <child>
+                      <object class="GtkButton" id="CancelButton">
+                        <property name="action-name">app.cancel</property>
+                        <property name="css-classes">pill</property>
+                        <property name="halign">center</property>
+                        <property name="label">_Cancel</property>
+                        <property name="use-underline">True</property>
+                        <property name="visible">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <menu id="ActionMenu">
+    <item>
+      <attribute name="action">app.new_id</attribute>
+      <attribute name="label" translatable="yes" context="Action Menu Item">_New ID</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.check_connection</attribute>
+      <attribute name="label" translatable="yes" context="Action Menu Item">_Check connection</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.toggle_proxy</attribute>
+      <attribute name="label" translatable="yes" context="Action Menu Item">_Toggle proxy on system</attribute>
+    </item>
+  </menu>
+  <menu id="AppMenu">
+    <item>
+      <attribute name="action">app.preferences</attribute>
+      <attribute name="label" translatable="yes" context="App Menu Item">_Preferences</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.about</attribute>
+      <attribute name="label" translatable="yes" context="App Menu Item">_About Carburetor</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.quit</attribute>
+      <attribute name="label" translatable="yes" context="App Menu Item">_Quit</attribute>
+    </item>
+  </menu>
+</interface>

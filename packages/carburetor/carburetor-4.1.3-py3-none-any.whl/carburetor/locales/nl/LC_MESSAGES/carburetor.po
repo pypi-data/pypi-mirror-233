@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Heimen Stoffels <vistausss@fastmail.com>, 2023.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 01:44+0330\n"
+"PO-Revision-Date: 2023-09-08 17:25+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/carburetor/"
+"translations/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.0.1-dev\n"
+
+#: carburetor/actions.py:94
+msgid "Disconnecting…"
+msgstr "Verbinding aan het verbreken…"
+
+#: carburetor/actions.py:98
+msgid "Connecting…"
+msgstr "Bezig met verbinden…"
+
+#: carburetor/actions.py:110
+msgid "You have a new identity!"
+msgstr "U heeft een nieuwe identiteit!"
+
+#: carburetor/actions.py:112
+msgid "Tractor is not running!"
+msgstr "Tractor is niet actief!"
+
+#: carburetor/actions.py:196
+msgid "Stopped"
+msgstr "Gestopt"
+
+#: carburetor/actions.py:199
+msgid "_Connect"
+msgstr "_Verbinden"
+
+#: carburetor/actions.py:211
+msgid "Tractor is stopped"
+msgstr "Tractor is gestopt"
+
+#: carburetor/actions.py:220
+msgid "Running"
+msgstr "Actief"
+
+#: carburetor/actions.py:223
+msgid "_Disconnect"
+msgstr "Ver_binding verbreken"
+
+#: carburetor/actions.py:233
+msgid "Tractor is running"
+msgstr "Tractor is actief"
+
+#: carburetor/config.py:37 carburetor/ui/about.ui:23 carburetor/ui/main.ui:33
+msgid "Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/handler.py:112
+msgid "Austria"
+msgstr "Oostenrijk"
+
+#: carburetor/handler.py:113
+msgid "Bulgaria"
+msgstr "Bulgarije"
+
+#: carburetor/handler.py:114
+msgid "Canada"
+msgstr "Canada"
+
+#: carburetor/handler.py:115
+msgid "Switzerland"
+msgstr "Zwitserland"
+
+#: carburetor/handler.py:116
+msgid "Czech"
+msgstr "Tsjechiẽ"
+
+#: carburetor/handler.py:117
+msgid "Germany"
+msgstr "Duitsland"
+
+#: carburetor/handler.py:118
+msgid "Spain"
+msgstr "Spanje"
+
+#: carburetor/handler.py:119
+msgid "Finland"
+msgstr "Finland"
+
+#: carburetor/handler.py:120
+msgid "France"
+msgstr "Frankrijk"
+
+#: carburetor/handler.py:121
+msgid "Ireland"
+msgstr "Ierland"
+
+#: carburetor/handler.py:122
+msgid "Moldova"
+msgstr "Moldaviẽ"
+
+#: carburetor/handler.py:123
+msgid "Netherlands"
+msgstr "Nederland"
+
+#: carburetor/handler.py:124
+msgid "Norway"
+msgstr "Noorwegen"
+
+#: carburetor/handler.py:125
+msgid "Poland"
+msgstr "Polen"
+
+#: carburetor/handler.py:126
+msgid "Romania"
+msgstr "Roemenië"
+
+#: carburetor/handler.py:127
+msgid "Seychelles"
+msgstr "Seychellen"
+
+#: carburetor/handler.py:128
+msgid "Sweden"
+msgstr "Zweden"
+
+#: carburetor/handler.py:129
+msgid "Singapore"
+msgstr "Singapore"
+
+#: carburetor/handler.py:130
+msgid "Russia"
+msgstr "Rusland"
+
+#: carburetor/handler.py:131
+msgid "Ukraine"
+msgstr "Oekraïne"
+
+#: carburetor/handler.py:132
+msgid "United Kingdom"
+msgstr "Verenigd Koninkrijk"
+
+#: carburetor/handler.py:133
+msgid "United States"
+msgstr "Verenigde Staten"
+
+#: carburetor/handler.py:148
+msgid "Auto (Best)"
+msgstr "Automatisch (beste)"
+
+#: carburetor/handler.py:238 carburetor/ui/preferences.ui:140
+msgid "None"
+msgstr "Geen"
+
+#: carburetor/handler.py:239
+msgid "Vanilla"
+msgstr "Standaard"
+
+#: carburetor/handler.py:240
+msgid "Obfuscated"
+msgstr "Anoniem"
+
+#: carburetor/handler.py:309
+msgid "translator-credits"
+msgstr "Philip Goto, Heimen Stoffels"
+
+#: carburetor/tasks.py:138
+msgid "Tractor is connected"
+msgstr "Tractor is verbonden"
+
+#: carburetor/tasks.py:140
+msgid "Tractor couldn't connect"
+msgstr "Tractor kan geen verbinding maken"
+
+#: carburetor/ui/about.ui:24
+msgid "GTK frontend for Tractor"
+msgstr "GTK-frontend voor Tractor"
+
+#: carburetor/ui/about.ui:25
+msgid "Copyright © 2019-2023, Tractor Team"
+msgstr "Copyright © 2019-2023, Tractorteam"
+
+#: carburetor/ui/main.ui:32
+msgid "For Tractor"
+msgstr "Voor Tractor"
+
+#: carburetor/ui/main.ui:94
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: carburetor/ui/main.ui:98
+msgid "About Carburetor"
+msgstr "Over Carburetor"
+
+#: carburetor/ui/main.ui:102
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: carburetor/ui/main.ui:110
+msgid "_New ID"
+msgstr "_Nieuw identiteitsbewijs"
+
+#: carburetor/ui/main.ui:114
+msgid "_Check connection"
+msgstr "Verbinding _controleren"
+
+#: carburetor/ui/main.ui:118
+msgid "_Toggle proxy on system"
+msgstr "Systeemproxy aan/ui_t"
+
+#: carburetor/ui/preferences.ui:28
+msgid "General"
+msgstr "Algemeen"
+
+#: carburetor/ui/preferences.ui:31
+msgid "Exit Node"
+msgstr "Afsluitpunten"
+
+#: carburetor/ui/preferences.ui:35
+msgid "The country you want to connect from"
+msgstr "Het land van waaruit u verbinding wilt maken"
+
+#: carburetor/ui/preferences.ui:36
+msgid "Exit Country"
+msgstr "Afsluitland"
+
+#: carburetor/ui/preferences.ui:45
+msgid "Accept Connections"
+msgstr "Verbindingen toestaan"
+
+#: carburetor/ui/preferences.ui:48
+msgid "Allow external devices to use this network"
+msgstr "Externe apparaten toestaan dit netwerk te gebruiken"
+
+#: carburetor/ui/preferences.ui:64
+msgid "Ports"
+msgstr "Poorten"
+
+#: carburetor/ui/preferences.ui:67
+msgid "Socks Port"
+msgstr "Sockspoort"
+
+#: carburetor/ui/preferences.ui:70
+msgid "Local port on which Tractor would be listen"
+msgstr "De lokale poort waarop Tractor zal luisteren"
+
+#: carburetor/ui/preferences.ui:84
+msgid "DNS Port"
+msgstr "Dns-poort"
+
+#: carburetor/ui/preferences.ui:87
+msgid "Local port on which you would have an anonymous name server"
+msgstr "De lokale poort waarop u een anonieme naamserver kan hebben"
+
+#: carburetor/ui/preferences.ui:101
+msgid "HTTP Port"
+msgstr "Http-poort"
+
+#: carburetor/ui/preferences.ui:104
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "De lokale poort waarop een http-tunnel zou kunnen luisteren"
+
+#: carburetor/ui/preferences.ui:121 carburetor/ui/preferences.ui:152
+msgid "Bridges"
+msgstr "Bruggen"
+
+#: carburetor/ui/preferences.ui:124
+msgid "Type"
+msgstr "Soort"
+
+#: carburetor/ui/preferences.ui:128
+msgid "Type of bridge"
+msgstr "Soort bridge"
+
+#: carburetor/ui/preferences.ui:135
+msgid "Client Transport Plugin"
+msgstr "Cliënttransportplug-in"
+
+#: carburetor/ui/preferences.ui:174
+msgid "_Save"
+msgstr "Op_slaan"
+
+#: carburetor/ui/preferences.ui:175
+msgid "Save Bridges as a file in your local configs"
+msgstr "Sla bridges op als een bestand in uw lokale voorkeuren"
+
+#: carburetor/ui/preferences.ui:194
+msgid "Please check the syntax of bridges"
+msgstr "Controleer de syntaxis van de bridges"
+
+#: carburetor/ui/preferences.ui:195
+msgid "Can not save the bridges"
+msgstr "De bridges kunn niet worden opgeslagen"
+
+#~ msgid "Source Code"
+#~ msgstr "Broncode"
