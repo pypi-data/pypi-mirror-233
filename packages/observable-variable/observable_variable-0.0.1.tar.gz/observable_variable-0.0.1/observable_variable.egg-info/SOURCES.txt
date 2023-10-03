@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+observable_variable/__init__.py
+observable_variable/main.py
+observable_variable.egg-info/PKG-INFO
+observable_variable.egg-info/SOURCES.txt
+observable_variable.egg-info/dependency_links.txt
+observable_variable.egg-info/top_level.txt
