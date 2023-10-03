@@ -1,0 +1,27 @@
+# code
+
+Code tools
+
+# text_to_python { #ibis_birdbrain.tools.code.text_to_python }
+
+`tools.code.text_to_python(question)`
+
+Returns a Python code given text.
+
+# fix_python_error { #ibis_birdbrain.tools.code.fix_python_error }
+
+`tools.code.fix_python_error(code, error)`
+
+Fixes a Python error in the code.
+
+# python_function_to_udf { #ibis_birdbrain.tools.code.python_function_to_udf }
+
+`tools.code.python_function_to_udf(code)`
+
+Converts a Python function to an Ibis UDF.
+
+# run_python_code { #ibis_birdbrain.tools.code.run_python_code }
+
+`tools.code.run_python_code(code)`
+
+Execute Python code as a string and return the output

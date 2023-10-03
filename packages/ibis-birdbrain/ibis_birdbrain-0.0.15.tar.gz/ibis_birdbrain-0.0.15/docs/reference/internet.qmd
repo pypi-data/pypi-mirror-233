@@ -1,0 +1,21 @@
+# internet
+
+Internet tools
+
+# search_internet { #ibis_birdbrain.tools.internet.search_internet }
+
+`tools.internet.search_internet(query='what is the Ibis project?', n_results=8)`
+
+Searches the internet for the given query.
+
+# webpage_to_str { #ibis_birdbrain.tools.internet.webpage_to_str }
+
+`tools.internet.webpage_to_str(url='https://ibis-project.org')`
+
+Reads a webpage link into a string. Useful for summarizing webpages.
+
+# open_browser { #ibis_birdbrain.tools.internet.open_browser }
+
+`tools.internet.open_browser(url)`
+
+Opens the URL in a web browser.

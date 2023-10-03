@@ -1,0 +1,155 @@
+{
+  "demo.qmd": {
+    "demo.html": "36046a7c"
+  },
+  "index.qmd": {
+    "index.html": "11091a08"
+  },
+  "about.qmd": {
+    "about.html": "08737ca2"
+  },
+  "why.qmd": {
+    "why.html": "3b23f15e"
+  },
+  "concepts/versioning.qmd": {
+    "versioning.html": "c0065f78"
+  },
+  "tutorials/exploratory-data-analysis.qmd": {
+    "exploratory-data-analysis.html": "4b669893"
+  },
+  "posts.qmd": {
+    "posts.html": "4e15e2c4"
+  },
+  "release_notes.md": {
+    "release_notes.html": "f75ecb5e"
+  },
+  "contribute/05_maintainers_guide.qmd": {
+    "05_maintainers_guide.html": "08c15e3c"
+  },
+  "contribute/03_style.qmd": {
+    "03_style.html": "b90e2828"
+  },
+  "contribute/02_workflow.qmd": {
+    "02_workflow.html": "69f9f8d4"
+  },
+  "how-to/input-output/basics.qmd": {
+    "basics.html": "89e9387a"
+  },
+  "contribute/01_environment.qmd": {
+    "01_environment.html": "570a8fbd"
+  },
+  "contribute/index.md": {
+    "index.html": "8cae1636"
+  },
+  "install.qmd": {
+    "install.html": "7f280d6a"
+  },
+  "tutorials/getting-started.qmd": {
+    "getting-started.html": "3408654a"
+  },
+  "reference/Interactive.qmd": {
+    "Interactive.html": "b3a55eea"
+  },
+  "reference/selectors.qmd": {
+    "selectors.html": "e44998ce"
+  },
+  "reference/SQL.qmd": {
+    "SQL.html": "106afc25"
+  },
+  "reference/expression-temporal.qmd": {
+    "expression-temporal.html": "427c2afd"
+  },
+  "reference/expression-generic.qmd": {
+    "expression-generic.html": "aef05153"
+  },
+  "reference/expression-geospatial.qmd": {
+    "expression-geospatial.html": "d2b1b38c"
+  },
+  "reference/expression-numeric.qmd": {
+    "expression-numeric.html": "a7b93ca3"
+  },
+  "reference/connection.qmd": {
+    "connection.html": "d082b637"
+  },
+  "reference/ContextAdjustment.qmd": {
+    "ContextAdjustment.html": "ff0782f1"
+  },
+  "reference/Repr.qmd": {
+    "Repr.html": "39233258"
+  },
+  "reference/expression-strings.qmd": {
+    "expression-strings.html": "aaede8f6"
+  },
+  "reference/index.qmd": {
+    "index.html": "11fc4ac0"
+  },
+  "reference/scalar-udfs.qmd": {
+    "scalar-udfs.html": "e55f773a"
+  },
+  "reference/expression-collections.qmd": {
+    "expression-collections.html": "ce6df1a2"
+  },
+  "reference/expression-tables.qmd": {
+    "expression-tables.html": "0db8169a"
+  },
+  "reference/Options.qmd": {
+    "Options.html": "86ed6042"
+  },
+  "reference/schemas.qmd": {
+    "schemas.html": "d2ee651d"
+  },
+  "reference/datatypes.qmd": {
+    "datatypes.html": "5321be42"
+  },
+  "posts/llms-and-data-pt0/index.qmd": {
+    "index.html": "9577685b"
+  },
+  "posts/llms-and-data-pt1/index.qmd": {
+    "index.html": "3510c217"
+  },
+  "posts/llms-and-data-pt6/index.qmd": {
+    "index.html": "e36318ed"
+  },
+  "posts/llms-and-data-pt3/index.qmd": {
+    "index.html": "a148d29a"
+  },
+  "posts/llms-and-data-pt4/index.qmd": {
+    "index.html": "122e00d1"
+  },
+  "posts/llms-and-data-pt5/index.qmd": {
+    "index.html": "cb32e1b0"
+  },
+  "posts/llms-and-data-pt2/index.qmd": {
+    "index.html": "d027ea90"
+  },
+  "contribute/contributing.qmd": {
+    "contributing.html": "ea74b631"
+  },
+  "concepts/llms.qmd": {
+    "llms.html": "86b736ac"
+  },
+  "concepts/platforms.qmd": {
+    "platforms.html": "de4bd5b1"
+  },
+  "concepts/ops.qmd": {
+    "ops.html": "19c29d0e"
+  },
+  "tutorials/cli.qmd": {
+    "cli.html": "017b6a6c"
+  },
+  "tutorials/python.qmd": {
+    "python.html": "be93be0e"
+  },
+  "tutorials/rest.qmd": {
+    "rest.html": "4721c727"
+  },
+  "concepts/user-interfaces.qmd": {
+    "user-interfaces.html": "9118fde9"
+  },
+  "reference/filesystem.qmd": {
+    "filesystem.html": "c613f35b"
+  },
+  "reference/code.qmd": {
+    "code.html": "a967296b"
+  }
+}

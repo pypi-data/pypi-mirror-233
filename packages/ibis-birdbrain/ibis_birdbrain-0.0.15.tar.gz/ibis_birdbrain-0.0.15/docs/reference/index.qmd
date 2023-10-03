@@ -1,0 +1,33 @@
+# Reference
+
+## Filesystem tools
+
+Tools for the filesystem
+
+| | |
+| --- | --- |
+| [filesystem](filesystem.qmd) | Filesystem tools |
+
+## EDA tools
+
+Tools for EDA
+
+| | |
+| --- | --- |
+| [eda](eda.qmd) | EDA tools |
+
+## Code tools
+
+Tools for code
+
+| | |
+| --- | --- |
+| [code](code.qmd) | Code tools |
+
+## Internet tools
+
+Tools for the Internet
+
+| | |
+| --- | --- |
+| [internet](internet.qmd) | Internet tools |

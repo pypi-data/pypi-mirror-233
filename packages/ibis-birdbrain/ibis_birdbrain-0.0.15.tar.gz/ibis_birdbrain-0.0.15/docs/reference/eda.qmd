@@ -1,0 +1,37 @@
+# eda
+
+EDA tools
+
+# query_tables { #ibis_birdbrain.tools.eda.query_tables }
+
+`tools.eda.query_tables(question)`
+
+Queries the tables in the database to answer the question
+
+# read_excel_file { #ibis_birdbrain.tools.eda.read_excel_file }
+
+`tools.eda.read_excel_file(filepath, sheet_name='Sheet1')`
+
+Reads an Excel file from the full filepath
+
+filepath should be of the form: <path>/<table_name>.<extension>
+
+# read_delta_table { #ibis_birdbrain.tools.eda.read_delta_table }
+
+`tools.eda.read_delta_table(filepath)`
+
+Reads a Delta Lake table directory from the full filepath
+
+filepath should be of the form: <path>/<table_name>
+
+# list_tables { #ibis_birdbrain.tools.eda.list_tables }
+
+`tools.eda.list_tables()`
+
+Returns a list of available tables to query
+
+# get_table_schemas { #ibis_birdbrain.tools.eda.get_table_schemas }
+
+`tools.eda.get_table_schemas(table_names)`
+
+Returns the schemas of a list of tables

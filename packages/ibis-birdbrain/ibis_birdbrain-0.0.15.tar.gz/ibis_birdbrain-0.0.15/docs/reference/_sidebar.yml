@@ -1,0 +1,18 @@
+website:
+  sidebar:
+  - contents:
+    - reference/index.qmd
+    - contents:
+      - reference/filesystem.qmd
+      section: Filesystem tools
+    - contents:
+      - reference/eda.qmd
+      section: EDA tools
+    - contents:
+      - reference/code.qmd
+      section: Code tools
+    - contents:
+      - reference/internet.qmd
+      section: Internet tools
+    id: reference
+  - id: dummy-sidebar

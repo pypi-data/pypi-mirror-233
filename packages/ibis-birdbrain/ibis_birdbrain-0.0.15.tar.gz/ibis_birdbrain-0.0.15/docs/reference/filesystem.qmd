@@ -1,0 +1,21 @@
+# filesystem
+
+Filesystem tools
+
+# read_file { #ibis_birdbrain.tools.filesystem.read_file }
+
+`tools.filesystem.read_file(path)`
+
+Reads a file and returns its content.
+
+# list_files_and_dirs { #ibis_birdbrain.tools.filesystem.list_files_and_dirs }
+
+`tools.filesystem.list_files_and_dirs(path='.', depth=-1, additional_ignore_dirs=[])`
+
+Lists all files and directories in a directory.
+
+# write_file { #ibis_birdbrain.tools.filesystem.write_file }
+
+`tools.filesystem.write_file(path, content, overwrite=False)`
+
+Writes a file.

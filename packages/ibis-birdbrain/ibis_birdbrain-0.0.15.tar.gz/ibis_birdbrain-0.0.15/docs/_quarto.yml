@@ -1,0 +1,183 @@
+# project
+project:
+  type: website
+
+# website
+website:
+
+  # basics
+  title: "Ibis Birdbrain"
+  site-url: https://ibis-project.github.io
+  site-path: ibis-birdbrain
+  description: "AI for your data project"
+  favicon: images/logo.png
+
+  # options
+  reader-mode: false
+  twitter-card: true
+  back-to-top-navigation: true
+  repo-url: https://github.com/ibis-project/ibis-birdbrain
+  repo-actions: [edit, issue]
+  repo-subdir: docs
+  issue-url: https://github.com/ibis-project/ibis-birdbrain/issues/new/choose
+
+  # footer
+  page-footer:
+    border: false
+    left: ""
+    right:
+      - icon: github
+        href: https://github.com/ibis-project/ibis-birdbrain
+
+  # search
+  search:
+    location: navbar
+    type: overlay
+
+  # navbar
+  navbar:
+    logo: images/logo.png
+    tools:
+      - icon: github
+        menu:
+          - text: Source code
+            url: https://github.com/ibis-project/ibis-birdbrain
+          - text: Report an issue
+            url: https://github.com/ibis-project/ibis-birdbrain/issues/new
+          - text: Ask for help
+            url: https://github.com/ibis-project/ibis-birdbrain/discussions/new?category=q-a
+
+    left:
+      - sidebar:getting-started
+      - sidebar:concepts
+      #- sidebar:how-to
+      - sidebar:reference
+
+    right:
+      - posts.qmd
+      #- release_notes.md # TODO: release notes
+      #- sidebar:contribute
+
+  # sidebar
+  sidebar:
+    - id: ""
+    - id: getting-started
+      title: "Getting started"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - install.qmd
+        - auto: tutorials/*.qmd
+    - id: concepts
+      title: "Concepts"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - why.qmd
+        - auto: concepts/*.qmd
+    - id: how-to
+      title: "How-to"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: "how-to/input-output"
+    - id: contribute
+      title: "Contribute"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: contribute
+    - id: reference
+      title: "Reference"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - section: Tools
+          contents:
+            - reference/code.qmd
+            - reference/filesystem.qmd
+
+# format
+format:
+  html:
+    #theme: vapor
+    theme:
+      dark: darkly
+      light: darkly
+      #dark: vapor
+      #light: vapor
+    #fontcolor: fuchsia
+    #linkcolor: fuchsia
+    css: styles.css
+    toc: true
+
+# resources
+resources:
+  - CNAME
+
+quartodoc:
+  package: ibis_birdbrain
+  title: Reference
+  sidebar: reference/_sidebar.yml
+  dynamic: true
+  render_interlinks: false
+  options:
+    member_options:
+      signature_name: short
+  sections:
+    - title: Filesystem tools
+      desc: Tools for the filesystem
+      package: ibis_birdbrain.tools.filesystem
+      contents:
+      - kind: page
+        path: filesystem
+        summary:
+          name: filesystem
+          desc: Filesystem tools
+        contents:
+          - read_file
+          - list_files_and_dirs
+          - write_file
+    - title: EDA tools
+      desc: Tools for EDA
+      package: ibis_birdbrain.tools.eda
+      contents:
+        - kind: page
+          path: eda
+          summary:
+            name: eda
+            desc: EDA tools
+          contents:
+            - query_tables
+            - read_excel_file
+            - read_delta_table
+            - list_tables
+            - get_table_schemas
+    - title: Code tools
+      desc: Tools for code
+      package: ibis_birdbrain.tools.code
+      contents:
+      - kind: page
+        path: code
+        summary:
+          name: code
+          desc: Code tools
+        contents:
+          - text_to_python
+          - fix_python_error
+          - python_function_to_udf
+          - run_python_code
+    - title: Internet tools
+      desc: Tools for the Internet
+      package: ibis_birdbrain.tools.internet
+      contents:
+      - kind: page
+        path: internet
+        summary:
+          name: internet
+          desc: Internet tools
+        contents:
+          - search_internet
+          - webpage_to_str
+          - open_browser
+
