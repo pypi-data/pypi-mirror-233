@@ -1,0 +1,7 @@
+httpx[http2]>=0.20.0
+requests
+deep_translator
+colorama
+google-cloud-translate
+browser_cookie3
+langdetect
