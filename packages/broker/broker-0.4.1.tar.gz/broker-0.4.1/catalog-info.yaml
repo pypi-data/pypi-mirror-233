@@ -1,0 +1,26 @@
+# Catalog entry for Backstage [backstage.io]
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: broker
+  title: Broker
+  description: The infrastructure middleman!
+  links:
+    - title: PyPi
+      url: https://pypi.org/project/broker
+  tags:
+    - python
+    - infrastructure
+    - click
+    - ansible-tower
+    - aap
+    - docker
+    - podman
+  namespace: quality-community   
+  annotations:
+    github.com/project-slug: SatelliteQE/broker
+    backstage.io/techdocs-ref: https://github.com/SatelliteQE/broker/wiki
+spec:
+  type: library
+  owner: group:redhat/satellite-qe
+  lifecycle: preproduction
