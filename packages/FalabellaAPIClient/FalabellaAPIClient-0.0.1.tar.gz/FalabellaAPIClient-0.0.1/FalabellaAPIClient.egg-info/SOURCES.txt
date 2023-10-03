@@ -1,0 +1,14 @@
+README.md
+setup.py
+FalabellaAPIClient/__init__.py
+FalabellaAPIClient/orders.py
+FalabellaAPIClient/products.py
+FalabellaAPIClient/seller.py
+FalabellaAPIClient/service.py
+FalabellaAPIClient/session.py
+FalabellaAPIClient/shipments.py
+FalabellaAPIClient.egg-info/PKG-INFO
+FalabellaAPIClient.egg-info/SOURCES.txt
+FalabellaAPIClient.egg-info/dependency_links.txt
+FalabellaAPIClient.egg-info/requires.txt
+FalabellaAPIClient.egg-info/top_level.txt
