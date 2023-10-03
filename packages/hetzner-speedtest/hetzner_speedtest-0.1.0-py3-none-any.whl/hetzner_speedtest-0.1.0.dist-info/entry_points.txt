@@ -1,0 +1,3 @@
+[console_scripts]
+hetzner-speedtest=hetzner_speed_test.__main__:app
+
