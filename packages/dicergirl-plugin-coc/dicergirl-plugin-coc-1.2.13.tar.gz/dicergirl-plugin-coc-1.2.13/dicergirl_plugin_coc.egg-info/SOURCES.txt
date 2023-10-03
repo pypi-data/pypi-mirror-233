@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+dicergirl/plugins/coc/__init__.py
+dicergirl/plugins/coc/coccards.py
+dicergirl/plugins/coc/cocutils.py
+dicergirl/plugins/coc/investigator.py
+dicergirl/plugins/coc/madness.py
+dicergirl/plugins/coc/nbhandlers.py
+dicergirl_plugin_coc.egg-info/PKG-INFO
+dicergirl_plugin_coc.egg-info/SOURCES.txt
+dicergirl_plugin_coc.egg-info/dependency_links.txt
+dicergirl_plugin_coc.egg-info/requires.txt
+dicergirl_plugin_coc.egg-info/top_level.txt
