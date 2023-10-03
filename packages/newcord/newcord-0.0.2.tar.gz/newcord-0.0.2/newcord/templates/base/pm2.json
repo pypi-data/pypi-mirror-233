@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "bot",
+            "script": "bot/bot.py",
+            "interpreter": "python",
+            "args": [],
+            "autorestart": true,
+            "watch": false,
+        }
+    ]
+}
