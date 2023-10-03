@@ -1,0 +1,22 @@
+# regenerates funcs file (except for example image and except for glip) and
+# checks that git diff is 0
+name: Check catalog is up-to-date
+
+on:
+  push:
+    paths:
+      - functional_cat/**
+      - setup.py
+      - pyproject.toml
+
+jobs:
+  check-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - run: pip install ".[torch,onnx,catalog,dlib]"
+      - run: python catalog.py create --overwrite-if-exists --frameworks torch,onnx --fields class,constructorArgs,description,task,framework,installSnippet,devices,classLabels,colabLink
+      - run: git diff --exit-code

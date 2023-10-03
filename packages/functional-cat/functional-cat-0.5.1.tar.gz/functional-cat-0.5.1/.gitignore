@@ -1,0 +1,13 @@
+__pycache__
+dist
+functional_cat.egg-info
+.vscode
+tasks.json
+types.json
+
+# Local Netlify folder
+.netlify
+build
+.env
+
+.DS_Store

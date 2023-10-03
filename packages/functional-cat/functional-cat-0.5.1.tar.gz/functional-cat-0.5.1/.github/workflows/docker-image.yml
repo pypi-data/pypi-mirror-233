@@ -1,0 +1,49 @@
+name: Docker Image CI
+
+on:
+  push:
+    paths:
+      - functional_cat/**
+      - setup.py
+      - pyproject.toml
+      - Dockerfile
+      - Dockerfile.glip
+      - .github/workflows/docker-image.yml
+    branches: [main]
+
+jobs:
+  build-docker:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ghcr.io/ekorman/functional-cat/functional-cat
+      IMAGE_NAME_WITH_COMMIT_HASH: $IMAGE_NAME:${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: build
+        run: |
+          pip3 install setuptools_scm
+          docker build . --build-arg packages="[torch,onnx-gpu]" --build-arg VERSION=$(python -m setuptools_scm) -t $IMAGE_NAME
+      - name: push
+        run: |
+          docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push $IMAGE_NAME
+          IMAGE_NAME_WITH_COMMIT_HASH=$IMAGE_NAME:${{ github.sha }}
+          docker tag $IMAGE_NAME $IMAGE_NAME_WITH_COMMIT_HASH
+          docker push $IMAGE_NAME_WITH_COMMIT_HASH
+  build-glip-docker:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ghcr.io/ekorman/functional-cat/functional-cat-glip
+    steps:
+      - uses: actions/checkout@v3
+      - name: build
+        run: |
+          pip3 install setuptools_scm
+          docker build . --build-arg VERSION=$(python -m setuptools_scm) -f Dockerfile.glip -t $IMAGE_NAME
+      - name: push
+        run: |
+          docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push $IMAGE_NAME
+          IMAGE_NAME_WITH_COMMIT_HASH=$IMAGE_NAME:${{ github.sha }}
+          docker tag $IMAGE_NAME $IMAGE_NAME_WITH_COMMIT_HASH
+          docker push $IMAGE_NAME_WITH_COMMIT_HASH

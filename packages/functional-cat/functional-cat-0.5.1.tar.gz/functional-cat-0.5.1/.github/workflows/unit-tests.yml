@@ -1,0 +1,38 @@
+name: Unit tests
+
+on:
+  push:
+    paths:
+      - functional_cat/**
+      - setup.py
+      - pyproject.toml
+
+jobs:
+  test-torchvision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - run: pip install ".[torch,test]"
+      - run: pytest -v tests/test_torchvision.py
+  test-onnx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - run: pip install ".[onnx, test]"
+      - run: pytest -v tests/test_onnx.py
+  # commented out since its very slow
+  # test-dlib:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: "3.8"
+  #     - run: pip install ".[dlib, test]"
+  #     - run: pytest -v tests/test_dlib.py
