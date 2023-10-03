@@ -1,0 +1,3 @@
+[console_scripts]
+nicola=nicola_student_tracker.command_line.cli:start_dash
+

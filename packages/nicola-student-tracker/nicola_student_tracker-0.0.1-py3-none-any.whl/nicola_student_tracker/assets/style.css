@@ -1,0 +1,9 @@
+.Select-menu-outer {
+    display : block !important;
+    color: #1e1e1e;
+}
+.dash-spreadsheet-container table {
+    --accent: #000000 !important;
+    --selected-background: rgb(0, 0, 0) !important;
+    --selected-color: #000000 !important;
+  }
