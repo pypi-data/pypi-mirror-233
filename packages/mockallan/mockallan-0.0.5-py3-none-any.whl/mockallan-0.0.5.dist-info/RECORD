@@ -1,0 +1,12 @@
+app_handler.py,sha256=OPeP95QUzM2zhrxc5wg7U2EVrhc5v-WpFHjRo1L5Et0,9608
+history.py,sha256=b1di8tSDcU9BnsYLpBhN8HkopxSEIPHWBfndZWbIuNw,3713
+mockallan.py,sha256=FnRyUa-BSTRCbXjkVpykWwU8BUefKeZJjPUUVO6TswU,3664
+request.py,sha256=Jgf6Uw6WodmnF0eVLwQlNooY6bqFC301-p7m9WIV530,458
+stub_config.py,sha256=MsBwBCclsNdwBAkDYk4pgTFW33e2SiFPY2__IJqYoJc,3321
+validators.py,sha256=inl8OB2ISLpjBVWgspVx_5fw0NgEiiYYoBYvDQyXYuM,1760
+mockallan-0.0.5.dist-info/LICENSE,sha256=S2kS4lW9iqTMOeCyAYTg8eLSp44tDx-AQv0SUSuPbss,1071
+mockallan-0.0.5.dist-info/METADATA,sha256=BZP97_TeUleR7o1acfHCkjvoN3fZRTpXcM7H1xtflpE,8810
+mockallan-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mockallan-0.0.5.dist-info/entry_points.txt,sha256=AhNmNPPZM4bGIocnxSGss1DvzZGai9i2i_gvmEudvFE,45
+mockallan-0.0.5.dist-info/top_level.txt,sha256=GvvbE6fOop5l664E7fi3I1i5b7bB-ZFK7IIDmt4Ffdg,61
+mockallan-0.0.5.dist-info/RECORD,,
