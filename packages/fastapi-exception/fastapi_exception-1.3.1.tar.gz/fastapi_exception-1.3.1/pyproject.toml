@@ -1,0 +1,32 @@
+[tool.black]
+skip-string-normalization = true
+line-length = 120
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastapi_exception"
+version = "1.3.1"
+authors = [
+  { name="Dzung Nguyen", email="dung@megatron-solutions.com" },
+]
+description = "FastAPI Event"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies=[
+  'pydantic>=2.4.2',
+  'fastapi-global-variable>=0.0.4',
+  'python-keycloak>=2.14.0'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/megatron-global/fastapi-exception"
+"Bug Tracker" = "https://github.com/megatron-global/fastapi-exception/issues"
