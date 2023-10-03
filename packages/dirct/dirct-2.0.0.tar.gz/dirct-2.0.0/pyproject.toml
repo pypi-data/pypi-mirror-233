@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "dirct"
+# Version is overwritten at build time by CI based on git tag
+version = "2.0.0"
+description = "A dict that reflects the contents of a directory."
+authors = ["Abraham Murciano <abrahammurciano@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+repository = "https://github.com/abrahammurciano/python-dirct"
+documentation = "https://abrahammurciano.github.io/python-dirct/dirct"
+keywords = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.1"
+more-itertools = "^10.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+black = "*"
+pdoc3 = "*"
+toml = "*"
+types-toml = "*"
+mypy = "*"
+
+[tool.poetry.group.dev.dependencies]
+types-pyyaml = "^6.0.12.12"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+exclude = [".venv", "venv"]
