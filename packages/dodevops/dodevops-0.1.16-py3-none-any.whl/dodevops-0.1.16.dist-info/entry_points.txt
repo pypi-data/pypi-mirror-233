@@ -1,0 +1,3 @@
+[console_scripts]
+dodevops=dodevops.dodevops:main
+
