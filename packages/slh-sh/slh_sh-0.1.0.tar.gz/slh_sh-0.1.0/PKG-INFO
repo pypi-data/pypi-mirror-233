@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: slh-sh
+Version: 0.1.0
+Summary: 
+Author: Nova Sky
+Author-email: 2989791+0xnovasky@users.noreply.github.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: alembic (>=1.12.0,<2.0.0)
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: gspread (>=5.11.2,<6.0.0)
+Requires-Dist: oauth2client (>=4.1.3,<5.0.0)
+Requires-Dist: pandas (>=2.1.1,<3.0.0)
+Requires-Dist: pdfminer-six (>=20221105,<20221106)
+Requires-Dist: pydantic (>=2.4.0,<3.0.0)
+Requires-Dist: pymupdf (>=1.23.3,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: scholarly (>=1.7.11,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.21,<3.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# SLRs Little Helper
+
+```
+# slh --help
+```
+
+## Google APP Script to add links to drive files
+
+```
+function linkToDriveFile() {
+  var columnRange = SpreadsheetApp.getActiveSpreadsheet().getRange("G4:G203");
+  var files = DriveApp.getFolderById('11pjqVjFXfsBVjG4CC0mzMSZ2zeLCXNrE').getFiles();
+    console.log(fileName + ".pdf")
+    while (files.hasNext()) {
+      var file = files.next();
+      console.log(file.getName())
+      for (var i = 1; i <= columnRange.getNumRows(); i++) {
+        var fileName = columnRange.getCell(i, 1).getValue();
+        if (file.getName() === fileName + ".pdf") {
+          console.log("added" + file.getName())
+          console.log("added" + fileName)
+          columnRange.getCell(i, 1).setFormula(`=HYPERLINK("${file.getUrl()}", "${fileName}"`)
+        }
+      }
+    }
+}
+```
+
+## Tips
+1. Pause syncing on Google Drive while editing a PDF file.
+
