@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: oplin
+Version: 0.0.1
+Summary: A small example package
+Project-URL: Homepage, https://github.com/jackmurray90/oplin
+Project-URL: Bug Tracker, https://github.com/jackmurray90/oplin/issues
+Author-email: Jack Murray <jack@murray.software>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Oplin
+
+An exciting README will go here.
