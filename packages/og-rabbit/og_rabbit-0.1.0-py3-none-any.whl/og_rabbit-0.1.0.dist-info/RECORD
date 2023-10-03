@@ -1,0 +1,6 @@
+og_rabbit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+og_rabbit/consumer.py,sha256=kUQAwktXANR3UaAJteybbOtHe6aTgx1vQsQai-yKrDE,1072
+og_rabbit/publisher.py,sha256=wD1WFqht_RHjrTLxtX2nSZv5K7N_BXYBa7kxGwgTlrU,1710
+og_rabbit-0.1.0.dist-info/METADATA,sha256=KD0FBjnYn0OzwqfHDaTXOmtly0Ple8LNkDUTBedoLK8,439
+og_rabbit-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+og_rabbit-0.1.0.dist-info/RECORD,,
