@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/stellarmesh/__init__.py
+src/stellarmesh/geometry.py
+src/stellarmesh/mesh.py
+src/stellarmesh/moab.py
+src/stellarmesh.egg-info/PKG-INFO
+src/stellarmesh.egg-info/SOURCES.txt
+src/stellarmesh.egg-info/dependency_links.txt
+src/stellarmesh.egg-info/requires.txt
+src/stellarmesh.egg-info/top_level.txt
+tests/test_geometry.py
