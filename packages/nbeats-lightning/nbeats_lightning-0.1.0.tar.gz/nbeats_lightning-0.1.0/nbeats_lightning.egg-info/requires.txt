@@ -1,0 +1,12 @@
+ipython
+ipykernel
+lightning
+matplotlib
+numpy
+pandas
+seaborn
+tensorboard
+torch
+torchaudio
+torchvision
+statsmodels
