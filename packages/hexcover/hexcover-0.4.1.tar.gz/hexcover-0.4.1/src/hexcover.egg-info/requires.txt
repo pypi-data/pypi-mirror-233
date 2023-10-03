@@ -1,0 +1,5 @@
+numpy>=1.11.0
+shapely>=1.7.0
+
+[test]
+pytest>=7.4.2
