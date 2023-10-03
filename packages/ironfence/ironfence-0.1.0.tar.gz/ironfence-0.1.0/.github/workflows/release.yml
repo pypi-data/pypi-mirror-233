@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    if: github.repository == 'ab0142/ironfence'
+    runs-on: ubuntu-22.04
+    concurrency: push
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # https://python-semantic-release.readthedocs.io/en/latest/algorithm.html#implementation
+          fetch-depth: 0
+
+      - name: Python semantic release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v8.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # root_options: "-vv"
+
+      - name: Publish package distributions to PyPI
+        if: steps.release.outputs.released
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # repository-url: https://test.pypi.org/legacy/
+          print-hash: true
+          # verbose: true
+
+      - name: Publish package distributions to GitHub Releases
+        if: steps.release.outputs.released
+        uses: python-semantic-release/upload-to-gh-release@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.release.outputs.tag }}
