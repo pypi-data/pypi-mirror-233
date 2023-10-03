@@ -1,0 +1,11 @@
+kirami_plugin_boardgame-0.1.1.dist-info/METADATA,sha256=JGcwPym6yqWs-q_m3R8pFwpgHBtuUfeotw2T7U3YVow,2487
+kirami_plugin_boardgame-0.1.1.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+kirami_plugin_boardgame-0.1.1.dist-info/licenses/LICENSE,sha256=Xto27m-beb5Q41mq3hURn9SveXYmnvvW8DozOgt5xoM,1066
+kirami_plugin_boardgame/__init__.py,sha256=SmHe0zfnyuQak3UvxPR0FvVPO_xUe7ntdAQNj9YO-J4,10931
+kirami_plugin_boardgame/game.py,sha256=_VBj0VNkz3toEDNa3FFLnwMTqjEcWTQZpvLpUw2b5DY,11086
+kirami_plugin_boardgame/go.py,sha256=F4kcPHXemj1g5DbOx1ike9360lP5Q1V9MHttztofEe8,2005
+kirami_plugin_boardgame/gomoku.py,sha256=6g-Z8Isdvk3jORIMoJTDj18xmdkHrnAnjiTtxkdRhY8,2028
+kirami_plugin_boardgame/model.py,sha256=gRQ5y4SO0ipXjZQBR-cCKfb_PrLAEgmJOiwXfcTAmeE,530
+kirami_plugin_boardgame/othello.py,sha256=XynM1OlNKEYhB8iM0Q89Xffiy-_TUyJl6FL-45K5-Go,2414
+kirami_plugin_boardgame/svg.py,sha256=c4QqXavlwiWr36jckzfuoO8FcjIWjpEe7QL8Hhl2pn8,3635
+kirami_plugin_boardgame-0.1.1.dist-info/RECORD,,
