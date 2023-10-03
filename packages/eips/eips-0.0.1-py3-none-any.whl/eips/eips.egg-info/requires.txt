@@ -1,0 +1,7 @@
+pydantic~=2.3.0
+
+[dev]
+black>=23.9.1
+hatch>=1.7.0
+mypy>=1.5.1
+pytest>=7.4.2
