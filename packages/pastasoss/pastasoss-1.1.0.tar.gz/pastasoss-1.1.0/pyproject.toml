@@ -1,0 +1,29 @@
+[project]
+name = "pastasoss"
+description = "My package description"
+readme = "README.md"
+authors = [
+    {name = "Tyler Baines", email = "tbaines@stsci.edu"},
+]
+requires-python = ">=3.9"
+dependencies = [
+    "jupyter>=1.0.0",
+    "numpy>=1.23.4",
+    "matplotlib>=3.6.2",
+    "pytest>=7.2.0",
+]
+
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools >= 61.2",
+            "setuptools_scm[toml]>=7.1"]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+namespaces = false
+
+[tool.setuptools_scm]
+
+[tool.pytest]
+junit_family = "xunit2"

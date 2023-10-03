@@ -1,0 +1,2 @@
+include pastasoss/data/*.txt
+include pastasoss/data/*.json
