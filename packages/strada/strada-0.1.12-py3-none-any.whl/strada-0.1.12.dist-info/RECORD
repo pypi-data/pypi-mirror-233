@@ -1,0 +1,9 @@
+strada/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strada/google_sheets.py,sha256=bwDc_N0FpZqHESIMZR59JBIwT_s4PeomBOokXGZXIN4,8821
+strada/openai.py,sha256=FxnHU3ljryU4aS5eQ4qtxoH5f9tdvxr0CVWDVUA_hAU,6565
+strada/rest.py,sha256=lufi55oJhz5qQqvvzxxkZqIip8_oRXy4HXd3hYCicQ0,5358
+strada/slack.py,sha256=TQr_Mt4I_sQFtCfYZ8OA6Brt-GACWpwppSe44f9lIZI,2897
+strada-0.1.12.dist-info/METADATA,sha256=vqUPO8LTTGMl4Bbm2dWzROEOodOLZjbq7EQkXjtM6dk,452
+strada-0.1.12.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+strada-0.1.12.dist-info/top_level.txt,sha256=DGUVKVMvgMmEo-gj1AhT-8sDYofNxVn4LRwcYUziEnE,7
+strada-0.1.12.dist-info/RECORD,,
