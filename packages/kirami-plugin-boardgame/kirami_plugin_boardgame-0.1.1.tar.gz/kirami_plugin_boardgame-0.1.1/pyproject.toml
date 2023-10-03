@@ -1,0 +1,21 @@
+[project]
+name = "kirami-plugin-boardgame"
+version = "0.1.1"
+description = "五子棋、围棋、黑白棋游戏"
+authors = [
+    { name = "FrostN_0v0", email = "1614591760@qq.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
