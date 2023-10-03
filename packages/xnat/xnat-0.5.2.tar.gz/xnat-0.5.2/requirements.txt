@@ -1,0 +1,6 @@
+progressbar2>=3.11.0
+isodate>=0.5.4
+requests>=2.10.0
+click>=7.0.0
+pydicom>=2.3.0
+python-dateutil~=2.8.2
