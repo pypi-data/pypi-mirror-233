@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: aiconsole
+Version: 0.1.10a7
+Summary: Your platform to build AI tools.
+Author: Maciej Cielecki
+Author-email: maciej.cielecki@10clouds.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: appdirs (>=1.4.4,<2.0.0)
+Requires-Dist: astor (>=0.8.1,<0.9.0)
+Requires-Dist: fastapi[all] (>=0.103.1,<0.104.0)
+Requires-Dist: git-python (>=1.0.3,<2.0.0)
+Requires-Dist: huggingface-hub (>=0.16.4,<0.17.0)
+Requires-Dist: inquirer (>=3.1.3,<4.0.0)
+Requires-Dist: litellm (>=0.1.590,<0.2.0)
+Requires-Dist: open-interpreter (>=0.1.4,<0.2.0)
+Requires-Dist: openai (>=0.27.8,<0.28.0)
+Requires-Dist: openai-function-call (>=0.2.6,<0.3.0)
+Requires-Dist: pyreadline3 (>=3.4.1,<4.0.0) ; sys_platform == "win32"
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich (>=13.4.2,<14.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Requires-Dist: tiktoken (>=0.4.0,<0.5.0)
+Requires-Dist: tokentrim (>=0.1.9,<0.2.0)
+Requires-Dist: watchdog (>=3.0.0,<4.0.0)
+Requires-Dist: wget (>=3.2,<4.0)
+Requires-Dist: yaspin (>=3.0.1,<4.0.0)
+Description-Content-Type: text/markdown
+
+<h1 align="center">AIConsole</h1>
+
+## Installing & Running
+
+```shell
+pip install --upgrade aiconsole --pre
+cd your_project_dir
+export OPENAI_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+aiconsole
+```
+
+aiconsole will create a bunch of working files like standard manuals and agents
+
+## Running Your AIConsole Dev Mode
+
+In order to run your own AIConsole:
+
+1. CD into the project folder `/ai-console`
+2. Install dependencies `poetry install` and `cd aiconsole/web && yarn`
+3. In two distinct terminal windows run: `poetry run backend` and `cd aiconsole/web && yarn dev`
+
+Optionally you can run `poetry run aiconsole` which will spawn two servers, but it's less ideal for development as it's often benefitial to restart just one.
+
+Requires OPENAI_API_KEY env variable to be set.
+
+### Running in another directory in dev mode
+
+Often times you want to host aiconsole working files in another directory, even while developing. In order to do that you need to:
+
+1. Discover the path to your env:
+poetry env info
+
+2. You will get something like: /Users/user/Library/Caches/pypoetry/virtualenvs/aiconsole-rmLpd4fO-py3.10
+
+3. Execute in your directory of choice the following command:
+
+```shell
+vepath/bin/python -m aiconsole.init
+```
+
+so in our example that would be:
+
+```shell
+/Users/user/Library/Caches/pypoetry/virtualenvs/aiconsole-rmLpd4fO-py3.10bin/python -m aiconsole.init
+```
+
+## Publishing process
+
+```shell
+cd web && npm run build && cd .. && poetry build && poetry publish --username __token__ --password ...
+```
+
+## Manuals
+
+Create .md files in ./manuals directory in the following format:
+
+
+```md
+<!---
+Description of when this manual should be used?
+-->
+
+# Title of the manual
+
+Actual content of a manual
+```
+
+Files are monitored and automatically loaded, then used as context. You can keep there API manuals, login information, prompts and other contextual information.
+
+You can see examples of manuals i ./preset/manuals directory
+
