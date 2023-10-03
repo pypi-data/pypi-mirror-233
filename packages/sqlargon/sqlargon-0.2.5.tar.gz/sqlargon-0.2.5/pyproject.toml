@@ -1,0 +1,99 @@
+[tool.poetry]
+name = "sqlargon"
+version = "0.2.5"
+description = "SQLAlchemy utils for Postgres and Sqlite"
+readme = "README.md"
+authors = [
+    "Radzim Kowalow <radzim.kowalow@performance-media.pl>"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+alembic = "^1.10.2"
+asyncpg = "^0.28.0"
+aiosqlite = "^0.19.0"
+sqlalchemy = "^2.0.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+pytest-asyncio = "^0.20.2"
+pytest-cov = "^4.0.0"
+flake8 = "^6.0.0"
+black = "^22.3.0"
+isort = "^5.10.1"
+tox = "^3.25.0"
+bandit = "^1.7.4"
+python-semantic-release = "^7.33.2"
+greenlet = "^2.0.2"
+fastapi = "^0.95.0"
+orjson = "^3.8.14"
+mypy = "^1.4.1"
+opentelemetry-instrumentation-sqlalchemy = "^0.40b0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^8.2.1"
+mkdocs-autorefs = "^0.4.1"
+mkdocs-gen-files = "^0.4.0"
+mkdocstrings-python = "^0.8.2"
+
+[tool.pytest.ini_options]
+addopts = "--cov=./sqlargon"
+testpaths = [
+   "./tests"
+]
+asyncio_mode = "auto"
+
+[tool.bandit]
+skips = ['B101']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+namespace_packages = true
+ignore_missing_imports = true
+no_site_packages = true
+
+[tool.ruff]
+select = [
+    "B",  # flake8-bugbear
+    "C",  # flake8-comprehensions
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "W",  # pycodestyle warnings
+#    "I",  # isort
+]
+
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+]
+
+line-length = 88
+# comment this line if you have imported tasks/models unused
+
+#unfixable = ["F401"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.semantic_release]
+version_variable = [
+    'sqlargon/_version.py:__version__',
+]
+version_toml = 'pyproject.toml:tool.poetry.version'
+version_pattern = [
+    'docs/index.md:Version: (\d+\.\d+\.\d+)',
+    'README.md:Version: (\d+\.\d+\.\d+)'
+]
+upload_to_repository = false
+major_on_zero = true
+hvcs = "github"
+commit_message = "Bump version: {version}"
+tag_commit = false
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
