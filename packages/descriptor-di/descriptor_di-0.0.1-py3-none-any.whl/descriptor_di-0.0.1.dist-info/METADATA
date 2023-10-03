@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: descriptor-di
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/unknown/descriptor-di#readme
+Author-email: Priti Das <priti.das@gemini.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: requests==2.31.0
+Description-Content-Type: text/markdown
+
+# descriptor-di
+A Descriptor-based Dependency Injection package implemented in Python.
+
+To install:
+pip install descriptor-di==0.1.0
+OR 
+python3 -m pip install descriptor-di
