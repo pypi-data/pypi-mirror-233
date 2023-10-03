@@ -1,0 +1,9 @@
+setuptools
+python-memcached
+Zope>=5
+
+[docs]
+sphinx
+repoze.sphinx.autointerface
+sphinx-rtd-theme
+pkginfo
