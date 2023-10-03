@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+BambooTools.egg-info/PKG-INFO
+BambooTools.egg-info/SOURCES.txt
+BambooTools.egg-info/dependency_links.txt
+BambooTools.egg-info/requires.txt
+BambooTools.egg-info/top_level.txt
+bambootools/__init__.py
+bambootools/bambootools.py
+tests/test_bambootools.py
