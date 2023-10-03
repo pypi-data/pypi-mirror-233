@@ -1,0 +1,7 @@
+README.md
+setup.py
+opensdg/__init__.py
+opensdg.egg-info/PKG-INFO
+opensdg.egg-info/SOURCES.txt
+opensdg.egg-info/dependency_links.txt
+opensdg.egg-info/top_level.txt

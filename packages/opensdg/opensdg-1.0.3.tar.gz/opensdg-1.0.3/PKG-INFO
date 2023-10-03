@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: opensdg
+Version: 1.0.3
+Summary: Python binding for opensdg library
+Home-page: https://github.com/janza/opensdg-py
+Author: Josip Janzic
+Author-email: hi@josip.dev
