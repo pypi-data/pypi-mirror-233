@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: waveboxgen
+Version: 0.0.1
+Summary: A Wavebox framework file generator
+Author-email: Oktaviano Fahdi Syaputra <adorufus@gmail.com>
+Project-URL: Homepage, https://github.com/adorufus/waveboxgen
+Project-URL: Bug Tracker, https://github.com/adorufus/waveboxgen/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Waveboxgen
+
+### usage: 
+    main.py [-h] generate service filepath
+
+Generate a wavebox framework service file
+
+### positional arguments:
+    spawn, s      Pass this argument to generate file
+    service, s    Pass this argument to create service file
+    filepath      Directory where the service file will be generated
+
+### options:
+    -h, --help  show this help message and exit
