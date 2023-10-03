@@ -1,0 +1,4 @@
+shapely
+scipy
+triangle_mesh_io
+json-numpy-sebastian-achim-mueller>=0.1.1
