@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pollination-radiation.express
+Version: 0.0.4
+Summary: Radiation recipe for Pollination.
+Home-page: https://github.com/pollination/radiation
+Author: pollination
+Author-email: info@pollination.solutions
+Maintainer: mostapha, ladybug-tools
+Maintainer-email: mostapha@ladybug.tools, info@ladybug.tools
+License: PolyForm Shield License 1.0.0, https://polyformproject.org/wp-content/uploads/2020/06/PolyForm-Shield-1.0.0.txt
+Project-URL: icon, https://raw.githubusercontent.com/ladybug-tools/artwork/master/icons_components/honeybee/png/radrecipe.png
+Project-URL: docker, https://hub.docker.com/r/ladybugtools/honeybee-radiance
+Keywords: honeybee,radiance,ladybug-tools,daylight,cumulative,radiation
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pollination-ladybug-radiance>=0.2.1
+Provides-Extra: viz
+Requires-Dist: pollination-honeybee-display>=0.1.12; extra == "viz"
+
+# Radiation Express
+
+Radiation Express recipe for Pollination
+
+This recipe calculates average irradiance (W/m2) or cumulative radiation (kWh/m2)
+over the time period of a specified Wea.
+
+## Limitations
+
+This recipe uses the ladybug-radiance
+[RadiationStudy](https://github.com/ladybug-tools/ladybug-radiance/blob/master/ladybug_radiance/study/radiation.py).
+
+```console
+Such studies of incident radiation can be used to approximate the energy that can
+be collected from photovoltaic or solar thermal systems. They are also useful
+for evaluating the impact of a building's orientation on both energy use and the
+size/cost of cooling systems. For studies of photovoltaic potential or building
+energy use impact, a sky matrix from EPW radiation should be used. For studies
+of cooling system size/cost, a sky matrix derived from the STAT file's clear sky
+radiation should be used.
+
+Note that no reflections of solar energy are included in the analysis performed by
+this class. Ground reflected irradiance is crudely accounted for by means of an
+emissive "ground hemisphere," which is like the sky dome hemisphere and is derived
+from the ground reflectance that is associated with the connected sky_matrix. This
+means that including geometry that represents the ground surface will effectively
+block such crude ground reflection.
+```
