@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: podme-api
+Version: 0.1.4
+Summary: A client library for using the podme.com web API
+Home-page: https://github.com/bendikrb/podme_api
+Author: bendikrb
+License: MIT
+Project-URL: Bug Tracker, https://github.com/bendikrb/podme_api/issues
+Project-URL: Source Code, https://github.com/bendikrb/podme_api
+Keywords: podcast,api-client,unofficial
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: youtube-dl
+Requires-Dist: urllib3
+
+# PodMe API
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-podme--api-brightgreen)](https://pypi.org/project/podme-api/) [![version number](https://img.shields.io/pypi/v/podme-api?color=green&label=version)](https://github.com/bendikrb/podme_api/releases) [![Actions Status](https://github.com/bendikrb/podme_api/workflows/Test/badge.svg)](https://github.com/bendikrb/podme_api/actions) [![License](https://img.shields.io/github/license/bendikrb/podme_api)](https://github.com/bendikrb/podme_api/blob/master/LICENSE)
+
+*podme_api* is an open source client library for [PodMe](https://podme.com). It enables applications to use PodMe's service to browse and download podcasts.
+
+_Note: Accessing premium content on PodMe only works with an active subscription._
+
