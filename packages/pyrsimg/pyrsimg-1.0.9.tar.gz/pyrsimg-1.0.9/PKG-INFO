@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyrsimg
+Version: 1.0.9
+Summary: Python toolkit for easy processing of satellite image
+Author: The pyrsimg developers
+Author-email: xinluo_xin@163.com
+Maintainer: Xin Luo
+Maintainer-email: xinluo_xin@163.com
+License: GPL License
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: astropy
