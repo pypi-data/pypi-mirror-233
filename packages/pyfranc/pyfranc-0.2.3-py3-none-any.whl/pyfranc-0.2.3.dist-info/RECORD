@@ -1,0 +1,17 @@
+pyfranc/__init__.py,sha256=TfSzYMMnI0HLCLocGdcYxXvv_4xwnLhcOM1ViTER9So,140
+pyfranc/data.py,sha256=14Q_bRrwjiprNcQ9eYRwpiBlugtzO-a3D29P2SKzX_Q,546018
+pyfranc/expressions.py,sha256=UfIj0avNwKqI1YO3lcNx1gq7DM00DUNy_4OvGYRGEm0,6156
+pyfranc/franc.py,sha256=XpSP8CSn4sYBT750wRjNcgIDbxebxc0x8c3lyJKvUJc,4023
+pyfranc/iso639.py,sha256=vpvkdYnXz1Vp1iB0J_zGV846dpjhjR5XKv8OIkjKwhc,9678
+pyfranc/n_gram.py,sha256=X2bnj5KwBqKmO0rMq0RoQ-rFvzJBC0kk2J9j-cK1eHA,556
+pyfranc/pyfranc_cli.py,sha256=tTEvKCmRVWf5N1FRaeH7WNgVjqRmDU8i11mxdntSnQw,2994
+pyfranc/trigram_utils.py,sha256=9HxjvpupovEjZ-pBQ4TClDNCvl4JvU_HKAAriSMVm14,1491
+pyfranc/tests/api.py,sha256=wbiGpqwFzRTjyWEMUbRpJlwmSy5hl9ti_doPNsdYd3k,6607
+pyfranc/tests/cli.py,sha256=EvjvU9XazXEynTy1_SWGA2zvAoxB5JUFdzhxrDWVc0s,4709
+pyfranc/tests/fixtures.py,sha256=cR6L4j_Qrk9s1-d0DrKNCj4In--SmXjWeQs0wn-Fvo0,266899
+pyfranc-0.2.3.dist-info/LICENSE,sha256=qHHYf2XjR3rZJpdyZ7FNCj2mDpA6ZyS0nWg6xhDKaB4,1283
+pyfranc-0.2.3.dist-info/METADATA,sha256=uXNnQUObycel6taql90Vg0V1fWxroduBJ_P4KfNfA_o,4729
+pyfranc-0.2.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyfranc-0.2.3.dist-info/entry_points.txt,sha256=eja-nLotX_2EK1vOndztVZV9I2g3ygezQGIg3bM9PJs,57
+pyfranc-0.2.3.dist-info/top_level.txt,sha256=uGEMdC0L4yAiCX7nHVYQ042EHS_Zg-HNLR4XeB7Kuks,8
+pyfranc-0.2.3.dist-info/RECORD,,
