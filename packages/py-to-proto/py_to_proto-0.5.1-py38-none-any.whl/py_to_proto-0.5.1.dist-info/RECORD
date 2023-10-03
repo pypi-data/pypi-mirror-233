@@ -1,0 +1,15 @@
+py_to_proto/__init__.py,sha256=0xvSrTlGuMSPzey0U_v2i1ehBcFVzQRk3Z2qbFZiXO4,1174
+py_to_proto/compat_annotated.py,sha256=-JMeTz4v2hSkrRKVfQVqOlI1Az6IVqXoIC3ma2Fu2XI,251
+py_to_proto/converter_base.py,sha256=UIEiHlFl8A8HJu8UgtVDHpMMMuL5cQlT3R5SeM9ot6Y,26051
+py_to_proto/dataclass_to_proto.py,sha256=3WNlDCYzeiaWjmj_remOmEddmr6_PbFlQPsG6nuElIA,12793
+py_to_proto/descriptor_to_file.py,sha256=K3uDrbdp2c0WcKMuFJn79wDrU0w16Fjwy5lw1q00RBU,10579
+py_to_proto/descriptor_to_message_class.py,sha256=2gJfz38W0_XLS4I3XI4Vtycok0-9q6kfSK7A_OYW2X4,5265
+py_to_proto/json_to_service.py,sha256=zzbJnXnXLeCPwRQsFYWnbzSKFgUBe-SpUeWYIKd7HCU,12474
+py_to_proto/jtd_to_proto.py,sha256=dmRj35Z5rfFgfeP2QRTaJ2sF1tZrYBD7KsyNY5yrCQ0,8288
+py_to_proto/utils.py,sha256=7bj45FqYORAzS-Yx0JmXFWeAuBSKFgubiOr628UX8o0,12598
+py_to_proto/validation.py,sha256=ssTE17roJwMYwTkRSuDUKL_JGAf1C3Ua0bcAsSPEtLE,14885
+py_to_proto-0.5.1.dist-info/LICENSE,sha256=t-ZkY-vak1QWjzid8VIzMds6wT0xEafbk406cLmdj_Q,1088
+py_to_proto-0.5.1.dist-info/METADATA,sha256=DIu_ywPT9DfK1RlhnDZNvf3YsZWDY8RXHqCyYYdD45M,6771
+py_to_proto-0.5.1.dist-info/WHEEL,sha256=I_KChcJXQmmKEKoYNpXneNq4FOYBoxTTK20mmaXSGkc,93
+py_to_proto-0.5.1.dist-info/top_level.txt,sha256=AScY99r2vRxOMZGEg6sfYg7B5BlIyy9sXKc6CrlBR5s,12
+py_to_proto-0.5.1.dist-info/RECORD,,
