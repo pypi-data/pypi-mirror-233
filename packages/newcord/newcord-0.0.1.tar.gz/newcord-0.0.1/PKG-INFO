@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: newcord
+Version: 0.0.1
+Summary: 
+Author: Pranoy Majumdar
+Author-email: officialpranoy@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: questionary (>=2.0.1,<3.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# Newcord
