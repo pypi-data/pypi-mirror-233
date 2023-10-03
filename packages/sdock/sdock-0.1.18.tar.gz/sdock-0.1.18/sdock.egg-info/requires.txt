@@ -1,0 +1,11 @@
+mystring
+
+[all]
+python-vagrant
+xsdata
+
+[vagrant]
+python-vagrant
+
+[vb]
+xsdata

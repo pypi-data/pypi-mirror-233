@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+sdock/__init__.py
+sdock/docker.py
+sdock/util.py
+sdock/vagrant.py
+sdock/vb.py
+sdock.egg-info/PKG-INFO
+sdock.egg-info/SOURCES.txt
+sdock.egg-info/dependency_links.txt
+sdock.egg-info/requires.txt
+sdock.egg-info/top_level.txt
+sdock/vbox_extra/__init__.py
+sdock/vbox_extra/gen.py
