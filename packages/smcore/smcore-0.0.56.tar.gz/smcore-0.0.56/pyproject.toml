@@ -1,0 +1,22 @@
+[project]
+name = "smcore"
+version = "0.0.56"
+authors = [
+        {name="J. Hoffman, J. Genender", email="johnmarianhoffman@gmail.com"},
+]
+description = "Package providing base sm agent classes and clients"
+readme= "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests == 2.31.0",
+    "protobuf == 4.21.12",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/sm-ai-team/sm-core-go"
+"Bug Tracker" = "https://gitlab.com/sm-ai-team/sm-core-go/issues"
