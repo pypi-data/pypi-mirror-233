@@ -1,0 +1,12 @@
+zmq_ai_client_python/__init__.py,sha256=6CAti5LMKhhJmA7UhwGyH43iWYt-pzj7Suhw8EfKM6c,204
+zmq_ai_client_python/client.py,sha256=U-Eer_prtDHPIu_LVZdwgE1E4tkq1P1rS1bziZy-GDU,4988
+zmq_ai_client_python/client_test.py,sha256=0V-61fxhdkRTM-WOIOMf60SldSopdVCPNzcMsU4Gw6g,1668
+zmq_ai_client_python/schema/completion.py,sha256=6i5sS6jW2rZoQ855AzTpxAO6UvJsBs3xF8_5DKrR5qM,2531
+zmq_ai_client_python/schema/request.py,sha256=RUr2YUfbw7mP_bo0XybQY34PrsADELZpJ-Ocfm7IPD8,1584
+zmq_ai_client_python/schema/session_state.py,sha256=MMZgjPjwP6W0mHLm0wmGwaPRf73gbdcku-rEBC8wzyo,198
+zmq_ai_client_python/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zmq_ai_client_python/tests/client_tests.py,sha256=0WRER7_FnSQXbf353yzD_otDCJ5WjWWqs0fgbd2i7B0,1785
+zmq_ai_client_python-1.1.0.dist-info/METADATA,sha256=PB25GR_Zil3npYNN3GyMO05czqtQYuiThGHK-JR2wNA,344
+zmq_ai_client_python-1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+zmq_ai_client_python-1.1.0.dist-info/top_level.txt,sha256=S861527CPZCvskUBY2V92tD-Rs5tuU5qYa8aTBJYjdc,21
+zmq_ai_client_python-1.1.0.dist-info/RECORD,,
