@@ -1,0 +1,11 @@
+typeid/__init__.py,sha256=bS8J12-a6sOcTIHBumVs9qLRxCX5P-KWVLeMw6m1e_U,149
+typeid/base32.py,sha256=UTYXJjb95_nn-vYIpw7nquguBac4GZ0TL0oE6BuujPg,6504
+typeid/cli.py,sha256=h93_EAOzWO3bqubgL83Q-smHp11lvxMjgAunwyTWwFM,872
+typeid/constants.py,sha256=2ApV0agNys2yI9NM8oQZbyTR2rgP-VtxXGrM6glBB2Q,37
+typeid/errors.py,sha256=QPHZ-DJg5OpPOHtuetsqMCYu-E_aHMJZTTeFqx9Gz_4,207
+typeid/typeid.py,sha256=_hu8bHjFVcwe2QklrFmYZOj2ycltuL8p_XjAq2ncviY,2480
+typeid/validation.py,sha256=yvLO5lfMkJpduZzql_FJlj4hW6HcWURWYLRQvR92SSM,899
+typeid_python-0.2.2.dist-info/LICENSE,sha256=f98oZ9FId4i3835UJYGw066BU8PSc57L1utGWS1ypcs,1070
+typeid_python-0.2.2.dist-info/METADATA,sha256=RDsPvAGyBmrLMR0cCxu0-6ZvuOjKSJ_ndX227zSftcY,4073
+typeid_python-0.2.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+typeid_python-0.2.2.dist-info/RECORD,,
