@@ -1,0 +1,9 @@
+neurokit2
+numpy
+opencv_contrib_python
+pyserial
+PySide6
+PySide6_Addons
+PySide6_Essentials
+scipy
+matplotlib
