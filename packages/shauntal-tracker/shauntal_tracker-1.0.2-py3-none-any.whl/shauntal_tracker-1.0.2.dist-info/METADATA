@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: shauntal-tracker
+Version: 1.0.2
+Summary: Track your consistency on a line graph
+Author: Jamangi
+Author-email: jamangi.jmg@gmail.com
+Requires-Dist: matplotlib
+
