@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+license_utils/__init__.py
+license_utils/build_licenses.py
+license_utils/computation.py
+license_utils/matcher.py
+license_utils/normalize.py
+license_utils/sorensen_dice.py
+license_utils.egg-info/PKG-INFO
+license_utils.egg-info/SOURCES.txt
+license_utils.egg-info/dependency_links.txt
+license_utils.egg-info/entry_points.txt
+license_utils.egg-info/requires.txt
+license_utils.egg-info/top_level.txt
+tests/test_build_licenses.py
+tests/test_matcher.py
