@@ -1,0 +1,28 @@
+image: debian/bookworm
+repositories:
+  # key-id comes from the command: curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --armor
+  pgdg: http://apt.postgresql.org/pub/repos/apt bookworm-pgdg main B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+  # key-id comes from the command:  curl https://apt.dalibo.org/labs/debian-dalibo.asc | gpg --armor
+  dalibo-labs: http://apt.dalibo.org/labs bookworm-dalibo main 81DD687D46C403FF095FDF8E4D83C83EEEE2A6B3
+packages:
+  - etcd-client
+  - etcd-server
+  - postgresql-common
+  - postgresql-15
+  - postgresql-15-pg-qualstats
+  - postgresql-15-pg-stat-kcache
+  - postgresql-15-powa
+  - pgbackrest
+  - prometheus-postgres-exporter
+  - python3-pip
+  - python3-psycopg2
+  - dbus-user-session
+  - systemd
+  - temboard-agent
+  - tox
+sources:
+  - https://git.sr.ht/~dalibo/pglift
+tasks:
+  - tests: |
+      cd pglift
+      tox -e tests-func -- --systemd

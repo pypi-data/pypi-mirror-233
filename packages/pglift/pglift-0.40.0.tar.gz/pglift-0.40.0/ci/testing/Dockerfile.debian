@@ -1,0 +1,46 @@
+FROM debian:bookworm-slim
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get -qq update && \
+	apt-get -qq -y install --no-install-recommends \
+	curl \
+	etcd-client \
+	etcd-server \
+	ca-certificates \
+	gnupg \
+	lsb-release \
+	openssh-client \
+	openssh-server \
+	&& rm -rf /var/lib/apt/lists/*
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -c -s)-pgdg main" \
+	| tee /etc/apt/sources.list.d/pgdg.list
+RUN curl --output /etc/apt/trusted.gpg.d/pgdg.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc
+RUN mkdir -p /etc/postgresql-common/createcluster.d/
+RUN echo "create_main_cluster = false" \
+	> /etc/postgresql-common/createcluster.d/no-main-cluster.conf
+RUN echo deb http://apt.dalibo.org/labs $(lsb_release -cs)-dalibo main > /etc/apt/sources.list.d/dalibo-labs.list
+RUN curl https://apt.dalibo.org/labs/debian-dalibo.asc | apt-key add -
+RUN apt-get -qq update && \
+	apt-get -y install --no-install-recommends postgresql-common
+ARG PG_VERSION=16
+RUN apt-get -qq update && \
+	apt-get -y install --no-install-recommends \
+	build-essential \
+	git \
+	jq \
+	procps \
+	python3-pip \
+	python3-venv \
+	postgresql-${PG_VERSION} \
+	pgbackrest \
+	prometheus-postgres-exporter \
+	temboard-agent \
+	tox \
+	&& rm -rf /var/lib/apt/lists/*
+
+RUN useradd --uid 5432 --create-home runner
+
+RUN touch /etc/port-for.conf
+RUN chown runner: /etc/port-for.conf
+
+USER runner
+WORKDIR /home/runner

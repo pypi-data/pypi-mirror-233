@@ -1,0 +1,44 @@
+---
+- name: Major online upgrade of 'app' database
+  hosts: localhost
+  tasks:
+    - name: old instance
+      dalibo.pglift.instance:
+        name: old
+        version: 12
+        port: 5499
+        settings:
+          wal_level: logical
+        restart_on_changes: true
+        roles:
+          - name: app
+            password: "{{ app_password }}"
+            login: true
+            replication: true
+        databases:
+          - name: app
+            owner: app
+            publications:
+              - name: migrate
+
+    - name: new instance
+      dalibo.pglift.instance:
+        name: new
+        version: 15
+        port: 5500
+        roles:
+          - name: app
+            password: "{{ app_password }}"
+        databases:
+          - name: app
+            owner: app
+            clone:
+              dsn: "postgresql://app:{{ app_password }}@localhost:5499/app"
+              schema_only: true
+            subscriptions:
+              - name: migrate
+                connection:
+                  conninfo: "host=localhost user=app port=5499"
+                  password: "{{ app_password }}"
+                publications:
+                  - migrate
