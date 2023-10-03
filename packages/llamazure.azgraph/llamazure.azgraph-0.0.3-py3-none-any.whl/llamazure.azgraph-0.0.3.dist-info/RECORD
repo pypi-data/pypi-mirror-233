@@ -1,0 +1,10 @@
+llamazure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/azgraph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamazure/azgraph/azgraph.py,sha256=iC_CYwI3kme_JtaMt96AQ4HxxPFVozf-EkK2efTTt54,3843
+llamazure/azgraph/codec.py,sha256=H4p0whv8J34sf6SEvxe3CeIdeC_9G5LsLlf-47eHDsg,815
+llamazure/azgraph/models.py,sha256=Z6UIGbrV_l2RXcKogLozem70RQWJ6ipRSM1ngVyC8lU,1331
+llamazure.azgraph-0.0.3.dist-info/METADATA,sha256=G1n-H0k_s9dk4zS3jdxcNozRERvwD2WeiMNYKwTpvkA,2840
+llamazure.azgraph-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+llamazure.azgraph-0.0.3.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamazure.azgraph-0.0.3.dist-info/top_level.txt,sha256=4gbH0fcRQb_rEVCcLYRu_D2cVCdf0VYVCIi_f0PiMq4,10
+llamazure.azgraph-0.0.3.dist-info/RECORD,,
