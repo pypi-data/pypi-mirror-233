@@ -1,0 +1,11 @@
+mpl_tools/__init__.py,sha256=EqstqLBaaKTxstGe3WqSfZ_jDiZbNk0PwaSO24PyJYI,2312
+mpl_tools/conftest.py,sha256=MQKyivJErrSEI5Kwg8FWS5lFVHJoYih18X18wAtNy1M,213
+mpl_tools/log_toggler.py,sha256=YxbvRFNJwX_MZPTMWjXOT1SG0duW6ZgJucdsu31unYY,2910
+mpl_tools/misc.py,sha256=EnCrViNDkJPLZWn7mUX4GeqqM2rL3sLqdWooISOnQwc,4995
+mpl_tools/place.py,sha256=OJwVgK7E5h1dhj4OqLh9kykYVCQT7Xixqrgh0fEpjlI,13462
+mpl_tools/place_ax.py,sha256=7qIyFPw8WVyoyarsp9VQUAGXFIpvMvjZypySXiHlUoQ,4436
+mpl_tools/sci.py,sha256=jOIqcJB5lPdbEt07Mew6wE_5BhEL5vTjzlieefhUT2o,6527
+mpl_tools/visibility.py,sha256=Gs4tVQ9hBDxo1Xs_LtME2U2uNFhxmX11erhBxupAsq8,5805
+mpl_tools-0.3.2.dist-info/METADATA,sha256=w7tJ8E5M4dEKKaeFS2eddwucZWsFqInsCZMrroUgwD4,2045
+mpl_tools-0.3.2.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+mpl_tools-0.3.2.dist-info/RECORD,,
