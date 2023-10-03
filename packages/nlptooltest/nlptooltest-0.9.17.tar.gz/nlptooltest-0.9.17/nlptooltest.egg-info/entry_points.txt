@@ -1,0 +1,6 @@
+[console_scripts]
+sina_arStrip = nlptooltest.CLI.utils.arStrip:main
+sina_corpus_tokenizer = nlptooltest.CLI.utils.corpus_tokenizer:main
+sina_implication = nlptooltest.CLI.utils.implication:main
+sina_jaccard_similarity = nlptooltest.CLI.utils.jaccard_similarity:main
+
