@@ -1,0 +1,12 @@
+mozperftest_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mozperftest_tools/profile_enhancer.py,sha256=WST_HzxkTU-lKtNAhvyc7kSaNHMrKVp6G3KtDy_EWbk,8953
+mozperftest_tools/regression_detector.py,sha256=Mx2EQk-C1z1-zTFqeWy2-7EdfjAvNX1vQP__HW-7dQQ,19811
+mozperftest_tools/side_by_side.py,sha256=soE5Y38gGoZAOqfoY4MIAeM7IpqyDfdcvzbc81um15Q,32036
+mozperftest_tools/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mozperftest_tools/utils/artifact_downloader.py,sha256=1VfWHLN1KQUFi-FbDJAfI6WUF3N1PkriI7zZUVZ955E,19471
+mozperftest_tools/utils/task_processor.py,sha256=duVc7AUB8_4V0GlpqfGVhKnah8KRnaDuyo7ksoF1Uuo,5781
+mozperftest_tools/utils/utils.py,sha256=n0EEGCJ10d6l9HpJQdOwUZjqPh0OIUKponoaBalKCUk,5213
+mozperftest_tools-0.2.8.dist-info/METADATA,sha256=slCP8ZJGFiuSdY6F2F0x1YSNVJWAIYWY0t8tGHZI6FM,1788
+mozperftest_tools-0.2.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mozperftest_tools-0.2.8.dist-info/top_level.txt,sha256=ZpTmdC9FspTVixalC0l4kai039_fKePMIQ0tz8O2KMA,18
+mozperftest_tools-0.2.8.dist-info/RECORD,,
