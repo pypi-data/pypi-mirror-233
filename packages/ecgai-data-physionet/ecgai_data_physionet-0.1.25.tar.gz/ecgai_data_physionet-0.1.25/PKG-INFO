@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ecgai-data-physionet
+Version: 0.1.25
+Summary: 
+Author: RobC
+Author-email: rob.clapham@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aenum (>=3,<4)
+Requires-Dist: numpy (>=1,<2)
+Requires-Dist: pydantic (>=1,<2)
+Requires-Dist: seqlog (>=0,<1)
+Requires-Dist: wfdb (>=4,<5)

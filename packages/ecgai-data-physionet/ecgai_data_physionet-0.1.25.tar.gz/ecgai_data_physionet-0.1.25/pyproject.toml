@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "ecgai-data-physionet"
+version = "0.1.25"
+description = ""
+authors = ["RobC <rob.clapham@gmail.com>"]
+
+[tool.poetry.dependencies]
+#TODO change poetry version to <4.0, currently required by scipy
+python = "^3.9"
+numpy = "^1"
+aenum = "^3"
+pydantic = "^1"
+wfdb = "^4"
+seqlog = "^0"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7"
+pre-commit = "^3"
+pylint = "^2"
+coverage = "^7"
+tox = "^4"
+bandit = {extras = ["toml"], version = "^1"}
+fluentcheck = "^0"
+black = "^23"
+grpcio-tools = "^1"
+pytest-asyncio = "^0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+omit = [
+    "src/ecgai_drawing/enums/*",
+    "other/lib.py"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::UserWarning",
+    # note the use of single quote below to denote "raw" strings in TOML
+    'ignore:function np.fromstring\(\) is deprecated:DeprecationWarning',
+]
