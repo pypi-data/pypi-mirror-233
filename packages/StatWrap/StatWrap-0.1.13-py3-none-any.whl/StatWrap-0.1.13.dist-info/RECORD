@@ -1,0 +1,13 @@
+statwrap/__init__.py,sha256=IAaQOessnkpkaEQrMJvv2nxPK4L0px3pUmH0ifnVidA,135
+statwrap/core.py,sha256=jr-G99XSEJMOP95BnmJIhsenPsXXB48uu3CwfB_u3Xg,1135
+statwrap/data.py,sha256=3SyhrtIavx2FS7jdDydW5qqhYN33o4TXkFO0VHC154E,4331
+statwrap/fpp.py,sha256=PZ_Vx2t17EkILoZJOyEt4BdmUiSgQljxP0kuMTvbZwM,10804
+statwrap/sheets.py,sha256=h0Z6rEpi-Z0Ic8_U_MI9-hiF6vb7BY9xB6LRS3REv_g,7694
+statwrap/utils.py,sha256=A6A4Zuhy5tfsnaexdFKuFG36F5YRBCHR7gr8zZba1P4,6590
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fpp.py,sha256=hRAYnLlIfMqoSIH21iKngwmR8zcx6y23h84-2HQWgs0,455
+StatWrap-0.1.13.dist-info/LICENSE,sha256=0lU3LN3DgvwRm_dshijfUX_D0Vuw8XurQ0yBF1lwciE,1502
+StatWrap-0.1.13.dist-info/METADATA,sha256=30A8RLPrZ4LOt_Lko0vOffjGXcX4ORMJfpaOc8rxzpY,2240
+StatWrap-0.1.13.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+StatWrap-0.1.13.dist-info/top_level.txt,sha256=h7vH5-pSdKRyn4YI_zfc4sp9rmeMGp6bI5CRtHTax1Q,15
+StatWrap-0.1.13.dist-info/RECORD,,
