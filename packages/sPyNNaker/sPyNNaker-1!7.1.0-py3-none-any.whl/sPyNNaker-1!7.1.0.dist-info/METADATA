@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: sPyNNaker
+Version: 1!7.1.0
+Summary: Tools for simulating neural models generated using PyNN 0.9 on the SpiNNaker platform
+Home-page: https://github.com/SpiNNakerManchester/SpyNNaker
+Maintainer: SpiNNakerTeam
+Maintainer-email: spinnakerusers@googlegroups.com
+License: Apache-2.0
+Keywords: spinnaker,pynn
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE_POLICY.md
+Requires-Dist: SpiNNFrontEndCommon ==1!7.1.0
+Requires-Dist: matplotlib
+Requires-Dist: pyparsing <3.0.0,>=2.2.1
+Requires-Dist: quantities
+Requires-Dist: scipy
+Requires-Dist: csa
+Requires-Dist: pynn <0.10.0,>=0.9.1 ; python_version == "3.7"
+Requires-Dist: neo <0.10.0,>=0.5.2 ; python_version == "3.7"
+Requires-Dist: lazyarray <=0.4.0,>=0.2.9 ; python_version == "3.7"
+Requires-Dist: pynn !=0.12.0,>=0.11 ; python_version >= "3.8"
+Requires-Dist: neo ; python_version >= "3.8"
+Requires-Dist: lazyarray ; python_version >= "3.8"
+Provides-Extra: test
+Requires-Dist: SpiNNakerTestBase ==1!7.1.0 ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: testfixtures ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: graphviz ; extra == 'test'
+
+
+sPyNNaker - PyNN Simulations on SpiNNaker Hardware
+==================================================
+This package provides common code for PyNN implementations for SpiNNaker.
+
+We have [user installation instructions](http://spinnakermanchester.github.io/)
+which describe in detail more about what is going on.
+
+Developer Installation
+----------------------
+If you want to be able to edit the source code, but still have it referenced
+from other Python modules, you can set the install to be a
+[developer install](http://spinnakermanchester.github.io/development/devenv.html)
+which describes the process of installing the other modules which these
+depend upon for a complete editable install.
+
+Documentation
+-------------
+[sPyNNaker Python documentation](https://spynnaker.readthedocs.io/en/7.1.0)
+<br>
+[sPyNNaker C documentation](http://spinnakermanchester.github.io/sPyNNaker/c/)
+
+[Combined PyNN8 python documentation](http://spinnakermanchester.readthedocs.io/en/7.1.0)
+
