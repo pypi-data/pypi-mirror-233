@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/flask_sock/__init__.py
+src/flask_sock.egg-info/PKG-INFO
+src/flask_sock.egg-info/SOURCES.txt
+src/flask_sock.egg-info/dependency_links.txt
+src/flask_sock.egg-info/not-zip-safe
+src/flask_sock.egg-info/requires.txt
+src/flask_sock.egg-info/top_level.txt
+tests/test_flask_sock.py
