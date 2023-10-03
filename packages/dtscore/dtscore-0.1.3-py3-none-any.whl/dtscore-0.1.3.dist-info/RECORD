@@ -1,0 +1,13 @@
+dtscore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dtscore/consoleutils.py,sha256=Ufqeiq90Bg0Irwj0PHNNHxYWEBOaN068jg7Ex2TdiMs,1878
+dtscore/csvnames.py,sha256=38q2HSz7k0SYjdih5ibGE07LNNrfMwvNYcvh21DkHHM,4949
+dtscore/dataframenames.py,sha256=F5_3GIkfR_r_LtmuiMVkNrsQ1aPpgP5Y14YWGkrdCmY,1059
+dtscore/globals.py,sha256=ccMDK56oz4AANThAgdtDYBakhsxlLKVaHDorRAc2m64,4015
+dtscore/logging.py,sha256=ItPehYDdE-YaK31KoKRriNTjjVxLix9uVbLnPupdd0g,1651
+dtscore/schema_enums.py,sha256=1hLYf2JXEUDuHoLvGi6uBX2_9m3TASk-ljKaXP8H1Oo,1186
+dtscore/utils.py,sha256=0TVC06Z0VaHnHiThlKkaGcv2y-jXdfjIWBwjxJdq67s,1380
+dtscore-0.1.3.dist-info/LICENSE,sha256=0LDG0IGidmIVxxXUhurHc57Svu_HFnRZ_FGlnOJvl74,1084
+dtscore-0.1.3.dist-info/METADATA,sha256=4XhbTxUmG_7YOTcFqdhWBpCNNiwhU8lgu-jGo_8X-cM,563
+dtscore-0.1.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dtscore-0.1.3.dist-info/top_level.txt,sha256=0xmO-BDWE3I7YX1TIB8phY_kFv8P_ZonalRI3LUjOwU,8
+dtscore-0.1.3.dist-info/RECORD,,
