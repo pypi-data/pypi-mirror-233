@@ -1,0 +1,5 @@
+[console_scripts]
+convert_to_seconds=vid_cut.get_video_duration:cts
+get_video_duration=vid_cut.get_video_duration:gvd
+run_vid_cut=vid_cut.vidcut:run
+
