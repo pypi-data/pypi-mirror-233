@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+verificaciones/__init__.py
+verificaciones/strings.py
+verificaciones/validate.py
+verificaciones.egg-info/PKG-INFO
+verificaciones.egg-info/SOURCES.txt
+verificaciones.egg-info/dependency_links.txt
+verificaciones.egg-info/top_level.txt
