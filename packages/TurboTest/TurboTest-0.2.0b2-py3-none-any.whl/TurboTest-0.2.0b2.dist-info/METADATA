@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: TurboTest
+Version: 0.2.0b2
+Summary: a simple and readable python testing tool
+Author-email: Nicholas Valentinus <nicho@scapeville.com>
+License: MIT
+Project-URL: Repository, https://github.com/nvfp/TurboTest
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# *TurboTest🔥*
+
+let's make test readable and simple
+
+## Others
+
+- [Thank you💙](https://nvfp.github.io/thank-you)
+- [Documentation](https://nvfp.github.io/mykit)
+- [Changelog](https://nvfp.github.io/mykit/changelog)
+
+
+## License
+
+This project's source code and documentation are under the MIT license.
