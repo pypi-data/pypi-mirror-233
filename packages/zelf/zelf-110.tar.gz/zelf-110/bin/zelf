@@ -1,0 +1,159 @@
+#!/usr/bin/env python3 
+# This file is placed in the Public Domain.
+#
+#
+
+
+"runtime"
+
+
+import os, sys ; sys.path.insert(0, os.getcwd())
+
+
+import os
+import readline
+import sys
+import termios
+import time
+import traceback
+
+
+from opv.methods import fmt
+from opv.objects import Default
+from opv.storage import Storage, spl
+
+
+from opr.brokers import Broker
+from opr.configs import Cfg
+from opr.errored import Errors, show
+from opr.handler import Event, Handler, command
+from opr.parsers import parse
+from opr.scanner import scan
+from opr.threads import launch
+
+
+import opr.errored
+
+
+import zelf.modules as modules
+
+
+"defines"
+
+
+NAME = __file__.split(os.sep)[-1]
+
+
+if ".py" in NAME:
+    NAME = __file__.split(os.sep)[-1]
+
+
+Storage.workdir = os.path.expanduser(f"~/.{NAME}")
+
+
+class CLI(Handler):
+
+    def __init__(self):
+        Handler.__init__(self)
+        self.register("command", command)
+        Broker.add(self)
+
+    def announce(self, txt):
+        pass
+
+    def dosay(self, channel, txt):
+        print(txt)
+        sys.stdout.flush()
+
+
+class Console(CLI):
+
+    def poll(self) -> Event:
+        return self.event(input("> "))
+
+
+def cmd(event):
+    event.reply(",".join(Console.cmds))
+
+
+"utility"
+
+
+def cprint(txt):
+    print(txt)
+    sys.stdout.flush()
+
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.setsid()
+    os.umask(0)
+    with open('/dev/null', 'r', encoding="utf-8") as sis:
+        os.dup2(sis.fileno(), sys.stdin.fileno())
+    with open('/dev/null', 'a+', encoding="utf-8") as sos:
+        os.dup2(sos.fileno(), sys.stdout.fileno())
+    with open('/dev/null', 'a+', encoding="utf-8") as ses:
+        os.dup2(ses.fileno(), sys.stderr.fileno())
+
+
+def mods(path):
+    res = []
+    for fnm in os.listdir(path):
+        if fnm.endswith("~"):
+            continue
+        if not fnm.endswith(".py"):
+            continue
+        if fnm in ["__main__.py", "__init__.py"]:
+            continue
+        res.append(fnm[:-3])
+    return sorted(res)
+
+
+def wrap(func) -> None:
+    old = None
+    try:
+        old = termios.tcgetattr(sys.stdin.fileno())
+    except termios.error:
+        pass
+    try:
+        func()
+    except (EOFError, KeyboardInterrupt):
+        cprint("")
+        sys.stdout.flush()
+    finally:
+        if old:
+            termios.tcsetattr(sys.stdin.fileno(), termios.TCSADRAIN, old)
+    show()
+
+
+def main():
+    parse(Cfg, " ".join(sys.argv[1:]))
+    if "d" in Cfg.opts:
+        daemon()
+    if "a" in Cfg.opts:
+        Cfg.mod = ",".join(mods(modules.__path__[0]))
+    if "v" in Cfg.opts:
+        Errors.output = cprint
+    if "d" in Cfg.opts:
+        cli = CLI()
+        scan(modules, Cfg.mod, "i" in Cfg.opts)
+        cli.forever()
+    elif "c" in Cfg.opts:
+        csl = Console()
+        csl.add(cmd)
+        scan(modules, Cfg.mod, "i" in Cfg.opts, True)
+        csl.start()
+        csl.forever()
+    else:
+        cli = CLI()
+        cli.add(cmd)
+        scan(modules, Cfg.mod, "i" in Cfg.opts)
+        evt = cli.event(Cfg.otxt)
+        command(evt)
+        evt.wait()
+
+
+if __name__ == "__main__":
+    wrap(main)
