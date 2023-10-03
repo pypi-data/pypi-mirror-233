@@ -1,0 +1,12 @@
+ttally/__init__.py,sha256=el_DzYUADHKArQUmiOXIVwucK-RzFLU5nUxDEqoZjdk,1568
+ttally/__main__.py,sha256=7p_RTap9Y7_rFOEQeyoGbMDwg8m2Eqe8hm-MueY1C1I,381
+ttally/config.py,sha256=6vJePe_vIsa2jlReo3XByNlNVNGw-iJWXAdWsz4aAec,144
+ttally/core.py,sha256=XYLiWHk_mAhQ2h4hkdEeBOkCupEBjJSr3nUPk7npw6c,22197
+ttally/main.py,sha256=I701j9XYTbzemJsZgAhBZ0sUeUIfWWuGViaJ2htm_9M,13806
+ttally/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ttally-0.1.4.dist-info/LICENSE,sha256=DLAorQX7ouXcNHtSqiIVQDT7LK3JgZRV30drSyxo9o8,1074
+ttally-0.1.4.dist-info/METADATA,sha256=oikYkEBZVhsF-RUPGYDPN8a7wpSJpEydll3Ma6J_OwE,10655
+ttally-0.1.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ttally-0.1.4.dist-info/entry_points.txt,sha256=NhTR8BGSTGUevSfA983ky3CPPxaLIgLy3bqU-xUXVqk,48
+ttally-0.1.4.dist-info/top_level.txt,sha256=HbEJOleDnP2cItStrnJOWeQGU2k8njRs87blwD8mpgU,7
+ttally-0.1.4.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+ttally = ttally.__main__:main
