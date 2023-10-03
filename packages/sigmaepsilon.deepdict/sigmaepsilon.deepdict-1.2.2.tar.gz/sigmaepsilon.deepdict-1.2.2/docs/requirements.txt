@@ -1,0 +1,11 @@
+sphinx
+ipython >= 8.10.0
+myst_parser
+nbsphinx
+sphinx_copybutton
+sphinx_design
+sphinx-inline-tabs
+pydata-sphinx-theme
+
+setuptools >= 65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+tornado >= 6.3.3  # not directly required, pinned by Snyk to avoid a vulnerability
