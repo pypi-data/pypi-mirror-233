@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gazze
+Version: 0.1.2
+Summary: Fastest python web framework
+Author: Guilherme Iazzetta
+Author-email: guilherme.iazzetta@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: starlette (>=0.31.1,<0.32.0)
+Description-Content-Type: text/markdown
+
+# gazze
+
+Fastest python web framework
+

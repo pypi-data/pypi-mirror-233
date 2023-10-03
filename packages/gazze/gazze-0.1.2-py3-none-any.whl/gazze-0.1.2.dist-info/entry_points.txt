@@ -1,0 +1,3 @@
+[console_scripts]
+gazze=gazze.cli:main
+
