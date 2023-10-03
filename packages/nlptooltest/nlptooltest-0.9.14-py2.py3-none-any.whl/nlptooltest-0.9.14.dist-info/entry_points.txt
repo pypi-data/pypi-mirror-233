@@ -1,0 +1,6 @@
+[console_scripts]
+sina_arStrip = CLI.utils.arStrip:main
+sina_corpus_tokenizer = CLI.utils.corpus_tokenizer:main
+sina_implication = CLI.utils.implication:main
+sina_jaccard_similarity = CLI.utils.jaccard_similarity:main
+
