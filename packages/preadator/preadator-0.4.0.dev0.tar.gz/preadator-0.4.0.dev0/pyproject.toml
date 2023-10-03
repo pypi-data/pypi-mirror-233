@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "preadator"
+description = "Process and Thread Management Utility."
+authors = [
+    "Nicholas-Schaub <nick.schaub@nih.gov>",
+    "Najib Ishaq <nahib.ishaq@nih.gov"
+]
+version = "0.4.0-dev0"
+repository = "https://github.com/nicholas-schaub/preadator"
+readme = "README.md"
+packages = [{include = "preadator", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+pre-commit = "^3.4.0"
+black = "^23.9.1"
+ruff = "^0.0.291"
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+pytest-xdist = "^3.3.1"
+pytest-sugar = "^0.9.7"
+pytest-benchmark = "^4.0.0"
+pytest-cov = "^4.1.0"
+numpy = "^1.26.0"
+bfio = {version = "^2.3.1", extras = ["all"]}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
