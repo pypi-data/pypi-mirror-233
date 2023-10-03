@@ -1,0 +1,1 @@
+Este programa gera palavras dissilabas aleatoriamente.
