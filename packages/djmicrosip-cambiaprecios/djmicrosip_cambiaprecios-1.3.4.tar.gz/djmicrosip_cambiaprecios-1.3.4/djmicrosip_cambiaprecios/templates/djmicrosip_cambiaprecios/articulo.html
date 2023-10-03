@@ -1,0 +1,140 @@
+{% extends "djmicrosip_cambiaprecios\base.html" %}
+{% block title %}Cambio de Precios{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+
+<!-- JavaScript Code -->
+{% block js_code %}
+
+{{ block.super }}
+<script src='{{STATIC_URL}}js/jquery.formset.js'></script>
+<script>
+$(function() {
+	$('.form-container').formset({
+		prefix: '{{ formset.prefix }}',
+		addText:'',
+		deleteText:'',
+	});
+});
+
+{% if impuesto %}
+$("#combo_impuesto").val("16");
+{% endif %}
+
+var precios_empresa = [];
+
+{% for precio in precios_empresa %}
+	precios_empresa.push("{{precio}}");
+{% endfor %}
+
+</script> 
+<script src="{{STATIC_URL}}js/djmicrosip_cambiaprecios/cambia_precios.js?v=1.0.7"></script>
+
+{% endblock %}
+{% block breadcrumb %}
+{{ block.super }} 
+<li><a href="/cambiaprecios/articulos/"> Articulos </a></li> 
+<li class='active'> {{ articulo_nombre }}</li> 
+{% endblock %}
+
+{% block content %}
+
+<form  name="formulario" method="post" class="form-horizontal" action="" width="300px"  enctype='multipart/form-data'>{% csrf_token %}
+	{{ form.errors }}
+	{{ form_articulo.errors }}
+	<div class="page-header">
+		<h1>Articulo <small>{{ articulo_nombre }} </small> <button type="button" class="btn" onclick="formulario.submit()"><i class="glyphicon glyphicon-download-alt"></i> Guardar</button>  </h1>
+	</div>
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-3"><strong>Impuesto</strong>
+				<select id="combo_impuesto">
+					<option value="0">IVA 0%</option>
+					<option value="16">IVA 16%</option>
+				</select>
+			</div>
+			
+			<div class="col-md-3"><strong>Costo: </strong> {{ form_articulo.costo_ultima_compra }}
+				<input type="text" value="{{ costo_ultima_compra }}" id="id_ultima_compra">
+				<input type="hidden" value="{{ tipo_cambio_ultima_compra }}" id="id_tipo_cambio_ultima_compra">
+				<input type="hidden" value="{{ es_moneda_local }}" id="id_es_moneda_local">
+				<br><br></div>
+			<div class="col-md-3"><strong>Existencia: </strong><strong>{{existencia}}</strong></div>
+			<div class="col-md-3"><strong>Moneda: </strong><strong>{{moneda_nombre}}</strong></div>
+		</div>
+		<br>
+		<!-- <div class="row">
+			<div class="col-md-3"><strong>Precio de Costo</strong> ({% if not adv_moneda %} {{monedas.0}} {% endif %})</div>
+			<div class="col-md-1"><strong></div>
+			{% for precio in precios_empresa %}
+			<div class="col-md-2"><strong>{{precio}}</strong></div>
+			{% endfor %}
+		</div> -->
+
+			<!-- <div class="col-md-2">
+				<strong>Margen</strong>
+				<br><br>
+				<strong>Precio de Lista</strong>
+				<br><br>  	
+				<strong>Precio mas IVA</strong>
+			</div> -->	
+			<table class="table form-container">
+				<tr>
+					<th>Nombre</th>
+					<th class="hidden">Margen</th>
+					<th>Markup</th>
+					<th>Precio</th>
+					<th>Precio Neto</th>
+				</tr>
+				{% for form in formset.forms%}
+				<tr id="{{ form.prefix }}-row">
+					<td class="nombre_precio"></td>
+					<td class="hidden"><div>{{ form.margen }}%</div></td>
+					<td><div>{{ form.markup }}%</div></td>
+					<td><div>{{ form.precio }}</div></td>
+					<td><input type="text" class="precio_mas_iva" size="10"></td>
+					{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
+				</tr>
+				{% endfor %}
+			</table>
+			
+			
+			{{ formset.management_form }}
+			<br>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-2">
+					<!-- <input id="id_check_iva" type="checkbox" value="IVA"> <strong>IVA</strong> -->
+				</div>
+			</div>
+		</div>
+	</form>
+	<h3 align="center"><strong>Ultimas Compras de este Articulo</strong></h3>
+	<div class="precio_compras">
+		<table class="table">
+			<th>Fecha</th>
+			<th>Proveedor</th>
+			<th>Costo</th>
+			<th>Moneda</th>
+			{% for compra in precios_compra %}
+			<tr>
+				<td>{{compra.0}}</td>
+				<td>{{compra.1}}</td>
+				<td>{{compra.2}}</td>
+				<td>{{compra.3}}</td>
+			</tr>
+			{% empty %}
+			<h3 align="center" style="color:red"><strong>No hay compras registradas de este articulo</strong></h3>
+			{% endfor %}
+		</table>
+	</div>
+	
+
+	<br style="clear:both">
+	{% endblock %}
