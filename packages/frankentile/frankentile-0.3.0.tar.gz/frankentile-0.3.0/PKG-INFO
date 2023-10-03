@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: frankentile
+Version: 0.3.0
+Summary: a qtile configuration lib that is unnecessarily over the top.
+Home-page: https://github.com/calacuda/frankensteins-qtile
+Author: Calacuda
+Author-email: Eoghan West <eowest@gmail.com>
+Project-URL: Homepage, https://github.com/calacuda/frankensteins-qtile
+Project-URL: Bug Tracker, https://github.com/calacuda/frankensteins-qtile/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask[async]
+Requires-Dist: discord
+Requires-Dist: discord
+Requires-Dist: auto-tmux
+Requires-Dist: pycairo
+Requires-Dist: PyGObject
+Requires-Dist: pyalsaaudio
+
+# frankensteins-qtile
+
+Frankenstein's Qtile (frankentile for short) is a library to be used in the configuration of qtile. It is designed to have unnessesary with over the top features that are cool but ultimately mostly useless. It contains features like sending log messages to a discord server, an api to set the wallpaper, etc.

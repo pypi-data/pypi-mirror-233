@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+    "setuptools>=54",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frankentile"
+version = "0.3.0"
+description = "a qtile configuration lib that is unnecessarily over the top."  
+readme = "README.md"
+authors = [
+  { name="Eoghan West", email="eowest@gmail.com" },
+]
+# license = "MIT License"
+classifiers = [ 
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "flask[async]",
+    "discord",
+    "discord",
+    "auto-tmux",
+    "pycairo",
+    "PyGObject",
+    "pyalsaaudio",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/calacuda/frankensteins-qtile"
+"Bug Tracker" = "https://github.com/calacuda/frankensteins-qtile/issues"

@@ -1,0 +1,7 @@
+flask[async]
+discord
+discord
+auto-tmux
+pycairo
+PyGObject
+pyalsaaudio
