@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+ciditel_utilities/__init__.py
+ciditel_utilities/strings.py
+ciditel_utilities/validate.py
+ciditel_utilities.egg-info/PKG-INFO
+ciditel_utilities.egg-info/SOURCES.txt
+ciditel_utilities.egg-info/dependency_links.txt
+ciditel_utilities.egg-info/top_level.txt
