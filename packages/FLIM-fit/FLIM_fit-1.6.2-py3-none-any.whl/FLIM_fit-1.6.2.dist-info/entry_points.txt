@@ -1,0 +1,3 @@
+[console_scripts]
+flimfit = FLIM_fit.GUI:run_gui
+
