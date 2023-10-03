@@ -1,0 +1,12 @@
+aws_assume_role_otp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_assume_role_otp/config.py,sha256=G3GFpwOPJuYJXIlAyfK27X0zLMeWQnFHA0ZYrrihM08,1304
+aws_assume_role_otp/credentials.py,sha256=BmiYcwXvdrQ9nQeTXnvSaSblahQaDHpL_TGmfl-ftQU,7674
+aws_assume_role_otp/encryption.py,sha256=Pvk39o8Bn1Wdb1bXbBQNxS_svxiLlwimfx0_zefsovw,1009
+aws_assume_role_otp/main.py,sha256=9WK5DaYlOBZdwTYyl2iF9D8lzyvAVsFLmFdpjaQ24Z8,934
+aws_assume_role_otp/sts.py,sha256=bnD-3fZVJPw1WjFtOoEkB-oahE-P4nvbNUNxYtoSxFU,3441
+aws_assume_role_otp-0.3.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+aws_assume_role_otp-0.3.dist-info/METADATA,sha256=tBfL5dcdphMOJpXfJWstQWoaYFLeAaE-9rNVbXgln08,2279
+aws_assume_role_otp-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+aws_assume_role_otp-0.3.dist-info/entry_points.txt,sha256=wMB13ZvMreijuo8NJhMuV-78DldULeHTsprBi8p5gjo,69
+aws_assume_role_otp-0.3.dist-info/top_level.txt,sha256=WDShQRU_psFtIAommKGamr01iGy-67d-SrqfQPhePjs,20
+aws_assume_role_otp-0.3.dist-info/RECORD,,

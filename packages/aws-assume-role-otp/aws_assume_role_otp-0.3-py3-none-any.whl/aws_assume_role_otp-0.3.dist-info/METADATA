@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: aws-assume-role-otp
+Version: 0.3
+Summary: A CLI tool to assume a role on AWS using MFA
+Author-email: Fábio Paiva <fabio@paiva.info>
+Project-URL: Homepage, https://github.com/fabiopaiva/aws-assume-role-otp
+Project-URL: Bug Tracker, https://github.com/fabiopaiva/aws-assume-role-otp/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs ==1.4.4
+Requires-Dist: boto3 ==1.28.52
+Requires-Dist: botocore ==1.31.52
+Requires-Dist: cffi ==1.15.1
+Requires-Dist: click ==8.1.7
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: configparser ==6.0.0
+Requires-Dist: cryptography ==41.0.4
+Requires-Dist: inquirerpy ==0.3.4
+Requires-Dist: jmespath ==1.0.1
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: pfzy ==0.3.4
+Requires-Dist: prompt ==0.4.1
+Requires-Dist: prompt-toolkit ==3.0.39
+Requires-Dist: pycparser ==2.21
+Requires-Dist: Pygments ==2.16.1
+Requires-Dist: pyotp ==2.9.0
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: rich ==13.5.3
+Requires-Dist: s3transfer ==0.6.2
+Requires-Dist: shellingham ==1.5.3
+Requires-Dist: six ==1.16.0
+Requires-Dist: typer ==0.9.0
+Requires-Dist: typing-extensions ==4.8.0
+Requires-Dist: urllib3 ==1.26.16
+Requires-Dist: wcwidth ==0.2.6
+
+# aws-assume-role-otp
+
+AWS Assume Role OTP allows you to assume a role on AWS at the same time it generates the MFA token.
+
+## Installation
+
+```
+pip install aws-assume-role-otp
+```
+
+## Usage
+
+```bash
+aws-assume-role-otp
+
+```
+
+### Add role
+```bash
+aws-assume-role-otp --add-role
+
+```
+
+### Remove role
+```bash
+aws-assume-role-otp --remove-role
+
+```
+
+### First time configuration
+
+The first time you run this tool, it will ask you to inform:
+
+* AWS Access Key ID
+* AWS Secret Access Key
+* Serial MFA Secret. [How to register device](https://docs.aws.amazon.com/singlesignon/latest/userguide/how-to-register-device.html)
+* MFA ARN
+* Roles and profiles
+
+
+## Build locally
+
+```
+pip install build
+python -m build
+pip install dist/aws_assume_role_otp-0.3-py3-none-any.whl
+```
+
+
+# Changelog
+
+## [0.3] - 2023-10-02
+
+### Added
+
+- Allow to add or remove roles

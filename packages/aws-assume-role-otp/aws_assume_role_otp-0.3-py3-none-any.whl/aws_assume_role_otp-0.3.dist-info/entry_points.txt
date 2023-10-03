@@ -1,0 +1,2 @@
+[console_scripts]
+aws-assume-role-otp = aws_assume_role_otp.main:app
