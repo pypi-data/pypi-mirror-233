@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "lyre"
+version = "0.1.4"
+description = ""
+authors = ["Chris Chambers <chris@peanutcode.com>"]
+
+[tool.poetry.scripts]
+lyre = 'lyre.server:main'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+trio = "^0.22.2"
+lsp = "^0.1.1"
+aeval = ">=0.1.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+toml = "^0.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
