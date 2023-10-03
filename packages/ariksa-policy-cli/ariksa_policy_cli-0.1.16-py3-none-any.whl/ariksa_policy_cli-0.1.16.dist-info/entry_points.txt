@@ -1,0 +1,3 @@
+[console_scripts]
+ariksa-policy-client=ariksa_policy_cli.app.main:app
+
