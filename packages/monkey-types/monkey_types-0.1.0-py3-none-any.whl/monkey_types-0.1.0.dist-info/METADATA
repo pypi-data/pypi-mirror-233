@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: monkey-types
+Version: 0.1.0
+Summary: A collection of types and models used by Infection Monkey
+Home-page: https://github.com/guardicode/monkeytypes
+License: GPLv3
+Author: Mike Salvatore
+Author-email: mike.s.salvatore@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pydantic[email] (<2.0.0)
+Requires-Dist: semver (==2.13.0)
+Project-URL: Repository, https://github.com/guardicode/monkeytypes
+Description-Content-Type: text/markdown
+
+# monkeytypes
+
+This project contains a collection of types and models used by Infection
+Monkey-related projects.
+
+## Installation
+`pip install monkeytypes`
+
+## Running tests
+```
+$> poetry install
+$> poetry run pytest
+```
+
