@@ -1,0 +1,17 @@
+numpy<1.24.0
+pandas
+numba
+dataclasses
+astropy
+matplotlib
+scipy
+wheel
+tqdm
+pytest
+sphinx-rtd-theme
+
+[dev]
+black
+bumpver
+isort
+pip-tools
