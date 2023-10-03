@@ -1,0 +1,4 @@
+[console_scripts]
+concatsrt=src.run_cli:main
+concatsrt_gui=src.run_cli:main
+
