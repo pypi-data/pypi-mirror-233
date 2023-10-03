@@ -1,0 +1,14 @@
+SpiNNMan==1!7.1.0
+SpiNNaker_PACMAN==1!7.1.0
+spalloc==1!7.1.0
+scipy>=0.16.0
+ebrains_drive>=0.5.1
+
+[plotting]
+matplotlib
+seaborn
+
+[test]
+pytest-cov
+testfixtures
+httpretty!=1.0.0
