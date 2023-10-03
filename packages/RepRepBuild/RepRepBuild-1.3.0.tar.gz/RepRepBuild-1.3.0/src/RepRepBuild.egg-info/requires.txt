@@ -1,0 +1,15 @@
+attrs
+beautifulsoup4
+bibsane
+jinja2
+markdown
+ninja
+numpy
+parse
+pymupdf
+pyyaml
+requests
+scipy
+setuptools
+tqdm
+watchdog
