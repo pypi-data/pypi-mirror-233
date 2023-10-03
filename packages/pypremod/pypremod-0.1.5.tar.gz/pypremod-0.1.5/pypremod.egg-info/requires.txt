@@ -1,0 +1,7 @@
+numpy
+pandas
+pytest
+scipy
+matplotlib
+pypremod-calm==0.1.2
+pypremod-strength==0.1.6
