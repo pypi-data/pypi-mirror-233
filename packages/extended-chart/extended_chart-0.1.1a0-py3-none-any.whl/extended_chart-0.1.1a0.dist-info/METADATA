@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: extended-chart
+Version: 0.1.1a0
+Summary: wrapper for lightweight-charts-python for trading strategy discovery
+Home-page: https://github.com/karunkrishna/poc_lightweight_charts
+Author: Karun Krishna
+Author-email: karun.krishna@amce.corp
+License: MIT
+Requires-Dist: lightweight-charts
+
