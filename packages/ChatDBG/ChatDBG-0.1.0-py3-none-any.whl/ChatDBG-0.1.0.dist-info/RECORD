@@ -1,0 +1,15 @@
+chatdbg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatdbg/__main__.py,sha256=kwx96txlGD59Td0edrvEMZKRvTWnmz81QdbbKmT5w-o,174
+chatdbg/chatdbg.py,sha256=ACr3poxDZlA833sGTxddft3f9Z5W4KnBa5HcmwpJREw,3362
+chatdbg/chatdbg_gdb.py,sha256=Q6zVH4pAUrV7Ic3c0GPChnPSo21u8NGb63nHeC5I9hk,5054
+chatdbg/chatdbg_lldb.py,sha256=1U3bsIqjoZnHF1-SNdkd80rDVGIsowb9oEWJrNIkwUc,8177
+chatdbg/chatdbg_pdb.py,sha256=T-1kV4oM_Mlv2sz2su3CmyKtH5PwzTUti2Uq30O49d0,63589
+chatdbg/chatdbg_utils.py,sha256=qOkugZ9psT0jZWewPhwYz9Ld9rH0s5VXLKPiYw0qxSg,7014
+chatdbg/chatdbg_why.py,sha256=9gB0naqYPXnp2PADhxe6w0E4aWGiV2WxZCv0u_zmrIs,3542
+chatdbg/pdb/pdb.py,sha256=T-1kV4oM_Mlv2sz2su3CmyKtH5PwzTUti2Uq30O49d0,63589
+ChatDBG-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ChatDBG-0.1.0.dist-info/METADATA,sha256=p5cPtRz48XCbTuX7i4ebOet6K-ioMQSAn2jZDcG6RT0,8171
+ChatDBG-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ChatDBG-0.1.0.dist-info/entry_points.txt,sha256=TAT9zeYYpgEDTU0zGr9Qg0eKSHoa2EaAVupihmSP-Po,50
+ChatDBG-0.1.0.dist-info/top_level.txt,sha256=LvFS181zJ5yxSrFIiY2FS0Yf_ror2iKyKt3CpgUCvL0,8
+ChatDBG-0.1.0.dist-info/RECORD,,
