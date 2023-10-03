@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/Audiopy_ML/__init__.py
+src/Audiopy_ML/autoaduio.py
+src/Audiopy_ML.egg-info/PKG-INFO
+src/Audiopy_ML.egg-info/SOURCES.txt
+src/Audiopy_ML.egg-info/dependency_links.txt
+src/Audiopy_ML.egg-info/top_level.txt
