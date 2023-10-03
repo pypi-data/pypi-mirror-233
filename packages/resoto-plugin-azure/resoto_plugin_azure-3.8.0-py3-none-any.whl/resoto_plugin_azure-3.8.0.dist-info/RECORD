@@ -1,0 +1,12 @@
+resoto_plugin_azure/__init__.py,sha256=rDbto--YHOBeG83l_bYR_4Lqk8d3LJ0VYWwCnAAmdV0,4177
+resoto_plugin_azure/azure_client.py,sha256=c8SImIKXa5yJ7oQ1wH8ksDH9WAC4kWvh2siH4-5pq5s,4259
+resoto_plugin_azure/collector.py,sha256=_VorDHqtroNUF3ulyf8RX4cY03EBw7uqusNGghpE8EM,4593
+resoto_plugin_azure/config.py,sha256=Y1Ioxehj5lG3rP6Zz7BmDTO-J70EEppDrASm9KAD-U8,2351
+resoto_plugin_azure/resource/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+resoto_plugin_azure/resource/base.py,sha256=UolJ7LlPJHQ5WYhPWJ0lB9vb8BZZn9bpOiNzRX1hYmk,20818
+resoto_plugin_azure/resource/compute.py,sha256=dO6o-lrnbWCzd0Jp6DUN-d72M4UmZGJDyuMjZfaYTHA,279745
+resoto_plugin_azure-3.8.0.dist-info/METADATA,sha256=EoqdSr7OOZEibeiK9iJSVFj7b-LOXBYQxqZIXL60NbY,1274
+resoto_plugin_azure-3.8.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+resoto_plugin_azure-3.8.0.dist-info/entry_points.txt,sha256=4gfQ5L_pg1HP1OS6oxaH0thIYGLWl18DRJ4hXWotKHE,66
+resoto_plugin_azure-3.8.0.dist-info/top_level.txt,sha256=J0HX2TJ-QozyTLKQGZVh2vQTrPHeODTPXkSCIMvufAA,20
+resoto_plugin_azure-3.8.0.dist-info/RECORD,,

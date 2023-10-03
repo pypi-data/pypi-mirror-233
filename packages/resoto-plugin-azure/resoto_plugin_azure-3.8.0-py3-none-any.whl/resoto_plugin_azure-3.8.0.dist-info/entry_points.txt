@@ -1,0 +1,2 @@
+[resoto.plugins]
+azure = resoto_plugin_azure:AzureCollectorPlugin
