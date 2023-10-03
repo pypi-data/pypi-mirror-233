@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.py
+flushai/__init__.py
+flushai/basemodel.py
+flushai/text2imgbase.py
+flushai.egg-info/PKG-INFO
+flushai.egg-info/SOURCES.txt
+flushai.egg-info/dependency_links.txt
+flushai.egg-info/requires.txt
+flushai.egg-info/top_level.txt
