@@ -1,0 +1,14 @@
+cdumay-error>=0.1.14
+cdumay-result>=0.1.12
+kser>=0.8.22
+pysodium>=0.7.5
+
+[pykafka]
+kafka-python
+
+[tests]
+flake8
+flake8-html
+pytest
+pytest-cov
+pytest-html
