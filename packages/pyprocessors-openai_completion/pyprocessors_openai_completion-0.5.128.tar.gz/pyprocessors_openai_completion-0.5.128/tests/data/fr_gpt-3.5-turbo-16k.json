@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Titre: Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, causant de nombreux d\u00e9g\u00e2ts et pertes humaines\n\nSous-titre: La nation turque sous le choc alors qu'un s\u00e9isme destructeur secoue plusieurs r\u00e9gions du pays\n\n[Date et lieu] - Un violent s\u00e9isme d'une magnitude de 7,8 a frapp\u00e9 la Turquie, semant chaos et destruction \u00e0 travers plusieurs r\u00e9gions du pays. La catastrophe naturelle a provoqu\u00e9 d'importants d\u00e9g\nTitre : La Turquie secou\u00e9e par un s\u00e9isme de magnitude 7,8 : Des d\u00e9g\u00e2ts mat\u00e9riels consid\u00e9rables et de nombreux bless\u00e9s\n\n[Date de publication]\n\n[source]\n\n[VILLE] - Un puissant s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie aujourd'hui, laissant derri\u00e8re lui un paysage de destruction, des b\u00e2timents effondr\u00e9s et des habitants traumatis\u00e9s. L'\u00e9picentre de ce s\u00e9isme d\u00e9vastateur a \u00e9t\u00e9 localis\u00e9 pr\u00e8s de [VILLE],\nTitre : Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, causant des ravages consid\u00e9rables\n\n[Date], [Lieu] - Un puissant s\u00e9isme de magnitude 7,8 a secou\u00e9 aujourd'hui la Turquie, provoquant des destructions massives et semant la panique parmi la population. Le gouvernement turc est en \u00e9tat d'alerte maximale pour faire face \u00e0 cette catastrophe naturelle sans pr\u00e9c\u00e9dent.\n\nLe s\u00e9isme a frapp\u00e9 la r\u00e9gion centrale"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Je r\u00e9side dans une demeure. \nJe vis dans une r\u00e9sidence. \nMon lieu de r\u00e9sidence est une maison. \nMa r\u00e9sidence est une habitation. \nMon domicile est une maison.\n- Ma r\u00e9sidence est situ\u00e9e dans une demeure.\n- Mon logement est une maison.\n- Je r\u00e9side dans une habitation.\n- Ma demeure est une maisonnette.\n- Mon domicile se trouve dans une b\u00e2tisse.\n- Je vis dans une r\u00e9sidence individuelle.\n- La maison o\u00f9 je vis est \u00e0 moi.\n- Mon lieu de r\u00e9sidence est une b\u00e2tisse.\n- Mon foyer est une maison.\n- Ma demeure est un petit pavillon.\n- Ma r\u00e9sidence est une maison.\n- Ma demeure se situe dans une maison.\n- Je r\u00e9side dans une maison.\n- Mon domicile est une maison.\n- Je vis dans une maison.\n- J'ai \u00e9tabli ma r\u00e9sidence dans une maison.\n- Ma localisation est une maison.\n- J'occupe une maison.\n- Mon lieu de vie est une maison.\n- Je loge dans une maison."
+      }
+    ]
+  }
+]
