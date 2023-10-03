@@ -1,0 +1,9 @@
+toucans/__init__.py,sha256=ktDcIFGa7uU6lsDRYvUyweErVDa4lc-Nllv1orafv0s,56
+toucans/core.py,sha256=H8GPPkpsOrr8oMlfe42MM-8DbbrCdW1-zACNpn6-F-I,115
+toucans/prompt/__init__.py,sha256=hEay07Lto-Td2GFA3BgSX-NpFiSl4OoKYKFZ1LYYSOk,27
+toucans/prompt/messages.py,sha256=FP5zPDEbhy8dmClovfZjAAKEIPscgfF7oLllFhthffg,2247
+toucans/prompt/prompt.py,sha256=L3PvFCCRsMMzOKujSm8Z5WBkUE85u_lUtWW3mLCeZZ8,2397
+toucans/utils.py,sha256=XHwvaMpPB5N1b_H8Frdj8MgETQC9yGDWmnbk55insKw,562
+toucans-0.0.2.dist-info/METADATA,sha256=o08m0AEScxsayhWkow0iHzE5CAtsHeDEbqPKqY77JnQ,857
+toucans-0.0.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+toucans-0.0.2.dist-info/RECORD,,

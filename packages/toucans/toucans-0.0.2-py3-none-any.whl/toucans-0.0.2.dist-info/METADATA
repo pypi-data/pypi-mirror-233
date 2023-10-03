@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: toucans
+Version: 0.0.2
+Summary: 
+Author: Kasper Junge
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: litellm (>=0.1.807,<0.2.0)
+Requires-Dist: openai (>=0.28.1,<0.29.0)
+Description-Content-Type: text/markdown
+
+# Toucans 🍉
+
+## Usage Examples 👩‍💻
+How to use toucans for swift prompt development.
+### Vanilla
+```python
+prompt = Prompt(model="gpt-4")
+response = prompt("What is the meaning of life?")
+```
+
+### Template
+```python
+template = "Determine sentiment: {{ sentence }}"
+prompt = Prompt(
+    model="gpt-4",
+    template=template,
+)
+out = prompt(sentence="I love toucans!")
+```
+
+
+
