@@ -1,0 +1,9 @@
+base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base/memoria.py,sha256=ULUcJTL8MlAqQdUI777DNS-625XRdfG3rV4epqof2Ao,203
+gerador/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gerador/palavra.py,sha256=of1LECsoGRddunq7wxNimehrQIFM8uezaJLelSq0Wok,362
+gerapalavras-0.0.1.dist-info/LICENSE,sha256=YpYHEM2uazKLDf5ijU5Ny6arTm9GLCHHfsR-MqQ0TSI,1103
+gerapalavras-0.0.1.dist-info/METADATA,sha256=HIrCqpYd-lpk8py3bb0cu9Xm98Igao3DFoFvug82Wso,401
+gerapalavras-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gerapalavras-0.0.1.dist-info/top_level.txt,sha256=Ja0V-us_-XFH8UptllyNVwqCtlXNgZmEjg3l-Kvojv0,13
+gerapalavras-0.0.1.dist-info/RECORD,,

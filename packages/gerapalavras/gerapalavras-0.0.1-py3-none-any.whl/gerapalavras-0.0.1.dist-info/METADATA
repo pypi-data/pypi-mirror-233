@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gerapalavras
+Version: 0.0.1
+Summary: Pacote python para gerar palavras dissilabas aleatorias
+Home-page: UNKNOWN
+Author: Leonardo de Medeiros Bernardes
+Author-email: leonardo22070053@aluno.cesupa.br
+License: MIT License
+Keywords: Pacote
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Este programa gera palavras dissilabas aleatoriamente.
+
