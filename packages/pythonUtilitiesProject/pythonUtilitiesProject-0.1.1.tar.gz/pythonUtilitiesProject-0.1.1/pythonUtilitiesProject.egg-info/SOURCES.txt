@@ -1,0 +1,12 @@
+README.md
+setup.py
+pythonUtilitiesProject/__init__.py
+pythonUtilitiesProject.egg-info/PKG-INFO
+pythonUtilitiesProject.egg-info/SOURCES.txt
+pythonUtilitiesProject.egg-info/dependency_links.txt
+pythonUtilitiesProject.egg-info/top_level.txt
+pythonUtilitiesProject/utilities/__init__.py
+pythonUtilitiesProject/utilities/utilities.py
+tests/__init__.py
+tests/utilities/__init__.py
+tests/utilities/utilites_test.py
