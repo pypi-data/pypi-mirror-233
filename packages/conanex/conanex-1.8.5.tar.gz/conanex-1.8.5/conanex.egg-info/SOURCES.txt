@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+conanex/__init__.py
+conanex/main.py
+conanex/requirements.txt
+conanex.egg-info/PKG-INFO
+conanex.egg-info/SOURCES.txt
+conanex.egg-info/dependency_links.txt
+conanex.egg-info/entry_points.txt
+conanex.egg-info/requires.txt
+conanex.egg-info/top_level.txt
+conanex/test/__init__.py
