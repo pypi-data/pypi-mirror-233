@@ -1,0 +1,10 @@
+jaxlib
+jax
+jaxtyping
+jaxopt
+simple-pytree==0.1.7
+tensorflow-probability
+orbax-checkpoint
+
+[testing]
+pytest>=5.0
