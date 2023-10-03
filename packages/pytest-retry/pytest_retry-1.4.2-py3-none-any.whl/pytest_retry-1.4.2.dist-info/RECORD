@@ -1,0 +1,11 @@
+pytest_retry/__init__.py,sha256=AVE0RnHNCtryLbJsNwG-QybQTUBioeigRX2dtPRQ-Ws,125
+pytest_retry/configs.py,sha256=Wy4XIUFReSFwicWdf0n9byl4ytPqRD8O7h44_zb8oy8,1017
+pytest_retry/hooks.py,sha256=oK7qXwD7velnOYGyg4dyC-sWt2jVoPaGpaBhqk3lXc4,1187
+pytest_retry/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_retry/retry_plugin.py,sha256=wB0D7ADieLEGmoClzT7Otxz-ZLRt80aHRCxWwf7Im9w,12652
+pytest_retry-1.4.2.dist-info/LICENSE,sha256=9CCgOwLtJU_23dB9oTgFa707eFNyOlb7uy6VRDJaCA4,1062
+pytest_retry-1.4.2.dist-info/METADATA,sha256=r5EaMbcIan0Zd0snBEvSlCS8A5l4tKtKJS-1bmOx4Fw,10259
+pytest_retry-1.4.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pytest_retry-1.4.2.dist-info/entry_points.txt,sha256=Nh09kGB7YECTX_YOwhjwlIAq6xVAT9NXIBvgINZYIBU,52
+pytest_retry-1.4.2.dist-info/top_level.txt,sha256=AFlMNhtnSYrutHBh9tZfuqkN-8Qcq6iVlwyc-xRRB8I,13
+pytest_retry-1.4.2.dist-info/RECORD,,
