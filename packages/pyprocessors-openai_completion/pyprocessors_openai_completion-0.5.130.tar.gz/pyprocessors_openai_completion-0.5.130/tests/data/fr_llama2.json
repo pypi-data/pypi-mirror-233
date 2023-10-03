@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": " Sure, here's a possible article:\n\nTitle: Magnitude 7.8 Earthquake Strikes Turkey\n\nDate: [Insert Date]\n\nA powerful earthquake with a magnitude of 7.8 struck Turkey on [insert date], causing widespread destruction and loss of life. The epicenter of the quake was located in the eastern part of the country, near the city of Elazig.\n\nAccording to officials,"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": " Bien s\u00fbr, voici quelques phrases similaires \u00e0 \"j'habite dans une maison\":\n\n* Je vis dans un appartement.\n* J'ai une r\u00e9sidence en ville.\n* Mon domicile est situ\u00e9 dans le centre-ville.\n* Je suis propri\u00e9taire d'une villa au bord de la mer.\n* J'occupe un studio dans le quartier Latin.\n* Ma r\u00e9sidence principale est une maison de campagne"
+      }
+    ]
+  }
+]
