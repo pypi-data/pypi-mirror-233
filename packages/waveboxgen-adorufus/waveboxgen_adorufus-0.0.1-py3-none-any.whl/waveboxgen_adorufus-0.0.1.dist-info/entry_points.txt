@@ -1,0 +1,2 @@
+[console_scripts]
+waveboxgen = waveboxgen.main:main
