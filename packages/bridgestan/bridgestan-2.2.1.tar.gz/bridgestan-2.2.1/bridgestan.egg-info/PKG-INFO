@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bridgestan
+Version: 2.2.1
+Home-page: https://github.com/roualdes/bridgestan
+Author: Brian Ward, Edward Roualdes, Bob Carpenter
+License: BSD 3-Clause License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# bridgestan.py - The Python interface to BridgeStan
+
+[View the Python interface documentation online](https://roualdes.github.io/bridgestan/latest/languages/python.html)
+
+## Installation
+
+**From PyPI**:
+```shell
+pip install bridgestan
+```
+
+**From the downloaded repository**:
+Assuming you have already cloned https://github.com/roualdes/bridgestan
+```shell
+cd python/ # this directory
+pip install -e .
+```
