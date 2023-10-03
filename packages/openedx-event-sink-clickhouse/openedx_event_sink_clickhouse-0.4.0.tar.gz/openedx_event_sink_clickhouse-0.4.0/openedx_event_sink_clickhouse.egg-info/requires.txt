@@ -1,0 +1,7 @@
+Django
+celery
+django-rest-framework
+edx-django-utils
+edx-opaque-keys
+edx-toggles
+requests

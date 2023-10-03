@@ -1,0 +1,5 @@
+[cms.djangoapp]
+event-sink-clickhouse = event_sink_clickhouse.apps:EventSinkClickhouseConfig
+
+[lms.djangoapp]
+event-sink-clickhouse = event_sink_clickhouse.apps:EventSinkClickhouseConfig
