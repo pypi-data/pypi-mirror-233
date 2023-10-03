@@ -1,0 +1,10 @@
+economic_agents/__init__.py,sha256=SBOMum4f_eqteUXVKAJA1foc-ZEzqXVr4zEWRdPYGns,134
+economic_agents/charness_rabin.py,sha256=XMMFGY2ezOTuDLUUbi0LTa9cexNj9e6iI2p0rGrj4Qg,2594
+economic_agents/horton.py,sha256=n8aO6Iaq_9U3UgynntMqdRL1bsGQaJCTSbZDFoFjX1o,2042
+economic_agents/kahneman.py,sha256=UO4kC6MiRD9ykmYOOEBOdAKnf3pZA7KFfvJ84FZl690,3509
+economic_agents/open_ai.py,sha256=VwgbWkruJ-MXpOQrXqhcAnUgS3dhdeGi8bwBAYpvUJA,603
+economic_agents/zeckhauser.py,sha256=2Xm5XB7uO0WCV83-JgVeSELtDHg3AhknKhzesLUZVyI,6064
+economic_agents-0.1.dist-info/METADATA,sha256=fWnnBs3zOqpKNPMuMBxALrY_-V2SVrRmMWiRbNXOM34,2808
+economic_agents-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+economic_agents-0.1.dist-info/top_level.txt,sha256=DgG8QR7mmHtrdAoRIvsDeHwGw3fP2gzU6PVT1iX4Bhs,16
+economic_agents-0.1.dist-info/RECORD,,
