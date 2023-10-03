@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pypremod
+Version: 0.1.5
+Summary: Python package for Premod solver
+Home-page: https://www.sintef.no
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pypremod-calm ==0.1.2
+Requires-Dist: pypremod-strength ==0.1.6
+
+UNKNOWN
+
