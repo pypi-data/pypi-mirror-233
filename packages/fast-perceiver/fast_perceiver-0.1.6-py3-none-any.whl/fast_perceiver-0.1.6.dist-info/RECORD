@@ -1,0 +1,10 @@
+fast_perceiver/__init__.py,sha256=V_fdrKTvJIZQmxHj6eOsqnAUYRP4ToXSudwIoAht0dE,46
+fast_perceiver/adapters.py,sha256=NctMOFu9n9bhQKl9cOPurkdTgymqb8OxxwnUUgi-YBM,3374
+fast_perceiver/perceiver.py,sha256=22roDxliqsHq1wF88WSRAJd3Ucnk74a3y3hfbFvgWQU,24778
+fast_perceiver/pos_encodings.py,sha256=1y2N7edlhy8q8d_z9JQcmVrh_YaYCWo9P-F1nt_MIUM,5233
+fast_perceiver/utils/__init__.py,sha256=pVzW6UpJuyFfvb-8ZTCUqrjJSm9yncrt6AkIBOVqGH4,1096
+fast_perceiver/utils/encodings.py,sha256=gm0RG3xBH_CWFInDYcvaAtlCEVp3anClwTQgndJKdFI,5234
+fast_perceiver/utils/training.py,sha256=G5j_X3O0Br1xnN5fsa1fugS36BBuWSQUQVta2Vuw2OQ,655
+fast_perceiver-0.1.6.dist-info/METADATA,sha256=xkcu4o4f-gaf_aq4f2UaSj_2vATZYs8asX28y9fyFFA,7261
+fast_perceiver-0.1.6.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+fast_perceiver-0.1.6.dist-info/RECORD,,
