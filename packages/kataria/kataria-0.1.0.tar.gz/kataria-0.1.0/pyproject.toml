@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "kataria"
+version = "0.1.0"
+description = "bringing rust's functional style to python"
+authors = [
+  "xenua <git@xenua.me>",
+]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/0x18050e1501/kataria"
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Rust",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23"
+pytest = "^7"
+isort = "^5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
