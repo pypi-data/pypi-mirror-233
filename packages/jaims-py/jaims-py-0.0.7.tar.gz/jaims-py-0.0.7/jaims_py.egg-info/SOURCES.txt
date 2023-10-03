@@ -1,0 +1,13 @@
+README.md
+setup.py
+jaims/__init__.py
+jaims/agent.py
+jaims/exceptions.py
+jaims/function_handler.py
+jaims/histroy_manager.py
+jaims/openai_wrappers.py
+jaims_py.egg-info/PKG-INFO
+jaims_py.egg-info/SOURCES.txt
+jaims_py.egg-info/dependency_links.txt
+jaims_py.egg-info/requires.txt
+jaims_py.egg-info/top_level.txt
