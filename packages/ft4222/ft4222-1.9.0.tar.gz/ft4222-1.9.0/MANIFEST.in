@@ -1,0 +1,5 @@
+recursive-include linux *
+recursive-include win *
+recursive-include osx *
+include ft4222/*.pyx
+include ft4222/*.pxd
