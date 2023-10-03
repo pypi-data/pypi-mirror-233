@@ -1,0 +1,16 @@
+click
+cplex
+docplex
+joblib
+json5
+jsonschema
+matplotlib
+numpy
+ortools
+pandas
+python-dateutil
+python-json-logger
+scipy
+seaborn
+
+[dev]
