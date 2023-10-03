@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simplex-assimilate
+Version: 0.2.3
+Summary: Perform Data Assimilation on the Simplex. Models an ensemble as a mixture of Dirichlet distributions.
+Author: Oscar Laird
+Author-email: olaird25@gmail.com
+Requires-Python: >=3.11,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: numpy (>=1.24.3,<2.0.0)
+Requires-Dist: scipy (>=1.10.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Simplex Assimilate: Data assimilation on the simplex
+
+![Coverage](tests/coverage.svg)
+
+## Installation 
+```bash
+pip install simplex-assimilate
+```
+
+## File Structure
+ - `simplex_assimilate/` source code
+ - `simplex_assimilate/cdf.py` Conditional distribution functions for the mixed dirichlet prior.
+ - `simplex_assimilate/quantize.py` Convert floating point samples to fixed point representation.
+ - `simplex_assimilate/dirichlet.py` Model samples on the simplex with a mixture of Dirichlet distributions. Fit parameters by maximum likelihood.
+ - `simplex_assimilate/transport.py` Optimal transport of samples on the simplex.
+ - `tests/` unit tests
+ - `coverage_report/` coverage reports
+
+## See Also
+  - [Ice Simplex Assimilate Repository](https://github.com/oscarlaird/ice_simplex_assimilate)
+    - Represent an ice thickness distribution as a point on the simplex and perform transport.
