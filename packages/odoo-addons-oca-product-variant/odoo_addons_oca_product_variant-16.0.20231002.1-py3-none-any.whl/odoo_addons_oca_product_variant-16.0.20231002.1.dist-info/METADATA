@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-product-variant
+Version: 16.0.20231002.1
+Summary: Meta package for oca-product-variant Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-product-variant-configurator <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-product-variant-default-code <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-product-variant-name <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-product-variant-specific-description <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-sale-order-line-variant-description <16.1dev,>=16.0dev
+
+UNKNOWN
+
