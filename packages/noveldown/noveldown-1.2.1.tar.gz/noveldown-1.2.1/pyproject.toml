@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "noveldown"
+version = "1.2.1"
+description = "Webnovel downloader and EPUB converter"
+authors = ["Daniel Chen <danielchen04@hotmail.ca>"]
+license = "LGPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/potatoeggy/noveldown"
+documentation = "https://github.com/potatoeggy/noveldown"
+keywords = ["novel", "epub", "webnovel", "download"]
+
+[tool.poetry.scripts]
+noveldown = "noveldown.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.10.0"
+lxml = "^4.8.0"
+EbookLib = "^0.18.0"
+typer = "^0.7.0"
+httpx = "^0.23.0"
+
+[tool.poetry.dev-dependencies]
+types-requests = "^2.27.11"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
