@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: wf-core-data-python
+Version: 1.6.0
+Summary: Python tools for working with Wildflower Schools core data
+Home-page: https://github.com/WildflowerSchools/wf-core-data-python
+Author: Theodore Quinn
+Author-email: ted.quinn@wildflowerschools.org
+License: UNKNOWN
+Keywords: database
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=1.3)
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: scipy (>=1.6.3)
+Requires-Dist: requests (>=2.25)
+Requires-Dist: gspread-pandas (>=2.2)
+Requires-Dist: python-slugify (>=5.0)
+
+# wf_core_data
+
+Python tools for working with Wildflower Schools core data
+
+## Tasks
+* Consider splitting library into atomic libraries for each assessment and data source
+* Update naming of submodules and functions to be more consistent across assessments
+* NWEA: Add ability to handle more detailed data download (separate test event and student files)
+
+
