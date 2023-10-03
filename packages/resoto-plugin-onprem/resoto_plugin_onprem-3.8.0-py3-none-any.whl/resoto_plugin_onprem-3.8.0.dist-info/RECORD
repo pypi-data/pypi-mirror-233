@@ -1,0 +1,9 @@
+resoto_plugin_onprem/__init__.py,sha256=tdzpxNnyYyYuiCC99PG6Pdyrc4IOZF20pXLqQpsNRxE,5408
+resoto_plugin_onprem/config.py,sha256=L6MY8V76Hhcpu5mMNRnLhyGnSMFlI7BiwQ4IOzr890o,923
+resoto_plugin_onprem/resources.py,sha256=fDmVtFduTSGY3nghw3GV0mrSt4ZaSvqj0ZwOBfWweVA,1222
+resoto_plugin_onprem/ssh.py,sha256=bOIlMcEb5HwWdhJ7QpSQdev86efEHaLdceOcgu4o1xQ,4238
+resoto_plugin_onprem-3.8.0.dist-info/METADATA,sha256=3XJky8IEHCT_dzFbIO1hAV0RqC4mOSZTZISC0UwREvQ,1055
+resoto_plugin_onprem-3.8.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+resoto_plugin_onprem-3.8.0.dist-info/entry_points.txt,sha256=CNvBvQuOlkcJJGgrI98A5Q4b14Yw5Fz6dLAlQ_eIIzc,69
+resoto_plugin_onprem-3.8.0.dist-info/top_level.txt,sha256=eBBObKwzwk0K99ASD0u0rTZShcrWZBEO5Te_f7v8CHk,21
+resoto_plugin_onprem-3.8.0.dist-info/RECORD,,
