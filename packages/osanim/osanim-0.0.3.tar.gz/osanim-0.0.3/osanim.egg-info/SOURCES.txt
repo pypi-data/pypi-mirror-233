@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+osanim/__init__.py
+osanim.egg-info/PKG-INFO
+osanim.egg-info/SOURCES.txt
+osanim.egg-info/dependency_links.txt
+osanim.egg-info/top_level.txt
