@@ -1,0 +1,3 @@
+[console_scripts]
+dolabra = dolabra.cli.main:main
+
