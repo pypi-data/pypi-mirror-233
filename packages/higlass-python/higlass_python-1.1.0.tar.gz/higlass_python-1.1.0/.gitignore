@@ -1,0 +1,11 @@
+__pycache__/
+
+*.egg-info/
+.eggs/*
+
+.ipynb_checkpoints/
+demo/
+notebooks/mnt/
+docs/_build/
+dist/
+.venv
