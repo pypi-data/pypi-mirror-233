@@ -1,0 +1,12 @@
+libRDChEBI/__init__.py,sha256=Lm4Tzg8kuPRacmjSNn-i4AD-n3fci6rNahS7RBxzM1Q,152
+libRDChEBI/depiction.py,sha256=wVbRZUYnE45VqBtEj2GaFVL87iCPf1sKy1CLpJ_NpCA,1327
+libRDChEBI/descriptors.py,sha256=jdidVysc2aAvbBpnwBnwuvdHzSrAWRtvbHcEkNLan1U,6224
+libRDChEBI/formats.py,sha256=V_TzxQArgUIhwYBfrUf1DDqO0FdyPzjQL6aYeJWektM,624
+libRDChEBI/modification.py,sha256=U8eJa_vqo5VHfqUAx4JQUWjNDKx1SxO4xCE5vT8Y3iQ,1060
+libRDChEBI/registration.py,sha256=VeEvx-PRhkH9tPHiJogB3m4lr6x7RLJ1dbHz5OXVBtM,350
+libRDChEBI-0.1.1.dist-info/LICENSE,sha256=i-RNKWfkQ0qVOs24ikfhCqC9MVWfXOK8OksF_Ek3ZOQ,1070
+libRDChEBI-0.1.1.dist-info/METADATA,sha256=mA4opC8jcltv_t5Ltk-LSPuha7uszXCLBXvVHwPHlok,913
+libRDChEBI-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+libRDChEBI-0.1.1.dist-info/top_level.txt,sha256=ZlL5oQL9-i44r1liBEmF4-GuP2IE8O-5SjScF2uOjpw,11
+libRDChEBI-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+libRDChEBI-0.1.1.dist-info/RECORD,,
