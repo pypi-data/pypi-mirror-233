@@ -1,0 +1,8 @@
+python-dateutil
+pyparsing
+six
+
+[test]
+django
+nose
+tox
