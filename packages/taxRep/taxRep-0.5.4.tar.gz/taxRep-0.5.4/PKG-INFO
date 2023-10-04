@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: taxRep
+Version: 0.5.4
+Summary: Taxonomy of microbial genomes
+Home-page: https://github.com/MrOlm/tRep
+Author: Matt Olm
+Author-email: mattolm@berkeley.edu
+License: MIT

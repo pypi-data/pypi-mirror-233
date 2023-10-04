@@ -1,0 +1,15 @@
+README.md
+setup.py
+bin/functional_tax.py
+bin/make_Tdb.py
+bin/quickTaxonomy_centrifuge.py
+bin/tax_collector.py
+tRep/VERSION
+tRep/__init__.py
+tRep/controller.py
+taxRep.egg-info/PKG-INFO
+taxRep.egg-info/SOURCES.txt
+taxRep.egg-info/dependency_links.txt
+taxRep.egg-info/not-zip-safe
+taxRep.egg-info/requires.txt
+taxRep.egg-info/top_level.txt
