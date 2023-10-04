@@ -1,0 +1,16 @@
+soft_nudge/__init__.py,sha256=9LzI1W82Q0Lde5nIxxQ0cb1oX-e54wsr-31ja3PCwzo,35
+soft_nudge/animation_caching.py,sha256=gHjO0XwiUzhOW6mksyFV3V2_d2u-22kGfQ_wY0iuX0U,3511
+soft_nudge/baking.py,sha256=gSm09_upGK4Mpgm4C9vy2RMqe2LyZARyO7UlC3_ZAU0,3575
+soft_nudge/cpu_utils.py,sha256=8wFTg3VT_FkElgLwk8NHZ-_hOUOXPqhoM90WqZ3fRn0,681
+soft_nudge/cuda_utils.py,sha256=4Kty_eurZmi8AoE3icp4OtT9mPRkrNbCzS91MwamZfM,699
+soft_nudge/soft_nudge.py,sha256=bhWr3z_7waZCy0IdJzZ4eEgJ_pWbN0Hx6bX1BIMQPqw,11648
+soft_nudge/soft_nudge_cpu.py,sha256=ZGhnki8X-_K9tBNXPvhJeoc5vhG9nLBfK6OaKSwlcac,4851
+soft_nudge/soft_nudge_cuda.py,sha256=IowyNqhPK_IERyaS-AR4qAIUgDU1B4mdeyH5tFDUltA,6197
+soft_nudge/utils.py,sha256=JOkyT8hd18sHxLUoqp1hU6-ODIkTHySFx_DuwolDxDY,2539
+soft_nudge/baked_animation_data_processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soft_nudge/baked_animation_data_processors/data_processor_stencil_format.py,sha256=v1Rm3C9LIgPNOYfgVtdAhYkO3zQbY_e4IM-4vcOZjaU,8672
+soft_nudge/baked_animation_data_processors/data_processors.py,sha256=P5k-Po7d8HMLoOwNRPrN5AmevWXSA_q0YxCw0u3bV-c,10485
+soft_nudge-1.5.0.dist-info/METADATA,sha256=UX8y3r5USGz1Kv3n10LP77kbUQ4JnvBKiuAgoneRg10,1909
+soft_nudge-1.5.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+soft_nudge-1.5.0.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+soft_nudge-1.5.0.dist-info/RECORD,,
