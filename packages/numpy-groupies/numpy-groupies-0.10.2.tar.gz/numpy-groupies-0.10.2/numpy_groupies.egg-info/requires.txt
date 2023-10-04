@@ -1,0 +1,9 @@
+numpy
+
+[dev]
+pytest
+numba
+pandas
+
+[fast]
+numba

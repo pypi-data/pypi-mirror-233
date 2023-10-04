@@ -1,0 +1,46 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Dev stuff
+.mr.developer.cfg
+.idea
+.project
+.pydevproject
+.settings/
+.cache/
+__pycache__/
+.eggs/
+.hypothesis/
+*~
+*.ini
+
+# Dynamic versioning
+numpy_groupies/_version.py
