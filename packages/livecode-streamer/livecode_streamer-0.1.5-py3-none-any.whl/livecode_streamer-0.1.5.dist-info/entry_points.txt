@@ -1,0 +1,3 @@
+[console_scripts]
+livecode-streamer=livecode_streamer.stream:main
+
