@@ -1,0 +1,31 @@
+{% extends "django_custom_error_views/base.html" %}
+{% load static %}
+{% block title %}
+    Page not found
+{% endblock title %}
+{% block content %}
+    {% if company_logo %}
+        <a href="/">
+            <img class="mt-5"
+                 style="max-height: 45px"
+                 src="{{ STATIC_URL }}/{{ company_logo }}"
+                 onerror="this.onerror=null; this.src='{{ company_logo }}'"
+                 alt="Company Logo">
+        </a>
+    {% endif %}
+    <img class="mt-5"
+         style="max-height: 500px"
+         src="{% static image|default:'django_custom_error_views/visual-404.jpg' %}"
+         alt="Error image">
+    <p class="font-bold text-3xl font-[Poppins] text-center">{{ title|default:"OOPS! Page not found." }}</p>
+    <p class="mt-5 max-w-xl text-center">
+        {{ description|default:"Sorry we can't find that page. You can find loads to explore on the home page." }}
+    </p>
+    <p class="mt-2 max-w-xl text-center">{{ extra_content }}</p>
+    {% if exception and render_exception %}
+        <p class="mt-2 max-w-xl text-center">The following exception was raised: {{ exception }}</p>
+    {% endif %}
+    <a type="button"
+       class="mt-5 rounded-full font-semibold bg-white px-4 py-2.5 text-sm text-blue-800 shadow-sm ring-1 ring-inset ring-blue-800 hover:bg-gray-50"
+       href="/">Return Home</a>
+{% endblock %}
