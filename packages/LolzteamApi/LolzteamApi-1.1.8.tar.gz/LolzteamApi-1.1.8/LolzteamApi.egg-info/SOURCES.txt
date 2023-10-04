@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+LolzteamApi/AntipublicApi.py
+LolzteamApi/LolzteamApi.py
+LolzteamApi/Types.py
+LolzteamApi/__init__.py
+LolzteamApi.egg-info/PKG-INFO
+LolzteamApi.egg-info/SOURCES.txt
+LolzteamApi.egg-info/dependency_links.txt
+LolzteamApi.egg-info/requires.txt
+LolzteamApi.egg-info/top_level.txt
