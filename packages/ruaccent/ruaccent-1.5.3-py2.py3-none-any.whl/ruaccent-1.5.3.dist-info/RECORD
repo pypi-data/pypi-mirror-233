@@ -1,0 +1,10 @@
+ruaccent/__init__.py,sha256=SwJmzISvrwNXK3PVQZjNPfpjE_3OWTo21XoFoFbt1Uo,80
+ruaccent/accent_model.py,sha256=r8JHrdWWGQooFLGiBBJZs8iohiSnwuPF2_3sDdCj8u8,1363
+ruaccent/char_tokenizer.py,sha256=FHU5t3-bdCGZywwPfWRgdWtXLx_s08JgWK6dQ2OU8a4,3253
+ruaccent/omograph_model.py,sha256=ud9uM18qcGkHP6p73jZlcyzKswIzzqRal9FrAm6tioI,1103
+ruaccent/ruaccent.py,sha256=-JpNPbdfQo5YYuKf0RGDnhE18du4cMAX_dNInIrEg78,6235
+ruaccent/text_split.py,sha256=8adXzJKckUgsAKeb3JBRO-QTqDdrPEy6fF75qkUBfHw,4906
+ruaccent-1.5.3.dist-info/LICENSE,sha256=5Q1hTAVR6a6manS8eK7PDbrNYWHPQjsihP_bg8_WDC4,1079
+ruaccent-1.5.3.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+ruaccent-1.5.3.dist-info/METADATA,sha256=uIDlmb-tGJ5nO5niwoEZ1xIXZp29_tDuiO8GgKNoFUk,3160
+ruaccent-1.5.3.dist-info/RECORD,,
