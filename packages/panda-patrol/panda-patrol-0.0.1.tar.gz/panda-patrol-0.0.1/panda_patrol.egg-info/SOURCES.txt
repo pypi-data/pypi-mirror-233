@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+panda_patrol.egg-info/PKG-INFO
+panda_patrol.egg-info/SOURCES.txt
+panda_patrol.egg-info/dependency_links.txt
+panda_patrol.egg-info/top_level.txt
