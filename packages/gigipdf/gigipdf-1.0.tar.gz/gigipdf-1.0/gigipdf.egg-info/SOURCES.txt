@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+gigipdf/__init__.py
+gigipdf/pdf2image.py
+gigipdf/pdf2text.py
+gigipdf.egg-info/PKG-INFO
+gigipdf.egg-info/SOURCES.txt
+gigipdf.egg-info/dependency_links.txt
+gigipdf.egg-info/top_level.txt
