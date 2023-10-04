@@ -1,0 +1,3 @@
+[console_scripts]
+convert-tif-to-png=convert_tif_to_png.__main__:main
+
