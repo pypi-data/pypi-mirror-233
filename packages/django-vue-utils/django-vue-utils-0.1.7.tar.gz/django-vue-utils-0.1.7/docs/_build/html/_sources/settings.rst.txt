@@ -1,0 +1,14 @@
+.. _usage:
+
+Usage
+*****
+
+Tailor the following settings to customize your Vue front-end:
+
+SETTING_DEFAULT_USE_TYPESCRIPT = False
+SETTING_DEFAULT_USE_DEV_SERVER = settings.DEBUG
+SETTING_DEFAULT_DEV_SERVER_URL = 'http://localhost:5173'
+SETTING_DEFAULT_DEV_SERVER_PATH = 'src'
+SETTING_DEFAULT_STATIC_DIR = 'vue'
+
+
