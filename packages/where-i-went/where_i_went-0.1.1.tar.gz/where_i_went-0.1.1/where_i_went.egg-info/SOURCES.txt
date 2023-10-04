@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+./where_i_went/coord_converter.so
+where_i_went/__init__.py
+where_i_went/where.py
+where_i_went.egg-info/PKG-INFO
+where_i_went.egg-info/SOURCES.txt
+where_i_went.egg-info/dependency_links.txt
+where_i_went.egg-info/requires.txt
+where_i_went.egg-info/top_level.txt
