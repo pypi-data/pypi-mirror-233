@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aext-assistant
+Version: 0.0.1
+Summary: The aext-assistant component of anaconda-toolbox
+License-Expression: BSD-3-Clause
+Description-Content-Type: text/markdown
+
+# aext-assistant
+
+-----
+
+`aext-assistant` is a component of the `anaconda-toolbox`. Please install using `conda install anaconda-toolbox`.
