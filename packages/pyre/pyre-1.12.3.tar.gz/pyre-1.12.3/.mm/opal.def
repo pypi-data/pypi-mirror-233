@@ -1,0 +1,11 @@
+# -*- Makefile -*-
+#
+# michael a.g. aïvázis <michael.aivazis@para-sim.com:
+# (c) 1998-2023 all rights reserved
+
+# global options for opal
+PROJECT = opal
+# the live host
+include live.def
+
+# end of file

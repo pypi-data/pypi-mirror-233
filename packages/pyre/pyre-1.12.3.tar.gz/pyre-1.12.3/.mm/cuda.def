@@ -1,0 +1,14 @@
+# -*- Makefile -*-
+#
+# michael a.g. aïvázis <michael.aivazis@para-sim.com:
+# (c) 1998-2023 all rights reserved
+
+# global options for cuda
+PROJECT = cuda
+# the live host
+include live.def
+
+# project settings
+PROJ_CXX_FLAGS += $(COMPILER_CXX_STD17)
+
+# end of file

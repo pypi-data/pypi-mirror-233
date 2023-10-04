@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+#
+# michael a.g. aïvázis <michael.aivazis@para-sim.com>
+# (c) 1998-2023 all rights reserved
+
+
+# superclass
+from .Debian import Debian
+
+
+# declaration
+class Ubuntu(Debian, family="pyre.platforms.ubuntu"):
+    """
+    Encapsulation of a host running linux on the ubuntu distribution
+    """
+
+    # constants
+    distribution = "ubuntu"
+
+
+# end of file

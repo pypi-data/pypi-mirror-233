@@ -1,0 +1,78 @@
+# -*- Makefile -*-
+#
+# michael a.g. aïvázis <michael.aivazis@para-sim.com>
+# (c) 1998-2023 all rights reserved
+
+
+# the pyre package testsuite
+pyre.pkg.tests.stem := pyre.pkg
+pyre.pkg.tests.prerequisites := journal.pkg pyre.pkg
+
+
+# clean up
+tests.pyre.pkg.components.clean := __pycache__
+tests.pyre.pkg.descriptors.ostreams.clean := output.cfg
+tests.pyre.pkg.filesystem.local_make.clean := local-make
+tests.pyre.pkg.filesystem.zip.clean := sample.zip
+tests.pyre.pkg.schemata.ostreams.clean := output.cfg
+tests.pyre.pkg.primitives.path_resolution.clean := scratch
+tests.pyre.pkg.pyre.clean := __pycache__
+tests.pyre.pkg.h5.api.writer.clean := writer.h5
+
+
+# the {filesystem.local-make} test modifies the current directory, which creates race
+# conditions with all tests that run discovery on it; it's best to make sure it runs after them
+tests.pyre.pkg.filesystem.local_make.pre := \
+    tests.pyre.pkg.filesystem.local \
+    tests.pyre.pkg.filesystem.local_find \
+    tests.pyre.pkg.filesystem.local_leaks \
+    tests.pyre.pkg.filesystem.local_open \
+    tests.pyre.pkg.filesystem.zip \
+    tests.pyre.pkg.filesystem.zip_open
+
+
+# special cases
+# the following require launch support
+tests.pyre.pkg.components.component_aliases.argv := --functor.μ=0.10 --gaussian.σ=0.10
+
+
+# the following require prep support
+# filesystem/zip.py
+tests.pyre.pkg.filesystem.zip.pre := tests.pyre.pkg.filesystem.zip-sample
+
+tests.pyre.pkg.filesystem.zip-sample:
+	cd $(pyre.pkg.tests.prefix)/filesystem; \
+        zip -q sample.zip *
+
+
+# primitives/path_resolution.py
+tests.pyre.pkg.primitives.path_resolution.pre := tests.pyre.pkg.primitives.make-scratch
+
+tests.pyre.pkg.primitives.make-scratch: tests.pyre.pkg.primitives.path_resolution.clean
+	$(cd) $(pyre.pkg.tests.prefix)/primitives; \
+	$(mkdir) scratch; \
+	$(cd) scratch; \
+          $(ln.soft) . here; \
+          $(ln.soft) .. up; \
+          $(ln.soft) cycle cycle; \
+          $(ln.soft) $$(pwd)/loop loop; \
+          $(ln.soft) $$(pwd)/cycle ramp; \
+          $(ln.soft) tic toc; \
+          $(ln.soft) toc tic; \
+
+
+# exclusions
+# the following are not test drivers
+pyre.pkg.tests.drivers.exclude += \
+    framework/sample.py \
+    framework/sample_syntaxerror.py \
+
+# the following tests fail for known reasons; they exercise obsolete behavior and should
+# probably be deleted
+pyre.pkg.tests.drivers.exclude += \
+    config/configurator_locators.py \
+    framework/executive_shelves.py \
+    framework/linker_codecs.py \
+
+
+# end of file
