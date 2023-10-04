@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: minifold
+Version: 0.10.0
+Summary: Minifold is a Python module able to interact with various data sources (e.g. CSV, LDAP, SQL, twitter, etc.) and to query/combine/aggregate them with database-like operators.
+License: BSD-3 license
+Author: Marc-Olivier Buob
+Author-email: marc-olivier.buob@nokia-bell-labs.com
+Requires-Python: >=3.8
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: beautifulsoup4
+Requires-Dist: ldap3
+Requires-Dist: lxml
+Requires-Dist: pycountry
+Requires-Dist: pymongo
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: tweepy
+Requires-Dist: urllib3
+Requires-Dist: xmltodict
+Description-Content-Type: text/markdown
+
+# Minifold
+
+[![PyPI](https://img.shields.io/pypi/v/minifold.svg)](https://pypi.python.org/pypi/minifold/)
+[![Build](https://github.com/nokia/minifold/workflows/build/badge.svg)](https://github.com/nokia/minifold/actions/workflows/build.yml)
+[![Documentation](https://github.com/nokia/minifold/workflows/docs/badge.svg)](https://github.com/nokia/minifold/actions/workflows/docs.yml)
+[![ReadTheDocs](https://readthedocs.org/projects/minifold/badge/?version=latest)](https://minifold.readthedocs.io/en/)
+[![codecov](https://codecov.io/gh/nokia/minifold/branch/master/graph/badge.svg?token=OZM4J0Y2VL)](https://codecov.io/gh/nokia/minifold)
+
+## Overview
+
+[Minifold](https://github.com/nokia/minifold.git) is a [Python](http://python.org/) module able to interact with various data sources (e.g. CSV, LDAP, SQL, twitter, etc.) and to query/combine/aggregate them with database-like operators.
+
+## Use cases
+
+This framework has been in various Nokia projects. It also used in the [LINCS](https://www.lincs.fr) website to generate:
+
+* [trombinoscope](https://www.lincs.fr/people/)
+* [homepages](https://www.lincs.fr/people/?more=marc_olivier_buob)
+* [co-author graph](https://www.lincs.fr/research/lincs-graph/), thanks to [pyBGL](https://github.com/nokia/pybgl.git) and [GraphViz](http://graphviz.org/)
+
+For more information, feel free to visit the [wiki](https://github.com/nokia/minifold/wiki):
+
+* [Overview](https://github.com/nokia/minifold/wiki/Overview)
+* [Installation](https://github.com/nokia/minifold/wiki/Installation)
+* [Tutorial](https://github.com/nokia/minifold/wiki/Tutorial)
+* [Design](https://github.com/nokia/minifold/wiki/Design)
+* [Configuration](https://github.com/nokia/minifold/wiki/Configuration)
+* [Framework](https://github.com/nokia/minifold/wiki/Framework)
+* [Tests](https://github.com/nokia/minifold/wiki/Tests)
+* [Packaging](https://github.com/nokia/minifold/wiki/Packaging)
+
+# License
+
+This project is licensed under the BSD-3-Clause license - see the [LICENSE](https://github.com/nokia/minifold/blob/master/LICENSE).
+
