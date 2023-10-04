@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anaconda-toolbox"
+dynamic = ["version"]
+description = 'Please install the anaconda-toolbox with conda'
+readme = "README.md"
+license = "BSD-3-Clause"
+
+[tool.hatch.version]
+path = "src/anaconda_toolbox/__init__.py"
