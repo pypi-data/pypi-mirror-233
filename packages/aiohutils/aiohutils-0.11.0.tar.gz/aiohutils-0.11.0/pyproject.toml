@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=66.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiohutils"
+authors = [{name = "5j9", email = "5j9@users.noreply.github.com"}]
+license = {text = "GNU General Public License v3 (GPLv3)"}
+description = "A small library to for aiohttp projects."
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp[speedups]",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "python-decouple",
+]
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.urls]
+Homepage = "https://github.com/5j9/aiohutils"
+
+[tool.setuptools]
+packages = ["aiohutils"]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = "aiohutils.__version__"}
+
+[tool.isort]
+profile = "black"
+line_length = 79
+combine_as_imports = true

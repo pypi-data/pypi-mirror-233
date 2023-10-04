@@ -1,0 +1,6 @@
+aiohttp[speedups]
+
+[test]
+pytest
+pytest-asyncio
+python-decouple
