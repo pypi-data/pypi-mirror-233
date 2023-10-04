@@ -1,0 +1,11 @@
+.gitignore
+LICENSE.md
+README.md
+setup.py
+servicenow_utils/__init__.py
+servicenow_utils/get_incidents.py
+servicenow_utils.egg-info/PKG-INFO
+servicenow_utils.egg-info/SOURCES.txt
+servicenow_utils.egg-info/dependency_links.txt
+servicenow_utils.egg-info/requires.txt
+servicenow_utils.egg-info/top_level.txt
