@@ -1,0 +1,32 @@
+---
+default:
+  image: python:3.7
+
+include:
+  - project: "open-source/gitlab-ci-templates"
+    ref: "branch/v2"
+    file:
+      - "templates/base.yml"  # mandatory base template
+      - "templates/no-duplicated-ci-pipelines.yml"  # use workflow to avoid duplicated pipelines
+      - "templates/lint/twine-check.yml"  # will run twine check to see if pypi won't reject the package
+      - "templates/lint/check-dependencies-resolution.yml"  # will run pip-compile -n to check if dependencies are compatibles
+      - "templates/lint/safety.yml"  # will run 'safety check --full-report' on the installed project
+      - "templates/lint/flake8.yml"  # will do the equivalent of 'tox -e flake8'
+      - "templates/lint/black.yml"  # will do the equivalent of 'tox -e black'
+      - "templates/lint/check-manifest.yml"  # will do the equivalent of 'tox -e check-manifest'
+      - "templates/lint/mypy.yml"  # will do the equivalent of 'tox -e mypy'
+      - "templates/lint/yamllint.yml"  # will do the equivalent of 'tox -e yamllint'
+      - "templates/tests/py3.yml"  # will do the equivalent of 'tox -e py3'
+      - "templates/create-release-on-heptapod.yml"  # this will create a release on heptapod
+      - "templates/upload-to-pypi.yml"  # on a new mercurial tag (expected to be done with release-new), will push a release on pypi
+  # uncomment and uses to customize/extend the configuration here if needed
+  # (it needs to be at the same level than "- project")
+  # - ".gitlab-ci-extended.yml"
+
+stages:
+  - install
+  - lint
+  - tests
+  - build
+  - release
+  - publish
