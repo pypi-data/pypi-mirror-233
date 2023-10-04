@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: semantic-model
+Version: 3.0.0
+Summary: All data about data in one model
+Home-page: https://github.com/Attumm/semantic-model
+Author: Melvin Bijman
+Author-email: bijman.m.m@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: settipy
+
+# Semantic-model
+All data about data in one model.
+The single source of truth about data in one model.
+
+
+### Install
+```sh
+pip install semantic-model
+```
+
+### Create initial sm model
+```sh
+python3 -m semantic_model -mode one_to_one -input example.json > sm_model.json
+```
+
+### Run sm model
+```sh
+python3 -m semantic_model -input example.json -sm sm_model.json
+```
+
+### Display sm model
+```sh
+sudo docker run -i attumm/dsm_png:latest < sm_model.json > output.png
+```
+
+### Extend
+Add to the functionality by creating your own custom formatters.
+And adding them into semantic-model.
+
+```python
+from semantic_model import POSTFORMAT
+
+
+def strip(item, **kwargs):
+    return item.strip()
+
+POSTFORMAT["strip"] = strip
+```
