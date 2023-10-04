@@ -1,0 +1,14 @@
+include *.py
+include */*.py
+recursive-include cubicweb_skos *.py
+recursive-include cubicweb_skos/i18n *.po *.pot
+recursive-include test/data bootstrap_cubes *.py *.csv *.n3 *.rdf *.xml
+include *.ini
+include test-requirements.txt
+include README.rst
+
+exclude .gitlab-ci.yml
+exclude .yamllint
+exclude .cube-doctor.yml
+exclude .gitlab-ci-extended.yml
+exclude CHANGELOG.md
