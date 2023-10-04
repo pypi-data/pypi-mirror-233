@@ -1,0 +1,10 @@
+import * as Blockly from 'blockly';
+// for Toolbox
+Blockly.Msg['TOOLBOX_SPECIAL'] = '特別';
+// for Blocks
+Blockly.Msg['BLOCK_TEXT_NOCRLF_PRINT'] = '改行無しで表示';
+Blockly.Msg['BLOCK_COLOR_HSV2RGB'] = '色相';
+Blockly.Msg['BLOCK_COLOR_H'] = 'H';
+Blockly.Msg['BLOCK_COLOR_S'] = 'S';
+Blockly.Msg['BLOCK_COLOR_V'] = 'V';
+//# sourceMappingURL=Jp.js.map
