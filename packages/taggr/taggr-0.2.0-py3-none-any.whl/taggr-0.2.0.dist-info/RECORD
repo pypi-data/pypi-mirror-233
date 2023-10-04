@@ -1,0 +1,9 @@
+taggr/__init__.py,sha256=dxaskX2v2WxmuvqK6PrBlm92UMDv6TiaMU9pPqmBhBA,4525
+taggr/cli.py,sha256=TN8fnzfjIy-EeRZyXkT19swA7CGw49V_PWDx5JZPJjQ,7841
+taggr/sql.py,sha256=fvZs9BLwKFzaUN3zuIKpNYb5ccicSxnVLYSgx4EDGD0,5262
+taggr-0.2.0.dist-info/LICENSE.AGPLv3,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+taggr-0.2.0.dist-info/METADATA,sha256=n65w6ceGI-LI1K0k4hlXhV_Fib07YwrXxNn904DyOhc,1021
+taggr-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+taggr-0.2.0.dist-info/entry_points.txt,sha256=4wktmAxhrtYcjGh2TJotfRfJPmCaleX_pz8XdTPaUiA,62
+taggr-0.2.0.dist-info/top_level.txt,sha256=ssQB1tLuNveHc2ogxJ_jvZKTRsiqGqQcmbnLECJgL9M,6
+taggr-0.2.0.dist-info/RECORD,,
