@@ -1,0 +1,13 @@
+LICENSE
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+gistdawater/__init__.py
+gistdawater/mainfile.py
+gistdawater.egg-info/PKG-INFO
+gistdawater.egg-info/SOURCES.txt
+gistdawater.egg-info/dependency_links.txt
+gistdawater.egg-info/requires.txt
+gistdawater.egg-info/top_level.txt
