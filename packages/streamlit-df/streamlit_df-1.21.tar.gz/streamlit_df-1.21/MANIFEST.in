@@ -1,0 +1,3 @@
+include streamlit_df/py.typed
+recursive-include streamlit_df/hello *
+recursive-include streamlit_df/static *
