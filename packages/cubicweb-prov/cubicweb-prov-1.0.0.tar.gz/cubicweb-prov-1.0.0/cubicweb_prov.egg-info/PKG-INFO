@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cubicweb-prov
+Version: 1.0.0
+Summary: The PROV Ontology
+Home-page: http://www.cubicweb.org/project/cubicweb-prov
+Author: LOGILAB S.A. (Paris, FRANCE)
+Author-email: contact@logilab.fr
+License: LGPL
+Classifier: Environment :: Web Environment
+Classifier: Framework :: CubicWeb
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: JavaScript
+Requires-Dist: cubicweb<5.0.0,>=4.0.0
+Requires-Dist: cubicweb-web<2.0.0,>=1.0.0
+
+Summary
+-------
+The `PROV Ontology`_.
+
+.. _`PROV Ontology`: http://www.w3.org/TR/prov-o/
