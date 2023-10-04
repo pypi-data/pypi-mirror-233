@@ -1,0 +1,7 @@
+setup.py
+easyplot/__init__.py
+easyplot/plot.py
+ezmatplot.egg-info/PKG-INFO
+ezmatplot.egg-info/SOURCES.txt
+ezmatplot.egg-info/dependency_links.txt
+ezmatplot.egg-info/top_level.txt
