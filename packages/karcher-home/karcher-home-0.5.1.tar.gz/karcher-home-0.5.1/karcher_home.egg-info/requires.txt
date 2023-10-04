@@ -1,0 +1,5 @@
+click
+aiohttp
+paho-mqtt
+cryptography
+protobuf
