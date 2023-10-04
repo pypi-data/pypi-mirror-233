@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vidizmo-deepface
+Version: 0.0.1
+Summary: A Lightweight Face Recognition and Facial Attribute Analysis Framework (Age, Gender, Emotion, Race) for Python
+Home-page: UNKNOWN
+Author: Huzaifa Tariq
+Author-email: vtls.developer@vidizmo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A Lightweight Face Recognition and Facial Attribute Analysis Framework (Age, Gender, Emotion, Race) for Python.
+                    This library is for customized usage only and is delveloped for VIDIZMO application only.
+
