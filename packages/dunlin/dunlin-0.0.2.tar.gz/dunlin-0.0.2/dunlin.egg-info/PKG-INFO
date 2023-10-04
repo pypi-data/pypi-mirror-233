@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dunlin
+Version: 0.0.2
+Summary: A package ODE modeling (Still in development).
+Home-page: 
+Author: Russell Ngo
+Author-email: russellnjk@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.rst
+
+# dunlin
