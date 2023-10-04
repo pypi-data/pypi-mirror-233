@@ -1,0 +1,2 @@
+[console_scripts]
+sqljson = sqljson.main:main
