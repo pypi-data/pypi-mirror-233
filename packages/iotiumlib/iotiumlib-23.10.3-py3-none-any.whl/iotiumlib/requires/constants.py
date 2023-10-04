@@ -1,0 +1,3 @@
+default_hwmonitoring_scan_interval = 5
+default_trafficinsight_sampling_frequency="medium"
+default_trafficinsight_threat_detection_enable=True
