@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = 'toc4github'
+version = '0.17'
+requires-python = '>=3.8'
+description = 'To automatically generate Table of Contents (TOC) for markdown file, especially for README.md of Github.com'
+readme = 'README.md'
+license = { file='LICENSE' }
+keywords = ['TOC', 'markdown', 'github', 'README.md']
+authors = [
+  { name='xinlin-z', email='xinlin.zhang@hotmail.com' },
+]
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+
+
+[project.urls]
+homepage = 'https://github.com/xinlin-z/toc4github'
+
