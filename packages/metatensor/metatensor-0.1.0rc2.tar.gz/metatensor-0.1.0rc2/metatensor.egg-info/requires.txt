@@ -1,0 +1,5 @@
+metatensor-core<0.2.0,>=0.1.0-rc2
+metatensor-operations<0.2.0,>=0.1.0-rc2
+
+[torch]
+metatensor-torch<0.2.0,>=0.1.0-rc2
