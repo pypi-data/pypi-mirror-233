@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: llm-pdf-chat
+Version: 0.4.0
+Summary: Talk to your PDFs using an LLM.
+Home-page: https://github.com/radoshi/llm-pdf
+License: MIT
+Keywords: openai,llm,cli,pdf
+Author: Rushabh Doshi
+Author-email: radoshi+pypi@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: arxiv (>=1.4.8,<2.0.0)
+Requires-Dist: chromadb (>=0.4.13,<0.5.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: openai (>=0.27.6,<0.28.0)
+Requires-Dist: pydantic (>=2.3.0,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.0.3,<3.0.0)
+Requires-Dist: pypdf (>=3.16.2,<4.0.0)
+Requires-Dist: rich (>=13.3.5,<14.0.0)
+Requires-Dist: tiktoken (>=0.5.1,<0.6.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Project-URL: Repository, https://github.com/radoshi/llm-pdf
+Description-Content-Type: text/markdown
+
+# llm-pdf
+
+![PyPi](https://img.shields.io/pypi/v/llm-pdf-chat?color=green)
+
+---
+
+A CLI utility to index, summarize, and chat with PDF files.
+
+## Installation
+
+```bash
+pipx install llm-pdf-chat
+```
+
+## Usage
+
+```bash
+Usage: llm-pdf [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --version    Show the version and exit.
+  --help       Show this message and exit.
+
+Commands:
+  arxiv      Download and index a paper from arxiv.
+  chat       Chat with your PDFs.
+  delete     Reset the collection.
+  index      Chat with your PDFs.
+  list       Reset the collection.
+  summarize  Chat with your PDFs.
+```
+
+## Examples
+
+Coming soon!
+
