@@ -1,0 +1,3 @@
+[console_scripts]
+astrocast=astrocast.cli_interfaces:cli
+
