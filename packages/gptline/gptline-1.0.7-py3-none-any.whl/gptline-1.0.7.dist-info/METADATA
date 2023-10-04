@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gptline
+Version: 1.0.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: prompt-toolkit
+Requires-Dist: simplejson
+Requires-Dist: blessings
+Requires-Dist: pygments
+Requires-Dist: tiktoken
+
+UNKNOWN
+
