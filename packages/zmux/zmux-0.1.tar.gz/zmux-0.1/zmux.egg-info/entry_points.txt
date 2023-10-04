@@ -1,0 +1,2 @@
+[console_scripts]
+zmux = zmux.cli:cli

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tests/test_zmux.py
+zmux/__init__.py
+zmux/__main__.py
+zmux/cli.py
+zmux.egg-info/PKG-INFO
+zmux.egg-info/SOURCES.txt
+zmux.egg-info/dependency_links.txt
+zmux.egg-info/entry_points.txt
+zmux.egg-info/requires.txt
+zmux.egg-info/top_level.txt

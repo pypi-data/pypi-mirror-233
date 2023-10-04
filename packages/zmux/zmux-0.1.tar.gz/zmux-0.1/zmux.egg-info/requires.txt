@@ -1,0 +1,6 @@
+click
+libtmux
+yaspin
+
+[test]
+pytest
