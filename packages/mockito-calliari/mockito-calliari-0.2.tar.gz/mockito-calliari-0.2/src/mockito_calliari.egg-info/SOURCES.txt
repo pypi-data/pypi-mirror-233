@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/mockito/__init__.py
+src/mockito/mockito.py
+src/mockito_calliari.egg-info/PKG-INFO
+src/mockito_calliari.egg-info/SOURCES.txt
+src/mockito_calliari.egg-info/dependency_links.txt
+src/mockito_calliari.egg-info/requires.txt
+src/mockito_calliari.egg-info/top_level.txt
+tests/test_mockito.py
