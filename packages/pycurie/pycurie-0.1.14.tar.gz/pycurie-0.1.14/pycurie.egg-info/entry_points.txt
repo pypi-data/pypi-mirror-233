@@ -1,0 +1,2 @@
+[console_scripts]
+curie = curie.__main__:main
