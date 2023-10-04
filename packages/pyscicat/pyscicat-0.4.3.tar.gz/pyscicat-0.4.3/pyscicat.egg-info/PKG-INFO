@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyscicat
+Version: 0.4.3
+Summary: a python API to communicate with the Scicat API
+Home-page: https://github.com/scicatproject/pyscicat
+Author: Dylan McReynolds
+Author-email: dmcreynolds@lbl.gov
+License: BSD (3-clause)
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: hdf5
+Provides-Extra: dev
+Provides-Extra: docs
+License-File: LICENSE
+
+# Pyscicat
+Pyscicat is a python client library for interacting with the [SciCat backend](https://scicatproject.github.io/). It sends messages to the SciCat backend over HTTP. It currently does not contain any command line interface.
+
+Documentation for Pyscicat can be found is [available here](https://scicatproject.github.io/pyscicat/)
