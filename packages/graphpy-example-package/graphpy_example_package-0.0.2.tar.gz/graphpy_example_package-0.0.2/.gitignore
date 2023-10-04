@@ -1,0 +1,14 @@
+/dist
+local.txt
+
+
+only include necessary files
+no result no sh files
+only binary files and .py files not all .py files
+test in local
+
+
+
+hardware:
+gpu for sure
+cpu version in kernel
