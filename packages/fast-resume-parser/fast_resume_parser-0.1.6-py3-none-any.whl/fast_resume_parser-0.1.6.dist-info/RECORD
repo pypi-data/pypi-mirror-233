@@ -1,0 +1,14 @@
+fast_resume_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_resume_parser/resume_parser.py,sha256=tBpEpka-8tcS7tZdkDe04L9B-CnnsPH0uJrx5ku4ShQ,1370
+fast_resume_parser/parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_resume_parser/parser/docx_parser.py,sha256=UQuXe4LHd-LtzkZ7TPjVSCXMXdWSl8oMzoL-PXZayqE,117
+fast_resume_parser/parser/image_parser.py,sha256=nn79cNktc8TeEvCA5axXy5tinRq7nvm16dkXyVJ-2d4,168
+fast_resume_parser/parser/openai_processor.py,sha256=OecIvQqmYAEKvSvCxOnx52LKVtdeOx0CZU7qkba2Qyc,500
+fast_resume_parser/parser/pdf_parser.py,sha256=dKdmhJdXwB60gYU8xfzZlIlnn0ceJ7Y_uK7WCMD0Bho,270
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_resume_parser-0.1.6.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_resume_parser-0.1.6.dist-info/METADATA,sha256=PusU37u9uO1KHwkEV6XOFBUlveAHXELa331Rl9hvZEM,165
+fast_resume_parser-0.1.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fast_resume_parser-0.1.6.dist-info/top_level.txt,sha256=MX7DRArwm7qGmxPGtxcjB9qSOPEmjmNf1TqcYUmXm_4,25
+fast_resume_parser-0.1.6.dist-info/RECORD,,
