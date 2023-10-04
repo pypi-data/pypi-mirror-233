@@ -1,0 +1,12 @@
+nonebot_plugin_agent/__init__.py,sha256=ebGgE6ru7KjivadV2i_HMXWi_pAxNfZo3wG3RIzF0Vc,1426
+nonebot_plugin_agent/action/__init__.py,sha256=Wca9hQZ6R-jyuoA_SFfnspUhDWeAtCyNMbQEC-16gJE,183
+nonebot_plugin_agent/action/base.py,sha256=PwOdV2gXXci9G8VOuMel0Uq4Q2v-7rYr6x6yV4UWfws,844
+nonebot_plugin_agent/base.py,sha256=rJL9w6YzF_yqPO_mWt9lDOCGqz8Jr1eYM3AeYwM4iHo,3401
+nonebot_plugin_agent/config.py,sha256=ZJfQLNlq7mhnO2bzNydIRFU9zNu-vynHicRm9ec6h28,394
+nonebot_plugin_agent/llm/__init__.py,sha256=aNNIh1gaalPjweCRcEaRkPTaev7R1mBk3O7MY9SsJIU,194
+nonebot_plugin_agent/llm/base.py,sha256=j4CobJervwFaDllGRITiN7LtbyTK2J-V7Y6lvT_-biU,1203
+nonebot_plugin_agent/llm/openai.py,sha256=rtFWNZTAGOPc-BGgj-OmVFCJASTIykERjJcU9aYLsz0,5529
+nonebot_plugin_agent-0.0.1.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+nonebot_plugin_agent-0.0.1.dist-info/METADATA,sha256=2fGvLl8FqVS23db-L4wJMFNVpbhvwe_4XCaDXf3UOpQ,2192
+nonebot_plugin_agent-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+nonebot_plugin_agent-0.0.1.dist-info/RECORD,,
