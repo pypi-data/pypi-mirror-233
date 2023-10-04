@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/example.py
+src/parqet.py
+src/parqet.egg-info/PKG-INFO
+src/parqet.egg-info/SOURCES.txt
+src/parqet.egg-info/dependency_links.txt
+src/parqet.egg-info/requires.txt
+src/parqet.egg-info/top_level.txt
