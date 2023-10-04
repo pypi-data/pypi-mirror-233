@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/weather_comp/__init__.py
+src/weather_comp/client.py
+src/weather_comp.egg-info/PKG-INFO
+src/weather_comp.egg-info/SOURCES.txt
+src/weather_comp.egg-info/dependency_links.txt
+src/weather_comp.egg-info/requires.txt
+src/weather_comp.egg-info/top_level.txt
