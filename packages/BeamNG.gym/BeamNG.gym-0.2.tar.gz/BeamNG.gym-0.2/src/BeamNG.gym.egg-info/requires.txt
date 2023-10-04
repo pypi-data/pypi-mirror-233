@@ -1,0 +1,12 @@
+numpy
+scipy
+gymnasium
+shapely
+beamngpy==1.27
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest
+pytest-cov
