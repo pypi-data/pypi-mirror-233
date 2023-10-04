@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+geoip2fast/__init__.py
+geoip2fast/geoip2dat.py
+geoip2fast/geoip2fast-asn-ipv6.dat.gz
+geoip2fast/geoip2fast-asn.dat.gz
+geoip2fast/geoip2fast-ipv6.dat.gz
+geoip2fast/geoip2fast.dat.gz
+geoip2fast/geoip2fast.py
+geoip2fast/geoipcli.py
+geoip2fast.egg-info/PKG-INFO
+geoip2fast.egg-info/SOURCES.txt
+geoip2fast.egg-info/dependency_links.txt
+geoip2fast.egg-info/top_level.txt
+scripts/geoip2dat
+scripts/geoip2fast
