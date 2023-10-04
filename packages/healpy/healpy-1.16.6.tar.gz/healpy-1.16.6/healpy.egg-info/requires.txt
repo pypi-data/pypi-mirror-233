@@ -1,0 +1,10 @@
+matplotlib
+numpy>=1.19
+astropy
+scipy
+
+[test]
+pytest
+pytest-cython
+pytest-doctestplus
+requests
