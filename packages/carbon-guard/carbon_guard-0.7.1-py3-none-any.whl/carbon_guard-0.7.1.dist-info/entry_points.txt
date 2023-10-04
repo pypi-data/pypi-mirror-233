@@ -1,0 +1,3 @@
+[console_scripts]
+carbon_guard=src.main:run
+
