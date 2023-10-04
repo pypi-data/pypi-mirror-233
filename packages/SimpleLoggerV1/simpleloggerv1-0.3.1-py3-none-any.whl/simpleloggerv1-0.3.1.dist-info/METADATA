@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: SimpleLoggerV1
+Version: 0.3.1
+Summary: Small library to communicate with SimpleLoggerV1
+Author-email: Aleksei Karavaev <alexok997@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: pymodbus>=2.9
+Requires-Dist: pyserial
+Description-Content-Type: text/markdown
+
+# Simple Logger V1 package
+
+Small library to communicate with SimpleLoggerV1
