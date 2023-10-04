@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+qualytics/__init__.py
+qualytics/qualytics.py
+qualytics_cli.egg-info/PKG-INFO
+qualytics_cli.egg-info/SOURCES.txt
+qualytics_cli.egg-info/dependency_links.txt
+qualytics_cli.egg-info/entry_points.txt
+qualytics_cli.egg-info/requires.txt
+qualytics_cli.egg-info/top_level.txt
