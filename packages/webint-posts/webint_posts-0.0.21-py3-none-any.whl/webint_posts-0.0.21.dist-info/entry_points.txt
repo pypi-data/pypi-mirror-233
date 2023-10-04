@@ -1,0 +1,3 @@
+[webapps]
+posts=webint_posts:app
+

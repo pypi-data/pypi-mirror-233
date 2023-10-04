@@ -1,0 +1,10 @@
+$def with (year, month, posts)
+$var title: $month $year
+
+<ul>
+$for post in sorted(posts, key=operator.itemgetter("url")):
+    <li><a href=$post["url"][0]>$post["url"][0]</a>
+    $if name := post.get("name"):
+        $name[0]
+    </li>
+</ul>

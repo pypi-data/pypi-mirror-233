@@ -1,0 +1,214 @@
+$def with (permalink, entry, mentions)
+$var title = "?"
+$ p = entry["published"][0]
+$if tx.request.uri.path.startswith("2023"):
+    $var breadcrumbs = (p.format("MM"), p.format("MMMM"), p.format("DD"), p.format("D"))
+$# var body_classes = ["widescreen"]
+$var classes = ["h-entry"]
+
+$# <link rel=alternate type=application/diamond-types href=${permalink}.dt
+$#       title="versioned history of this document"/>
+
+<a class=u-url href=$permalink></a>
+<a class=u-author href=/></a>
+$if "mastodon" in entry.get("syndication", []):
+    <a class=u-bridgy-fed href=https://fed.brid.gy></a>
+
+$ type = discover_post_type(entry)
+
+$def render_content(entry):
+    $if "content" in entry:
+        $ content = entry["content"][0]
+        <div id=previewContent>
+        $if isinstance(content, dict) and "html" in content:
+            <div class=e-content>$:post_mkdn(content["html"])</div>
+        $else:
+            <div class=p-content>$:post_mkdn(content)</div>
+        </div>
+
+$if type == "note":
+    $:render_content(entry)
+$elif type == "article":
+    $var title = entry["name"][0]
+    $:render_content(entry)
+$elif type == "weight":
+    <h2 class=p-summary>$entry["summary"][0]</h2>
+    $ weight = entry["weight"][0]
+    <p class="p-weight h-measure"><span class=p-num>$weight["num"]</span>
+    <span class=p-unit>$weight["unit"]</span></p>
+$elif type == "audio/clip":
+    $# $var title = entry["name"][0]
+    $# <h2 class=p-name>$entry["name"][0]</h2>
+    <audio class="u-audio" src="$entry['audio'][0]" controls="controls">
+    $entry["name"][0]
+    </audio>
+    $ quotation_of = entry["quotation-of"][0]
+    <p>Clipped from <strong><a class=u-quotation-of
+    href=$quotation_of>$quotation_of</strong></a></p>
+    $# XXX <div class=u-content>$:post_mkdn(entry["content"][0])</div>
+$elif type == "bookmark":
+    $ bookmark = entry["bookmark-of"][0]
+    $var title: Bookmarked $bookmark
+    <p><big>Bookmarked <a class=u-bookmark-of
+    href=$bookmark>$bookmark</a></big></p>
+$elif type == "like":
+    $ like = entry["like-of"][0]
+    $var title: Liked $like
+    <p class=p-name><big class="h-cite u-like-of">Liked
+    <a class="p-name u-url" href=$like>$like</a></big></p>
+$elif type == "rsvp":
+    $ in_reply_to = entry["in-reply-to"][0]
+    $ rsvp = entry["rsvp"][0]
+    $var title: RSVP $rsvp to $in_reply_to
+    $var show_title = False
+    $ colors = {
+    $   "yes": "859900",
+    $   "maybe": "b58900",
+    $   "no": "cb4b16",
+    $ }
+    <p>RSVP <strong class=p-rsvp style="color:#$colors[rsvp];">$rsvp</strong> to
+        <a class=u-in-reply-to href=$in_reply_to>$in_reply_to</a></p>
+    $:render_content(entry)
+$else:
+    <p>$type</p>
+
+$if tx.user.is_owner:
+    <form method=post action=/auth/share>
+    $for member_url in entry.get("audience", []):
+        <p>$member_url <button>Share</button></p>
+    </form>
+    <form method=get action=/editor/draft>
+    <input type=hidden name=permalink value=$permalink>
+    <button>Edit</button>
+    </form>
+
+$# <div id=editor></div>
+$# <div id=editorStatus></div>
+
+$# $# $if tx.user.is_owner:
+$# $#     $for metric, value in Readability(entry["content"][0]).metrics.items():
+$# $#         <h4>$metric</h4>
+$# $#         <pre>$value</pre>
+$# 
+$# $# XXX $ a = entry["author"]
+$# $# XXX <p class="p-author h-card"><a class="u-url p-name" href=$a["uid"]>$a["name"]</a></p>
+$# 
+$# $def aside():
+$#     <p><small><a class=u-url href=$entry["url"][0]><time class=dt-published
+$#     datetime="$entry['published'][0].isoformat()">\
+$#     $entry["published"][0].diff_for_humans()</time></a></small></p>
+$#     <p><small><strong>$entry["visibility"][0]</strong></small></p>
+$# 
+$#     $if tx.user.session:
+$#         <a href=$tx.user.session["uid"][0]/actions?reply=$entry["url"][0]>reply</a>
+$#     $else:
+$#         <a href=web+action://reply?url=$entry["url"][0]>reply</a>
+$# $var aside = aside
+
+<footer>
+$for mention in mentions:
+    <div>
+    $ data = mention["data"]
+    $data
+    $# $if data:
+    $#     $ a = data["author"]
+    $#     $ comment_type = data["comment_type"][0]
+    $#     $if comment_type == "like":
+    $#         $emoji.emojize(":red_heart:")
+    <small>
+    $# $if data:
+    $#     <a href=$a["url"]>$a["name"]</a>
+    <a href=$mention["source"]><time class=dt-published
+    datetime="$mention['mentioned'].isoformat()">\
+    $mention["mentioned"].diff_for_humans()</time></a>
+    </small>
+    </div>
+</footer>
+
+$# <style>
+$# #editor, #editorStatus {
+$#   display: none; }
+$# /* div.e-content {
+$#   font-size: 2em; } */
+$# </style>
+
+$# $elif type == "identification":
+$#     $ identification = entry["identification-of"][0]
+$#     $var title: Identified $identification["name"]
+$#     <p><big>Identified <a class=u-identification-of
+$#     href=$identification["url"]>$identification["name"]</a></big></p>
+$# $elif type == "follow":
+$#     $ follow = entry["follow-of"][0]
+$#     $var title: Followed $follow["name"]
+$#     <p><big>Followed <a class=u-follow-of
+$#     href=$follow["url"]>$follow["name"]</a></big></p>
+
+$# TODO $if tx.user.is_owner:
+$# TODO     <script src=/static/understory.js crossorigin=anonymous></script>
+$# TODO     <script>
+$# TODO     const { MicropubClient } = understory
+$# TODO     const pub = new MicropubClient('/pub')
+$# TODO     document.addEventListener('DOMContentLoaded', () => {
+$# TODO       pub.getConfig().then(data => console.log(data))
+$# TODO       pub.getCategories().then(data => {
+$# TODO         data.categories.forEach(cat => {
+$# TODO           addCategory(cat)
+$# TODO         })
+$# TODO       })
+$# TODO     })
+$# TODO     </script>
+
+<script type=module>
+import { load, getBrowser, diamondMonaco, MicropubClient } from '/static/web.js'
+
+const previewMarkdown = content => {
+  // XXX name = document.querySelector('#name input[type=text]').value
+  // XXX previewName.innerHTML = `<h1>$${name}</h1>`
+  if (content == '') {
+    previewContent.innerHTML = ''
+    return
+  }
+  let body = new FormData()
+  body.append('content', content)
+  fetch(
+    '/editor/preview/markdown',
+    {
+      method: 'POST',
+      body: body
+    }
+  ).then(response => {
+    if (response.status === 200) {
+      return response.json().then(data => {
+        previewContent.innerHTML = data['content']
+      })
+    }
+  })
+}
+
+var frequency = 1.5;  // seconds
+var count = 0;
+var clean = true;
+const tick = () => {
+  setTimeout(() => {
+    if (count++ > frequency * 10 && !clean)
+      updatePreview();
+    tick();
+  }, 100);
+}
+tick();
+const updatePreview = () => {
+  clean = false;
+  if (count > frequency * 10) {
+    previewMarkdown(monaco.getValue());
+    clean = true;
+    count = 0;
+  }
+}
+
+const monaco = diamondMonaco(
+  '$permalink', editor, editorStatus, connection, version,
+  {},
+  '$(tx.user.session["uid"][0] if tx.user.session else tx.user.ip)'
+)
+monaco.onDidChangeModelContent(updatePreview)
+</script>
