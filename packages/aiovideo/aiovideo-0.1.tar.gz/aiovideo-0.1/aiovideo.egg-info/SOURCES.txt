@@ -1,0 +1,7 @@
+README.md
+setup.py
+aiovideo/__init__.py
+aiovideo.egg-info/PKG-INFO
+aiovideo.egg-info/SOURCES.txt
+aiovideo.egg-info/dependency_links.txt
+aiovideo.egg-info/top_level.txt
