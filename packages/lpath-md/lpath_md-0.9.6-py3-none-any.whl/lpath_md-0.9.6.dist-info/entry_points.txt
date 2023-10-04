@@ -1,0 +1,2 @@
+[console_scripts]
+lpath = lpath.lpath:entry_point
