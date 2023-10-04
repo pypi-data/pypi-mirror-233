@@ -1,0 +1,2 @@
+[console_scripts]
+skyr = skyr:main
