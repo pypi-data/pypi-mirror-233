@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: lsstdesc_diffsky
+Version: 0.1.0
+Summary: Library for differentiable generation of synthetic skies for LSST DESC
+Author-email: Andrew Hearin <ahearin@anl.gov>, Eve Kovacs <kovacs@anl.gov>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2022, Andrew Hearin
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: home, https://github.com/ArgonneCPAC/lsstdesc_diffsky
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+Requires-Dist: numpy
+Requires-Dist: jax
+Requires-Dist: h5py
+Requires-Dist: diffmah
+Requires-Dist: diffstar
+Requires-Dist: dsps
+Requires-Dist: diffsky
+
+lsstdesc_diffsky
+================
+
+Code for producing mock catalogs tailored to LSST DESC requirements.
+
+Installation
+------------
+The latest release of diffsky is available for installation with pip or conda::
+
+    $ conda install lsstdesc-diffsky
+
+
+To install lsstdesc_diffsky into your environment from the source code::
+
+    $ cd /path/to/root/lsstdesc_diffsky
+    $ pip install .
+
+Conda environment
+~~~~~~~~~~~~~~~~~
+For a typical development environment in conda::
+
+    $ conda create -n diffstuff python=3.9 numpy jax pytest ipython jupyter matplotlib scipy h5py diffmah diffstar dsps diffsky lsstdesc-diffsky
+
+Testing
+-------
+To run the suite of unit tests::
+
+    $ cd /path/to/root/lsstdesc_diffsky
+    $ pytest
+
+To build html of test coverage::
+
+    $ pytest -v --cov --cov-report html
+    $ open htmlcov/index.html
+
+Documentation
+-------------
+Online documentation for lsstdesc-diffsky is available at
+`lsstdesc-diffsky.readthedocs.io <https://lsstdesc-diffsky.readthedocs.io/en/latest/>`_
+    
+Available Catalogs
+------------------
+A prototype catalalog is available at NERSC and is called
+skysim_v3.1.0
+
+Until lsstdesc-diffsky is part of the desc-python standard environment,
+you will need to add the package and its dependencies to desc-python.
+The directions for cloning and adding packages to the environment can be found
+`here <https://github.com/LSSTDESC/desc-python/wiki/Add-Packages-to-the-desc-python-environment>`_
+Once you have built the basic environment, you will need to activate it and install the
+`DSPS <https://github.com/ArgonneCPAC/dsps), [diffsky](https://github.com/ArgonneCPAC/diffsky>`_
+and the lsstdesc-diffsky packages as described above. If you wish to
+use the code in a jupyter notebook, you will also need to install a python kernel as follows::
+
+    $ python -m ipykernel install --user --name=my_kernel_name
+
+`demo_load_catalog <https://github.com/LSSTDESC/lsstdesc-diffsky/tree/main/notebooks/demo_load_catalog.ipynb>`_
+is a demo notebook showing how to load the catalog and perform some basic operations.
