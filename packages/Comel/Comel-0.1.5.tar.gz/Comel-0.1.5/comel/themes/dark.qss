@@ -1,0 +1,222 @@
+/*  ------------------------------------------------------------------------  */
+/* Comel Base CSS - https://github.com/hueyyeng/Comel
+/* By Huey Yeng
+/*  ------------------------------------------------------------------------  */
+
+* {
+  color: #ffffff;
+}
+
+QWidget {
+  background-color: rgb(49, 54, 59);
+}
+
+QWidget:disabled {
+  color: rgb(89, 94, 99);
+  border-color: rgb(89, 94, 99);
+}
+
+QToolTip {
+  background-color: rgb(240, 240, 240);
+  color: #555555;
+}
+
+QMenuBar {
+  border-bottom: 1px solid darkgray;
+}
+
+QMenuBar::item {
+  padding: 7px;
+}
+
+QMenu::item {
+  background-color: rgb(49, 54, 59);
+}
+
+QMenu::item:selected, QMenuBar::item:selected {
+  color: black;
+  background-color: lightsteelblue;
+}
+
+QMenu {
+  border: 1px solid darkgray;
+}
+
+::section {
+  background-color: #474f56;
+}
+
+QListView, QTableView, QTreeView {
+  background-color: rgb(85, 90, 95);
+  selection-color: #ffffff;
+  selection-background-color: rgb(120, 135, 155);
+}
+
+QListView:disabled, QTableView:disabled, QTreeView:disabled {
+  background-color: rgb(49, 54, 59);
+  selection-color: rgb(89, 94, 99);
+  selection-background-color: rgb(130, 140, 145);
+}
+
+QHeaderView::section {
+  border: 1px solid rgb(50, 50, 50);
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 rgb(105, 115, 125), stop:1.0 rgb(85, 95, 100));;
+}
+
+QHeaderView::section:disabled {
+  border: 1px solid rgb(50, 50, 50);
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 rgb(60, 65, 70), stop:1.0 rgb(45, 50, 55));;
+}
+
+QHeaderView::section:hover {
+  background-color: rgb(130, 140, 145);
+}
+
+QHeaderView::section:pressed {
+  color: white;
+  background-color: rgb(45, 85, 235);
+}
+
+QPushButton {
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+QPushButton:hover {
+  background-color: rgb(130, 140, 145);
+}
+
+QPushButton:pressed {
+  background-color: rgb(200, 210, 215);
+}
+
+QProgressBar {
+  background-color: rgb(85, 90, 95);
+  border: 1px solid darkgray;
+  text-align: center;
+}
+
+QProgressBar::chunk {
+  background-color: rgb(30, 50, 75);
+  width: 10px;
+}
+
+QCheckBox::indicator:disabled {
+  background-color: rgb(75, 80, 85);
+}
+
+QComboBox {
+  background-color: rgb(85, 90, 95);
+  border: 1px solid darkgray;
+  padding: 3px;
+  selection-background-color: dodgerblue;
+}
+
+QComboBox:disabled {
+  background-color: rgb(49, 54, 59);
+  border: 1px solid rgb(89, 94, 99);
+}
+
+QSpinBox {
+  background-color: rgb(85, 90, 95);
+  border-width: 4;
+}
+
+QPlainTextEdit, QTextEdit, QLineEdit {
+  background-color: rgb(85, 90, 95);
+  border: 1px solid gray;
+}
+
+QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
+  background-color: rgb(49, 54, 59);
+  border: 1px solid rgb(89, 94, 99);
+}
+
+QTabWidget::pane {
+  border: 1px solid darkgray;
+}
+
+QTabBar::tab {
+  border: 1px solid darkgray;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 4px;
+}
+
+QTabBar::tab:hover {
+  background-color: rgb(130, 140, 145);
+}
+
+QTabBar::tab:pressed {
+  background-color: rgb(200, 210, 215);
+}
+
+QStatusBar {
+  border-top: 1px solid darkgray;
+  min-height: 24px;
+}
+
+QScrollArea {
+  border: none;
+}
+
+QScrollBar {
+  background: transparent;
+  border-radius: 5px;
+}
+
+QScrollBar:disabled {
+  background: rgb(85, 90, 95);
+  border-radius: 5px;
+}
+
+QScrollBar:horizontal {
+  height: 10px;
+}
+
+QScrollBar:vertical {
+  width: 10px;
+}
+
+QScrollBar::handle {
+  background: darkgray;
+  border-radius: 5px;
+}
+
+QScrollBar::handle:disabled {
+  background: gray;
+  border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+  height: 25px;
+  min-width: 10px;
+}
+
+QScrollBar::handle:vertical {
+  width: 25px;
+  min-height: 10px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+  border: none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+  background: transparent;
+}
+
+QAbstractScrollArea::corner {
+  background: transparent;
+}
