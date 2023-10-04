@@ -1,0 +1,11 @@
+agatestats/__init__.py,sha256=ECuhAFFIY4vZF8DxS2-G84KXSu8nRdo9_PZi4wJSKqM,150
+agatestats/aggregations.py,sha256=PTNk5WySFA8V1Ytc-xNcrRDakDUydasGXr8fKoQ4VU4,2396
+agatestats/computations.py,sha256=g52Mbr-AjUXKlCdh_bCtP6S4yCkEMkBEHwfXOQT-NEY,1006
+agatestats/table.py,sha256=hbW_Co5MX1xXzlyYL90f0RelBffyRuMM3Q7QrNF0zcg,2750
+agatestats/tableset.py,sha256=dul9NR_bL9yb0iJ1MOWN2Iqa1BBKfdEUAsQ_RV1KIqc,564
+agate_stats-0.4.1.dist-info/AUTHORS.rst,sha256=LJuFaQtfdAtiR-sYsMnBzi67NqwK-EJxRZXJWYb1lQg,122
+agate_stats-0.4.1.dist-info/COPYING,sha256=IBRmRP8BXzYnyOFbXAhI8psg6yz5u_AvvUstt3CwXDU,1099
+agate_stats-0.4.1.dist-info/METADATA,sha256=N2WHCgus46U5xXH_G_4dnjdQcUJYU6sXNmO9fLLzFuw,2418
+agate_stats-0.4.1.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+agate_stats-0.4.1.dist-info/top_level.txt,sha256=9AA4eBAEJqpFXO9Lr6SmgCVCOI1S8YGidn7JbHV2jMA,11
+agate_stats-0.4.1.dist-info/RECORD,,
