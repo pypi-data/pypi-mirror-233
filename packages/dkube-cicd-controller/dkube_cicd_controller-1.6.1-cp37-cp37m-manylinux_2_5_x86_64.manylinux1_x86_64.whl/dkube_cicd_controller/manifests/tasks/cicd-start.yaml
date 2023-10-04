@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: cicd-start
+  namespace: dkube-cicd
+spec:
+  volumes:
+    - name: docker-config
+      configMap:
+        name: docker-config
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  params:
+    - name: build_image
+    - name: repo
+    - name: branch
+    - name: commit_id
+  steps:
+    - name: cicd-start
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc", "cicd", "start", "$(inputs.params.repo)", "$(inputs.params.commit_id)", "-b", "$(inputs.params.branch)"]

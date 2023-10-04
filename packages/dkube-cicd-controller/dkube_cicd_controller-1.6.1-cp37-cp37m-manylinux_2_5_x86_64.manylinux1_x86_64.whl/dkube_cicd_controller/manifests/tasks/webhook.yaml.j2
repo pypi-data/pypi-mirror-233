@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: webhook
+  namespace: dkube-cicd
+spec:
+  params:
+    - name: git_url
+      type: string
+      description: SSH/HTTPS git url for the respository
+
+    - name: commit_id
+      type: string
+      description: git repository commit_id. default is HEAD
+      default: HEAD
+
+    - name: branch
+      type: string
+      description: git repository branch. default is master
+      default: master
+
+  steps:
+    - name: trigger
+      image: ocdr/d3cicd:{{d3cicd_version}}
+      imagePullPolicy: Always
+      script: |
+        #! /bin/sh
+        dcc webhook trigger $(params.git_url) -c $(params.commit_id) -b $(params.branch)
+        kubectl get tr -n dkube-cicd -l tekton.dev/task=webhook|grep -E 'Succeeded|Failed'|cut -d' ' -f1|xargs kubectl delete -n dkube-cicd tr || true

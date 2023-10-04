@@ -1,0 +1,4 @@
+resources:
+- tekton.yaml
+- triggers.yaml
+- tekton-dashboard-release.yaml

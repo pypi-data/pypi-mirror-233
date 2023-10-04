@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: dkube-cicd
+  generateName: gitsecret-
+  annotations:
+    tekton.dev/git-0: {{git_host}}
+    dkube-cicd/repo: {{git_repo}}
+type: kubernetes.io/ssh-auth
+data:
+  ssh-privatekey: {{ssh_key}}
+  known_hosts: {{known_hosts}}

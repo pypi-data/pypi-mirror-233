@@ -1,0 +1,47 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: pipeline
+  namespace: dkube-cicd
+spec:
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  params:
+    - name: path
+    - name: image_url
+    - name: commit_id
+    - name: build_image
+    - name: component
+    - name: repo
+  steps:
+    - name: update-yaml
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","pipeline","$(inputs.params.component)", "update-component-yaml", "$(inputs.params.commit_id)"]
+
+    - name: compile
+      image: $(inputs.params.pipeline_build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dsl-compile"]
+      args:
+        - "--py"
+        - "$(inputs.params.path)"
+        - "--output"
+        - "$(inputs.params.path).tar.gz"
+        - '--disable-type-check'
+
+    - name: upload
+      image: $(inputs.params.build_image)
+      env:
+        - name: DKUBE_SERVICE_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dkube-token
+              key: service
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","pipeline","$(inputs.params.component)", "deploy","$(inputs.params.repo)","$(inputs.params.commit_id)"]

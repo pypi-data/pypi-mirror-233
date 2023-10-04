@@ -1,0 +1,119 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tekton-triggers-sa
+  namespace: dkube-cicd
+secrets:
+  - name: webhook-secret
+imagePullSecrets:
+  - name: dkube-dockerhub-secret
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tekton-triggers-minimal
+  namespace: dkube-cicd
+rules:
+  # Permissions for every EventListener deployment to function
+  - apiGroups: ["triggers.tekton.dev"]
+    resources: ["eventlisteners", "triggerbindings", "triggertemplates","triggers"]
+    verbs: ["get","list","watch"]
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["rolebindings"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: [""]
+    # secrets are only needed for Github/Gitlab interceptors, serviceaccounts only for per trigger authorization
+    resources: ["configmaps", "secrets", "serviceaccounts"]
+    verbs: ["create", "get", "list", "watch", "patch", "delete"]
+  # Permissions to create resources in associated TriggerTemplates
+  - apiGroups: ["tekton.dev"]
+    resources: ["pipelineruns", "pipelineresources", "taskruns", "conditions"]
+    verbs: ["get", "create", "list", "delete"]
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tekton-minimal-cluster
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps","secrets"]
+    verbs: ["get", "list", "create", "update"]
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["rolebindings"]
+    verbs: ["create", "get", "patch", "delete"]
+  - apiGroups: ["triggers.tekton.dev"]
+    resources: ["clustertriggerbindings", "clusterinterceptors"]
+    verbs: ["get", "list", "watch"]
+
+---
+#for service accounts created dynamically by CICD
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: cicd
+  namespace: dkube-cicd
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps","secrets"]
+    verbs: ["get", "create", "list", "delete"]
+  - apiGroups: [""]
+    resources: ["serviceaccounts"]
+    verbs: ["get", "list", "delete"]
+  # Permissions to create resources in associated TriggerTemplates
+  - apiGroups: ["tekton.dev"]
+    resources: ["pipelineruns", "pipelineresources", "taskruns", "conditions"]
+    verbs: ["get", "create", "list", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: tekton-triggers-binding
+  namespace: dkube-cicd
+subjects:
+  - kind: ServiceAccount
+    name: tekton-triggers-sa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: tekton-triggers-minimal
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: tekton-minimal-cluster
+subjects:
+  - kind: ServiceAccount
+    name: tekton-triggers-sa
+    namespace: dkube-cicd
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tekton-minimal-cluster
+---
+#for DKube API server to call dcc commands
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: dkube-binding
+  namespace: dkube-cicd
+subjects:
+  - kind: ServiceAccount
+    name: dkube
+    namespace: dkube
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: tekton-triggers-minimal
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: dkube-cicd-binding-cluster
+subjects:
+  - kind: ServiceAccount
+    name: dkube
+    namespace: dkube
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tekton-minimal-cluster
