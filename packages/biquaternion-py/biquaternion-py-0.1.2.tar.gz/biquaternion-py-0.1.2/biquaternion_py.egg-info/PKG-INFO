@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: biquaternion-py
+Version: 0.1.2
+Summary: Implementation of general biquaternion algebras.
+Home-page: https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py
+Author: Daren A. Thimm
+Author-email: daren.thimm@uibk.ac.at
+Maintainer: Daren A. Thimm
+Maintainer-email: daren.thimm@uibk.ac.at
+License: GPL v3
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+
+[![coverage report](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/badges/master/coverage.svg)](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/-/commits/master)
+
+[![pipeline status](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/badges/master/pipeline.svg)](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/-/commits/master)
+
+[![Latest Release](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/-/badges/release.svg)](https://git.uibk.ac.at/geometrie-vermessung/biquaternion_py/-/releases)
+
+
+# biquaternion_py
+
+This package implements the biquaternion algebra in python in a sympy compatible way.
+The user can therefore not only calculate numerically, but also symbolically.
