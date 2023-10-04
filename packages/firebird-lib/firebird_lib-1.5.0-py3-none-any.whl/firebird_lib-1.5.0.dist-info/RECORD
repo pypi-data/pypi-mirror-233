@@ -1,0 +1,12 @@
+firebird/lib/__about__.py,sha256=tut4fFY-7wO0314cGdwgrdKaYrk8u7aLol5A-lzAsyk,138
+firebird/lib/__init__.py,sha256=EN_6GRiSoH9oZf7pkE7MTykVuejP46bYgciZ68jrtuI,116
+firebird/lib/gstat.py,sha256=bfMt-nfW_wkKhAZ7c65db7WkNu0XD4SErFMO7suw2FE,28356
+firebird/lib/log.py,sha256=IW2WwYrMjCoz246mqA0IR0dqYH3KaJ7Db6TxvB6Pww0,5530
+firebird/lib/logmsgs.py,sha256=4iJLsOR0uBJSB-oQx52fuScL_kLRr-Ij3BhYou6eZyw,73145
+firebird/lib/monitor.py,sha256=DUZEVG_xoYz0huZBZmIsmTzrJ8pIMBnDDQEdzHDJr8Q,48905
+firebird/lib/schema.py,sha256=k8tqEMAvD8V943ijxpX6GFRP7fd6tZLeu5TOrTlGq5U,212296
+firebird/lib/trace.py,sha256=OBEl6LNEWZ3KWOFZbT511cWdE7RGXaJi8y7QYfnqJEs,71062
+firebird_lib-1.5.0.dist-info/METADATA,sha256=2UQPG5pNS2tWG_2w0QYUzduDBwc6rXpCG7FrRvG44Jo,3760
+firebird_lib-1.5.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+firebird_lib-1.5.0.dist-info/licenses/LICENSE,sha256=YTwIXyaFd_rWEk_eESM50PgPUc87Lw_H2uBr_Z-6_KY,1068
+firebird_lib-1.5.0.dist-info/RECORD,,
