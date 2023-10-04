@@ -1,0 +1,9 @@
+libsbne-0.0.5.data/purelib/libsbne/__init__.py,sha256=91k9TK82s1Il_cHJ1ErNPOhUkrSKUdjYddno3Hrzp-Q,147915
+libsbne-0.0.5.data/purelib/libsbne/_libsbne.so,sha256=_r4pxkP0yUZ_blJ4CDRDFSdMC7u7QFa6o1JThwekpHY,4127416
+libsbne-0.0.5.data/purelib/libsbne/dependencies/libsbml.5.19.0.dylib,sha256=0a2iZcehXOVvbsp8GMds-PZKbGZ-NmqI8wJzxb-t820,5297328
+libsbne-0.0.5.data/purelib/libsbne/dependencies/libsbml.5.dylib,sha256=0a2iZcehXOVvbsp8GMds-PZKbGZ-NmqI8wJzxb-t820,5297328
+libsbne-0.0.5.data/purelib/libsbne/dependencies/libsbml.dylib,sha256=0a2iZcehXOVvbsp8GMds-PZKbGZ-NmqI8wJzxb-t820,5297328
+libsbne-0.0.5.dist-info/METADATA,sha256=XE9oHPWcsStEMdPYN4U_GW2lQ3EawYmifS5GPbAYwG0,923
+libsbne-0.0.5.dist-info/WHEEL,sha256=M8yF001GqPN30A4x050MuXAxXo91xuRyAoUVzo7guCE,113
+libsbne-0.0.5.dist-info/top_level.txt,sha256=3LB1c5z3ZT8_BM2ikn4n2yFGydBtVdUWAcfHo5O5yb0,8
+libsbne-0.0.5.dist-info/RECORD,,
