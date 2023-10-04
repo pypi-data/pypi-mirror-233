@@ -1,0 +1,19 @@
+_version: 0.2.0
+changesets:
+  .:
+    hash: 1e27ba4858772726e034423e24970749089144fb
+    remote: https://github.com/final-israel/qrm
+    vcs_type: git
+info: {}
+name: qrm_client
+prerelease: release
+prerelease_count: {}
+previous_version: 0.1.0
+release_mode: minor
+stamped_on_branch: main
+stamped_on_remote_branch: origin/main
+unique_id: 0.2.0+1e27ba4858772726e034423e24970749089144fb
+version: 0.2.0
+versions:
+- 0.2.0
+
