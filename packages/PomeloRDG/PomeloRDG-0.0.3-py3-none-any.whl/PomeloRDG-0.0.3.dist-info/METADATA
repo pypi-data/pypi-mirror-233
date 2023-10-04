@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: PomeloRDG
+Version: 0.0.3
+Summary: This is a tool package for everyone to make the test data quickly
+Author: AndyPomeloMars
+Author-email: andypomelomars@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Pomelo Random Data Generator.
+By PomeloABC.
+
+This is a tool package for everyone to make the test data quickly.
