@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bandit-allowed-modules
+Version: 0.0.1
+Summary: Ban all modules except the allowed ones.
+Author: Asad Iqbal
+License-File: AUTHORS
+Requires-Dist: bandit
+
+A bandit plugin that will Ban all modules except the allowed ones.

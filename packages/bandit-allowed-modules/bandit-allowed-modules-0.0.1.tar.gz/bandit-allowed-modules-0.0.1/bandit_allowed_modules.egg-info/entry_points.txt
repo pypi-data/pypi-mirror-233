@@ -1,0 +1,2 @@
+[bandit.plugins]
+allowed_modules = bandit_plugins.allow_selected_modules:allow_selected
