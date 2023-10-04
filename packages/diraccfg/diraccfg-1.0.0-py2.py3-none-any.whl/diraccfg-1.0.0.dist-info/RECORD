@@ -1,0 +1,10 @@
+diraccfg/__init__.py,sha256=kbJOfzFiB2HMQQ9pJxcoTfYi8g5BuBZkhIYXViPTgU4,102
+diraccfg/__main__.py,sha256=yynrOCXwjIjbV-4USaZUGKv7r9WeVZ9HTQ_ICYg5ukg,2131
+diraccfg/cfg.py,sha256=YczPfXAisA_7-vfmBQC-Z2KeWT302PoG5CjR1nEg9lY,39777
+diraccfg/versions.py,sha256=ZptWZYYhvuD8t3rJMTfVH2g_ufldCKl4x38p-Mt32pw,861
+diraccfg-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+diraccfg-1.0.0.dist-info/METADATA,sha256=4qQcXd5CMcYRQx0Y1jzY9sEbsHAMYmm0B3tqrCIxBmg,4447
+diraccfg-1.0.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+diraccfg-1.0.0.dist-info/entry_points.txt,sha256=F4dZ_9_jo6mcQssmjhv51k3FixPK3WVyxHUl9W6SFxc,57
+diraccfg-1.0.0.dist-info/top_level.txt,sha256=osKqTEU3WgKyT-7QRkG3lce-b0-nOaA0D4BjiSUB6Os,9
+diraccfg-1.0.0.dist-info/RECORD,,
