@@ -1,0 +1,3 @@
+[console_scripts]
+tolino-notes=tolino_notes.__main__:main
+
