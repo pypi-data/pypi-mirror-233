@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "root-dash"
+version = "1.0.0"
+authors = [
+  { name="Zachary Hafen-Saavedra", email="z.hafen.saavedra@gmail.com" },
+]
+description = "A package for quick creation of data-science dashboards."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy',
+    'pandas',
+    'openpyxl',
+    'matplotlib',
+    'seaborn',
+    'PyYAML',
+    'streamlit',
+    'pytest',
+    'jupyterlab',
+    'nbconvert',
+    'nbformat',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zhafen/root-dash"
+"Bug Tracker" = "https://github.com/zhafen/root-dash/issues"
