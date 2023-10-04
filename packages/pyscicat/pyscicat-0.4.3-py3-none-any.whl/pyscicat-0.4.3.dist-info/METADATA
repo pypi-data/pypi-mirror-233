@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyscicat
+Version: 0.4.3
+Summary: a python API to communicate with the Scicat API
+Home-page: https://github.com/scicatproject/pyscicat
+Author: Dylan McReynolds
+Author-email: dmcreynolds@lbl.gov
+License: BSD (3-clause)
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: requests-mock ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: ipython ; extra == 'docs'
+Requires-Dist: matplotlib ; extra == 'docs'
+Requires-Dist: mistune <2.0.0 ; extra == 'docs'
+Requires-Dist: myst-parser ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: sphinx-click ; extra == 'docs'
+Requires-Dist: sphinx-copybutton ; extra == 'docs'
+Requires-Dist: sphinxcontrib.openapi ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: hdf5
+Requires-Dist: hdf5plugin ; extra == 'hdf5'
+Requires-Dist: h5py ; extra == 'hdf5'
+
+# Pyscicat
+Pyscicat is a python client library for interacting with the [SciCat backend](https://scicatproject.github.io/). It sends messages to the SciCat backend over HTTP. It currently does not contain any command line interface.
+
+Documentation for Pyscicat can be found is [available here](https://scicatproject.github.io/pyscicat/)
