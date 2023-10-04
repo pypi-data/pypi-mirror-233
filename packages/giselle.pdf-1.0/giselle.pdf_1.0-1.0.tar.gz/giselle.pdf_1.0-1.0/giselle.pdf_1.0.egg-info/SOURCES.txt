@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+giselle.pdf_1.0.egg-info/PKG-INFO
+giselle.pdf_1.0.egg-info/SOURCES.txt
+giselle.pdf_1.0.egg-info/dependency_links.txt
+giselle.pdf_1.0.egg-info/top_level.txt
+giselle_pdf/__init__.py
+giselle_pdf/pdf2image.py
+giselle_pdf/pdf2text.py
