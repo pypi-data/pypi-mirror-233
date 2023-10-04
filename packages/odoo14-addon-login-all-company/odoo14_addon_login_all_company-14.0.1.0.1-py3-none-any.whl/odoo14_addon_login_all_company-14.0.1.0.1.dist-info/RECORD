@@ -1,0 +1,14 @@
+odoo/addons/login_all_company/README.rst,sha256=PZYXg9ddTX_lhQIQEi5937rWnkxOE8wUGfmCXMCB9tw,2894
+odoo/addons/login_all_company/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/login_all_company/__manifest__.py,sha256=vP5xw9ld8tMIXaKzMcpFs_FHM3Zq555b9-6jyEZRV4M,437
+odoo/addons/login_all_company/i18n/login_all_company.pot,sha256=AyzPzY6fvZoAIdVCppv0SiPLoR_D-HBQlYffHd1jWNE,341
+odoo/addons/login_all_company/readme/CONTRIBUTORS.rst,sha256=GAYxzAZEN5wTBewMNx4PD2y_QoI-dzpokacQ9NnaEso,16
+odoo/addons/login_all_company/readme/DESCRIPTION.rst,sha256=zShNVCEr2lzaO9UTQMIokM0ncsgQf1bcV7EBuLuvdHA,140
+odoo/addons/login_all_company/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/login_all_company/static/description/index.html,sha256=poAPQTfvxgxUP0gVHOntjkbLaHh2GkuiiTqNpoIrft4,12077
+odoo/addons/login_all_company/static/src/js/client.js,sha256=0o6KUlbC_wO-srYcCGF6DtFkhRWRLE5mBIAIWfbCiIc,875
+odoo/addons/login_all_company/templates/assets.xml,sha256=z4BLd9LR-FnExg8s2M_fokjwMO9BmjShOTtfNBFREuo,359
+odoo14_addon_login_all_company-14.0.1.0.1.dist-info/METADATA,sha256=JFxXZoSt3rbGWLeSyOannYXax-u6_kKwEcanpEEBEAY,3450
+odoo14_addon_login_all_company-14.0.1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+odoo14_addon_login_all_company-14.0.1.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_login_all_company-14.0.1.0.1.dist-info/RECORD,,
