@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+
+# Distribution packages
+dist/
+
+# Bytecode files
+__pycache__/
+*.py[cod]
+
+# Packaging metadata
+*.egg-info/
+
+# Local notes
+notes.txt
