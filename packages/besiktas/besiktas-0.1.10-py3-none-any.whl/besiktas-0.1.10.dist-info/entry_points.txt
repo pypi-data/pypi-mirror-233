@@ -1,0 +1,6 @@
+[besiktas.plugin]
+besiktas=besiktas.cli:main
+
+[console_scripts]
+besiktas=besiktas.cli:main
+

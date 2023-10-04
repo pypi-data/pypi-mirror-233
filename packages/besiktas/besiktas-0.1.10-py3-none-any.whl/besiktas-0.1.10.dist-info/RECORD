@@ -1,0 +1,9 @@
+besiktas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+besiktas/cli.py,sha256=A1FICJYaTfySBYsxAksywU9Qm5piITA3aTtdqSr4hyg,1031
+besiktas/scrapper.py,sha256=N9Hj7gP1IXyjPE0yYMPmYp_5PRXtD-GoK3GUEe09Kfc,5606
+besiktas/screen.py,sha256=ueL30IAvr7p-oY0KFlNhyWfzAxvX8BO7sqnNZzxO3ac,9704
+besiktas-0.1.10.dist-info/LICENSE.txt,sha256=u7UoX0m7Ygj_Dx9ve0i3XQCv_eLziyUbd-CICE9SqMY,1071
+besiktas-0.1.10.dist-info/METADATA,sha256=f5qjmr0E7LQ-zzXWtW25jwCoV6SJEiQlK-wlDy1oOjE,1381
+besiktas-0.1.10.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+besiktas-0.1.10.dist-info/entry_points.txt,sha256=ixOkHuxJKSqy-HqbR0N3l_0hj4S0LHuHNzxNZJZ6nDI,92
+besiktas-0.1.10.dist-info/RECORD,,
