@@ -1,0 +1,753 @@
+{
+    "2011": {
+        "Lower_Layer_Super_Output_Area_(2011)_to_Travel_to_Work_Area_(December_2011)_Lookup_in_the_United_Kingdom.csv": {
+            "columns": [
+                "LSOA11CD",
+                "LSOA11NM",
+                "TTWA11CD",
+                "TTWA11NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LSOA11CD",
+                "TTWA11CD"
+            ],
+            "useful_columns_nunique": [
+                42619,
+                228
+            ]
+        },
+        "OA_to_LSOA_to_MSOA_to_LAD_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "LSOA11CD",
+                "LSOA11NM",
+                "MSOA11CD",
+                "MSOA11NM",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "LSOA11CD",
+                "MSOA11CD",
+                "LAD11CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                34753,
+                7201,
+                348
+            ]
+        },
+        "Output_Area_(2011)_to_Clinical_Commissioning_Group_to_STP_and_NHS_England_(Region)_(April_2020)_Lookup_in_England.csv": {
+            "columns": [
+                "FID",
+                "OA11CD",
+                "CCG20CD",
+                "CCG20NM",
+                "STP20CD",
+                "STP20NM",
+                "NHSER20CD",
+                "NHSER20NM"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "CCG20CD",
+                "STP20CD",
+                "NHSER20CD"
+            ],
+            "useful_columns_nunique": [
+                171372,
+                135,
+                42,
+                7
+            ]
+        },
+        "Output_Area_to_LAU2_to_LAU1_to_NUTS3_to_NUTS2_to_NUTS1_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "LAU210CD",
+                "LAU210NM",
+                "OA11PERCENT",
+                "LAU110CD",
+                "LAU110NM",
+                "OA11PERCENT1",
+                "NUTS306CD",
+                "NUTS306NM",
+                "OA11PERCENT2",
+                "NUTS206CD",
+                "NUTS206NM",
+                "OA11PERCENT3",
+                "NUTS106CD",
+                "NUTS106NM",
+                "OA11PERCENT4",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "LAU210CD",
+                "LAU110CD",
+                "NUTS306CD",
+                "NUTS206CD",
+                "NUTS106CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                8481,
+                348,
+                105,
+                32,
+                10
+            ]
+        },
+        "Output_Area_to_Primary_Care_Organisation_to_Strategic_Health_Authority_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "PCO11CD",
+                "PCO11NM",
+                "PCO11NMW",
+                "OA11PERCENT",
+                "SHA11CD",
+                "SHA11NM",
+                "OA11PERCENT1",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "PCO11CD",
+                "SHA11CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                158,
+                10
+            ]
+        },
+        "Output_Area_to_Region_(December_2011)_Lookup_in_England.csv": {
+            "columns": [
+                "OA11CD",
+                "RGN11CD",
+                "RGN11NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "RGN11CD"
+            ],
+            "useful_columns_nunique": [
+                171372,
+                9
+            ]
+        },
+        "Output_Area_to_Ward_to_Local_Authority_District_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "WD11CD",
+                "WD11NM",
+                "WD11NMW",
+                "SMPOPIND",
+                "PERCENTAGE_BF",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "WD11CD",
+                "LAD11CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                8588,
+                348
+            ]
+        },
+        "Output_Area_to_Westminster_Parliamentary_Constituency_to_EER_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "PCON11CD",
+                "PCON11NM",
+                "PCON11NMW",
+                "OA11PERCENT",
+                "EER11CD",
+                "EER11NM",
+                "EER11NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "PCON11CD",
+                "EER11CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                573,
+                10
+            ]
+        },
+        "Output_Area_to_Workplace_Zone_to_Local_Authority_District_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA11CD",
+                "WZ11CD",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "IND",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "WZ11CD",
+                "LAD11CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                53578,
+                348
+            ]
+        },
+        "Ward_to_Census_Merged_Ward_to_Local_Authority_District_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "WD11CD",
+                "WD11NM",
+                "WD11NMW",
+                "CMWD11CD",
+                "CMWD11NM",
+                "CMWD11NMW",
+                "IND",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "FID"
+            ],
+            "useful_columns": [
+                "WD11CD",
+                "CMWD11CD",
+                "LAD11CD"
+            ],
+            "useful_columns_nunique": [
+                8588,
+                8546,
+                348
+            ]
+        },
+        "Workplace_Zone_to_Middle_Layer_Super_Output_Area_to_Local_Authority_District_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "WZ11CD",
+                "MSOA11CD",
+                "MSOA11NM",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "FID"
+            ],
+            "useful_columns": [
+                "WZ11CD",
+                "MSOA11CD",
+                "LAD11CD"
+            ],
+            "useful_columns_nunique": [
+                53578,
+                7201,
+                348
+            ]
+        },
+        "WZ_to_BUASD_to_BUA_to_LAD_to_Region_(December_2011)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "WZ11CD",
+                "BUASD11CD",
+                "BUASD11NM",
+                "BUA11CD",
+                "BUA11NM",
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "RGN11CD",
+                "RGN11NM",
+                "RGN11NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "WZ11CD",
+                "BUASD11CD",
+                "BUA11CD",
+                "LAD11CD",
+                "RGN11CD"
+            ],
+            "useful_columns_nunique": [
+                53578,
+                1391,
+                3585,
+                348,
+                10
+            ]
+        }
+    },
+    "2011_to_2021": {
+        "Local_Authority_District_(2011)_to_Local_Authority_District_(2021)_Lookup_for_England_and_Wales.csv": {
+            "columns": [
+                "LAD11CD",
+                "LAD11NM",
+                "LAD11NMW",
+                "LAD21CD",
+                "LAD21NM",
+                "LAD21NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LAD11CD",
+                "LAD21CD"
+            ],
+            "useful_columns_nunique": [
+                348,
+                331
+            ]
+        }
+    },
+    "2011_to_2021_to_2022": {
+        "LSOA_(2011)_to_LSOA_(2021)_to_LAD_(2022)_Lookup_for_England_and_Wales_(Version_2).csv": {
+            "columns": [
+                "OBJECTID",
+                "LSOA11CD",
+                "LSOA11NM",
+                "LSOA21CD",
+                "LSOA21NM",
+                "LAD22CD",
+                "LAD22NM",
+                "LAD22NMW"
+            ],
+            "useful_columns": [
+                "LSOA11CD",
+                "LSOA21CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                34753,
+                34628,
+                331
+            ]
+        },
+        "MSOA_(2011)_to_MSOA_(2021)_to_LAD_(2022)_Lookup_for_England_and_Wales_(Version_2).csv": {
+            "columns": [
+                "OBJECTID",
+                "MSOA11CD",
+                "MSOA11NM",
+                "MSOA21CD",
+                "MSOA21NM",
+                "LAD22CD",
+                "LAD22NM",
+                "LAD22NMW"
+            ],
+            "useful_columns": [
+                "MSOA11CD",
+                "MSOA21CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                7201,
+                7182,
+                331
+            ]
+        },
+        "Output_Areas_(2011)_to_Output_Areas_(2021)_to_LAD_(2022)_Lookup_in_England_and_Wales_(Version_2).csv": {
+            "columns": [
+                "OBJECTID",
+                "OA11CD",
+                "OA21CD",
+                "LAD22CD",
+                "LAD22NM",
+                "LAD22NMW"
+            ],
+            "useful_columns": [
+                "OA11CD",
+                "OA21CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                181408,
+                180814,
+                331
+            ]
+        }
+    },
+    "2021": {
+        "OA21_LSOA21_MSOA21_LAD22_EW_LU.csv": {
+            "columns": [
+                "OA21CD",
+                "LSOA21CD",
+                "LSOA21NM",
+                "MSOA21CD",
+                "MSOA21NM",
+                "LAD22CD",
+                "LAD22NM",
+                "LAD22NMW"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "LSOA21CD",
+                "MSOA21CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                35672,
+                7264,
+                331
+            ]
+        },
+        "WD21_LAD21_UK_LU.xlsx": {
+            "columns": [
+                "WD21CD",
+                "WD21NM",
+                "LAD21CD",
+                "LAD21NM"
+            ],
+            "useful_columns": [
+                "WD21CD",
+                "LAD21CD"
+            ],
+            "useful_columns_nunique": [
+                8694,
+                374
+            ]
+        }
+    },
+    "2021_to_2022": {
+        "MSOA_(2021)_to_Ward_to_Lower_Tier_Local_Authority_(May_2022)_Lookup_for_England_and_Wales.csv": {
+            "columns": [
+                "MSOA21CD",
+                "MSOA21NM",
+                "WD22CD",
+                "WD22NM",
+                "WD22NMW",
+                "LTLA22CD",
+                "LTLA22NM",
+                "LTLA22NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "MSOA21CD",
+                "WD22CD",
+                "LTLA22CD"
+            ],
+            "useful_columns_nunique": [
+                7264,
+                5566,
+                331
+            ]
+        },
+        "OA2021_to_LSOA2021_to_MSOA2021_to_LAD2022_DEC_2021.csv": {
+            "columns": [
+                "OA21CD",
+                "LSOA21CD",
+                "LSOA21NM",
+                "MSOA21CD",
+                "MSOA21NM",
+                "LAD22CD",
+                "LAD22NM",
+                "LAD22NMW"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "LSOA21CD",
+                "MSOA21CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                35672,
+                7264,
+                331
+            ]
+        },
+        "OA_(2021)_to_Ward_to_LTLA_to_UTLA_to_Region_to_Country_(May_2022)_Lookup_in_England_and_Wales_v2.csv": {
+            "columns": [
+                "OA21CD",
+                "WD22CD",
+                "WD22NM",
+                "WD22NMW",
+                "LTLA22CD",
+                "LTLA22NM",
+                "LTLA22NMW",
+                "UTLA22CD",
+                "UTLA22NM",
+                "UTLA22NMW",
+                "RGN22CD",
+                "RGN22NM",
+                "RGN22NMW",
+                "CTRY22CD",
+                "CTRY22NM",
+                "CTRY22NMW",
+                "NAT22CD",
+                "NAT22NM",
+                "NAT22NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "WD22CD",
+                "LTLA22CD",
+                "UTLA22CD",
+                "RGN22CD",
+                "CTRY22CD",
+                "NAT22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                7638,
+                331,
+                174,
+                10,
+                2,
+                1
+            ]
+        },
+        "OA_to_CTRY_DEC_2021.csv": {
+            "columns": [
+                "OA21CD",
+                "CTRY22CD",
+                "CTRY22NM",
+                "CTRY22NMW"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "CTRY22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                2
+            ]
+        },
+        "OA_to_REG_DEC_2021.csv": {
+            "columns": [
+                "OA21CD",
+                "RGN22CD",
+                "RGN22NM",
+                "RGN22NMW"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "RGN22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                10
+            ]
+        },
+        "OA_to_UTLA_DEC_2021.csv": {
+            "columns": [
+                "OA21CD",
+                "UTLA22CD",
+                "UTLA22NM",
+                "UTLA22NMW"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "UTLA22CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                174
+            ]
+        }
+    },
+    "2021_to_2023": {
+        "Lower_Layer_Super_Output_Area_(2021)_to_Ward_(2023)_to_LAD_(2023)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "LSOA21CD",
+                "LSOA21NM",
+                "LSOA21NMW",
+                "WD23CD",
+                "WD23NM",
+                "WD23NMW",
+                "LAD23CD",
+                "LAD23NM",
+                "LAD23NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LSOA21CD",
+                "WD23CD",
+                "LAD23CD"
+            ],
+            "useful_columns_nunique": [
+                35672,
+                7581,
+                318
+            ]
+        },
+        "MSOA_(2021)_to_Ward_to_LAD_(May_2023).csv": {
+            "columns": [
+                "MSOA21CD",
+                "MSOA21NM",
+                "MSOA21NMW",
+                "WD23CD",
+                "WD23NM",
+                "WD23NMW",
+                "LAD23CD",
+                "LAD23NM",
+                "LAD23NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "MSOA21CD",
+                "WD23CD",
+                "LAD23CD"
+            ],
+            "useful_columns_nunique": [
+                7264,
+                5579,
+                318
+            ]
+        },
+        "Output_Area_to_Ward_to_Local_Authority_District_(May_2023)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "OA21CD",
+                "WD23CD",
+                "WD23NM",
+                "WD23NMW",
+                "LAD23CD",
+                "LAD23NM",
+                "LAD23NMW",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "OA21CD",
+                "WD23CD",
+                "LAD23CD"
+            ],
+            "useful_columns_nunique": [
+                188880,
+                7608,
+                318
+            ]
+        }
+    },
+    "2022": {
+        "Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain.csv": {
+            "columns": [
+                "BUA22CD",
+                "BUA22NM",
+                "BUA22NMW",
+                "BUA22NMG",
+                "LAD22CD",
+                "LAD22NM",
+                "WHOLE_PART",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "BUA22CD",
+                "LAD22CD"
+            ],
+            "useful_columns_nunique": [
+                8545,
+                363
+            ]
+        },
+        "Built_Up_Area_to_Region_(December_2022)_Lookup_in_Great_Britain.csv": {
+            "columns": [
+                "BUA22CD",
+                "BUA22NM",
+                "BUA22NMW",
+                "BUA22NMG",
+                "RGN22CD",
+                "RGN22NM",
+                "WHOLE_PART",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "BUA22CD",
+                "RGN22CD"
+            ],
+            "useful_columns_nunique": [
+                8545,
+                11
+            ]
+        },
+        "Local_Authority_District_to_Combined_Authority_(December_2022)_Lookup_in_England.csv": {
+            "columns": [
+                "LAD22CD",
+                "LAD22NM",
+                "CAUTH22CD",
+                "CAUTH22NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LAD22CD",
+                "CAUTH22CD"
+            ],
+            "useful_columns_nunique": [
+                53,
+                10
+            ]
+        },
+        "Local_Planning_Authority_to_Local_Authority_District_(December_2022)_in_the_United_Kingdom_Lookup.csv": {
+            "columns": [
+                "LAD22CD",
+                "LAD22NM",
+                "COTERM",
+                "LPA22CD",
+                "LPA22NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LAD22CD",
+                "LPA22CD"
+            ],
+            "useful_columns_nunique": [
+                374,
+                392
+            ]
+        },
+        "Lower_Tier_Local_Authority_to_Upper_Tier_Local_Authority_(December_2022)_Lookup_in_England_and_Wales.csv": {
+            "columns": [
+                "LTLA22CD",
+                "LTLA22NM",
+                "UTLA22CD",
+                "UTLA22NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "LTLA22CD",
+                "UTLA22CD"
+            ],
+            "useful_columns_nunique": [
+                331,
+                174
+            ]
+        },
+        "Ward_to_Local_Authority_District_to_County_to_Region_to_Country_(December_2022)_Lookup_in_United_Kingdom.csv": {
+            "columns": [
+                "WD22CD",
+                "WD22NM",
+                "LAD22CD",
+                "LAD22NM",
+                "CTY22CD",
+                "CTY22NM",
+                "RGN22CD",
+                "RGN22NM",
+                "CTRY22CD",
+                "CTRY22NM",
+                "OBJECTID"
+            ],
+            "useful_columns": [
+                "WD22CD",
+                "LAD22CD",
+                "CTY22CD",
+                "RGN22CD",
+                "CTRY22CD"
+            ],
+            "useful_columns_nunique": [
+                8482,
+                374,
+                32,
+                9,
+                4
+            ]
+        }
+    }
+}
