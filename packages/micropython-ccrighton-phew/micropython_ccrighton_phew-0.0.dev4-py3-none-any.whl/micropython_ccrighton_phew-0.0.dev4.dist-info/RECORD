@@ -1,0 +1,9 @@
+phew/__init__.py,sha256=MOCxFkfyjbSa2zPkOOHK0oXJed9UaZYsWNqL3QBn020,1130
+phew/dns.py,sha256=AREA6B9mgUxe5pKxZJ6k26sHURReEeVECZa7zgRCSLA,790
+phew/logging.py,sha256=uS_1X94fRTLySB5Uz4-smcLJOarPFmZZa25MB1W-LXY,1801
+phew/server.py,sha256=bl2adTK0FRkR_U6djSLI3QaFWg4Mr3dVX2a-_i_V1vU,7071
+phew/template.py,sha256=pQBe9x7hG14nUDTFhBBlTox208SLDCIl8ULtToqqSQQ,1011
+micropython_ccrighton_phew-0.0.dev4.dist-info/METADATA,sha256=veulWhAliW8ZmbRMEMHDHGCls1AdWMLGggXQT5OyFz4,16007
+micropython_ccrighton_phew-0.0.dev4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+micropython_ccrighton_phew-0.0.dev4.dist-info/top_level.txt,sha256=D2ja8C-RUkScq0rthC80lygyUxA945Mc1JxQm8mK7VQ,5
+micropython_ccrighton_phew-0.0.dev4.dist-info/RECORD,,
