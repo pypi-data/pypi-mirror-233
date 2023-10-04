@@ -1,0 +1,15 @@
+---
+name: Quality Checks
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  conventional-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Commisery
+        uses: tomtom-international/commisery-action@v2
+        with:
+          token: ${{ github.token }}
