@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sequentPSS
+Version: 0.0.9
+Summary: algorithm for sequential parameter searching with GSA
+Home-page: https://github.com/MG-Choi/sequentPSS
+Author: MoongiChoi
+Author-email: u1316663@utah.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: random2 (>=1.0.1)
+Requires-Dist: SALib (>=1.4.7)
+
+UNKNOWN
+
