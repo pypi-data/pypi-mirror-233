@@ -1,0 +1,20 @@
+error_messages = {
+    "ZeroDivisionError": {"detail": "Zero division error occurred.", "fix": "Check the divisor in your division operation."},
+    "ValueError": {"detail": "Invalid value error occurred.", "fix": "Make sure you provide a valid value."},
+    "TypeError": {"detail": "Type error occurred.", "fix": "Ensure you are using the correct data type."},
+    "KeyError": {"detail": "Key error occurred.", "fix": "Ensure the key is correct."},
+    "FileNotFoundError": {"detail": "File not found error occurred.", "fix": "Check the file path or create the file."},
+    "IndexError": {"detail": "Index error occurred.", "fix": "Ensure you are using the correct index."},
+    "AssertionError": {"detail": "Assertion error occurred.", "fix": "Review your assertion statement."},
+    "AttributeError": {"detail": "Attribute error occurred.", "fix": "Make sure you are using the correct attribute."},
+    "IOError": {"detail": "Input/Output error occurred.", "fix": "Check your file operations."},
+    "NameError": {"detail": "Name error occurred.", "fix": "Check your variable name or function name."},
+    "ImportError": {"detail": "Import error occurred.", "fix": "Check the import path."},
+    "ModuleNotFoundError": {"detail": "Module not found error occurred.", "fix": "Ensure the module is installed."},
+    "MemoryError": {"detail": "Memory error occurred.", "fix": "Reduce memory usage or optimize it."},
+    "SyntaxError": {"detail": "Syntax error occurred.", "fix": "Check and correct your syntax."},
+    "IndentationError": {"detail": "Indentation error occurred.", "fix": "Properly adjust the indentations."},
+    "EOFError": {"detail": "End of file error occurred.", "fix": "Check if you've reached the end of the file."},
+    "ArithmeticError": {"detail": "Arithmetic error occurred.", "fix": "Review your arithmetic operations."},
+    "FileExistsError": {"detail": "File already exists error occurred.", "fix": "Use a different file name or delete the existing file."}
+}
