@@ -1,0 +1,3 @@
+[console_scripts]
+sq = sqpass.main:main
+sq-init = sqpass.install:setmain
