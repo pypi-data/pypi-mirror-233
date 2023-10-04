@@ -1,0 +1,10 @@
+INFO: Platform: linux
+INFO: Version Info: v0.3.0
+DEBUG: Log Path: cp.log
+DEBUG: command: ['python3.10', '/home/rain/programming/ursina/ursina/scripts/property_generator.py']
+DEBUG: file: None
+DEBUG: pause: True
+DEBUG: repl: python3.10
+DEBUG: args: ['/home/rain/programming/ursina/ursina/scripts/property_generator.py']
+INFO: return code: 0 (0x0)
+INFO: elapsed time: 0.013188
