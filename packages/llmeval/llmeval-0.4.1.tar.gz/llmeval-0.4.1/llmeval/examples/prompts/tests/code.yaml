@@ -1,0 +1,17 @@
+# Copyright Log10, Inc 2023
+
+metrics:
+  - name: passes_ast
+    code: |
+      import ast
+      try:
+        ast.parse(actual.lstrip())
+        metric = True
+      except SyntaxError:
+        metric = False
+      result = metric
+references:
+  - input:
+      task: "adds two numbers"
+  - input:
+      task: "finds the inverse square root of a number"

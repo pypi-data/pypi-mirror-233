@@ -1,0 +1,12 @@
+# Copyright Log10, Inc 2023
+
+defaults:
+  - tests/grading
+name: grading
+model: gpt-4-16k
+temperature: 0.9
+variables:
+  - name: description
+messages:
+  - role: "human"
+    content: "Given the following description: \"{description}\" generate a mermaid diagram. Do not provide any surrounding explantions. Strictly the mermaid diagram code which can be included in a markdown document."

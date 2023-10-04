@@ -1,0 +1,12 @@
+# Copyright Log10, Inc 2023
+
+defaults:
+  - tests/noop
+name: noop
+model: gpt-4-16k
+temperature: 0.0
+variables:
+  - name: question
+messages:
+  - role: "human"
+    content: "{question}"
