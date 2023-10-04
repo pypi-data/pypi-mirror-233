@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: darbiadev-shipping-types
+Version: 0.1.0
+Summary: A set of types to provide a consistent interface across multiple packages
+Author-email: Bradley Reynolds <bradley.reynolds@darbia.dev>
+License: MIT
+Project-URL: repository, https://github.com/darbiadev/darbiadev-shipping-types/
+Project-URL: documentation, https://darbiadev.github.io/darbiadev-shipping-types/
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: furo ; extra == 'docs'
+Requires-Dist: sphinx-autoapi ; extra == 'docs'
+Requires-Dist: releases ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+# darbiadev-shipping-types
+
+A set of types to provide a consistent interface across multiple packages
