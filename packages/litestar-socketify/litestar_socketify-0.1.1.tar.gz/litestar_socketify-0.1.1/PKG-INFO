@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: litestar-socketify
+Version: 0.1.1
+Summary: socketify plugin for Litestar
+Project-URL: Changelog, https://cofin.github.io/litesatr-socketify/latest/changelog
+Project-URL: Discord, https://discord.gg/X3FJqy8d2j
+Project-URL: Documentation, https://cofin.github.io/litesatr-socketify/latest/
+Project-URL: Homepage, https://cofin.github.io/litesatr-socketify/latest/
+Project-URL: Issue, https://github.com/cofin/litestar-socketify/issues/
+Project-URL: Source, https://github.com/cofin/litestar-socketify
+Author-email: Cody Fincher <cody.fincher@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: asgi,litestar,socketify
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: litestar[cli]>=2.0.1
+Requires-Dist: socketify>=0.0.27
+Description-Content-Type: text/markdown
+
+# Litestar Socketify Plugin
+
+> [!WARNING]
+> Socketify currently has an issue with [ASGI lifespans](https://github.com/cirospaciari/socketify.py/issues/135). This plugin should be considered experimental.
+
+## Installation
+
+```shell
+pip install litestar-socketify
+```
+
+## Usage
+
+Here is a basic application that demonstrates how to use the plugin.
+
+```python
+from __future__ import annotations
+
+from litestar import Controller, Litestar, get
+
+from litestar_socketify import SocketifyPlugin
+
+
+class SampleController(Controller):
+    @get(path="/sample")
+    async def sample_route(self ) -> dict[str, str]:
+        """Sample Route."""
+        return {"sample": "hello-world"}
+
+
+app = Litestar(plugins=[SocketifyPlugin()], route_handlers=[SampleController])
+
+```
+
+Now, you can use the standard Litestar CLI and it will run with Socketify instead of Uvicorn.
+
+```shell
+❯ litestar --app examples.basic:app run
+Using Litestar app from env: 'examples.basic:app'
+Starting socketify server process ──────────────────────────────────────────────
+┌──────────────────────────────┬──────────────────────┐
+│ Litestar version             │ 2.1.1                │
+│ Debug mode                   │ Disabled             │
+│ Python Debugger on exception │ Disabled             │
+│ CORS                         │ Disabled             │
+│ CSRF                         │ Disabled             │
+│ OpenAPI                      │ Enabled path=/schema │
+│ Compression                  │ Disabled             │
+└──────────────────────────────┴──────────────────────┘
+...
+```
