@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/PyGitLinguist.egg-info/PKG-INFO
+src/PyGitLinguist.egg-info/SOURCES.txt
+src/PyGitLinguist.egg-info/dependency_links.txt
+src/PyGitLinguist.egg-info/top_level.txt
+src/linguist/documentation.yml
+src/linguist/generic.yml
+src/linguist/heuristics.yml
+src/linguist/languages.yml
+src/linguist/popular.yml
+src/linguist/vendor.yml
