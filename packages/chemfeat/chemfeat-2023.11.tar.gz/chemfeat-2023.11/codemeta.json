@@ -1,0 +1,66 @@
+{
+    "@context": [
+        "https://doi.org/10.5063/schema/codemeta-2.0",
+        "https://w3id.org/software-iodata",
+        "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld",
+        "https://schema.org",
+        "https://w3id.org/software-types"
+    ],
+    "@type": "SoftwareSourceCode",
+    "author": "Jan-Michael Rye",
+    "codeRepository": "https://gitlab.inria.fr/jrye/chemfeat",
+    "description": "Calculate feature vectors for molecules using cheminformatics libraries.",
+    "email": "jan-michael.rye@inria.fr",
+    "identifier": "chemfeat",
+    "license": "http://spdx.org/licenses/MIT",
+    "name": "chemfeat",
+    "operatingSystem": "OS Independent",
+    "runtimePlatform": "Python 3",
+    "softwareHelp": "https://jrye.gitlabpages.inria.fr/chemfeat/",
+    "softwareRequirements": [
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "docstring-parser",
+            "name": "docstring-parser",
+            "runtimePlatform": "Python 3"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "padel-pywrapper",
+            "name": "padel-pywrapper",
+            "runtimePlatform": "Python 3"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "pandas",
+            "name": "pandas",
+            "runtimePlatform": "Python 3"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "pyyaml",
+            "name": "pyyaml",
+            "runtimePlatform": "Python 3"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "rdkit",
+            "name": "rdkit",
+            "runtimePlatform": "Python 3"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "simple-file-lock",
+            "name": "simple-file-lock",
+            "runtimePlatform": "Python 3"
+        }
+    ],
+    "targetProduct": {
+        "@type": "CommandLineApplication",
+        "description": "\nCommand-line utility for calculating chemical features.\n",
+        "executableName": "chemfeat",
+        "name": "chemfeat",
+        "runtimePlatform": "Python 3"
+    },
+    "version": "2023.11"
+}

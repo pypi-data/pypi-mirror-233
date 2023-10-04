@@ -1,0 +1,9 @@
+*.pyc
+__pycache__/
+
+public/
+tmp/
+venv/
+
+version.py
+doc/source/gen_*.md
