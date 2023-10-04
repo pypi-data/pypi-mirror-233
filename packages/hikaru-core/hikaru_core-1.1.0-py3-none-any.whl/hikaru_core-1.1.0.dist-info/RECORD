@@ -1,0 +1,17 @@
+hikaru/__init__.py,sha256=_SOsQi-LBdHcGTdZfvDWb9MH35_hB9lQ84RBub5OOnY,2588
+hikaru/app.py,sha256=IbgFEiaU_LxnTBPyelRtE1N3e8oqBWYFYrioQ3Qnpik,75610
+hikaru/codegen_missing.py,sha256=8KgrLgPHlUJyjleO_X1UgMrsr4seFxffWhD4tJ_BCa0,610
+hikaru/crd.py,sha256=lGjIsin2FAo5rREM6Moe3YFD0uvBvI5Z83kHyDjdnDs,40932
+hikaru/generate.py,sha256=W7ylgqnIEdg96fqcY5YVhYHdpEhxQ8BOfHb5fmeWof8,20104
+hikaru/meta.py,sha256=8niJOhSJl70z9kng2CxyjEHOEQoKHsPFmz2qHyuf1zk,70078
+hikaru/naming.py,sha256=WrRhcBXZpevh5DUPIVFCWZ2gv88aRFfji_YAwTVSaVg,8989
+hikaru/tweaks.py,sha256=JZihy8IaiLXUgJbNvL51R630QBGndipVW1FydZt6h8A,3519
+hikaru/utils.py,sha256=aYFlpCyvNeEDtkfQhljdG_-XuLjftl7zhNmRu_vRyqw,11550
+hikaru/version_kind.py,sha256=viUb1g6YyVqiHCjV5cIQbffHstBPDcrGIUoNbHn7Q6o,12218
+hikaru/watch.py,sha256=L9-f-4sHy0UhskdH1eg-5PUWiBgM0Ed7JN2zMbsW2j4,24330
+hikaru/model/defrel.py,sha256=MWzDD6B0FkY-eoNJHCkFJjyZIIm39PsCiv-gD2neCZo,2214
+hikaru_core-1.1.0.dist-info/LICENSE,sha256=l-WbaMvOM9QEkAoCSzV0802Nch_Q0nGavyVIw0zahVU,1068
+hikaru_core-1.1.0.dist-info/METADATA,sha256=ayZ-DiG9kOdp7tsm8z1NzE8Li27mIKwseSa4QFdWeHI,16276
+hikaru_core-1.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+hikaru_core-1.1.0.dist-info/top_level.txt,sha256=Kz-fsWv396TGa_fZYYlBo9pgNHnOPkC6pz0hsCO0Wwo,7
+hikaru_core-1.1.0.dist-info/RECORD,,
