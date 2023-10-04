@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+cultural_japan_utils = cultural_japan_utils._modidx:d
+
