@@ -1,0 +1,6 @@
+requests>=0.14.1
+six>=1.16.0
+
+[test]
+mock>=1.0.1
+unittest2<2,>=1
