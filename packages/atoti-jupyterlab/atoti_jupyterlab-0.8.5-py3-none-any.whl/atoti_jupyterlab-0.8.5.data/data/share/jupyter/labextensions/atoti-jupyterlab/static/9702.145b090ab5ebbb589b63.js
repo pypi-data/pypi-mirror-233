@@ -1,0 +1,44 @@
+"use strict";(self.webpackChunkatoti_jupyterlab=self.webpackChunkatoti_jupyterlab||[]).push([[9702],{29702:(e,t,l)=>{l.r(t),l.d(t,{default:()=>N});var n=l(52903),o=l(74508),r=l(66029),s=l(15502),i=l(25669),a=l(81201),c=l(61745),d=l(2242);const u=e=>{const t=(0,r.useMemo)((()=>r.Children.toArray(e.children).reduce(((t,l,n)=>{const o=Math.floor(n/e.numberOfColumns),r=t[o]??[];return t[o]=[...r,l],t}),[])),[e.children,e.numberOfColumns]);return(0,n.tZ)("div",{style:e.containerStyle,css:{paddingBottom:2,paddingRight:2,width:"100%",height:"100%"},children:(0,n.tZ)("div",{css:{width:"100%",height:"100%",overflow:"auto"},children:(0,n.tZ)("table",{css:d.css`
+            border-spacing: 20px 10px;
+            border-collapse: separate !important;
+            width: 100%;
+          `,children:(0,n.tZ)("tbody",{children:t.map(((e,t)=>(0,n.tZ)("tr",{children:e.map(((e,t)=>(0,n.tZ)("td",{children:e},t)))},t)))})})})})};var p=l(62144),h=l(87890),f=l(7010);const g=e=>{const t=(0,p.Fg)(),l=(0,h.T)(),o={color:t.textColor,paddingLeft:e.horizontalPadding,paddingRight:e.horizontalPadding,height:25},s={...o,border:"1px solid transparent",background:"transparent",":hover":{border:`1px solid  ${t.primaryColor}`,borderRadius:3},":focus":{outlineColor:t.primaryColor}},[i,a]=(0,r.useState)(e.title);return(0,r.useEffect)((()=>{a(e.title)}),[e.title]),l?(0,n.tZ)("div",{css:o,children:i}):(0,n.tZ)(f.AutoSizedInput,{isStrictlySized:!1,inputCss:s,value:i||"",onChange:a,onBlur:()=>{e.onTitleChange?.(i)}})},m="2px",C="4px",y=d.css`
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`,b=(e,t)=>isNaN(e)?"N/A":`${e>0?"+":""}${t}`,x=(e,t)=>isNaN(e)||0===e?t.textColor:e>0?t.successColor:t.errorColor,S=e=>{const t=(0,p.Fg)(),{onTitleChange:l,title:o,tuple:r,onSelect:i,isSelected:a,differenceCell:c}=e,u=Number(e.differenceCell?.value),h=e.differenceCell?.formattedValue,f=a?`${t.selectionOverlayColor}`:"none";return(0,n.BX)("div",{css:d.css`
+        background: ${f};
+        padding: 2px 5px;
+        white-space: nowrap;
+      `,onMouseDown:e=>{(0===e.button||!a&&2===e.button)&&i({cell:c,tuple:r,isSelected:a})},children:[(0,n.BX)("div",{css:y,children:[(0,n.tZ)(g,{title:o,onTitleChange:e=>{const t=(0,s.getTupleKey)(r);l?.({tupleKey:t,title:e})},horizontalPadding:m}),(0,n.tZ)("span",{css:d.css`
+            margin-left: ${C};
+            color: ${x(u,t)};
+          `,children:b(u,h)})]}),(0,n.BX)("div",{css:d.css`
+          margin-left: 3px;
+          padding-left: 6px;
+          border-left: 3px solid ${t.primaryColor};
+          white-space: nowrap;
+        `,children:[(0,n.BX)("div",{css:y,children:[(0,n.tZ)("span",{css:d.css`
+              padding-left: ${m};
+            `,children:e.referenceMemberCaption}),(0,n.tZ)("span",{css:d.css`
+              margin-left: ${C};
+            `,children:e.referenceCell?.formattedValue??"N/A"})]}),(0,n.BX)("div",{css:y,children:[(0,n.tZ)("span",{css:d.css`
+              padding-left: ${m};
+              font-weight: 600;
+            `,children:e.comparedMemberCaption}),(0,n.tZ)("span",{css:d.css`
+              margin-left: ${C};
+              font-weight: 600;
+            `,children:e.comparedCell?.formattedValue??"N/A"})]})]})]})},w=(e,t)=>{const l=[];return e&&t&&l.push({tuple:t,value:e.value}),{axes:[],cells:l}};var v=l(38251);function T(e,t){const{cells:l,numberOfColumns:n,numberOfRows:o}=(0,r.useMemo)((()=>{let t,l;for(let n=0;n<e.axes.length;n++){const o=e.axes[n];if(o.id===s.axisIds.columns?l=o:o.id===s.axisIds.rows&&(t=o),void 0!==t&&void 0!==l)break}const n=l?(0,s.getAxisLength)(l):1,o=t?(0,s.getAxisLength)(t):1,r=new Array(n*o).fill(null);return e.cells.forEach((e=>{r[e.ordinal]=e})),{numberOfColumns:n,numberOfRows:o,cells:r}}),[e]),i=(0,r.useMemo)((()=>(0,s.getHierarchyIndicesInCellSet)(e,{axisNames:["ROWS","COLUMNS"]})),[e]);return{cells:l,numberOfColumns:n,numberOfRows:o,cube:(0,r.useMemo)((()=>{const l=e.cube;return(0,v.s)(t,l)}),[e,t]),hierarchyIndicesInCellSet:i}}const M=["referenceCell","comparedCell","differenceCell"],Z=e=>{const{formatMessage:t}=(0,c.useIntl)(),{cube:l,hierarchyIndicesInCellSet:i,numberOfColumns:a,numberOfRows:d}=T(e.data,e.dataModel),p=e.data.axes.find((({id:e})=>e===s.axisIds.pages));if(!p)throw new Error("A comparison was defined in the KPI widget state, but no corresponding data was found (no PAGES axis in the cellset).");const h=t({id:"aui.total"}),[f,g]=(0,r.useMemo)((()=>{const{dimension:e,hierarchy:t}=p.hierarchies[0];return p.positions.map((([n])=>(0,s.getTupleCaption)([{dimensionName:e,hierarchyName:t,...n}],{cube:l,captionForTotals:h})))}),[h,l,p]),m=(0,r.useMemo)((()=>{const t={},n=a*d;return e.data.cells.forEach((o=>{const r=Math.floor(o.ordinal%n/a),c=o.ordinal%a,d=(0,s.getTuple)({columnIndex:c,rowIndex:r,hierarchyIndicesInCellSet:i,data:e.data});if(d){const r=(0,s.getTupleKey)(d),i=t[r]?.title||e.titles?.[r]||(0,s.getTupleCaption)(d,{cube:l,captionForTotals:h}),a=Math.floor(o.ordinal/n),c=M[a];t[r]={...t[r],[c]:o,title:i,tuple:d}}}),{}),t}),[h,l,i,a,d,e.data,e.titles]),{titles:C,onTitlesChange:y,onSelectionChange:b}=e,x=({tupleKey:e,title:t})=>{y?.({...C,[e]:t})},[v,Z]=(0,r.useState)({axes:[],cells:[]}),I=v.cells?.[0]?(0,s.getTupleKey)(v.cells[0].tuple):void 0,O=({cell:e,tuple:t,isSelected:l})=>{Z(l?{axes:[],cells:[]}:w(e,t))};(0,r.useEffect)((()=>{b?.(v)}),[v,b]);const K=(0,o.map)(m,(({referenceCell:e,comparedCell:t,differenceCell:l,title:o,tuple:r},s)=>(0,n.tZ)(S,{comparedCell:t,comparedMemberCaption:g,differenceCell:l,title:o,onTitleChange:x,referenceCell:e,referenceMemberCaption:f,tuple:r,onSelect:O,isSelected:I===s},s)));return(0,n.tZ)(u,{numberOfColumns:a,containerStyle:e.containerStyle,children:K})};var I=l(27815),O=l(99298);const K=e=>{const t=(0,p.Fg)(),{cell:l,tuple:o,tupleKey:r,onTitleChange:s,title:i,isSelected:a,onSelect:c}=e,u=l?.formattedValue??"N/A",h=(0,I.E)(l?.properties),f=a&&h.backgroundColor?(0,O.$)(h.backgroundColor,t.selectionOverlayColor,.2):a?t.selectionOverlayColor:h.backgroundColor??"none";return(0,n.BX)("div",{css:d.css`
+        padding-left: 6px;
+        border-left: 3px solid ${t.primaryColor};
+        white-space: nowrap;
+      `,children:[(0,n.tZ)(g,{title:i,onTitleChange:e=>{s({title:e,tupleKey:r})},horizontalPadding:2}),(0,n.tZ)("div",{onMouseDown:e=>{(0===e.button||!a&&2===e.button)&&c({cell:l,tuple:o,isSelected:a})},css:d.css`
+          background: ${f};
+          color: ${h.color};
+          font-size: 30px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          padding-left: ${2};
+        `,children:u})]})},$=e=>{const{formatMessage:t}=(0,c.useIntl)(),{cells:l,numberOfColumns:o,cube:i}=T(e.data,e.dataModel),a=(0,r.useMemo)((()=>(0,s.getHierarchyIndicesInCellSet)(e.data)),[e.data]),{titles:d,onTitlesChange:p,onSelectionChange:h}=e,f=({tupleKey:e,title:t})=>{p?.({...d,[e]:t})},[g,m]=(0,r.useState)({axes:[],cells:[]}),C=g.cells?.[0]?(0,s.getTupleKey)(g.cells[0].tuple):void 0,y=({cell:e,tuple:t,isSelected:l})=>{m(l?{axes:[],cells:[]}:w(e,t))},b=(0,r.useMemo)((()=>{const n=[];return l.forEach(((l,r)=>{const c=Math.floor(r/o),u=r%o,p=(0,s.getTuple)({columnIndex:u,data:e.data,rowIndex:c,hierarchyIndicesInCellSet:a});if(p){const e=(0,s.getTupleKey)(p),o=i?(0,s.getTupleCaption)(p,{cube:i,captionForTotals:t({id:"aui.total"})}):"",r=d?.[e]||o;n.push({cell:l,tuple:p,tupleKey:e,title:r})}})),n}),[l,i,e.data,t,a,o,d]);(0,r.useEffect)((()=>{h?.(g)}),[g,h]);const x=b.map((({cell:e,tuple:t,tupleKey:l,title:o},r)=>(0,n.tZ)(K,{cell:e,cellIndex:r,tuple:t,tupleKey:l,title:o,onTitleChange:f,onSelect:y,isSelected:C===l},r)));return(0,n.tZ)(u,{numberOfColumns:o,containerStyle:e.containerStyle,children:x})},E=e=>{const{comparison:t,...l}=e;return(0,a.K)(e.comparison)?(0,n.tZ)(Z,{comparison:t,...l}):(0,n.tZ)($,{...l})};var A=l(96500),k=l(37930);const N=(0,r.memo)((e=>{(0,f.useCallOnLoadedAfterFirstProperRender)(e);const{queryResult:t,widgetState:l,onChange:c,onSelectionChange:d}=e,u=t.data,p=l.serverKey,h=(0,i.k)(p),g=l.titles,m=(0,r.useCallback)((e=>c((0,o.isEmpty)(e)?(0,o.omit)(l,"titles"):{...l,titles:e})),[l,c]);if(!t.isLoading&&t.error){if((0,s.isQueryErrorOfType)(t.error,"QueryTimeoutException"))throw new s.QueryTimeoutError(t.error);throw new s.MdxError(t.error)}if((0,A.isMappingEmpty)(l.mapping))return(0,n.tZ)(k.A,{style:e.style});const C=(t&&(0,a.K)(l.comparison)?t.isLoading||!t.data?.axes.some((({id:e})=>e===s.axisIds.pages)):t.isLoading)||!u||!h,y=0===u?.cells.length;return(0,n.tZ)(A.WidgetLoadingOverlay,{isLoading:C,children:!C&&u&&!y&&h?(0,n.tZ)(E,{data:u,dataModel:h,titles:g,onTitlesChange:m,comparison:l.comparison,containerStyle:e.style,onSelectionChange:d}):(0,n.tZ)(k.A,{style:e.style,noData:y})})}))}}]);

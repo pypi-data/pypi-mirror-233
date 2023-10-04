@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkatoti_jupyterlab=self.webpackChunkatoti_jupyterlab||[]).push([[3766],{63766:(t,e,a)=>{a.r(e),a.d(e,{activeuiVersion:()=>s});const s="5.1.9"}}]);
