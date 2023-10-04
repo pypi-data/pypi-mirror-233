@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dependencies = ["requests >= 2.26.0"]
+name = "brightpearlapi"
+version = "0.0.5"
+authors = [
+  { name="Mathias Mjømen", email="mathiassmjomen@gmail.com" },
+]
+description = "A package for interacting with Brightpearl API"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MDiddle/brightpearlapi"
+"Bug Tracker" = "https://github.com/MDiddle/brightpearlapi/issues"
