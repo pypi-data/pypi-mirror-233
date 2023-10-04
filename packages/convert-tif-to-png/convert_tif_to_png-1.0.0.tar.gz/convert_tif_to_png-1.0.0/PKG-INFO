@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: convert-tif-to-png
+Version: 1.0.0
+Summary: A utility to convert TIF images to PNG with optional resizing and renaming.
+License: MIT
+Requires-Python: >=3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pillow (==8.4.0)
+Description-Content-Type: text/markdown
+
+# util-convert-tif-to-png
+
+Project description here.
+
+brew install libjpeg libtiff little-cms2 openjpeg webp
