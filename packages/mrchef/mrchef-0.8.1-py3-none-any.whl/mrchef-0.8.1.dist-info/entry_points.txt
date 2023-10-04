@@ -1,0 +1,2 @@
+[console_scripts]
+mrchef = mrchef.cli:MrChef.run
