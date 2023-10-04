@@ -1,0 +1,9 @@
+setup.py
+weight/__init__.py
+weight/cli.py
+weight.egg-info/PKG-INFO
+weight.egg-info/SOURCES.txt
+weight.egg-info/dependency_links.txt
+weight.egg-info/entry_points.txt
+weight.egg-info/requires.txt
+weight.egg-info/top_level.txt
