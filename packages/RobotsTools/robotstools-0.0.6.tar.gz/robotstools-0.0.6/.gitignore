@@ -1,0 +1,5 @@
+.pypirc
+tests/RobotsTools
+*.pyc
+dist
+RobotsToolsData
