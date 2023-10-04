@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/robobopy_audiostream/RoboboAudio.py
+src/robobopy_audiostream/__init__.py
+src/robobopy_audiostream/audiosocket.py
+src/robobopy_audiostream.egg-info/PKG-INFO
+src/robobopy_audiostream.egg-info/SOURCES.txt
+src/robobopy_audiostream.egg-info/dependency_links.txt
+src/robobopy_audiostream.egg-info/requires.txt
+src/robobopy_audiostream.egg-info/top_level.txt
