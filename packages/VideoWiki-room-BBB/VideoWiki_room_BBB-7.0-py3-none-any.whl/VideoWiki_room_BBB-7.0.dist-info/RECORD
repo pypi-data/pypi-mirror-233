@@ -1,0 +1,9 @@
+api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api/admin.py,sha256=wylxc7gc0pL0yHWbYLv6wHOvz_YYNGnSYo4MLU_6iTc,193
+api/apps.py,sha256=4qWLokez9kW1_ODDeEGoUecVH2F8Dgkn_2Xulr8VZMk,85
+api/models.py,sha256=grDagNDSaQ3-3rxVY3WqxIivF7ZdacC3YPyh2p9hJAw,19186
+api/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+VideoWiki_room_BBB-7.0.dist-info/METADATA,sha256=-sVWQvXD1ZBPYk2x6o33YCzXdrUWLhXrzyRbpGJGQeI,1741
+VideoWiki_room_BBB-7.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+VideoWiki_room_BBB-7.0.dist-info/top_level.txt,sha256=0XF5TFwfelCuuPcFarhKT7zW-9WUsZmb3a790D78BZE,4
+VideoWiki_room_BBB-7.0.dist-info/RECORD,,
