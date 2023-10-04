@@ -1,0 +1,6 @@
+agate>=0.8.0
+matplotlib>=1.4.3
+
+[test]
+pytest
+pytest-cov
