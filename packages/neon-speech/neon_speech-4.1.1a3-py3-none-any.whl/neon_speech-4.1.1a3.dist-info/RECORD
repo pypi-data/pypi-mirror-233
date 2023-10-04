@@ -1,0 +1,12 @@
+neon_speech/__init__.py,sha256=UDwbScPcnqA05m_zQmXnY6YeoL5j6NS_TaLj0mQdU_8,1831
+neon_speech/__main__.py,sha256=L72B97EWIP6Tp6DCbAtQqnsOAtWKuK_7RQqUHAdHiq0,2980
+neon_speech/cli.py,sha256=BypRLM52ROPSV0XMKBEyjLsMtvCkknYeL7M3IUWXDjU,5167
+neon_speech/service.py,sha256=lOg0arTUm317xuCf1-szju_wDGxHiV-fa2prnm0hiXA,22014
+neon_speech/stt.py,sha256=scSo5XsKk9u9u9KzQCRiAMNN9nHXeJQVtBMCS3AjbO4,4459
+neon_speech/utils.py,sha256=fgR8R50nI2oSa8tV_JjF3ro5iG8fV3buRExd0t674_0,4395
+neon_speech-4.1.1a3.dist-info/LICENSE.md,sha256=gxKa3HnxC7fSIlGFpLAiSAhQS22pIyVEyXmPQR2KlXM,1634
+neon_speech-4.1.1a3.dist-info/METADATA,sha256=W_IopCVPL53ubk4r8vk0cBYeJ89mXgHB6Ya3vH3bVho,2454
+neon_speech-4.1.1a3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+neon_speech-4.1.1a3.dist-info/entry_points.txt,sha256=WsNwAEyf9JGBJvVEEgi9cy3r2DFLwKzdcvsrUS5MC8o,128
+neon_speech-4.1.1a3.dist-info/top_level.txt,sha256=fXNizEfCNvNDWenv5znkv_2KPpvzwwsRM7S3sG7bllw,12
+neon_speech-4.1.1a3.dist-info/RECORD,,
