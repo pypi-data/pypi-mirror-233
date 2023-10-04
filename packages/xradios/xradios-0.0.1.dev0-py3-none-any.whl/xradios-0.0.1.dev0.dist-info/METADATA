@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: xradios
+Version: 0.0.1.dev0
+Summary: Search and play your favorite Internet radio station.
+Home-page: https://github.com/andreztz/xradios
+Author: André P. Santos
+Author-email: andreztz@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/andreztz/xradios/
+Keywords: player,radio,stations,radio-stations,terminal
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs >=1.4.4
+Requires-Dist: prompt-toolkit >=3.0.8
+Requires-Dist: notify-send >=1.1.0
+Requires-Dist: Pygments >=2.7.3
+Requires-Dist: streamscrobbler3 >=0.0.4
+Requires-Dist: python-mpv >=0.5.2
+Requires-Dist: pyradios >=1.0.0
+Requires-Dist: python-vlc >=3.0.12118
+Requires-Dist: pluginbase >=1.0.1
+Requires-Dist: tinydb >=4.5.2
+Requires-Dist: cmd-parser >=0.0.1.dev2
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+
+# xradios
+
+[![Upload Python Package](https://github.com/andreztz/xradios/actions/workflows/python-publish.yml/badge.svg)](https://github.com/andreztz/xradios/actions/workflows/python-publish.yml)
+
+> Search and play your favorite Internet radio station.
+
+<https://user-images.githubusercontent.com/7193527/149377973-fe325cd4-6f55-4b68-9c79-a82a6cf42c45.mp4>
+
+
+## Installation
+
+```bash
+$ pip install xradios
+```
+
+## Usage example
+
+Open the terminal, and run the following command
+
+```bash
+
+$ xradios
+
+```
+
+
+## Development setup
+
+```bash
+$ git clone git@github.com:andreztz/xradios.git
+$ pip install -e .
+```
+
+## Release History
+
+    -   Work in progress
+
+## Meta
+
+André P. Santos – [@ztzandre](https://twitter.com/ztzandre) – andreztz@gmail.com
+
+Distributed under the XYZ license. See `LICENSE` for more information.
+
+[https://github.com/andreztz/xradios](https://github.com/andreztz/)
+
+## Contributing
+
+1. Fork it (<https://github.com/andreztz/xradios/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request

@@ -1,0 +1,3 @@
+[console_scripts]
+xradios = xradios.__main__:main
+xradiosd = xradios.core.server:main
