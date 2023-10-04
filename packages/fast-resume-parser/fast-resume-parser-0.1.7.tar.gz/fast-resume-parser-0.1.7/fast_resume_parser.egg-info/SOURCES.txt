@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+fast_resume_parser/__init__.py
+fast_resume_parser/resume_parser.py
+fast_resume_parser.egg-info/PKG-INFO
+fast_resume_parser.egg-info/SOURCES.txt
+fast_resume_parser.egg-info/dependency_links.txt
+fast_resume_parser.egg-info/top_level.txt
+fast_resume_parser/parser/__init__.py
+fast_resume_parser/parser/docx_parser.py
+fast_resume_parser/parser/image_parser.py
+fast_resume_parser/parser/openai_processor.py
+fast_resume_parser/parser/pdf_parser.py
+tests/__init__.py
+tests/test_parser.py
