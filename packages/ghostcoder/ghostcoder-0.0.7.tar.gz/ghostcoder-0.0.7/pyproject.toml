@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ghostcoder"
+version = "0.0.7"
+description = ""
+authors = ["Albert Örwall <albert@a20g.se>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+codeblocks-gpt = "^0.0.1"
+openai = "^0.27.8"
+langchain = "^0.0.281"
+pydantic = "^1"
+pytest = "^7.3.1"
+tiktoken = "^0.4.0"
+pathspec = "^0.11.1"
+gitpython = "^3.1.31"
+pyfakefs = "^5.2.3"
+tree-sitter-languages = "^1.7.0"
+ipython = "^8.16.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
