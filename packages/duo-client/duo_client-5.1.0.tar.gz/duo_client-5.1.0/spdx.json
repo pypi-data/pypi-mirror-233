@@ -1,0 +1,571 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.2",
+  "creationInfo": {
+    "comment": "This SPDX document has been converted from CycloneDX format.",
+    "created": "2023-10-03T20:18:47.375505Z",
+    "creators": [
+      "Tool: cyclonedx-bom-3.11.2",
+      "Tool: cyclonedx-python-lib-3.1.5"
+    ]
+  },
+  "name": "CycloneDX BOM",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "http://spdx.org/spdxdocs/CycloneDX BOM-81bae476-1702-4f46-ae79-47ae78b54426",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-39be8ee4-bd7a-4483-9d88-49cef3b3eb36",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "Pygments",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.16.1"
+    },
+    {
+      "SPDXID": "SPDXRef-687b2216-dd8f-4507-b873-5f1a23bc97c0",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "SecretStorage",
+      "originator": "Person: Dmitry Shachnev ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.3.3"
+    },
+    {
+      "SPDXID": "SPDXRef-1bc482cc-d0ce-44dc-88e3-74e20a90cba2",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "certifi",
+      "originator": "Person: Kenneth Reitz ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2023.7.22"
+    },
+    {
+      "SPDXID": "SPDXRef-f4f584c0-1563-4c04-bedd-c5f717da9e46",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "cffi",
+      "originator": "Person: Armin Rigo, Maciej Fijalkowski ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "1.16.0"
+    },
+    {
+      "SPDXID": "SPDXRef-03dbaf65-4915-4e06-b54b-97bda6c07cea",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "charset-normalizer",
+      "originator": "Person: Ahmed TAHRI ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-a6fe90f8-d0af-4ead-8b33-e691d2d93db2",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "cryptography",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "41.0.4"
+    },
+    {
+      "SPDXID": "SPDXRef-39fc4930-0be7-45b3-bd75-ff06b577948e",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "cyclonedx-bom",
+      "originator": "Person: Steven Springett ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-603cf6e7-ea44-4351-9422-f3facf317d4c",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "cyclonedx-python-lib",
+      "originator": "Person: Paul Horton ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.1.5"
+    },
+    {
+      "SPDXID": "SPDXRef-ab96ab2a-870e-41c4-9036-c03597a45971",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "docutils",
+      "originator": "Person: David Goodger ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.20.1"
+    },
+    {
+      "SPDXID": "SPDXRef-10bf89f4-65bc-4951-aae1-fc409950602d",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "idna",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.4"
+    },
+    {
+      "SPDXID": "SPDXRef-ecd66d00-6697-4d46-b2a2-2f13fd65de52",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "importlib-metadata",
+      "originator": "Person: Jason R. Coombs ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "6.8.0"
+    },
+    {
+      "SPDXID": "SPDXRef-c7de7aab-dec0-4067-b9c7-896a78c01010",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "jaraco.classes",
+      "originator": "Person: Jason R. Coombs ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-0ba59394-f76e-4aa3-b834-cae22578f366",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "jeepney",
+      "originator": "Person: Thomas Kluyver ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.8.0"
+    },
+    {
+      "SPDXID": "SPDXRef-8eb09ce4-75c4-4be4-93a5-32e7e029c1be",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "keyring",
+      "originator": "Person: Kang Zhang ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "24.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-c5ff7667-eac6-4dee-9bc2-e89a22a2e09d",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "markdown-it-py",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-cd436cff-84ef-48ab-8f8d-59905ac3ba38",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "mdurl",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.1.2"
+    },
+    {
+      "SPDXID": "SPDXRef-9ec4b47a-6105-4e07-8688-12f305f66d20",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "more-itertools",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "10.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-2cad4310-61ba-4b0b-9a5c-e6caa07459d8",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "nh3",
+      "originator": "Person: messense \u003Cmessense@icloud.com\u003E ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.2.14"
+    },
+    {
+      "SPDXID": "SPDXRef-410efd8b-e719-477b-b482-c7aaa9e8ea6b",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "packageurl-python",
+      "originator": "Person: the purl authors ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-1dae2d60-7b55-4d89-aa81-792126a22ceb",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "packaging",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "23.2"
+    },
+    {
+      "SPDXID": "SPDXRef-2beb10ad-4117-4b0b-9a67-15b218a008ce",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "pip",
+      "originator": "Person: The pip developers ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "23.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-efda91aa-8fc3-4a7c-8542-614c084d6b7f",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "pip-requirements-parser",
+      "originator": "Person: The pip authors, nexB. Inc. and others ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "32.0.1"
+    },
+    {
+      "SPDXID": "SPDXRef-e0c551a1-5405-467c-a586-8fddd66a1d78",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "pkginfo",
+      "originator": "Person: Tres Seaver, Agendaless Consulting ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "1.9.6"
+    },
+    {
+      "SPDXID": "SPDXRef-dbd1206f-11b5-4b28-b9ed-93a0fa609b3f",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "pycparser",
+      "originator": "Person: Eli Bendersky ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.21"
+    },
+    {
+      "SPDXID": "SPDXRef-bddbe947-d73c-47a6-b5fc-05f127f20074",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "pyparsing",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-8851eaa5-c002-4a14-afae-5fb09be67f87",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "readme-renderer",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "42.0"
+    },
+    {
+      "SPDXID": "SPDXRef-3dff51f1-fd3f-4ce5-a219-98fdb402b80a",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "requests",
+      "originator": "Person: Kenneth Reitz ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.31.0"
+    },
+    {
+      "SPDXID": "SPDXRef-53bd2a8e-de45-46f7-bf25-2196a9c0e6aa",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "requests-toolbelt",
+      "originator": "Person: Ian Cordasco, Cory Benfield ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "1.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-6a43ffe5-1961-4c27-b607-741d8428b985",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "rfc3986",
+      "originator": "Person: Ian Stapleton Cordasco ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-62d5d198-317a-4c05-9eda-5992eb941bb5",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "rich",
+      "originator": "Person: Will McGugan ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "13.6.0"
+    },
+    {
+      "SPDXID": "SPDXRef-7086c136-70b0-4c47-b67d-d96d17ad5578",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "setuptools",
+      "originator": "Person: Python Packaging Authority ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "65.5.0"
+    },
+    {
+      "SPDXID": "SPDXRef-f8ebd145-b931-441c-8d42-40a576965d50",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "six",
+      "originator": "Person: Benjamin Peterson ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "1.16.0"
+    },
+    {
+      "SPDXID": "SPDXRef-031a4b07-8f45-4e70-9e55-9a54b10ca30b",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "sortedcontainers",
+      "originator": "Person: Grant Jenks ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-0a8a6773-8d02-4e24-83c7-acde58472ec7",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "toml",
+      "originator": "Person: William Pearson ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.10.2"
+    },
+    {
+      "SPDXID": "SPDXRef-1f9747db-ccd5-40d7-a45a-a6d7c7d8948e",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "twine",
+      "originator": "Person: Donald Stufft and individual contributors ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "4.0.2"
+    },
+    {
+      "SPDXID": "SPDXRef-3b94c85d-b434-4dad-b8a8-0c3233b7dce6",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "urllib3",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "2.0.6"
+    },
+    {
+      "SPDXID": "SPDXRef-0fd5faa1-e5b3-4415-a376-4d42cfc8bda5",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "wheel",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "0.41.2"
+    },
+    {
+      "SPDXID": "SPDXRef-d954c9d5-67c3-4bdd-a2e6-093f817735be",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "name": "zipp",
+      "originator": "Person: Jason R. Coombs ()",
+      "supplier": "NOASSERTION",
+      "versionInfo": "3.17.0"
+    }
+  ]
+}
