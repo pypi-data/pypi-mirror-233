@@ -1,0 +1,6 @@
+ci
+dist
+docs
+examples
+pangeo_forge_recipes
+tests
