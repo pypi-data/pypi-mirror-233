@@ -1,0 +1,10 @@
+gemseo[all]>=5
+numpy
+scipy
+strenum
+
+[test]
+covdefaults
+pytest
+pytest-cov
+pytest-xdist
