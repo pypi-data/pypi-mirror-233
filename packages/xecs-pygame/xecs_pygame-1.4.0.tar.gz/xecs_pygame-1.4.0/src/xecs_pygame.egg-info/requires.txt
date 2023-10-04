@@ -1,0 +1,10 @@
+xecs
+pygame
+numpy
+
+[dev]
+black
+ruff
+mypy
+build
+twine
