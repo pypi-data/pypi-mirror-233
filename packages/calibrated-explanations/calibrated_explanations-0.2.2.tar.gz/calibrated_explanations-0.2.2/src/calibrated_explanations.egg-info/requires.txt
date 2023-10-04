@@ -1,0 +1,8 @@
+crepes
+venn-abers
+ipython
+lime
+matplotlib
+numpy
+pandas
+scikit-learn
