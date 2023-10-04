@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fictus"
+version = "0.3.0"
+authors = [
+  { name="Jason Brackman", email="brackman+fictus@gmail.com" },
+]
+description = "Generate a fake file system to create documentation examples."
+readme = "README.md"
+keywords = ["documentation", "fake", "directory", "filesystem"]  # Optional
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.setuptools.packages.find]
+include = ["fictus"]
+exclude = ["docs*", "tests*"]
+
+[project.urls]
+Homepage = "https://github.com/jasonbrackman/arborator"
+Source = "https://github.com/jasonbrackman/arborator"

@@ -1,0 +1,2 @@
+class FictusException(Exception):
+    pass
