@@ -1,0 +1,2 @@
+[console_scripts]
+lazy-nessus = lazy_nessus.main:main
