@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+.history/
+*.pyc
+build/
+dist/
+tsdat.egg-info
+.pytest_cache/
+htmlcov/
+coverage.xml
+.coverage
+typings/
+.mypy_cache/
+storage/root
+_version.py
