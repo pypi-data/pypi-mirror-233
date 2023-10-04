@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+fodnet/__init__.py
+fodnet.egg-info/PKG-INFO
+fodnet.egg-info/SOURCES.txt
+fodnet.egg-info/dependency_links.txt
+fodnet.egg-info/requires.txt
+fodnet.egg-info/top_level.txt
+fodnet/bin/__init__.py
+fodnet/core/__init__.py
+fodnet/core/dataset.py
+fodnet/core/io.py
+fodnet/core/model.py
+fodnet/core/prediction.py
+fodnet/core/processing.py
