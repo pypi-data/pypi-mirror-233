@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: easymongodb
+Version: 0.1
+Summary: A Python package for working with MongoDB
+Home-page: UNKNOWN
+Author: Suraj Ho
+Author-email: suraj@ho-sting.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pymongo
+
+UNKNOWN
+
