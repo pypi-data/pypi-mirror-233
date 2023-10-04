@@ -1,0 +1,2 @@
+[console_scripts]
+micadoparser = micadoparser.cli:main
