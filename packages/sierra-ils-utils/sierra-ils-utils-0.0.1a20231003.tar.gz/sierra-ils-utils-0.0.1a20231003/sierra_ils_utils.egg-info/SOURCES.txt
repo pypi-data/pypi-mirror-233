@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sierra_ils_utils/__init__.py
+sierra_ils_utils/sierra_ils_utils.py
+sierra_ils_utils.egg-info/PKG-INFO
+sierra_ils_utils.egg-info/SOURCES.txt
+sierra_ils_utils.egg-info/dependency_links.txt
+sierra_ils_utils.egg-info/requires.txt
+sierra_ils_utils.egg-info/top_level.txt
