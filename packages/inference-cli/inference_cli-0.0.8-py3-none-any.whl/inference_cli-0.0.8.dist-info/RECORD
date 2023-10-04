@@ -1,0 +1,11 @@
+inference-cli/__init__.py,sha256=zqsqzy4EHZcwkqYgBwVCa9jq3jx5RUxV8Q79A5Gkvpw,720
+inference_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inference_cli/actions.py,sha256=6ERLonrWtmV2FeTd8qFC4kKP2txFDKe6vT2mE5NHydw,901
+inference_cli/main.py,sha256=vkf0nRZZPUyBsI1ypJyvoRa2awONruI23MTCHoEzMTw,1471
+inference_cli/lib/__init__.py,sha256=peEYGXx7irEIzDjXNJ_iqBl3A5Cj20HAgg8raij3ErE,74
+inference_cli/lib/container_adapter.py,sha256=XC1lWC7Wz5-y2OMPlAb7mDLeb8qsFPZw3u5ArfQ0YRQ,3192
+inference_cli-0.0.8.dist-info/METADATA,sha256=aMs3E6JDV7kDvMlK1Rl1zy2KyMK5z6IVS5KHMAHesc8,10803
+inference_cli-0.0.8.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+inference_cli-0.0.8.dist-info/entry_points.txt,sha256=Bkkqcf-Nx4_cuQIyLSPqmwSNGODkQwIJFxEp7VkWTsw,54
+inference_cli-0.0.8.dist-info/top_level.txt,sha256=3NcAsjZAnLA1--HDxXmzJgZAa4Zvv51Qh6FNUjw0E-0,14
+inference_cli-0.0.8.dist-info/RECORD,,
