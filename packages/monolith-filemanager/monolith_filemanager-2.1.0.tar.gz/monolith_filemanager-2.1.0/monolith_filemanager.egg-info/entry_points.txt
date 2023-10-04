@@ -1,0 +1,6 @@
+[console_scripts]
+file-hello = monolith_filemanager.console_commands.hello:print_logo
+file-install-aws = monolith_filemanager.console_commands.install_boto:install_boto
+file-install-flask = monolith_filemanager.console_commands.install_flask:install_flask
+file-install-tensorflow = monolith_filemanager.console_commands.install_tensorflow:install_tensorflow
+

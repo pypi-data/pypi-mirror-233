@@ -1,0 +1,3 @@
+monolith_filemanager
+requirements_manager
+tests
