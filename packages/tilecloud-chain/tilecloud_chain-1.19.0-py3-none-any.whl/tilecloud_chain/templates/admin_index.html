@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The tile generation admin interface</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="${request.static_url('/app/tilecloud_chain/static/favicon-32x32.png')}"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="${request.static_url('/app/tilecloud_chain/static/favicon-16x16.png')}"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="px-5 py-4">
+    <div style="position: absolute; right: 3rem; top: 2rem">
+      %if not request.identity.is_auth and auth_type == AuthenticationType.SECRET:
+      <form>
+        Secret: <input type="password" name="secret" />
+        <input type="submit" value="OK" />
+      </form>
+      %elif not request.identity.is_auth and auth_type == AuthenticationType.GITHUB:
+      <a
+        class="btn btn-primary"
+        href="${request.route_url('c2c_github_login', _query={'came_from': request.current_route_url()})}"
+        >Login with GitHub</a
+      >
+      %elif auth_type == AuthenticationType.GITHUB:
+      <p>
+        Logged as: <a href="${request.identity.url}">${request.identity.name}</a>
+        <a
+          class="btn btn-primary"
+          style="vertical-align: baseline; margin-left: 0.5rem"
+          href="${request.route_url('c2c_github_logout', _query={'came_from': request.current_route_url()})}"
+          >Logout</a
+        >
+      </p>
+      %endif
+    </div>
+    <h1 class="bd-title">Tile generation</h1>
+    <hr />
+    <span></span>
+    %if has_access:
+    <h2>Status</h2>
+    <p>${'<br />'.join(status)|n}</p>
+    <h2>Launch generation</h2>
+    <form id="command-form" class="form-inline">
+      <div class="input-group mb-3">
+        <input
+          id="command"
+          type="text"
+          name="command"
+          class="form-control"
+          placeholder="Command"
+          aria-label="Command"
+          aria-describedby="button-run"
+        />
+        <button class="btn btn-outline-primary" type="submit" id="button-run">Start</button>
+      </div>
+      %if secret is not None:
+      <input type="hidden" name="secret" value="${request.params.get('secret')}" />
+      %endif
+    </form>
+    <div class="btn-group" role="group" style="margin-bottom: 1rem">
+      %for command in commands:
+      <button class="btn btn-outline-primary command" data-role="${command.get('command', '')}">
+        ${command.get('name', 'Unnamed')}
+      </button>
+      %endfor
+    </div>
+    %endif
+    <span id="result"></span>
+
+    <h2>Test</h2>
+    <p>See the result in <a href="/${admin_path}/test">the test page</a>.</p>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+      integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        /* For dark mode */
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-bs-theme', 'dark');
+        }
+
+        $('.command').click((handler) => {
+          $('#command').val(handler.target.dataset.role);
+        });
+        $('#command-form').submit((event) => {
+          $('#result').html('');
+          event.preventDefault();
+
+          fetch('${request.route_url("admin_run")}', {
+            body: new FormData(document.getElementById('command-form')),
+            method: 'POST',
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              if (data.error) {
+                $('#result').html(`<p class="alert alert-danger" role="alert">${'$'}{data.out}</p>`);
+              } else {
+                if (data['out']) {
+                  $('#result').html(`<p class="alert alert-success" role="alert">${'$'}{data.out}</p>`);
+                } else {
+                  $('#result').html(`<p class="alert alert-success" role="alert">Success</p>`);
+                }
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+              $('#result').html(`<div class="alert alert-danger" role="alert">${'$'}{error}</div>`);
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
