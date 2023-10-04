@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: wb-custom-logger
+Version: 0.0.4
+Home-page: https://wavebridge.com
+Author: Tom Choi
+Author-email: tom.choi@wavebridge.com
+License: (c) WaveBridge
+Classifier: Programming Language :: Python :: 3.10
