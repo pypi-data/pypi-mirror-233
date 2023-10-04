@@ -1,0 +1,15 @@
+AnkiChinese/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AnkiChinese/export.py,sha256=CbhYXr243qU1zKU11TqJxEK79R5ZkI9IIZkpjkhKitY,4730
+AnkiChinese/main.py,sha256=5qxRkFShyeZ76ZpYzS3VpcJe4P3mpnAFP974xrwPpjE,5805
+AnkiChinese/scraper.py,sha256=IVnrsdJy4M3VVp6Bk8oq7yscgG5vWNUMxzJVTEutVuo,4256
+AnkiChinese/card_template/_CNstrokeorder.ttf,sha256=YYtOcUvt1V0DwAs_vf9KltcmYCFJNirvwjGyOK4JpIY,17321876
+AnkiChinese/card_template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AnkiChinese/card_template/back.html,sha256=VjdR_T9dBId8gYKank6lWOXW26w8K7v9v0Ojcsr24ak,2133
+AnkiChinese/card_template/front.html,sha256=lROncFokTAbanWxX6X7kwPHVGq8-PpUUNFDh3_wtAyw,2876
+AnkiChinese/card_template/styles.css,sha256=jIoF7ZNeI7rx2npIkuzwWOhi2zXEjWvTw9R3nqhpKR4,943
+AnkiChinese-1.3.8.dist-info/LICENSE.txt,sha256=y80knRhfTwmkmMt6UNfGCMEMVbed8pZgwC-Cckz_frk,1065
+AnkiChinese-1.3.8.dist-info/METADATA,sha256=qkZ2i9AkQhXWoyRr7ktJRKWHqDg0ikHY5norazUto94,6404
+AnkiChinese-1.3.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+AnkiChinese-1.3.8.dist-info/entry_points.txt,sha256=12DpSaPjzbGiBRzBH2Bgeq_T3c9WOJvcZpEZPkEJAZs,54
+AnkiChinese-1.3.8.dist-info/top_level.txt,sha256=7o_Y0ZpAGIgHQQPUiXZa8B0IslAWuq9XB-e04bK-eYg,12
+AnkiChinese-1.3.8.dist-info/RECORD,,
