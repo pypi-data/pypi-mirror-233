@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+  "src/pyfmgng/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyfmgng"]
+
+[tool.hatch.version]
+path = "src/pyfmgng/__about__.py"
+
+[project]
+name = "pyfmgng"
+dynamic = ["version"]
+authors = [
+  { name="Per Abildgaard Toft", email="p@t1.dk" },
+]
+description = "FortiManager SDK NG"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pertoft/pyfmg-ng"
+"Bug Tracker" = "https://github.com/pertoft/pyfmg-ng/issues"

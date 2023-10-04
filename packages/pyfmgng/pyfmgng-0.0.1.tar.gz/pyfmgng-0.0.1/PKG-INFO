@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyfmgng
+Version: 0.0.1
+Summary: FortiManager SDK NG
+Project-URL: Homepage, https://github.com/pertoft/pyfmg-ng
+Project-URL: Bug Tracker, https://github.com/pertoft/pyfmg-ng/issues
+Author-email: Per Abildgaard Toft <p@t1.dk>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pyfmg-ng
+FortiManager SDK Next Generation
+
+This is a work in progress SDK with simpler access to FortiManger. 
