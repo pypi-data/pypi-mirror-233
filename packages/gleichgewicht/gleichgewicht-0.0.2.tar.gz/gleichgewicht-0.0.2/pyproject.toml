@@ -1,0 +1,24 @@
+[project]
+dependencies = [
+        'numpy >= 1.26.0',
+        'sympy >= 1.12',
+        'matplotlib >= 3.7.2',
+]
+
+name = "gleichgewicht"
+version = "0.0.2"
+authors = [
+  { name="Pascal Gitz", email="pascal.gitz@hslu.ch" },
+]
+description = "The gleichgewicht Package is designed for students at the Hochschule Luzern Technik and Architektur, with a specific focus on structural engineering. This package provides a comprehensive set of tools for analyzing structures and understanding the principles of gleichgewicht."
+readme = "README.md"
+requires-python = ">=3.10.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/PascalGitz/gleichgewicht"
+"Bug Tracker" = "https://github.com/PascalGitz/gleichgewicht/issues"

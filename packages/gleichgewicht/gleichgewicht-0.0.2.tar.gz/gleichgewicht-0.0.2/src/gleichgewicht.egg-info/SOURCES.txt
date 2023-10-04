@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/test_gleichgewicht.py
+src/gleichgewicht/__init__.py
+src/gleichgewicht/actions.py
+src/gleichgewicht/reactions.py
+src/gleichgewicht/structure.py
+src/gleichgewicht.egg-info/PKG-INFO
+src/gleichgewicht.egg-info/SOURCES.txt
+src/gleichgewicht.egg-info/dependency_links.txt
+src/gleichgewicht.egg-info/requires.txt
+src/gleichgewicht.egg-info/top_level.txt
