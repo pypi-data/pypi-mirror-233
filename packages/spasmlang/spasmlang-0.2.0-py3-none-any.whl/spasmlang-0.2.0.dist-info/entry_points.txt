@@ -1,0 +1,2 @@
+[console_scripts]
+spasm = spasm.__main__:main
