@@ -1,0 +1,9 @@
+hatch_modulefile/__about__.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+hatch_modulefile/hooks.py,sha256=BzAshWGEl9dXnT-v3cW8d8gIqLPt_AJ3dF-QJYAE998,172
+hatch_modulefile/inputs.py,sha256=1m8dfFSayzAp5hlJBqcdFzqPxE3Yek3HgbYYuGQZkL4,3902
+hatch_modulefile/plugins.py,sha256=sENZxoJiBjlqVkF1mP4nUoHH8J6w58wOoDou-kppbPk,2490
+hatch_modulefile-0.0.0.dist-info/METADATA,sha256=ilUWlrj80fW-y-m8RcOKkuyRWQZQ151RvbY3ySYCBSM,1300
+hatch_modulefile-0.0.0.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+hatch_modulefile-0.0.0.dist-info/entry_points.txt,sha256=HQJ__0_TOXSJP1uRGW6EkmssfrAcqJE_M70SmlNkMPQ,44
+hatch_modulefile-0.0.0.dist-info/licenses/LICENSE.txt,sha256=Fqet_8Wp-omdPzj8aaTScUeNtnvhFL0sddZLz9TQHgY,1112
+hatch_modulefile-0.0.0.dist-info/RECORD,,
