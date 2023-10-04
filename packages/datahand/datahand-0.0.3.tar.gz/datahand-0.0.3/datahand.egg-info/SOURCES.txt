@@ -1,0 +1,9 @@
+README.md
+setup.py
+datahand/__init__.py
+datahand/read_wos.py
+datahand.egg-info/PKG-INFO
+datahand.egg-info/SOURCES.txt
+datahand.egg-info/dependency_links.txt
+datahand.egg-info/requires.txt
+datahand.egg-info/top_level.txt
