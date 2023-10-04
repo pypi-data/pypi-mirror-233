@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+earthkit/regrid/version.py
+earthkit_regrid.egg-info/PKG-INFO
+earthkit_regrid.egg-info/SOURCES.txt
+earthkit_regrid.egg-info/dependency_links.txt
+earthkit_regrid.egg-info/requires.txt
+earthkit_regrid.egg-info/top_level.txt
