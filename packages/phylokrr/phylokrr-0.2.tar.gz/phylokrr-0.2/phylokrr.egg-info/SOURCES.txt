@@ -1,0 +1,13 @@
+README.md
+setup.py
+phylokrr.egg-info/PKG-INFO
+phylokrr.egg-info/SOURCES.txt
+phylokrr.egg-info/dependency_links.txt
+phylokrr.egg-info/not-zip-safe
+phylokrr.egg-info/requires.txt
+phylokrr.egg-info/top_level.txt
+src/__init__.py
+src/core.py
+src/kernels.py
+src/tests.py
+src/utils.py
