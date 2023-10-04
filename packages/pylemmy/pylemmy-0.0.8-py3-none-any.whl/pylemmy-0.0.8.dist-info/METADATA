@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: pylemmy
+Version: 0.0.8
+Summary: pylemmy enables simple access to Lemmy's API with Python
+Project-URL: Documentation, https://dcferreira.com/pylemmy
+Project-URL: Issues, https://github.com/dcferreira/pylemmy/issues
+Project-URL: Source, https://github.com/dcferreira/pylemmy
+Author-email: Daniel Ferreira <daniel.ferreira.1@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: aiostream~=0.4.5
+Requires-Dist: loguru>=0.3
+Requires-Dist: pydantic<2.0,>=1.8
+Requires-Dist: requests>=2.18
+Description-Content-Type: text/markdown
+
+# pylemmy
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pylemmy.svg)](https://pypi.org/project/pylemmy)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pylemmy.svg)](https://pypi.org/project/pylemmy)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+
+## Installation
+
+```console
+pip install pylemmy
+```
+
+## Usage
+
+Simple example of running a Python function on new posts, as they are created.
+
+```python
+from pylemmy import Lemmy
+
+def process_post(post):
+    ...
+
+lemmy = Lemmy(
+    lemmy_url="http://127.0.0.1:8536",
+    username="lemmy",
+    password="lemmylemmy",
+    user_agent="custom user agent (by u/USERNAME)",
+)
+
+community = lemmy.get_community("test")
+for post in community.stream.get_posts():
+    process_post(post)
+```
+
+## License
+
+`pylemmy` is distributed under the terms of the 
+[MIT](https://spdx.org/licenses/MIT.html) license.
