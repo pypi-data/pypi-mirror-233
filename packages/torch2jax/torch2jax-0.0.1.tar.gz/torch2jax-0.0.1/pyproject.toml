@@ -1,0 +1,13 @@
+[project]
+name = "torch2jax"
+version = "0.0.1"
+authors = [
+  { name="Samuel Ainsworth", email="skainsworth@gmail.com" },
+]
+description = "Run PyTorch in JAX. 🤝"
+readme = "README.md"
+dependencies = ["jax", "torch"]
+
+[project.urls]
+"Homepage" = "https://github.com/samuela/torch2jax"
+"Bug Tracker" = "https://github.com/samuela/torch2jax/issues"

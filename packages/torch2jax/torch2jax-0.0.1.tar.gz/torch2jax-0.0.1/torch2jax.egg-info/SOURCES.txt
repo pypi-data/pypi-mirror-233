@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+tests/test_all_the_things.py
+torch2jax/__init__.py
+torch2jax.egg-info/PKG-INFO
+torch2jax.egg-info/SOURCES.txt
+torch2jax.egg-info/dependency_links.txt
+torch2jax.egg-info/requires.txt
+torch2jax.egg-info/top_level.txt
