@@ -1,0 +1,13 @@
+mph
+numpy
+scipy
+neuron
+matplotlib
+numba
+ezdxf
+icecream
+pyswarms
+
+[dev]
+Sphinx>=6.1
+Furo

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: nrv-py
+Version: 0.9.12
+Summary: NeuRon Virtualizer (NRV)
+Home-page: https://github.com/fkolbl/NRV
+Author: Florian Kolbl - Roland Giraud - Louis Regnacq - Thomas Couppey
+Project-URL: Documentation, https://nrv.readthedocs.io
+Project-URL: Source, https://github.com/fkolbl/NRV
+Keywords: neuronal simulation,computer simulation,neurosciences,multiphysics,Neuron,Comsol
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Natural Language :: English
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
