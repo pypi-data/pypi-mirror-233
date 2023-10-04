@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: msrc-appconfig-param
+Version: 0.5.6
+Summary: Plugin for msrc-appconfig.
+Home-page: https://github.com/microsoft/msrc-appconfig
+Author: Vassily Lyutsarev
+Author-email: vassilyl@microsoft.com
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: msrc-appconfig
+Requires-Dist: param ==1.9.2
+
+# msrc-appconfig-param
+
+`msrc.appconfig` extension to use [`param`](https://param.holoviz.org/) package to declare appconfig schema. 
+
+is_secret not supported.
+Always have `name` element defaults to the name of the class
+Fixed length tuples are for ints and floats only. Non-fixed length tuples are lists.
