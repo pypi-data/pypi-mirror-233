@@ -1,0 +1,20 @@
+error_messages = {
+    "ZeroDivisionError": {"detail": "Sıfıra bölme hatası oluştu.", "fix": "Bölme işleminizde bölen rakamı kontrol edin."},
+    "ValueError": {"detail": "Geçersiz değer hatası oluştu.", "fix": "Geçerli bir değer sağladığınızdan emin olun."},
+    "TypeError": {"detail": "Veri türü hatası oluştu.", "fix": "Doğru veri türünü kullanmaktan emin olun."},
+    "KeyError": {"detail": "Anahtar hatası oluştu.", "fix": "Anahtarın doğru olduğundan emin olun."},
+    "FileNotFoundError": {"detail": "Dosya bulunamadı hatası oluştu.", "fix": "Dosya yolunu kontrol edin veya dosyayı oluşturun."},
+    "IndexError": {"detail": "İndeks hatası oluştu.", "fix": "Doğru indeksi kullanmaktan emin olun."},
+    "AssertionError": {"detail": "Kesinlik hatası oluştu.", "fix": "Kesinlik ifadenizi gözden geçirin."},
+    "AttributeError": {"detail": "Nitelik hatası oluştu.", "fix": "Doğru niteliği kullanmaktan emin olun."},
+    "IOError": {"detail": "Giriş/Çıkış hatası oluştu.", "fix": "Dosya işlemlerinizi kontrol edin."},
+    "NameError": {"detail": "Tanımsız isim hatası oluştu.", "fix": "Değişken isminizi veya fonksiyon adını kontrol edin."},
+    "ImportError": {"detail": "İçe aktarma hatası oluştu.", "fix": "İçe aktarma yolunu kontrol edin."},
+    "ModuleNotFoundError": {"detail": "Modül bulunamadı hatası oluştu.", "fix": "Modülü yüklediğinizden emin olun."},
+    "MemoryError": {"detail": "Bellek hatası oluştu.", "fix": "Bellek kullanımınızı azaltın veya optimize edin."},
+    "SyntaxError": {"detail": "Sözdizimi hatası oluştu.", "fix": "Sözdiziminizi kontrol edin ve düzeltin."},
+    "IndentationError": {"detail": "Girinti hatası oluştu.", "fix": "Girintileri düzgün şekilde ayarlayın."},
+    "EOFError": {"detail": "Dosya sonu hatası oluştu.", "fix": "Dosyanızın sonuna ulaşıp ulaşmadığınızı kontrol edin."},
+    "ArithmeticError": {"detail": "Aritmetik hatası oluştu.", "fix": "Aritmetik işlemlerinizi gözden geçirin."},
+    "FileExistsError": {"detail": "Dosya zaten var hatası oluştu.", "fix": "Farklı bir dosya adı kullanın veya mevcut dosyayı silin."}
+}
