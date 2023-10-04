@@ -1,0 +1,14 @@
+.gitignore
+manage.py
+requirement.txt
+setup.py
+VideoWiki_room_BBB.egg-info/PKG-INFO
+VideoWiki_room_BBB.egg-info/SOURCES.txt
+VideoWiki_room_BBB.egg-info/dependency_links.txt
+VideoWiki_room_BBB.egg-info/requires.txt
+VideoWiki_room_BBB.egg-info/top_level.txt
+api/__init__.py
+api/admin.py
+api/apps.py
+api/models.py
+api/tests.py

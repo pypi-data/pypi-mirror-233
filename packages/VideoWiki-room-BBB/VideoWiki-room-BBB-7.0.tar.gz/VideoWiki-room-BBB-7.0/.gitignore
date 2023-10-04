@@ -1,0 +1,21 @@
+db.sqlite3
+.env
+djangoenv
+venv/
+.idea/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+api/global_variable.py
+log/error_log.log
+media/
+static/
+ffmpeg/
+resized_images/
+bg_images/
+casting_logo/
+timezone_calc/timezone.txt
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
