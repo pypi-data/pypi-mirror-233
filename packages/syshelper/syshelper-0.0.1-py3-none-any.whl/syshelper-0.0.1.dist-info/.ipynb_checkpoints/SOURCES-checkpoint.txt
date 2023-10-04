@@ -1,0 +1,9 @@
+README.md
+setup.py
+syshelper/__init__.py
+syshelper/syshelper.py
+syshelper.egg-info/PKG-INFO
+syshelper.egg-info/SOURCES.txt
+syshelper.egg-info/dependency_links.txt
+syshelper.egg-info/requires.txt
+syshelper.egg-info/top_level.txt
