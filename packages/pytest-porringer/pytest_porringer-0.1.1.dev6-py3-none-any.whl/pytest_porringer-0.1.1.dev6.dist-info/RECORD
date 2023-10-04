@@ -1,0 +1,12 @@
+pytest_porringer-0.1.1.dev6.dist-info/METADATA,sha256=W4-NAYay7xmu7MuaGYANZDd02I1esBj3718N-ri0fGk,569
+pytest_porringer-0.1.1.dev6.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+pytest_porringer-0.1.1.dev6.dist-info/entry_points.txt,sha256=NHrI5tFZM6RpNJk25RJZxAOtoZhnS5j--7vrRcIEo8o,137
+pytest_porringer-0.1.1.dev6.dist-info/licenses/LICENSE.md,sha256=wUELBJ0UKnpv6gI6lccpfQn9LyXZRT0vaLfW-pZDIuc,1073
+pytest_porringer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/mock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/mock/environment.py,sha256=QcQ13xIttIm-w9IowjhFgBYRVfL_pN2dOo_sYvDQp-A,1792
+pytest_porringer/plugin.py,sha256=Kk-YizaHcu7Kb_SYFas4zsMBQwuwzL0InTVcLhgwNhw,13
+pytest_porringer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_porringer/shared.py,sha256=UAax-3OIgYZFAwF1A5BP9209A9qF_Zak45hUlszAXGg,3311
+pytest_porringer/tests.py,sha256=oJvawGEVLKnLzdNVgPIf8FwtXY5Vqa10ETKWEJaGd9U,1220
+pytest_porringer-0.1.1.dev6.dist-info/RECORD,,

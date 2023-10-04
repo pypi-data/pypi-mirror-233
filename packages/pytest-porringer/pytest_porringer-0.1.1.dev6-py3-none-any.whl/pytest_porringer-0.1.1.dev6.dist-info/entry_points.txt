@@ -1,0 +1,6 @@
+[porringer.environment]
+mock = pytest_porringer.mock.environment:MockEnvironment
+
+[pytest11]
+pytest_porringer = pytest_porringer.plugin
+
