@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dockside
+Version: 0.1.2
+Summary: dockside: A python utility to download United States Geological Survey (USGS) National Water Information System (NWIS) data
+Home-page: https://github.com/Geosyntec/dockside
+Download-URL: https://github.com/Geosyntec/dockside/archive/master.zip
+Author: Lucas Nguyen (Geosyntec Consultants)
+License: BSD 3-clause
+Platform: Python 3.8 and later.
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: requests
+
+dockside: A python utility to download United States Geological Survey (USGS) National Water Information System (NWIS) data
