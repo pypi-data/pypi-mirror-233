@@ -1,0 +1,11 @@
+setup.py
+sqljson/__init__.py
+sqljson/main.py
+sqljson.egg-info/PKG-INFO
+sqljson.egg-info/SOURCES.txt
+sqljson.egg-info/dependency_links.txt
+sqljson.egg-info/entry_points.txt
+sqljson.egg-info/requires.txt
+sqljson.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
