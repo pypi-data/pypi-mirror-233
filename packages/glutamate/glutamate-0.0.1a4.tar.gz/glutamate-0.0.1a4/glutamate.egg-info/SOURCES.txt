@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+glutamate/__init__.py
+glutamate/__main__.py
+glutamate/consts.py
+glutamate/database.py
+glutamate/datamodel.py
+glutamate/dataset.py
+glutamate/download.py
+glutamate/inner_types.py
+glutamate/py.typed
+glutamate.egg-info/PKG-INFO
+glutamate.egg-info/SOURCES.txt
+glutamate.egg-info/dependency_links.txt
+glutamate.egg-info/requires.txt
+glutamate.egg-info/top_level.txt
