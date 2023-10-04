@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+srf_attention/__init__.py
+srf_attention/att.py
+srf_attention/kernel.py
+srf_attention/rfs.py
+srf_attention/torch_low_mem_attn.py
+srf_attention.egg-info/PKG-INFO
+srf_attention.egg-info/SOURCES.txt
+srf_attention.egg-info/dependency_links.txt
+srf_attention.egg-info/requires.txt
+srf_attention.egg-info/top_level.txt
