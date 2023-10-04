@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ENCHUFLA
+Version: 0.0.15
+License: LL
+Description-Content-Type: text/markdown
+Requires-Dist: BOTANIST
+Requires-Dist: click
+Requires-Dist: ecdsa
+Requires-Dist: flask
+Requires-Dist: pycryptodome
+Requires-Dist: qrcode
