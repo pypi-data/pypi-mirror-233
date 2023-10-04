@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lorcania-cli
+Version: 0.1.0
+Summary: A CLI tool to access https://lorcania.com
+Home-page: https://github.com/cschwartz/lorcania-cli
+License: LGPL-3.0-only
+Author: Christian Schwartz
+Author-email: christian.schwartz@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.0,<3.0.0)
+Requires-Dist: pandas-stubs (>=2.1.1.230928,<3.0.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.5.3,<14.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: types-requests (>=2.31.0.6,<3.0.0.0)
+Project-URL: Repository, https://github.com/cschwartz/lorcania-cli

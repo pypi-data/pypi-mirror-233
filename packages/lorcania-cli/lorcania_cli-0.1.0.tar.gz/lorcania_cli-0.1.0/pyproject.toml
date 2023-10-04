@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "lorcania-cli"
+version = "0.1.0"
+description = "A CLI tool to access https://lorcania.com"
+authors = ["Christian Schwartz <christian.schwartz@gmail.com>"]
+license = "LGPL-3.0-only"
+repository = "https://github.com/cschwartz/lorcania-cli"
+
+[tool.poetry.scripts]
+lorcania-cli = "lorcania_cli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.9.0"}
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+pandas = "^2.1.0"
+openpyxl = "^3.1.2"
+rich = "^13.5.3"
+types-requests = "^2.31.0.6"
+pandas-stubs = "^2.1.1.230928"
+
+[tool.poetry.group.test.dependencies]
+pytest-vcr = "^1.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.291"
+black = "^23.9.1"
+mypy = "^1.5.1"
+pytest = "^7.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target_version = ['py310']
+
+[tool.ruff]
+exclude = [
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".vscode",
+    ".git",
+    "dist",
+]
+ignore = []
+select = [
+    "E",
+    "F",
+    "W",
+]
+src = ["lorcania_cli", "tests"]
+
+[mypy]
+files = ["lorcania_cli"]
