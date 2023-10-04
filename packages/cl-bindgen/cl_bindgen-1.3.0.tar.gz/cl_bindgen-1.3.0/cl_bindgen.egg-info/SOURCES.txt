@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cl_bindgen/__init__.py
+cl_bindgen/__main__.py
+cl_bindgen/macro_util.py
+cl_bindgen/mangler.py
+cl_bindgen/processfile.py
+cl_bindgen/util.py
+cl_bindgen.egg-info/PKG-INFO
+cl_bindgen.egg-info/SOURCES.txt
+cl_bindgen.egg-info/dependency_links.txt
+cl_bindgen.egg-info/entry_points.txt
+cl_bindgen.egg-info/requires.txt
+cl_bindgen.egg-info/top_level.txt
