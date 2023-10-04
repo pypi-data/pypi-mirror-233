@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: BINARY_DISTRIBUTION_TEMPLATE
+Version: 0.0.14
+Description-Content-Type: text/plain
+
+
+
+
+
+
+STRUCTURE:
+
+	BINARY_DISTRIBUTION_TEMPLATE
+		src
+			bin
+				BINARY_DISTRIBUTION_TEMPLATE
+
+
+
+setup.py:
+
+	from setuptools import setup, find_packages
+
+	setup (
+		version = "0.0.9",
+
+		name = "BINARY_DISTRIBUTION_TEMPLATE",
+		install_requires = [],	
+		
+		package_dir = { 
+			'BINARY_DISTRIBUTION_TEMPLATE': 'src',
+		},
+		package_data = {
+			'BINARY_DISTRIBUTION_TEMPLATE': [ 'bin/BINARY_DISTRIBUTION_TEMPLATE' ]
+		},
+		scripts = [ 'src/bin/BINARY_DISTRIBUTION_TEMPLATE' ],
+		
+		license = "",
+		long_description = "",
+		long_description_content_type = "text/plain"
+	)
