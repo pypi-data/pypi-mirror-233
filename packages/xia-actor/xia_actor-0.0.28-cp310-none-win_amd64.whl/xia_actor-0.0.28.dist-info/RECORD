@@ -1,0 +1,14 @@
+xia_actor/__init__.py,sha256=iDaPpqEBAX-o2u3_Qi-f25Hy1Fmol9oR4h6Jem-Alnk,615
+xia_actor/actor.cp310-win_amd64.pyd,sha256=FxCmsGtL6vSvj-X6fl-U0HUi3PCmb0LrD5obuzd_0GM,396288
+xia_actor/job.cp310-win_amd64.pyd,sha256=AyH78Dc85X6OSsLV4Bz6WZuSPvuFLGc8u1SXYVx56DI,360960
+xia_actor/jobs/__init__.py,sha256=z-mGgUbHlWGcXz7L86s8fgVZ8PRq-2lP-VDlBloGk6w,389
+xia_actor/jobs/campaign_owner.cp310-win_amd64.pyd,sha256=Q-HFx6R3OiUruw2E27hCA1EoAH-oYgbI8eUTuHBJnow,289280
+xia_actor/jobs/mission_owner.cp310-win_amd64.pyd,sha256=SZtZ6EOSBDVvkwNzVpfjskJELFmFLnu6CNnPjgEo9i4,288256
+xia_actor/jobs/mission_reviewer.cp310-win_amd64.pyd,sha256=6HtuQYfTRkWEJgS21lGzvVQULokKllSik8c_EJMQQsU,351744
+xia_actor/jobs/mission_worker.cp310-win_amd64.pyd,sha256=jmMdukk2tgX2XXYRX5oJ6on4P-qnlkrLCAwWAmpuyg4,355328
+xia_actor/jobs/target_reviewer.cp310-win_amd64.pyd,sha256=JktkyvSic-c9aaZtLHjlMpKNw1j6Awv26DZCTeqFvgA,272384
+xia_actor-0.0.28.dist-info/LICENSE.txt,sha256=NXQ2hFYjpeiOYtWOeSeFVcdJCR5qQzj27tZor9syq08,156
+xia_actor-0.0.28.dist-info/METADATA,sha256=j9zModOsd_pSyUfmKdtTh_RHObEkNyA8YEWI_7kPu10,409
+xia_actor-0.0.28.dist-info/WHEEL,sha256=kolUYyAuE6ut8zey19a5dD-9OJXpdVbQiTZkpOLR1WY,100
+xia_actor-0.0.28.dist-info/top_level.txt,sha256=-UXLzmsgIuEIUSHRbR6XD-ix4NwhjldjVlG3xjJVuyg,10
+xia_actor-0.0.28.dist-info/RECORD,,
