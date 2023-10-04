@@ -1,0 +1,6 @@
+include README.md
+include pygitlinguist/LICENSE
+recursive-include pygitlinguist/linguist *.yml
+recursive-include pygitlinguist/linguist *.yaml
+recursive-include pygitlinguist/linguist *.py
+recursive-include pygitlinguist/linguist/strategy *.py
