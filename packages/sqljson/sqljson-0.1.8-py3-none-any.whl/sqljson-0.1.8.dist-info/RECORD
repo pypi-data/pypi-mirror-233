@@ -1,0 +1,10 @@
+sqljson/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqljson/main.py,sha256=_QahygJGDwBBkuMLhFM6DlqJgZfiuoWnm4VC8rSyM_k,8481
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=H_j2MZQjcrtbQAQY4QcpER71WD01G-3PPzThQtexmT0,870
+sqljson-0.1.8.dist-info/LICENSE,sha256=S98bNCiE6LmRcp8lvHWIfcAY75TaCHpVtC9oByMj-Ds,1063
+sqljson-0.1.8.dist-info/METADATA,sha256=WNJ9Ns2ewDwXRg1_dlRf-NqZuQpfQbXXULN_1n5UHL8,293
+sqljson-0.1.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sqljson-0.1.8.dist-info/entry_points.txt,sha256=JK6lbLSWbgR8rL4apjboMSjqJphZH_A5j0XG3dTZfHQ,46
+sqljson-0.1.8.dist-info/top_level.txt,sha256=UthnILbjpUZqFhHUFrg4P1bMyUNi7Gs9Y0FGPKo-8Ts,14
+sqljson-0.1.8.dist-info/RECORD,,
