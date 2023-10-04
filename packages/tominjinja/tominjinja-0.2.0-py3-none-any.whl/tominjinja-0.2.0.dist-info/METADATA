@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: tominjinja
+Version: 0.2.0
+Summary: 
+Author: Marcin Tyszkiewicz
+Author-email: 56219944+mtyszkiewicz@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: rich-argparse (>=1.3.0,<2.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+# tominjinja
+
+Renders a Jinja template with variables from TOML configuration file.
+Returns the result to standard output.
+
+## Installation
+```bash
+pip install tominjinja
+```
+
+## Usage
+```bash
+python3 -m tominjinja /path/to/config.toml /path/to/template
+```
