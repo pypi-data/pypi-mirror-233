@@ -1,0 +1,17 @@
+{
+    "$id": "https://example.com/person.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "rename column Transformer Parameters",
+      "type" : "object",
+       "properties" : { 
+             "main": {
+              "type" : "object",
+              "properties" : { 
+                    "column-name": {"type" : "string"},
+                    "new-name": {"type" : "string"}
+                }
+          }
+        },
+       "required": ["column-name", 
+                  "new-name"]
+  }
