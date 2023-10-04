@@ -1,0 +1,9 @@
+bbrl_gymnasium >= 0.2.2
+bbrl >= 0.2.2
+box2d
+box2d-kengz
+importlib-metadata==4.13.0
+pyglet<2
+torchdiffeq
+# Record movies in gymnasium
+moviepy
