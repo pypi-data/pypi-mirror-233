@@ -1,0 +1,21 @@
+arpeggio>=1.7
+attrs>=19.2
+
+[:python_version < "3.10"]
+typing-extensions
+
+[docs]
+sphinx
+furo
+
+[docstest]
+doc8
+
+[pep8test]
+flake8
+pep8-naming
+
+[test]
+pytest
+hypothesis
+pretend
