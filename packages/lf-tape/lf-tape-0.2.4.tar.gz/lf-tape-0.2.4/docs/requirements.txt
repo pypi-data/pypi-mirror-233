@@ -1,0 +1,10 @@
+sphinx
+sphinx_rtd_theme
+sphinx-autoapi
+nbsphinx
+ipython
+jupytext
+jupyter
+matplotlib
+eztao
+ray
