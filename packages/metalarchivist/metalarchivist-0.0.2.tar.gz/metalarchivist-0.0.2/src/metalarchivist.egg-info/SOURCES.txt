@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/metalarchives/__init__.py
+src/metalarchives/export/__init__.py
+src/metalarchives/export/helper.py
+src/metalarchives/export/releases.py
+src/metalarchives/test/__init__.py
+src/metalarchives/test/test_release.py
+src/metalarchivist.egg-info/PKG-INFO
+src/metalarchivist.egg-info/SOURCES.txt
+src/metalarchivist.egg-info/dependency_links.txt
+src/metalarchivist.egg-info/top_level.txt
