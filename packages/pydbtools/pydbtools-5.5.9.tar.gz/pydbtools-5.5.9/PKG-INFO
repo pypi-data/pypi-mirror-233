@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pydbtools
+Version: 5.5.9
+Summary: A python package to query data via amazon athena and bring it into a pandas df using aws-wrangler.
+License: MIT
+Author: Karik Isichei
+Author-email: karik.isichei@digital.justice.gov.uk
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Jinja2 (>=3.1.0)
+Requires-Dist: arrow-pd-parser (>=1.3.9,<2.0.0)
+Requires-Dist: awswrangler (>=2.12.0,<3.0.0)
+Requires-Dist: boto3 (>=1.7.4)
+Requires-Dist: pyarrow (>=5.0.0)
+Requires-Dist: sql-metadata (>=2.3.0,<3.0.0)
+Requires-Dist: sqlparse (>=0.4.4,<0.5.0)
+Description-Content-Type: text/markdown
+
+---
+hide:
+- navigation
+- toc
+---
+
+{!README.md!}
+
