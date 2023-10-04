@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "poetry-demo-ks"
+version = "0.1.0"
+description = ""
+authors = ["Kasra Safari <kasrasafari@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python="^3.9"
+pendulum = "^2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
