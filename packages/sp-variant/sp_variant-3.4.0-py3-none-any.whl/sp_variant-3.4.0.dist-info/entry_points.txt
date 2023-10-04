@@ -1,0 +1,2 @@
+[console_scripts]
+sp_variant = sp_variant.__main__:main
