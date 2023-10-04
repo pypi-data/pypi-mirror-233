@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+kirami_plugin_horserace.egg-info/PKG-INFO
+kirami_plugin_horserace.egg-info/SOURCES.txt
+kirami_plugin_horserace.egg-info/dependency_links.txt
+kirami_plugin_horserace.egg-info/requires.txt
+kirami_plugin_horserace.egg-info/top_level.txt
