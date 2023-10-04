@@ -1,0 +1,323 @@
+-- HEPDipo 6 coils 2D roxie model
+
+HyperMesh;
+
+dv pi = 3.14159265;
+dv degr = pi/180;
+
+--  Paramters
+dv totalCurr = 14156.5;
+dv mesh_size = 5.0*0.001;
+
+--  interference and contact
+dv delta_h_key = -5*0.001;
+dv tol_contact = 5.0*0.001;
+
+--  Cable
+dv int_insul = 0.150*0.001;
+dv cable_width = 1.95*0.001+2*int_insul;
+dv cable_height = 26.2*0.001+2*int_insul;
+dv jeng = totalCurr/(cable_width*cable_height*0.000001);
+
+--  Coil
+dv n_turns_block01 = 32;
+dv n_turns_block02 = 32;
+dv n_turns_block03 = 32;
+dv n_turns_block04 = 32;
+dv n_turns_block05 = 32;
+dv n_turns_block06 = 32;
+
+dv coil_inter_layer = 0.5*0.001;
+dv inter_coils_shim = 0.5*0.001;
+dv ext_insul = 0.5*0.001;
+
+-- shim
+dv mid_plane_height = 4.5*0.001;
+
+--  Block = 01
+dv block_01_x0 = 83.0*0.001;
+dv block_01_width = n_turns_block01*cable_width;
+dv block_01_y0 = mid_plane_height+ext_insul;
+dv block_01_height = cable_height;
+
+--  Block = 02
+dv block_02_x0 = 83.0*0.001;
+dv block_02_width = n_turns_block02*cable_width;
+dv block_02_y0 = block_01_y0+block_01_height+coil_inter_layer;
+dv block_02_height = cable_height;
+
+--  Block = 03
+dv block_03_x0 = 83.0*0.001;
+dv block_03_width = n_turns_block03*cable_width;
+dv block_03_y0 = block_02_y0+block_02_height+coil_inter_layer+2*ext_insul;
+dv block_03_height = cable_height;
+
+--  Block = 04
+dv block_04_x0 = 83.0*0.001;
+dv block_04_width = n_turns_block04*cable_width;
+dv block_04_y0 = block_03_y0+block_03_height+coil_inter_layer;
+dv block_04_height = cable_height;
+
+--  Block = 05
+dv block_05_x0 = 83.0*0.001;
+dv block_05_width = n_turns_block05*cable_width;
+dv block_05_y0 = block_04_y0+block_04_height+coil_inter_layer+2*ext_insul;
+dv block_05_height = cable_height;
+
+--  Block = 06
+dv block_06_x0 = 83.0*0.001;
+dv block_06_width = n_turns_block06*cable_width;
+dv block_06_y0 = block_05_y0+block_05_height+coil_inter_layer;
+dv block_06_height = cable_height;
+
+--  Pole 1
+dv pole1_half_appearture_width = 75.0*0.001;
+dv pole1_width = block_01_x0-ext_insul-pole1_half_appearture_width;
+dv pole1_half_appearture_height = 50.0*0.001;
+dv pole1_left_height = block_02_y0+block_02_height+ext_insul;
+dv pole1_radius_1 = 56.0*0.001;
+dv pole1_radius_1_y = 50.0*0.001;
+dv pole1_radius_2 = 8.0*0.001;
+
+--  Pole 2
+dv pole2_width = block_03_x0-ext_insul;
+dv pole2_y0 = pole1_left_height+inter_coils_shim;
+dv pole2_height = 2*ext_insul+2*block_03_height+coil_inter_layer;
+
+--  Pole 3
+dv pole3_width = block_05_x0-ext_insul;
+dv pole3_y0 = pole2_y0+pole2_height+inter_coils_shim;
+dv pole3_height = 2*ext_insul+2*block_05_height+coil_inter_layer;
+
+--  Vertical Push
+dv vpad_gap_height = 8.0*0.001;
+dv vpad_y0 = pole3_y0+pole3_height+vpad_gap_height;
+dv vpad_width = block_02_x0+block_02_width+ext_insul+5.0*0.001;
+dv vpad_height = 100.0*0.001;
+dv vpad_tooth_center = block_03_x0+block_03_width/2-10.0*0.001;
+dv vpad_tooth_width = 80.0*0.001;
+dv vpad_tooth = 2.0*0.001;
+
+--  pad geometry
+dv corner_len = 10.0*0.001;
+
+-- Tooth for key and bladders
+dv tooth_width = 4.7*0.001;
+dv tooth_height = 3.175*0.001;
+dv key_half_width = 25.4*0.001;
+dv bladder_len = 100.0*0.001;
+
+--  Horizontal Pad;
+dv gap_vpush_hpad = 5.0*0.001;
+dv hpad_x0 = vpad_width+gap_vpush_hpad;
+dv hpad_width = 90*0.001;
+dv hpad_key_center = (block_02_y0+block_03_y0+block_02_height)/2.0+delta_h_key;
+dv hpad_height = vpad_y0+vpad_height+4.0*0.001+hpad_width;
+dv hpad_notch_height = inter_coils_shim+1.0*0.001;
+dv hpad_notch_width = 3.0*0.001;
+
+--  Yoke = Parameters
+dv gap_pad_yoke = 3.0*0.001;
+dv yoke_x0 = hpad_x0+hpad_width+gap_pad_yoke;
+dv yoke_dia_1 = 560*2*0.001;
+dv yoke_dia_2 = 84*0.001;
+dv yoke_dia_4 = 20*0.001;
+dv yoke_gap_bc = 5.0*0.001;
+dv yoke_y0 = 0.0*0.001;
+dv yoke_center_y = vpad_height+vpad_y0+gap_pad_yoke+yoke_dia_2/2.0+20.0*0.001;
+dv yoke_dia_3 = 5.0*0.001;
+dv yoke_left_tooth = 20.0*0.001;
+dv yoke_left_height = Sqrt((yoke_dia_1/2*yoke_dia_1/2)-yoke_gap_bc*yoke_gap_bc);
+
+dv yoke_x = 292.59*0.001;
+dv yoke_y = 274.47*0.001;
+
+--  Shell = Parameters
+dv shellTickness = 70.0*0.001;
+
+-- pole2 2000
+kp2000 = [0.0,pole2_y0+pole2_height];
+kp2000 = [0.0,pole2_y0+pole2_height];
+kp2001 = [pole2_width,pole2_y0+pole2_height];
+kp2002 = [pole2_width,pole2_y0+pole2_height-ext_insul];
+kp2003 = [pole2_width,block_04_y0                    ];
+kp2004 = [pole2_width,block_03_y0+block_03_height    ];
+kp2005 = [pole2_width,block_03_y0                    ];
+kp2006 = [pole2_width,block_03_y0-ext_insul          ];
+kp2007 = [0.0,block_03_y0-ext_insul          ];
+
+ln2000 = HyperLine(kp2007,kp2006,"Line",0.5);
+ln2001 = HyperLine(kp2006,kp2005,"Line",0.5);
+ln2002 = HyperLine(kp2005,kp2004,"Line",0.5);
+ln2003 = HyperLine(kp2004,kp2003,"Line",0.5);
+ln2004 = HyperLine(kp2003,kp2002,"Line",0.5);
+ln2005 = HyperLine(kp2002,kp2001,"Line",0.5);
+ln2006 = HyperLine(kp2001,kp2000,"Line",0.5);
+ln2007 = HyperLine(kp2000,kp2007,"Line",0.5);
+
+ar2000 = HyperArea(ln2000,ln2001,ln2002,ln2003,ln2004,ln2005,ln2006,ln2007,BHiron2);
+
+-- pole3 2100
+kp2100 = [0.0,pole3_y0+pole3_height];
+kp2101 = [pole3_width,pole3_y0+pole3_height];
+kp2102 = [pole3_width,pole3_y0+pole3_height-ext_insul];
+kp2103 = [pole3_width,block_06_y0                    ];
+kp2104 = [pole3_width,block_05_y0+block_05_height    ];
+kp2105 = [pole3_width,block_05_y0                    ];
+kp2106 = [pole3_width,block_05_y0-ext_insul          ];
+kp2107 = [0.0,block_05_y0-ext_insul          ];
+
+ln2100 = HyperLine(kp2107,kp2106,"Line",0.5);
+ln2101 = HyperLine(kp2106,kp2105,"Line",0.5);
+ln2102 = HyperLine(kp2105,kp2104,"Line",0.5);
+ln2103 = HyperLine(kp2104,kp2103,"Line",0.5);
+ln2104 = HyperLine(kp2103,kp2102,"Line",0.5);
+ln2105 = HyperLine(kp2102,kp2101,"Line",0.5);
+ln2106 = HyperLine(kp2101,kp2100,"Line",0.5);
+ln2107 = HyperLine(kp2100,kp2107,"Line",0.5);
+
+ar2100 = HyperArea(ln2100,ln2101,ln2102,ln2103,ln2104,ln2105,ln2106,ln2107,BHiron2);
+
+-- Vertical Push 3000 
+
+kp2200 = [0.0,vpad_y0		       				   ];
+kp2205 = [vpad_width,vpad_y0                                          ];
+kp2206 = [vpad_width,vpad_y0+vpad_height                              ];
+kp2207 = [key_half_width+bladder_len,vpad_y0+vpad_height              ];
+kp2208 = [key_half_width+bladder_len,vpad_y0+vpad_height-tooth_height ];
+kp2209 = [key_half_width+tooth_width,vpad_y0+vpad_height-tooth_height ];
+kp2210 = [key_half_width+tooth_width,vpad_y0+vpad_height              ];
+kp2211 = [key_half_width,vpad_y0+vpad_height                          ];
+kp2212 = [key_half_width,vpad_y0+vpad_height-tooth_height             ];
+kp2213 = [0.0,vpad_y0+vpad_height-tooth_height                         ];
+
+ln2200 = HyperLine(kp2200,kp2205,"Line",0.5);
+ln2201 = HyperLine(kp2205,kp2206,"Line",0.5);
+ln2202 = HyperLine(kp2206,kp2207,"Line",0.5);
+ln2203 = HyperLine(kp2207,kp2208,"Line",0.5);
+ln2204 = HyperLine(kp2208,kp2209,"Line",0.5);
+ln2205 = HyperLine(kp2209,kp2210,"Line",0.5);
+ln2206 = HyperLine(kp2210,kp2211,"Line",0.5);
+ln2207 = HyperLine(kp2211,kp2212,"Line",0.5);
+ln2208 = HyperLine(kp2212,kp2213,"Line",0.5);
+ln2209 = HyperLine(kp2213,kp2200,"Line",0.5);
+
+ar2200 = HyperArea(ln2200,ln2201,ln2202,ln2203,ln2204,ln2205,ln2206,ln2207,ln2208,ln2209,BHiron2);
+
+-- Yoke
+kp2300 = [yoke_x0,yoke_y0];
+kp2301 = [yoke_dia_1/2 ,yoke_y0  ];
+kp2302 = [yoke_gap_bc,yoke_left_height];
+kp2303 = [yoke_gap_bc,yoke_dia_1/2-yoke_left_tooth];
+kp2304 = [yoke_gap_bc+tooth_height,yoke_dia_1/2-yoke_left_tooth];
+kp2305 = [yoke_gap_bc+tooth_height,yoke_dia_1/2-yoke_left_tooth-key_half_width*2];
+kp2306 = [yoke_gap_bc,yoke_dia_1/2-yoke_left_tooth-key_half_width*2];
+kp2307 = [yoke_gap_bc,yoke_dia_1/2-yoke_left_tooth-key_half_width*2-tooth_width];
+kp2308 = [yoke_gap_bc+tooth_height,yoke_dia_1/2-yoke_left_tooth-key_half_width*2-tooth_width];
+kp2309 = [yoke_gap_bc+tooth_height,yoke_dia_1/2-yoke_left_tooth-key_half_width*2-tooth_width-bladder_len];
+kp2310 = [yoke_gap_bc,yoke_dia_1/2-yoke_left_tooth-key_half_width*2-tooth_width-bladder_len];
+kp2311 = [yoke_gap_bc,vpad_height+vpad_y0+gap_pad_yoke];
+kp2312 = [key_half_width,vpad_height+vpad_y0+gap_pad_yoke];
+kp2313 = [key_half_width+tooth_width,vpad_height+vpad_y0+gap_pad_yoke];
+kp2314 = [key_half_width+bladder_len,vpad_height+vpad_y0+gap_pad_yoke];
+kp2315 = [yoke_x0-yoke_dia_2/2,vpad_height+vpad_y0+gap_pad_yoke];
+kp2316 = [yoke_x0,vpad_height+vpad_y0+gap_pad_yoke-yoke_dia_2/2];
+kp2317 = [yoke_x0-yoke_dia_2/2,vpad_height+vpad_y0+gap_pad_yoke-yoke_dia_2/2];
+kp2318 = [yoke_x0,hpad_key_center+key_half_width];
+kp2319 = [yoke_x0,hpad_key_center-key_half_width];
+-- point 2330 to cut yoke
+kp2330 = [yoke_dia_1/2 @ 60*degr];
+
+-- hole
+kp2331 = [vpad_width/2.0+yoke_dia_2/2,yoke_center_y];
+kp2332 = [vpad_width/2.0-yoke_dia_2/2,yoke_center_y];
+
+-- hole 2
+kp2333 = [yoke_x+yoke_dia_4/2,yoke_center_y];
+kp2334 = [yoke_x-yoke_dia_4/2,yoke_center_y];
+
+ln2300  = HyperLine(kp2300,kp2301,"Line",0.5);
+ln2301  = HyperLine(kp2330,kp2301,"Arc",yoke_dia_1/2,0.5);
+ln2302  = HyperLine(kp2302,kp2330,"Arc",yoke_dia_1/2,0.5);
+ln2303  = HyperLine(kp2302,kp2303,"Line",0.5);
+ln2304  = HyperLine(kp2303,kp2304,"Line",0.5);
+ln2305  = HyperLine(kp2304,kp2305,"Line",0.5);
+ln2306  = HyperLine(kp2305,kp2306,"Line",0.5);
+ln2307  = HyperLine(kp2306,kp2307,"Line",0.5);
+ln2308  = HyperLine(kp2307,kp2308,"Line",0.5);
+ln2309  = HyperLine(kp2308,kp2309,"Line",0.5);
+ln2310  = HyperLine(kp2309,kp2310,"Line",0.2);
+ln2311  = HyperLine(kp2310,kp2311,"Line",0.5);
+ln2312  = HyperLine(kp2311,kp2312,"Line",0.5);
+ln2313  = HyperLine(kp2312,kp2313,"Line",0.5);
+ln2314  = HyperLine(kp2313,kp2314,"Line",0.5);
+ln2315  = HyperLine(kp2314,kp2315,"Line",0.5);
+ln2316  = HyperLine(kp2315,kp2316,"Arc",yoke_dia_2/2,0.5);
+ln2317  = HyperLine(kp2316,kp2318,"Line",0.5);
+ln2318  = HyperLine(kp2318,kp2319,"Line",0.5);
+ln2319  = HyperLine(kp2319,kp2300,"Line",0.5);
+
+-- hole
+ln2321 = HyperLine(kp2331,kp2332,"Circle",0.5);
+ln2322 = HyperLine(kp2333,kp2334,"Circle",0.5);
+
+ar2300 = HyperArea(ln2300,ln2301,ln2302,ln2303,ln2304,ln2305,ln2306,ln2307,ln2308,ln2309,ln2310,ln2311,ln2312,ln2313,ln2314,ln2315,ln2316,ln2317,ln2318,ln2319,BHiron2);
+ar2301 = HyperArea(ln2321, BH_air);
+ar2302 = HyperArea(ln2322, BH_air);
+
+HyperHoleOf(ar2301,ar2300);
+HyperHoleOf(ar2302,ar2300);
+
+-- Horizontal Pad
+kp2400 = [hpad_x0,0];
+kp2401 = [hpad_x0+hpad_width,0.0];
+kp2402 = [hpad_x0+hpad_width,hpad_key_center-key_half_width];
+kp2403 = [hpad_x0+hpad_width-2*tooth_height,hpad_key_center-key_half_width];
+kp2404 = [hpad_x0+hpad_width-2*tooth_height,hpad_key_center+key_half_width];
+kp2405 = [hpad_x0+hpad_width,hpad_key_center+key_half_width];
+kp2406 = [hpad_x0+hpad_width,hpad_key_center+key_half_width+tooth_width];
+kp2407 = [hpad_x0+hpad_width-tooth_height,hpad_key_center+key_half_width+tooth_width];
+kp2408 = [hpad_x0+hpad_width-tooth_height,hpad_key_center+key_half_width+tooth_width+bladder_len];
+kp2409 = [hpad_x0+hpad_width,hpad_key_center+key_half_width+tooth_width+bladder_len];
+kp2410 = [hpad_x0+hpad_width,vpad_height+vpad_y0+gap_pad_yoke-yoke_dia_2/2];
+kp2411 = [yoke_x0-yoke_dia_2/2,vpad_y0+vpad_height];
+kp2412 = [hpad_x0,vpad_y0+vpad_height];
+
+-- to fit with rails                                                          
+kp2421 = [hpad_x0,block_06_y0+block_06_height+ext_insul];
+kp2422 = [hpad_x0,block_04_y0+block_04_height+ext_insul+inter_coils_shim];
+kp2413 = [hpad_x0,block_04_y0+block_04_height+ext_insul];
+kp2414 = [hpad_x0,block_02_y0+block_02_height+ext_insul+inter_coils_shim];
+kp2415 = [hpad_x0,block_02_y0+block_02_height+inter_coils_shim];
+kp2416 = [hpad_x0,block_01_y0-ext_insul];
+
+ln2400 = HyperLine(kp2400,kp2401,"Line",0.5);
+ln2401 = HyperLine(kp2401,kp2402,"Line",0.5);
+ln2402 = HyperLine(kp2402,kp2403,"Line",0.5);
+ln2403 = HyperLine(kp2403,kp2404,"Line",0.5);
+ln2404 = HyperLine(kp2404,kp2405,"Line",0.5);
+ln2405 = HyperLine(kp2405,kp2406,"Line",0.5);
+ln2406 = HyperLine(kp2406,kp2407,"Line",0.5);
+ln2407 = HyperLine(kp2407,kp2408,"Line",0.5);
+
+ln2408 = HyperLine(kp2408,kp2409,"Line",0.5);
+ln2409 = HyperLine(kp2409,kp2410,"Line",0.5);
+ln2410 = HyperLine(kp2410,kp2411,"Line",0.5);
+ln2411 = HyperLine(kp2411,kp2412,"Line",0.5);
+ln2412 = HyperLine(kp2412,kp2421,"Line",0.5);
+
+ln2413 = HyperLine(kp2421,kp2422,"Line",0.5);
+ln2414 = HyperLine(kp2422,kp2413,"Line",0.5);
+ln2415 = HyperLine(kp2413,kp2414,"Line",0.5);
+ln2416 = HyperLine(kp2414,kp2415,"Line",0.5);
+ln2417 = HyperLine(kp2415,kp2416,"Line",0.5);
+
+ln2418 = HyperLine(kp2416,kp2400,"Line",0.5);
+
+ar2400 = HyperArea(ln2400,ln2401,ln2402,ln2403,ln2404,ln2405,ln2406,ln2407,ln2408,ln2409,ln2410,ln2411,ln2412,ln2413,ln2414,ln2415,ln2416,ln2417,ln2418,BHiron2);
+
+Lmesh(ln2100,14);
+
+-- MESH
+
+

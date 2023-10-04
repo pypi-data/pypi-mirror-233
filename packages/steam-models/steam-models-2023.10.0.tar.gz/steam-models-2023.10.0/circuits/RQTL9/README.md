@@ -1,0 +1,1 @@
+![Schematic_600A_EE_RP.png](..%2FSchematics%2FSchematic_600A_EE_RP.png)

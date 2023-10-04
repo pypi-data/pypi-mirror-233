@@ -1,0 +1,245 @@
+GeneralParameters:
+  circuit_name: RQX
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Busbars.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Diodes.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_PCs.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Thyristors.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Busbars.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Diodes.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_PCs.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_Thyristors.lib
+GlobalParameters:
+  global_parameters:
+    L_MQXA: '0.0907'
+    L_MQXB: '0.0185'
+    C_ground_MQXA: '5.552138756544E-08'
+    C_ground_MQXB: '4.365710574536E-08'
+    R_parallel: '1.00E+03'
+    R1: '3.20E-04'
+    R2: '3.15E-04'
+    R3: '3.15E-04'
+    R4: '3.28E-04'
+    rc_par: '0.01'
+    I_par: '2.00E-06'
+    c_par: '0.3'
+    I_start_PC1: '0'
+    I_end_1_PC1: '100'
+    I_end_2_PC1: '6800'
+    dI_dt_PC1: '6.8'
+    dI_dt2_PC1: '1'
+    t_start_PC1: '10'
+    t_plateau_PC1: '20'
+    t_PC_off_PC1: '1110.0'
+    t_PC_switch_off_PC1: '10e-3'
+    L_parasitic_series_PC1: '1e-9'
+    R_parasitic_series_PC1: '1e-9'
+    R_parasitic_parallel_PC1: '1e+6'
+    I_start_PC2: '0'
+    I_end_1_PC2: '-100'
+    I_end_2_PC2: '-550'
+    dI_dt_PC2: '-1.5'
+    dI_dt2_PC2: '-0.25'
+    t_start_PC2: '10'
+    t_plateau_PC2: '20'
+    t_PC_off_PC2: '1110.0'
+    t_PC_switch_off_PC2: '10e-3'
+    L_parasitic_series_PC2: '1e-9'
+    R_parasitic_series_PC2: '1e-9'
+    R_parasitic_parallel_PC2: '1e+6'
+    I_start_PC3: '0'
+    I_end_1_PC3: '100'
+    I_end_2_PC3: '4600'
+    dI_dt_PC3: '6'
+    dI_dt2_PC3: '1'
+    t_start_PC3: '10'
+    t_plateau_PC3: '20'
+    t_PC_off_PC3: '1110.0'
+    t_PC_switch_off_PC3: '10e-3'
+    L_parasitic_series_PC3: '1e-9'
+    R_parasitic_series_PC3: '1e-9'
+    R_parasitic_parallel_PC3: '1e+6'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  x_RQX:
+    type: parametrized component
+    nodes: ['101', '104']
+    value: PC_RQX_generic
+    parameters:
+      I_start: I_start_PC1
+      I_end_1: I_end_1_PC1
+      I_end_2: I_end_2_PC1
+      dI_dt: dI_dt_PC1
+      dI_dt2: dI_dt2_PC1
+      t_start: t_start_PC1
+      t_plateau: t_plateau_PC1
+      t_PC_off: t_PC_off_PC1
+      t_PC_switch_off: t_PC_switch_off_PC1
+      L_parasitic_series: L_parasitic_series_PC1
+      R_parasitic_series: R_parasitic_series_PC1
+      R_parasitic_parallel: R_parasitic_parallel_PC1
+  x_RTQX1:
+    type: parametrized component
+    nodes: ['101', '102']
+    value: PC_RTQX1_generic
+    parameters:
+      I_start: I_start_PC2
+      I_end_1: I_end_1_PC2
+      I_end_2: I_end_2_PC2
+      dI_dt: dI_dt_PC2
+      dI_dt2: dI_dt2_PC2
+      t_start: t_start_PC2
+      t_plateau: t_plateau_PC2
+      t_PC_off: t_PC_off_PC2
+      t_PC_switch_off: t_PC_switch_off_PC2
+      L_parasitic_series: L_parasitic_series_PC2
+      R_parasitic_series: R_parasitic_series_PC2
+      R_parasitic_parallel: R_parasitic_parallel_PC2
+  x_RTQX2:
+    type: parametrized component
+    nodes: ['102', '103']
+    value: PC_RTQX2_generic
+    parameters:
+      I_start: I_start_PC3
+      I_end_1: I_end_1_PC3
+      I_end_2: I_end_2_PC3
+      dI_dt: dI_dt_PC3
+      dI_dt2: dI_dt2_PC3
+      t_start: t_start_PC3
+      t_plateau: t_plateau_PC3
+      t_PC_off: t_PC_off_PC3
+      t_PC_switch_off: t_PC_switch_off_PC3
+      L_parasitic_series: L_parasitic_series_PC3
+      R_parasitic_series: R_parasitic_series_PC3
+      R_parasitic_parallel: R_parasitic_parallel_PC3
+  x_FWD:
+    type: parametrized component
+    nodes: ['103', '104']
+    value: FWD
+    parameters: null
+  R1:
+    type: standard component
+    nodes: ['101', '201']
+    value: R1
+    parameters: null
+  R2:
+    type: standard component
+    nodes: ['102', '202']
+    value: R2
+    parameters: null
+  R3:
+    type: standard component
+    nodes: ['103', '203']
+    value: R3
+    parameters: null
+  R4:
+    type: standard component
+    nodes: ['104', '204']
+    value: R4
+    parameters: null
+  x_mag_1:
+    type: parametrized component
+    nodes: [ '202', '201', '0', '0' ]
+    value: magnet_EQ_1_with_resistance_M1
+    parameters:
+      L_magnet: L_MQXA
+      C_ground_magnet: C_ground_MQXA
+      R_parallel: R_parallel
+  x_mag_2:
+    type: parametrized component
+    nodes: [ '202b','202', '0', '0' ]
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_MQXB
+      C_ground_magnet: C_ground_MQXB
+      R_parallel: R_parallel
+  x_mag_3:
+    type: parametrized component
+    nodes: [ '203', '202b','0', '0' ]
+    value: magnet_EQ_1_with_resistance_M3
+    parameters:
+      L_magnet: L_MQXB
+      C_ground_magnet: C_ground_MQXB
+      R_parallel: R_parallel
+  x_mag_4:
+    type: parametrized component
+    nodes: [ '204', '203',  '0', '0' ]
+    value: magnet_EQ_1_with_resistance_M4
+    parameters:
+      L_magnet: L_MQXA
+      C_ground_magnet: C_ground_MQXA
+      R_parallel: R_parallel
+  Vg:
+    type: standard component
+    nodes: ['102', '0']
+    value: '0'
+    parameters: null
+Options:
+  options_simulation:
+    all options: default
+  options_autoconverge:
+    all options: default
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '1800.0'
+    min_time_step: '0.1'
+    time_schedule:
+      '0.0': '0.5'
+      '1109.5': '0.001'
+      '1112.5': '0.01'
+      '1115.0': '0.5'
+PostProcess:
+  probe:
+    probe_type: CSDF
+    variables:
+    - 'I(x_mag_1.L_mag)'
+    - 'I(x_mag_2.L_mag)'
+    - 'I(x_mag_3.L_mag)'
+    - 'I(x_mag_4.L_mag)'
+    - 'V(104,101)'
+    - 'V(102,101)'
+    - 'V(103,102)'
+    - 'V(103,104)'
+    - 'V(202,201)'
+    - 'V(202b,202)'
+    - 'V(203,202b)'
+    - 'V(204,203)'
+    - 'I(R1)'
+    - 'I(R2)'
+    - 'I(R3)'
+    - 'I(R4)'
+    - 'I(x_RQX.v1_ph)'
+    - 'I(x_RTQX1.v1_ph)'
+    - 'I(x_RTQX2.v1_ph)'
+    - 'I(x_FWD.v1_PH)'
+    - 'V(x_mag_1.0_coil_resistance_1)'
+    - 'V(x_mag_2.0_coil_resistance_1)'
+    - 'V(x_mag_3.0_coil_resistance_1)'
+    - 'V(x_mag_4.0_coil_resistance_1)'
+    - 'I(x_RQX.x_d.v1_PH)'
+    - 'I(x_RTQX1.x_tyr_ext.v1_PH)'
+    - 'I(x_RTQX1.x_tyr_int.v1_PH)'
+    - 'I(x_RTQX2.x_d.v1_PH)'
+    - 'I(x_RTQX1.r1)'
+    - 'I(x_RQX.r1)'
+    - 'I(x_RTQX2.r1)'

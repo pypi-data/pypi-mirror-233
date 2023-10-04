@@ -1,0 +1,235 @@
+GeneralParameters:
+  circuit_name: RQX_HL-LHC
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\RQX_HL-LHC\Stimulus\Stimulus.stl
+  - C:\gitlab\steam-pspice-library\diodes\Items\RQX_HL-LHC_Diodes.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_HL-LHC_PCs.lib
+  - C:\gitlab\steam-pspice-library\CLIQ\CLIQ_unit.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - C:\gitlab\steam-pspice-library\RQX_HL-LHC\Stimulus\Stimulus.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\diodes\Items\RQX_HL-LHC_Diodes.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\RQX_HL-LHC_PCs.lib
+  - C:\gitlab\steam-pspice-library\CLIQ\CLIQ_unit.lib
+GlobalParameters:
+  global_parameters:
+    R_trimA: '0.00E+00'
+    R_trimB: '0.00E+00'
+    R_trimC: '0.00E+00'
+    R_trimD: '0.00E+00'
+    R_trimE: '0.00E+00'
+    length_MQXFA: '4.2'
+    length_MQXFB: '7.15'
+    L_pole_perMeter: '0.001497249'
+    k12_adjacent_poles: '0.230094704'
+    k13_opposite_poles: '-0.092494511'
+    C_ground_perMeter: '1.146853E-08'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  xPC:
+    type: parametrized component
+    nodes: ['401', '402']
+    value: power_converter_main
+    parameters:
+      R_crow: '0.5e-3'
+  R_ground:
+    type: standard component
+    nodes: ['402', '0']
+    value: '1e-6'
+    parameters: null
+  x_diodePC:
+    type: parametrized component
+    nodes: ['402', '401']
+    value: TripletDiode_12V
+    parameters: null
+  R_PCwarmleft:
+    type: standard component
+    nodes: ['401', '101']
+    value: '5.5e-6'
+    parameters: null
+  R_PCwarmright:
+    type: standard component
+    nodes: ['105', '402']
+    value: '5.5e-6'
+    parameters: null
+  xPC_trimQ1:
+    type: parametrized component
+    nodes: ['201', '202']
+    value: power_converter_trimQ1
+    parameters:
+      R_crow: '1.4e-3'
+  xPC_trimQ3:
+    type: parametrized component
+    nodes: ['204', '205']
+    value: power_converter_trimQ3
+    parameters:
+      R_crow: '1.4e-3'
+  R_trimA:
+    type: standard component
+    nodes: ['201', '101']
+    value: '408e-6'
+    parameters: null
+  R_trimB:
+    type: standard component
+    nodes: ['202', '102']
+    value: '64e-6'
+    parameters: null
+  R_trimD:
+    type: standard component
+    nodes: ['204', '104']
+    value: '64e-6'
+    parameters: null
+  R_trimE:
+    type: standard component
+    nodes: ['205', '105']
+    value: '408e-6'
+    parameters: null
+  R_trimC:
+    type: standard component
+    nodes: ['203', '103']
+    value: '2.4e-3'
+    parameters: null
+  R_trimC_Floating:
+    type: standard component
+    nodes: ['0', '203']
+    value: '1e6'
+    parameters: null
+  R_clE:
+    type: standard component
+    nodes: ['105', MAGQ3b_in]
+    value: '1e-6'
+    parameters: null
+  R_clD:
+    type: standard component
+    nodes: ['104', MAGQ2b_in]
+    value: '1e-6'
+    parameters: null
+  R_clC:
+    type: standard component
+    nodes: ['103', MAGQ2a_in]
+    value: '1e-6'
+    parameters: null
+  R_clB:
+    type: standard component
+    nodes: ['102', MAGQ1b_in]
+    value: '1e-6'
+    parameters: null
+  R_clA:
+    type: standard component
+    nodes: ['101', MAGQ1a_out]
+    value: '1e-6'
+    parameters: null
+  xPC_minitrim:
+    type: parametrized component
+    nodes: ['107', '108']
+    value: power_converter_minitrim
+    parameters:
+      R_crow: '1e-4'
+  R_mt_left:
+    type: standard component
+    nodes: ['107', '106']
+    value: 240e-3/2
+    parameters: null
+  R_mt_right:
+    type: standard component
+    nodes: ['109', '108']
+    value: 240e-3/2
+    parameters: null
+  R_clF:
+    type: standard component
+    nodes: ['106', MAGQ1a_out]
+    value: '1e-6'
+    parameters: null
+  R_clG:
+    type: standard component
+    nodes: ['109', MAGQ1a_in]
+    value: '1e-6'
+    parameters: null
+  x_diodeCD:
+    type: parametrized component
+    nodes: ['104', 103a]
+    value: TripletDiode_5V
+    parameters: null
+  R_diodeCD:
+    type: standard component
+    nodes: [103a, '103']
+    value: '1e-6'
+    parameters: null
+  x_diodeBC:
+    type: parametrized component
+    nodes: ['103', 102a]
+    value: TripletDiode_5V
+    parameters: null
+  R_diodeBC:
+    type: standard component
+    nodes: [102a, '102']
+    value: '1e-6'
+    parameters: null
+  L_Q3b:
+    type: standard component
+    nodes: [MAGQ3b_in, MAGQ3a_in]
+    value: length_MQXFA*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+  L_Q3a:
+    type: standard component
+    nodes: [MAGQ3a_in, MAGQ2b_in]
+    value: length_MQXFA*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+  L_Q2b:
+    type: standard component
+    nodes: [MAGQ2b_in, MAGQ2a_in]
+    value: length_MQXFB*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+  L_Q2a:
+    type: standard component
+    nodes: [MAGQ2a_in, MAGQ1b_in]
+    value: length_MQXFB*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+  L_Q1b:
+    type: standard component
+    nodes: [MAGQ1b_in, MAGQ1a_in]
+    value: length_MQXFA*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+  L_Q1a:
+    type: standard component
+    nodes: [MAGQ1a_in, MAGQ1a_out]
+    value: length_MQXFA*4*L_pole_perMeter*(1+2*k12_adjacent_poles+k13_opposite_poles)
+    parameters: null
+Options:
+  options_simulation:
+    RELTOL: '0.0001'
+    VNTOL: '0.00001'
+    ABSTOL: '0.0001'
+    CHGTOL: '0.000000000000001'
+    GMIN: '0.000000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+  options_autoconverge:
+    all options: default
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '3000.0'
+    min_time_step: '0.0'
+    time_schedule:
+      '0.0': '0.5'
+      '2000.0': '0.0001'
+      '2000.1': '0.5'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

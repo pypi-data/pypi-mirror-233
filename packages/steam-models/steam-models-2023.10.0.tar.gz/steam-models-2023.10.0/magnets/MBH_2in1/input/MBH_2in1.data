@@ -1,0 +1,234 @@
+VERSION 10.2.1
+'11 T Dipole RRP-151/169 Cable (40x0.70)                                            '
+'../d11T_2in1/roxie.bhdata                                                          '
+'../d11T_2in1/roxie-11T_SIB.cadata                                                  '
+'../d11T_2in1/Yoke_v20_150831.iron                                                  '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=T    LSELF=F    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=T   
+  LIMAGY=T   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 24
+    1     1     9           30        0.229            0        11850   11T_P023   2  20     0            0 
+    2     1     8           30      26.5021           28        11850   11T_P023   2  20     0            0 
+    3     1     3           30      55.7611           59        11850   11T_P023   2  20     0            0 
+    4     1     2           30      70.3836           70        11850   11T_P023   2  20     0            0 
+    5     1    16        45.55         0.15            0        11850   11T_P023   2  20     0            0 
+    6     1    18        45.55      30.1226           33        11850   11T_P023   2  20     0            0 
+    7     1     9           30        0.229            0       -11850   11T_P023   2  20     0          180 
+    8     1     8           30      26.5021           28       -11850   11T_P023   2  20     0          180 
+    9     1     3           30      55.7611           59       -11850   11T_P023   2  20     0          180 
+   10     1     2           30      70.3836           70       -11850   11T_P023   2  20     0          180 
+   11     1    16        45.55         0.15            0       -11850   11T_P023   2  20     0          180 
+   12     1    18        45.55      30.1226           33       -11850   11T_P023   2  20     0          180 
+   13     1     9           30        0.229            0       -11850   11T_P023   2  20     0            0 
+   14     1     8           30      26.5021           28       -11850   11T_P023   2  20     0            0 
+   15     1     3           30      55.7611           59       -11850   11T_P023   2  20     0            0 
+   16     1     2           30      70.3836           70       -11850   11T_P023   2  20     0            0 
+   17     1    16        45.55         0.15            0       -11850   11T_P023   2  20     0            0 
+   18     1    18        45.55      30.1226           33       -11850   11T_P023   2  20     0            0 
+   19     1     9           30        0.229            0        11850   11T_P023   2  20     0          180 
+   20     1     8           30      26.5021           28        11850   11T_P023   2  20     0          180 
+   21     1     3           30      55.7611           59        11850   11T_P023   2  20     0          180 
+   22     1     2           30      70.3836           70        11850   11T_P023   2  20     0          180 
+   23     1    16        45.55         0.15            0        11850   11T_P023   2  20     0          180 
+   24     1    18        45.55      30.1226           33        11850   11T_P023   2  20     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 1
+      1      CONTR        0.003 0 /
+     no     string        value block 
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+           100          500 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      2     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 4
+      1     2     2 1 2 3 4 5 6 /
+      2     2     2 7 8 9 10 11 12 /
+      3     2     2 13 14 15 16 17 18 /
+      4     2     2 19 20 21 22 23 24 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 0
+
+EULER 2
+      1           97            0            0            0     SHIFT2     1 1 2 /
+      2          -97            0            0            0     SHIFT2     1 3 4 /
+     no            x            y         alph          bet     string   act bcs 
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 7
+      1            0         1185     1       0.0001            1            0            0     5 1 2 /
+      2         1185         2360     1            1   0.00843882            0            0     7 1 2 /
+      3         2360         2426     1   0.00843882    0.0638819            0            0     7 1 2 /
+      4         2426         2587     1    0.0638819          0.2            0            0    14 1 2 /
+      5         2587         3535     1          0.2            1            0            0    12 1 2 /
+      6         3535         4483     1            1          0.2            0            0    12 1 2 /
+      7         4483         4710     1          0.2   0.00843882            0            0    14 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1           97            0            0            0           17        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          258    86 
+             0          258    86 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 17
+      1          2     CURNTB     1     0          B     2     1       1     1            1 
+      2          2     CURNTB     1     0          B     3     1       1     1            1 
+      3          2     CURNTB     1     0          B     4     1       1     1            1 
+      4          2     CURNTB     1     0          B     5     1       1     1            1 
+      5          2     CURNTB     1     0          B     6     1       1     1            1 
+      6          2     CURNTB     1     0          B     7     1       1     1            1 
+      7          2     CURNTB     1     0          B     8     1       1     1            1 
+      8          2     CURNTB     1     0          B     9     1       2     1            1 
+      9          2     CURNTB     1     0          B    10     1       2     1            1 
+     10          2     CURNTB     1     0          B    11     1       2     1            1 
+     11          2     CURNTB     1     0          A     1     1       2     1            1 
+     12          2     CURNTB     1     0          A     2     1       2     1            1 
+     13          2     CURNTB     1     0          A     3     1       2     1            1 
+     14          2     CURNTB     1     0          A     4     1       2     1            1 
+     15          2     CURNTB     1     0     BOVERI     1     1       3     1            1 
+     16          2     CURNTB     1     0      PEAKM     0     0       4     1            1 
+     17          2     CURNTB     1     0     LOADLM     0     0       5     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 16
+      1     IGNORE           12 '0                                                                                   ' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 /
+      2      TITLE            0 'b2                                                                                  ' 1 /
+      3      TITLE            0 'b3                                                                                  ' 2 /
+      4      TITLE            0 'b4                                                                                  ' 3 /
+      5      TITLE            0 'b5                                                                                  ' 4 /
+      6      TITLE            0 'b6                                                                                  ' 5 /
+      7      TITLE            0 'b7                                                                                  ' 6 /
+      8      TITLE            0 'b8                                                                                  ' 7 /
+      9      TITLE            0 'b9                                                                                  ' 8 /
+     10      TITLE            0 'b10                                                                                 ' 9 /
+     11      TITLE            0 'b11                                                                                 ' 10 /
+     12      TITLE            0 'a1                                                                                  ' 11 /
+     13      TITLE            0 'a2                                                                                  ' 12 /
+     14      TITLE            0 'a3                                                                                  ' 13 /
+     15      TITLE            0 'a4                                                                                  ' 14 /
+     15      TITLE            0 'TF (T/A)                                                                            ' 15 /
+     no     string        value                                                                            label graph 
+
+PLOT2D 5
+      1          280     1     1     0 MATR IRON AR / 
+      2          280     1     1     0 IRON MUER / 
+      3           75     1     1     0 |B| / 
+      4          280     1     1     0 IRON |BTOT| / 
+      5          280     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 5
+      1     XSHIFT          -97 3 /
+      2       FMIN            0 2 /
+      3       FMAX           95 2 /
+      2       FMIN        0.006 4 /
+      3       FMAX         4.33 4 /
+     no     string        value plot 
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 6
+      1 BIGB       1     1 8                 0            1 
+      2 B          3     1 3                 0            1 
+      3 B          5     1 3                 0            1 
+      4 B          7     1 3                 0            2 
+      5 B          9     1 3                 0            3 
+      6 INCMAX     0     0 3                 0            1 
+     no string    s1    s2 oper         constr       weight 
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

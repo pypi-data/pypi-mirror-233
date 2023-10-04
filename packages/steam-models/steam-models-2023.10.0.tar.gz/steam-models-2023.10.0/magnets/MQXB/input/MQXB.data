@@ -1,0 +1,185 @@
+VERSION 10.2.1
+'MQXB final focus for experiments (Q2 in inner triplets)                            '
+'../datab/roxie.bhdata                                                              '
+'../datab/roxie.cadata                                                              '
+'MQXB_2D.iron                                                                       '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=T   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 16
+    1     1    15       51.086        0.227            0       -11950   FNALO275   2  23     0            0 
+    2     1     1       51.086        23.58        23.92       -11950   FNALO275   2  23     0            0 
+    3     1    11           35        0.331            0       -11950   FNALI275   2  18     0            0 
+    4     1     3           35       29.006       31.157       -11950   FNALI275   2  18     0            0 
+    5     1    15       51.086        0.227            0        11950   FNALO275   2  23     0           90 
+    6     1     1       51.086        23.58        23.92        11950   FNALO275   2  23     0           90 
+    7     1    11           35        0.331            0        11950   FNALI275   2  18     0           90 
+    8     1     3           35       29.006       31.157        11950   FNALI275   2  18     0           90 
+    9     1    15       51.086        0.227            0       -11950   FNALO275   2  23     0          180 
+   10     1     1       51.086        23.58        23.92       -11950   FNALO275   2  23     0          180 
+   11     1    11           35        0.331            0       -11950   FNALI275   2  18     0          180 
+   12     1     3           35       29.006       31.157       -11950   FNALI275   2  18     0          180 
+   13     1    15       51.086        0.227            0        11950   FNALO275   2  23     0          270 
+   14     1     1       51.086        23.58        23.92        11950   FNALO275   2  23     0          270 
+   15     1    11           35        0.331            0        11950   FNALI275   2  18     0          270 
+   16     1     3           35       29.006       31.157        11950   FNALI275   2  18     0          270 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+             0            0 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      2     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 4
+      1     4     2 1 2 3 4 /
+      2     4     2 5 6 7 8 /
+      3     4     2 9 10 11 12 /
+      4     4     2 13 14 15 16 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 1
+      1        0.003        0.003        0.003     5      DCONT     0 0 /
+     no           xl           xu           xs genen     string   act bcs 
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 4
+      1            0            1     1   0.00416667            1            0            0     5 1 /
+      2            1            2     1            1   0.00416667            0            0     5 1 /
+      3            2            3     1    0.0041667    0.0583333            0            0    65 1 /
+      4            3            4     1    0.0583333            1            0            0   113 1 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 1
+      1      NITER            1 
+     no     string        value 
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 2
+      1     1            0            0            0            0           17        4                      0 
+      2     1            0            0            0            0           17        4                      4 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          200    20 
+             0          200    20 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 1
+      1      RHARM            1 2 /
+     no     string        value harmoniccoil 
+
+GRAPH 5
+      1          2     CURNTB     1     0          B     6     1       1     1            1 
+      2          2     CURNTB     1     0          B    10     1       2     1            1 
+      3          2     CURNTB     1     0          B     2     2       3     1            1 
+      4          2     CURNTB     1     0          B     6     2       4     1            1 
+      5          2     CURNTB     1     0          B    10     2       5     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 7
+      1          100     1     1     0 B / 
+      2          200     1     0     0 IRON AR / 
+      3          200     1     0     0 IRON MUER / 
+      4          200     1     0     0 IRON |BTOT| MATR / 
+      5          100     1     1     0 I / 
+      6          100     1     1     0 |B| / 
+      7          100     1     1     0 BR / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

@@ -1,0 +1,1449 @@
+GeneralParameters:
+  circuit_name: SIS100_DP
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\SIS100\Stimulus\I_PC_SIS100_DP_dev.stl
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_EE.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP_FPA\SIS100_Magnet_L_variable_with_eddy_currents.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Earth.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Crowbar.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Switch.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_VCPC.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Table\SIS100_Inductance_Table_DP_eddy_currents.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - C:\gitlab\steam-pspice-library\SIS100\Stimulus\I_PC_SIS100_DP_dev.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_EE.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP_FPA\SIS100_Magnet_L_variable_with_eddy_currents.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Earth.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Crowbar.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_Switch.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Items_DP\SIS100_VCPC.lib
+  - C:\gitlab\steam-pspice-library\SIS100\Table\SIS100_Inductance_Table_DP_eddy_currents.lib
+GlobalParameters:
+  global_parameters:
+    L_magnet: '0.00055'
+    C_ground_magnet: 3.5n
+    R_parallel: '1.00E+07'
+    R_Warm: '1.00E-03'
+    R_crowbar: '1.00E-03'
+    R_EE: '6.70E-02'
+    t_EE: '10'
+    Opening_Time: '1.00E-04'
+    Delay_Branch1: '0'
+    Delay_Branch2: '0'
+    Delay_Branch3: '0'
+    C_snubber: '8.00E-04'
+    R_snubber: '1.00E+00'
+    R_Branch: '4.40E-04'
+    L_Branch: '1.00E-06'
+    t_switch: '1.00E+04'
+    t_switch_to_open: '1.00E-07'
+    R_WCC_1: '4.25E-04'
+    C_WCC_1: '4.25E-08'
+    R_GROUND: '50000'
+    K_I_1: '0'
+    K_P_1: '4.00E+04'
+    R_WCC_2: '3.00E-04'
+    C_WCC_2: '3.00E-08'
+    C_GROUND: '5.00E-06'
+    L_EDDY_POLE_1: '1E-4'
+    TAU_EDDY_POLE_1: '1E-4'
+    R_EDDY_POLE_1: L_EDDY_POLE_1/TAU_EDDY_POLE_1
+    K_EDDY_POLE_1: '.71'
+    L_EDDY_POLE_2: '4.5E-5'
+    TAU_EDDY_POLE_2: '4.5E-5'
+    R_EDDY_POLE_2: L_EDDY_POLE_2/TAU_EDDY_POLE_2
+    K_EDDY_POLE_2: '.47'
+    L_EDDY_POLE_3: '0.3E-5'
+    TAU_EDDY_POLE_3: '0.3E-5'
+    R_EDDY_POLE_3: L_EDDY_POLE_3/TAU_EDDY_POLE_3
+    K_EDDY_POLE_3: '.23'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  X_1:
+    type: parametrized component
+    nodes: ['0', 1a]
+    value: fake_pc
+    parameters: null
+  RSET:
+    type: standard component
+    nodes: [1a, '0']
+    value: 1MEG
+    parameters: null
+  EERROR:
+    type: standard component
+    nodes: [2a, '0', 1a, 1e]
+    value: '1'
+    parameters: null
+  RERROR:
+    type: standard component
+    nodes: [2a, '0']
+    value: 1MEG
+    parameters: null
+  EP:
+    type: standard component
+    nodes: [3a, '0', 2a, '0']
+    value: '1'
+    parameters: null
+  RP:
+    type: standard component
+    nodes: [3a, '0']
+    value: 1MEG
+    parameters: null
+  GI:
+    type: standard component
+    nodes: ['0', 4a, 2a, '0']
+    value: '1'
+    parameters: null
+  C1:
+    type: standard component
+    nodes: [4a, '0']
+    value: '1'
+    parameters: null
+  R1:
+    type: standard component
+    nodes: [4a, '0']
+    value: 1MEG
+    parameters: null
+  EPID:
+    type: standard component
+    nodes: [6a, '0']
+    value: POLY(2) (3a 0) (4a 0) 0 {K_P_1} {K_I_1}
+    parameters: null
+  RPID:
+    type: standard component
+    nodes: [6a, '0']
+    value: 1MEG
+    parameters: null
+  EAMP:
+    type: standard component
+    nodes: [7a, '0', 6a, '0']
+    value: '1'
+    parameters: null
+  RAMP:
+    type: standard component
+    nodes: [7a, '0']
+    value: 1MEG
+    parameters: null
+  GOUT:
+    type: standard component
+    nodes: [8a, 8b, '0', 7a]
+    value: '1'
+    parameters: null
+  V_INPUT:
+    type: standard component
+    nodes: [8b, 9a]
+    value: '0'
+    parameters: null
+  RP2:
+    type: standard component
+    nodes: [9a, 8a]
+    value: '1000'
+    parameters: null
+  R_GROUND:
+    type: standard component
+    nodes: [8a, '0']
+    value: 1MEG
+    parameters: null
+  E_SOURCE:
+    type: standard component
+    nodes: ['134', '1']
+    value: I(V_INPUT)
+    parameters: null
+  ESENSOR:
+    type: standard component
+    nodes: [12a, '0']
+    value: I(E_SOURCE)
+    parameters: null
+  R5:
+    type: standard component
+    nodes: [12a, '0']
+    value: 1000MEG
+    parameters: null
+  x_sw_1:
+    type: parametrized component
+    nodes: ['134', 134a]
+    value: generic_switch_opening
+    parameters:
+      t_switch: t_switch
+      t_switch_to_open: t_switch_to_open
+  x_cb_1:
+    type: parametrized component
+    nodes: [134a, '1']
+    value: crowbar_SIS100
+    parameters:
+      R_crowbar: R_crowbar
+  R_g_1b:
+    type: standard component
+    nodes: ['134', '135']
+    value: '50000'
+    parameters: null
+  R_g_2b:
+    type: standard component
+    nodes: ['135', '1']
+    value: '50000'
+    parameters: null
+  C_g_1:
+    type: standard component
+    nodes: ['134', '135']
+    value: C_GROUND
+    parameters: null
+  C_g_2:
+    type: standard component
+    nodes: ['135', '1']
+    value: C_GROUND
+    parameters: null
+  x_EC:
+    type: parametrized component
+    nodes: ['135', '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+  V_S:
+    type: standard component
+    nodes: ['1', 1d]
+    value: '0'
+    parameters: null
+  R_S:
+    type: standard component
+    nodes: [1d, '0']
+    value: 1MEG
+    parameters: null
+  E_SC:
+    type: standard component
+    nodes: [1e, '0']
+    value: I(V_S)
+    parameters: null
+  R_SC:
+    type: standard component
+    nodes: [1e, '0']
+    value: 1MEG
+    parameters: null
+  x_R_EE_1:
+    type: parametrized component
+    nodes: [1d, '2']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_1:
+    type: standard component
+    nodes: ['2', '0']
+    value: C_WCC_1
+    parameters: null
+  R_wcc_1:
+    type: standard component
+    nodes: ['2', '3']
+    value: R_WCC_1
+    parameters: null
+  x_mag_1:
+    type: parametrized component
+    nodes: ['3', '4', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_2:
+    type: parametrized component
+    nodes: ['4', '5', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_3:
+    type: parametrized component
+    nodes: ['5', '6', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_4:
+    type: parametrized component
+    nodes: ['6', '7', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_5:
+    type: parametrized component
+    nodes: ['7', '8', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_6:
+    type: parametrized component
+    nodes: ['8', '9', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_7:
+    type: parametrized component
+    nodes: ['9', '10', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_8:
+    type: parametrized component
+    nodes: ['10', '11', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_9:
+    type: parametrized component
+    nodes: ['11', '12', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_10:
+    type: parametrized component
+    nodes: ['12', '13', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_11:
+    type: parametrized component
+    nodes: ['13', '14', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_12:
+    type: parametrized component
+    nodes: ['14', '15', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_13:
+    type: parametrized component
+    nodes: ['15', '16', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_14:
+    type: parametrized component
+    nodes: ['16', '17', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_15:
+    type: parametrized component
+    nodes: ['17', '18', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_16:
+    type: parametrized component
+    nodes: ['18', '19', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_17:
+    type: parametrized component
+    nodes: ['19', '20', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_18:
+    type: parametrized component
+    nodes: ['20', '21', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_2:
+    type: standard component
+    nodes: ['21', '0']
+    value: C_WCC_1
+    parameters: null
+  R_wcc_2:
+    type: standard component
+    nodes: ['21', '22']
+    value: R_WCC_1
+    parameters: null
+  x_R_EE_2:
+    type: parametrized component
+    nodes: ['22', '23']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  x_R_EE_3:
+    type: parametrized component
+    nodes: ['23', '24']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_3:
+    type: standard component
+    nodes: ['24', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_3:
+    type: standard component
+    nodes: ['24', '25']
+    value: R_WCC_2
+    parameters: null
+  x_mag_19:
+    type: parametrized component
+    nodes: ['25', '26', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_20:
+    type: parametrized component
+    nodes: ['26', '27', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_21:
+    type: parametrized component
+    nodes: ['27', '28', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_22:
+    type: parametrized component
+    nodes: ['28', '29', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_23:
+    type: parametrized component
+    nodes: ['29', '30', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_24:
+    type: parametrized component
+    nodes: ['30', '31', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_25:
+    type: parametrized component
+    nodes: ['31', '32', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_26:
+    type: parametrized component
+    nodes: ['32', '33', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_27:
+    type: parametrized component
+    nodes: ['33', '34', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_28:
+    type: parametrized component
+    nodes: ['34', '35', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_29:
+    type: parametrized component
+    nodes: ['35', '36', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_30:
+    type: parametrized component
+    nodes: ['36', '37', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_31:
+    type: parametrized component
+    nodes: ['37', '38', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_32:
+    type: parametrized component
+    nodes: ['38', '39', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_33:
+    type: parametrized component
+    nodes: ['39', '40', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_34:
+    type: parametrized component
+    nodes: ['40', '41', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_35:
+    type: parametrized component
+    nodes: ['41', '42', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_36:
+    type: parametrized component
+    nodes: ['42', '43', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_4:
+    type: standard component
+    nodes: ['43', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_4:
+    type: standard component
+    nodes: ['43', '44']
+    value: R_WCC_2
+    parameters: null
+  x_R_EE_4:
+    type: parametrized component
+    nodes: ['44', '45']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  x_R_EE_5:
+    type: parametrized component
+    nodes: ['45', '46']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_5:
+    type: standard component
+    nodes: ['46', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_5:
+    type: standard component
+    nodes: ['46', '47']
+    value: R_WCC_2
+    parameters: null
+  x_mag_37:
+    type: parametrized component
+    nodes: ['47', '48', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_38:
+    type: parametrized component
+    nodes: ['48', '49', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_39:
+    type: parametrized component
+    nodes: ['49', '50', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_40:
+    type: parametrized component
+    nodes: ['50', '51', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_41:
+    type: parametrized component
+    nodes: ['51', '52', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_42:
+    type: parametrized component
+    nodes: ['52', '53', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_43:
+    type: parametrized component
+    nodes: ['53', '54', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_44:
+    type: parametrized component
+    nodes: ['54', '55', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_45:
+    type: parametrized component
+    nodes: ['55', '56', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_46:
+    type: parametrized component
+    nodes: ['56', '57', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_47:
+    type: parametrized component
+    nodes: ['57', '58', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_48:
+    type: parametrized component
+    nodes: ['58', '59', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_49:
+    type: parametrized component
+    nodes: ['59', '60', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_50:
+    type: parametrized component
+    nodes: ['60', '61', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_51:
+    type: parametrized component
+    nodes: ['61', '62', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_52:
+    type: parametrized component
+    nodes: ['62', '63', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_53:
+    type: parametrized component
+    nodes: ['63', '64', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_54:
+    type: parametrized component
+    nodes: ['64', '65', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_6:
+    type: standard component
+    nodes: ['65', '0']
+    value: C_WCC_1
+    parameters: null
+  R_wcc_6:
+    type: standard component
+    nodes: ['65', '66']
+    value: R_WCC_1
+    parameters: null
+  x_R_EE_6:
+    type: parametrized component
+    nodes: ['66', '67']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  E_SOURCE_2:
+    type: standard component
+    nodes: ['67', '68']
+    value: I(V_INPUT)
+    parameters: null
+  x_sw_2:
+    type: parametrized component
+    nodes: ['67', 67b]
+    value: generic_switch_opening
+    parameters:
+      t_switch: t_switch
+      t_switch_to_open: t_switch_to_open
+  x_cb_2:
+    type: parametrized component
+    nodes: [67b, '68']
+    value: crowbar_SIS100
+    parameters:
+      R_crowbar: R_crowbar
+  x_R_EE_7:
+    type: parametrized component
+    nodes: ['68', '69']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_7:
+    type: standard component
+    nodes: ['69', '0']
+    value: C_WCC_1
+    parameters: null
+  R_wcc_7:
+    type: standard component
+    nodes: ['69', '70']
+    value: R_WCC_1
+    parameters: null
+  x_mag_55:
+    type: parametrized component
+    nodes: ['70', '71', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_56:
+    type: parametrized component
+    nodes: ['71', '72', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_57:
+    type: parametrized component
+    nodes: ['72', '73', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_58:
+    type: parametrized component
+    nodes: ['73', '74', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_59:
+    type: parametrized component
+    nodes: ['74', '75', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_60:
+    type: parametrized component
+    nodes: ['75', '76', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_61:
+    type: parametrized component
+    nodes: ['76', '77', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_62:
+    type: parametrized component
+    nodes: ['77', '78', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_63:
+    type: parametrized component
+    nodes: ['78', '79', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_64:
+    type: parametrized component
+    nodes: ['79', '80', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_65:
+    type: parametrized component
+    nodes: ['80', '81', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_66:
+    type: parametrized component
+    nodes: ['81', '82', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_67:
+    type: parametrized component
+    nodes: ['82', '83', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_68:
+    type: parametrized component
+    nodes: ['83', '84', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_69:
+    type: parametrized component
+    nodes: ['84', '85', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_70:
+    type: parametrized component
+    nodes: ['85', '86', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_71:
+    type: parametrized component
+    nodes: ['86', '87', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_72:
+    type: parametrized component
+    nodes: ['87', '88', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_8:
+    type: standard component
+    nodes: ['88', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_8:
+    type: standard component
+    nodes: ['88', '89']
+    value: R_WCC_2
+    parameters: null
+  x_R_EE_8:
+    type: parametrized component
+    nodes: ['89', '90']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  x_R_EE_9:
+    type: parametrized component
+    nodes: ['90', '91']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_9:
+    type: standard component
+    nodes: ['91', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_9:
+    type: standard component
+    nodes: ['91', '92']
+    value: R_WCC_2
+    parameters: null
+  x_mag_73:
+    type: parametrized component
+    nodes: ['92', '93', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_74:
+    type: parametrized component
+    nodes: ['93', '94', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_75:
+    type: parametrized component
+    nodes: ['94', '95', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_76:
+    type: parametrized component
+    nodes: ['95', '96', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_77:
+    type: parametrized component
+    nodes: ['96', '97', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_78:
+    type: parametrized component
+    nodes: ['97', '98', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_79:
+    type: parametrized component
+    nodes: ['98', '99', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_80:
+    type: parametrized component
+    nodes: ['99', '100', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_81:
+    type: parametrized component
+    nodes: ['100', '101', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_82:
+    type: parametrized component
+    nodes: ['101', '102', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_83:
+    type: parametrized component
+    nodes: ['102', '103', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_84:
+    type: parametrized component
+    nodes: ['103', '104', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_85:
+    type: parametrized component
+    nodes: ['104', '105', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_86:
+    type: parametrized component
+    nodes: ['105', '106', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_87:
+    type: parametrized component
+    nodes: ['106', '107', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_88:
+    type: parametrized component
+    nodes: ['107', '108', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_89:
+    type: parametrized component
+    nodes: ['108', '109', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_90:
+    type: parametrized component
+    nodes: ['109', '110', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_10:
+    type: standard component
+    nodes: ['110', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_10:
+    type: standard component
+    nodes: ['110', '111']
+    value: R_WCC_2
+    parameters: null
+  x_R_EE_10:
+    type: parametrized component
+    nodes: ['111', '112']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  x_R_EE_11:
+    type: parametrized component
+    nodes: ['112', '113']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  C_wcc_11:
+    type: standard component
+    nodes: ['113', '0']
+    value: C_WCC_2
+    parameters: null
+  R_wcc_11:
+    type: standard component
+    nodes: ['113', '114']
+    value: R_WCC_2
+    parameters: null
+  x_mag_91:
+    type: parametrized component
+    nodes: ['114', '115', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_92:
+    type: parametrized component
+    nodes: ['115', '116', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_93:
+    type: parametrized component
+    nodes: ['116', '117', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_94:
+    type: parametrized component
+    nodes: ['117', '118', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_95:
+    type: parametrized component
+    nodes: ['118', '119', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_96:
+    type: parametrized component
+    nodes: ['119', '120', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_97:
+    type: parametrized component
+    nodes: ['120', '121', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_98:
+    type: parametrized component
+    nodes: ['121', '122', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_99:
+    type: parametrized component
+    nodes: ['122', '123', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_100:
+    type: parametrized component
+    nodes: ['123', '124', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_101:
+    type: parametrized component
+    nodes: ['124', '125', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_102:
+    type: parametrized component
+    nodes: ['125', '126', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_103:
+    type: parametrized component
+    nodes: ['126', '127', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_104:
+    type: parametrized component
+    nodes: ['127', '128', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_105:
+    type: parametrized component
+    nodes: ['128', '129', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_106:
+    type: parametrized component
+    nodes: ['129', '130', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_107:
+    type: parametrized component
+    nodes: ['130', '131', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_108:
+    type: parametrized component
+    nodes: ['131', '132', '0', '0']
+    value: magnet_SIS100
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  C_wcc_12:
+    type: standard component
+    nodes: ['132', '0']
+    value: C_WCC_1
+    parameters: null
+  R_wcc_12:
+    type: standard component
+    nodes: ['132', '133']
+    value: R_WCC_1
+    parameters: null
+  x_R_EE_12:
+    type: parametrized component
+    nodes: ['133', '134']
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+Options:
+  options_simulation:
+    RELTOL: '0.01'
+    VNTOL: '0.00001'
+    ABSTOL: '0.0001'
+    CHGTOL: '0.000000000000001'
+    GMIN: '0.000000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+    NUMDGT: '25'
+  options_autoconverge:
+    RELTOL: '0.01'
+    VNTOL: '0.0001'
+    ABSTOL: '0.0001'
+    ITL1: '1000'
+    ITL2: '1000'
+    ITL4: '1000'
+    PIVTOL: '0.0000000001'
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '3.5'
+    min_time_step: '0.4'
+    time_schedule:
+      '0.0': '0.001'
+      '0.4': '0.0001'
+      '2.1': '0.0001'
+      '3.5': '0.001'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

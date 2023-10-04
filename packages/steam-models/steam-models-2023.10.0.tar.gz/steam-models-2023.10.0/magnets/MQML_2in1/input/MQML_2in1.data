@@ -1,0 +1,208 @@
+VERSION 10.2.1
+'LHC MQM/MQMC/MQML insertion quadrupole, 1.9K and 4.5K                              '
+'../datab/roxie.bhdata                                                              '
+'../datab/roxie.cadata                                                              '
+'MQM_2D_Iron.iron                                                                   '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=T   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 32
+    1     1    10           28        0.256            0         5400    MQMNEW4   2  18     0            0 
+    2     1     5           28       22.489       27.442         5400    MQMNEW4   2  18     0            0 
+    3     1    13        37.16        0.193            0         5400    MQMNEW4   2  18     0            0 
+    4     1     8        37.16       20.537       24.708         5400    MQMNEW4   2  18     0            0 
+    5     1    10           28        0.256            0        -5400    MQMNEW4   2  18     0           90 
+    6     1     5           28       22.489       27.442        -5400    MQMNEW4   2  18     0           90 
+    7     1    13        37.16        0.193            0        -5400    MQMNEW4   2  18     0           90 
+    8     1     8        37.16       20.537       24.708        -5400    MQMNEW4   2  18     0           90 
+    9     1    10           28        0.256            0         5400    MQMNEW4   2  18     0          180 
+   10     1     5           28       22.489       27.442         5400    MQMNEW4   2  18     0          180 
+   11     1    13        37.16        0.193            0         5400    MQMNEW4   2  18     0          180 
+   12     1     8        37.16       20.537       24.708         5400    MQMNEW4   2  18     0          180 
+   13     1    10           28        0.256            0        -5400    MQMNEW4   2  18     0          270 
+   14     1     5           28       22.489       27.442        -5400    MQMNEW4   2  18     0          270 
+   15     1    13        37.16        0.193            0        -5400    MQMNEW4   2  18     0          270 
+   16     1     8        37.16       20.537       24.708        -5400    MQMNEW4   2  18     0          270 
+   17     1    10           28        0.256            0         5400    MQMNEW4   2  18     0            0 
+   18     1     5           28       22.489       27.442         5400    MQMNEW4   2  18     0            0 
+   19     1    13        37.16        0.193            0         5400    MQMNEW4   2  18     0            0 
+   20     1     8        37.16       20.537       24.708         5400    MQMNEW4   2  18     0            0 
+   21     1    10           28        0.256            0        -5400    MQMNEW4   2  18     0           90 
+   22     1     5           28       22.489       27.442        -5400    MQMNEW4   2  18     0           90 
+   23     1    13        37.16        0.193            0        -5400    MQMNEW4   2  18     0           90 
+   24     1     8        37.16       20.537       24.708        -5400    MQMNEW4   2  18     0           90 
+   25     1    10           28        0.256            0         5400    MQMNEW4   2  18     0          180 
+   26     1     5           28       22.489       27.442         5400    MQMNEW4   2  18     0          180 
+   27     1    13        37.16        0.193            0         5400    MQMNEW4   2  18     0          180 
+   28     1     8        37.16       20.537       24.708         5400    MQMNEW4   2  18     0          180 
+   29     1    10           28        0.256            0        -5400    MQMNEW4   2  18     0          270 
+   30     1     5           28       22.489       27.442        -5400    MQMNEW4   2  18     0          270 
+   31     1    13        37.16        0.193            0        -5400    MQMNEW4   2  18     0          270 
+   32     1     8        37.16       20.537       24.708        -5400    MQMNEW4   2  18     0          270 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+             0            0 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      2     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 8
+      1     4     2 1 2 3 4 /
+      2     4     2 5 6 7 8 /
+      3     4     2 9 10 11 12 /
+      4     4     2 13 14 15 16 /
+      5     4     2 17 18 19 20 /
+      6     4     2 21 22 23 24 /
+      7     4     2 25 26 27 28 /
+      8     4     2 29 30 31 32 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 2
+      1        0.002        0.002        0.002     5      DCONT     0 0 /
+      2       0.0027       0.0027       0.0027     5     DCCONT     8 0 /
+     no           xl           xu           xs genen     string   act bcs 
+
+EULER 2
+      1           97            0            0            0     SHIFT2     1 1 2 3 4 /
+      2          -97            0            0            0     SHIFT2     1 5 6 7 8 /
+     no            x            y         alph          bet     string   act bcs 
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 4
+      1            0            1     1    0.0185185            1            0            0     5 1 2 /
+      2            1            2     1            1    0.0185185            0            0     5 1 2 /
+      3            2            3     1    0.0185185     0.037037            0            0    10 1 2 /
+      4            3            4     1     0.037037            1            0            0    52 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 2
+      1     1           97            0            0            0           17        4                      0 
+      2     1           97            0            0            0           17        4                      4 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          200    20 
+             0          200    20 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 1
+      1      RHARM            1 2 /
+     no     string        value harmoniccoil 
+
+GRAPH 7
+      1          2     CURNTB     1     0          B     1     1       1     1            1 
+      2          2     CURNTB     1     0          B     6     1       2     1            1 
+      3          2     CURNTB     1     0          B    10     1       3     1            1 
+      4          2     CURNTB     1     0          B     1     2       4     1            1 
+      5          2     CURNTB     1     0          B     2     2       5     1            1 
+      6          2     CURNTB     1     0          B     6     2       6     1            1 
+      7          2     CURNTB     1     0          B    10     2       7     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 6
+      1          100     1     1     0 B / 
+      2          200     1     1     0 IRON AR / 
+      3          200     1     1     0 IRON MUER / 
+      4          200     1     1     0 IRON |BTOT| MATR / 
+      5          100     1     1     0 I / 
+      6          100     1     1     0 |B| / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

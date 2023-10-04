@@ -1,0 +1,188 @@
+VERSION 10.2.1
+'HL-LHC MCDXF magnet                                                                '
+'../datab/roxie.bhdata                                                              '
+'../datab/roxie.cadata                                                              '
+'yoke_10P_MCDXF.iron                                                                '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=T    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=T   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 20
+    1     2    19        91.54       -20.68           90         1104        HOC   1  12     0            0 
+    2     2    19        91.54       -20.68           90        -1104        HOC   1  12     0           36 
+    3     2    19        91.54       -20.68           90         1104        HOC   1  12     0           72 
+    4     2    19        91.54       -20.68           90        -1104        HOC   1  12     0          108 
+    5     2    19        91.54       -20.68           90         1104        HOC   1  12     0          144 
+    6     2    19        91.54       -20.68           90        -1104        HOC   1  12     0          180 
+    7     2    19        91.54       -20.68           90         1104        HOC   1  12     0          216 
+    8     2    19        91.54       -20.68           90        -1104        HOC   1  12     0          252 
+    9     2    19        91.54       -20.68           90         1104        HOC   1  12     0          288 
+   10     2    19        91.54       -20.68           90        -1104        HOC   1  12     0          324 
+   11     2    19        91.54       -20.68           90        -1104        HOC   1  12     1            0 
+   12     2    19        91.54       -20.68           90         1104        HOC   1  12     1           36 
+   13     2    19        91.54       -20.68           90        -1104        HOC   1  12     1           72 
+   14     2    19        91.54       -20.68           90         1104        HOC   1  12     1          108 
+   15     2    19        91.54       -20.68           90        -1104        HOC   1  12     1          144 
+   16     2    19        91.54       -20.68           90         1104        HOC   1  12     1          180 
+   17     2    19        91.54       -20.68           90        -1104        HOC   1  12     1          216 
+   18     2    19        91.54       -20.68           90         1104        HOC   1  12     1          252 
+   19     2    19        91.54       -20.68           90        -1104        HOC   1  12     1          288 
+   20     2    19        91.54       -20.68           90         1104        HOC   1  12     1          324 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+             0            0 
+         inrad       reperm 
+
+      0 
+  symtype 
+
+      1     1     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 10
+      1    10     0 1 11 /
+      2    10     0 2 12 /
+      3    10     0 3 13 /
+      4    10     0 4 14 /
+      5    10     0 5 15 /
+      6    10     0 6 16 /
+      7    10     0 7 17 /
+      8    10     0 8 18 /
+      9    10     0 9 19 /
+     10    10     0 10 20 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 0
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 3
+      1            0            1     1           -1         0.01            0            0     5 1 2 /
+      2            1            2     1         0.01          0.1            0            0     9 1 2 /
+      3            2            3     1          0.1            1            0            0    45 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1            0            0            0            0           50        9                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0            0     0 
+             0            0     0 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 2
+      1        1            0            0            0          250            0    25        0 
+      2        2            0            0           50            0          360    20        0 
+     no     type         xsxo         ysyo      xegamma       yephi1       zephi2 nsteps    field 
+
+KVALUES 0
+
+HARMONICOPTION 1
+      1      RHARM            2 3 /
+     no     string        value harmoniccoil 
+
+GRAPH 3
+      1          1        PHI     1     0         BR     0     0       1     1            1 
+      2          1      INDEX     1     0        |B|     1     0       2     1            1 
+      3          1       ARCL     2     0        |B|     2     0       3     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 5
+      1          200     1     1     0 IRON AR / 
+      2          200     1     1     0 IRON MUER / 
+      3          200     1     1     0 IRON |BTOT| / 
+      4          150     1     1     0 |B| / 
+      5          150     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

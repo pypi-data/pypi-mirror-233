@@ -1,0 +1,183 @@
+VERSION 10.2.1
+'Combined Function Dipole, Inom = 584 A, B1 = 3.0 T, G = 3.5 T/m                    '
+'../datab/roxie.bhdata                                                              '
+'../datab/roxie.cadata                                                              '
+'/eos/project-r/roxie/users/emm/MED_C_COMB/SimpleMod.iron                           '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=T    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=F    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 16
+    1     1     7           35          0.8            0         4670   MCBXW4I8   1   8     0            0 
+    2     1    11           35           20           24         4670   MCBXW4I8   1   8     0            0 
+    3     1     8           35           45           52         4670   MCBXW4I8   1   8     0            0 
+    4     1     3           35           70         74.5         4670   MCBXW4I8   1   8     0            0 
+    5     1     7           35          0.8            0        -4670   MCBXW4I8   1   8     1          180 
+    6     1    11           35           20           24        -4670   MCBXW4I8   1   8     1          180 
+    7     1     8           35           45           48        -4670   MCBXW4I8   1   8     1          180 
+    8     1     3           35           70           70        -4670   MCBXW4I8   1   8     1          180 
+    9     1     7           35          0.8            0         4670   MCBXW4I8   1   8     1            0 
+   10     1    11           35           20           24         4670   MCBXW4I8   1   8     1            0 
+   11     1     8           35           45           52         4670   MCBXW4I8   1   8     1            0 
+   12     1     3           35           70         74.5         4670   MCBXW4I8   1   8     1            0 
+   13     1     7           35          0.8            0        -4670   MCBXW4I8   1   8     0          180 
+   14     1    11           35           20           24        -4670   MCBXW4I8   1   8     0          180 
+   15     1     8           35           45           48        -4670   MCBXW4I8   1   8     0          180 
+   16     1     3           35           70           70        -4670   MCBXW4I8   1   8     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 1
+      1      CONTR        0.004 0 /
+     no     string        value block 
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+            62         1500 
+         inrad       reperm 
+
+      0 
+  symtype 
+
+      1     1     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 1
+      1     2     0 1 2 3 4 /
+     no  symm typexy blocks 
+
+ALGO /
+      1 
+   algo 
+
+DESIGN 8
+      1            1            5       1.3631     5        PHI     2 1 9 /
+      2            1           10        6.374     5       PHIR     2 2 10 /
+      3            5           15      10.2028     5       PHIR     2 3 11 /
+      4           14           17      16.1993     5       PHIR     2 4 12 /
+      5          0.7            2       0.8436     5        PHI     2 5 13 /
+      6            1            5       3.5703     5       PHIR     2 6 14 /
+      7            5           11        8.264     5       PHIR     2 7 15 /
+      8           10           16      14.9421     5       PHIR     2 8 16 /
+     no           xl           xu           xs genen     string   act bcs 
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 0
+
+EDDY /
+      0 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 3
+      1     1            0            0            0            0           20        2                      0 
+      2     1            0            0            0            0           20        4                      0 
+      3     1            0            0            0            0           30        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0            0     0 
+             0            0     0 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 0
+
+GRAPHOPTION 0
+
+PLOT2D 3
+      1           50     1     1     0 |B| / 
+      2          150     1     1     0 IRON |BTOT| / 
+      3           50     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 9
+      1 B          3     3 7                 0          200 
+      2 B          5     3 7                 0          800 
+      3 B          7     3 7                 0         1010 
+      4 B          9     3 7                 0         1000 
+      5 B          6     3 7                 0          400 
+      6 PHI1       4     0 9                78          100 
+      7 B          2     1 11             -233          400 
+      8 B          4     3 7                 0          500 
+      9 B          8     3 7                 0         1000 
+     no string    s1    s2 oper         constr       weight 
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

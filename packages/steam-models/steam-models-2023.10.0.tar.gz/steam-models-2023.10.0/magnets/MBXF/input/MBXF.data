@@ -1,0 +1,190 @@
+VERSION 10.2.1
+'                                                                     '
+'roxie_q_all_MSMod4.bhdata                                                          '
+'../datab/roxie.cadata                                                              '
+'20170608_FTH11_T90R190_T25f34R180_st.iron                                          '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=F    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 8
+    1     1    19           75       1.1346            0       -12047      NEWD1   2  18     0            0 
+    2     1    13           75      27.8721           26       -12047      NEWD1   2  18     0            0 
+    3     1     8           75      50.2969      52.4212       -12047      NEWD1   2  18     0            0 
+    4     1     4           75      70.6992      68.0015       -12047      NEWD1   2  18     0            0 
+    5     1    19           75       1.1346            0        12047      NEWD1   2  18     0          180 
+    6     1    13           75      27.8721           26        12047      NEWD1   2  18     0          180 
+    7     1     8           75      50.2969      52.4212        12047      NEWD1   2  18     0          180 
+    8     1     4           75      70.6992      68.0015        12047      NEWD1   2  18     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 1
+      1      CONTR        0.002 0 /
+     no     string        value block 
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+           200          500 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      3     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 2
+      1     2     2 1 2 3 4 /
+      2     2     2 5 6 7 8 /
+     no  symm typexy blocks 
+
+ALGO /
+      1 
+   algo 
+
+DESIGN 0
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 1
+      1            0         1000     5            0       0.0001        0.002            2    52 1 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1            0            0            0            0           50        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          300    31 
+             0          300    31 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 1
+      1        2            0            0          467            0          360   121        0 
+     no     type         xsxo         ysyo      xegamma       yephi1       zephi2 nsteps    field 
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 12
+      1          1       ARCL     1     0        |B|     1     0       1     1            1 
+      2          1       ARCL     2     0        |B|     2     0       2     1            1 
+      3          2     CURNTB     1     0       BIGB     1     1       3     1            1 
+      4          2     CURNTB     1     0          B     3     1       4     1            1 
+      5          2     CURNTB     1     0          B     5     1       5     1            1 
+      6          2     CURNTB     1     0          B     7     1       6     1            1 
+      7          2     CURNTB     1     0          B     9     1       7     1            1 
+      8          2     CURNTB     1     0          B    11     1       8     1            1 
+      9          2     CURNTB     1     0          B    13     1       9     1            1 
+     10          2     CURNTB     1     0          B    15     1      10     1            1 
+     11          2     CURNTB     1     0          L     0     0      11     1            1 
+     12          2     CURNTB     1     0     ENERGY     0     0      12     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 1
+      1     XLABEL            0 'Angle (degree)                                                                      ' 1 /
+     no     string        value                                                                            label graph 
+
+PLOT2D 11
+      1          100     1     1     1 IRIS / 
+      2          100     1     1     0 F / 
+      3          500     1     1     0 MATR IRON / 
+      4          500     1     1     0 IRON MESH / 
+      5          500     1     1     0 |B| IRON / 
+      6          100     1     0     0 WEDGE / 
+      7          100     1     0     0 WEDGE NUMMC NUMMB / 
+      8          100     1     1     0 YOKE YOKE / 
+      9          100     1     0     0 WEDGE |B| / 
+     10          100     1     1     0 |B| / 
+     11          100     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 1
+      1       FMAX          3.8 6 /
+     no     string        value plot 
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 5
+      1 B          3     1 3                 0            1 
+      2 B          5     1 3                 0            2 
+      3 B          7     1 3                 0            3 
+      4 B          9     1 3                 0            6 
+      5 B         11     1 3                 0           10 
+     no string    s1    s2 oper         constr       weight 
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

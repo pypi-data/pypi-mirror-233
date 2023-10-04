@@ -1,0 +1,209 @@
+VERSION 10.2.1
+'                                                                                   '
+'roxie_2.bhdata                                                                     '
+'../datab/roxie.cadata                                                              '
+'D2_INFN3_4.iron                                                                    '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 40
+    1     1    15         52.5       1.9564            0        12050         D2   2  18     0            0 
+    2     1     6         52.5         30.7       36.227        12050         D2   2  18     0            0 
+    3     1     4         52.5       42.886         41.6        12050         D2   2  18     0            0 
+    4     1     4         52.5       57.502       54.629        12050         D2   2  18     0            0 
+    5     1     2         52.5       74.239       71.053        12050         D2   2  18     0            0 
+    6     1    15         52.5       0.4717            0       -12050         D2   2  18     0          180 
+    7     1     6         52.5       27.055       33.537       -12050         D2   2  18     0          180 
+    8     1     4         52.5       40.292       45.218       -12050         D2   2  18     0          180 
+    9     1     4         52.5       54.002       50.549       -12050         D2   2  18     0          180 
+   10     1     2         52.5       71.457       72.573       -12050         D2   2  18     0          180 
+   11     1    15         52.5       0.4717            0        12050         D2   2  18     0            0 
+   12     1     6         52.5       27.055       33.537        12050         D2   2  18     0            0 
+   13     1     4         52.5       40.292       45.218        12050         D2   2  18     0            0 
+   14     1     4         52.5       54.002       50.549        12050         D2   2  18     0            0 
+   15     1     2         52.5       71.457       72.573        12050         D2   2  18     0            0 
+   16     1    15         52.5       1.9564            0       -12050         D2   2  18     0          180 
+   17     1     6         52.5         30.7       36.227       -12050         D2   2  18     0          180 
+   18     1     4         52.5       42.886         41.6       -12050         D2   2  18     0          180 
+   19     1     4         52.5       57.502       54.629       -12050         D2   2  18     0          180 
+   20     1     2         52.5       74.239       71.053       -12050         D2   2  18     0          180 
+   21     1    15         52.5       0.4717            0       -12050         D2   2  18     1          180 
+   22     1     6         52.5       27.055       33.537       -12050         D2   2  18     1          180 
+   23     1     4         52.5       40.292       45.218       -12050         D2   2  18     1          180 
+   24     1     4         52.5       54.002       50.549       -12050         D2   2  18     1          180 
+   25     1     2         52.5       71.457       72.573       -12050         D2   2  18     1          180 
+   26     1    15         52.5       1.9564            0        12050         D2   2  18     1            0 
+   27     1     6         52.5         30.7       36.227        12050         D2   2  18     1            0 
+   28     1     4         52.5       42.886         41.6        12050         D2   2  18     1            0 
+   29     1     4         52.5       57.502       54.629        12050         D2   2  18     1            0 
+   30     1     2         52.5       74.239       71.053        12050         D2   2  18     1            0 
+   31     1    15         52.5       1.9564            0       -12050         D2   2  18     1          180 
+   32     1     6         52.5         30.7       36.227       -12050         D2   2  18     1          180 
+   33     1     4         52.5       42.886         41.6       -12050         D2   2  18     1          180 
+   34     1     4         52.5       57.502       54.629       -12050         D2   2  18     1          180 
+   35     1     2         52.5       74.239       71.053       -12050         D2   2  18     1          180 
+   36     1    15         52.5       0.4717            0        12050         D2   2  18     1            0 
+   37     1     6         52.5       27.055       33.537        12050         D2   2  18     1            0 
+   38     1     4         52.5       40.292       45.218        12050         D2   2  18     1            0 
+   39     1     4         52.5       54.002       50.549        12050         D2   2  18     1            0 
+   40     1     2         52.5       71.457       72.573        12050         D2   2  18     1            0 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      1 
+  scale 
+
+           400         1000 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      3     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 4
+      1     2     0 1 2 3 4 5 21 22 23 24 25 /
+      2     2     0 6 7 8 9 10 26 27 28 29 30 /
+      3     2     0 11 12 13 14 15 31 32 33 34 35 /
+      4     2     0 16 17 18 19 20 36 37 38 39 40 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 0
+
+EULER 2
+      1           94            0            0            0     SHIFT2     1 1 2 /
+      2          -94            0            0            0     SHIFT2     1 3 4 /
+     no            x            y         alph          bet     string   act bcs 
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 1
+      1            0         1000     1        0.069            1            0            0    11 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      4 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1           94            0            0            0           35        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0            0     0 
+             0            0     0 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 0
+
+GRAPHOPTION 0
+
+PLOT2D 7
+      1          200     1     0     0 NUMMC / 
+      2          330     1     0     0 YOKE / 
+      3          200     1     0    20 IRIS / 
+      4          330     1     0    20 GFZ / 
+      5          330     1     1     0 IRON |BTOT| / 
+      6          330     1     1     0 |B| / 
+      7          330     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 12
+      1 B          2     1 12              0.5           30 
+      2 B          3     1 12              0.5           70 
+      3 B          4     1 7                 0           50 
+      4 B          5     1 7                 0           60 
+      5 B          6     1 7                 0           80 
+      6 B          7     1 7                 0          200 
+      7 B          8     1 7                 0          100 
+      8 B          9     1 7                 0          300 
+      9 B         10     1 7                 0          300 
+     10 B         11     1 7                 0          100 
+     11 B         12     1 7                 0          400 
+     12 B         13     1 7                 0          500 
+     no string    s1    s2 oper         constr       weight 
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

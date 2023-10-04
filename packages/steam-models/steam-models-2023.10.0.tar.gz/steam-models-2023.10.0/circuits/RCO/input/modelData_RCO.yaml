@@ -1,0 +1,722 @@
+GeneralParameters:
+  circuit_name: RCO
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+GlobalParameters:
+  global_parameters:
+    L_magnet: '0.00027828'
+    C_ground_magnet: '1.29E-08'
+    R_parallel: '1.00E+09'
+    R_circuit: '0.026286'
+    R_crowbar: '8.00E-02'
+    R_ground: 1G
+    L_Busbar: '9.54E-04'
+    I_start: '0'
+    I_end_1: '50'
+    I_end_2: '100'
+    dI_dt: '1.5'
+    dI_dt2: '0.1'
+    t_start: '10'
+    t_plateau: '20'
+    t_PC_off: '757.7'
+    t_PC_switch_off: '10E-03'
+    L_parasitic_series: '1E-09'
+    R_parasitic_series: '1E-09'
+    R_parasitic_parallel: '1E+06'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  x_PC:
+    type: parametrized component
+    nodes: [0A, '1']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start
+      I_end_1: I_end_1
+      I_end_2: I_end_2
+      dI_dt: dI_dt
+      dI_dt2: dI_dt2
+      t_start: t_start
+      t_plateau: t_plateau
+      t_PC_off: t_PC_off
+      t_PC_switch_off: t_PC_switch_off
+      L_parasitic_series: L_parasitic_series
+      R_parasitic_series: R_parasitic_series
+      R_parasitic_parallel: R_parasitic_parallel
+  x_crowbar:
+    type: parametrized component
+    nodes: [0A,'1']
+    value: generic_crowbar
+    parameters:
+      R_crowbar: R_crowbar
+  R1:
+    type: standard component
+    nodes: ['1', '2']
+    value: R_circuit
+    parameters: null
+  L_Busbar_1:
+    type: standard component
+    nodes: [ '2', '3' ]
+    value: L_Busbar/2
+  R_ground:
+    type: standard component
+    nodes: [0A, '0']
+    value: R_ground
+    parameters: null
+  x_mag_1:
+    type: parametrized component
+    nodes: ['3', '4', '0', '0']
+    value: magnet_EQ_1_with_resistance_M1
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_2:
+    type: parametrized component
+    nodes: ['4', '5', '0', '0']
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_3:
+    type: parametrized component
+    nodes: ['5', '6', '0', '0']
+    value: magnet_EQ_1_with_resistance_M3
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_4:
+    type: parametrized component
+    nodes: ['6', '7', '0', '0']
+    value: magnet_EQ_1_with_resistance_M4
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_5:
+    type: parametrized component
+    nodes: ['7', '8', '0', '0']
+    value: magnet_EQ_1_with_resistance_M5
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_6:
+    type: parametrized component
+    nodes: ['8', '9', '0', '0']
+    value: magnet_EQ_1_with_resistance_M6
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_7:
+    type: parametrized component
+    nodes: ['9', '10', '0', '0']
+    value: magnet_EQ_1_with_resistance_M7
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_8:
+    type: parametrized component
+    nodes: ['10', '11', '0', '0']
+    value: magnet_EQ_1_with_resistance_M8
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_9:
+    type: parametrized component
+    nodes: ['11', '12', '0', '0']
+    value: magnet_EQ_1_with_resistance_M9
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_10:
+    type: parametrized component
+    nodes: ['12', '13', '0', '0']
+    value: magnet_EQ_1_with_resistance_M10
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_11:
+    type: parametrized component
+    nodes: ['13', '14', '0', '0']
+    value: magnet_EQ_1_with_resistance_M11
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_12:
+    type: parametrized component
+    nodes: ['14', '15', '0', '0']
+    value: magnet_EQ_1_with_resistance_M12
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_13:
+    type: parametrized component
+    nodes: ['15', '16', '0', '0']
+    value: magnet_EQ_1_with_resistance_M13
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_14:
+    type: parametrized component
+    nodes: ['16', '17', '0', '0']
+    value: magnet_EQ_1_with_resistance_M14
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_15:
+    type: parametrized component
+    nodes: ['17', '18', '0', '0']
+    value: magnet_EQ_1_with_resistance_M15
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_16:
+    type: parametrized component
+    nodes: ['18', '19', '0', '0']
+    value: magnet_EQ_1_with_resistance_M16
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_17:
+    type: parametrized component
+    nodes: ['19', '20', '0', '0']
+    value: magnet_EQ_1_with_resistance_M17
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_18:
+    type: parametrized component
+    nodes: ['20', '21', '0', '0']
+    value: magnet_EQ_1_with_resistance_M18
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_19:
+    type: parametrized component
+    nodes: ['21', '22', '0', '0']
+    value: magnet_EQ_1_with_resistance_M19
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_20:
+    type: parametrized component
+    nodes: ['22', '23', '0', '0']
+    value: magnet_EQ_1_with_resistance_M20
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_21:
+    type: parametrized component
+    nodes: ['23', '24', '0', '0']
+    value: magnet_EQ_1_with_resistance_M21
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_22:
+    type: parametrized component
+    nodes: ['24', '25', '0', '0']
+    value: magnet_EQ_1_with_resistance_M22
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_23:
+    type: parametrized component
+    nodes: ['25', '26', '0', '0']
+    value: magnet_EQ_1_with_resistance_M23
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_24:
+    type: parametrized component
+    nodes: ['26', '27', '0', '0']
+    value: magnet_EQ_1_with_resistance_M24
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_25:
+    type: parametrized component
+    nodes: ['27', '28', '0', '0']
+    value: magnet_EQ_1_with_resistance_M25
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_26:
+    type: parametrized component
+    nodes: ['28', '29', '0', '0']
+    value: magnet_EQ_1_with_resistance_M26
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_27:
+    type: parametrized component
+    nodes: ['29', '30', '0', '0']
+    value: magnet_EQ_1_with_resistance_M27
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_28:
+    type: parametrized component
+    nodes: ['30', '31', '0', '0']
+    value: magnet_EQ_1_with_resistance_M28
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_29:
+    type: parametrized component
+    nodes: ['31', '32', '0', '0']
+    value: magnet_EQ_1_with_resistance_M29
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_30:
+    type: parametrized component
+    nodes: ['32', '33', '0', '0']
+    value: magnet_EQ_1_with_resistance_M30
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_31:
+    type: parametrized component
+    nodes: ['33', '34', '0', '0']
+    value: magnet_EQ_1_with_resistance_M31
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_32:
+    type: parametrized component
+    nodes: ['34', '35', '0', '0']
+    value: magnet_EQ_1_with_resistance_M32
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_33:
+    type: parametrized component
+    nodes: ['35', '36', '0', '0']
+    value: magnet_EQ_1_with_resistance_M33
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_34:
+    type: parametrized component
+    nodes: ['36', '37', '0', '0']
+    value: magnet_EQ_1_with_resistance_M34
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_35:
+    type: parametrized component
+    nodes: ['37', '38', '0', '0']
+    value: magnet_EQ_1_with_resistance_M35
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_36:
+    type: parametrized component
+    nodes: ['38', '39', '0', '0']
+    value: magnet_EQ_1_with_resistance_M36
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_37:
+    type: parametrized component
+    nodes: ['39', '40', '0', '0']
+    value: magnet_EQ_1_with_resistance_M37
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_38:
+    type: parametrized component
+    nodes: ['40', '41', '0', '0']
+    value: magnet_EQ_1_with_resistance_M38
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_39:
+    type: parametrized component
+    nodes: ['41', '42', '0', '0']
+    value: magnet_EQ_1_with_resistance_M39
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_40:
+    type: parametrized component
+    nodes: ['42', '43', '0', '0']
+    value: magnet_EQ_1_with_resistance_M40
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_41:
+    type: parametrized component
+    nodes: ['43', '44', '0', '0']
+    value: magnet_EQ_1_with_resistance_M41
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_42:
+    type: parametrized component
+    nodes: ['44', '45', '0', '0']
+    value: magnet_EQ_1_with_resistance_M42
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_43:
+    type: parametrized component
+    nodes: ['45', '46', '0', '0']
+    value: magnet_EQ_1_with_resistance_M43
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_44:
+    type: parametrized component
+    nodes: ['46', '47', '0', '0']
+    value: magnet_EQ_1_with_resistance_M44
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_45:
+    type: parametrized component
+    nodes: ['47', '48', '0', '0']
+    value: magnet_EQ_1_with_resistance_M45
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_46:
+    type: parametrized component
+    nodes: ['48', '49', '0', '0']
+    value: magnet_EQ_1_with_resistance_M46
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_47:
+    type: parametrized component
+    nodes: ['49', '50', '0', '0']
+    value: magnet_EQ_1_with_resistance_M47
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_48:
+    type: parametrized component
+    nodes: ['50', '51', '0', '0']
+    value: magnet_EQ_1_with_resistance_M48
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_49:
+    type: parametrized component
+    nodes: ['51', '52', '0', '0']
+    value: magnet_EQ_1_with_resistance_M49
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_50:
+    type: parametrized component
+    nodes: ['52', '53', '0', '0']
+    value: magnet_EQ_1_with_resistance_M50
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_51:
+    type: parametrized component
+    nodes: ['53', '54', '0', '0']
+    value: magnet_EQ_1_with_resistance_M51
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_52:
+    type: parametrized component
+    nodes: ['54', '55', '0', '0']
+    value: magnet_EQ_1_with_resistance_M52
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_53:
+    type: parametrized component
+    nodes: ['55', '56', '0', '0']
+    value: magnet_EQ_1_with_resistance_M53
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_54:
+    type: parametrized component
+    nodes: ['56', '57', '0', '0']
+    value: magnet_EQ_1_with_resistance_M54
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_55:
+    type: parametrized component
+    nodes: ['57', '58', '0', '0']
+    value: magnet_EQ_1_with_resistance_M55
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_56:
+    type: parametrized component
+    nodes: ['58', '59', '0', '0']
+    value: magnet_EQ_1_with_resistance_M56
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_57:
+    type: parametrized component
+    nodes: ['59', '60', '0', '0']
+    value: magnet_EQ_1_with_resistance_M57
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_58:
+    type: parametrized component
+    nodes: ['60', '61', '0', '0']
+    value: magnet_EQ_1_with_resistance_M58
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_59:
+    type: parametrized component
+    nodes: ['61', '62', '0', '0']
+    value: magnet_EQ_1_with_resistance_M59
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_60:
+    type: parametrized component
+    nodes: ['62', '63', '0', '0']
+    value: magnet_EQ_1_with_resistance_M60
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_61:
+    type: parametrized component
+    nodes: ['63', '64', '0', '0']
+    value: magnet_EQ_1_with_resistance_M61
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_62:
+    type: parametrized component
+    nodes: ['64', '65', '0', '0']
+    value: magnet_EQ_1_with_resistance_M62
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_63:
+    type: parametrized component
+    nodes: ['65', '66', '0', '0']
+    value: magnet_EQ_1_with_resistance_M63
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_64:
+    type: parametrized component
+    nodes: ['66', '67', '0', '0']
+    value: magnet_EQ_1_with_resistance_M64
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_65:
+    type: parametrized component
+    nodes: ['67', '68', '0', '0']
+    value: magnet_EQ_1_with_resistance_M65
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_66:
+    type: parametrized component
+    nodes: ['68', '69', '0', '0']
+    value: magnet_EQ_1_with_resistance_M66
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_67:
+    type: parametrized component
+    nodes: ['69', '70', '0', '0']
+    value: magnet_EQ_1_with_resistance_M67
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_68:
+    type: parametrized component
+    nodes: ['70', '71', '0', '0']
+    value: magnet_EQ_1_with_resistance_M68
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_69:
+    type: parametrized component
+    nodes: ['71', '72', '0', '0']
+    value: magnet_EQ_1_with_resistance_M69
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_70:
+    type: parametrized component
+    nodes: ['72', '73', '0', '0']
+    value: magnet_EQ_1_with_resistance_M70
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_71:
+    type: parametrized component
+    nodes: ['73', '74', '0', '0']
+    value: magnet_EQ_1_with_resistance_M71
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_72:
+    type: parametrized component
+    nodes: ['74', '75', '0', '0']
+    value: magnet_EQ_1_with_resistance_M72
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_73:
+    type: parametrized component
+    nodes: ['75', '76', '0', '0']
+    value: magnet_EQ_1_with_resistance_M73
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_74:
+    type: parametrized component
+    nodes: ['76', '77', '0', '0']
+    value: magnet_EQ_1_with_resistance_M74
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_75:
+    type: parametrized component
+    nodes: ['77', '78', '0', '0']
+    value: magnet_EQ_1_with_resistance_M75
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_76:
+    type: parametrized component
+    nodes: ['78', '79', '0', '0']
+    value: magnet_EQ_1_with_resistance_M76
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_77:
+    type: parametrized component
+    nodes: ['79', '80', '0', '0']
+    value: magnet_EQ_1_with_resistance_M77
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  L_Busbar_2:
+    type: standard component
+    nodes: [ '80', 0A ]
+    value: L_Busbar/2
+Options:
+  options_simulation:
+    all options: default
+  options_autoconverge:
+    all options: default
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '1000.0'
+    min_time_step: '0.1'
+    time_schedule:
+      '0.0': '0.5'
+      '757.0': '0.0001'
+      '759.0': '0.5'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

@@ -1,0 +1,20 @@
+-- iron file for the MQX quadrupole magnet/Bernhard Auchmann, 25.08.2000
+-- added 1 mm to lsy3_45 variable in MQXA_2D_Iron_Variables_modified.mod so that the iron yoke does not touch the conductor - E. Ravaioli - TE-MPE - 2019/11/11
+
+-- referring to: 
+-- yoke			INSQ-M1_cross_section|A, KLHCIQ70M01-04-006
+-- collar		KLHCIQ70M01-001
+
+
+HyperMesh;
+
+include(MQXA_2D_Iron_Variables_modified.mod)
+
+-- choose the modules you want to include
+-- by commenting include commands out with '#'
+
+include(MQXA_2D_Iron_Yoke.mod)
+
+include(MQXA_2D_Iron_Collar.mod)
+
+

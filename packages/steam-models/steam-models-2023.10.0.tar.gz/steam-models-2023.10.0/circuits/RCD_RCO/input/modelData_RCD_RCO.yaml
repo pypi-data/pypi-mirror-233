@@ -1,0 +1,3638 @@
+GeneralParameters:
+  circuit_name: RCD_RCO
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\diodes\Items\600A_Diodes.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\energy_extraction\Items\600A_EE.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files: 
+  - C:\gitlab\steam-pspice-library\Stimuli\I_PC_RCDO.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\diodes\Items\600A_Diodes.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\energy_extraction\Items\600A_EE.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+GlobalParameters:
+  global_parameters:
+    '#Magnets_RCD': '77'
+    L_magnet_RCD: '0.000402597'
+    C_ground_magnet_RCD: '1.02E-09'
+    R_parallel_RCD: '1.00E+09'
+    R_Warm_RCD: '0.0064286'
+    R_crowbar_RCD: '5.00E-02'
+    t_PC_RCD: '1.00E-01'
+    R_EE_RCD: '7.00E-01'
+    t_EE_RCD: '0.12'
+    Opening_Time_RCD: '1.00E-04'
+    Delay_Branch1_RCD: '0'
+    Delay_Branch2_RCD: '0'
+    Delay_Branch3_RCD: '0'
+    C_snubber_RCD: '8.00E-04'
+    R_snubber_RCD: '1.00E+00'
+    R_Branch_RCD: '4.40E-04'
+    L_Branch_RCD: '1.00E-06'
+    le_Busbar_RCD: '0'
+    L_Busbar_m_RCD: '8.00E-07'
+    L_Busbar_RCD: '0.00E+00'
+    '#Magnets_RCO': '77'
+    L_magnet_RCO: '0.000402597'
+    C_ground_magnet_RCO: '1.29E-08'
+    R_parallel_RCO: '1.00E+09'
+    R_Warm_RCO: '0.026286'
+    R_crowbar_RCO: '8.00E-02'
+    t_PC_RCO: '1.00E-01'
+    le_Busbar_RCO: '0'
+    L_Busbar_m_RCO: '8.00E-07'
+    L_Busbar_RCO: '0.00E+00'
+    M_RCD_RCO: '1e-10'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  I_PC_RCD:
+    type: stimulus-controlled component
+    nodes: [0A, '1']
+    value: I_FPA_560
+    parameters: null
+  x_Crowbar_RCD:
+    type: parametrized component
+    nodes: [0A, '1']
+    value: Crowbar_600A
+    parameters:
+      R_crowbar: R_crowbar_RCD
+      t_PC: t_PC_RCD
+  R_WARM_1_RCD:
+    type: standard component
+    nodes: ['1', '2']
+    value: R_warm_RCD/2
+    parameters: null
+  L_Busbar_RCD:
+    type: standard component
+    nodes: ['2', '3']
+    value: L_Busbar_RCD
+    parameters: null
+  L_RCD_mag_1:
+    type: standard component
+    nodes: ['3', '4']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_1:
+    type: standard component
+    nodes: ['3', '4']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_1:
+    type: standard component
+    nodes: ['3', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_1:
+    type: standard component
+    nodes: ['4', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_2:
+    type: standard component
+    nodes: ['4', '5']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_2:
+    type: standard component
+    nodes: ['4', '5']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_2:
+    type: standard component
+    nodes: ['4', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_2:
+    type: standard component
+    nodes: ['5', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_3:
+    type: standard component
+    nodes: ['5', '6']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_3:
+    type: standard component
+    nodes: ['5', '6']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_3:
+    type: standard component
+    nodes: ['5', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_3:
+    type: standard component
+    nodes: ['6', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_4:
+    type: standard component
+    nodes: ['6', '7']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_4:
+    type: standard component
+    nodes: ['6', '7']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_4:
+    type: standard component
+    nodes: ['6', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_4:
+    type: standard component
+    nodes: ['7', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_5:
+    type: standard component
+    nodes: ['7', '8']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_5:
+    type: standard component
+    nodes: ['7', '8']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_5:
+    type: standard component
+    nodes: ['7', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_5:
+    type: standard component
+    nodes: ['8', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_6:
+    type: standard component
+    nodes: ['8', '9']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_6:
+    type: standard component
+    nodes: ['8', '9']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_6:
+    type: standard component
+    nodes: ['8', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_6:
+    type: standard component
+    nodes: ['9', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_7:
+    type: standard component
+    nodes: ['9', '10']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_7:
+    type: standard component
+    nodes: ['9', '10']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_7:
+    type: standard component
+    nodes: ['9', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_7:
+    type: standard component
+    nodes: ['10', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_8:
+    type: standard component
+    nodes: ['10', '11']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_8:
+    type: standard component
+    nodes: ['10', '11']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_8:
+    type: standard component
+    nodes: ['10', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_8:
+    type: standard component
+    nodes: ['11', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_9:
+    type: standard component
+    nodes: ['11', '12']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_9:
+    type: standard component
+    nodes: ['11', '12']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_9:
+    type: standard component
+    nodes: ['11', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_9:
+    type: standard component
+    nodes: ['12', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_10:
+    type: standard component
+    nodes: ['12', '13']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_10:
+    type: standard component
+    nodes: ['12', '13']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_10:
+    type: standard component
+    nodes: ['12', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_10:
+    type: standard component
+    nodes: ['13', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_11:
+    type: standard component
+    nodes: ['13', '14']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_11:
+    type: standard component
+    nodes: ['13', '14']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_11:
+    type: standard component
+    nodes: ['13', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_11:
+    type: standard component
+    nodes: ['14', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_12:
+    type: standard component
+    nodes: ['14', '15']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_12:
+    type: standard component
+    nodes: ['14', '15']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_12:
+    type: standard component
+    nodes: ['14', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_12:
+    type: standard component
+    nodes: ['15', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_13:
+    type: standard component
+    nodes: ['15', '16']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_13:
+    type: standard component
+    nodes: ['15', '16']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_13:
+    type: standard component
+    nodes: ['15', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_13:
+    type: standard component
+    nodes: ['16', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_14:
+    type: standard component
+    nodes: ['16', '17']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_14:
+    type: standard component
+    nodes: ['16', '17']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_14:
+    type: standard component
+    nodes: ['16', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_14:
+    type: standard component
+    nodes: ['17', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_15:
+    type: standard component
+    nodes: ['17', '18']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_15:
+    type: standard component
+    nodes: ['17', '18']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_15:
+    type: standard component
+    nodes: ['17', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_15:
+    type: standard component
+    nodes: ['18', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_16:
+    type: standard component
+    nodes: ['18', '19']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_16:
+    type: standard component
+    nodes: ['18', '19']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_16:
+    type: standard component
+    nodes: ['18', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_16:
+    type: standard component
+    nodes: ['19', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_17:
+    type: standard component
+    nodes: ['19', '20']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_17:
+    type: standard component
+    nodes: ['19', '20']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_17:
+    type: standard component
+    nodes: ['19', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_17:
+    type: standard component
+    nodes: ['20', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_18:
+    type: standard component
+    nodes: ['20', '21']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_18:
+    type: standard component
+    nodes: ['20', '21']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_18:
+    type: standard component
+    nodes: ['20', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_18:
+    type: standard component
+    nodes: ['21', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_19:
+    type: standard component
+    nodes: ['21', '22']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_19:
+    type: standard component
+    nodes: ['21', '22']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_19:
+    type: standard component
+    nodes: ['21', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_19:
+    type: standard component
+    nodes: ['22', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_20:
+    type: standard component
+    nodes: ['22', '23']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_20:
+    type: standard component
+    nodes: ['22', '23']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_20:
+    type: standard component
+    nodes: ['22', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_20:
+    type: standard component
+    nodes: ['23', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_21:
+    type: standard component
+    nodes: ['23', '24']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_21:
+    type: standard component
+    nodes: ['23', '24']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_21:
+    type: standard component
+    nodes: ['23', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_21:
+    type: standard component
+    nodes: ['24', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_22:
+    type: standard component
+    nodes: ['24', '25']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_22:
+    type: standard component
+    nodes: ['24', '25']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_22:
+    type: standard component
+    nodes: ['24', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_22:
+    type: standard component
+    nodes: ['25', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_23:
+    type: standard component
+    nodes: ['25', '26']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_23:
+    type: standard component
+    nodes: ['25', '26']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_23:
+    type: standard component
+    nodes: ['25', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_23:
+    type: standard component
+    nodes: ['26', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_24:
+    type: standard component
+    nodes: ['26', '27']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_24:
+    type: standard component
+    nodes: ['26', '27']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_24:
+    type: standard component
+    nodes: ['26', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_24:
+    type: standard component
+    nodes: ['27', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_25:
+    type: standard component
+    nodes: ['27', '28']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_25:
+    type: standard component
+    nodes: ['27', '28']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_25:
+    type: standard component
+    nodes: ['27', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_25:
+    type: standard component
+    nodes: ['28', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_26:
+    type: standard component
+    nodes: ['28', '29']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_26:
+    type: standard component
+    nodes: ['28', '29']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_26:
+    type: standard component
+    nodes: ['28', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_26:
+    type: standard component
+    nodes: ['29', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_27:
+    type: standard component
+    nodes: ['29', '30']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_27:
+    type: standard component
+    nodes: ['29', '30']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_27:
+    type: standard component
+    nodes: ['29', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_27:
+    type: standard component
+    nodes: ['30', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_28:
+    type: standard component
+    nodes: ['30', '31']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_28:
+    type: standard component
+    nodes: ['30', '31']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_28:
+    type: standard component
+    nodes: ['30', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_28:
+    type: standard component
+    nodes: ['31', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_29:
+    type: standard component
+    nodes: ['31', '32']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_29:
+    type: standard component
+    nodes: ['31', '32']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_29:
+    type: standard component
+    nodes: ['31', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_29:
+    type: standard component
+    nodes: ['32', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_30:
+    type: standard component
+    nodes: ['32', '33']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_30:
+    type: standard component
+    nodes: ['32', '33']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_30:
+    type: standard component
+    nodes: ['32', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_30:
+    type: standard component
+    nodes: ['33', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_31:
+    type: standard component
+    nodes: ['33', '34']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_31:
+    type: standard component
+    nodes: ['33', '34']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_31:
+    type: standard component
+    nodes: ['33', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_31:
+    type: standard component
+    nodes: ['34', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_32:
+    type: standard component
+    nodes: ['34', '35']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_32:
+    type: standard component
+    nodes: ['34', '35']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_32:
+    type: standard component
+    nodes: ['34', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_32:
+    type: standard component
+    nodes: ['35', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_33:
+    type: standard component
+    nodes: ['35', '36']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_33:
+    type: standard component
+    nodes: ['35', '36']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_33:
+    type: standard component
+    nodes: ['35', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_33:
+    type: standard component
+    nodes: ['36', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_34:
+    type: standard component
+    nodes: ['36', '37']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_34:
+    type: standard component
+    nodes: ['36', '37']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_34:
+    type: standard component
+    nodes: ['36', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_34:
+    type: standard component
+    nodes: ['37', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_35:
+    type: standard component
+    nodes: ['37', '38']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_35:
+    type: standard component
+    nodes: ['37', '38']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_35:
+    type: standard component
+    nodes: ['37', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_35:
+    type: standard component
+    nodes: ['38', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_36:
+    type: standard component
+    nodes: ['38', '39']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_36:
+    type: standard component
+    nodes: ['38', '39']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_36:
+    type: standard component
+    nodes: ['38', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_36:
+    type: standard component
+    nodes: ['39', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_37:
+    type: standard component
+    nodes: ['39', '40']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_37:
+    type: standard component
+    nodes: ['39', '40']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_37:
+    type: standard component
+    nodes: ['39', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_37:
+    type: standard component
+    nodes: ['40', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_38:
+    type: standard component
+    nodes: ['40', '41']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_38:
+    type: standard component
+    nodes: ['40', '41']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_38:
+    type: standard component
+    nodes: ['40', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_38:
+    type: standard component
+    nodes: ['41', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_39:
+    type: standard component
+    nodes: ['41', '42']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_39:
+    type: standard component
+    nodes: ['41', '42']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_39:
+    type: standard component
+    nodes: ['41', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_39:
+    type: standard component
+    nodes: ['42', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_40:
+    type: standard component
+    nodes: ['42', '43']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_40:
+    type: standard component
+    nodes: ['42', '43']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_40:
+    type: standard component
+    nodes: ['42', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_40:
+    type: standard component
+    nodes: ['43', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_41:
+    type: standard component
+    nodes: ['43', '44']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_41:
+    type: standard component
+    nodes: ['43', '44']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_41:
+    type: standard component
+    nodes: ['43', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_41:
+    type: standard component
+    nodes: ['44', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_42:
+    type: standard component
+    nodes: ['44', '45']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_42:
+    type: standard component
+    nodes: ['44', '45']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_42:
+    type: standard component
+    nodes: ['44', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_42:
+    type: standard component
+    nodes: ['45', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_43:
+    type: standard component
+    nodes: ['45', '46']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_43:
+    type: standard component
+    nodes: ['45', '46']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_43:
+    type: standard component
+    nodes: ['45', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_43:
+    type: standard component
+    nodes: ['46', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_44:
+    type: standard component
+    nodes: ['46', '47']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_44:
+    type: standard component
+    nodes: ['46', '47']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_44:
+    type: standard component
+    nodes: ['46', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_44:
+    type: standard component
+    nodes: ['47', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_45:
+    type: standard component
+    nodes: ['47', '48']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_45:
+    type: standard component
+    nodes: ['47', '48']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_45:
+    type: standard component
+    nodes: ['47', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_45:
+    type: standard component
+    nodes: ['48', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_46:
+    type: standard component
+    nodes: ['48', '49']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_46:
+    type: standard component
+    nodes: ['48', '49']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_46:
+    type: standard component
+    nodes: ['48', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_46:
+    type: standard component
+    nodes: ['49', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_47:
+    type: standard component
+    nodes: ['49', '50']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_47:
+    type: standard component
+    nodes: ['49', '50']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_47:
+    type: standard component
+    nodes: ['49', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_47:
+    type: standard component
+    nodes: ['50', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_48:
+    type: standard component
+    nodes: ['50', '51']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_48:
+    type: standard component
+    nodes: ['50', '51']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_48:
+    type: standard component
+    nodes: ['50', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_48:
+    type: standard component
+    nodes: ['51', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_49:
+    type: standard component
+    nodes: ['51', '52']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_49:
+    type: standard component
+    nodes: ['51', '52']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_49:
+    type: standard component
+    nodes: ['51', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_49:
+    type: standard component
+    nodes: ['52', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_50:
+    type: standard component
+    nodes: ['52', '53']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_50:
+    type: standard component
+    nodes: ['52', '53']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_50:
+    type: standard component
+    nodes: ['52', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_50:
+    type: standard component
+    nodes: ['53', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_51:
+    type: standard component
+    nodes: ['53', '54']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_51:
+    type: standard component
+    nodes: ['53', '54']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_51:
+    type: standard component
+    nodes: ['53', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_51:
+    type: standard component
+    nodes: ['54', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_52:
+    type: standard component
+    nodes: ['54', '55']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_52:
+    type: standard component
+    nodes: ['54', '55']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_52:
+    type: standard component
+    nodes: ['54', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_52:
+    type: standard component
+    nodes: ['55', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_53:
+    type: standard component
+    nodes: ['55', '56']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_53:
+    type: standard component
+    nodes: ['55', '56']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_53:
+    type: standard component
+    nodes: ['55', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_53:
+    type: standard component
+    nodes: ['56', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_54:
+    type: standard component
+    nodes: ['56', '57']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_54:
+    type: standard component
+    nodes: ['56', '57']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_54:
+    type: standard component
+    nodes: ['56', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_54:
+    type: standard component
+    nodes: ['57', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_55:
+    type: standard component
+    nodes: ['57', '58']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_55:
+    type: standard component
+    nodes: ['57', '58']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_55:
+    type: standard component
+    nodes: ['57', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_55:
+    type: standard component
+    nodes: ['58', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_56:
+    type: standard component
+    nodes: ['58', '59']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_56:
+    type: standard component
+    nodes: ['58', '59']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_56:
+    type: standard component
+    nodes: ['58', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_56:
+    type: standard component
+    nodes: ['59', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_57:
+    type: standard component
+    nodes: ['59', '60']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_57:
+    type: standard component
+    nodes: ['59', '60']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_57:
+    type: standard component
+    nodes: ['59', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_57:
+    type: standard component
+    nodes: ['60', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_58:
+    type: standard component
+    nodes: ['60', '61']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_58:
+    type: standard component
+    nodes: ['60', '61']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_58:
+    type: standard component
+    nodes: ['60', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_58:
+    type: standard component
+    nodes: ['61', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_59:
+    type: standard component
+    nodes: ['61', '62']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_59:
+    type: standard component
+    nodes: ['61', '62']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_59:
+    type: standard component
+    nodes: ['61', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_59:
+    type: standard component
+    nodes: ['62', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_60:
+    type: standard component
+    nodes: ['62', '63']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_60:
+    type: standard component
+    nodes: ['62', '63']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_60:
+    type: standard component
+    nodes: ['62', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_60:
+    type: standard component
+    nodes: ['63', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_61:
+    type: standard component
+    nodes: ['63', '64']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_61:
+    type: standard component
+    nodes: ['63', '64']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_61:
+    type: standard component
+    nodes: ['63', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_61:
+    type: standard component
+    nodes: ['64', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_62:
+    type: standard component
+    nodes: ['64', '65']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_62:
+    type: standard component
+    nodes: ['64', '65']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_62:
+    type: standard component
+    nodes: ['64', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_62:
+    type: standard component
+    nodes: ['65', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_63:
+    type: standard component
+    nodes: ['65', '66']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_63:
+    type: standard component
+    nodes: ['65', '66']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_63:
+    type: standard component
+    nodes: ['65', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_63:
+    type: standard component
+    nodes: ['66', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_64:
+    type: standard component
+    nodes: ['66', '67']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_64:
+    type: standard component
+    nodes: ['66', '67']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_64:
+    type: standard component
+    nodes: ['66', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_64:
+    type: standard component
+    nodes: ['67', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_65:
+    type: standard component
+    nodes: ['67', '68']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_65:
+    type: standard component
+    nodes: ['67', '68']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_65:
+    type: standard component
+    nodes: ['67', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_65:
+    type: standard component
+    nodes: ['68', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_66:
+    type: standard component
+    nodes: ['68', '69']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_66:
+    type: standard component
+    nodes: ['68', '69']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_66:
+    type: standard component
+    nodes: ['68', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_66:
+    type: standard component
+    nodes: ['69', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_67:
+    type: standard component
+    nodes: ['69', '70']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_67:
+    type: standard component
+    nodes: ['69', '70']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_67:
+    type: standard component
+    nodes: ['69', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_67:
+    type: standard component
+    nodes: ['70', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_68:
+    type: standard component
+    nodes: ['70', '71']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_68:
+    type: standard component
+    nodes: ['70', '71']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_68:
+    type: standard component
+    nodes: ['70', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_68:
+    type: standard component
+    nodes: ['71', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_69:
+    type: standard component
+    nodes: ['71', '72']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_69:
+    type: standard component
+    nodes: ['71', '72']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_69:
+    type: standard component
+    nodes: ['71', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_69:
+    type: standard component
+    nodes: ['72', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_70:
+    type: standard component
+    nodes: ['72', '73']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_70:
+    type: standard component
+    nodes: ['72', '73']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_70:
+    type: standard component
+    nodes: ['72', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_70:
+    type: standard component
+    nodes: ['73', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_71:
+    type: standard component
+    nodes: ['73', '74']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_71:
+    type: standard component
+    nodes: ['73', '74']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_71:
+    type: standard component
+    nodes: ['73', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_71:
+    type: standard component
+    nodes: ['74', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_72:
+    type: standard component
+    nodes: ['74', '75']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_72:
+    type: standard component
+    nodes: ['74', '75']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_72:
+    type: standard component
+    nodes: ['74', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_72:
+    type: standard component
+    nodes: ['75', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_73:
+    type: standard component
+    nodes: ['75', '76']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_73:
+    type: standard component
+    nodes: ['75', '76']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_73:
+    type: standard component
+    nodes: ['75', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_73:
+    type: standard component
+    nodes: ['76', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_74:
+    type: standard component
+    nodes: ['76', '77']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_74:
+    type: standard component
+    nodes: ['76', '77']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_74:
+    type: standard component
+    nodes: ['76', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_74:
+    type: standard component
+    nodes: ['77', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_75:
+    type: standard component
+    nodes: ['77', '78']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_75:
+    type: standard component
+    nodes: ['77', '78']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_75:
+    type: standard component
+    nodes: ['77', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_75:
+    type: standard component
+    nodes: ['78', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_76:
+    type: standard component
+    nodes: ['78', '79']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_76:
+    type: standard component
+    nodes: ['78', '79']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_76:
+    type: standard component
+    nodes: ['78', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_76:
+    type: standard component
+    nodes: ['79', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  L_RCD_mag_77:
+    type: standard component
+    nodes: ['79', '80']
+    value: L_magnet_RCD
+    parameters: null
+  R_RCD_par_mag_77:
+    type: standard component
+    nodes: ['79', '80']
+    value: R_parallel_RCD
+    parameters: null
+  C_RCD_groundA1_mag_77:
+    type: standard component
+    nodes: ['79', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  C_RCD_groundB1_mag_77:
+    type: standard component
+    nodes: ['80', '0']
+    value: C_ground_magnet_RCD
+    parameters: null
+  x_R_EE_RCD:
+    type: parametrized component
+    nodes: ['80', '81', 81_mid]
+    value: EE_600A
+    parameters:
+      R_EE: R_EE_RCD
+      t_EE: t_EE_RCD
+      Opening_Time: Opening_Time_RCD
+      Delay_Branch1: Delay_Branch1_RCD
+      Delay_Branch2: Delay_Branch2_RCD
+      Delay_Branch3: Delay_Branch3_RCD
+      C_snubber: C_snubber_RCD
+      R_snubber: R_snubber_RCD
+      R_Branch: R_Branch_RCD
+      L_Branch: L_Branch_RCD
+  R_WARM_2_RCD:
+    type: standard component
+    nodes: ['81', 0A]
+    value: R_warm_RCD/2
+    parameters: null
+  I_PC_RCO:
+    type: stimulus-controlled component
+    nodes: [0B, '82']
+    value: I_FPA_105
+    parameters: null
+  x_Crowbar_RCO:
+    type: parametrized component
+    nodes: [0B, '82']
+    value: Crowbar_600A
+    parameters:
+      R_crowbar: R_crowbar_RCO
+      t_PC: t_PC_RCO
+  R_WARM_1_RCO:
+    type: standard component
+    nodes: ['82', '83']
+    value: R_warm_RCO/2
+    parameters: null
+  L_Busbar_RCO:
+    type: standard component
+    nodes: ['83', '84']
+    value: L_Busbar_RCO
+    parameters: null
+  L_RCO_mag_1:
+    type: standard component
+    nodes: ['84', '85']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_1:
+    type: standard component
+    nodes: ['84', '85']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_1:
+    type: standard component
+    nodes: ['84', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_1:
+    type: standard component
+    nodes: ['85', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_1:
+    type: standard component
+    nodes: [L_RCO_mag_1, L_RCD_mag_1]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_2:
+    type: standard component
+    nodes: ['85', '86']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_2:
+    type: standard component
+    nodes: ['85', '86']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_2:
+    type: standard component
+    nodes: ['85', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_2:
+    type: standard component
+    nodes: ['86', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_2:
+    type: standard component
+    nodes: [L_RCO_mag_2, L_RCD_mag_2]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_3:
+    type: standard component
+    nodes: ['86', '87']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_3:
+    type: standard component
+    nodes: ['86', '87']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_3:
+    type: standard component
+    nodes: ['86', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_3:
+    type: standard component
+    nodes: ['87', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_3:
+    type: standard component
+    nodes: [L_RCO_mag_3, L_RCD_mag_3]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_4:
+    type: standard component
+    nodes: ['87', '88']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_4:
+    type: standard component
+    nodes: ['87', '88']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_4:
+    type: standard component
+    nodes: ['87', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_4:
+    type: standard component
+    nodes: ['88', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_4:
+    type: standard component
+    nodes: [L_RCO_mag_4, L_RCD_mag_4]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_5:
+    type: standard component
+    nodes: ['88', '89']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_5:
+    type: standard component
+    nodes: ['88', '89']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_5:
+    type: standard component
+    nodes: ['88', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_5:
+    type: standard component
+    nodes: ['89', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_5:
+    type: standard component
+    nodes: [L_RCO_mag_5, L_RCD_mag_5]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_6:
+    type: standard component
+    nodes: ['89', '90']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_6:
+    type: standard component
+    nodes: ['89', '90']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_6:
+    type: standard component
+    nodes: ['89', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_6:
+    type: standard component
+    nodes: ['90', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_6:
+    type: standard component
+    nodes: [L_RCO_mag_6, L_RCD_mag_6]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_7:
+    type: standard component
+    nodes: ['90', '91']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_7:
+    type: standard component
+    nodes: ['90', '91']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_7:
+    type: standard component
+    nodes: ['90', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_7:
+    type: standard component
+    nodes: ['91', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_7:
+    type: standard component
+    nodes: [L_RCO_mag_7, L_RCD_mag_7]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_8:
+    type: standard component
+    nodes: ['91', '92']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_8:
+    type: standard component
+    nodes: ['91', '92']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_8:
+    type: standard component
+    nodes: ['91', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_8:
+    type: standard component
+    nodes: ['92', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_8:
+    type: standard component
+    nodes: [L_RCO_mag_8, L_RCD_mag_8]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_9:
+    type: standard component
+    nodes: ['92', '93']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_9:
+    type: standard component
+    nodes: ['92', '93']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_9:
+    type: standard component
+    nodes: ['92', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_9:
+    type: standard component
+    nodes: ['93', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_9:
+    type: standard component
+    nodes: [L_RCO_mag_9, L_RCD_mag_9]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_10:
+    type: standard component
+    nodes: ['93', '94']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_10:
+    type: standard component
+    nodes: ['93', '94']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_10:
+    type: standard component
+    nodes: ['93', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_10:
+    type: standard component
+    nodes: ['94', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_10:
+    type: standard component
+    nodes: [L_RCO_mag_10, L_RCD_mag_10]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_11:
+    type: standard component
+    nodes: ['94', '95']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_11:
+    type: standard component
+    nodes: ['94', '95']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_11:
+    type: standard component
+    nodes: ['94', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_11:
+    type: standard component
+    nodes: ['95', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_11:
+    type: standard component
+    nodes: [L_RCO_mag_11, L_RCD_mag_11]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_12:
+    type: standard component
+    nodes: ['95', '96']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_12:
+    type: standard component
+    nodes: ['95', '96']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_12:
+    type: standard component
+    nodes: ['95', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_12:
+    type: standard component
+    nodes: ['96', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_12:
+    type: standard component
+    nodes: [L_RCO_mag_12, L_RCD_mag_12]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_13:
+    type: standard component
+    nodes: ['96', '97']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_13:
+    type: standard component
+    nodes: ['96', '97']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_13:
+    type: standard component
+    nodes: ['96', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_13:
+    type: standard component
+    nodes: ['97', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_13:
+    type: standard component
+    nodes: [L_RCO_mag_13, L_RCD_mag_13]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_14:
+    type: standard component
+    nodes: ['97', '98']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_14:
+    type: standard component
+    nodes: ['97', '98']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_14:
+    type: standard component
+    nodes: ['97', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_14:
+    type: standard component
+    nodes: ['98', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_14:
+    type: standard component
+    nodes: [L_RCO_mag_14, L_RCD_mag_14]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_15:
+    type: standard component
+    nodes: ['98', '99']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_15:
+    type: standard component
+    nodes: ['98', '99']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_15:
+    type: standard component
+    nodes: ['98', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_15:
+    type: standard component
+    nodes: ['99', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_15:
+    type: standard component
+    nodes: [L_RCO_mag_15, L_RCD_mag_15]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_16:
+    type: standard component
+    nodes: ['99', '100']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_16:
+    type: standard component
+    nodes: ['99', '100']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_16:
+    type: standard component
+    nodes: ['99', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_16:
+    type: standard component
+    nodes: ['100', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_16:
+    type: standard component
+    nodes: [L_RCO_mag_16, L_RCD_mag_16]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_17:
+    type: standard component
+    nodes: ['100', '101']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_17:
+    type: standard component
+    nodes: ['100', '101']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_17:
+    type: standard component
+    nodes: ['100', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_17:
+    type: standard component
+    nodes: ['101', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_17:
+    type: standard component
+    nodes: [L_RCO_mag_17, L_RCD_mag_17]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_18:
+    type: standard component
+    nodes: ['101', '102']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_18:
+    type: standard component
+    nodes: ['101', '102']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_18:
+    type: standard component
+    nodes: ['101', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_18:
+    type: standard component
+    nodes: ['102', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_18:
+    type: standard component
+    nodes: [L_RCO_mag_18, L_RCD_mag_18]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_19:
+    type: standard component
+    nodes: ['102', '103']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_19:
+    type: standard component
+    nodes: ['102', '103']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_19:
+    type: standard component
+    nodes: ['102', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_19:
+    type: standard component
+    nodes: ['103', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_19:
+    type: standard component
+    nodes: [L_RCO_mag_19, L_RCD_mag_19]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_20:
+    type: standard component
+    nodes: ['103', '104']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_20:
+    type: standard component
+    nodes: ['103', '104']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_20:
+    type: standard component
+    nodes: ['103', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_20:
+    type: standard component
+    nodes: ['104', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_20:
+    type: standard component
+    nodes: [L_RCO_mag_20, L_RCD_mag_20]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_21:
+    type: standard component
+    nodes: ['104', '105']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_21:
+    type: standard component
+    nodes: ['104', '105']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_21:
+    type: standard component
+    nodes: ['104', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_21:
+    type: standard component
+    nodes: ['105', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_21:
+    type: standard component
+    nodes: [L_RCO_mag_21, L_RCD_mag_21]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_22:
+    type: standard component
+    nodes: ['105', '106']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_22:
+    type: standard component
+    nodes: ['105', '106']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_22:
+    type: standard component
+    nodes: ['105', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_22:
+    type: standard component
+    nodes: ['106', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_22:
+    type: standard component
+    nodes: [L_RCO_mag_22, L_RCD_mag_22]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_23:
+    type: standard component
+    nodes: ['106', '107']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_23:
+    type: standard component
+    nodes: ['106', '107']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_23:
+    type: standard component
+    nodes: ['106', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_23:
+    type: standard component
+    nodes: ['107', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_23:
+    type: standard component
+    nodes: [L_RCO_mag_23, L_RCD_mag_23]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_24:
+    type: standard component
+    nodes: ['107', '108']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_24:
+    type: standard component
+    nodes: ['107', '108']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_24:
+    type: standard component
+    nodes: ['107', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_24:
+    type: standard component
+    nodes: ['108', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_24:
+    type: standard component
+    nodes: [L_RCO_mag_24, L_RCD_mag_24]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_25:
+    type: standard component
+    nodes: ['108', '109']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_25:
+    type: standard component
+    nodes: ['108', '109']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_25:
+    type: standard component
+    nodes: ['108', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_25:
+    type: standard component
+    nodes: ['109', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_25:
+    type: standard component
+    nodes: [L_RCO_mag_25, L_RCD_mag_25]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_26:
+    type: standard component
+    nodes: ['109', '110']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_26:
+    type: standard component
+    nodes: ['109', '110']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_26:
+    type: standard component
+    nodes: ['109', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_26:
+    type: standard component
+    nodes: ['110', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_26:
+    type: standard component
+    nodes: [L_RCO_mag_26, L_RCD_mag_26]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_27:
+    type: standard component
+    nodes: ['110', '111']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_27:
+    type: standard component
+    nodes: ['110', '111']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_27:
+    type: standard component
+    nodes: ['110', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_27:
+    type: standard component
+    nodes: ['111', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_27:
+    type: standard component
+    nodes: [L_RCO_mag_27, L_RCD_mag_27]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_28:
+    type: standard component
+    nodes: ['111', '112']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_28:
+    type: standard component
+    nodes: ['111', '112']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_28:
+    type: standard component
+    nodes: ['111', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_28:
+    type: standard component
+    nodes: ['112', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_28:
+    type: standard component
+    nodes: [L_RCO_mag_28, L_RCD_mag_28]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_29:
+    type: standard component
+    nodes: ['112', '113']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_29:
+    type: standard component
+    nodes: ['112', '113']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_29:
+    type: standard component
+    nodes: ['112', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_29:
+    type: standard component
+    nodes: ['113', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_29:
+    type: standard component
+    nodes: [L_RCO_mag_29, L_RCD_mag_29]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_30:
+    type: standard component
+    nodes: ['113', '114']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_30:
+    type: standard component
+    nodes: ['113', '114']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_30:
+    type: standard component
+    nodes: ['113', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_30:
+    type: standard component
+    nodes: ['114', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_30:
+    type: standard component
+    nodes: [L_RCO_mag_30, L_RCD_mag_30]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_31:
+    type: standard component
+    nodes: ['114', '115']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_31:
+    type: standard component
+    nodes: ['114', '115']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_31:
+    type: standard component
+    nodes: ['114', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_31:
+    type: standard component
+    nodes: ['115', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_31:
+    type: standard component
+    nodes: [L_RCO_mag_31, L_RCD_mag_31]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_32:
+    type: standard component
+    nodes: ['115', '116']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_32:
+    type: standard component
+    nodes: ['115', '116']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_32:
+    type: standard component
+    nodes: ['115', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_32:
+    type: standard component
+    nodes: ['116', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_32:
+    type: standard component
+    nodes: [L_RCO_mag_32, L_RCD_mag_32]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_33:
+    type: standard component
+    nodes: ['116', '117']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_33:
+    type: standard component
+    nodes: ['116', '117']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_33:
+    type: standard component
+    nodes: ['116', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_33:
+    type: standard component
+    nodes: ['117', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_33:
+    type: standard component
+    nodes: [L_RCO_mag_33, L_RCD_mag_33]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_34:
+    type: standard component
+    nodes: ['117', '118']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_34:
+    type: standard component
+    nodes: ['117', '118']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_34:
+    type: standard component
+    nodes: ['117', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_34:
+    type: standard component
+    nodes: ['118', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_34:
+    type: standard component
+    nodes: [L_RCO_mag_34, L_RCD_mag_34]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_35:
+    type: standard component
+    nodes: ['118', '119']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_35:
+    type: standard component
+    nodes: ['118', '119']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_35:
+    type: standard component
+    nodes: ['118', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_35:
+    type: standard component
+    nodes: ['119', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_35:
+    type: standard component
+    nodes: [L_RCO_mag_35, L_RCD_mag_35]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_36:
+    type: standard component
+    nodes: ['119', '120']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_36:
+    type: standard component
+    nodes: ['119', '120']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_36:
+    type: standard component
+    nodes: ['119', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_36:
+    type: standard component
+    nodes: ['120', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_36:
+    type: standard component
+    nodes: [L_RCO_mag_36, L_RCD_mag_36]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_37:
+    type: standard component
+    nodes: ['120', '121']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_37:
+    type: standard component
+    nodes: ['120', '121']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_37:
+    type: standard component
+    nodes: ['120', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_37:
+    type: standard component
+    nodes: ['121', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_37:
+    type: standard component
+    nodes: [L_RCO_mag_37, L_RCD_mag_37]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_38:
+    type: standard component
+    nodes: ['121', '122']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_38:
+    type: standard component
+    nodes: ['121', '122']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_38:
+    type: standard component
+    nodes: ['121', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_38:
+    type: standard component
+    nodes: ['122', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_38:
+    type: standard component
+    nodes: [L_RCO_mag_38, L_RCD_mag_38]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_39:
+    type: standard component
+    nodes: ['122', '123']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_39:
+    type: standard component
+    nodes: ['122', '123']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_39:
+    type: standard component
+    nodes: ['122', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_39:
+    type: standard component
+    nodes: ['123', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_39:
+    type: standard component
+    nodes: [L_RCO_mag_39, L_RCD_mag_39]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_40:
+    type: standard component
+    nodes: ['123', '124']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_40:
+    type: standard component
+    nodes: ['123', '124']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_40:
+    type: standard component
+    nodes: ['123', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_40:
+    type: standard component
+    nodes: ['124', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_40:
+    type: standard component
+    nodes: [L_RCO_mag_40, L_RCD_mag_40]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_41:
+    type: standard component
+    nodes: ['124', '125']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_41:
+    type: standard component
+    nodes: ['124', '125']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_41:
+    type: standard component
+    nodes: ['124', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_41:
+    type: standard component
+    nodes: ['125', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_41:
+    type: standard component
+    nodes: [L_RCO_mag_41, L_RCD_mag_41]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_42:
+    type: standard component
+    nodes: ['125', '126']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_42:
+    type: standard component
+    nodes: ['125', '126']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_42:
+    type: standard component
+    nodes: ['125', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_42:
+    type: standard component
+    nodes: ['126', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_42:
+    type: standard component
+    nodes: [L_RCO_mag_42, L_RCD_mag_42]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_43:
+    type: standard component
+    nodes: ['126', '127']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_43:
+    type: standard component
+    nodes: ['126', '127']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_43:
+    type: standard component
+    nodes: ['126', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_43:
+    type: standard component
+    nodes: ['127', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_43:
+    type: standard component
+    nodes: [L_RCO_mag_43, L_RCD_mag_43]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_44:
+    type: standard component
+    nodes: ['127', '128']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_44:
+    type: standard component
+    nodes: ['127', '128']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_44:
+    type: standard component
+    nodes: ['127', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_44:
+    type: standard component
+    nodes: ['128', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_44:
+    type: standard component
+    nodes: [L_RCO_mag_44, L_RCD_mag_44]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_45:
+    type: standard component
+    nodes: ['128', '129']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_45:
+    type: standard component
+    nodes: ['128', '129']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_45:
+    type: standard component
+    nodes: ['128', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_45:
+    type: standard component
+    nodes: ['129', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_45:
+    type: standard component
+    nodes: [L_RCO_mag_45, L_RCD_mag_45]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_46:
+    type: standard component
+    nodes: ['129', '130']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_46:
+    type: standard component
+    nodes: ['129', '130']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_46:
+    type: standard component
+    nodes: ['129', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_46:
+    type: standard component
+    nodes: ['130', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_46:
+    type: standard component
+    nodes: [L_RCO_mag_46, L_RCD_mag_46]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_47:
+    type: standard component
+    nodes: ['130', '131']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_47:
+    type: standard component
+    nodes: ['130', '131']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_47:
+    type: standard component
+    nodes: ['130', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_47:
+    type: standard component
+    nodes: ['131', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_47:
+    type: standard component
+    nodes: [L_RCO_mag_47, L_RCD_mag_47]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_48:
+    type: standard component
+    nodes: ['131', '132']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_48:
+    type: standard component
+    nodes: ['131', '132']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_48:
+    type: standard component
+    nodes: ['131', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_48:
+    type: standard component
+    nodes: ['132', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_48:
+    type: standard component
+    nodes: [L_RCO_mag_48, L_RCD_mag_48]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_49:
+    type: standard component
+    nodes: ['132', '133']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_49:
+    type: standard component
+    nodes: ['132', '133']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_49:
+    type: standard component
+    nodes: ['132', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_49:
+    type: standard component
+    nodes: ['133', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_49:
+    type: standard component
+    nodes: [L_RCO_mag_49, L_RCD_mag_49]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_50:
+    type: standard component
+    nodes: ['133', '134']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_50:
+    type: standard component
+    nodes: ['133', '134']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_50:
+    type: standard component
+    nodes: ['133', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_50:
+    type: standard component
+    nodes: ['134', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_50:
+    type: standard component
+    nodes: [L_RCO_mag_50, L_RCD_mag_50]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_51:
+    type: standard component
+    nodes: ['134', '135']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_51:
+    type: standard component
+    nodes: ['134', '135']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_51:
+    type: standard component
+    nodes: ['134', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_51:
+    type: standard component
+    nodes: ['135', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_51:
+    type: standard component
+    nodes: [L_RCO_mag_51, L_RCD_mag_51]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_52:
+    type: standard component
+    nodes: ['135', '136']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_52:
+    type: standard component
+    nodes: ['135', '136']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_52:
+    type: standard component
+    nodes: ['135', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_52:
+    type: standard component
+    nodes: ['136', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_52:
+    type: standard component
+    nodes: [L_RCO_mag_52, L_RCD_mag_52]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_53:
+    type: standard component
+    nodes: ['136', '137']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_53:
+    type: standard component
+    nodes: ['136', '137']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_53:
+    type: standard component
+    nodes: ['136', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_53:
+    type: standard component
+    nodes: ['137', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_53:
+    type: standard component
+    nodes: [L_RCO_mag_53, L_RCD_mag_53]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_54:
+    type: standard component
+    nodes: ['137', '138']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_54:
+    type: standard component
+    nodes: ['137', '138']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_54:
+    type: standard component
+    nodes: ['137', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_54:
+    type: standard component
+    nodes: ['138', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_54:
+    type: standard component
+    nodes: [L_RCO_mag_54, L_RCD_mag_54]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_55:
+    type: standard component
+    nodes: ['138', '139']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_55:
+    type: standard component
+    nodes: ['138', '139']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_55:
+    type: standard component
+    nodes: ['138', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_55:
+    type: standard component
+    nodes: ['139', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_55:
+    type: standard component
+    nodes: [L_RCO_mag_55, L_RCD_mag_55]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_56:
+    type: standard component
+    nodes: ['139', '140']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_56:
+    type: standard component
+    nodes: ['139', '140']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_56:
+    type: standard component
+    nodes: ['139', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_56:
+    type: standard component
+    nodes: ['140', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_56:
+    type: standard component
+    nodes: [L_RCO_mag_56, L_RCD_mag_56]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_57:
+    type: standard component
+    nodes: ['140', '141']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_57:
+    type: standard component
+    nodes: ['140', '141']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_57:
+    type: standard component
+    nodes: ['140', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_57:
+    type: standard component
+    nodes: ['141', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_57:
+    type: standard component
+    nodes: [L_RCO_mag_57, L_RCD_mag_57]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_58:
+    type: standard component
+    nodes: ['141', '142']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_58:
+    type: standard component
+    nodes: ['141', '142']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_58:
+    type: standard component
+    nodes: ['141', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_58:
+    type: standard component
+    nodes: ['142', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_58:
+    type: standard component
+    nodes: [L_RCO_mag_58, L_RCD_mag_58]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_59:
+    type: standard component
+    nodes: ['142', '143']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_59:
+    type: standard component
+    nodes: ['142', '143']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_59:
+    type: standard component
+    nodes: ['142', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_59:
+    type: standard component
+    nodes: ['143', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_59:
+    type: standard component
+    nodes: [L_RCO_mag_59, L_RCD_mag_59]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_60:
+    type: standard component
+    nodes: ['143', '144']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_60:
+    type: standard component
+    nodes: ['143', '144']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_60:
+    type: standard component
+    nodes: ['143', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_60:
+    type: standard component
+    nodes: ['144', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_60:
+    type: standard component
+    nodes: [L_RCO_mag_60, L_RCD_mag_60]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_61:
+    type: standard component
+    nodes: ['144', '145']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_61:
+    type: standard component
+    nodes: ['144', '145']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_61:
+    type: standard component
+    nodes: ['144', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_61:
+    type: standard component
+    nodes: ['145', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_61:
+    type: standard component
+    nodes: [L_RCO_mag_61, L_RCD_mag_61]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_62:
+    type: standard component
+    nodes: ['145', '146']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_62:
+    type: standard component
+    nodes: ['145', '146']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_62:
+    type: standard component
+    nodes: ['145', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_62:
+    type: standard component
+    nodes: ['146', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_62:
+    type: standard component
+    nodes: [L_RCO_mag_62, L_RCD_mag_62]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_63:
+    type: standard component
+    nodes: ['146', '147']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_63:
+    type: standard component
+    nodes: ['146', '147']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_63:
+    type: standard component
+    nodes: ['146', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_63:
+    type: standard component
+    nodes: ['147', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_63:
+    type: standard component
+    nodes: [L_RCO_mag_63, L_RCD_mag_63]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_64:
+    type: standard component
+    nodes: ['147', '148']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_64:
+    type: standard component
+    nodes: ['147', '148']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_64:
+    type: standard component
+    nodes: ['147', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_64:
+    type: standard component
+    nodes: ['148', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_64:
+    type: standard component
+    nodes: [L_RCO_mag_64, L_RCD_mag_64]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_65:
+    type: standard component
+    nodes: ['148', '149']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_65:
+    type: standard component
+    nodes: ['148', '149']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_65:
+    type: standard component
+    nodes: ['148', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_65:
+    type: standard component
+    nodes: ['149', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_65:
+    type: standard component
+    nodes: [L_RCO_mag_65, L_RCD_mag_65]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_66:
+    type: standard component
+    nodes: ['149', '150']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_66:
+    type: standard component
+    nodes: ['149', '150']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_66:
+    type: standard component
+    nodes: ['149', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_66:
+    type: standard component
+    nodes: ['150', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_66:
+    type: standard component
+    nodes: [L_RCO_mag_66, L_RCD_mag_66]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_67:
+    type: standard component
+    nodes: ['150', '151']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_67:
+    type: standard component
+    nodes: ['150', '151']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_67:
+    type: standard component
+    nodes: ['150', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_67:
+    type: standard component
+    nodes: ['151', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_67:
+    type: standard component
+    nodes: [L_RCO_mag_67, L_RCD_mag_67]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_68:
+    type: standard component
+    nodes: ['151', '152']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_68:
+    type: standard component
+    nodes: ['151', '152']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_68:
+    type: standard component
+    nodes: ['151', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_68:
+    type: standard component
+    nodes: ['152', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_68:
+    type: standard component
+    nodes: [L_RCO_mag_68, L_RCD_mag_68]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_69:
+    type: standard component
+    nodes: ['152', '153']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_69:
+    type: standard component
+    nodes: ['152', '153']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_69:
+    type: standard component
+    nodes: ['152', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_69:
+    type: standard component
+    nodes: ['153', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_69:
+    type: standard component
+    nodes: [L_RCO_mag_69, L_RCD_mag_69]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_70:
+    type: standard component
+    nodes: ['153', '154']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_70:
+    type: standard component
+    nodes: ['153', '154']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_70:
+    type: standard component
+    nodes: ['153', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_70:
+    type: standard component
+    nodes: ['154', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_70:
+    type: standard component
+    nodes: [L_RCO_mag_70, L_RCD_mag_70]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_71:
+    type: standard component
+    nodes: ['154', '155']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_71:
+    type: standard component
+    nodes: ['154', '155']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_71:
+    type: standard component
+    nodes: ['154', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_71:
+    type: standard component
+    nodes: ['155', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_71:
+    type: standard component
+    nodes: [L_RCO_mag_71, L_RCD_mag_71]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_72:
+    type: standard component
+    nodes: ['155', '156']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_72:
+    type: standard component
+    nodes: ['155', '156']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_72:
+    type: standard component
+    nodes: ['155', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_72:
+    type: standard component
+    nodes: ['156', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_72:
+    type: standard component
+    nodes: [L_RCO_mag_72, L_RCD_mag_72]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_73:
+    type: standard component
+    nodes: ['156', '157']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_73:
+    type: standard component
+    nodes: ['156', '157']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_73:
+    type: standard component
+    nodes: ['156', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_73:
+    type: standard component
+    nodes: ['157', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_73:
+    type: standard component
+    nodes: [L_RCO_mag_73, L_RCD_mag_73]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_74:
+    type: standard component
+    nodes: ['157', '158']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_74:
+    type: standard component
+    nodes: ['157', '158']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_74:
+    type: standard component
+    nodes: ['157', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_74:
+    type: standard component
+    nodes: ['158', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_74:
+    type: standard component
+    nodes: [L_RCO_mag_74, L_RCD_mag_74]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_75:
+    type: standard component
+    nodes: ['158', '159']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_75:
+    type: standard component
+    nodes: ['158', '159']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_75:
+    type: standard component
+    nodes: ['158', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_75:
+    type: standard component
+    nodes: ['159', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_75:
+    type: standard component
+    nodes: [L_RCO_mag_75, L_RCD_mag_75]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_76:
+    type: standard component
+    nodes: ['159', '160']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_76:
+    type: standard component
+    nodes: ['159', '160']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_76:
+    type: standard component
+    nodes: ['159', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_76:
+    type: standard component
+    nodes: ['160', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_76:
+    type: standard component
+    nodes: [L_RCO_mag_76, L_RCD_mag_76]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  L_RCO_mag_77:
+    type: standard component
+    nodes: ['160', '161']
+    value: L_magnet_RCO
+    parameters: null
+  R_RCO_par_mag_77:
+    type: standard component
+    nodes: ['160', '161']
+    value: R_parallel_RCO
+    parameters: null
+  C_RCO_groundA1_mag_77:
+    type: standard component
+    nodes: ['160', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  C_RCO_groundB1_mag_77:
+    type: standard component
+    nodes: ['161', '0']
+    value: C_ground_magnet_RCO
+    parameters: null
+  k_12_mag_77:
+    type: standard component
+    nodes: [L_RCO_mag_77, L_RCD_mag_77]
+    value: M_RCD_RCO/SQRT(L_magnet_RCD*L_magnet_RCO)
+    parameters: null
+  R_WARM_2_RCO:
+    type: standard component
+    nodes: ['161', 0B]
+    value: R_warm_RCO/2
+    parameters: null
+  x_EC_RCD:
+    type: parametrized component
+    nodes: [0A, '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+  x_EC_RCO:
+    type: parametrized component
+    nodes: [0B, '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+Options:
+  options_simulation:
+    RELTOL: '0.001'
+    VNTOL: '0.0001'
+    ABSTOL: '0.00001'
+    CHGTOL: '0.000000000000001'
+    GMIN: '0.000000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+  options_autoconverge:
+    RELTOL: '0.001'
+    VNTOL: '0.001'
+    ABSTOL: '0.00001'
+    ITL1: '1000'
+    ITL2: '1000'
+    ITL4: '1000'
+    PIVTOL: '0.0000000001'
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '2.0'
+    min_time_step: '0.0005'
+    time_schedule:
+      '0.0': '0.0005'
+      '2.0': '0.0005'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

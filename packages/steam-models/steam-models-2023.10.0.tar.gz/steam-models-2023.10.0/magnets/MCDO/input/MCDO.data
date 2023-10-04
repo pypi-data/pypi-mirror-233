@@ -1,0 +1,204 @@
+VERSION 10.2.1
+'LHC MCD b5 and MCO b4                                                              '
+'../datab/roxie_new_LHC_iron2_Per_Hagen.bhdata                                      '
+'../datab/roxie.cadata                                                              '
+'MCDO_2D.iron                                                                       '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 24
+    1     1    10           32            0            0          550      SISU1   1   1     0            0 
+    2     1    10        33.25            0            0          550      SISU1   1   1     0            0 
+    3     1    10           32            0            0         -550      SISU1   1   1     0           36 
+    4     1    10        33.25            0            0         -550      SISU1   1   1     0           36 
+    5     1    10           32            0            0          550      SISU1   1   1     0           72 
+    6     1    10        33.25            0            0          550      SISU1   1   1     0           72 
+    7     1    10           32            0            0         -550      SISU1   1   1     0          108 
+    8     1    10        33.25            0            0         -550      SISU1   1   1     0          108 
+    9     1    10           32            0            0          550      SISU1   1   1     0          144 
+   10     1    10        33.25            0            0          550      SISU1   1   1     0          144 
+   11     1    10           32            0            0         -550      SISU1   1   1     0          180 
+   12     1    10        33.25            0            0         -550      SISU1   1   1     0          180 
+   13     1    10           32            0            0          550      SISU1   1   1     0          216 
+   14     1    10        33.25            0            0          550      SISU1   1   1     0          216 
+   15     1    10           32            0            0         -550      SISU1   1   1     0          252 
+   16     1    10        33.25            0            0         -550      SISU1   1   1     0          252 
+   17     1    10           32            0            0          550      SISU1   1   1     0          288 
+   18     1    10        33.25            0            0          550      SISU1   1   1     0          288 
+   19     1    10           32            0            0         -550      SISU1   1   1     0          324 
+   20     1    10        33.25            0            0         -550      SISU1   1   1     0          324 
+   21     1    43           30        50.67         67.5         -550     MCBY42   1   1     0            0 
+   22     1    43           30        50.67         67.5         -550     MCBY42   1   1     0           90 
+   23     1    43           30        50.67         67.5         -550     MCBY42   1   1     0          180 
+   24     1    43           30        50.67         67.5         -550     MCBY42   1   1     0          270 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 2
+      1    12         89.9            8           21            0            0            0            0 
+      2    12         89.9            6           23            0            0            0            0 
+     ne  type         beta           bo           zo           wi           wo         hwed       horder 
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+            38         1000 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      1     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 14
+      1    10     2 1 2 /
+      2    10     2 3 4 /
+      3    10     2 5 6 /
+      4    10     2 7 8 /
+      5    10     2 9 10 /
+      6    10     2 11 12 /
+      7    10     2 13 14 /
+      8    10     2 15 16 /
+      9    10     2 17 18 /
+     10    10     2 19 20 /
+     11     4     2 21 /
+     12     4     2 22 /
+     13     4     2 23 /
+     14     4     2 24 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 3
+      1        0.002        0.002        0.002     5      DCONT     0 0 /
+      2       0.0027       0.0027       0.0027     5     DCCONT     8 0 /
+      3        0.002        0.002        0.002     5     DMCONT     8 0 /
+     no           xl           xu           xs genen     string   act bcs 
+
+EULER 1
+      1            0            0         22.5            0      ROLL2     1 11 12 13 14 /
+     no            x            y         alph          bet     string   act bcs 
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 3
+      1            0            1     1           -1        0.001            0            0     5 1 2 /
+      2            1            2     1        0.001          0.1            0            0     9 1 2 /
+      3            2            3     1          0.1            1            0            0    45 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 2
+      1     1            0            0            0            0           17        8                      0 
+      2     1            0            0            0            0           17       10                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+           -40           40    21 
+           -40           40    21 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 4
+      1          2     CURNTB     2     0          B     2     1       1     1            1 
+      2          2     CURNTB     2     0          B     3     1       2     1            1 
+      3          2     CURNTB     2     0          B     4     1       3     1            1 
+      4          2     CURNTB     2     0          B     5     1       4     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 7
+      1           50     1     1     0 IRON AR / 
+      2           50     1     1     0 IRON MUER / 
+      3           50     1     1     0 IRON |BTOT| / 
+      4           40     1     1     0 MATR / 
+      5           40     1     1     0 MATRC / 
+      6           40     1     1     0 I / 
+      7           40     1     1     0 |B| / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

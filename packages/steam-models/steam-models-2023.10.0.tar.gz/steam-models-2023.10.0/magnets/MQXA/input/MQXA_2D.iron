@@ -1,0 +1,19 @@
+-- iron file for the MQX quadrupole magnet/Bernhard Auchmann, 25.08.2000
+
+-- referring to: 
+-- yoke			INSQ-M1_cross_section|A, KLHCIQ70M01-04-006
+-- collar		KLHCIQ70M01-001
+
+
+HyperMesh;
+
+include(MQXA_2D_Iron_Variables.mod)
+
+-- choose the modules you want to include
+-- by commenting include commands out with '#'
+
+include(MQXA_2D_Iron_Yoke.mod)
+
+include(MQXA_2D_Iron_Collar.mod)
+
+

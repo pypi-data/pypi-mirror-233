@@ -1,0 +1,11 @@
+# Settings file for user named "SYSTEM", which is the default username when Gitlab runs the tests
+comsolexe_path: C:\Program Files\COMSOL\COMSOL53a\Multiphysics\bin\win64\comsol.exe    # full path to comsol.exe, only COMSOL53a is supported
+JAVA_jdk_path: C:\Program Files\Java\jdk1.8.0_281                                      # full path to folder with java jdk
+CFunLibPath: C:\Users\<user>\PycharmProjects\MaterialsLibrary                          # path to dll files with material properties
+COSIM_path: C:\STEAM\steam-cosim_v0.5.exe                                              # full path to COSIM executable on the VM - latest stable version, manually updated
+LEDET_path: C:\STEAM\LEDET_v2_02_04.exe                                                # full path to LEDET executable on the VM - latest stable version, manually updated
+LEDET_stable_path: C:\STEAM\LEDET_v2_02_06.exe                                         # full path to LEDET executable on the VM - latest stable version, manually updated
+ProteCCT_path: C:\STEAM\ProteCCT_v2.1.exe                                              # full path to ProteCCT executable on the VM - latest stable version, manually updated
+PSPICE_path: C:\Cadence\SPB_17.4\tools\bin\psp_cmd.exe                                 # full path to PSPICE executable
+PSPICE_library_path:  C:\gitlab\steam-pspice-library                                   # full path to PSPICE component library on the VM - latest stable version, manually updated
+local_LEDET_folder: C:\tempLEDET\LEDET                                                 # full path to local LEDET folder

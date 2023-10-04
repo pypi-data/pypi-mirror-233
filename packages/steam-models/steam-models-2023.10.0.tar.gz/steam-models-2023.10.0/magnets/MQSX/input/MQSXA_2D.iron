@@ -1,0 +1,62 @@
+-- iron-file of the MQSXA corrector magnet/Bernhard Auchmann-30.08.00
+
+-- referring to: 
+-- MQSXA 		LHCMQSXA0001|0|A
+
+
+HyperMesh;
+
+-- GENERAL VARIABLES
+
+mm=0.001;
+Pi=3.14159265;
+deg=Pi/180;
+-- Design variables added by Per HAGEN
+-- shrink = 0.998;				-- shrinking factor for supports/yokes
+dv DCONT=0.0;
+shrink = 1.0*(1-DCONT);
+-- cshrink = 0.9973;			-- shrinking factor for collars
+dv DCCONT=0.0;
+cshrink = 1.0*(1-DCCONT);
+-- mshrink = 0.998;			-- shrinking factor for modules
+dv DMCONT=0.0;
+mshrink = 1.0*(1-DMCONT);
+
+BEAMD = 97.00;       	beamd=BEAMD*mm;	-- half of the beam distance
+
+-- choose the elements by putting a '#' 
+-- in front of the elements you want to disable
+
+
+include(MQSXA_module.mod)
+-- iron-file of the MQSXA corrector magnet/Bernhard Auchmann-30.08.00
+
+-- referring to: 
+-- MQSXA 		LHCMQSXA0001|0|A
+
+
+HyperMesh;
+
+-- GENERAL VARIABLES
+
+mm=0.001;
+Pi=3.14159265;
+deg=Pi/180;
+-- Design variables added by Per HAGEN
+-- shrink = 0.998;				-- shrinking factor for supports/yokes
+dv DCONT=0.0;
+shrink = 1.0*(1-DCONT);
+-- cshrink = 0.9973;			-- shrinking factor for collars
+dv DCCONT=0.0;
+cshrink = 1.0*(1-DCCONT);
+-- mshrink = 0.998;			-- shrinking factor for modules
+dv DMCONT=0.0;
+mshrink = 1.0*(1-DMCONT);
+
+BEAMD = 97.00;       	beamd=BEAMD*mm;	-- half of the beam distance
+
+-- choose the elements by putting a '#' 
+-- in front of the elements you want to disable
+
+
+include(MQSXA_module.mod)

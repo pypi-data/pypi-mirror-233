@@ -1,0 +1,339 @@
+Sources:
+  magnetic_field_fromROXIE: null
+GeneralParameters:
+  conductor_name: generic_busbar
+  model:
+    name: generic_busbar_reference
+    version: v1.0
+    case: null
+    state: null
+  material_database_path: null
+  T_initial: 1.9
+  length_busbar: 1.0
+Conductors:
+- name: SISU2
+  version: null
+  case: null
+  state: null
+  cable:
+    type: Ribbon
+    n_strands: 2
+    bare_cable_width: 0.00113
+    bare_cable_height_low: null
+    bare_cable_height_high: null
+    bare_cable_height_mean: 0.00061
+    th_insulation_along_width: 6e-05
+    th_insulation_along_height: 6e-05
+    f_superconductor: null
+    f_stabilizer: null
+    f_insulation: null
+    f_inner_voids: null
+    f_outer_voids: null
+    f_core: null
+    material_insulation: kapton
+    material_inner_voids: kapton
+    material_outer_voids: kapton
+    material_core: null
+  strand:
+    type: Rectangular
+    bare_width: 0.00113
+    bare_height: 0.00061
+    Cu_noCu_in_strand: 1.6
+    RRR: 93.17406143
+    T_ref_RRR_high: 273.0
+    T_ref_RRR_low: null
+    fil_twist_pitch: 0.015
+    f_Rho_effective: 1.0
+    bare_corner_radius: null
+    material_superconductor: Nb-Ti
+    material_stabilizer: Cu
+    filament_diameter: 6e-06
+  Jc_fit:
+    type: CUDI1
+    Tc0_CUDI1: 9.2
+    Bc20_CUDI1: 14.5
+    C1_CUDI1: 2999.1
+    C2_CUDI1: -240.3
+Circuit:
+  R_circuit: 0.0
+  L_circuit: null
+  R_parallel: null
+Power_Supply:
+  I_initial: 500.0
+  t_off: 99999.0
+  t_control_LUT: [0.0, 0.01, 1000000000.0]
+  I_control_LUT: [500.0, 500.0, 500.0]
+  R_crowbar: 0.0
+  Ud_crowbar: 0.0
+Quench_Protection:
+  Energy_Extraction:
+    t_trigger: 99999.0
+    R_EE: 0.1
+    power_R_EE: null
+    L: null
+    C: null
+  Quench_Heaters:
+    N_strips: 0
+    t_trigger: [99999.0]
+    U0: [0.0]
+    C: [0.0]
+    R_warm: [0.0]
+    w: [0.0]
+    h: [0.0]
+    s_ins: [0.0]
+    type_ins: ['2']
+    s_ins_He: [0.0]
+    type_ins_He: ['2']
+    l: [0.0]
+    l_copper: [0.0]
+    l_stainless_steel: [0.0]
+    f_cover: [0.0]
+    iQH_toHalfTurn_From: [1]
+    iQH_toHalfTurn_To: [1]
+    turns_sides: []
+  CLIQ:
+    t_trigger: 99999.0
+    current_direction: [1]
+    sym_factor: null
+    N_units: 1
+    U0: 1000.0
+    C: 0.04
+    R: 0.05
+    L: null
+    I0: null
+  FQPCs:
+    enabled: null
+    names: null
+    fndpls: null
+    fwws: null
+    fwhs: null
+    r_ins: null
+    r_bs: null
+    n_sbs: null
+    thetas: null
+    z_starts: null
+    z_ends: null
+    currents: null
+    sigmas: null
+    mu_rs: null
+    th_conns_def: null
+Options_BBQ:
+  geometry:
+    thInsul: null
+  simulation:
+    meshSize: null
+  physics:
+    adiabaticZoneLength: null
+    aFilmBoilingHeliumII: null
+    aKap: null
+    BBackground: null
+    BPerI: null
+    IDesign: null
+    jointLength: null
+    jointResistancePerMeter: null
+    muTInit: null
+    nKap: null
+    QKapLimit: null
+    Rjoint: null
+    symmetryFactor: null
+    tauDecay: null
+    TInitMax: null
+    TInitOp: null
+    TLimit: null
+    tValidation: null
+    TVQRef: null
+    VThreshold: null
+    withCoolingToBath: null
+  quench_initialization:
+    sigmaTInit: null
+Options_LEDET:
+  time_vector:
+    time_vector_params: [0.0, 0.0001, 0.1]
+  magnet_inductance:
+    flag_calculate_inductance: null
+    overwrite_inductance_coil_sections: [[]]
+    overwrite_HalfTurnToInductanceBlock: []
+    LUT_DifferentialInductance_current: []
+    LUT_DifferentialInductance_inductance: []
+  heat_exchange:
+    heat_exchange_max_distance: null
+    iContactAlongWidth_pairs_to_add: [[]]
+    iContactAlongWidth_pairs_to_remove: [[]]
+    iContactAlongHeight_pairs_to_add: [[]]
+    iContactAlongHeight_pairs_to_remove: [[]]
+    th_insulationBetweenLayers: null
+  conductor_geometry_used_for_ISCL:
+    alphaDEG_ht: []
+    rotation_ht: []
+    mirror_ht: []
+    mirrorY_ht: []
+  field_map_files:
+    Iref: 550.0
+    flagIron: 1
+    flagSelfField: 1
+    headerLines: 1
+    columnsXY: [4, 5]
+    columnsBxBy: [6, 7]
+    flagPlotMTF: 0
+    fieldMapNumber: null
+    flag_modify_map2d_ribbon_cable: 0
+    flag_calculateMagneticField: null
+  input_generation_options:
+    flag_calculateInductanceMatrix: 0
+    flag_useExternalInitialization: 0
+    flag_initializeVar: 0
+    selfMutualInductanceFileNumber: null
+  simulation:
+    flag_fastMode: 1
+    flag_controlCurrent: 0
+    flag_automaticRefinedTimeStepping: 1
+  physics:
+    flag_IronSaturation: 0
+    flag_InvertCurrentsAndFields: 0
+    flag_ScaleDownSuperposedMagneticField: 1
+    flag_HeCooling: 2
+    fScaling_Pex: 1.0
+    fScaling_Pex_AlongHeight: 1.0
+    fScaling_MR: 1.0
+    flag_scaleCoilResistance_StrandTwistPitch: 0
+    flag_separateInsulationHeatCapacity: 0
+    flag_persistentCurrents: 0
+    flag_ISCL: 0
+    fScaling_Mif: 1.0
+    fScaling_Mis: 0.0
+    flag_StopIFCCsAfterQuench: 0
+    flag_StopISCCsAfterQuench: 0
+    tau_increaseRif: 0.005
+    tau_increaseRis: 0.01
+    fScaling_RhoSS: 1.09
+    maxVoltagePC: 10.0
+    minCurrentDiode: 10.0
+    flag_symmetricGroundingEE: 0
+    flag_removeUc: 0
+    BtX_background: 0.0
+    BtY_background: 0.0
+  quench_initiation:
+    iStartQuench: [1]
+    tStartQuench: [99999.0]
+    lengthHotSpot_iStartQuench: [0.01]
+    fScaling_vQ_iStartQuench: [1.0]
+  post_processing:
+    flag_showFigures: 0
+    flag_saveFigures: 0
+    flag_saveMatFile: 1
+    flag_saveTxtFiles: 0
+    flag_generateReport: 1
+    flag_saveResultsToMesh: 0
+    tQuench: [0.0]
+    initialQuenchTemp: [10.0]
+    flag_hotSpotTemperatureInEachGroup: 0
+    flag_importFieldWhenCalculatingHotSpotT: null
+  simulation_3D:
+    flag_3D: 1
+    flag_adaptiveTimeStepping: 1
+    sim3D_flag_Import3DGeometry: 1
+    sim3D_import3DGeometry_modelNumber: 1
+    sim3D_uThreshold: 1000000.0
+    sim3D_f_cooling_down: 0.0
+    sim3D_f_cooling_up: 0.0
+    sim3D_f_cooling_left: 0.0
+    sim3D_f_cooling_right: 0.0
+    sim3D_f_cooling_LeadEnds: [1, 1]
+    sim3D_fExToIns: 1.0
+    sim3D_fExUD: 1.0
+    sim3D_fExLR: 1.0
+    sim3D_min_ds_coarse: 0.05
+    sim3D_min_ds_fine: 0.0001
+    sim3D_min_nodesPerStraightPart: 4
+    sim3D_min_nodesPerEndsPart: 4
+    sim3D_idxFinerMeshHalfTurn: [1]
+    sim3D_flag_checkNodeProximity: 0
+    sim3D_nodeProximityThreshold: 0.01
+    sim3D_Tpulse_sPosition: 0.1
+    sim3D_Tpulse_peakT: 20.0
+    sim3D_Tpulse_width: 0.01
+    sim3D_tShortCircuit: 1000000000.0
+    sim3D_coilSectionsShortCircuit: [0]
+    sim3D_R_shortCircuit: 1000000000.0
+    sim3D_shortCircuitPosition: 0.0
+    sim3D_durationGIF: 20.0
+    sim3D_flag_saveFigures: 1
+    sim3D_flag_saveGIF: 1
+    sim3D_flag_VisualizeGeometry3D: 1
+    sim3D_flag_SaveGeometry3D: 1
+  plots:
+    suffixPlot: []
+    typePlot: []
+    outputPlotSubfolderPlot: []
+    variableToPlotPlot: []
+    selectedStrandsPlot: []
+    selectedTimesPlot: []
+    labelColorBarPlot: []
+    minColorBarPlot: []
+    maxColorBarPlot: []
+    MinMaxXYPlot: []
+    flagSavePlot: []
+    flagColorPlot: []
+    flagInvisiblePlot: []
+  variables_to_save:
+    variableToSaveTxt: [time_vector, Ia, Ib, T_ht, dT_dt_ht, flagQ_ht, IifX, IifY, Iis, dIifXDt, dIifYDt, dIisDt, Uc, U_QH, T_s_QH, time_vector, R_CoilSections, U_inductive_dynamic_CoilSections, I_CoilSections]
+    typeVariableToSaveTxt: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1]
+    variableToInitialize: [Ia, Ib, T_ht, dT_dt_ht, flagQ_ht, IifX, IifY, Iis, dIifXDt, dIifYDt, dIisDt, Uc, U_QH, T_s_QH]
+    writeToMesh_fileNameMeshPositions: []
+    writeToMesh_suffixFileNameOutput: []
+    writeToMesh_selectedVariables: []
+    writeToMesh_selectedTimeSteps: []
+    writeToMesh_selectedMethod: []
+Options_PyBBQ:
+  geometry:
+    thInsul: 0.00023
+    tapetype: null
+  magnetic_field:
+    Calc_b_from_geometry: false
+    Background_Bx: 0.0
+    Background_By: 0.0
+    Background_Bz: 0.0
+    Self_Field: 0.0001
+    B0_dump: false
+  simulation:
+    meshSize: 500.0
+    layers: 6
+    output: false
+    dt: 1e-05
+    t0: [0.0, 0.1]
+    posref: []
+    print_every: null
+    store_every: null
+    plot_every: null
+    uniquify_path: false
+  physics:
+    adiabaticZoneLength: null
+    aFilmBoilingHeliumII: null
+    aKap: null
+    BBackground: null
+    BPerI: null
+    Heating_mode: null
+    Heating_nodes: null
+    Heating_time: null
+    Heating_time_constant: null
+    IDesign: null
+    Jc_4K_5T_NbTi: null
+    jointLength: null
+    jointResistancePerMeter: null
+    muTInit: null
+    nKap: null
+    Power: null
+    QKapLimit: null
+    Rjoint: null
+    symmetryFactor: null
+    tauDecay: null
+    TInitMax: null
+    TLimit: null
+    tValidation: 0.02
+    TVQRef: null
+    VThreshold: 0.1
+    wetted_p: null
+    withCoolingToBath: false
+    withCoolingInternal: null
+  quench_initialization:
+    sigmaTInit: null

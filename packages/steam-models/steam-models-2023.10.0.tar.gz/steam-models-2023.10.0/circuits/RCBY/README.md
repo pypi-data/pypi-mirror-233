@@ -1,0 +1,1 @@
+![Schematic_RCBY.png](..%2FSchematics%2FSchematic_RCBY.png)

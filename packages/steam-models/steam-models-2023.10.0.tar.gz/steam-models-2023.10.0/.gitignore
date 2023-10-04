@@ -1,0 +1,52 @@
+# IDE specific
+*.pyc
+/.idea/
+**/__pycache__/
+/venv
+
+# package distribution files
+/build/*
+/dist/*
+/.eggs
+/steam_models-*
+/steam_models.egg-info/*
+
+# output files
+/*/output/*
+/*/*/output/*
+/*/*/*/output/*
+/*/*/*/*/output/*
+
+# All scripts (by default, scripts are not pushed)
+/scripts/*
+# Selected scripts (expections: some scripts should be pushed)
+!/scripts/STEAM_Library/script_STEAM_Library.py
+!/scripts/STEAM_Library/script_visualize_ROXIE_data.py
+!/scripts/STEAM_Library/visualize_ROXIE_data.ipynb
+!/scripts/run_list_LEDET/run_list_LEDET.py
+!/scripts/campaign_MBRDP1/
+!/scripts/RB/
+# Viewer example
+!/scripts/viewer/configurations/config_MBRD.yaml
+!/scripts/viewer/MBRDP1/MBRDP1.csv
+!/scripts/viewer/MBRDP1/view_MBRDP1.py
+
+# LEDET diary files
+/**/diaryLEDET*
+
+# settings files
+/settings/user_settings/settings.*.yaml
+/*/settings.*.yaml
+settings.*.yaml
+
+
+
+
+
+
+# Models that users do not want to share
+/magnets/FRIBECR/*
+/magnets/TFD/*
+/magnets/robust_12T_50_mm_MQXF_cable_5_blocks_V2/*
+/resources/magnets/useful_files_to_generate_LEDET_notebooks/fastWritingPythonCode_DifferentialInductance_M12T.xlsx
+/resources/magnets/useful_files_to_generate_LEDET_notebooks/fastWritingPythonCode_DifferentialInductance_TFD.xlsx

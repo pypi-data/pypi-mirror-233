@@ -1,0 +1,186 @@
+VERSION 10.2.1
+'DS-Dipole, FNAL Cable (40x0.70), no core, 56 Turns, 6 Blocks                       '
+'roxie.bhdata                                                                       '
+'roxie-HFM_v2_101104.cadata                                                         '
+'Yoke_1in1_v7_111213.iron                                                           '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=T   
+  LIMAGY=T   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 12
+    1     1     9           30        0.229            0        11850  FNAL40_NC   2  20     0            0 
+    2     1     8           30      26.5021           28        11850  FNAL40_NC   2  20     0            0 
+    3     1     3           30      55.7611           59        11850  FNAL40_NC   2  20     0            0 
+    4     1     2           30      70.3836           70        11850  FNAL40_NC   2  20     0            0 
+    5     1    16        45.55         0.15            0        11850  FNAL40_NC   2  20     0            0 
+    6     1    18        45.55      30.1226           33        11850  FNAL40_NC   2  20     0            0 
+    7     1     9           30        0.229            0       -11850  FNAL40_NC   2  20     0          180 
+    8     1     8           30      26.5021           28       -11850  FNAL40_NC   2  20     0          180 
+    9     1     3           30      55.7611           59       -11850  FNAL40_NC   2  20     0          180 
+   10     1     2           30      70.3836           70       -11850  FNAL40_NC   2  20     0          180 
+   11     1    16        45.55         0.15            0       -11850  FNAL40_NC   2  20     0          180 
+   12     1    18        45.55      30.1226           33       -11850  FNAL40_NC   2  20     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+            80          500 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      3     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 2
+      1     2     2 1 2 3 4 5 6 /
+      2     2     2 7 8 9 10 11 12 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 0
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 1
+      1            0            1     1       0.0001          1.2            0            0    10 1 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      0 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1            0            0            0            0           17        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          220    21 
+             0          220    21 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 1
+      1        2            0            0          205            0          358   180        0 
+     no     type         xsxo         ysyo      xegamma       yephi1       zephi2 nsteps    field 
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 9
+      1          2     CURNTB     1     0      PEAKM     0     0       1     1            1 
+      2          2     CURNTB     1     0     STRONG     1     0       2     1            1 
+      4          2     CURNTB     1     0          B     3     1       3     1            1 
+      6          2     CURNTB     1     0          B     5     1       4     1            1 
+      8          2     CURNTB     1     0          B     7     1       5     1            1 
+      8          2     CURNTB     1     0          B     9     1       6     1            1 
+     10          2     CURNTB     1     0          L     0     0       7     1            1 
+     11          2     CURNTB     1     0         LD     0     0       7     1            1 
+     12          2     CURNTB     1     0     ENERGY     0     0       8     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 8
+      1          280     1     0     0 MATR IRON |BTOT| / 
+      2          220     1     0     0 IRON MUER / 
+      3          220     1     0     0 FORC IRON MESH / 
+      4          280     1     1     0 IRON AR / 
+      5           70     1     1     0 |B| / 
+      6           70     1     1     0 MARG / 
+      7           70     1     1     0 MARGT / 
+      8           70     1     1     0 I / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 7
+      1       FMIN            0 1 /
+      2       FMAX         4.75 1 /
+      3       FMIN            0 2 /
+      4       FMAX           95 2 /
+      5       FMIN            0 5 /
+      6       FMAX         11.4 5 /
+      7       VMAX         14.6 1 /
+     no     string        value plot 
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 1
+      1 VAR        4     0 3                 0            1 
+     no string    s1    s2 oper         constr       weight 
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

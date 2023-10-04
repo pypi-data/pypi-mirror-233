@@ -1,0 +1,5 @@
+-- iron file for MBX (D1) separation dipole from BNL drawing 12010032
+HyperMesh;
+include(MBX_2D_Variables.mod)
+include(MBX_2D.mod)
+#include(MBX_2D_cryostat.mod)

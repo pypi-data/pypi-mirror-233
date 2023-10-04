@@ -1,0 +1,24 @@
+-- iron-file of the MQM quadrupole magnet/Bernhard Auchmann - 03.08.00 
+
+-- referring to: 
+-- yoke			LHCMQM__0008|2|B
+-- collar		LHCMQM__0015|2|B 
+-- beam screen		LHCVSSB_0005|1|A
+
+
+HyperMesh;
+
+
+include(MQM_2D_Iron_Variables.mod)
+
+
+-- choose the elements of the magnet that you want to test
+
+include(MQM_2D_Iron_Yoke.mod)
+
+include(MQM_2D_Iron_Collar.mod)
+
+#include(../../GENERALS/beam_screen.mod)
+
+Mirrory;
+

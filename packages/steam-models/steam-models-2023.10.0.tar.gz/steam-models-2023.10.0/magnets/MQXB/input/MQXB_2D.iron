@@ -1,0 +1,400 @@
+-- LHC IR QUADRUPOLE MAGNET
+-- SOURCE: Drawing no. 5520-MD-344225
+
+-- Due to unprecise numbers in the collar-drawings there was an overlapp of the collar and the coil. This was corrected by hand by introducing wc1 and wc2. For serious calculations these two quantities should be set to zero and the collar-design schould be checked 
+
+-- keyword invoking the new mesh generator
+HyperMesh;
+
+
+-- ***DV-SECTION***
+-- Per HAGEN added DCONT contraction, default room T for check with drawing
+dv DCONT=0.0;
+mm=0.001*(1-DCONT);
+pi=3.14159265;
+deg=pi/180;
+
+-- Collar-Design: dv-Seection***
+-- radius def
+dv colrad1=92.20*mm;
+dv colrad2=67.15*mm;
+dv colrad3=51.39*mm;
+dv colrad4=35.00*mm;
+-- angles
+-- corrections put in by hand - for serious calc. set wc1=wc2=0
+wc1=1.8*deg;
+wc2=6.5*deg;
+dv wa1=40.8*deg-wc1;
+dv wa2=21.82*deg-wc2;
+w1=(90*deg-wa1)/2;
+w2=(wa1-wa2)/2;
+
+-- detail D and C
+dv colth1=11.09*mm;
+dv coldi1=13.95*mm;
+dv coldi11=3.22*mm;
+dv coldi12=3.60*mm;
+alpha1=coldi1/(colrad1-colth1);
+alpha12=(coldi1+coldi12)/(colrad1-colth1);
+alpha11=(coldi1-coldi11)/(colrad1-colth1);
+dv alpha2=0;
+-- Edge Radius in Detail D
+dv edge1=2.5*mm;
+alphaec=edge1/(colrad1-colth1);
+-- correction for beautiness. Set it to zero and the arcs on the bottom
+-- of the two outer cutt-off-rectangles doesen look that nice
+corr=-0.05*mm;
+
+-- Circle Data
+dv circpos=65.5*mm;
+dv circrad=4.78*mm/2;
+-- circphi should not be changed for symm. reasons
+dv circphi=45*deg;
+
+-- Half-Circle Data
+dv hcrad=2.39*mm;
+-- hcpos=colrad
+dv hcpos=35*mm;
+dv hcphi=45*deg;
+
+-- Detail A
+dv posline1=81.3*mm;
+-- Muss noch geaendert werden. gamma=135deg-arcsin(posline1/colrad1)
+dv gamma=73.142318*deg;
+kx1=Cos(gamma)*colrad1;
+ky1=Sin(gamma)*colrad1;
+kx2=Cos(90*deg-gamma)*colrad1;
+ky2=Sin(90*deg-gamma)*colrad1;
+dv phi1=45*deg;
+dv length1=9.68735*mm;
+dv length2=3.8*mm;
+dv length3=6.4*mm/2;
+dv length4=(11.99+7.21)*mm;
+dv length5=7.6*mm;
+dv thick1=5*mm;
+dv thick2=6.4*mm;
+dv thick3=4.24*mm;
+dv xi=(90-30)*deg;
+paroff=thick3/Tan(xi);
+dv chi=86*mm;
+dv corr2=1*deg;
+
+-- 2a) Yoke-Design
+
+dv yrad1=200*mm;
+-- dv yrad2=92.563*mm;
+-- rectangle
+dv recl=25*mm;
+dv rect=30*mm;
+dv recd=163.63*mm;
+
+-- circle data 
+dv ycrad=25*mm;
+dv ycdis=150.26*mm;
+dv tau=45*deg;
+
+-- rectangle data
+dv ysrecl=19.05*mm;
+dv ysrect=6.6*mm;
+dv ysrecd=193.4*mm;
+dv zeta=45*deg;
+-- zetacorr is not a indep. var. 
+dv zetacorr=5.62556*deg;
+
+dv yn1=3.19*mm;
+dv yn2=10.8*mm;
+dv yn3=25.9*mm;
+dv yn4=97.66*mm;
+dv tau3=45*deg;
+dv yn5=90.66*mm;
+dv yn6=81.66*mm;
+-- yn7 created by hand, due to absent informations in the doc. But it looks
+-- quite OK!
+dv yn7=43.6*mm;
+-- Koorektur um Yoke und Collar beim Punkt yi6a auf gemeinsamen Punkt zu bringen
+dv ylcorr=0.35*mm;
+
+-- 2) ***KEYPOINTS***
+
+--x-Axis-Starting Points
+kpx1=[colrad1 @ 0];
+kpx2=[colrad2 @ 0];
+-- kp for lower part
+kpa21=[colrad2 @ w1];
+kpa22=[colrad3 @ w1];
+kpa31=[colrad3 @ w1+w2];
+kpa32=[colrad4 @ w1+w2];
+kpa41=[colrad4 @ w1+wa2+w2];
+kpa42=[colrad3 @ w1+wa2+w2];
+kpa51=[colrad3 @ w1+wa1];
+kpa52=[colrad2 @ w1+wa1];
+
+-- y-Axis
+kpy1=[colrad1 @ 90*deg];
+kpy2=[colrad2 @ 90*deg];
+
+
+-- detail D
+
+
+kpv11=[colrad1 @ alpha11-alpha2];
+kpv12=[colrad1 @ alpha12+alpha2];
+-- Edges in Detail D
+kpv2e1=[colrad1-colth1 @ (alpha12-alphaec)];
+kpv2e2=[colrad1-colth1+edge1+corr @ (alpha12+alpha2)];
+kpv3e1=[colrad1-colth1 @ (alpha11+alphaec)];
+kpv3e2=[colrad1-colth1+edge1+corr @ (alpha11-alpha2)];
+
+-- Detail C
+
+kpw11=[colrad1 @ 90*deg-alpha11+alpha2];
+kpw12=[colrad1 @ 90*deg-alpha12-alpha2];
+-- Edges in Detail C
+kpw2e1=[colrad1-colth1 @ 90*deg-(alpha12-alphaec)];
+kpw2e2=[colrad1-colth1+edge1+corr @ 90*deg-(alpha12+alpha2)];
+kpw3e1=[colrad1-colth1 @ 90*deg-(alpha11+alphaec)];
+kpw3e2=[colrad1-colth1+edge1+corr @ 90*deg-(alpha11-alpha2)];
+
+-- Circle Points
+kpc1=[circpos-circrad @ circphi];
+kpc2=[circpos+circrad @ circphi];
+
+-- Small Half-Circle on the bottom 
+kphc1=[hcpos @ hcphi-hcrad/hcpos+corr2];
+kphc2=[hcpos @ hcphi+hcrad/hcpos-corr2];
+
+-- Detail A
+kpda1=[colrad1 @ gamma];
+kpda2=[colrad1 @ 90*deg-gamma];
+kpda3=[kx1+length1*Cos(phi1),ky1-length1*Sin(phi1)];
+kpda3a=[kx1+length1*Cos(phi1)-thick1*Sin(phi1),ky1-length1*Sin(phi1)-thick1*Sin(phi1)];
+kpda4=[kx1+(length1+length2)*Cos(phi1),ky1-(length1+length2)*Sin(phi1)];
+kpda4a=[kx1+(length1+length2)*Cos(phi1)-thick1*Sin(phi1),ky1-(length1+length2)*Sin(phi1)-thick1*Sin(phi1)];
+kpda5=[kx1+(length1+length2+length4)*Cos(phi1),ky1-(length1+length2+length4)*Sin(phi1)];
+kpda5a=[kx1+(length1+length2+length4+paroff)*Cos(phi1)+Sin(phi1)*thick3,ky1-(length1+length2+length4+paroff)*Sin(phi1)+Cos(phi1)*thick3];
+kpda6=[kx1+(length1+length2+length4+length5)*Cos(phi1)+Sin(phi1)*thick3,ky1-(length1+length2+length4+length5)*Sin(phi1)+Cos(phi1)*thick3];
+kpda6a=[kx1+(length1+length2+length4+length5)*Cos(phi1)+Sin(phi1)*(thick3-thick2),ky1-(length1+length2+length4+length5)*Sin(phi1)+Cos(phi1)*(thick3-thick2)];
+kpda7a=[kx2-(length1+length2+length4+length5)*Cos(phi1)+Sin(phi1)*(thick3-thick2),ky2+(length1+length2+length4+length5)*Sin(phi1)+Cos(phi1)*(thick3-thick2)];
+kpda7=[kx2-(length1+length2+length4+length5)*Cos(phi1)+Sin(phi1)*thick3,ky2+(length1+length2+length4+length5)*Sin(phi1)+Cos(phi1)*thick3];
+kpda8a=[kx2-(length1+length2+length4+paroff)*Cos(phi1)+Sin(phi1)*thick3,ky2+(length1+length2+length4+paroff)*Sin(phi1)+Cos(phi1)*thick3];
+kpda8=[kx2-(length1+length2+length4)*Cos(phi1),ky2+(length1+length2+length4)*Sin(phi1)];
+kpda9=[kx2-(length1+length2)*Cos(phi1),ky2+(length1+length2)*Sin(phi1)];
+kpda9a=[kx2-(length1+length2)*Cos(phi1)-Sin(phi1)*thick1,ky2+(length1+length2)*Sin(phi1)-Cos(phi1)*thick1];
+kpda10=[kx2-length1*Cos(phi1),ky2+length1*Sin(phi1)];
+kpda10a=[kx2-length1*Cos(phi1)-Sin(phi1)*thick1,ky2+length1*Sin(phi1)-Cos(phi1)*thick1];
+
+-- 2b) keypoints for yoke
+
+kpyy1=[yrad1 @ 90*deg];
+kpyx1=[yrad1 @ 0];
+ 
+
+--yoke: two outer rectangles 
+kpyy1a=[0, recd+rect];
+kpyy1d=[0, recd];
+kpyy1c=[recl, recd+rect];
+kpyy1b=[recl, recd];
+
+kpyx1a=[recd+rect,0];
+kpyx1b=[recd+rect, recl];
+kpyx1c=[recd, recl];
+kpyx1d=[recd,0];
+
+-- yoke hole
+kpyc1=[ycdis+ycrad @ tau];
+kpyc2=[ycdis-ycrad @ tau];
+
+-- yoke small rectangle 
+kpysrec2=[(ysrecd)*Cos(zeta)-Sin(zeta)*ysrecl,(ysrecd)*Sin(zeta)+Cos(zeta)*ysrecl];
+kpysrec3=[(ysrecd)*Cos(zeta)+Sin(zeta)*ysrecl,(ysrecd)*Sin(zeta)-Cos(zeta)*ysrecl];
+kpysrec1=[yrad1 @ zetacorr+zeta];
+kpysrec4=[yrad1 @ zeta-zetacorr];
+
+-- yoke; inner part
+kpyi1a=[yn4*Cos(tau3)-Sin(tau3)*yn1,yn4*Sin(tau3)+Cos(tau3)*yn1];
+kpyi1b=[yn4*Cos(tau3)+Sin(tau3)*yn1,yn4*Sin(tau3)-Cos(tau3)*yn1];
+kpyi2a=[yn5*Cos(tau3)-Sin(tau3)*yn1,yn5*Sin(tau3)+Cos(tau3)*yn1];
+kpyi2b=[yn5*Cos(tau3)+Sin(tau3)*yn1,yn5*Sin(tau3)-Cos(tau3)*yn1];
+kpyi3a=[yn5*Cos(tau3)-Sin(tau3)*yn2,yn5*Sin(tau3)+Cos(tau3)*yn2];
+kpyi3b=[yn5*Cos(tau3)+Sin(tau3)*yn2,yn5*Sin(tau3)-Cos(tau3)*yn2];
+kpyi4a=[yn4*Cos(tau3)-Sin(tau3)*yn2,yn4*Sin(tau3)+Cos(tau3)*yn2];
+kpyi4b=[yn4*Cos(tau3)+Sin(tau3)*yn2,yn4*Sin(tau3)-Cos(tau3)*yn2];
+kpyi5a=[yn4*Cos(tau3)-Sin(tau3)*yn3,yn4*Sin(tau3)+Cos(tau3)*yn3];
+kpyi5b=[yn4*Cos(tau3)+Sin(tau3)*yn3,yn4*Sin(tau3)-Cos(tau3)*yn3];
+kpyi6a=[(yn6-ylcorr)*Cos(tau3)-Sin(tau3)*(yn3),(yn6-ylcorr)*Sin(tau3)+Cos(tau3)*(yn3)];
+kpyi6b=[(yn6-ylcorr)*Cos(tau3)+Sin(tau3)*(yn3),(yn6-ylcorr)*Sin(tau3)-Cos(tau3)*(yn3)];
+
+
+
+
+
+
+
+-- 1c) lines
+lnc1=HyperLine(kpy2,kpa52,"Arc",colrad2);
+lnc2=HyperLine(kpa52,kpa51, "Line");
+lnc3=HyperLine(kpa51,kpa42, "Arc",colrad3);
+lnc4=HyperLine(kpa42,kpa41, "Line");
+
+-- Half Circle
+lnc5=HyperLine(kpa41,kphc2,"Arc",colrad4);
+lnc6=HyperLine(kphc2,kphc1,"Arc",hcrad);
+lnc7=HyperLine(kphc1,kpa32,"Arc",colrad4);
+
+lnc8=HyperLine(kpa32,kpa31,"Line");
+lnc9=HyperLine(kpa31,kpa22,"Arc",colrad3);
+lnc10=HyperLine(kpa22,kpa21,"Line");
+lnc11=HyperLine(kpa21,kpx2,"Arc",colrad2);
+lnc12=HyperLine(kpx2,kpx1,"Line");
+
+-- Detail D 
+lnc13=HyperLine(kpv11,kpx1, "Arc",colrad1);
+lnc14=HyperLine(kpv11, kpv3e2, "Line");
+lnc15=HyperLine(kpv3e2, kpv3e1, "Arc", edge1);
+lnc16=HyperLine(kpv3e1, kpv2e1, "Line");
+lnc17=HyperLine(kpv2e1,kpv2e2, "Arc", edge1);
+lnc18=HyperLine(kpv2e2, kpv12, "Line");
+lnc19=HyperLine(kpda2,kpv12, "Arc", colrad1);
+lnc20=HyperLine(kpda10,kpda2, "Line");
+lnc21=HyperLine(kpda10a,kpda10,"Line");
+lnc22=HyperLine(kpda9a,kpda10a, "Line");
+lnc23=HyperLine(kpda9,kpda9a, "Line");
+lnc24=HyperLine(kpda9,kpyi6b, "Line");
+lnc25=HyperLine(kpyi6b,kpda8,"Line");
+lnc26=HyperLine(kpda8a,kpda8, "Line");
+lnc27=HyperLine(kpda7,kpda8a, "Arc",chi);
+lnc28=HyperLine(kpda7a,kpda7, "Line");
+lnc29=HyperLine(kpda6a,kpda7a, "Line");
+lnc30=HyperLine(kpda6,kpda6a, "Line");
+lnc31=HyperLine(kpda5a,kpda6, "Arc", chi);
+lnc32=HyperLine(kpda5,kpda5a, "Line");
+lnc33=HyperLine(kpda5,kpyi6a, "Line");
+lnc34=HyperLine(kpyi6a, kpda4, "Line");
+lnc35=HyperLine(kpda4a,kpda4, "Line");
+lnc36=HyperLine(kpda3a,kpda4a, "Line");
+lnc37=HyperLine(kpda3,kpda3a, "Line");
+lnc38=HyperLine(kpda1,kpda3, "Line");
+lnc39=HyperLine(kpw12,kpda1,"Arc" ,colrad1);
+lnc40=HyperLine(kpw2e2, kpw12, "Line");
+lnc41=HyperLine(kpw2e2,kpw2e1, "Arc", edge1);
+lnc42=HyperLine(kpw3e1,kpw2e1, "Line");
+lnc43=HyperLine(kpw3e1, kpw3e2, "Arc", edge1);
+lnc44=HyperLine(kpw11,kpw3e2,"Line");
+lnc45=HyperLine(kpy1,kpw11,"Arc", colrad1);
+lnc46=HyperLine(kpy1,kpy2, "Line");
+
+-- Circle
+lnhole=HyperLine(kpc1, kpc2, "Circle");
+
+
+-- Yoke
+lny1=HyperLine(kpyy1,kpyy1a,"Line");
+lny2=HyperLine(kpyy1a,kpyy1c, "Line");
+lny3=HyperLine(kpyy1c,kpyy1b, "Line");
+lny4=HyperLine(kpyy1b,kpyy1d, "Line");
+lny5=HyperLine(kpyy1d,kpy1, "Line");
+lny7=HyperLine(kpw11,kpw12, "Arc", colrad1);
+lny10=HyperLine(kpda3,kpda4, "Line");
+lny12=HyperLine(kpyi6a,kpyi5a, "Line");
+lny13=HyperLine(kpyi5a,kpyi4a, "Line");
+lny14=HyperLine(kpyi4a,kpyi3a, "Line");
+lny15=HyperLine(kpyi3a,kpyi2a, "Line");
+lny16=HyperLine(kpyi2a,kpyi1a, "Line");
+lny17=HyperLine(kpyi1a,kpyi1b, "Line");
+lny18=HyperLine(kpyi1b,kpyi2b, "Line");
+lny19=HyperLine(kpyi2b,kpyi3b, "Line");
+lny20=HyperLine(kpyi3b,kpyi4b, "Line");
+lny21=HyperLine(kpyi4b,kpyi5b, "Line");
+lny22=HyperLine(kpyi5b,kpyi6b, "Line");
+lny24=HyperLine(kpda9,kpda10, "Line");
+lny27=HyperLine(kpv12,kpv11, "Arc",colrad1);
+lny29=HyperLine(kpx1,kpyx1d, "Line");
+lny30=HyperLine(kpyx1d,kpyx1c, "Line");
+lny31=HyperLine(kpyx1c,kpyx1b, "Line");
+lny32=HyperLine(kpyx1b,kpyx1a, "Line");
+lny33=HyperLine(kpyx1a,kpyx1, "Line");
+lny34=HyperLine(kpysrec4,kpyx1, "Arc", yrad1);
+lny35=HyperLine(kpysrec4,kpysrec3, "Line");
+lny36=HyperLine(kpysrec3,kpysrec2, "Line");
+lny37=HyperLine(kpysrec2,kpysrec1, "Line");
+lny38=HyperLine(kpyy1,kpysrec1, "Arc",yrad1);
+
+lnhole2=HyperLine(kpyc1, kpyc2, "Circle");
+
+
+lnplug2=HyperLine(kpyi2a,kpda6,"Line");
+lnplug6=HyperLine(kpda7,kpyi2b, "Line");
+
+
+
+-- Areas
+arcol1=HyperArea(lnc1,lnc2,lnc3,lnc4,lnc5,lnc6,lnc7,lnc8,lnc9,lnc10,lnc11,lnc12,lnc13,lnc14,lnc15,lnc16,lnc17,lnc18,lnc19,lnc20,lnc21,lnc22,lnc23,lnc24,lnc25,lnc26,lnc27,lnc28,lnc29,lnc30,lnc31,lnc32,lnc33,lnc34,lnc35,lnc36,lnc37,lnc38,lnc39,lnc40,lnc41,lnc42,lnc43,lnc44,lnc45,lnc46,BHiron5);
+
+aryoke=HyperArea(lny1,lny2,lny3,lny4,lny5,lnc45,lny7,lnc39,lnc38,lny10,lnc34,lny12,lny13,lny14,lny15,lny16,lny17,lny18,lny19,lny20,lny21,lny22,lnc24,lny24,lnc20,lnc19,lny27,lnc13,lny29,lny30,lny31,lny32,lny33,lny34,lny35,lny36,lny37,lny38,BHiron2);
+
+-- cutting the hole of
+arhole=HyperArea(lnhole, BH_air);
+arhole2=HyperArea(lnhole2, BH_air);
+
+arplug1=HyperArea(lny16,lnplug2,lnc30,lnc29,lnc28,lnplug6,lny18,lny17,BHiron5);
+
+arplug2=HyperArea(lnc44,lnc43,lnc42,lnc41,lnc40,lny7, BHiron5);
+arplug3=HyperArea(lnc18,lnc17,lnc16,lnc15,lnc14,lny27, BHiron5);
+
+HyperHoleOf(arhole, arcol1);
+HyperHoleOf(arhole2, aryoke);
+
+
+-- Lmesh(lnc46,6);
+Lmesh(lnc1,7);
+-- Lmesh(lnc5,1);
+-- Lmesh(lnc6,1);
+-- Lmesh(lnc7,1);
+Lmesh(lnc11,7);
+-- Lmesh(lnc12,6);
+-- Lmesh(lnhole,8);
+Lmesh(lny38,20);
+Lmesh(lny34,20);
+Lmesh(lny5,10);
+Lmesh(lny29,10);
+
+Lmesh(lnc14,2); 
+Lmesh(lnc15,1); 
+Lmesh(lnc16,2); 
+Lmesh(lnc17,1); 
+Lmesh(lnc18,2); 
+
+Lmesh(lnc40,2); 
+Lmesh(lnc41,1); 
+Lmesh(lnc42,2); 
+Lmesh(lnc43,1); 
+Lmesh(lnc44,2); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

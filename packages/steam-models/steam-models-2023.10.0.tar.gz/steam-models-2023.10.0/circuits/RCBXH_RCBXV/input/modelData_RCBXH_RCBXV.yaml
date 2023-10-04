@@ -1,0 +1,173 @@
+GeneralParameters:
+  circuit_name: RCBXH_RCBXV
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+GlobalParameters:
+  global_parameters:
+    L_magnet_H: '0.261977'
+    C_ground_magnet_H: '3.91883E-09'
+    R_parallel_H: '1.00E+03'
+    R_circuit_H: '0.00365'
+    R_crowbar_H: '0.05'
+    I_start_H: '0'
+    I_end_1_H: '100'
+    I_end_2_H: '550'
+    dI_dt_H: '2.5'
+    dI_dt2_H: '0.2'
+    t_start_H: '10'
+    t_plateau_H: '20'
+    t_PC_off_H: '100.0'
+    t_PC_switch_off_H: '10E-03'
+    L_parasitic_series_H: '1E-09'
+    R_parasitic_series_H: '1E-09'
+    R_parasitic_parallel_H: '1E+06'
+    L_magnet_V: '0.1669'
+    C_ground_magnet_V: '4.22E-09'
+    R_parallel_V: '1.00E+03'
+    R_circuit_V: '0.00784'
+    R_crowbar_V: '5.00E-02'
+    I_start_V: '0'
+    I_end_1_V: '100'
+    I_end_2_V: '550'
+    dI_dt_V: '2.5'
+    dI_dt2_V: '0.2'
+    t_start_V: '10'
+    t_plateau_V: '20'
+    t_PC_off_V: '100.0'
+    t_PC_switch_off_V: '10E-03'
+    L_parasitic_series_V: '1E-09'
+    R_parasitic_series_V: '1E-09'
+    R_parasitic_parallel_V: '1E+06'
+    M_magnet_H_V: '1E-09'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  x_PC_H:
+    type: parametrized component
+    nodes: ['1_H', '2_H']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start_H
+      I_end_1: I_end_1_H
+      I_end_2: I_end_2_H
+      dI_dt: dI_dt_H
+      dI_dt2: dI_dt2_H
+      t_start: t_start_H
+      t_plateau: t_plateau_H
+      t_PC_off: t_PC_off_H
+      t_PC_switch_off: t_PC_switch_off_H
+      L_parasitic_series: L_parasitic_series_H
+      R_parasitic_series: R_parasitic_series_H
+      R_parasitic_parallel: R_parasitic_parallel_H
+  x_crowbar_H:
+    type: parametrized component
+    nodes: ['1_H','2_H']
+    value: generic_crowbar
+    parameters:
+      R_crowbar: R_crowbar_H
+  R1_H_1:
+    type: standard component
+    nodes: ['2_H', '3_H']
+    value: R_circuit_H/2.0
+    parameters: null
+  x_EC_H:
+    type: parametrized component
+    nodes: ['1_H', '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+  x_mag_1:
+    type: parametrized component
+    nodes: [ '3_H', '4_H', '3_V', '4_V', '0', '0' ]
+    value: magnet_EQ_2_with_resistance_M1
+    parameters:
+      L_1: L_magnet_H
+      L_2: L_magnet_V
+      k_1_2: M_magnet_H_V/SQRT(L_magnet_H*L_magnet_V)
+      C_ground_magnet_1: C_ground_magnet_H
+      C_ground_magnet_2: C_ground_magnet_V
+      R_parallel_1: R_parallel_H
+      R_parallel_2: R_parallel_V
+  R1_H_2:
+    type: standard component
+    nodes: ['4_H', '1_H']
+    value: R_circuit_H/2.0
+    parameters: null
+  x_PC_V:
+    type: parametrized component
+    nodes: ['1_V', '2_V']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start_V
+      I_end_1: I_end_1_V
+      I_end_2: I_end_2_V
+      dI_dt: dI_dt_V
+      dI_dt2: dI_dt2_V
+      t_start: t_start_V
+      t_plateau: t_plateau_V
+      t_PC_off: t_PC_off_V
+      t_PC_switch_off: t_PC_switch_off_V
+      L_parasitic_series: L_parasitic_series_V
+      R_parasitic_series: R_parasitic_series_V
+      R_parasitic_parallel: R_parasitic_parallel_V
+  x_crowbar_V:
+    type: parametrized component
+    nodes: ['1_V','2_V']
+    value: generic_crowbar
+    parameters:
+      R_crowbar: R_crowbar_V
+  R1_V_1:
+    type: standard component
+    nodes: ['2_V', '3_V']
+    value: R_circuit_V/2.0
+    parameters: null
+  x_EC_V:
+    type: parametrized component
+    nodes: ['1_V', '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+  R1_V_2:
+    type: standard component
+    nodes: ['4_V', '1_V']
+    value: R_circuit_V/2.0
+    parameters: null
+Options:
+  options_simulation:
+    all options: default
+  options_autoconverge:
+    all options: default
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '1000.0'
+    min_time_step: '0.1'
+    time_schedule:
+      '0.0': '0.5'
+      '757.0': '0.0001'
+      '759.0': '0.5'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

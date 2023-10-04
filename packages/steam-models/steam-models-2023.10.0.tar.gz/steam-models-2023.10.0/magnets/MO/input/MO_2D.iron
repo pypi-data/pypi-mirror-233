@@ -1,0 +1,44 @@
+-- iron-file of the MO octupole corrector magnet/Bernhard Auchmann-01.09.00
+
+-- referring to: 
+-- MO support			LHCMO_MC0005|2|A
+-- MO octupole module		LHCMO_MC0002|2|A
+-- beam screen			LHCVSSB_0005|2|A
+
+
+HyperMesh;
+
+
+-- GENERAL VARIABLES
+
+mm=0.001;
+Pi=3.14159265;
+deg=Pi/180;
+-- Design variables added by Per HAGEN
+-- shrink = 0.998;				-- shrinking factor for supports/yokes
+dv DCONT=0.0;
+shrink = 1.0*(1-DCONT);
+-- cshrink = 0.9973;			-- shrinking factor for collars
+dv DCCONT=0.0;
+cshrink = 1.0*(1-DCCONT);
+-- mshrink = 0.998;			-- shrinking factor for modules
+dv DMCONT=0.0;
+mshrink = 1.0*(1-DMCONT);
+
+BEAMD = 97.00;
+beamd=BEAMD*mm;	-- half of the beam distance
+
+-- choose the elements by putting a '#' 
+-- in front of the elements you want to disable
+
+
+include(MO_support.mod) 
+
+
+include(MO_module.mod)
+
+
+#include(../../GENERALS/beam_screen_right.mod)
+
+
+

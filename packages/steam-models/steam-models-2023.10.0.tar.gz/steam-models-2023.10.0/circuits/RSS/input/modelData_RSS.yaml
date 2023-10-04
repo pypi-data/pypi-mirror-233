@@ -1,0 +1,182 @@
+GeneralParameters:
+  circuit_name: RSS
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\diodes\Items\600A_Diodes.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\energy_extraction\Items\600A_EE.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\misc\Items\misc_PowerSupplies.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\diodes\Items\600A_Diodes.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\energy_extraction\Items\600A_EE.lib
+GlobalParameters:
+  global_parameters:
+    L_magnet: '0.029'
+    C_ground_magnet: '1.18E-09'
+    R_parallel: '0.15'
+    R_Warm: '0.00362'
+    R_crowbar: '5.00E-02'
+    R_EE: '0.707'
+    t_PC: '0.2'
+    t_EE: '0.217'
+    Opening_Time: '1.00E-04'
+    Delay_Branch1: '0'
+    Delay_Branch2: '0'
+    Delay_Branch3: '0'
+    C_snubber: '8.00E-04'
+    R_snubber: '1.00E+00'
+    R_Branch: '4.40E-04'
+    L_Branch: '1.00E-06'
+    L_Busbar: '0'
+    I_start: '0'
+    I_end_1: '100'
+    I_end_2: '550'
+    dI_dt: '1.4'
+    dI_dt2: '0.1'
+    t_start: '10'
+    t_plateau: '20'
+    t_PC_off: '0.2'
+    t_PC_switch_off: '10E-03'
+    L_parasitic_series: '1E-09'
+    R_parasitic_series: '1E-09'
+    R_parasitic_parallel: '1E+06'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  x_PC:
+    type: parametrized component
+    nodes: [0A , '1']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start
+      I_end_1: I_end_1
+      I_end_2: I_end_2
+      dI_dt: dI_dt
+      dI_dt2: dI_dt2
+      t_start: t_start
+      t_plateau: t_plateau
+      t_PC_off: t_PC_off
+      t_PC_switch_off: t_PC_switch_off
+      L_parasitic_series: L_parasitic_series
+      R_parasitic_series: R_parasitic_series
+      R_parasitic_parallel: R_parasitic_parallel
+  x_Crowbar:
+    type: parametrized component
+    nodes: [0A, '1']
+    value: generic_crowbar
+    parameters:
+      R_crowbar: R_crowbar
+  R_WARM_1:
+    type: standard component
+    nodes: ['1', '2']
+    value: R_warm/2
+    parameters: null
+  L_Busbar_1:
+    type: standard component
+    nodes: ['2', '3']
+    value: L_Busbar/2
+    parameters: null
+  x_mag_1:
+    type: parametrized component
+    nodes: ['3', '4', '0', '0']
+    value: magnet_EQ_1_with_resistance_M1
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_2:
+    type: parametrized component
+    nodes: ['4', '5', '0', '0']
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_3:
+    type: parametrized component
+    nodes: ['5', '6', '0', '0']
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_mag_4:
+    type: parametrized component
+    nodes: ['6', '7', '0', '0']
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  L_Busbar_2:
+    type: standard component
+    nodes: [ '7', '8' ]
+    value: L_Busbar/2
+  R_WARM_2:
+    type: standard component
+    nodes: ['8', '9']
+    value: R_warm/2
+    parameters: null
+  x_R_EE:
+    type: parametrized component
+    nodes: ['9', 0A , 11_mid]
+    value: EE_600A
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Opening_Time: Opening_Time
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      C_snubber: C_snubber
+      R_snubber: R_snubber
+      R_Branch: R_Branch
+      L_Branch: L_Branch
+  x_EC:
+    type: parametrized component
+    nodes: [0A, '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+Options:
+  options_simulation:
+    RELTOL: '0.0001'
+    VNTOL: '0.00001'
+    ABSTOL: '0.0001'
+    CHGTOL: '0.000000000000001'
+    GMIN: '0.000000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+  options_autoconverge:
+    all options: default
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0.0'
+    time_end: '1000.0'
+    min_time_step: '0.1'
+    time_schedule:
+      '0.0': '0.5'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []

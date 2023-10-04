@@ -1,0 +1,48 @@
+HyperMesh;
+mm = 0.001;
+pi = 3.14159265;
+deg = pi/180;
+shrink = 1.0 - 0.00192;
+
+-- * * * * * * * * * * * * * * *
+-- * * * V A R I A B L E S * * *
+-- * * * * * * * * * * * * * * *
+
+RIN = 62.0;	rin = RIN*mm*shrink;
+ROUT = 140.0;	rout = ROUT*mm*shrink;
+
+-- * * * * * * * * * * * * * * *
+-- * * * S T R U C T U R E * * *
+-- * * * * * * * * * * * * * * *
+
+
+-- KEYPOINTS
+
+kpl1 = [rout,0];
+kpl2 = [0,rout];
+kpl3 = [rin,0];
+kpl4 = [0,rin];
+
+
+-- LINES
+
+lnl1 = HyperLine(kpl2,kpl1,"Arc",rout);
+lnl2 = HyperLine(kpl4,kpl3,"Arc",rin);
+lnl3 = Line(kpl1,kpl3);
+lnl4 = Line(kpl2,kpl4);
+
+
+-- AREAS 6.3.-01 EBG steel pf=0.962
+
+arl1 = HyperArea(lnl4,lnl2,lnl3,lnl1,BHiron8);
+
+
+-- GRID-POINTS
+
+Lmesh(lnl1,30);
+Lmesh(lnl2,30);
+Lmesh(lnl3,15);
+Lmesh(lnl4,15);
+
+Mirrorx;
+Mirrory;

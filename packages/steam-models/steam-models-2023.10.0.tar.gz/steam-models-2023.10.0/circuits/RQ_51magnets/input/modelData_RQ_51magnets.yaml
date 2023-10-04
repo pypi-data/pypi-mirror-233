@@ -1,0 +1,818 @@
+GeneralParameters:
+  circuit_name: RQ_51magnets
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_Diodes.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_Switches.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_EE.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_FILTER_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_FILTER_Main.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_Main.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_EC.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_WARM.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_Diodes.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_Switches.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_EE.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_FILTER_SUB_SUB.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_FILTER_Main.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_Main.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_EC.lib
+  - C:\gitlab\steam-pspice-library\RQD_RQF\Items\RQD_RQF_PC_WARM.lib
+  - C:\gitlab\steam-pspice-library\earth\Items\600A_Earth.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+GlobalParameters:
+  global_parameters:
+    R_circuit: '0.001096'
+    L_magnet: '5.6E-03'
+    R_parallel: '20'
+    C_ground_magnet: '90E-09'
+    R_EE: '6.85E-03'
+    t_EE: '1257.236'
+    Delay_Branch1: '0'
+    Delay_Branch2: '0'
+    Delay_Branch3: '0'
+    Delay_Branch4: '0'
+    L_Busbar_Total: '0'
+    I_start: '0'
+    I_end_1: '5000'
+    I_end_2: '11850'
+    dI_dt: '10'
+    dI_dt2: '1'
+    t_start: '10'
+    t_plateau: '20'
+    t_PC_off: '1257.14'
+    t_PC_switch_off: '10E-03'
+    L_parasitic_series: '1E-09'
+    R_parasitic_series: '1E-09'
+    R_parasitic_parallel: '1E+06'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  xPC:
+    type: parametrized component
+    nodes: ['1', 0A]
+    value: PC_Main_Generic
+    parameters:
+      I_start: I_start
+      I_end_1: I_end_1
+      I_end_2: I_end_2
+      dI_dt: dI_dt
+      dI_dt2: dI_dt2
+      t_start: t_start
+      t_plateau: t_plateau
+      t_PC_off: t_PC_off
+      t_PC_switch_off: t_PC_switch_off
+      L_parasitic_series: L_parasitic_series
+      R_parasitic_series: R_parasitic_series
+      R_parasitic_parallel: R_parasitic_parallel
+  R_circuit_1:
+    type: standard component
+    nodes: ['1', '2']
+    value: R_circuit/2
+    parameters: null
+  L_Busbar:
+    type: standard component
+    nodes: ['2', '3']
+    value: L_Busbar_Total
+    parameters: null
+  R_circuit_2:
+    type: standard component
+    nodes: ['54', '55']
+    value: R_circuit/2
+    parameters: null
+  x_R_EE:
+    type: parametrized component
+    nodes: ['55', 0A, 1C]
+    value: RQ_EE
+    parameters:
+      R_EE: R_EE
+      t_EE: t_EE
+      Delay_Branch1: Delay_Branch1
+      Delay_Branch2: Delay_Branch2
+      Delay_Branch3: Delay_Branch3
+      Delay_Branch4: Delay_Branch4
+  x_EC:
+    type: parametrized component
+    nodes: [0A, '0']
+    value: earthingCircuit
+    parameters:
+      R_fuse: '1.000'
+  x_mag_1:
+    type: parametrized component
+    nodes: ['3', '4', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M1
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_2:
+    type: parametrized component
+    nodes: ['4', '5', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M2
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_3:
+    type: parametrized component
+    nodes: ['5', '6', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M3
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_4:
+    type: parametrized component
+    nodes: ['6', '7', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M4
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_5:
+    type: parametrized component
+    nodes: ['7', '8', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M5
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_6:
+    type: parametrized component
+    nodes: ['8', '9', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M6
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_7:
+    type: parametrized component
+    nodes: ['9', '10', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M7
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_8:
+    type: parametrized component
+    nodes: ['10', '11', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M8
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_9:
+    type: parametrized component
+    nodes: ['11', '12', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M9
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_10:
+    type: parametrized component
+    nodes: ['12', '13', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M10
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_11:
+    type: parametrized component
+    nodes: ['13', '14', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M11
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_12:
+    type: parametrized component
+    nodes: ['14', '15', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M12
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_13:
+    type: parametrized component
+    nodes: ['15', '16', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M13
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_14:
+    type: parametrized component
+    nodes: ['16', '17', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M14
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_15:
+    type: parametrized component
+    nodes: ['17', '18', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M15
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_16:
+    type: parametrized component
+    nodes: ['18', '19', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M16
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_17:
+    type: parametrized component
+    nodes: ['19', '20', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M17
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_18:
+    type: parametrized component
+    nodes: ['20', '21', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M18
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_19:
+    type: parametrized component
+    nodes: ['21', '22', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M19
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_20:
+    type: parametrized component
+    nodes: ['22', '23', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M20
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_21:
+    type: parametrized component
+    nodes: ['23', '24', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M21
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_22:
+    type: parametrized component
+    nodes: ['24', '25', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M22
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_23:
+    type: parametrized component
+    nodes: ['25', '26', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M23
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_24:
+    type: parametrized component
+    nodes: ['26', '27', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M24
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_25:
+    type: parametrized component
+    nodes: ['27', '28', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M25
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_26:
+    type: parametrized component
+    nodes: ['28', '29', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M26
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_27:
+    type: parametrized component
+    nodes: ['29', '30', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M27
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_28:
+    type: parametrized component
+    nodes: ['30', '31', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M28
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_29:
+    type: parametrized component
+    nodes: ['31', '32', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M29
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_30:
+    type: parametrized component
+    nodes: ['32', '33', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M30
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_31:
+    type: parametrized component
+    nodes: ['33', '34', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M31
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_32:
+    type: parametrized component
+    nodes: ['34', '35', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M32
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_33:
+    type: parametrized component
+    nodes: ['35', '36', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M33
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_34:
+    type: parametrized component
+    nodes: ['36', '37', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M34
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_35:
+    type: parametrized component
+    nodes: ['37', '38', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M35
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_36:
+    type: parametrized component
+    nodes: ['38', '39', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M36
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_37:
+    type: parametrized component
+    nodes: ['39', '40', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M37
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_38:
+    type: parametrized component
+    nodes: ['40', '41', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M38
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_39:
+    type: parametrized component
+    nodes: ['41', '42', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M39
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_40:
+    type: parametrized component
+    nodes: ['42', '43', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M40
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_41:
+    type: parametrized component
+    nodes: ['43', '44', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M41
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_42:
+    type: parametrized component
+    nodes: ['44', '45', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M42
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_43:
+    type: parametrized component
+    nodes: ['45', '46', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M43
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_44:
+    type: parametrized component
+    nodes: ['46', '47', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M44
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_45:
+    type: parametrized component
+    nodes: ['47', '48', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M45
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_46:
+    type: parametrized component
+    nodes: ['48', '49', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M46
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_47:
+    type: parametrized component
+    nodes: ['49', '50', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M47
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_48:
+    type: parametrized component
+    nodes: ['50', '51', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M48
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_49:
+    type: parametrized component
+    nodes: ['51', '52', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M49
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_50:
+    type: parametrized component
+    nodes: ['52', '53', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M50
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_RQ_MQ_Magnet_51:
+    type: parametrized component
+    nodes: ['53', '54', 0A, 0A]
+    value: magnet_EQ_1_with_resistance_M51
+    parameters:
+      L_magnet: L_magnet
+      C_ground_magnet: C_ground_magnet
+      R_parallel: R_parallel
+  x_D1:
+    type: parametrized component
+    nodes: [3, 4]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D2:
+    type: parametrized component
+    nodes: [4, 5]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D3:
+    type: parametrized component
+    nodes: [5, 6]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D4:
+    type: parametrized component
+    nodes: [6, 7]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D5:
+    type: parametrized component
+    nodes: [7, 8]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D6:
+    type: parametrized component
+    nodes: [8, 9]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D7:
+    type: parametrized component
+    nodes: [9, 10]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D8:
+    type: parametrized component
+    nodes: [10, 11]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D9:
+    type: parametrized component
+    nodes: [11, 12]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D10:
+    type: parametrized component
+    nodes: [12, 13]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D11:
+    type: parametrized component
+    nodes: [13, 14]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D12:
+    type: parametrized component
+    nodes: [14, 15]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D13:
+    type: parametrized component
+    nodes: [15, 16]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D14:
+    type: parametrized component
+    nodes: [16, 17]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D15:
+    type: parametrized component
+    nodes: [17, 18]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D16:
+    type: parametrized component
+    nodes: [18, 19]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D17:
+    type: parametrized component
+    nodes: [19, 20]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D18:
+    type: parametrized component
+    nodes: [20, 21]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D19:
+    type: parametrized component
+    nodes: [21, 22]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D20:
+    type: parametrized component
+    nodes: [22, 23]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D21:
+    type: parametrized component
+    nodes: [23, 24]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D22:
+    type: parametrized component
+    nodes: [24, 25]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D23:
+    type: parametrized component
+    nodes: [25, 26]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D24:
+    type: parametrized component
+    nodes: [26, 27]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D25:
+    type: parametrized component
+    nodes: [27, 28]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D26:
+    type: parametrized component
+    nodes: [28, 29]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D27:
+    type: parametrized component
+    nodes: [29, 30]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D28:
+    type: parametrized component
+    nodes: [30, 31]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D29:
+    type: parametrized component
+    nodes: [31, 32]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D30:
+    type: parametrized component
+    nodes: [32, 33]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D31:
+    type: parametrized component
+    nodes: [33, 34]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D32:
+    type: parametrized component
+    nodes: [34, 35]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D33:
+    type: parametrized component
+    nodes: [35, 36]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D34:
+    type: parametrized component
+    nodes: [36, 37]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D35:
+    type: parametrized component
+    nodes: [37, 38]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D36:
+    type: parametrized component
+    nodes: [38, 39]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D37:
+    type: parametrized component
+    nodes: [39, 40]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D38:
+    type: parametrized component
+    nodes: [40, 41]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D39:
+    type: parametrized component
+    nodes: [41, 42]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D40:
+    type: parametrized component
+    nodes: [42, 43]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D41:
+    type: parametrized component
+    nodes: [43, 44]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D42:
+    type: parametrized component
+    nodes: [44, 45]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D43:
+    type: parametrized component
+    nodes: [45, 46]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D44:
+    type: parametrized component
+    nodes: [46, 47]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D45:
+    type: parametrized component
+    nodes: [47, 48]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D46:
+    type: parametrized component
+    nodes: [48, 49]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D47:
+    type: parametrized component
+    nodes: [49, 50]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D48:
+    type: parametrized component
+    nodes: [50, 51]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D49:
+    type: parametrized component
+    nodes: [51, 52]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D50:
+    type: parametrized component
+    nodes: [52, 53]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+  x_D51:
+    type: parametrized component
+    nodes: [53, 54]
+    value: RB_MB_DiodeFwdBypass_6V
+    parameters: {}
+Options:
+  options_simulation:
+    RELTOL: '0.0001'
+    VNTOL: '0.0001'
+    ABSTOL: '0.0001'
+    CHGTOL: '0.0000000001'
+    GMIN: '0.0000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+    NUMDGT: '16'
+  options_autoconverge:
+    RELTOL: '0.005'
+    VNTOL: '0.005'
+    ABSTOL: '0.005'
+    ITL1: '1000'
+    ITL2: '10000'
+    ITL4: '10000'
+    PIVTOL: '0.0000000001'
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: 0.0
+    time_end: 1500.0
+    min_time_step: 0.1
+    time_schedule:
+      '0.0': '1.0'
+      '1257.0': '0.1'
+      '1259.0': '1.0'
+PostProcess:
+  probe:
+    probe_type: null
+    variables: []

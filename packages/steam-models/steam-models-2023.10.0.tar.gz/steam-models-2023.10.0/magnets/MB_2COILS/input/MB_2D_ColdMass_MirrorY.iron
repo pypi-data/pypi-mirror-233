@@ -1,0 +1,35 @@
+-- iron file for MB main bending dipole magnet
+
+-- Christine Voellinger,Martin Aleksa, Bernhard Auchmann - 31.08.2000 
+-- Hole added by Martin Aleksa                           - 15.11.2000 
+-- Correction of the Nose and Nick by Nikolai Schwerg    - 25.10.2004
+-- Checked by Bernhard Auchmann and Per Hagen 	         - 30.03.2011
+
+-- referring to: 
+-- yoke			LHCMB__A0136|0|C
+-- inner yoke		LHCMB__A0139|0|B
+-- outer yoke		LHCMB__A0140|0|B
+-- insert		LHCMB__A0148|1|E
+-- collar		LHCMB__A0099|0|C
+-- coil sheet		LHCMB__A0021|0|B (design study by Christine Voellinger, not production)
+
+HyperMesh;
+
+
+include(MB_2D_Iron_Variables.mod)
+
+-- for inclusion of yoke: either include the one-piece yoke or the inner and the outer part of the yoke seperately by setting '#' in front of the elements that are not to be included
+
+
+include(MB_2D_Iron_Yoke.mod)
+
+include(MB_2D_Iron_Collar.mod)
+
+include(MB_2D_Iron_Insert.mod)
+
+#include(../../GENERALS/beam_screen.mod)
+
+-- design study
+#include(MB_2D_Iron_Coil_Sheet.mod)
+
+Mirrory;

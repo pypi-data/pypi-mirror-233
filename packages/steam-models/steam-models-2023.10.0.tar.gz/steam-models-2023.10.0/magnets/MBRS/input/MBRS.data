@@ -1,0 +1,193 @@
+VERSION 10.2.1
+'MBRS 4.5K D2 SEPARATION DIPOLE IN EXPERIMENTAL IRs (1,2,5,8)                       '
+'../datab/roxie.bhdata                                                              '
+'../datab/roxie.cadata                                                              '
+'MBRS_2D.iron                                                                       '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=T    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 16
+    1     1     9        39.97        0.143            0         6000      RHIC2   2  15     0            0 
+    2     1    11        39.97      16.9828      19.2559         6000      RHIC2   2  15     0            0 
+    3     1     8        39.97      41.2433      42.7028         6000      RHIC2   2  15     0            0 
+    4     1     4        39.97      65.9056      69.2946         6000      RHIC2   2  15     0            0 
+    5     1     9        39.97        0.143            0        -6000      RHIC2   2  15     0          180 
+    6     1    11        39.97      16.9828      19.2559        -6000      RHIC2   2  15     0          180 
+    7     1     8        39.97      41.2433      42.7028        -6000      RHIC2   2  15     0          180 
+    8     1     4        39.97      65.9056      69.2946        -6000      RHIC2   2  15     0          180 
+    9     1     9        39.97        0.143            0         6000      RHIC2   2  15     0            0 
+   10     1    11        39.97      16.9828      19.2559         6000      RHIC2   2  15     0            0 
+   11     1     8        39.97      41.2433      42.7028         6000      RHIC2   2  15     0            0 
+   12     1     4        39.97      65.9056      69.2946         6000      RHIC2   2  15     0            0 
+   13     1     9        39.97        0.143            0        -6000      RHIC2   2  15     0          180 
+   14     1    11        39.97      16.9828      19.2559        -6000      RHIC2   2  15     0          180 
+   15     1     8        39.97      41.2433      42.7028        -6000      RHIC2   2  15     0          180 
+   16     1     4        39.97      65.9056      69.2946        -6000      RHIC2   2  15     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+             0            0 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      3     2     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 4
+      1     2     2 1 2 3 4 /
+      2     2     2 5 6 7 8 /
+      3     2     2 9 10 11 12 /
+      4     2     2 13 14 15 16 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 2
+      1     0.001912     0.001912     0.001912     5      DCONT     0 0 /
+      2          4.5          4.5          4.5     5       TEMP     0 0 /
+     no           xl           xu           xs genen     string   act bcs 
+
+EULER 2
+      1          207            0            0            0     SHIFT2     1 1 2 /
+      2         -207            0            0            0     SHIFT2     1 3 4 /
+     no            x            y         alph          bet     string   act bcs 
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 4
+      1            0            1     1     0.004098            1            0            0     5 1 2 /
+      2            1            2     1            1     0.004098            0            0     5 1 2 /
+      3            2            3     1     0.004098     0.098361            0            0    23 1 2 /
+      4            3            4     1     0.098361            1            0            0    55 1 2 /
+     no          tds          tde    ff            a            b            c            d nsteps layers 
+
+EDDY /
+      1 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 2
+      1     1          207            0            0            0           17        2                      0 
+      2     1          207            0            0            0           17        2                      4 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0          320    20 
+             0          275    18 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 1
+      1      RHARM            1 2 /
+     no     string        value harmoniccoil 
+
+GRAPH 10
+      1          2     CURNTB     1     0       BIGB     1     1       1     1            1 
+      2          2     CURNTB     1     0          B     2     1       2     1            1 
+      3          2     CURNTB     1     0          B     3     1       3     1            1 
+      4          2     CURNTB     1     0          B     5     1       4     1            1 
+      5          2     CURNTB     1     0          B     7     1       5     1            1 
+      6          2     CURNTB     1     0          B     1     2       6     1            1 
+      7          2     CURNTB     1     0          B     2     2       7     1            1 
+      8          2     CURNTB     1     0          B     3     2       8     1            1 
+      9          2     CURNTB     1     0          B     5     2       9     1            1 
+     10          2     CURNTB     1     0          B     7     2      10     1            1 
+     no       type     xvalue   s1x   s2x     yvalue   s1y   s2y plotnbr  axes       weight 
+
+GRAPHOPTION 0
+
+PLOT2D 8
+      1          600     1     0     0 IRON AR / 
+      2          600     1     0     0 IRON |BTOT| / 
+      3          600     1     0     0 IRON MESH / 
+      4          600     1     0     0 IRON MUER / 
+      5          600     1     1     0 I MATR / 
+      6          600     1     0     0 IRON AR MATR / 
+      7          320     1     1     0 I / 
+      8          320     1     1     0 |B| / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

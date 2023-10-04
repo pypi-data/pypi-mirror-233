@@ -1,0 +1,13 @@
+-- iron file of the MQ main quadrupole magnet/Bernhard Auchmann - 01.08.00 
+
+-- referring to: 
+-- yoke			LHCMQ_M_0004|0|B
+-- collar		LHCMQ_C_0004|0|C
+-- beam screen		LHCVSSB_0005|1|A
+
+
+HyperMesh;
+
+include(MQ_2D_Aperture_Variables.mod)
+include(MQ_2D_Aperture_Collar.mod)
+include(MQ_2D_Iron_Yoke_2.mod)

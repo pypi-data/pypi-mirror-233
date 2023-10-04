@@ -1,0 +1,158 @@
+VERSION 10.2.1
+'18 T / 13150 A;                                                                    '
+'../ERMC_V1/roxie_ST430.bhdata                                                      '
+'./roxie_HFM_v4.cadata                                                              '
+'./RMM_v1_MirrorX.iron                                                              '
+
+&OPTION
+  LEND=F     LWEDG=F    LPERS=F    LQUENCH=F  LALGO=F    LQUENCH0D=F
+  LMIRIRON=F LBEMFEM=T  LPSI=F     LSOLV=F    LIRON=T    LMORPH=F   
+  LHARD=F    LPOSTP=F   LPEAK=T    LINMARG=F  LMARG=F    LSELF=T    
+  LMQE=F     LINDU=F    LEDDY=F    LSOLE=F    LFLUX=F    LFIELD3=F  
+  LFISTR=F   LSELF3=F   LBRICK=F   LLEAD=F    LVRML=F    LOPERA=F   
+  LOPER20=F  LANSYS=F   LRX2ANS=F  LANS2RX=F  LDXF=F     LMAP2D=T   
+  LMAP3D=F   LEXPR=F    LFIL3D=F   LFIL2D=F   LCNC=F     LANSYSCN=F 
+  LWEIRON=F  LCATIA=F   LEXEL=F    LQVOLT=F   LAXIS=T    LIMAGX=F   
+  LIMAGY=F   LRAEND=F   LMARKER=F  LROLER2=F  LROLERP=F  LIMAGZZ=F  
+  LSUPP=F    LSTEP=F    LIFF=F     LICCA=F    LICC=F     LICCIND=F  
+  LITERNL=F  LTOPO=F    LQUEN3=F   LAYER=T    LEULER=T   LHEAD=T    
+  LPLOT=T    LVERS52=T  LHARM=T    LMATRF=F   LF3LIN=F   LKVAL=F    
+  
+  /
+
+GLOBAL2DOPTION 0
+
+GLOBAL3D 0
+
+BLOCK 6
+    1     2    42       122.35         0.25           90        11546     RMMV28   2  20     0            0 
+    2     2    45       122.35       22.634           90        11546     RMMV28   2  20     0            0 
+    3     2    45       122.35       44.543           90        11546     RMMV28   2  20     0            0 
+    4     2    42       122.35         0.25           90       -11546     RMMV28   2  20     0          180 
+    5     2    45       122.35       22.634           90       -11546     RMMV28   2  20     0          180 
+    6     2    45       122.35       44.543           90       -11546     RMMV28   2  20     0          180 
+   no  type   nco       radius          phi        alpha      current   condname  n1  n2  imag         turn 
+
+BLOCKOPTION 0
+
+BLOCK3D 0
+
+LEAD 0
+
+BRICK 0
+
+IRONYOKEOPTIONS /
+      0 
+  scale 
+
+             0            0 
+         inrad       reperm 
+
+      1 
+  symtype 
+
+      3     1     1 
+  yzplane zxplane xyplane 
+
+      1     0     0 
+   mode   div   sym 
+
+IRONYOKE 0
+
+EXTRUSION 0
+
+PERMANENTMAG2 0
+
+PERMANENTMAG1 0
+
+LAYER 3
+      1     2     2 1 4 /
+      2     2     2 2 3 /
+      3     2     2 5 6 /
+     no  symm typexy blocks 
+
+ALGO /
+      0 
+   algo 
+
+DESIGN 0
+
+EULER 0
+
+PEAK 0
+
+TIMETABLE2 0
+
+TIMETABLE1 0
+
+EDDY /
+      0 
+   pers 
+
+EDDYOPTIONS 0
+
+QUENCHG 0
+
+QUENCHEN 0
+
+QUENCHTM 0
+
+QUENCHP 0
+
+QUENCHS 0
+
+HARMONICTABLE 1
+      1     1            0            0            0            0      16.6667        2                      0 
+     no  type            x            y           s1           s2         rref     bref                  field 
+
+MATRF 1
+             0            0     0 
+             0            0     0 
+             0            0     0     0 
+         start          end    no field 
+
+LINEFIELD 0
+
+KVALUES 0
+
+HARMONICOPTION 0
+
+GRAPH 0
+
+GRAPHOPTION 0
+
+PLOT2D 9
+      1          150     1     1     0 I / 
+      2          150     1     1     0 |B| / 
+      3          150     1     1     0 COIL |B| / 
+      4          150     1     1     0 COIL MARG / 
+      5          400     1     1     0 IRON AR / 
+      6          400     1     1     0 IRON |BTOT| / 
+      7          400     1     1     0 IRON MUER / 
+      8          400     1     1     0 IRON MUEFAC / 
+      9          400     1     1     0 IRON MESH / 
+     no       zxaxis colour fquad harmcoil field 
+
+PLOT2DOPTION 0
+
+PLOT3D 0
+
+PLOT3DOPTION 0
+
+OBJECTIVE 0
+
+ANSYSOPTIONS /
+      0 
+  scale 
+
+      0 
+  scale 
+
+             0            0            0            0 
+          ang1         ang2         offx         offy 
+
+QUENCH0D /
+             0            0            0            0 
+          qini         tque         leng         indu 
+
+

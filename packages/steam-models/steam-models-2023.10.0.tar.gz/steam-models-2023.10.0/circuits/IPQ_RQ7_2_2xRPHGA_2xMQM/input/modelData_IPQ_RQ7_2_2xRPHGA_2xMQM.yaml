@@ -1,0 +1,173 @@
+GeneralParameters:
+  circuit_name: IPQ_RQ7_2_2xRPHGA_2xMQM
+  model:
+    name: null
+    version: null
+    case: null
+    state: null
+  additional_files:
+  - C:\gitlab\steam-pspice-library\diodes\Items\IPQ_Diodes.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+AuxiliaryFiles:
+  files_to_include: []
+Stimuli:
+  stimulus_files:
+  - coil_resistances.stl
+Libraries:
+  component_libraries:
+  - C:\gitlab\steam-pspice-library\diodes\Items\IPQ_Diodes.lib
+  - C:\gitlab\steam-pspice-library\magnet\Items\magnets_generic.lib
+  - C:\gitlab\steam-pspice-library\power_supply\Items\generic_power_converters.lib
+GlobalParameters:
+  global_parameters:
+    I_start_PC1: '0'
+    I_end_1_PC1: '100'
+    I_end_2_PC1: '5390'
+    dI_dt_PC1: '16.167'
+    dI_dt2_PC1: '2'
+    t_start_PC1: '10'
+    t_plateau_PC1: '20'
+    t_PC_off_PC1: '757.7'
+    t_PC_switch_off_PC1: '10e-3'
+    I_start_PC2: '0'
+    I_end_1_PC2: '100'
+    I_end_2_PC2: '5390'
+    dI_dt_PC2: '16.167'
+    dI_dt2_PC2: '2'
+    t_start_PC2: '20'
+    t_plateau_PC2: '30'
+    t_PC_off_PC2: '757.7'
+    t_PC_switch_off_PC2: '10e-3'
+    R_Warm_1: '0.000258'
+    R_Warm_2: '0.000218'
+    R_Warm_3: '0.000212'
+    L_Ap1Mag1: '0.014919768'
+    L_Ap2Mag1: '0.014919768'
+    M_Ap12Mag1: '0.0000888'
+    C_Ap1Mag1: '10e-9'
+    C_Ap2Mag1: '10e-9'
+InitialConditions:
+  initial_conditions: {}
+Netlist:
+  x_PC1:
+    type: parametrized component
+    nodes: ['1', '2']
+    value: RPHGA
+    parameters: null
+  x_PC2:
+    type: parametrized component
+    nodes: ['7', 0A]
+    value: RPHGA
+    parameters: null
+  V_DCCT_1:
+    type: standard component
+    nodes: [0A, '1']
+    value: '0'
+    parameters: null
+  x_PC_1:
+    type: parametrized component
+    nodes: ['1', '2']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start_PC1
+      I_end_1: I_end_1_PC1
+      I_end_2: I_end_2_PC1
+      dI_dt: dI_dt_PC1
+      dI_dt2: dI_dt2_PC1
+      t_start: t_start_PC1
+      t_plateau: t_plateau_PC1
+      t_PC_off: t_PC_off_PC1
+      t_PC_switch_off: t_PC_switch_off_PC1
+      L_parasitic_series: '1e-9'
+      R_parasitic_series: '1e-9'
+      R_parasitic_parallel: '1e+6'
+  V_DCCT_2:
+    type: standard component
+    nodes: ['6', '7']
+    value: '0'
+    parameters: null
+  x_PC_2:
+    type: parametrized component
+    nodes: ['7', '0A']
+    value: PC_controlled_equations
+    parameters:
+      I_start: I_start_PC2
+      I_end_1: I_end_1_PC2
+      I_end_2: I_end_2_PC2
+      dI_dt: dI_dt_PC2
+      dI_dt2: dI_dt2_PC2
+      t_start: t_start_PC2
+      t_plateau: t_plateau_PC2
+      t_PC_off: t_PC_off_PC2
+      t_PC_switch_off: t_PC_switch_off_PC2
+      L_parasitic_series: '1e-9'
+      R_parasitic_series: '1e-9'
+      R_parasitic_parallel: '1e+6'
+  R_Warm_1:
+    type: standard component
+    nodes: ['2', '3']
+    value: R_Warm_1
+    parameters: null
+  R_Warm_2:
+    type: standard component
+    nodes: ['5', '6']
+    value: R_Warm_2
+    parameters: null
+  R_Warm_3:
+    type: standard component
+    nodes: ['4', 0A]
+    value: R_Warm_3
+    parameters: null
+  x_mag_1:
+    type: parametrized component
+    nodes: [ '3', '4', '4', '5', 0A, 0A ]
+    value: magnet_EQ_2_with_resistance_M1
+    parameters:
+      L_1_mag: L_Ap1Mag1
+      L_2_mag: L_Ap2Mag1
+      k_1_2: M_Ap12Mag1/SQRT(L_Ap1Mag1*L_Ap2Mag1)
+      C_ground_magnet_1: C_Ap1Mag1
+      C_ground_magnet_2: C_Ap2Mag1
+      R_parallel_1: 1e6
+      R_parallel_2: 1e6
+  R_EC:
+    type: standard component
+    nodes: [0A, '0']
+    value: '1.0E+09'
+    parameters: null
+Options:
+  options_simulation:
+    RELTOL: '0.0001'
+    VNTOL: '0.00001'
+    ABSTOL: '0.0001'
+    CHGTOL: '0.0000000001'
+    GMIN: '0.0000000001'
+    ITL1: '150'
+    ITL2: '20'
+    ITL4: '10'
+    TNOM: '27'
+    NUMDGT: '16'
+  options_autoconverge:
+    RELTOL: '0.05'
+    VNTOL: '0.0001'
+    ABSTOL: '0.0001'
+    ITL1: '1000'
+    ITL2: '10000'
+    ITL4: '10000'
+    PIVTOL: '0.0000000001'
+  flag_inCOSIM: null
+Analysis:
+  analysis_type: transient
+  simulation_time:
+    time_start: '0'
+    time_end: '1000'
+    min_time_step: '0.1'
+    time_schedule:
+      '0': '0.5'
+      '757': '0.01'
+      '758': '0.1'
+PostProcess:
+  probe:
+    probe_type: standard
+    variables: []
