@@ -1,0 +1,5 @@
+[console_scripts]
+aims-cli = aims_immune.aims_cli:run
+
+[gui_scripts]
+aims-gui = aims_immune.aims:main
