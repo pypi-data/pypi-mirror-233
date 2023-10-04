@@ -1,0 +1,3 @@
+[console_scripts]
+TableauConMan = TableauConMan.cli:main
+
