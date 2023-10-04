@@ -1,0 +1,3 @@
+synxflow
+synxflow/apps/cudaDebrisFlowSolverPybind/cuda_flood_solvers_pybind
+synxflow/apps/cudaFloodSolversPybind/cuda_debris_flow_solver_pybind
