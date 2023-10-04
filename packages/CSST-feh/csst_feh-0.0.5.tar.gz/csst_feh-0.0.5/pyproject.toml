@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "CSST_feh"
+version = "0.0.5"
+authors = [
+  { name="Shi Ruifeng", email="shiruifeng@mail.ynu.edu.cn" },
+]
+description = "Two packages that can be used to estimate the metallicity of stars from the CSST filter systems"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/191806/feh_CSST1"
