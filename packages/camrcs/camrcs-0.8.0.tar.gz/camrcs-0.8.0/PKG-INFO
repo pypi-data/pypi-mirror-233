@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: camrcs
+Version: 0.8.0
+Summary: A package for management of Cambridge Research Cold Storage backups
+Author: Niek Wit
+Author-email: nw416@cam.ac.uk
+License: MIT
+Project-URL: Documentation, https://camrcs.readthedocs.io
+Project-URL: Source, https://github.com/niekwit/camrcs
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Backup
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: Click
+Requires-Dist: numpy
+
+# CAMRCS
+
+`camrcs` is a Python package that manages data backups to Cambridge University Research Cold Storage (RCS).
+
+Complete documentation can be found [here](https://camrcs.readthedocs.io/en/stable/index.html).
+
+## QUICKSTART
+
+### Installation
+
+Install `pigz` first:
+
+```
+sudo apt-get install pigz
+```
+
+Then install `camrcs`:
+
+```bash
+pip install camrcs
+```
+
+### Before first use
+
+`camrcs` requires a *data.csv* file that stores information of what to upload, etc.
+
+To create a new *data.csv* run:
+
+```bash
+cd any/path/to/store/file
+camrcs up --new
+
+```
+
+### Uploading data to RCS
+
+First include all relevant information in *data.csv*, then run from the directory containing *data.csv*:
+
+```bash
+camrcs up
+```
+
+This will upload all data that has not yet been uploaded to RCS.
+
+### Retrieving data from RCS
+
+For example, to retrieve the archive with `id` 1 from *data.csv* run:
+
+```bash
+camrcs down -t 1
+```
+
+
+
+
+

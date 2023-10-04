@@ -1,0 +1,3 @@
+pandas
+Click
+numpy
