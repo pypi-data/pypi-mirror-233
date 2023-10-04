@@ -1,0 +1,11 @@
+aioelectricitymaps/__init__.py,sha256=fVqYibySXBx7ItqWery2fp2HtlFFyL7ABtdp12g0j4c,107
+aioelectricitymaps/const.py,sha256=Ak3x-HNoEoe_d2zJFiff9Ilh2TQbYtA_ezzYefKCiXQ,252
+aioelectricitymaps/electricitymaps.py,sha256=cR6oE3GbZyMebuK0dvUIa5T_jYok8WddLdkmXOd_mvw,2627
+aioelectricitymaps/exceptions.py,sha256=g90hWzsVx6v67EhgR1Jl-Ug4V8CQBPluIwd2_JbEu8k,260
+aioelectricitymaps/marshmallow.py,sha256=sAMrMpGzdxR2VMr0VafZZi8HWdCuS5kdQbcc8HWpjz0,557
+aioelectricitymaps/models.py,sha256=6-ew__wwRJz38Ax5UrhOVfg7RSvjYEOEPE-GC1rZKV4,1245
+aioelectricitymaps/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aielectricitymaps-0.1.0.dist-info/LICENSE,sha256=6DuFjuFs8RPFnh0xMU9qaV4eHnzR6BgB1gCtRB0fUXw,1076
+aielectricitymaps-0.1.0.dist-info/METADATA,sha256=djqKOi7gnDl8v9BkaniYHoSKaq-HRsHf8zmVU5ksDIM,741
+aielectricitymaps-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+aielectricitymaps-0.1.0.dist-info/RECORD,,
