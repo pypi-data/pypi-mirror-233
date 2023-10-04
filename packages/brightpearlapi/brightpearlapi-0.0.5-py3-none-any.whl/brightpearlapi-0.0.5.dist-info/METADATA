@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: brightpearlapi
+Version: 0.0.5
+Summary: A package for interacting with Brightpearl API
+Author-email: Mathias Mjømen <mathiassmjomen@gmail.com>
+Project-URL: Homepage, https://github.com/MDiddle/brightpearlapi
+Project-URL: Bug Tracker, https://github.com/MDiddle/brightpearlapi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.26.0
+
+USAGE
+pip install brightpearlapi
+
+from brightpearlapi.BrightpearlAPI import BrightpearlAPI
