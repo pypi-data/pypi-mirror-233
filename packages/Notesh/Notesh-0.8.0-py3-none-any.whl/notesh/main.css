@@ -1,0 +1,352 @@
+Screen {
+    layers: log note_disactive footer sidebar topper;
+    background: $background-darken-1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+PlayArea {
+    opacity: 100%;
+    background: $surface;
+    layer: note_disactive;
+    border: outer $secondary;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    layout: grid;
+}
+
+Footer {
+    layer: footer;
+}
+
+Note {
+    layer: note_disactive;
+    background:; 
+    border: none;
+    text-style:;
+    rule: ;
+    padding: 0 0 0 0;
+    margin: 0;
+    height: 14;
+    min-height: 6;
+    width: 20;
+    overflow: hidden;
+    opacity: 100%;
+}
+
+Note Static {
+    background: $secondary-darken-1;
+    color: $text;
+    border: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-style:;
+    rule:;
+
+    border: none;
+    border-right: outer $secondary-darken-3;
+    border-left: outer $secondary-lighten-1;
+    border-top: none;
+    border-bottom: outer $secondary-darken-3;
+}
+
+#note-toper {
+    dock: top;
+    height: 4;
+}
+
+#note-top {
+    text-align: center;
+    background: $secondary;
+    border-top: outer $secondary-lighten-1;
+    border-left: outer $secondary-lighten-1;
+    border-bottom: none;
+    height: 3;
+}
+
+#note-spacer {
+    background: $secondary-darken-3;
+    color: $secondary-lighten-1;
+    border: none;
+    height: 1;
+    min-height: 1;
+}
+
+#note-resizer-left {
+    background: $secondary-darken-3;
+    color: $secondary-lighten-1;
+    border: none;
+    border-bottom: tall;
+    height: 1;
+    min-height: 1;
+    width: 1fr;
+    content-align: left bottom;
+}
+
+#note-resizer {
+    background: $secondary-darken-3;
+    color: $secondary-lighten-1;
+    border: none;
+    height: 1;
+    min-height: 1;
+    width: 2;
+    content-align: right bottom;
+}
+
+#note-resizer-bar {
+    dock: bottom;
+    height: 1;
+
+}
+
+Sidebar {    
+    layer: sidebar;
+    dock: right;
+    width: 32;
+    height: 100%;
+    padding: 0 0 0 0;
+    border: outer $accent-darken-3;
+    transition: offset 500ms in_out_cubic;    
+    background: $panel;
+}
+
+Sidebar:focus-within {
+    offset: 0 0 !important;
+}
+
+Sidebar.-hidden {
+    offset-x: 100%;
+}
+
+#sidebar-title {
+    border: heavy $secondary;
+    padding: 0 2;
+    text-style: bold;
+}
+
+MultilineArray {
+    background: $boost;
+    color: $text;
+    border: heavy $secondary-darken-3;
+    height: auto;
+    min-height: 1;
+}
+
+
+MultilineInput {
+    border: none;
+}
+
+Sidebar Button {
+    width: 100%;
+    height: 3;
+    margin: 0 1;
+}
+
+
+Sidebar MultilineArray.-hidden {
+    min-height: 0;
+    min-width: 0;
+    height: 0;
+    width: 0;
+    border: none;
+    visibility: hidden;
+    dock: bottom;
+}
+
+Sidebar ColorPicker.-hidden {
+    min-height: 0;
+    min-width: 0;
+    height: 0;
+    width: 0;
+    border: none;
+    visibility: hidden;
+    dock: bottom;
+}
+
+Sidebar Input.-hidden {
+    min-height: 0;
+    min-width: 0;
+    height: 0;
+
+    width: 0;
+    border: none;
+    padding: 0;
+    visibility: hidden;
+    dock: bottom;
+}
+
+Sidebar Button.-hidden {
+    min-height: 0;
+    min-width: 0;
+    height: 0;
+    width: 0;
+    border: none;
+    visibility: hidden;
+    dock: bottom;
+}
+
+ColorPicker {
+    align-horizontal: center;
+    background: $panel;
+    /* background: $accent; */
+    height: auto;
+    margin: 0 0 0 0;
+}
+
+#color-picker-title {
+    border: heavy $primary-lighten-3;
+    padding: 0 2;
+    text-style: bold;
+    text-align: center;
+
+}
+
+ColorPickerDisplay {
+    background: $panel;
+    /* border: outer $panel-darken-3; */
+    border-bottom: outer $panel-darken-3;
+    content-align: center middle;
+    padding: 0;
+    margin: 0 1 0 1;
+    color: $text;
+    text-style: bold;
+    height: 2;
+    width: 100%;
+}
+
+ColorPickerChanger {
+    grid-size: 3;
+    height: 2;
+    width: 8;
+}
+
+#color-changers {
+    padding: 0;
+    margin: 0 0 1 1;
+    height: 2;
+    width: auto;
+}
+
+#random-color {
+    min-width: 1;
+    min-height: 1;
+    width: 4;
+    height: 3;
+    padding: 0;
+    margin: 0;
+    background: black;
+    color: white;
+    border: none;
+    align-horizontal: center;
+    content-align: center top;
+}
+
+ColorPickerChanger Static {
+    background: $primary;
+    row-span: 3;
+    column-span: 2;
+    min-width: 1;
+    min-height: 1;
+    height: 2;
+    width: 6;
+    color: $text;
+    border: none;
+    padding: 0;
+    margin: 0;
+    content-align: center top;
+    text-style: bold;
+    text-align: center;
+    align-horizontal: center;
+}
+
+ColorPickerChanger Button {
+    row-span: 1;
+    column-span: 1;
+    height: 1;
+    width: 3;
+    background: $accent;
+}
+
+ColorPickerChanger Button.-up {
+    background: $accent-lighten-1;
+}
+
+ColorPickerChanger Button.-down {
+    background: $accent-darken-3;
+}
+
+ColorPickerChanger Button:focus.-up {
+    background: $accent-lighten-3;
+}
+
+ColorPickerChanger Button:focus.-down {
+    background: $accent-darken-1;
+}
+
+Sidebar #border-picker {
+    margin: 0 1 1 1;
+}
+
+Drawable {
+    background: $error;
+    min-width: 4;
+    min-height: 3;
+    color: $text;
+    /* border: outer $primary; */
+    /* border-bottom: outer $primary; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+Drawable #default-body {
+    color: $text;
+    background: $panel;
+    min-width: 4;
+    min-height: 1;
+    border: outer $primary;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+Drawable Resizer{
+    opacity: 100%;
+    color: $error;
+    dock: bottom;
+    height: 1;
+    width: 2;
+    min-height: 1;
+    min-width: 1;
+    align-horizontal: right;
+    border: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+Drawable Resizer:hover{
+    opacity: 80%;
+}
+
+SidebarLeft {    
+    layer: sidebar;
+    dock: left;
+    width: 32;
+    height: 100%;
+    padding: 0 0 0 0;
+    border: outer $accent-darken-3;
+    transition: offset 500ms in_out_cubic;    
+    background: $panel;
+}
+SidebarLeft:focus-within {
+    offset: 0 0 !important;
+}
+
+SidebarLeft.-hidden {
+    offset-x: -100%;
+}
+
+HopScreen {
+    background: 0%;
+}
