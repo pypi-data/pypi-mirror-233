@@ -1,0 +1,1 @@
+recursive-include save_scenario_modal/frontend/build *
