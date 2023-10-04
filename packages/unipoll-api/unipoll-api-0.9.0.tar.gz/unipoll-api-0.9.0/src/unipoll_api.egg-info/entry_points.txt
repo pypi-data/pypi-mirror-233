@@ -1,0 +1,2 @@
+[console_scripts]
+unipoll-api = unipoll_api.app:run

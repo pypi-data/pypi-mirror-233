@@ -1,0 +1,13 @@
+fastapi==0.98.0
+uvicorn[standard]==0.22.0
+fastapi-users[beanie]==11.0.0
+beanie==1.19.0
+colorama==0.4.6
+
+[dev]
+pytest
+pytest-cov
+faker
+flake8
+tox
+mypy
