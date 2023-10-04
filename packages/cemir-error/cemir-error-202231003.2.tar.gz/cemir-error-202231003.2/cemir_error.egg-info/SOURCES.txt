@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+output.png
+setup.py
+cemir_error/__init__.py
+cemir_error/ccerror.py
+cemir_error/errors_de.py
+cemir_error/errors_en.py
+cemir_error/errors_fr.py
+cemir_error/errors_tr.py
+cemir_error/testet.py
+cemir_error.egg-info/PKG-INFO
+cemir_error.egg-info/SOURCES.txt
+cemir_error.egg-info/dependency_links.txt
+cemir_error.egg-info/top_level.txt
