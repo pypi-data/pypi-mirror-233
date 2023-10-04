@@ -1,0 +1,3 @@
+[console_scripts]
+maintainability=maintainability.cli.main:cli_runner
+
