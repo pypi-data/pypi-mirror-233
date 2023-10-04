@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ote/__init__.py
+ote/__main__.py
+ote.egg-info/PKG-INFO
+ote.egg-info/SOURCES.txt
+ote.egg-info/dependency_links.txt
+ote.egg-info/entry_points.txt
+ote.egg-info/requires.txt
+ote.egg-info/top_level.txt
+ote.egg-info/zip-safe
