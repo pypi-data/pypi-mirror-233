@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "blue-form"
+version = "1.0.0"
+description = "Give you the blue form. A must have to get the 'Laisser-Passer A38'"
+authors = ["Tom Gabrièle <tgabriele@alwaysdata.com>"]
+readme = "README.md"
+packages = [{include = "blue_form", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+green-form = "^0.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
