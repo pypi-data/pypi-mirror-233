@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <title>{% block title %}Microsip{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 maximum-scale=1" />
+
+  <!-- Estilos -->
+  <link rel='stylesheet' href='{{STATIC_URL}}css/normalize.css'/>
+  <!-- Latest compiled and minified CSS -->
+  <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}css/jquery-ui.css">
+  
+  {% block style_css %}{% endblock %}
+  {% block js_code %}
+  <script src="{{STATIC_URL}}js/djmicrosip_cambiaprecios/cambia_precios.js"></script>
+
+  {% endblock %}
+  <link rel='shortcut icon' href='{{STATIC_URL}}img/logo.ico'>
+</head>
+<body>
+  <section class='content'>
+    <div class="pagecontent">
+      {% block content %}
+      <form  name="formulario" method="post" action="" width="300px"  enctype='multipart/form-data'>{% csrf_token %}
+      	{{ form.errors }}
+      	<div class="row text-center">
+      		<div class="col-xs-6">
+      			<a href="/cambiaprecios/articulos/" class='btn btn-danger' >Salir</a>
+      		</div>
+      		<div class="col-xs-6">
+      			<button type="button" class="btn btn-success" onclick="formulario.submit()"><i class="glyphicon glyphicon-download-alt"></i> Guardar</button>
+      		</div>
+      		
+      	</div>
+        <br>
+      	<h2 class="text-center">{{ articulo_nombre }}</h2>
+        <div align="center"><span class="badge"> Exist. {{existencia}}</span></div>
+      	
+      	
+
+        <div class="input-group">
+         <span class="input-group-addon">Costo</span>
+         <input type="text" value="{{costo_ultima_compra}}" id="id_ultima_compra" class="form-control">
+       </div>
+        <div align="center">Moneda:{{moneda_nombre}}</div>
+       <ul class="list-group">
+         {% for form in formset.forms%}
+         <li class="list-group-item text-center">
+          <h2><label class="nombre_precio"></label></h2>
+        </li>
+        <div>
+           <li class="list-group-item">
+            <div class="input-group">
+              <span class="input-group-addon">Margen %</span>
+              {{ form.margen }}
+            </div>
+          </li>
+          <li class="list-group-item">
+           <div class="input-group">
+            <span class="input-group-addon">Precio</span>
+            {{ form.precio }}
+           </div>
+          </li>
+        </div>
+     {% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
+     {% endfor %}
+   </ul>
+
+   {{ formset.management_form }}
+   <br>
+
+ </form>
+ <br style="clear:both">
+ {% endblock %}
+</div>
+</section>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src='{{STATIC_URL}}js/jquery.formset.js'></script>
+<script>
+$(function() {
+ $('.form-container').formset({
+  prefix: '{{ formset.prefix }}',
+  addText:'',
+  deleteText:'',
+});
+});
+
+var precios_empresa = [];
+
+{% for precio in precios_empresa %}
+precios_empresa.push("{{precio}}");
+{% endfor %}
+</script> 
+<script src="{{STATIC_URL}}js/djmicrosip_cambiaprecios/cambia_precios.js"></script>
+</body>
+</html>
