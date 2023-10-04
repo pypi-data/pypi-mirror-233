@@ -1,0 +1,2 @@
+[console_scripts]
+xdmod-ondemand-export = xdmod_ondemand_export:main
