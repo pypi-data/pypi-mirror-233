@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo-addon-l10n-ec-delivery-note
+Version: 15.0.1.0.0.2
+Summary: Delivery Notes
+Home-page: https://github.com/OCA/l10n-ecuador
+Author: Odoo Community Association (OCA), Spearhead
+Author-email: support@odoo-community.org
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 15.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.8
+Requires-Dist: odoo-addon-l10n-ec-account-edi <15.1dev,>=15.0dev
+Requires-Dist: odoo <15.1dev,>=15.0a
+
+UNKNOWN
+
