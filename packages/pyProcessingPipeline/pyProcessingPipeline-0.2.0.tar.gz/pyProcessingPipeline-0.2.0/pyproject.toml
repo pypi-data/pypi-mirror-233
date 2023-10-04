@@ -1,0 +1,161 @@
+[build-system]
+requires = ["setuptools>=63"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.10"
+version = "0.2.0"
+name = "pyProcessingPipeline"
+description = "Package for defining processing pipelines."
+readme = "README.md"
+authors = [
+  { "name" = "Christian Teichert", "email" = "christian.teichert@lse.thm.de" },
+  { "name" = "Urs Hackstein", "email" = "urs.hackstein@lse.thm.de" }
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Operating System :: OS Independent",
+  'Intended Audience :: Science/Research',
+  'Intended Audience :: Developers',
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python",
+  "Typing :: Typed",
+]
+keywords = ["processing", "signal", "physiological signal"]
+
+dependencies = [
+  "numpy == 1.24.*", # For efficient handling of vectorized data
+  "scipy == 1.10.*", # Signal processing library
+  "wfdb == 4.1.*", # For importing wfdb files
+  "scikit-learn == 1.3.*", # For classification etc.
+  "emd == 0.6.*", # For empirical mode decomposition of signals
+
+  # --- Database connectors ---
+  "mysql-connector-python == 8.0.*", # To connect to mysql databases
+
+  # --- Plotting ---
+  "matplotlib == 3.7.*" # for plotting images, only needed if for old gui.
+]
+
+[project.urls]
+homepage = "https://gitlab.com/agbernhard.lse.thm/agb_public/pyProcessingPipeline"
+
+[project.optional-dependencies]
+dev = [
+  "pip-tools == 6.13.*", # For compiling requirements
+
+  # --- Formatting Code ---
+  "black == 23.3.*", # for auto-formatting python code
+
+  # --- Static Code Analysis ----
+  "mypy == 1.3.*", # for static code analysis
+  "ruff >= 0.0.277", # for static code analysis
+  "bandit == 1.7.*", # for security relevent code analysis
+
+  # --- Commiting ---
+  "commitizen == 3.2.*", # For creating conventional commits and auto-generating changelogs
+]
+
+dev-jupyter = [
+  # --- Jupyter Notebooks ---
+  "ipykernel == 6.23.*",
+  "plotly == 5.15.*", # Plotting in Notebooks during development
+  "nbformat == 5.9.*",
+  "pandas == 2.0.*" # Data analysis during development
+]
+
+testing = [
+  "coverage == 7.2.*", # For reporting test coverage
+  "pytest == 7.3.*" # For running tests
+]
+
+docs = [
+  "sphinx == 6.2.*",
+  "sphinx-rtd-theme == 1.2.*"
+]
+
+build = [
+  "twine == 4.0.*"
+]
+
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+disallow_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+ignore_missing_imports = true
+no_implicit_optional = true
+no_implicit_reexport = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+exclude = ["build", "tests", "processing/old", "docs"]
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.ruff]
+select = [
+  "B", # Bugbear: warnings for bugs and design problems
+  "D", # Enforce numpy docstyle
+  "E", # PyCodestyle errors
+  "F", # Pyflakes
+  "N", # Naming conventions
+  "NPY", # Numpy-specific checks
+  "PERF", # Check for performance penalties like unecessary list-casts etc.
+  "PL", # Everything Pylint
+  "Q", # Enforce double quotes
+  "RUF",
+  "TID", # flake8-tidy-imports
+  "TCH", # flake8-type-checking
+  "TRY",
+  "UP", # PyUpgrade (don't use deprecated stuff)
+]
+
+
+ignore = [
+  "D102", # Should not complain about missing docstrings,
+  # since this also happens on functions that inherited a docstring.
+  "E501", # Never enforce `E501` (line length violations)
+  "N999", # Ignore invalid-module-name
+  "PERF203", # Ignore try-except cases in a loop
+  "PLR0913", # Too many arguments to function call
+  "TRY003", # Long exception messages, disabled for presentation :shrug:
+]
+
+exclude = [
+  "docs"
+]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.setuptools.packages.find]
+# needed only because we did not adopt src layout yet
+include = ["pyProcessingPipeline*"]
+
+[tool.setuptools_scm]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_type = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+version_files = [
+    "docs/source/conf.py:release",
+    "VERSION"
+]
