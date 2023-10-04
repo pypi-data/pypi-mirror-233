@@ -1,0 +1,9 @@
+porringer_core-0.1.1.dev8.dist-info/METADATA,sha256=0fauEsnnKinH6YicCILWokDbt-7C63JS14gOrlLXs5A,501
+porringer_core-0.1.1.dev8.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+porringer_core-0.1.1.dev8.dist-info/licenses/LICENSE.md,sha256=wUELBJ0UKnpv6gI6lccpfQn9LyXZRT0vaLfW-pZDIuc,1073
+porringer_core/__init__.py,sha256=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U,3
+porringer_core/plugin_schema/__init__.py,sha256=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U,3
+porringer_core/plugin_schema/environment.py,sha256=f0CsmcvwU71oTcEP6AIs81GVeV1IkCM1uCNlhXOGUqM,3579
+porringer_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porringer_core/schema.py,sha256=x4u-OmhoYYv21-Pt-xRp2H_1hfi8fmoMKz8X8H6Zju8,1217
+porringer_core-0.1.1.dev8.dist-info/RECORD,,
