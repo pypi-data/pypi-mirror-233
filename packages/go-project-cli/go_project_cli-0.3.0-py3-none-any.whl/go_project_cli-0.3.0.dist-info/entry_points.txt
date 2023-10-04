@@ -1,0 +1,3 @@
+[console_scripts]
+projectcli=go_project_cli.main:app
+
