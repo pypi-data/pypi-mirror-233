@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: symposium
+Version: 0.0.3
+Summary: Interaction of multiple language models
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/multilogue/symposium
+Project-URL: Bug Tracker, https://github.com/multilogue/sumposium/issues
+Keywords: symposium,conversations,ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: PyGithub>=1.59.0
+Requires-Dist: urllib3>=1.26.16
+Requires-Dist: openai>=0.28.0
+Requires-Dist: tiktoken>=0.4.0
+Requires-Dist: boto3>=1.28.57
+
+# Symposium
+Interaction with multiple language models.
