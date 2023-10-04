@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "listdiff"
+version = "1.0.2"
+description = "Diff 2 python lists using a given key"
+authors = ["Rehan Khwaja <rehan@khwaja.name>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rkhwaja/pylistdiff"
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.1"
+pytest-cov = ">=2.9.0"
+poethepoet = ">=0.16.4"
+ruff = ">=0.0.288"
+
+[tool.poe.tasks]
+lint = "ruff src tests"
+
+[tool.poe.tasks.test]
+shell = """
+pytest --cov=src/listdiff || exit 1
+coverage xml
+"""
+
+[tool.ruff]
+line-length = 200
+ignore = ["ANN001", "ANN202", "ANN401", "D100", "D203", "D205", "D206", "D211", "D212", "D400", "D401", "D403", "D415", "N802", "I", "N803", "N806", "PT013", "S101", "TCH003", "W191"]
+select = ["ALL"]
+
+[tool.ruff.extend-per-file-ignores]
+"tests/*" = ["ANN201", "D103", "INP001", "PT006"]
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["poetry_core>=1.1"]
+build-backend = "poetry.core.masonry.api"
