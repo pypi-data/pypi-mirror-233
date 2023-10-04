@@ -1,0 +1,11 @@
+LICENSE.AGPLv3
+README.md
+pyproject.toml
+taggr/__init__.py
+taggr/cli.py
+taggr/sql.py
+taggr.egg-info/PKG-INFO
+taggr.egg-info/SOURCES.txt
+taggr.egg-info/dependency_links.txt
+taggr.egg-info/entry_points.txt
+taggr.egg-info/top_level.txt

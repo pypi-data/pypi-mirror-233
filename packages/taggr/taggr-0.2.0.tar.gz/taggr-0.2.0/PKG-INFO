@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: taggr
+Version: 0.2.0
+Summary: Tag anything with hierarchical tags and key/value pairs
+Author-email: Matheus Afonso Martins Moreira <matheus.a.m.moreira@gmail.com>
+Project-URL: Repository, https://github.com/matheusmoreira/taggr
+Project-URL: Issues, https://github.com/matheusmoreira/taggr/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Utilities
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.AGPLv3
+
+# Taggr
+
+Tag anything with hierarchical tags and key/value pairs.
+
+## Installation
+
+    pip install taggr
