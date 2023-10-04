@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/crash_mapping_tools/__init__.py
+src/crash_mapping_tools.egg-info/PKG-INFO
+src/crash_mapping_tools.egg-info/SOURCES.txt
+src/crash_mapping_tools.egg-info/dependency_links.txt
+src/crash_mapping_tools.egg-info/entry_points.txt
+src/crash_mapping_tools.egg-info/requires.txt
+src/crash_mapping_tools.egg-info/top_level.txt
