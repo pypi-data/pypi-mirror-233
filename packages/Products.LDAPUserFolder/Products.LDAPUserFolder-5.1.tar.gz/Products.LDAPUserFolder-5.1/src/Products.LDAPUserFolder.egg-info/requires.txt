@@ -1,0 +1,14 @@
+setuptools
+Zope>=5
+dataflake.cache
+dataflake.fakeldap
+python-ldap>=3.3
+
+[docs]
+Sphinx
+sphinx_rtd_theme
+repoze.sphinx.autointerface
+pkginfo
+
+[exportimport]
+Products.GenericSetup>=2.0b1
