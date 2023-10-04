@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fair-solaris
+Version: 0.4.2
+Summary: CosmiQ Works Geospatial Machine Learning Analysis Toolkit
+Home-page: https://github.com/CosmiQ/solaris
+Author: CosmiQ Works
+Author-email: nweir@iqt.org
+License: Apache-2.0
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: GIS
+Provides-Extra: test
+License-File: LICENSE.txt
