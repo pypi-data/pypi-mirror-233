@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: yapomo
+Version: 1.0.18
+Summary: yapomo - Yet Another Pomodoro Timer
+Author-email: João Dias <joao.alberto.ferreira.dias@gmail.com>
+License-File: LICENSE
+Keywords: pomodoro,timer,tkinter
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Scheduling
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# yapomo - Yet Another Pomodoro Timer
+
+This is a simple pomodoro timer to use during your work day, with a tkinter graphical interface.
