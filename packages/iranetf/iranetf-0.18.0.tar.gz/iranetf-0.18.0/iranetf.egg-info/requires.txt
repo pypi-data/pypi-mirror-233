@@ -1,0 +1,8 @@
+aiohttp[speedups]
+aiohutils>=0.11.0
+jdatetime>=4.1.0
+pandas>=2.1.0
+pyarrow
+
+[test]
+aiohutils[test]>=0.11.0
