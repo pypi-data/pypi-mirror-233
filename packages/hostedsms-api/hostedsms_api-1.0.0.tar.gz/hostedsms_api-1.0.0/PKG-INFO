@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: hostedsms-api
+Version: 1.0.0
+Summary: Python library for sending SMS via HostedSMS.pl
+Home-page: https://github.com/dcs-pl/hostedsms-python
+License: Apache v2 License
+Author: dcs.pl
+Author-email: info@dcs.pl
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: suds (>=1)
+Project-URL: Repository, https://github.com/dcs-pl/hostedsms-python
+Description-Content-Type: text/markdown
+
+HostedSMS API
+================
+
+API dla usługi wysyłki SMS - HostedSMS.pl
+
+Opis WebService dostępny jest pod adresem https://api.hostedsms.pl/WS/smssender.asmx
+
