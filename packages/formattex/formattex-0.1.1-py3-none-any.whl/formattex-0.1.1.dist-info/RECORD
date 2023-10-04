@@ -1,0 +1,12 @@
+formattex/__init__.py,sha256=QYTVYB9e4f5e1K482dAjIxlrEe-5uzHvc21_oieKPWM,2028
+formattex/intermediate_repr.py,sha256=9ZUA9y67Qcfy1mfwVhMOJD8pu1u_8250CexXU7HSq4g,9232
+formattex/nodes.py,sha256=rDhMbXN88INlpwUlBp7qh0DSJXIHpDTX5j05V2HcjvU,6567
+formattex/test_dump.py,sha256=ANT8ikY0sRxdsHBWCws5aaiEsVsEnF99ciWL41yt1gk,2399
+formattex/test_util.py,sha256=LDFBgDtIyn4BZK13MdhqNIvIVWmnrLDwdwiAWaoYNTI,230
+formattex/util.py,sha256=09eQAb8eywS-b_c6jaXm9YcaGhY62ldHUcohN4B5NNE,809
+formattex-0.1.1.dist-info/LICENSE.txt,sha256=Du_dtsNH3qbb9e42Fs94ObTyYVYblSvpf6Y8YesNjfg,1499
+formattex-0.1.1.dist-info/METADATA,sha256=bgK2Rmm61MGDQ7ITdP0a5sIND0ea1bOTdgKUrT_UJoQ,1916
+formattex-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+formattex-0.1.1.dist-info/entry_points.txt,sha256=ZAHpxxPKEbU549-ZwyXZc1SOJglf8rvgrZ9hFLxtQUc,45
+formattex-0.1.1.dist-info/top_level.txt,sha256=koeIOeHHpjiORmjA-QRb8BWsbhfepV6etZWtWQ7Cw-8,10
+formattex-0.1.1.dist-info/RECORD,,
