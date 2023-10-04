@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.py
+arabic_phonetiser/__init__.py
+arabic_phonetiser/phonetise_buckwalter.py
+arabic_phonetiser/symbols.py
+arabic_phonetiser.egg-info/PKG-INFO
+arabic_phonetiser.egg-info/SOURCES.txt
+arabic_phonetiser.egg-info/dependency_links.txt
+arabic_phonetiser.egg-info/requires.txt
+arabic_phonetiser.egg-info/top_level.txt
+tests/__init__.py
