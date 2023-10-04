@@ -1,0 +1,6 @@
+pyspnego==0.9.2
+requests-kerberos==0.14.0
+requests==2.26.0
+sortedcontainers==2.4.0
+urllib==1.26.7
+xmltodict
