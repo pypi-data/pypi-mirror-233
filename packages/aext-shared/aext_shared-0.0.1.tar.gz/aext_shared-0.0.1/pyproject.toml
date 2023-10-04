@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aext-shared"
+dynamic = ["version"]
+description = 'The aext-shared component of anaconda-toolbox'
+readme = "README.md"
+license = "BSD-3-Clause"
+
+[tool.hatch.version]
+path = "src/aext_shared/__init__.py"
