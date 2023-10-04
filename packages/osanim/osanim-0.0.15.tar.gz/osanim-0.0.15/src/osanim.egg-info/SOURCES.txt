@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/osanim/__init__.py
+src/osanim.egg-info/PKG-INFO
+src/osanim.egg-info/SOURCES.txt
+src/osanim.egg-info/dependency_links.txt
+src/osanim.egg-info/top_level.txt
+src/osanim/base/__init__.py
+src/osanim/base/api.py
+src/osanim/schoolz/__init__.py
+src/osanim/xone/__init__.py
