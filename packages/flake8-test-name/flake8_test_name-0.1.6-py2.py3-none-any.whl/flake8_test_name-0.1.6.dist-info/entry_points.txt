@@ -1,0 +1,3 @@
+[flake8.extension]
+TN = flake8_test_name:MyFlake8Plugin
+
