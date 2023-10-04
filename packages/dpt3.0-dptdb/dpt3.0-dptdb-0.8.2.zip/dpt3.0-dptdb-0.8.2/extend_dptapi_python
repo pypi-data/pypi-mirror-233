@@ -1,0 +1,9 @@
+// Start include extend_dptapi_python
+
+// Attempt to add & ^ | &= ^= |= operators for dpt::APIRecordList with %extend
+// removed as the methods did not work.
+// Keep include operation in case it proves useful later.
+
+// End include extend_dptapi_python
+
+
