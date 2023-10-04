@@ -1,0 +1,5 @@
+[console_scripts]
+mgpsogui = mgpsogui.gui.HomePage:start
+
+[setuptools.installation]
+eggsecutable = mgpsogui.gui.HomePage:start
