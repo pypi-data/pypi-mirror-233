@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+botipy/__init__.py
+botipy/cli.py
+botipy.egg-info/PKG-INFO
+botipy.egg-info/SOURCES.txt
+botipy.egg-info/dependency_links.txt
+botipy.egg-info/entry_points.txt
+botipy.egg-info/requires.txt
+botipy.egg-info/top_level.txt
