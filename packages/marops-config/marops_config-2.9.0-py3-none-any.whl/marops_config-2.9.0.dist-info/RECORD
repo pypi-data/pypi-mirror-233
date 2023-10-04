@@ -1,0 +1,9 @@
+marops_config/__init__.py,sha256=uoUT0AgNsmM54jvFLaBvm1UcEHUb2YqPlOBgZ-HNEzw,2152
+marops_config/generate_schemas.py,sha256=82ne2Np1XP5vLhJ0GcxuzKyC7wUOb_rWUdsoiuJVBNs,432
+marops_config/schemas/marops.schema.json,sha256=3TnvWGU6aB5cfGLn64KLD3Ya-ToLIuA4h7AJJguvAN8,638
+marops_config/test/marops_config_test.py,sha256=x9C1Mgcgb5njkPO6_msScvOL4z8OZumHOyXtBSUFxf0,72
+marops_config-2.9.0.dist-info/METADATA,sha256=DmkogNbZy1bTG9FhfMyhCj5XKbz7f15E_3P3Q1-Piwc,1259
+marops_config-2.9.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+marops_config-2.9.0.dist-info/top_level.txt,sha256=MOnpM-xjt3cP43siJYQkFkJW_-1koKKr0zcOZeItudA,14
+marops_config-2.9.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+marops_config-2.9.0.dist-info/RECORD,,
