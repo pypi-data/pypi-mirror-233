@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: ppath
+Version: 0.0.5
+Summary: Python Path
+Author-email: José Antonio Puértolas Montañés <63794670+j5pu@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/j5pu/ppath
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pproj
+Provides-Extra: dev
+Requires-Dist: pproj[all] ; extra == 'dev'
+
+# PPath
+
+[![PyPI](https://img.shields.io/pypi/v/ppath.svg)][pypi status]
+[![Status](https://img.shields.io/pypi/status/ppath.svg)][pypi status]
+[![Python Version](https://img.shields.io/pypi/pyversions/ppath)][pypi status]
+[![License](https://img.shields.io/pypi/l/ppath)][license]
+
+[![Read the documentation at https://sbit.readthedocs.io/](https://img.shields.io/readthedocs/ppath/latest.svg?label=Read%20the%20Docs)][read the docs]
+[![Tests](https://github.com/j5pu/ppath/workflows/Tests/badge.svg)][tests]
+[![Codecov](https://codecov.io/gh/j5pu/ppath/branch/main/graph/badge.svg)][codecov]
+
+[pypi status]: https://pypi.org/project/ppath/
+
+[read the docs]: https://ppath.readthedocs.io/
+
+[tests]: https://github.com/j5pu/ppath/actions?workflow=Tests
+
+[codecov]: https://app.codecov.io/gh/j5pu/ppath
+
+[pre-commit]: https://github.com/pre-commit/pre-commit
+
+[black]: https://github.com/psf/black
+
+## Features
+
+## Installation
+
+You can install _ppath_ via [pip] from [PyPI]:
+
+```console
+$ pip install ppath
+```
+
+## License
+
+Distributed under the terms of the [MIT license][license],
+_ppath_ is free and open source software.
+
+## Issues
+
+If you encounter any problems,
+please [file an issue] along with a detailed description.
+
+## Credits
+
+[@j5pu]: https://github.com/j5pu
+
+[pypi]: https://pypi.org/
+
+[file an issue]: https://github.com/j5pu/pproj/issues
+
+[pip]: https://pip.pypa.io/
+
+<!-- github-only -->
+
+[license]: https://github.com/j5pu/pproj/blob/main/LICENSE
