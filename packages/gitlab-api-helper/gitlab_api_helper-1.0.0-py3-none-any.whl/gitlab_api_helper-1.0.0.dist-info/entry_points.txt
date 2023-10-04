@@ -1,0 +1,2 @@
+[console_scripts]
+gitlab-api-helper = gitlab_api_helper.cmd:main
