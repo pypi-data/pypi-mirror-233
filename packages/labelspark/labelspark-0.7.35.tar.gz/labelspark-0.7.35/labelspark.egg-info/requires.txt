@@ -1,0 +1,8 @@
+labelbox[data]
+pyspark
+packaging
+labelbase
+delta-spark
+
+[dev]
+pylint
