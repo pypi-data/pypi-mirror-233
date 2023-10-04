@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dl2050nn
+Version: 1.0.80
+Summary: NN lib
+Home-page: https://github.com/jn2050/nn
+Download-URL: https://github.com/jn2050/nn/archive/v_1_0_80.tar.gz
+Author: João Neto
+Author-email: joao.filipe.neto@gmail.com
+License: MIT
+Keywords: Neural Networks
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE.txt
