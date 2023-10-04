@@ -1,0 +1,11 @@
+telegram_task/__init__.py,sha256=9No_FnJStnyd4h-s5lWfphZqUDtSiifCJqv_b9_ImH4,118
+telegram_task/line.py,sha256=bHG3ottumjoCmuZ4aBOTcvW27vnVakgfQwgHtZ51V04,7383
+telegram_task/president.py,sha256=FcqWaT-jZGmDNWKdCbrm5qt9hGFPSW4FcnNF543ttF0,22697
+telegram_task/samples.py,sha256=HqnING-3fYFCtkvHq1ByTroCX23qWdE20HJoeuFZ6Ks,2711
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_enterprise.py,sha256=w_0cqY987hxGtT7PzTFELmLt0XLOTRlZCUqQfL58Zlg,10462
+tests/test_line.py,sha256=Nj59-QQu4ervZUdW-uLGWXOuv_cvYWAIHJT7rhlwSCA,2858
+telegram_task-0.0.4.dist-info/METADATA,sha256=F3Y-WhS5YZpkr6DWsOsEG9ZxjXa45jWFTGkxuLXybwo,715
+telegram_task-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+telegram_task-0.0.4.dist-info/top_level.txt,sha256=G1rR6GDi2MZQ845sLBNG-ymPOW2UqC8ZswjSp4ozdZU,20
+telegram_task-0.0.4.dist-info/RECORD,,
