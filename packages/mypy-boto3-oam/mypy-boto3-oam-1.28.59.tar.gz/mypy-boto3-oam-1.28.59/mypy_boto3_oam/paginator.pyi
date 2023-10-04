@@ -1,0 +1,87 @@
+"""
+Type annotations for oam service client paginators.
+
+[Open documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/)
+
+Usage::
+
+    ```python
+    from boto3.session import Session
+
+    from mypy_boto3_oam.client import CloudWatchObservabilityAccessManagerClient
+    from mypy_boto3_oam.paginator import (
+        ListAttachedLinksPaginator,
+        ListLinksPaginator,
+        ListSinksPaginator,
+    )
+
+    session = Session()
+    client: CloudWatchObservabilityAccessManagerClient = session.client("oam")
+
+    list_attached_links_paginator: ListAttachedLinksPaginator = client.get_paginator("list_attached_links")
+    list_links_paginator: ListLinksPaginator = client.get_paginator("list_links")
+    list_sinks_paginator: ListSinksPaginator = client.get_paginator("list_sinks")
+    ```
+"""
+from typing import Generic, Iterator, TypeVar
+
+from botocore.paginate import PageIterator, Paginator
+
+from .type_defs import (
+    ListAttachedLinksOutputTypeDef,
+    ListLinksOutputTypeDef,
+    ListSinksOutputTypeDef,
+    PaginatorConfigTypeDef,
+)
+
+__all__ = ("ListAttachedLinksPaginator", "ListLinksPaginator", "ListSinksPaginator")
+
+_ItemTypeDef = TypeVar("_ItemTypeDef")
+
+class _PageIterator(Generic[_ItemTypeDef], PageIterator):
+    def __iter__(self) -> Iterator[_ItemTypeDef]:
+        """
+        Proxy method to specify iterator item type.
+        """
+
+class ListAttachedLinksPaginator(Paginator):
+    """
+    [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListAttachedLinks)
+    [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listattachedlinkspaginator)
+    """
+
+    def paginate(
+        self, *, SinkIdentifier: str, PaginationConfig: PaginatorConfigTypeDef = ...
+    ) -> _PageIterator[ListAttachedLinksOutputTypeDef]:
+        """
+        [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListAttachedLinks.paginate)
+        [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listattachedlinkspaginator)
+        """
+
+class ListLinksPaginator(Paginator):
+    """
+    [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListLinks)
+    [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listlinkspaginator)
+    """
+
+    def paginate(
+        self, *, PaginationConfig: PaginatorConfigTypeDef = ...
+    ) -> _PageIterator[ListLinksOutputTypeDef]:
+        """
+        [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListLinks.paginate)
+        [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listlinkspaginator)
+        """
+
+class ListSinksPaginator(Paginator):
+    """
+    [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListSinks)
+    [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listsinkspaginator)
+    """
+
+    def paginate(
+        self, *, PaginationConfig: PaginatorConfigTypeDef = ...
+    ) -> _PageIterator[ListSinksOutputTypeDef]:
+        """
+        [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/oam.html#CloudWatchObservabilityAccessManager.Paginator.ListSinks.paginate)
+        [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_oam/paginators/#listsinkspaginator)
+        """
