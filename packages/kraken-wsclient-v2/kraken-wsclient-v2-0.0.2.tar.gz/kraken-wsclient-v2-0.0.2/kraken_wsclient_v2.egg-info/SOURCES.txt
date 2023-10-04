@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+kraken_wsclient_v2/__init__.py
+kraken_wsclient_v2/kraken_wsclient_v2.py
+kraken_wsclient_v2.egg-info/PKG-INFO
+kraken_wsclient_v2.egg-info/SOURCES.txt
+kraken_wsclient_v2.egg-info/dependency_links.txt
+kraken_wsclient_v2.egg-info/not-zip-safe
+kraken_wsclient_v2.egg-info/requires.txt
+kraken_wsclient_v2.egg-info/top_level.txt
