@@ -1,0 +1,6 @@
+numpy
+PyFileIO
+RecarrayTools
+DateTimeTools>=1.1.0
+kpindex>=1.0.1
+pyomnidata>=1.0.1

@@ -1,0 +1,85 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{natbib}
+
+\usepackage[a4paper, margin=1in]{geometry}
+
+%opening
+\title{Magnetic Field Model Equations}
+\author{Matt James}
+
+\begin{document}
+\maketitle
+
+	
+\section{T89}
+
+	\subsection{Ring Current}
+	
+
+	\subsection{Tail Current Sheet}
+		\begin{align}
+			B_x = A_1B_{x1} + A_2B_{x2} + A_{16}B_{x3} + A_{17}B_{x4},\\
+			B_y = A_1B_{y1} + A_2B_{y2} + A_{16}B_{y3} + A_{17}B_{y4},\\
+			B_z = A_1B_{z1} + A_2B_{z2} + A_{16}B_{z3} + A_{17}B_{z4},
+		\end{align}
+	
+		\begin{align}
+			B_{x3} = B_{x1}\psi^2 \\
+			B_{x4} = B_{x2}\psi^2 \\
+			B_{y3} = B_{y1}\psi^2 \\
+			B_{y4} = B_{y2}\psi^2 \\
+			B_{z3} = B_{z1}\psi^2 \\
+			B_{z4} = B_{z2}\psi^2 
+		\end{align}
+	
+		\begin{align}
+			B_x = (A_1 + A_{16} \psi^2)B_{x1} + (A_2 + A_{17} \psi^2)B_{x2} \\
+			B_y = (A_1 + A_{16} \psi^2)B_{y1} + (A_2 + A_{17} \psi^2)B_{y2} \\
+			B_z = (A_1 + A_{16} \psi^2)B_{z1} + (A_2 + A_{17} \psi^2)B_{z2} 
+		\end{align}
+	
+		\begin{align}
+			B_{x1} =& B_{x}^{(C1)}\cos{\psi} + B_{z}^{(C1)}\sin{\psi} \\
+			B_{x2} =& B_{x}^{(C2)}\cos{\psi} + B_{z}^{(C2)}\sin{\psi} \\
+			B_{y1} =& Q_T^{(C1)} y z_r \\
+			B_{y2} =& Q_T^{(C2)} y z_r \\
+			B_{z1} =& B_{z}^{(C1)}\cos{\psi} - B_{x}^{(C1)}\sin{\psi} \\
+			B_{z2} =& B_{z}^{(C2)}\cos{\psi} - B_{x}^{(C2)}\sin{\psi} 
+		\end{align}
+	
+		\begin{align}
+			Q_T =& \frac{W(x,y)}{\xi_T S_T}\left[\frac{C_1}{S_T + a_T + \xi_T} + \frac{C_2}{S_T^2} \right] \\
+			=& Q_T^{(C1)} C_1 + Q_T^{(C2)} C_2 \\
+			Q_T^{(C1)} =& \frac{W(x,y)}{\xi_T S_T(S_T + a_T + \xi_T)} \\
+			Q_T^{(C2)} =& \frac{W(x,y)}{\xi_T S_T^3} \\
+			S_T =& \sqrt{\rho^2 + (a_T + \xi_T)^2} \\
+			\xi_T =& \sqrt{z_r^2 + D_T^2} \\
+			z_r =& z - z_s(x,y,\psi) \\
+			z_s(x,y,\psi) =& 0.5\tan{\psi}(x + R_c - \sqrt{(x + R_c)^2 + 16}) - G\sin{\psi}\cdot y^4(y^4 + L_y^4)^{-1} \\
+			\frac{\partial z_s}{x} =& 0.5\tan{\psi}\left[1 - \frac{x + R_c}{\sqrt{(x + R_c)^2 + 16}}\right] \\
+			\frac{\partial z_s}{\partial y} =& \frac{4 G y^3L_y^4\sin{\psi}}{(y^4 + L_y^4)^2} \\
+			D_T =& D_0 + \delta y^2+ \gamma_T h_T(x) [ + \gamma_1 h_1(x) \text{ not included}] \\
+			\frac{\partial D_T}{\partial x} =& \frac{\gamma_T L_T^2}{2(x^2 + L_T^2)^{2/3}} \\
+			\frac{\partial D_T}{\partial y} =& 2 \delta y
+		\end{align}
+	
+		\begin{align}
+			B_x^{(C1)} = Q_T^{(C1)} x z_r \\
+			B_x^{(C2)} = Q_T^{(C1)} x z_r 
+		\end{align}
+	
+		\begin{align}
+			B_z^{(C1)} = \frac{W(x,y)}{S_T} + \frac{x\frac{\partial W}{\partial x} + y\frac{\partial W}{\partial y}}{S_T + a_T + \xi_T} + B_x^{(C1)}\frac{\partial z_s}{\partial x} + B_y^{(C1)} \frac{\partial z_s}{\partial _y} - Q_T^{(C1)} D_T\left( x\frac{\partial D_T}{\partial x} + y\frac{\partial D_T}{\partial y}\right) \\
+			B_z^{(C2)} = \frac{W(x,y)(a_T + \xi_T)}{S_T^3} + \frac{x\frac{\partial W}{\partial x} + y\frac{\partial W}{\partial y}}{S_T(S_T + a_T + \xi_T)} + B_x^{(C2)}\frac{\partial z_s}{\partial x} + B_y^{(C2)} \frac{\partial z_s}{\partial _y} - Q_T^{(C2)} D_T\left( x\frac{\partial D_T}{\partial x} + y\frac{\partial D_T}{\partial y}\right)
+		\end{align}
+	
+
+
+
+
+\bibliographystyle{agufull08}
+\bibliography{ref}
+\end{document}

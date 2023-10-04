@@ -1,0 +1,6 @@
+[submodule "lib/datetime"]
+	path = lib/datetime
+	url = https://github.com/mattkjames7/datetime
+[submodule "lib/libspline"]
+	path = lib/libspline
+	url = https://github.com/mattkjames7/libspline
