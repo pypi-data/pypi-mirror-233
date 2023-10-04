@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+tests/test_universities_api_wrapper.py
+universities_api_wrapper/__init__.py
+universities_api_wrapper.egg-info/PKG-INFO
+universities_api_wrapper.egg-info/SOURCES.txt
+universities_api_wrapper.egg-info/dependency_links.txt
+universities_api_wrapper.egg-info/requires.txt
+universities_api_wrapper.egg-info/top_level.txt
