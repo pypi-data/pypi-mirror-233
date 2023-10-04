@@ -1,0 +1,7 @@
+DCLS/__init__.py,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+DCLS/construct/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DCLS/construct/modules.py,sha256=QQwONu54Ayz35iEuLO0Yd23wowQK6isntYqcEUhqCro,35886
+dcls-0.0.6.dist-info/METADATA,sha256=GHCb6zuX1XCrgLe_F2ZFQlIKH01RejHoymrUzwxgyCI,10226
+dcls-0.0.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+dcls-0.0.6.dist-info/licenses/LICENSE,sha256=BaAA-sytwl3hLcTNIKHuKeqE1ykUj-pux0jQlzfGXns,1067
+dcls-0.0.6.dist-info/RECORD,,
