@@ -1,0 +1,8 @@
+README.md
+setup.py
+hue_shift/__init__.py
+hue_shift/main.py
+hue_shift.egg-info/PKG-INFO
+hue_shift.egg-info/SOURCES.txt
+hue_shift.egg-info/dependency_links.txt
+hue_shift.egg-info/top_level.txt
