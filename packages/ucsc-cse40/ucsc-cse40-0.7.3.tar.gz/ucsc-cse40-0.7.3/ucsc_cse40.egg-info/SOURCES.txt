@@ -1,0 +1,9 @@
+README.md
+setup.py
+/home/eriq/code/cse40/ucsc-cse40/LICENSE.txt
+cse40/__init__.py
+ucsc_cse40.egg-info/PKG-INFO
+ucsc_cse40.egg-info/SOURCES.txt
+ucsc_cse40.egg-info/dependency_links.txt
+ucsc_cse40.egg-info/requires.txt
+ucsc_cse40.egg-info/top_level.txt
