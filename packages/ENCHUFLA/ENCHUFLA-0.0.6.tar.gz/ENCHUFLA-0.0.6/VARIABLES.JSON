@@ -1,0 +1,15 @@
+{
+	"VERSION": "0.0.6",
+	"NAME": "ENCHUFLA",
+	"INSTALL_REQUIRES": [
+		"BOTANIST",
+
+		"click",
+		"ecdsa",
+		"flask",
+		"pycryptodome",
+		"qrcode"	
+	]
+}
+
+
