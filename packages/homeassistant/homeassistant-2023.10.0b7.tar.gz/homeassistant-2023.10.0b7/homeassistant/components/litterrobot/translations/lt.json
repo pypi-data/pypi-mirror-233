@@ -1,0 +1,20 @@
+{
+    "entity": {
+        "select": {
+            "brightness_level": {
+                "state": {
+                    "high": "Auk\u0161tas",
+                    "low": "\u017demas",
+                    "medium": "Vidutinis"
+                }
+            }
+        },
+        "sensor": {
+            "status_code": {
+                "state": {
+                    "off": "I\u0161jungta"
+                }
+            }
+        }
+    }
+}
