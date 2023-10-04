@@ -1,0 +1,2 @@
+[console_scripts]
+realpython = glutamate.__main__:main
