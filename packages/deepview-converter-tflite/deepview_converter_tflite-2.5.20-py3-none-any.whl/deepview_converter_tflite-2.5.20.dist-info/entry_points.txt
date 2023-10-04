@@ -1,0 +1,3 @@
+[deepview_converter]
+converter = deepview_tensorflow.__main__
+

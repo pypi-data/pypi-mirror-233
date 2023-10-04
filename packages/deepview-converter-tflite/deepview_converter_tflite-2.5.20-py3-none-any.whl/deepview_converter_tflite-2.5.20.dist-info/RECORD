@@ -1,0 +1,10 @@
+deepview_tensorflow/__main__.py,sha256=Vvl437p0OpuJuclG_34m3ZUM2OJuUCKSzpuzgF61QGE,3756
+deepview_tensorflow/conversion_tflite.py,sha256=7fB0FdPt93cvlb412y_5ML4PPpVeIwBYcRhMQr0wJQY,25193
+deepview_tensorflow/assets/image.png,sha256=YfktajqzQs80Dt4YWn5jkFuxKveKO03TnKhYTD6pfEo,91582
+deepview_tensorflow/assets/info.html,sha256=2rtAY_bbLhlmpvYPRj81_9nI6P1q87z7PbMtTSoDPqQ,152
+deepview_converter_tflite-2.5.20.dist-info/LICENSE.txt,sha256=IPpj6zmmOzW9koUZDrw5hAjqEyL9Co5kJ56-V9cTFWQ,11716
+deepview_converter_tflite-2.5.20.dist-info/METADATA,sha256=zUsDMhrSiBqVdGJvdY60FL7-hDpY4KJm1WEAl0vQIYA,444
+deepview_converter_tflite-2.5.20.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+deepview_converter_tflite-2.5.20.dist-info/entry_points.txt,sha256=KJWO_bgP-LIM2R2-ckGMAsm0zLAorOSB9kzzo5vVPGc,63
+deepview_converter_tflite-2.5.20.dist-info/top_level.txt,sha256=__Biwnt2kt_dl6MSvpi8Ttl_CYwFUIJn0jH_lw4QG6k,20
+deepview_converter_tflite-2.5.20.dist-info/RECORD,,
