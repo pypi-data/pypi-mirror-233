@@ -1,0 +1,7 @@
+setup.py
+elasticsearch_fulltrack.egg-info/PKG-INFO
+elasticsearch_fulltrack.egg-info/SOURCES.txt
+elasticsearch_fulltrack.egg-info/dependency_links.txt
+elasticsearch_fulltrack.egg-info/top_level.txt
+elasticsearch_fulltrack_package/__init__.py
+elasticsearch_fulltrack_package/elastic_search.py
