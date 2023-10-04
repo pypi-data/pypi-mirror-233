@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rp-poetry
+Version: 0.1.0
+Summary: 
+Author: Aadam Khan
+Author-email: ak36@sanger.ac.uk
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: gspread (>=5.11.3,<6.0.0)
+Requires-Dist: pandas (>=2.1.1,<3.0.0)
+Requires-Dist: xlsxwriter (>=3.1.6,<4.0.0)
+Description-Content-Type: text/markdown
+
+
