@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "cryton-worker"
+version = "1.1.1"
+description = "Attack scenario orchestrator for Cryton"
+authors = [
+    "Ivo Nutár <nutar@ics.muni.cz>",
+    "Milan Boháček <bohacek@ics.muni.cz>",
+    "Jiří Rája <raja@ics.muni.cz>",
+    "Andrej Tomči <tomci@ics.muni.cz>"
+]
+maintainers = [
+    "Jiří Rája <raja@ics.muni.cz>",
+    "Milan Boháček <bohacek@ics.muni.cz>"
+]
+license = "MIT"
+homepage = "https://gitlab.ics.muni.cz/cryton"
+repository = "https://gitlab.ics.muni.cz/cryton/cryton-worker"
+documentation = "https://cryton.gitlab-pages.ics.muni.cz/cryton-documentation/"
+keywords = [
+    "cryton", "worker", "orchestrator", "attacker"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<3.12"
+pymetasploit3 = "^1.0.3"
+amqpstorm = "^2.10.4"
+structlog = "^22.3.0"
+schema = "^0.7.5"
+click = "^8.1.2"
+bottle = "^0.12.19"
+pyfiglet = "^0.8.post1"
+paramiko = "^3.0.0"
+requests = "^2.28.2"
+utinni-fork = "^0.5.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+pytest-asyncio = "^0.16.0"
+pytest-mock = "^3.6.1"
+tox = "^4.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cryton-worker = 'cryton_worker.lib.cli:cli'
+
+[tool.pytest.ini_options]
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
