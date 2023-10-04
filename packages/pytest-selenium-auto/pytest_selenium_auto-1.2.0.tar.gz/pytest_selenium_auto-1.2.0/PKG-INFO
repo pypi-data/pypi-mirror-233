@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pytest-selenium-auto
+Version: 1.2.0
+Summary: pytest plugin to automatically capture screenshots upon selenium webdriver events
+Keywords: pytest,selenium,webtest,webtesting
+Author-email: Harmin Parra Rueda <harmin.rueda@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Framework :: Pytest
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: pytest >= 7.0.0
+Requires-Dist: pytest-html >= 3.2.0
+Requires-Dist: pytest-metadata >= 3.0.0
+Requires-Dist: pyyaml >= 5.3.1
+Requires-Dist: selenium >= 4.11.0
+Project-URL: Documentation, https://pytest-selenium-auto.readthedocs.io/en/1.2.x/
+Project-URL: Homepage, https://pypi.org/project/pytest-selenium-auto
+Project-URL: Source, https://github.com/harmin-parra/pytest-selenium-auto
+
+# pytest-selenium-auto
+
+Pytest plugin to automatically capture screenshots upon selenium webdriver events.
+
+![](https://img.shields.io/badge/license-MIT%202.0-blue.svg)
+
+## Resources ##
+
+- [Documentation](https://pytest-selenium-auto.readthedocs.io/en/1.1.x/)
+- [Issue tracker](https://github.com/harmin-parra/pytest-selenium-auto/issues)
+- [Source code](https://github.com/harmin-parra/pytest-selenium-auto)
+
+<br/>
+
+If you like this software, consider contributing to the project through [buy me a coffee](https://www.buymeacoffee.com/harmin)
+
