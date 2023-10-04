@@ -1,0 +1,8 @@
+setup.py
+RocketAI.egg-info/PKG-INFO
+RocketAI.egg-info/SOURCES.txt
+RocketAI.egg-info/dependency_links.txt
+RocketAI.egg-info/requires.txt
+RocketAI.egg-info/top_level.txt
+rocketai/__init__.py
+rocketai/rocket.py
