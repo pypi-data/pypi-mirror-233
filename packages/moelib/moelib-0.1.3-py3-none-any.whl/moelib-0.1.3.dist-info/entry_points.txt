@@ -1,0 +1,3 @@
+[console_scripts]
+moelib=moelib.__main__:main
+
