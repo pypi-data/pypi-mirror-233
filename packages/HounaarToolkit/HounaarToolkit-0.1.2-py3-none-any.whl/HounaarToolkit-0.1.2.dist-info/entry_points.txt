@@ -1,0 +1,2 @@
+[console_scripts]
+hounaartoolkit = hounaartoolkit.__init__:main
