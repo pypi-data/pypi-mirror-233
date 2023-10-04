@@ -1,0 +1,61 @@
+[project]
+name = "gemseo-calibration"
+authors = [
+    {name = "Matthias De Lozzo", email = "contact@gemseo.org"}
+]
+description = "Capability to calibrate GEMSEO disciplines from data."
+license = {text = "GNU Lesser General Public License v3"}
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dynamic = ["version"]
+requires-python = ">=3.8, <3.11"
+dependencies = [
+    "gemseo[all] >=5",
+    "matplotlib",
+    "numpy",
+]
+
+[project.optional-dependencies]
+test = [
+    "covdefaults",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/gemseo"
+Source = "https://gitlab.com/gemseo/dev/gemseo-calibration"
+Tracker = "https://gitlab.com/gemseo/dev/gemseo-calibration/-/issues"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[build-system]
+requires = [
+    "setuptools",
+    "setuptools_scm[toml]",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+license-files = [
+    "LICENSE.txt",
+    "CREDITS.md",
+]
+
+[tool.black]
+target-version = ['py38']

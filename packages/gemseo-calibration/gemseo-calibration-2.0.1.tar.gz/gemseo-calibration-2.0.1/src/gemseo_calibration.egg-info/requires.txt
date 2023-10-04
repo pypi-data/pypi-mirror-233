@@ -1,0 +1,9 @@
+gemseo[all]>=5
+matplotlib
+numpy
+
+[test]
+covdefaults
+pytest
+pytest-cov
+pytest-xdist
