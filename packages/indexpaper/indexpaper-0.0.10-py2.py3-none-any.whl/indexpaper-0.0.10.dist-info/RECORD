@@ -1,0 +1,14 @@
+indexpaper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+indexpaper/evaluate.py,sha256=psi7od_toPiD5zFljNCrtjHY2sJBajqsC28NQ6c84OQ,1995
+indexpaper/index.py,sha256=gGb6RKP1SME7iaj05G-ovWb5H1804UpHaGNSwAeTcM8,6687
+indexpaper/indexing.py,sha256=0JQ7PgUaOUGZ8ZsytZ2PtCFQn92IaqOyfvTnCTBRDxY,11483
+indexpaper/paperset.py,sha256=sg57mKFaTdpkJRWPi7JKMyd5_TURxppOqBMYZGAp1fI,8791
+indexpaper/resolvers.py,sha256=ttia2pvyPAo8KXpWOApvT83s5uUQhX5sT1mmnWDyMqc,5992
+indexpaper/splitting.py,sha256=O9Z3vzi0AWslXS4ph4wBuuPTAXZIdeqf0KAXlk_npLg,6173
+indexpaper/utils.py,sha256=ggYw_2cl338APN9XeFFDC5x-TM4AhMN_7iL2iWgxZFE,887
+indexpaper-0.0.10.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+indexpaper-0.0.10.dist-info/METADATA,sha256=XDRnKfbN9geUS8zbj_351oSCARgokJcv0wA4NDVlA_8,6777
+indexpaper-0.0.10.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+indexpaper-0.0.10.dist-info/entry_points.txt,sha256=q4RwpZDZov8f5Tq157V6HHSXC4GlgBMoXeYgoOxWtCA,47
+indexpaper-0.0.10.dist-info/top_level.txt,sha256=LNEhvzmMaEs6myZfsWekY__eINP_FUP5c_433VPssUM,11
+indexpaper-0.0.10.dist-info/RECORD,,
