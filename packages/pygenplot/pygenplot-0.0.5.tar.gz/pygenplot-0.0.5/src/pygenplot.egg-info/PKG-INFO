@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: pygenplot
+Version: 0.0.5
+Summary: A software for plotting data
+Home-page: UNKNOWN
+Author: E.C. Pellegrini
+Author-email: pellegrini@ill.fr
+Maintainer: E.C. Pellegrini, R. Perenon
+Maintainer-email: pellegrini@ill.fr, perenon@ill.fr
+License: GPL 3
+Description: pygenplot is a software used for plotting data based on netCDF or HDF file format.
+Platform: Unix
+Platform: Windows

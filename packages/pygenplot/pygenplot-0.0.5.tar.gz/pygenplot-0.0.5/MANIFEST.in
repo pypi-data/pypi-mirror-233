@@ -1,0 +1,8 @@
+graft src/pygenplot
+
+include README.md
+include CHANGELOG.md
+include CONTRIBUTORS.md LICENSE
+include requirements.txt
+
+global-exclude __pycache__
