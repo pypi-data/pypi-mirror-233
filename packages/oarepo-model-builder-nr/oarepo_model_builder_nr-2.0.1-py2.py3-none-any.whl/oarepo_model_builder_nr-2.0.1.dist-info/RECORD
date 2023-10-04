@@ -1,0 +1,16 @@
+oarepo_model_builder_nr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oarepo_model_builder_nr/version.py,sha256=wAxkK8w13vqoF47A8iqWdSlIgRRXmZiQ0R4wePZfzhs,22
+oarepo_model_builder_nr/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oarepo_model_builder_nr/models/nr_common_metadata-2.0.yaml,sha256=6Vg0iZO_Ek5BwAcyHU4dFK_oz5bVAVgYxsIIE75KsN8,8583
+oarepo_model_builder_nr/models/nr_common_metadata_2.0.yaml,sha256=6Vg0iZO_Ek5BwAcyHU4dFK_oz5bVAVgYxsIIE75KsN8,8583
+oarepo_model_builder_nr/models/nr_datatypes-2.0.yaml,sha256=xeLTEvowhU9VstYf_Khgk1PhZ8505lil3rtOn3BHDBg,17300
+oarepo_model_builder_nr/models/nr_datatypes_2.0.yaml,sha256=xeLTEvowhU9VstYf_Khgk1PhZ8505lil3rtOn3BHDBg,17300
+oarepo_model_builder_nr/models/nr_documents-2.0.yaml,sha256=2fO5unbjoItmZ9je0VQO6AtNmIvRtg5Fc1cAw4nmsLc,2415
+oarepo_model_builder_nr/models/nr_documents_2.0.yaml,sha256=2fO5unbjoItmZ9je0VQO6AtNmIvRtg5Fc1cAw4nmsLc,2415
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_import.py,sha256=hwKTnlNNCJeWiLCFlEAyVY4ivmfBTZWy9SiXDRGKg14,1432
+oarepo_model_builder_nr-2.0.1.dist-info/METADATA,sha256=wdZwBIvxt2TJpBCtN8T8EpeKS1nHChr7HoAhXxTBgcY,3213
+oarepo_model_builder_nr-2.0.1.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+oarepo_model_builder_nr-2.0.1.dist-info/entry_points.txt,sha256=cfMGtBwWI-eMsc7N8JT2RLiNMkUaaN1Jmr0km9O1Els,232
+oarepo_model_builder_nr-2.0.1.dist-info/top_level.txt,sha256=NdbTgVEgvgXs64so1sJ4FxYM6XmkDCXYUY_kqw9QGDo,30
+oarepo_model_builder_nr-2.0.1.dist-info/RECORD,,
