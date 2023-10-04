@@ -1,0 +1,9 @@
+arabic_phonetiser/__init__.py,sha256=mZDduPUjLbW3ChWs7eNKXeAcXNcUSlFTEjJBU2Nn2YY,2433
+arabic_phonetiser/phonetise_buckwalter.py,sha256=6YW86QhaXqA1dO5E_bgkVgggLV1QBWwoUKcF_4NdnRQ,17611
+arabic_phonetiser/symbols.py,sha256=vV71Aspcfc7Mtm-HqFG4BAxeehYblJwHIK51dtWOFuw,1314
+tests/__init__.py,sha256=NJ9WNKmibi1zmcXbD6hhoy4xgv7wOvKf3tV-keArAVc,489
+arabic_phonetiser-1.0.3.dist-info/LICENSE.md,sha256=CrCdoeH6mgv3q8KPP5lihemc4bwlwPMPojCd8Rp4iHE,1199
+arabic_phonetiser-1.0.3.dist-info/METADATA,sha256=3TQlaQ2EXaKlQMA5LWSqxYnx0w4eHripsFjyIU5hfZE,360
+arabic_phonetiser-1.0.3.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+arabic_phonetiser-1.0.3.dist-info/top_level.txt,sha256=GWYfQvQYhZ5KvV3I1A7i38u29e53qsDY26XeRvt1M-4,24
+arabic_phonetiser-1.0.3.dist-info/RECORD,,
