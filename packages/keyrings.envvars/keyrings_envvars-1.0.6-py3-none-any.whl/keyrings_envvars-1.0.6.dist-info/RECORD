@@ -1,0 +1,12 @@
+keyrings/envvars/__init__.py,sha256=_n0O7jvwp9XgFyH_cX0lKEMVnaeTNqs6UzGAvnGohRM,76
+keyrings/envvars/keyring.py,sha256=p_0H-3wpyN6AqSD0_w8l9JwY8LTQm7nP8R6AIqxLHUM,3602
+keyrings/envvars/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyrings/envvars/tests/__init__.py,sha256=hS_CWa8w0N2pqXI3ss8YTYJQL4dvnx0FHxq7Ratr3NE,30
+keyrings/envvars/tests/conftest.py,sha256=dYe__MbQ9b-4ExVO0-5AWvSJhYs2iZgA3S00hh3vDnM,1774
+keyrings/envvars/tests/keyring_test.py,sha256=5wAK7yZnT9sbCZB9QpWLwUKe6SUrC4VUm6Hd6DisrZM,2919
+keyrings/envvars/tests/keyrings_envvars_test.py,sha256=mvn6A7x_y2ST8Dj5NqRxy99FbSam6VrRccPOqTUOqxs,6866
+keyrings_envvars-1.0.6.dist-info/LICENSE,sha256=6OuhVOjZzumZd3tC9Eol42AH5BQfwOZBVwfp01_w8LY,1078
+keyrings_envvars-1.0.6.dist-info/METADATA,sha256=3EfpsxReruIfsiGMjSgdPZFw33lEvGpSuEHjVdly-74,4862
+keyrings_envvars-1.0.6.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+keyrings_envvars-1.0.6.dist-info/entry_points.txt,sha256=m64pBl3fOX1CbVjNEG2OLPRiC8N33NhtGXcEgDe0N5Y,68
+keyrings_envvars-1.0.6.dist-info/RECORD,,
