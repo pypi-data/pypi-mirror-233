@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: universities-api-wrapper
+Version: 0.0.5
+Summary: Universities API Wrapper
+Home-page: https://github.com/jremes-foss/universities-api-wrapper/
+Download-URL: https://github.com/jremes-foss/universities-api-wrapper/archive/refs/tags/0.0.5.tar.gz
+Author: Juha Remes
+Author-email: jremes@outlook.com
+Keywords: python,api,wrapper,education,universities
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: mock
+
+Python package for consuming universities-domains-list API
