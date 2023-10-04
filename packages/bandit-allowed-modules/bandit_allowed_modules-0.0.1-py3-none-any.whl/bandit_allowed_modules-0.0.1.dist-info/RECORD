@@ -1,0 +1,8 @@
+bandit_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bandit_plugins/allow_selected_modules.py,sha256=vYANUVml6Gh6VT8K_AzGFdtxpnSNeR2RLMxP0NzhHfE,936
+bandit_allowed_modules-0.0.1.dist-info/AUTHORS,sha256=YJ7iChcrYEQm8bYIY-qy_r7k07K3dSP_k-wee5V97GI,65
+bandit_allowed_modules-0.0.1.dist-info/METADATA,sha256=pwSHiFBrOm5_92ohxQgNMEiDxOjsATN2yXZ5km9BtFs,247
+bandit_allowed_modules-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bandit_allowed_modules-0.0.1.dist-info/entry_points.txt,sha256=Ol4LaIZ8BdjkXSECxkShL_O9jwaPObsLVttq2sC56_w,88
+bandit_allowed_modules-0.0.1.dist-info/top_level.txt,sha256=1Nny26j3pa9V9iba0XSGo_wCj4uxlaYEaA1qOx_BJuQ,15
+bandit_allowed_modules-0.0.1.dist-info/RECORD,,
