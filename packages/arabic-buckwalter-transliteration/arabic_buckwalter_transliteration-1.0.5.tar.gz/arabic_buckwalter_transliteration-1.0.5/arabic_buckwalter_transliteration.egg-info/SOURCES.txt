@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+arabic_buckwalter_transliteration/__init__.py
+arabic_buckwalter_transliteration/transliteration.py
+arabic_buckwalter_transliteration.egg-info/PKG-INFO
+arabic_buckwalter_transliteration.egg-info/SOURCES.txt
+arabic_buckwalter_transliteration.egg-info/dependency_links.txt
+arabic_buckwalter_transliteration.egg-info/top_level.txt
+tests/__init__.py
+tests/test_transliteration.py
