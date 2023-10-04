@@ -1,0 +1,9 @@
+README.md
+setup.py
+easymongodb/__init__.py
+easymongodb/easymongodb.py
+easymongodb.egg-info/PKG-INFO
+easymongodb.egg-info/SOURCES.txt
+easymongodb.egg-info/dependency_links.txt
+easymongodb.egg-info/requires.txt
+easymongodb.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+A package to make it a bit simpler to communicate with MongoDB within Python.
