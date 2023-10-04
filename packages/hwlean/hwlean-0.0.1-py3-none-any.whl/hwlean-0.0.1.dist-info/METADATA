@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: hwlean
+Version: 0.0.1
+Summary: My first Python package
+Author: William Dennis
+Author-email: wwdennis.home@gmail.com
+Keywords: python,first package
+License-File: LICENSE
+Requires-Dist: hwlearn
+Requires-Dist: numpy
+
+My first Python package with a slightly longer description
