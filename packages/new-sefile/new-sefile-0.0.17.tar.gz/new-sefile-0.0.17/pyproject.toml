@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "new-sefile"
+version = "0.0.17"
+authors = [
+  { name="Faisal Ramadhan", email="faisalramadhan1299@gmail.com" },
+]
+description = "CLI tool for searching file in your PC"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/Kolong-Meja/search-cli"
+"Bug Tracker" = "https://github.com/Kolong-Meja/search-cli/issues"
+
+[project.scripts]
+sefile = "sefile.app:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ['requirements.txt']}
