@@ -1,0 +1,28 @@
+[
+  {
+    "text": "Peux tu \u00e9crire un article de presse concernant: s\u00e9isme de magnitude 7,8 a frapp\u00e9 la Turquie",
+    "identifier": "1",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "Titre: Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, causant des destructions massives\n\n(Sous-titre) Le tremblement de terre a caus\u00e9 des pertes humaines et des dommages consid\u00e9rables dans plusieurs r\u00e9gions du pays.\n\nDate: [Date]\n\n[Localisation], Turquie - Un s\u00e9isme d'une magnitude de 7,8 a frapp\u00e9 violemment la Turquie aujourd'hui, provoquant des destructions massives et causant la mort d'un nombre\nTitre : Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, causant des pertes humaines et des d\u00e9g\u00e2ts mat\u00e9riels consid\u00e9rables.\n\nISTANBUL - Un s\u00e9isme d'une magnitude de 7,8 sur l'\u00e9chelle de Richter a frapp\u00e9 la Turquie t\u00f4t ce matin, provoquant une sc\u00e8ne de chaos et de destruction dans plusieurs villes du pays. Les secouristes sont en \u00e9tat d'alerte maximale pour venir en aide aux personnes pr\nTitre : Un s\u00e9isme d\u00e9vastateur de magnitude 7,8 frappe la Turquie, laissant des sc\u00e8nes de destruction et de deuil\n\nIstanbul, Turquie - Dans la nuit de vendredi, un violent s\u00e9isme de magnitude 7,8 a secou\u00e9 le sol de la Turquie, laissant une tra\u00een\u00e9e de destruction, de trag\u00e9die et de deuil. Les secouristes sont actuellement mobilis\u00e9s pour retrouver les survivants parmi les d\u00e9combres tandis que le bilan des"
+      }
+    ]
+  },
+  {
+    "text": "Peux tu me donner des phrases similaires \u00e0: j'habite dans une maison",
+    "identifier": "2",
+    "metadata": {
+      "language": "fr"
+    },
+    "altTexts": [
+      {
+        "name": "completion",
+        "text": "1. Ma r\u00e9sidence est situ\u00e9e dans une maison.\n2. Je r\u00e9side dans une habitation qui est une maison.\n3. Mon domicile se trouve dans une demeure qui est une maison.\n4. Je vis dans une propri\u00e9t\u00e9 qui est une maison.\n5. Ma localisation est une maison.\n6. Je loge dans une habitation de type maison.\n7. Ma situation g\u00e9ographique est une maison.\n8. Je suis \u00e9tabli(e) dans une construction qui est une maison.\n9. Mon cadre de vie est une maison.\n10. Je deme\n- Je r\u00e9side dans une maison.\n- Ma r\u00e9sidence est situ\u00e9e dans une maison.\n- Mon domicile est une maison.\n- Je vis dans une maison.\n- Ma demeure est une maison.\n- Mon logement se trouve dans une maison.\n- Ma place de r\u00e9sidence est une maison.\n- Mon lieu d'habitation est une maison.\n- J'ai \u00e9tabli ma vie dans une maison.\n- Mon adresse est une maison.\n- Ma r\u00e9sidence principale se situe dans une maison.\n- Je r\u00e9side dans une maison.\n- Mon domicile est une maison.\n- Ma demeure est une maison.\n- Je suis install\u00e9(e) dans une maison.\n- Mon lieu de vie est une maison.\n- Ma propri\u00e9t\u00e9 est une maison.\n- Je loge dans une maison.\n- Je suis \u00e9tabli(e) dans une maison."
+      }
+    ]
+  }
+]
