@@ -1,0 +1,5 @@
+torch2jax/__init__.py,sha256=z3sNAsVAPatInZ5O2rNNni44NLciesH0FbGL_9MIK-c,17419
+torch2jax-0.0.1.dist-info/METADATA,sha256=Oa0Xs50WTXjzAD04X_6n-vYXW810PxbEtjqq3zk5eXQ,5733
+torch2jax-0.0.1.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+torch2jax-0.0.1.dist-info/top_level.txt,sha256=SYqXudQaw1WmJpTtkstjzLN-KpZ07MjFPxSLc6_Xass,10
+torch2jax-0.0.1.dist-info/RECORD,,
