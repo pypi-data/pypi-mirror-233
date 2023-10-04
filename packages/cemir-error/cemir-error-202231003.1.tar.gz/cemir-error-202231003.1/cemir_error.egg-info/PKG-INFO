@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cemir-error
+Version: 202231003.1
+Summary: Catching and Detailing Python/PyPy Errors with Colored Print
+Home-page: https://github.com/muslu/cemir_error
+Author: muslu yüksektepe
+Author-email: musluyuksektepe@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cemir_error
+Catching and Detailing Python/PyPy Errors with Colored Print
+
+
