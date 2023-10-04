@@ -1,0 +1,16 @@
+msrc/appconfig/__init__.py,sha256=yBM-37RTQvRQ3YVBH6dUxB7BXwMyN7mNaoH3R6q2hh8,12772
+msrc/appconfig/decl.py,sha256=whk-wNYDZzYUPeL2ixEq2RNImdyaLkkMyKZ1Yeckb4A,483
+msrc/appconfig/logger.py,sha256=QoGSCFbZ3jJXRYqmqZ6bd-y-i20TxpAZb2Dj1gXcLmE,73
+msrc/appconfig/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msrc/appconfig/read_all.py,sha256=gNCntsTJbi2uvdZteKXX4W6UzSGdLmxfdF_hYTVs_MU,9966
+msrc/appconfig/read_argv.py,sha256=osM4FwRu0juRcdvlH7I4Xvk26j17w_kq6zu4-3z-9Uk,3622
+msrc/appconfig/read_environ.py,sha256=__a4tcHnPnr2xyCayEr0maQd1ZW9MjkoRFY29RidXOY,1048
+msrc/appconfig/read_files.py,sha256=YJnkEHizC7knpKDnbzOEiRel5aMeVU1eKt5GSlQ4X2c,9334
+msrc/appconfig/read_mapping.py,sha256=RFD5yWqaz-208My6oM90SFMU2ImQoovmpCVShWIkxdw,1822
+msrc/appconfig/schema.py,sha256=W0m5iRiMH_P4_T8usuiheY4GL9oUR84YzJoKmxT2A8I,16597
+msrc/appconfig_decl/decl_namedtuples.py,sha256=kal1DOVvISm9Z3LIeV0G30z6ncZdUszh72RdmmX5ir4,1660
+msrc/appconfig_decl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msrc_appconfig-0.5.6.dist-info/METADATA,sha256=DDBkBjoprx9lS6Bov2sosOhbdJ1TXopiWFHD06yQKrE,13097
+msrc_appconfig-0.5.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+msrc_appconfig-0.5.6.dist-info/top_level.txt,sha256=3xItPv_HO7KzUwhBXIl9H-0bJZ_q1Q1_24NB9N_IoP8,5
+msrc_appconfig-0.5.6.dist-info/RECORD,,
