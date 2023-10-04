@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/Field.py
+src/__init__.py
+src/OskarFieldModule.egg-info/PKG-INFO
+src/OskarFieldModule.egg-info/SOURCES.txt
+src/OskarFieldModule.egg-info/dependency_links.txt
+src/OskarFieldModule.egg-info/top_level.txt
