@@ -1,0 +1,11 @@
+gemseo[all]>=5
+numpy
+openturns
+scipy
+scikit-learn
+
+[test]
+covdefaults
+pytest
+pytest-cov
+pytest-xdist
