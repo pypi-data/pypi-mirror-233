@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = ">=2.2,<=4.2.3"
+django-haystack = ">=2.8,<=3.2.1"
+djangorestframework = ">=3.7.0,<=3.14"
+python-dateutil = "*"
+
+[dev-packages]
+coverage = "*"
+nose = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+"urllib3" = "*"
+geopy = "*"
+tox = "*"
+wheel = "*"
+elasticsearch = ">=2.0.0,<=8.3.3"
+
+[requires]
+python_version = "3"
