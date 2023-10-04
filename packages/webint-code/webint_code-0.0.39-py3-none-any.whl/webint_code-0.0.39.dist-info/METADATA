@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: webint-code
+Version: 0.0.39
+Summary: manage code on your website
+Home-page: https://ragt.ag/code/projects/webint-code
+License: AGPL-3.0-or-later
+Keywords: git,pypi
+Author: Angelo Gladding
+Author-email: angelo@ragt.ag
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: gmpg (>=0.0)
+Requires-Dist: webagt (>=0.0)
+Requires-Dist: webint (>=0.0)
+Project-URL: Documentation, https://ragt.ag/code/projects/webint-code/api
+Project-URL: Repository, https://ragt.ag/code/projects/webint-code.git
