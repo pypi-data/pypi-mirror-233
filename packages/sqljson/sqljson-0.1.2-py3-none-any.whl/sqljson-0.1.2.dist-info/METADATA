@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sqljson
+Version: 0.1.2
+Summary: A utility to run SQL-like queries on JSON data.
+Home-page: https://github.com/w2xim3/sqljson
+Author: Maxime Paillé
+Author-email: 
+License: MIT
+Keywords: json sql
+Requires-Dist: pandas
+
