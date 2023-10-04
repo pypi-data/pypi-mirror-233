@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: daily-python
+Version: 0.2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Communications :: Conferencing
+Summary: Daily Client SDK for Python
+License: BSD 2-Clause License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://daily.co
+
+# Daily Client SDK for Python
+
+If you are developing a video application and targeting Python, we think Daily's
+Python client SDK is a great choice!
+
+You can find installation, reference guides and a bunch of cool demos in our
+[reference docs](https://docs.daily.co/reference/daily-python).
+
