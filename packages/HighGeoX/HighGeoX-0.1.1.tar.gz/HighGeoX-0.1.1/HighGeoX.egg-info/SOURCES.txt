@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+HighGeoX.egg-info/PKG-INFO
+HighGeoX.egg-info/SOURCES.txt
+HighGeoX.egg-info/dependency_links.txt
+HighGeoX.egg-info/requires.txt
+HighGeoX.egg-info/top_level.txt
