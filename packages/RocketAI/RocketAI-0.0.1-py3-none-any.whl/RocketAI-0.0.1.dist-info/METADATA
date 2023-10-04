@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: RocketAI
+Version: 0.0.1
+Summary: RocketAI
+Author: PixelVerseIT
+Author-email: <contact@pixelverse.tech>
+Keywords: python,AI,pixelverseit,simple ai,smart ai,artifiical intelligence
+Classifier: Development Status :: 4 - Beta 
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: google.generativeai
+Requires-Dist: time
+
