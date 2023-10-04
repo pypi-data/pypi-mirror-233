@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "deepdirect"
+version = "0.1.2"
+description = "Deepdirect is an in silico approach to generate mutations for protein complexes towards a specified direction (increase/decrease) in binding affinity."
+authors = ["lantian000@outlook.com, ping.pengyao@gmail.com"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[build-system]
+requires = ["setuptools","wheel"] 
+build-backend = "setuptools.build_meta"
+
