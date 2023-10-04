@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: litecrypt
+Version: 0.0.8
+Summary: Library to Simplify Encryption and Data Protection
+Home-page: https://github.com/AshGw/litecrypt.git
+Author: Ashref Gwader
+Author-email: AshrefGw@proton.me
+License: UNKNOWN
+Description: Visit The [Website](https://ashgw.github.io/litecrypt/)
+Keywords: Cryptography application,File encryption,Secure encryption,Cryptography library,AES-256,Data protection,Secure file storage,Key management,Data protection,Encryption tools,Secure data storage
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
