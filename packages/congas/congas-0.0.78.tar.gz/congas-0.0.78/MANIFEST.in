@@ -1,0 +1,4 @@
+include congas/data/*
+include README.md
+include docs/*.html
+recursive-exclude congas/test/
