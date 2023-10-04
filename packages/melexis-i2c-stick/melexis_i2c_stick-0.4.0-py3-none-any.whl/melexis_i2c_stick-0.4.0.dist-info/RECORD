@@ -1,0 +1,11 @@
+melexis/i2c_stick/I2CStick.py,sha256=nX2qUtorCzTIKo-yM_bcwyocvhsZ-_jKGviyonPb2JY,13825
+melexis/i2c_stick/MemoryFile.py,sha256=KllOJ60lcrEYipIgj_mBJkZ62Q-Qlh4AsvTPh8yFUuc,7161
+melexis/i2c_stick/__init__.py,sha256=VT41eSb_SeDX_Pyx01ymUFWUBkSkrvVA978XywTZmt4,174
+melexis/i2c_stick/__main__.py,sha256=de7ly5K7wgkkmQggt1sCS3RUC-7p91fdE_FVCSDJN6w,142
+melexis_i2c_stick-0.4.0.dist-info/LICENSE,sha256=TavtCCY5T4RbLDRcOjHJjfjs4_JCrb-AVGnUlYjlYhY,589
+melexis_i2c_stick-0.4.0.dist-info/METADATA,sha256=7GibGkhYQWD6mQWIsu3f65eIsnaf4uBfXlbHvraBLsk,1470
+melexis_i2c_stick-0.4.0.dist-info/NOTICE,sha256=WyQhWX0pbjaLJipfg2WXtZecZXnRNvWcq5vk0VZYnto,199
+melexis_i2c_stick-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+melexis_i2c_stick-0.4.0.dist-info/entry_points.txt,sha256=58raldEMM9tbB5Xw70HMbN9YlX2HRhpX-1fDvoeu04I,70
+melexis_i2c_stick-0.4.0.dist-info/top_level.txt,sha256=SFvjSpzFpV2iuGlHk9qhxFegMev6i_loeWvo0uHUFDs,8
+melexis_i2c_stick-0.4.0.dist-info/RECORD,,
