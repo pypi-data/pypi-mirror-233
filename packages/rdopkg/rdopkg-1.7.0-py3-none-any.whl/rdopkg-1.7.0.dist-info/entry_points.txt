@@ -1,0 +1,2 @@
+[console_scripts]
+rdopkg = rdopkg.cli:main
