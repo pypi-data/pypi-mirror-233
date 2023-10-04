@@ -1,0 +1,65 @@
+{% load admin_urls %}
+
+<div class="stream-field__block {% block extra_classes %}{% endblock extra_classes %}{% if not visible %} stream-field--hidden{% endif %}" data-uuid="{{ uuid }}">
+  <div class="stream-field__sortable-handler">
+    <div class="stream-field__sortable-icon"></div>
+  </div>
+
+  {% block content %}
+    <div class="stream-field__content">
+      <p class="stream-field__title">{{ instance }}</p>
+      <p class="stream-field__type">{{ opts.verbose_name }}</p>
+    </div>
+  {% endblock content %}
+
+  {% block tools %}
+    <div class="stream-field__block-tools">
+      {% if has_change_permission or has_view_permission %}
+        <div class="stream-field__visibility-switch custom-control custom-switch"
+             data-xclass="bs-tooltip"
+             data-placement="top"
+             data-trigger="hover"
+             data-html="true"
+             title="{{ _("Visibility") }}">
+          <input type="checkbox" class="custom-control-input" id="show_{{ uuid }}"{% if visible %} checked{% endif %}>
+          <label class="custom-control-label" for="show_{{ uuid }}"></label>
+        </div>
+      {% endif %}
+
+      <div class="btn-square-group">
+        {% block tool-items %}
+          {% if has_change_permission %}
+            <a href="{% url opts|admin_urlname:"change" instance.pk|admin_urlquote %}"
+               id="change_uuid_{{ uuid }}"
+               class="stream-field__change-btn btn btn-square btn-sm btn-square--info bi-pencil-square"
+               data-xclass="bs-tooltip"
+               data-placement="top"
+               data-trigger="hover"
+               data-html="true"
+               title="{{ _("Change") }}">
+            </a>
+          {% elif has_view_permission %}
+            <a href="{% url opts|admin_urlname:"change" instance.pk|admin_urlquote %}"
+               id="change_uuid_{{ uuid }}"
+               class="stream-field__change-btn btn btn-square btn-sm btn-square--info bi-eye"
+               data-xclass="bs-tooltip"
+               data-placement="top"
+               data-trigger="hover"
+               data-html="true"
+               title="{{ _("View") }}">
+            </a>
+          {% endif %}
+
+          <button type="button"
+                  class="stream-field__delete-btn btn btn-square btn-sm btn-square--danger bi-trash"
+                  data-xclass="bs-tooltip"
+                  data-placement="top"
+                  data-trigger="hover"
+                  data-html="true"
+                  title="{{ _("Delete") }}">
+          </button>
+        {% endblock tool-items %}
+      </div>
+    </div>
+  {% endblock tools %}
+</div>

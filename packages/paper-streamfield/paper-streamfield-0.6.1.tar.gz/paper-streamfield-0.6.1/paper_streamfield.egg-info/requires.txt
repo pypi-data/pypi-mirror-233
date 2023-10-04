@@ -1,0 +1,3 @@
+Django
+paper-admin>=6.0rc
+jinja2-simple-tags
