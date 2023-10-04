@@ -1,0 +1,9 @@
+arabic_buckwalter_transliteration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arabic_buckwalter_transliteration/transliteration.py,sha256=KQXHBKQ7UB8ac25Ia1Ia52vbKx7EQieb8EwNmzD8DIU,2308
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_transliteration.py,sha256=bRb4Q89M_W5iwTgR6EKGsb1U8l-BjPaajSeNSFRJRDs,681
+arabic_buckwalter_transliteration-1.0.5.dist-info/LICENSE,sha256=Wz1G0RnUsSMOLNhgFy-RgTcgrEF2EE3Hs7LpBON1wMI,1104
+arabic_buckwalter_transliteration-1.0.5.dist-info/METADATA,sha256=MMrKZ51StiQDj3PzppKyA6-hfavE--DiH9grdalUcfQ,414
+arabic_buckwalter_transliteration-1.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+arabic_buckwalter_transliteration-1.0.5.dist-info/top_level.txt,sha256=-GxpTsBXsY5cJn12C6eKW6jIcgqVguH34qNsI6-lCQA,40
+arabic_buckwalter_transliteration-1.0.5.dist-info/RECORD,,
