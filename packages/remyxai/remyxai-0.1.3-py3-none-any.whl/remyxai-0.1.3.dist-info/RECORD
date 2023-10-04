@@ -1,0 +1,10 @@
+remyxai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remyxai/api.py,sha256=AlUm9AzHp9GcGqjEKBj3ldqFA8FHb_NgCeLvwBASd44,1920
+remyxai/cli.py,sha256=9hrrwp5e0zP7hOEmPdpBDRnBHvM-8YWMr2OPikEWJf4,4714
+remyxai/utils.py,sha256=rD3JkwbbNYcFE9U8Zta3ECmy9PfKgC7Hs7pn92iMlZ4,4987
+remyxai-0.1.3.dist-info/LICENSE,sha256=08y6UINXSwNc7rrPXbxA230VfE0-lkbr8zGvSqanfmk,1065
+remyxai-0.1.3.dist-info/METADATA,sha256=hV8O_qjdKc7qzWciZNjul1C11PQlvNzp6cIhktnm3cY,2933
+remyxai-0.1.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+remyxai-0.1.3.dist-info/entry_points.txt,sha256=J3JY5HeyDt8AtW50CTZV3c0pU8RwuC80oIHD6grlBxM,45
+remyxai-0.1.3.dist-info/top_level.txt,sha256=Mz-0TFe5PzrEKZ3a0Q8WXJK-q3vnfPmZWXO3gfZB9rI,8
+remyxai-0.1.3.dist-info/RECORD,,
