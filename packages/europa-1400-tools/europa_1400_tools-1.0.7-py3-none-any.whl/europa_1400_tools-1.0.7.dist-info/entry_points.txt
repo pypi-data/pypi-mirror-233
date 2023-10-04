@@ -1,0 +1,4 @@
+[console_scripts]
+main=europa_1400_tools.main:main
+models=europa_1400_tools.models_decoder:main
+
