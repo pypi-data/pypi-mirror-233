@@ -1,0 +1,5 @@
+recursive-include pollination_dash_io/** *.js *.css *.json *.html
+recursive-exclude src/** *.ts *.tsx
+recursive-exclude R/** *.R
+recursive-exclude man/** *.Rd
+prune tests
