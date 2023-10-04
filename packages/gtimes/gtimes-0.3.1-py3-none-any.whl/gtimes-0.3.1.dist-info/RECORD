@@ -1,0 +1,8 @@
+gtimes/__init__.py,sha256=G-d438vPx7m_ks5e9XTtM3u7LDRO5dSSukibukWmyPM,56
+gtimes/gpstime.py,sha256=uSVb4OW5ffsS1Mh-ptYy0E4r7Ds7sN4jiUtxeH_hYLE,11823
+gtimes/timecalc.py,sha256=VmslggxMI59y1tqtuch9DWP-NW6qwPissgKQFcgNTjc,11242
+gtimes/timefunc.py,sha256=vqjhMD5poxygp90W31pnDfpbq-CwBi7er2qNpuJwgxY,25719
+gtimes-0.3.1.dist-info/METADATA,sha256=dwj9tQa6UcAySQ6zcNnFg8ymbn8-QOPXX8_pHB-6Y7M,2411
+gtimes-0.3.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+gtimes-0.3.1.dist-info/entry_points.txt,sha256=Y5q85uxuOfCPTfqbMpzntK2jwq0_qJlYxqclCIfys0U,49
+gtimes-0.3.1.dist-info/RECORD,,
