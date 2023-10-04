@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: webint-posts
+Version: 0.0.21
+Summary: manage posts on your website
+Home-page: https://ragt.ag/code/projects/webint-posts
+License: AGPL-3.0-or-later
+Keywords: micropub
+Author: Angelo Gladding
+Author-email: angelo@ragt.ag
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: microformats (>=0.3.5)
+Requires-Dist: micropub (>=0.0)
+Requires-Dist: webint (>=0.0)
+Requires-Dist: webint-media (>=0.0,<0.1)
+Requires-Dist: webint-search (>=0.0,<0.1)
+Project-URL: Documentation, https://ragt.ag/code/projects/webint-posts/api
+Project-URL: Repository, https://ragt.ag/code/projects/webint-posts.git

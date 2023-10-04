@@ -1,0 +1,46 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "webint-posts"
+version = "0.0.21"
+description = "manage posts on your website"
+keywords = ["micropub"]
+homepage = "https://ragt.ag/code/projects/webint-posts"
+repository = "https://ragt.ag/code/projects/webint-posts.git"
+documentation = "https://ragt.ag/code/projects/webint-posts/api"
+authors = ["Angelo Gladding <angelo@ragt.ag>"]
+license = "AGPL-3.0-or-later"
+packages = [{include="webint_posts"}]
+
+[tool.pyright]
+reportGeneralTypeIssues = false
+reportOptionalMemberAccess = false
+
+[tool.poetry.plugins."webapps"]
+posts = "webint_posts:app"
+
+[[tool.poetry.source]]
+name = "main"
+url = "https://ragt.ag/code/pypi"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+webint = ">=0.0"
+micropub = ">=0.0"
+microformats = ">=0.3.5"
+webint-media = "^0.0"
+webint-search = "^0.0"
+
+[tool.poetry.group.dev.dependencies]
+gmpg = {path="../gmpg", develop=true}
+bgq = {path="../bgq", develop=true}
+newmath = {path="../newmath", develop=true}
+sqlyte = {path="../sqlyte", develop=true}
+webagt = {path="../webagt", develop=true}
+webint = {path="../webint", develop=true}
+webint-media = {path="../webint-media", develop=true}
+webint-search = {path="../webint-search", develop=true}
+micropub = {path="../python-micropub", develop=true}
+microformats = {path="../python-microformats", develop=true}
