@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ltbfiles"
+authors = [
+    {name="Sven Merk"},
+]
+description = "Module for loading of files created with spectrometers from LTB"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy"
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-cov",
+    "pandas"
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/ltb_berlin/ltb_files"
+"Bug Tracker" = "https://gitlab.com/ltb_berlin/ltb_files/-/issues"
+"Wiki" = "https://gitlab.com/ltb_berlin/ltb_files/-/wikis/home"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["ltbfiles"]
+exclude = ["tests"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ltbfiles.__version__"}
