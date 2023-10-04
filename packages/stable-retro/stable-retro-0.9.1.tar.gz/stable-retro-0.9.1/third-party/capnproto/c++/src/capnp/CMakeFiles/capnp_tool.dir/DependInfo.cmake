@@ -1,0 +1,20 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/zackbeucler/Desktop/stable-retro/third-party/capnproto/c++/src/capnp/compiler/capnp.c++" "third-party/capnproto/c++/src/capnp/CMakeFiles/capnp_tool.dir/compiler/capnp.c++.o" "gcc" "third-party/capnproto/c++/src/capnp/CMakeFiles/capnp_tool.dir/compiler/capnp.c++.o.d"
+  "/Users/zackbeucler/Desktop/stable-retro/third-party/capnproto/c++/src/capnp/compiler/module-loader.c++" "third-party/capnproto/c++/src/capnp/CMakeFiles/capnp_tool.dir/compiler/module-loader.c++.o" "gcc" "third-party/capnproto/c++/src/capnp/CMakeFiles/capnp_tool.dir/compiler/module-loader.c++.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")
