@@ -1,0 +1,4 @@
+PYAML
+httpx==0.25.0
+netifaces
+zeep==4.0.0

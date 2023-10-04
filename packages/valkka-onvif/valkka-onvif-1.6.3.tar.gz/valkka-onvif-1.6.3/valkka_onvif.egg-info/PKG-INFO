@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: valkka-onvif
+Version: 1.6.3
+Summary: Onvif python dependencies for libValkka
+Home-page: https://elsampsa.github.io/valkka-examples/_build/html/onvif.html
+Author: Sampsa Riikonen
+Author-email: sampsa.riikonen@iki.fi
+License: MIT
+Project-URL: Valkka library, https://elsampsa.github.io/valkka-examples/
+Description: 
+            Onvif python dependencies for libValkka
+            
+Keywords: valkka video surveillance onvif
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Multimedia :: Video
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/plain
