@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: etl-history
+Version: 0.1.9
+Summary: A Python package for ETL history management
+Home-page: UNKNOWN
+Author: Nilesh Sukhwani
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: psycopg2-binary
+Requires-Dist: pymysql
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
