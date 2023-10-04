@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Javaworld
+Version: 0.0.1
+Summary: A hello world package
+Author: Vishal
+Author-email: vishalvenkat2604@gmail.com
+License: MIT
+Keywords: conversion
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+A package that prints hello world in java
