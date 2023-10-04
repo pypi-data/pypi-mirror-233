@@ -1,0 +1,9 @@
+template_python_cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_python_cmd/cli.py,sha256=dibfAZIh0kXWsBbfp3onKLjyZXo54mTzDjUdzJlDlWo,231
+template_python_cmd/assets/example.txt,sha256=lTBovRjiz0_TgtAtbA1C5hNi2ffbqnNPqkKg6UiKCT8,54
+template_python_cmd-1.0.1.dist-info/LICENSE,sha256=b6pOoifSXiUaz_lDS84vWlG3fr4yUKwB8fzkrH9R8bQ,1064
+template_python_cmd-1.0.1.dist-info/METADATA,sha256=flKKGejiC72cCP8FA9YeoBO-zHUdsQmoRLKueKC_if0,1589
+template_python_cmd-1.0.1.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+template_python_cmd-1.0.1.dist-info/entry_points.txt,sha256=KYtG_ITrUIn5WfXIw3iTtPkNtnHiEyawXp1TDS5g4iE,58
+template_python_cmd-1.0.1.dist-info/top_level.txt,sha256=A7aDVxbBUwGWesL12YZ67qt8tMa-SpgYDWdLQGCUc4I,20
+template_python_cmd-1.0.1.dist-info/RECORD,,
