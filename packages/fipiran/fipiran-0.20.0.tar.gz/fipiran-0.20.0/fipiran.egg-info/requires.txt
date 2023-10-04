@@ -1,0 +1,9 @@
+aiohutils>=0.11.0
+beautifulsoup4
+jdatetime
+lxml
+pandas>=2.1.0
+pyarrow
+
+[test]
+aiohutils[test]>=0.11.0
