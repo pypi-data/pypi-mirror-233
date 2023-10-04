@@ -1,0 +1,2 @@
+[console_scripts]
+test_cmd = template_python_cmd.cli:main

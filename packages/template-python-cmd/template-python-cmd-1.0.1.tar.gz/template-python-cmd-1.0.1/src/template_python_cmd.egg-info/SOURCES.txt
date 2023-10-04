@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.testing.txt
+setup.py
+src/template_python_cmd/__init__.py
+src/template_python_cmd/cli.py
+src/template_python_cmd.egg-info/PKG-INFO
+src/template_python_cmd.egg-info/SOURCES.txt
+src/template_python_cmd.egg-info/dependency_links.txt
+src/template_python_cmd.egg-info/entry_points.txt
+src/template_python_cmd.egg-info/top_level.txt
+src/template_python_cmd/assets/example.txt
+tests/test_cli.py
