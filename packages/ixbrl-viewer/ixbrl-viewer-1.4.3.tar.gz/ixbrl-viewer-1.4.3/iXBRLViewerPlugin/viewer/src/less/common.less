@@ -1,0 +1,13 @@
+// See COPYRIGHT.md for copyright information
+
+/* Styles common to both inspector and highlighting used within iframe */
+.linked-highlight-text {
+  outline: dashed 2px @linked-fact;
+  outline-offset: 1px;
+}
+
+.linked-highlight-cell {
+  .linked-highlight-text();
+
+  outline-offset: -1px;
+}

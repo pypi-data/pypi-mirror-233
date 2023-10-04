@@ -1,0 +1,7 @@
+arelle_release==2.*
+lxml==4.*
+pycountry==22.*
+
+[dev]
+nose2==0.13.0
+typing-extensions==4.8.0
