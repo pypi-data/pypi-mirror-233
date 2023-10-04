@@ -1,0 +1,8 @@
+
+[:python_version < "3.11"]
+importlib-metadata
+
+[tests]
+pytest
+mypy
+ruff
