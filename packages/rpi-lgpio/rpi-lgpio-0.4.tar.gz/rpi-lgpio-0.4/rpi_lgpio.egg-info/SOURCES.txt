@@ -1,0 +1,11 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+RPi/__init__.py
+RPi/GPIO/__init__.py
+rpi_lgpio.egg-info/PKG-INFO
+rpi_lgpio.egg-info/SOURCES.txt
+rpi_lgpio.egg-info/dependency_links.txt
+rpi_lgpio.egg-info/requires.txt
+rpi_lgpio.egg-info/top_level.txt
