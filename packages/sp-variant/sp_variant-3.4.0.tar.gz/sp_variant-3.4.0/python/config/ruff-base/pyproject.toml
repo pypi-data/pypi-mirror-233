@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2021 - 2023  StorPool <support@storpool.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+select = []
+ignore = [
+  # We know what "self" is... we hope.
+  "ANN101",
+
+  # We know what "cls" is, too... we hope.
+  "ANN102",
+
+  # We leave most of the formatting to the `black` tool.
+  "COM812",
+
+  # No blank lines before the class docstring, TYVM
+  "D203",
+
+  # The multi-line docstring summary starts on the same line
+  "D213",
+
+  # Too restrictive.
+  "EM",
+
+  # We want to report exceptions with as much context as possible.
+  "PERF203",
+
+  # Maybe we shall fix the use of magic values... some sunny day.
+  "PLR2004",
+
+  # Too restrictive for now.
+  "TRY003",
+]
+
+[tool.ruff.isort]
+force-single-line = true
+known-first-party = ["sp_build_repo", "sp_variant", "test_docker"]
+lines-after-imports = 2
+single-line-exclusions = ["defs", "typing"]
+
+[tool.ruff.per-file-ignores]
+# This is a command-line tool. Console output is part of its task.
+# Also, it needs to be able to run typedload on Python < 3.10, so it cannot
+# leverage the full power of X | Y unions, X | None optional values, etc.
+# We also make sure to use `subprocess` responsibly.
+"*/sp_build_repo/__main__.py" = ["S603", "S607", "T201", "UP006", "UP007"]
+
+# This is a command-line tool. Console output is part of its task.
+# We also make sure to use `subprocess` responsibly.
+"*/sp_variant/__main__.py" = ["S603", "S607", "T201"]
+
+# We only run commands defined in our variants structure.
+"*/sp_variant/variant.py" = ["S603", "S607"]
+
+# The "update a named tuple / dictionary functions need to use typing.Any.
+"*/sp_variant/vbuild.py" = ["ANN401"]
+
+# We make sure to use `subprocess` responsibly.
+"*/test_docker/__main__.py" = ["S603", "S607"]
+
+# This is a test suite.
+"*/unit_tests/*.py" = ["S101", "T201"]

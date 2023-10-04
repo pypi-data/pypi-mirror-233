@@ -1,0 +1,18 @@
+# The StorPool software repository for third-party CentOS RPMs
+#
+# SPDX-FileCopyrightText: 2021 - 2023  StorPool <support@storpool.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
+[storpool-{{ name }}]
+name=StorPool third-party packages for CentOS
+baseurl={{ url }}{{ slug }}/centos/$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-StorPool
+
+[storpool-{{ name }}-source]
+name=StorPool third-party packages for CentOS
+baseurl={{ url }}{{ slug }}/centos/$releasever/SRPMS/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-StorPool

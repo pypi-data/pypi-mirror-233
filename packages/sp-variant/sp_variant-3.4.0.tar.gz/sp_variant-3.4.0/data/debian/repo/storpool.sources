@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2021 - 2023  StorPool <support@storpool.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
+Types: deb deb-src
+URIs: {{ url }}{{ slug }}/{{ vendor }}/
+Suites: {{ codename }}
+Components: main
+Signed-By: /usr/share/keyrings/storpool-keyring.gpg

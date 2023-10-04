@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2021 - 2023  StorPool <support@storpool.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
+[build-system]
+requires = [
+  "hatchling >= 1.8, < 2",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "sp-variant"
+description = "Detect the Linux distribution for the StorPool build system"
+readme = "README.md"
+license = {"text" = "BSD-2-Clause"}
+requires-python = ">= 3.8"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: DFSG approved",
+  "License :: Freely Distributable",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+dynamic = ["version"]
+
+[[project.authors]]
+name = "StorPool"
+email = "support@storpool.com"
+
+[project.scripts]
+sp_variant = "sp_variant.__main__:main"
+
+[project.urls]
+Homepage = "https://repo.storpool.com/public/doc/sp-variant/"
+Changelog = "https://github.com/storpool/sp-variant/blob/main/docs/changes.md"
+"Source Code" = "https://github.com/storpool/sp-variant"
+
+[tool.hatch.build]
+include = [
+  "/data",
+  "/docs",
+  ".editorconfig",
+  "/examples",
+  "/python",
+  "/LICENSES",
+  "/mkdocs.yml",
+  "/.reuse",
+  "/tox.ini",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["python/sp_variant"]
+
+[tool.hatch.version]
+path = "python/sp_variant/defs.py"
+pattern = 'VERSION: Final = "(?P<version>[^"]+)"'
+
+[tool.black]
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+line-length = 100
+
+[tool.mypy]
+strict = true
+
+[tool.test-stages]
+stages = ["@check and @quick and not @manual", "@check and not @manual", "@tests and not @manual"]
