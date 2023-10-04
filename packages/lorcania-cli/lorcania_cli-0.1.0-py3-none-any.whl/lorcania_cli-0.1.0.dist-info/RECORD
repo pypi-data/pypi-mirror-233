@@ -1,0 +1,11 @@
+lorcania_cli/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+lorcania_cli/__main__.py,sha256=YrEx2mq53uPLjDlGP3_DUhWtbwPOwj09IAdXSZ_5PuE,30
+lorcania_cli/api/__init__.py,sha256=L0g4lmGQUlpElur8uYCVlaQ_tClQplC0bsy83Rafc3I,70
+lorcania_cli/api/lorcania.py,sha256=1URAEBemE0xG1otb9TagiNz1XyoIwdR_eQk71FnidyI,2688
+lorcania_cli/collection.py,sha256=LuACYIB_jxR6sIUda429_r4yqlpn9FgyZeOKdvaXhzg,2443
+lorcania_cli/main.py,sha256=c35jmZVk9qvB6gZ66umBkb_VCqy7YZf9H7qSzPMOdOA,163
+lorcania_cli-0.1.0.dist-info/entry_points.txt,sha256=GtGuiAbm-55vx3UKUsICIh43tJDuBY1-Vm1vwpmu2OA,54
+lorcania_cli-0.1.0.dist-info/LICENSE,sha256=EZfNlK31wod-ViVAZKkCwvBkZqBzahGi0KRm1JHjzH4,7809
+lorcania_cli-0.1.0.dist-info/METADATA,sha256=gfY0fweVaHzijfkPW4kLx0aZXbr8BujbHbBQ_TyrH_M,941
+lorcania_cli-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+lorcania_cli-0.1.0.dist-info/RECORD,,
