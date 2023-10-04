@@ -1,0 +1,13 @@
+__pycache__/
+build/
+out/
+www_docs/
+.py-env
+.pyenv
+dist
+
+
+
+
+
+
