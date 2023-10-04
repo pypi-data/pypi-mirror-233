@@ -1,0 +1,11 @@
+polymatheia/__init__.py,sha256=A1G8LUzalW4FdjbBiWbFYG1O2j04PICEDJxK1XeGR2M,264
+polymatheia/data/__init__.py,sha256=kGFttw0J-OK-fg5V5EYu_5maH1fHdgWp0-2p9vUbUsM,12729
+polymatheia/data/reader.py,sha256=W_e7cVeexc1B85WawAoirmO2eDVjlBu7XeUX9U1SMZg,18076
+polymatheia/data/writer.py,sha256=VmMR_yHTP34gERNnLeuyCD7dts3EPQ5tSEChRCDHTBk,9480
+polymatheia/filter.py,sha256=AxFxOaL62HeTyr42as5xASv3DEHvBx2Qn5G6C1WEMBw,9098
+polymatheia/transform.py,sha256=F4Fz_O5NkCuH3tW5_JW_aVjWwToQ_ARRPliWl54ekd8,8135
+polymatheia/util.py,sha256=tqhrsLeNaeks3r4GRtADRFXRXG8O95tvvtC5Y0HAlOg,887
+polymatheia-1.0.5.dist-info/LICENSE.md,sha256=vGxMw2dl_rYi-cuKwNCTGLA82cCB_W9Lr-d0N6WSVmM,1066
+polymatheia-1.0.5.dist-info/METADATA,sha256=W0xzhrBgNmrnVdb2ZQpmDUeQD0gHAQtPNsqR_dKvlnQ,2124
+polymatheia-1.0.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+polymatheia-1.0.5.dist-info/RECORD,,
