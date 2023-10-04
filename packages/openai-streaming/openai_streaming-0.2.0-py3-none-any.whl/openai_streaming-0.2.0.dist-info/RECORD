@@ -1,0 +1,11 @@
+openai_streaming/__init__.py,sha256=jWJTvzOCNNpb65xMcjsHr_lEt-vMBOH2QPAQfh6W3y0,97
+openai_streaming/decorator.py,sha256=b0N9ZomfwfguL5jZMoCykDuED1wowYr4fAM1_TSvxTM,2335
+openai_streaming/fn_dispatcher.py,sha256=THfSpP67XwsNkNpMK-cUOm06R7frDVcSvzD1yVgT0tk,6278
+openai_streaming/openai_function.py,sha256=6Q91e_x0_OPW15SSwhkOFs79QHhnlDRZVlMfcUp76no,4765
+openai_streaming/stream_processing.py,sha256=xSIgSDHon0CBNZEedSSU3lGTbar0GwadpK2EG3bs5xQ,9524
+openai_streaming/utils.py,sha256=MyNgQikyMMGHy59YHKhqUQZmm4oJaXwk9gMnw3cAh3w,1484
+openai_streaming-0.2.0.dist-info/LICENSE,sha256=8zOJ3svihD2gYB40ymlpgfNWOK0ohIp5NQVvUhvkHSQ,1066
+openai_streaming-0.2.0.dist-info/METADATA,sha256=2UOtFaY-Y9fcpXiW_Qy6qhXcQZ0gjxiQPZxgwMfMe1A,3575
+openai_streaming-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+openai_streaming-0.2.0.dist-info/top_level.txt,sha256=vaTEfVTSUdXNPHc7NXDeRuHcm5lRoBt4D3fYmI6A12E,17
+openai_streaming-0.2.0.dist-info/RECORD,,
