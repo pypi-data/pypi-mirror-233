@@ -1,0 +1,366 @@
+Metadata-Version: 2.1
+Name: arabica
+Version: 1.7.4
+Summary: Python package for exploratory text data analysis
+Home-page: https://github.com/PetrKorab/Arabica
+Author: Petr Koráb
+Author-email: Petr Korab <xpetrkorab@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/PetrKorab/Arabica
+Project-URL: Bug Tracker, https://github.com/PetrKorab/Arabica/issues
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8, <3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas==1.4.0
+Requires-Dist: nltk==3.6.2
+Requires-Dist: regex==2022.10.31
+Requires-Dist: finvader
+Requires-Dist: matplotlib==3.6.0
+Requires-Dist: matplotlib-inline==0.1.6
+Requires-Dist: plotnine==0.10.1
+Requires-Dist: wordcloud==1.8.2.2
+Requires-Dist: jenkspy==0.3.2
+Requires-Dist: vaderSentiment==3.3.2
+Requires-Dist: cleantext==1.1.4
+Requires-Dist: mizani==0.9.2
+Requires-Dist: pillow==9.4.0
+
+[![pypi](https://img.shields.io/pypi/v/arabica.svg)](https://pypi.python.org/pypi/arabica)
+[![python](https://img.shields.io/pypi/pyversions/arabica.svg)](https://pypi.python.org/pypi/arabica)
+[![License: MIT](https://badgen.net/badge/license/apache-2-0/blue)]([https://opensource.org/licenses/MIT](https://opensource.org/license/apache-2-0/))
+
+
+# Arabica
+**Python package for exploratory text data analysis**
+
+Text data is often recorded as a time series with significant variability over time. Some examples of time-series text data include social media conversations, product reviews, 
+research metadata, central bankers’ communication, and newspaper headlines. Arabica makes exploratory analysis of these datasets simple by providing:
+
+* **Descriptive n-gram analysis**: n-gram frequencies
+* **Time-series n-gram analysis**: n-gram frequencies over a period
+* **Text visualization**: n-gram heatmap, line plot, word cloud
+* **Sentiment analysis**: VADER sentiment classifier
+* **Financial sentiment analysis**: with FinVADER
+* **Structural breaks identification**: Jenks Optimization Method
+
+It automatically cleans data from punctuation on input. It can also apply all or a selected combination of the following cleaning operations:
+
+* Remove digits from the text
+* Remove the standard list(s) of stopwords
+* Remove an additional list of stop words
+
+Arabica works with **texts** of languages based on the Latin alphabet, uses `cleantext` for punctuation cleaning, and enables stop words removal for languages in the `NLTK` corpus of stopwords.
+
+It reads dates in:
+
+* **US-style**: *MM/DD/YYYY* (2013-12-31, Feb-09-2009, 2013-12-31 11:46:17, etc.)
+* **European-style**: *DD/MM/YYYY* (2013-31-12, 09-Feb-2009, 2013-31-12 11:46:17, etc.) date and datetime formats.
+
+
+## Installation
+
+Arabica requires [NLTK](http://www.nltk.org) - stop words removal,
+[cleantext](https://pypi.org/project/cleantext/#description) - text cleaning, [wordcloud](https://pypi.org/project/wordcloud) - word cloud visualization,
+[plotnine](https://pypi.org/project/plotnine) - heatmaps and line graphs, [matplotlib](https://pypi.org/project/matplotlib/) - word clouds and graphical operations,
+[vaderSentiment](https://pypi.org/project/vaderSentiment) - sentiment analysis, [finvader](https://pypi.org/project/finvader) - financial sentiment analysis,
+and [jenskpy](https://pypi.org/project/jenkspy/) for breakpoint identification.
+
+To install using pip, use:
+
+`pip install arabica`
+
+## Usage
+
+* **Import the library**:
+
+
+``` python
+from arabica import arabica_freq
+from arabica import cappuccino
+from arabica import coffee_break 
+```
+
+
+
+* **Choose a method:**
+
+**arabica_freq** enables a specific set of cleaning operations (lower casing, numbers, common stop words, and additional stop words 
+removal) and returns a dataframe with aggregated unigrams, bigrams, and trigrams frequencies over a period.
+
+
+
+``` python
+def arabica_freq(text: str,                # Text
+                 time: str,                # Time
+                 date_format: str,         # Date format: 'eur' - European, 'us' - American
+                 time_freq: str = '',      # Aggregation period: 'Y'/'M'/'D', if no aggregation: 'ungroup'
+                 max_words: int = '',      # Maximum of most frequent n-grams displayed for each period
+                 stopwords: [],            # Languages for stop words
+                 skip: [],                 # Remove additional stop words
+                 numbers: bool = False,    # Remove all digits
+                 lower_case: bool = False  # Lowercase text
+) 
+```
+
+**cappuccino**  enables cleaning operations (lower casing, numbers, common stop words, and additional stop words
+removal) and provides plots for descriptive (word cloud) and time-series (heatmap, line plot) visualization.
+
+``` python
+def cappuccino(text: str,                # Text
+               time: str,                # Time
+               date_format: str,         # Date format: 'eur' - European, 'us' - American
+               plot: str = '',           # Chart type: 'wordcloud'/'heatmap'/'line'
+               ngram: int = '',          # N-gram size, 1 = unigram, 2 = bigram, 3 = trigram
+               time_freq: str = '',      # Aggregation period: 'Y'/'M', if no aggregation: 'ungroup'
+               max_words int = '',       # Maximum of most frequent n-grams displayed for each period
+               stopwords: [],            # Languages for stop words
+               skip: [],                 # Remove additional stop words
+               numbers: bool = False,    # Remove numbers
+               lower_case: bool = False  # Lowercase text
+```
+
+**coffee_break**  provides sentiment analysis and breakpoint identification in aggregated time series of sentiment. The implemented models are:
+
+* [VADER](https://ojs.aaai.org/index.php/ICWSM/article/view/14550) is a lexicon and rule-based sentiment classifier attuned explicitly to general language expressed in social media
+  
+* [FinVADER](https://pypi.org/project/finvader/) improves VADER's classification accuracy on financial texts, including two financial lexicons
+
+Break points in the time series are identified with the **Fisher-Jenks algorithm** (Jenks, 1977. Optimal data classification for choropleth maps).
+
+
+``` python
+def coffee_break(text: str,                 # Text
+                 time: str,                 # Time
+                 date_format: str,          # Date format: 'eur' - European, 'us' - American
+                 model: str,                # Sentiment classifier, 'vader' - general language, 'finvader' - financial text                
+                 skip: [],                  # Remove additional stop words
+                 preprocess: bool = False,  # Clean data from numbers and punctuation
+                 time_freq: str ='',        # Aggregation period: 'Y'/'M'
+                 n_breaks: int =''          # Number of breakpoints: min. 2
+)
+```
+
+## Documentation, examples and tutorials
+
+* Read the [documentation](https://arabica.readthedocs.io/en/latest/index.html)
+
+For more examples of coding, read these  tutorials:
+
+* Sentiment Analysis and Structural Breaks in Time-Series Text Data [here](https://towardsdatascience.com/sentiment-analysis-and-structural-breaks-in-time-series-text-data-8109c712ca2?sk=ce5c69171ba026fee631d1b23520d6e3)
+* Visualization Module in Arabica Speeds Up Text Data Exploration [here](https://towardsdatascience.com/visualization-module-in-arabica-speeds-up-text-data-exploration-47114ad646ce?sk=e54bc7d170ea3ecb76fb45dc869d4a44)
+* Text as Time Series: Arabica 1.0 Brings New Features for Exploratory Text Data Analysis [here](https://towardsdatascience.com/text-as-time-series-arabica-1-0-brings-new-features-for-exploratory-text-data-analysis-88eaabb84deb?sk=229ec0602d0b8514f25bce501ed9ecb9)
+
+**Applications:**
+
+* **Business Intelligence:** Customer Satisfaction Measurement with N-gram and Sentiment Analysis [here](https://towardsdatascience.com/customer-satisfaction-measurement-with-n-gram-and-sentiment-analysis-547e291c13a6?sk=62f9decb619744c96c49735ff09653c3)
+* **Research meta-data analysis:** Research Article Meta-data Description Made Quick and Easy [here](https://pub.towardsai.net/research-article-meta-data-description-made-quick-and-easy-57754e54b550?sk=82477c74a159855f211b09b53026dedc)
+* **Twitter tweets analysis**
+
+---
+
+Please visit [here](https://github.com/PetrKorab/arabica/issues) for any questions, issues, bugs, and suggestions.
