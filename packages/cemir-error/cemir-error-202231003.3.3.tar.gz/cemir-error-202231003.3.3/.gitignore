@@ -1,0 +1,16 @@
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.idea/misc.xml
+/install.sh
+/.idea/cemir_print.iml
+/.idea/modules.xml
+/.idea/cemir_error.iml
+/.idea/.gitignore
+/cemir_error.egg-info/dependency_links.txt
+/cemir_error.egg-info/PKG-INFO
+/cemir_error.egg-info/SOURCES.txt
+/cemir_error.egg-info/top_level.txt
+/dist/
+/build/
