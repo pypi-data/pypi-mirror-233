@@ -1,0 +1,4 @@
+click
+pandas>=1.0.0
+statsmodels
+scipy
