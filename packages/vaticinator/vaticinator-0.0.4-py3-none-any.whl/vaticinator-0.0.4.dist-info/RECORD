@@ -1,0 +1,11 @@
+vaticinator/__init__.py,sha256=qokW5QCIdCjF0iRryyx4R1kg5S2XKuylghxxgqbNa84,141
+vaticinator/cli.py,sha256=OXRw0e7MNMEdjVl5hxDZDnXsOb7_vd-jGTqYfavgcCI,170
+vaticinator/fortune_file.py,sha256=rANNSBYOnVZAs1xoWX9FqcZCp7zy_DjOK6kooVDx8K0,7797
+vaticinator/vaticinator.py,sha256=z9Gp0HrEjpInIYztFJ2z-uDF7TXMJmosU4BlF09fleM,6792
+vaticinator/version.py,sha256=-Wqu9UyJphp-2_EahEsqQvkcE0VBhm1-N7D6e5rANdY,22
+vaticinator-0.0.4.dist-info/LICENSE,sha256=DWrkUDgWElhOHu_mBHuMyW8DsRVyNYXhFpVfDE4XYWg,1106
+vaticinator-0.0.4.dist-info/METADATA,sha256=7JxPRFHwUqkmzDJCpmJcnoND1E3dWLZqm80lLKvX4Mk,2199
+vaticinator-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vaticinator-0.0.4.dist-info/entry_points.txt,sha256=57QxmyFAXHBzKR7v1jqhQcmwxyWJjjtl4-pBpneOO-0,53
+vaticinator-0.0.4.dist-info/top_level.txt,sha256=hzLheERVpkt4-0QidzbN4jvqMfsJ8OMRvmUDJ6TvNSk,12
+vaticinator-0.0.4.dist-info/RECORD,,
