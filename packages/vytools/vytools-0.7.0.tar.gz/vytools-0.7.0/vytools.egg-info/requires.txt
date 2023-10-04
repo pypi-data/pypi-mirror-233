@@ -1,0 +1,6 @@
+appdirs
+argcomplete
+cerberus
+docker
+pyyaml
+termcolor
