@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: templatex
+Version: 0.0.1
+Author-email: Hao Wu <haowu@dataset.sh>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: jinja2~=3.0.0
