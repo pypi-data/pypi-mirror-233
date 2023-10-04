@@ -1,0 +1,14 @@
+include *.py tox.ini
+include test/data/bootstrap_cubes
+recursive-include test *.py
+recursive-include cubicweb_compound *.py
+recursive-include cubicweb_compound/data *.gif *.png *.ico *.css *.js
+recursive-include cubicweb_compound/i18n *.po
+
+exclude cubicweb-compound.spec
+exclude .gitlab-ci.yml
+include README.rst
+exclude .yamllint
+exclude .cube-doctor.yml
+exclude .gitlab-ci-extended.yml
+exclude CHANGELOG.md
