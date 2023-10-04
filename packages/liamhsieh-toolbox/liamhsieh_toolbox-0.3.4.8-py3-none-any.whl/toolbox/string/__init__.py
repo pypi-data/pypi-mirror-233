@@ -1,0 +1,2 @@
+from .convert_functions import lower_and_replace_space_with_underscore
+from .convert_functions import upper_and_replace_space_with_underscore
