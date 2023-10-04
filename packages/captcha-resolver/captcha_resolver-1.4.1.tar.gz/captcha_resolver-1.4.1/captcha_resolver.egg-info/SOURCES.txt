@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+captcha_resolver.egg-info/PKG-INFO
+captcha_resolver.egg-info/SOURCES.txt
+captcha_resolver.egg-info/dependency_links.txt
+captcha_resolver.egg-info/requires.txt
+captcha_resolver.egg-info/top_level.txt
