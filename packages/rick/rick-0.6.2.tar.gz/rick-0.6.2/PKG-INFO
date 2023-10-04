@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: rick
+Version: 0.6.2
+Summary: Python plumbing for micro-framework based applications
+Home-page: https://git.oddbit.org/OddBit/rick
+Author: João Pinheiro
+License: BSD-3-Clause
+Project-URL: Documentation, https://docs.oddbit.org/rick/
+Project-URL: Source, https://git.oddbit.org/OddBit/rick
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Provides-Extra: redis
+License-File: LICENSE
+
+# rick
+
+
+[![Tests](https://github.com/oddbit-project/rick/workflows/Tests/badge.svg?branch=master)](https://github.com/oddbit-project/rick/actions)
+[![pypi](https://img.shields.io/pypi/v/rick.svg)](https://pypi.org/project/rick/)
+[![license](https://img.shields.io/pypi/l/rick.svg)](https://git.oddbit.org/OddBit/rick/src/branch/master/LICENSE)
+
+
+Python plumbing for micro-framework based applications
+
+**Note**: This library is still under development; things may change place or be rewritten with a different spec between
+releases.
+
+
+## Documentation
+
+Documentation is a work-in-progress. Please check what is available here: [Documentation](https://oddbit-project.github.io/rick/) 
+
+Core components:
+- Dependency Injection class;
+- Resource loader (class factory);
+- Class registry;
+- Misc. Container classes;
+
+Request components:
+- Validator registry w/ [validators](https://docs.oddbit.org/rick/validators/validator_list/);
+- [Validation class](https://docs.oddbit.org/rick/validators/);
+- [Request validation](https://docs.oddbit.org/rick/forms/requests/);
+- [Forms](https://docs.oddbit.org/rick/forms/);
+- Filters;
+
+Resource components:
+- Configuration loader functions (environment, json);
+- Console operation w/color;
+- Cache facade w/ Redis support;
+
+Misc components:
+- Hasher; 
+- Event Manager;
+- Misc mixins;
+- Extended json serializer;
