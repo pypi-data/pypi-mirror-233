@@ -1,0 +1,9 @@
+hurst_exponent/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hurst_exponent/acf.py,sha256=6QmsD-GO0xvT-5EbEg9if7fF5E0Jrq1CZ-mg_7Uqi7s,2667
+hurst_exponent/hurst_exponent.py,sha256=u3ZS-_l3EBM2jmGUitbrPHRtT4_MeLd_FQ-_GIfEbn4,5118
+hurst_exponent/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hurst_exponent/util/utils.py,sha256=6cRU-t9mQGmLnZwIowr2Kl4rNEcH2B6tD3lmTh-UjOY,4543
+hurst_exponent-0.1.1.dist-info/LICENSE,sha256=9gL9sszXTOeVmRJPKdD8elFy2_1FSTDtEPt8N9Js6OM,1069
+hurst_exponent-0.1.1.dist-info/METADATA,sha256=27st_6cznl-DtO3nGRHZR1hCTQroRde540PNvuo-g1Y,4176
+hurst_exponent-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+hurst_exponent-0.1.1.dist-info/RECORD,,
