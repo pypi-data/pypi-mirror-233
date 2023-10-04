@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: aineko
+Version: 0.1.2
+Summary: Aineko, a data integration framework.
+Home-page: https://aineko.dev/
+License: Apache-2.0
+Author: Convex Labs
+Author-email: engineering-admins@convexlabs.xyz
+Requires-Python: >=3.10,<3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Typing :: Typed
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: confluent-kafka (>=2.2.0,<3.0.0)
+Requires-Dist: pydantic (<2)
+Requires-Dist: ray[default] (>=2.6.3,<3.0.0)
+Requires-Dist: schema (>=0.7.5,<0.8.0)
+Requires-Dist: types-PyYAML (>=6.0.1,<7.0.0)
+Project-URL: Repository, https://github.com/aineko-dev/aineko
+Description-Content-Type: text/markdown
+
+# aineko
+
+## Quickstart
+
+### Installation
+
+Aineko uses [`poetry`](https://python-poetry.org/) as a dependency manager. To install poetry:
+
+```
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+To install dependencies, simply run:
+
+```
+poetry install
+```
+
+Alternatively, to use `pip`, use:
+
+```
+pip install -e .
+```
+
+
+## Roadmap
+
