@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: dc3client
+Version: 0.0.7
+Summary: dc3client: Client of Digital Curing3.
+Home-page: https://github.com/kawamlab/DC3-python
+Download-URL: https://github.com/kawamlab/DC3-python
+Author: Ryosuke1218
+Author-email: 34680324+being24@users.noreply.github.com
+Maintainer: Ryosuke1218
+Maintainer-email: 34680324+being24@users.noreply.github.com
+License: MIT
+Keywords: digital-curing3 dc3client
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.0
+
+# dc3client
+
+Wrapper for developing digitalcuring3 clients in python
+
+If issues are found, please report them via GitHub issues.
+
+## Installation
+
+Python 3.10 or higher is required
+```bash
+pip install dc3client
+```
+
+## Usage
+
+see [sample.py](https://github.com/kawamlab/DC3-python/blob/master/sample.py)
+
+## Create document
+
+from [here](https://zero-cheese.com/12248/)
+```sh
+sphinx-quickstart docs # init
+```
+```sh
+sphinx-apidoc -f -o ./docs/source/ ./
+sphinx-build  ./docs/source/ ./docs/
+```
