@@ -1,0 +1,74 @@
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+h1,h2 {
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   }
+
+</style>
+</head>
+<body>
+    <h1>Finance Report Time Period: {{ timePeriod }}</h1>
+    {% for Repitem in ReportItems %}
+        <h2>{{ Repitem.title }}</h2>
+        <img src="data:image/png;base64,{{ Repitem.fig_byte_string64 }}">
+        <table padding="10pt", id="customers">
+            <tr>
+            {% for tblcol in Repitem.data_frame.columns %}
+                {% if 'Date' in tblcol %}
+                    <th width=75px>
+                {% else %}
+                    <th>
+                {% endif %}
+                {{ tblcol }}
+                </th>
+            {% endfor %}
+            </tr>
+
+            {% for i, tblrow in Repitem.data_frame.iterrows() %}
+                <tr align="right">
+                {% for tblcol in Repitem.data_frame.columns %}
+                    {% if tblrow[tblcol] is not string %}
+                        {% if 'Total' in tblcol or 'Amount' in tblcol %}
+                            <td><b>{{ "{:0.2f}{}".format(tblrow[tblcol], Repitem.symbol)}}</b></td>
+                        {% else %}
+                            <td>{{ "{:0.2f}{}".format(tblrow[tblcol], Repitem.symbol)}}</td>
+                        {% endif %}
+
+                    {% else %}
+                        {% if  'Total' in tblrow[tblcol] %}
+                            <td><b>{{ tblrow[tblcol] }}</b></td>
+                        {% else %}
+                            <td>{{ tblrow[tblcol] }}</td>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    <br />
+    <br />
+    {% endfor %}
+</body>
