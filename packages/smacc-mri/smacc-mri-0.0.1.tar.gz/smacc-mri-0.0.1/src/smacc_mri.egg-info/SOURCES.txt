@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/smaCC/__init__.py
+src/smaCC/hello.py
+src/smacc_mri.egg-info/PKG-INFO
+src/smacc_mri.egg-info/SOURCES.txt
+src/smacc_mri.egg-info/dependency_links.txt
+src/smacc_mri.egg-info/requires.txt
+src/smacc_mri.egg-info/top_level.txt

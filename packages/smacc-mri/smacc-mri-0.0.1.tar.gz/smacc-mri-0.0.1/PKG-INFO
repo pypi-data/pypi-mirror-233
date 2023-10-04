@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: smacc-mri
+Version: 0.0.1
+Summary: Segmentation, Metrics Extraction and Automatic Quality Control of Corpus Callosum
+Home-page: https://github.com/USCLoBeS/smacc
+Author: Shruti Gadewar
+Author-email: gadewar@usc.edu
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE
