@@ -1,0 +1,524 @@
+$def with (post, identities, guests)
+$var body_classes = ["widescreen"]
+
+$code:
+    def get_property(prop):
+        return post.pop(prop, [""])[0]
+
+$ permalink = get_property("url")
+$ pad_id = permalink.lstrip('/').replace('/', '--')
+$var title: Editing $permalink
+$var show_title = False
+$var hide_footer = True
+
+<form id=editor method=post action=$tx.origin/editor>
+<div id=preview>
+    <div id=replyContext></div>
+    <div id=previewName></div>
+    <div id=previewContent></div>
+</div>
+<div id=properties>
+    <div id=general_properties>
+        $# <fieldset id=author>
+        $# <legend>Author</legend>
+        $# $ author = get_property("author")
+        $# $for identity in identities:
+        $#     $ card = identity["card"]
+        $#     <label class=radio><input required type=radio name=author value=$card["uid"][0]
+        $#     $if author and author["uid"] == card["uid"]:
+        $#         checked
+        $#     $elif card["uid"][0] == "/":
+        $#         checked
+        $#     > $card["name"][0]</label>
+        $# </label>
+        $# </fieldset>
+
+        $# <div id=coauthor>
+        $#     <label><small>Coauthor</small><br>
+        $#     <label class=bounding><fieldset>
+        $#     $# $for rsvp in ["yes", "no", "maybe"]:
+        $#     $#     <label class=radio><input required type=radio name=rsvp value=$rsvp
+        $#     $#     $if "rsvp" in post and rsvp == post["rsvp"][0] or rsvp == "public":
+        $#     $#         checked
+        $#     $#     > $rsvp</label>
+        $#     </fieldset></label>
+        $#     </label>
+        $# </div>
+        $# <ul>
+        $# <p><small>Guests currently signed in:</small></p>
+        $# $for guest in guests:
+        $#     <li><label><input type=checkbox name=coauthor value=$guest["url"]>
+        $#     $guest["name"]</label> <small><a href=$guest["url"]>$guest["url"]</a></small></li>
+        $# </ul>
+        $# </fieldset>
+
+        $# <fieldset id=audience>
+        $# <legend>Audience</legend>
+        $# $if post:
+        $#     $for member_url in post.get("audience", []):
+        $#         <label><input checked type=checkbox name=audience value=$member_url>
+        $#         $member_url</label>
+        $# </fieldset>
+
+        <fieldset id=visibility>
+        <legend>Visibility</legend>
+        $for vis in ["public", "protected", "private"]:
+            <label class=radio><input required type=radio name=visibility value=$vis
+            $if vis == get_property("visibility"):
+                checked
+            > $vis</label>
+        </fieldset>
+
+        $# <fieldset id=syndication>
+        $# <legend>Syndication</legend>
+        $# $for syn in ["mastodon"]:
+        $#     <label class=radio><input required type=checkbox name=syndication value=$syn
+        $#     $if syn == get_property("syndication"):
+        $#         checked
+        $#     > $syn</label>
+        $# </fieldset>
+
+        $# $ type = get_property("type")
+        $# <fieldset id=type>
+        $# <legend>Type</legend>
+        $# $for _type in ["card", "entry", "event", "recipe", "review"]:
+        $#     <label class=radio><input required type=radio name=h value=$_type
+        $#     $if (not type and _type == "entry") or _type == type:
+        $#         checked
+        $#     $else:
+        $#         disabled
+        $#     > $_type</label>
+        $# </fieldset>
+    </div>
+
+    $# <div id=card_properties>
+    $#     <div id=name>
+    $#         <label><small>Name</small><br>
+    $#         <label class=bounding><input type=text name=name
+    $#         value="$get_property('name')"></label></label>
+    $#     </div>
+    $# </div>
+
+    <style>
+    #entry_properties div {
+        display: inline-block;
+        width: 100%; }
+    </style>
+    <div id=entry_properties>
+        <div id=in_reply_to>
+            <label><small>In reply to</small><br>
+            <label class=bounding><input type=text name=in_reply_to
+            value="$get_property('in-reply-to')"></label></label>
+        </div>
+        <div id=rsvp>
+            <label><small>RSVP</small><br>
+            <label class=bounding><fieldset>
+            $for rsvp in ["yes", "no", "maybe"]:
+                <label class=radio><input type=radio name=rsvp value=$rsvp
+                $if "rsvp" in post and rsvp == post["rsvp"][0] or rsvp == "public":
+                    checked
+                > $rsvp</label>
+            </fieldset></label>
+            </label>
+        </div>
+        <div id=like_of>
+            <label><small>Like of</small><br>
+            <label class=bounding><input type=text name=like_of
+            value="$get_property('like-of')"></label></label>
+        </div>
+        <div id=bookmark_of>
+            <label><small>Bookmark of</small><br>
+            <label class=bounding><input type=text name=bookmark_of
+            value="$get_property('bookmark-of')"></label></label>
+        </div>
+        <div id=listen_of>
+            <label><small>Listen of</small><br>
+            <label class=bounding><input type=text name=listen_of
+            value="$get_property('listen-of')"></label></label>
+        </div>
+        <div id=name>
+            <label><small>Name</small><br>
+            <label class=bounding><input type=text name=name
+            value="$get_property('name')"></label></label>
+        </div>
+        <div id=summary>
+            <label><small>Summary</small><br>
+            <label class=bounding><input type=text name=summary
+            value="$get_property('summary')"></label></label>
+        </div>
+        <div id=photo>
+            <label><small>Photo</small><br>
+            <label class=bounding><input type=text name=name
+            value="$get_property('photo')"></label></label>
+        </div>
+        <div id=econtent>
+            <label><small>Content</small><br>
+            <label class=bounding>
+            $# XXX <div id=editor></div>
+            $# XXX <div id=editorStatus></div>
+            $# TODO FIXME <textarea id=content-editor name=content>$get_property('content')["html"]</textarea>
+            <!--textarea id=content-editor name=content>$get_property('content')</textarea-->
+            <iframe src="$tx.origin/pads/p/$pad_id"
+                frameborder=0 style=height:30em;width:100%></iframe>
+            </label></label>
+            $# XXX <div id=connection></div>
+            $# XXX <div id=version></div>
+        </div>
+    </div>
+
+    $# <div id=event_properties>
+    $#     <div id=name>
+    $#         <label><small>Name</small><br>
+    $#         <label class=bounding><input type=text name=name
+    $#         value="$get_property('name')"></label></label>
+    $#     </div>
+    $# </div>
+    $# <div id=resume_properties>
+    $#     <div id=name>
+    $#         <label><small>Name</small><br>
+    $#         <label class=bounding><input type=text name=name
+    $#         value="$get_property('name')"></label></label>
+    $#     </div>
+    $# </div>
+    $# <div id=review_properties>
+    $#     <div id=name>
+    $#         <label><small>Name</small><br>
+    $#         <label class=bounding><input type=text name=name
+    $#         value="$get_property('name')"></label></label>
+    $#     </div>
+    $# </div>
+
+    $# <fieldset id=categories>
+    $#   <legend>Categories</legend>
+    $#   <!-- XXX todo populate with call to mp?q=config as with channels -->
+    $#   <input type=text><button>Add</button>
+    $#   <ul>
+    $#   $# $for category in c
+    $#   $#     <li><input type=checkbox id=coding name=category value=coding>
+    $#   $#     <label for=coding>Coding</label></li>
+    $#   </ul>
+    $# </fieldset>
+
+    $if published := get_property("published"):
+        <div id=published>
+        <label for=published><small>Published</small></label><br>
+        <input style="border:1px solid #333" type=datetime-local name=published_datetime
+        value="$published.to_date_string()T$published.to_time_string()">
+        <input style="font-family:monospace;font-size:.9em;border:1px solid #333;width:10em" type=text name=published_microseconds
+        value="$published.microsecond">
+        <select name=published_tz>
+        $for tz in pendulum.timezones:
+            $if "/" not in tz:
+                $continue
+            <option
+            $if tz == getattr(published, "timezone_name", "America/Los_Angeles"):
+                selected
+            >$tz</option>
+        </select>
+        </div>
+    <div id=permalink>
+        <label><small>Permalink</small><br>
+        <label class=bounding><input readonly type=text name=url
+        value=$tx.origin/$permalink.lstrip("/")></label></label>
+    </div>
+    </div>
+
+    <div class=buttons>
+        $# <label><input type=checkbox> Draft Live</label>
+        $# <button name=action value=save>Save</button>
+        $# if permalink:
+        <button name=action value=update>Update</button>
+        $# $else:
+        $#     <button name=action value=create>Create</button>
+    </div>
+</form>
+
+$if post:
+    <h4>Unused properties</h4>
+    <pre>$pformat(post)</pre>
+
+<style>
+form#editor {
+  column-gap: 2%;
+  display: grid;
+  grid-template-columns: 49% 49%; }
+form#editor input[type=text], textarea {
+  background-color: #ddd;
+  border: 0;
+  padding: 0;
+  width: 100%; }
+form#editor textarea {
+  height: 20em;
+  width: 100%; }
+form#editor input[type=text] {
+  height: 1.5em; }
+#categories ul {
+  list-style: none;
+  padding-left: 0; }
+.bounding {
+  background-color: #ddd;
+  border: .1em solid #333;
+  display: block;
+  padding: .125em .25em; }
+.radio {
+  cursor: pointer;
+  font-size:.8em }
+label small, legend {
+  font-size: .8em;
+  font-weight: bold; }
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+.buttons {
+  margin-top: 1em;
+  text-align: right; }
+#author, #coauthor, #type, #in_reply_to, #rsvp, #like_of, #bookmark_of, #listen_of, #name, #summary,
+#photo, #econtent, #coauthors, #visibility, #published, #permalink {
+  margin-bottom: .5em; }
+#in_reply_to input[type=checkbox], #name input[type=checkbox] {
+  font-size: .9em; }
+#in_reply_to input[type=text], #name input[type=text], #permalink input[type=text] {
+  outline: none; }
+#in_reply_to input[type=text], #permalink input[type=text] {
+  font-size: .9em; }
+$# #name input {
+$#   font-size: 1.5em;
+$#   height: 1.2em; }
+#content {
+  height: 35em; }
+</style>
+
+<script type=module>
+// XXX import { load, diamondMonaco, MicropubClient } from '/static/web.js'
+import { load, MicropubClient } from '/static/web.js'
+
+const pub = new MicropubClient('/posts')
+
+load(() => {
+  // document.querySelector('#card_properties').style.display = 'none'
+  // document.querySelector('#event_properties').style.display = 'none'
+  // document.querySelector('#resume_properties').style.display = 'none'
+  // document.querySelector('#review_properties').style.display = 'none'
+  const enlivenOptionalProperty = (type, property) => {
+    const textbox = document.querySelector(`#$${type}_properties #$${property} .bounding`)
+    textbox.style.display = 'none'
+    const checkbox = document.createElement('input')
+    checkbox.type = 'checkbox'
+    checkbox.addEventListener('click', ev => {
+      textbox.style.display = ev.target.checked ? 'block' : 'none'
+      textbox.focus()
+    })
+    document.querySelector(`#$${type}_properties #$${property} small`).prepend(checkbox)
+  }
+  // enlivenOptionalProperty('general', 'coauthor')
+  enlivenOptionalProperty('entry', 'in_reply_to')
+  enlivenOptionalProperty('entry', 'rsvp')
+  enlivenOptionalProperty('entry', 'like_of')
+  enlivenOptionalProperty('entry', 'bookmark_of')
+  enlivenOptionalProperty('entry', 'listen_of')
+  enlivenOptionalProperty('entry', 'name')
+  enlivenOptionalProperty('entry', 'summary')
+  enlivenOptionalProperty('entry', 'photo')
+  enlivenOptionalProperty('entry', 'econtent')
+
+  const getContent = () => {
+    // XXX monaco.getValue()
+    // return document.querySelector('#content-editor').value
+    const request = new XMLHttpRequest()
+    request.open("GET", '/pads/p/$pad_id/export/txt', false)
+    request.send(null);
+    if (request.status === 200) {
+      return request.responseText
+      // const response = JSON.parse(request.responseText)
+      // return response['pad:$pad_id'].atext.text
+    }
+  }
+
+  var frequency = 1;  // seconds
+  var count = 0;
+  var clean = true;
+  const tick = () => {
+    setTimeout(() => {
+      if (count++ > frequency) // && !clean)
+        updatePreview();
+      tick();
+    }, 1000);
+  }
+  tick();
+  const updatePreview = () => {
+    clean = false;
+    if (count > frequency) {
+      previewMarkdown();
+      clean = true;
+      count = 0;
+    }
+  }
+  updatePreview()
+
+  pub.getConfig().then(config => console.log("Micropub Config:", config))
+  // pub.getCategories().then(data => {
+  //   data.categories.forEach(cat => {
+  //     addCategory(cat)
+  //   })
+  // })
+
+  // TODO on form control change create a permalink and save a draft
+  const permalink = '$permalink'
+  const properties = {'content': '', 'post-status': 'draft'}
+
+  $# let monaco
+  $# pub.create('entry', properties).then(permalink => {
+  $#   $# $# document.querySelector('#permalink input[type=text]').value =
+  $#   $# $#   `$tx.origin$${permalink}`
+  $#   $# monaco = diamondMonaco(
+  $#   $#   permalink, editor, editorStatus, connection, version,
+  $#   $#   {
+  $#   $#     language: 'markdown'
+  $#   $#   },
+  $#   $#   '$(tx.user.session["uid"][0] if tx.user.session else tx.user.ip)',
+  $#   $#   true
+  $#   $# )
+  $#   $# monaco.onKeyUp(updatePreview)
+  $# })
+
+  // document.querySelector('#content-editor').addEventListener('keyup', updatePreview)
+  document.querySelector('#in_reply_to input[type=text]').addEventListener('blur', ev => {
+    previewReplyContext(ev.target.value)
+  })
+
+  addEventListener('beforeunload', ev => {
+    ev.stopPropagation()
+    ev.preventDefault()
+    return false
+  }, true)
+
+  document.querySelector('form#editor').addEventListener('submit', ev => {
+    ev.preventDefault()
+    // let myForm = document.getElementById('editor')
+    // let formData = new FormData(myForm)
+    // for (let p of formData) {
+    //   console.log(p)
+    // }
+    pub.update(document.querySelector('input[name=url]').value,
+      "replace",
+      {
+        "visibility": [document.querySelector('input[name=visibility]').value],
+        "name": [document.querySelector('input[name=name]').value],
+        "content": [getContent()]
+      }
+      // "syndication": [document.querySelector('input[name=syndication]').value],
+    )
+  
+    // const properties = {}
+    // const name = document.querySelector('input[name=name]').value
+    // if (name) {
+    //   properties.name = [name]
+    // }
+  
+    // const content = editor.value
+    // if (content) {
+    //   properties.content = [content]
+    // }
+  
+    // const published_date = document.querySelector('input[name=published_date]').value
+    // const published_time = document.querySelector('input[name=published_time]').value
+    // const published_tz = document.querySelector('select[name=published_tz]').value
+    // console.log(published_date)
+    // console.log(published_time)
+    // console.log(published_tz)
+    // if (published_date) {
+    //   let published = published_date
+    //   if (published_time) {
+    //     published = `$${published_date}T$${published_time}:00+00:00`
+    //   }
+    //   properties.published = [{datetime: published, timezone: published_tz}]
+    // }
+  
+    // const categories = []
+    // document.querySelectorAll('#categories input[type=checkbox]').forEach(el => {
+    //   if (el.checked) {
+    //     categories.push(el.value)
+    //   }
+    // })
+    // if (categories.length) {
+    //   properties['category'] = categories
+    // }
+  
+    // console.log(properties)
+    // pub.create('entry', properties, 'public').then(permalink => {
+    //   window.location.href = permalink
+    // })
+  })
+})
+
+const previewMarkdown = () => {
+  name = document.querySelector('#name input[type=text]').value
+  previewName.innerHTML = `<h1>$${name}</h1>`
+  let body = new FormData()
+  body.append('pad_id', '$pad_id')
+  fetch(
+    '/editor/preview/markdown',
+    {
+      method: 'POST',
+      body: body
+    }
+  ).then(response => {
+    if (response.status === 200) {
+      return response.json().then(data => {
+        previewContent.innerHTML = data['content']
+      })
+    }
+  })
+}
+
+const previewReplyContext = url => {
+  if (url == '') {
+    replyContext.innerHTML = '';
+    return
+  }
+  fetch(
+    '/editor/preview/resource?url=' + encodeURIComponent(url),
+  ).then(response => {
+    if (response.status === 200) {
+      return response.json().then(data => {
+        replyContext.innerHTML = `<big><strong>$${data['name']}</strong></big><p>$${data['summary']}</p>`
+      })
+    }
+  })
+}
+
+$# const addCategory = (cat) => {
+$#   const ul = document.querySelector('#categories ul')
+$#   const li = document.createElement('li')
+$#   const checkbox = document.createElement('input')
+$#   const tagname = document.createElement('span')
+$#   checkbox.type = 'checkbox'
+$#   checkbox.value = cat
+$#   li.appendChild(checkbox)
+$#   tagname.innerText = cat
+$#   li.appendChild(tagname)
+$#   ul.appendChild(li)
+$# }
+
+$# const { MicropubClient } = web
+$# const pub = new MicropubClient('/posts')
+$# document.addEventListener('DOMContentLoaded', () => {
+$#   pub.getConfig().then(data => console.log(data))
+$#   pub.getCategories().then(data => {
+$#     data.categories.forEach(cat => {
+$#       addCategory(cat)
+$#     })
+$#   })
+
+$#   document.querySelector('#categories button').addEventListener('click', event => {
+$#     event.preventDefault()
+$#     const textbox = document.querySelector('#categories input')
+$#     addCategory(textbox.value)
+$#     textbox.value = ''
+$#   })
+</script>
