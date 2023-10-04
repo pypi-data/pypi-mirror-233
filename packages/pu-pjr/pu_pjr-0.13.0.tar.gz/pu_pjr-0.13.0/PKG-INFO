@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pu-pjr
+Version: 0.13.0
+Summary: Personal utilities for coding and data analysis
+Home-page: https://github.com/Parzival1918/Personal-Utilities
+Author: Pedro Juan Royo
+Author-email: pedro.juan.royo@gmail.com
+Requires-Python: ==3.11.*
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: matplotlib (>=3.8.0,<4.0.0)
+Requires-Dist: ovito (>=3.9.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.1,<3.0.0)
+Requires-Dist: rich (>=13.6.0,<14.0.0)
+Project-URL: Repository, https://github.com/Parzival1918/Personal-Utilities
+Description-Content-Type: text/markdown
+
+# Personal utilities
+
+<div align="center">
+
+[![Actions Status](https://github.com/parzival1918/Personal-Utilities/workflows/Python%20tests/badge.svg)](https://github.com/parzival1918/Personal-Utilities/actions)
+![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/parzival1918/Personal-Utilities)
+
+</div>
+
+<div align="center">
+
+![PyPI - Version](https://img.shields.io/pypi/v/pu-pjr)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pu-pjr)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/pu-pjr)
+
+</div>

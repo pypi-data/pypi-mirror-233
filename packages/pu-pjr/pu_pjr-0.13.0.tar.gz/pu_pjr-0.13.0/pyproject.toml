@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pu-pjr"
+version = "0.13.0"
+description = "Personal utilities for coding and data analysis"
+authors = ["Pedro Juan Royo <pedro.juan.royo@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pu_pjr"}]
+repository = "https://github.com/Parzival1918/Personal-Utilities"
+
+[tool.poetry.dependencies]
+python = "3.11.x"
+pandas = "^2.1.1"
+matplotlib = "^3.8.0"
+ovito = "^3.9.2"
+rich = "^13.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+
+[tool.poetry.scripts]
+quickplot = "pu_pjr.plotting.__main__:main"
+dirstats = "pu_pjr.dir_stats.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
