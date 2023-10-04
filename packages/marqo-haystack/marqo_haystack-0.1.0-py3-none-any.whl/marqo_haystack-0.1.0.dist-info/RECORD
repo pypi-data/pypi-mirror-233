@@ -1,0 +1,9 @@
+marqo_haystack/__about__.py,sha256=1r92yS2CmEqWDQc3TEcGwdgTEoOOk4zUON_jmhP85rg,127
+marqo_haystack/__init__.py,sha256=PasWEh1LAjZBOux3qrS2v4OgHqKM2pm4W8PGK7klElY,200
+marqo_haystack/document_store.py,sha256=VRAQRkejPMRquHvvqN_kyo5mJkX0XGXE4RTlVHcAoog,13775
+marqo_haystack/errors.py,sha256=7Qiwu_ERRpgW3r1Y1I4uLM-CjvLg6yhXsWvqCPVYvN0,420
+marqo_haystack/retriever.py,sha256=qnA93OPXZW8Jesg4mtUnUjF_9m_eHOpPfNEDRnMoHK0,2411
+marqo_haystack-0.1.0.dist-info/METADATA,sha256=OK_-o2Sv-itXBeqtTvtC1Dbe8252J7_uzttrmAhZZOg,5489
+marqo_haystack-0.1.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+marqo_haystack-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+marqo_haystack-0.1.0.dist-info/RECORD,,
