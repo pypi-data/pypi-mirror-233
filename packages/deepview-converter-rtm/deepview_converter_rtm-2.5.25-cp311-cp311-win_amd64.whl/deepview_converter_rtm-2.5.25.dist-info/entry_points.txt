@@ -1,0 +1,2 @@
+[deepview_converter]
+converter = deepview_rtm.__main__
