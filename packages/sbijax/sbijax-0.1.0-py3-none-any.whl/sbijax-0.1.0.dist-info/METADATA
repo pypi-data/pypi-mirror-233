@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: sbijax
+Version: 0.1.0
+Summary:  Simulation-based inference in JAX
+Project-URL: homepage, https://github.com/dirmeier/sbijax
+Author-email: Simon Dirmeier <sfyrbnd@pm.me>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: abc,approximate Bayesian computation,normalizing flows,simulation-based inference,smc-abc
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Requires-Dist: blackjax-nightly>=0.9.6.post127
+Requires-Dist: distrax>=0.1.2
+Requires-Dist: dm-haiku>=0.0.9
+Requires-Dist: optax>=0.1.3
+Requires-Dist: surjectors>=0.2.2
+Requires-Dist: tfp-nightly>=0.20.0.dev20230404
+Description-Content-Type: text/markdown
+
+# sbijax
+
+[![status](http://www.repostatus.org/badges/latest/concept.svg)](http://www.repostatus.org/#concept)
+[![ci](https://github.com/dirmeier/sbijax/actions/workflows/ci.yaml/badge.svg)](https://github.com/dirmeier/sbijax/actions/workflows/ci.yaml)
+[![version](https://img.shields.io/pypi/v/sbijax.svg?colorB=black&style=flat)](https://pypi.org/project/sbijax/)
+
+> Simulation-based inference in JAX
+
+## About
+
+SbiJAX implements several algorithms for simulation-based inference using
+[JAX](https://github.com/google/jax), [Haiku](https://github.com/deepmind/dm-haiku) and [BlackJAX](https://github.com/blackjax-devs/blackjax).
+
+SbiJAX so far implements
+
+- Rejection ABC (`RejectionABC`),
+- Sequential Monte Carlo ABC (`SMCABC`),
+- Sequential Neural Likelihood Estimation (`SNL`)
+- Surjective Sequential Neural Likelihood Estimation (`SSNL`)
+- Sequential Neural Posterior Estimation C (short `SNP`)
+
+## Examples
+
+You can find several self-contained examples on how to use the algorithms in `examples`.
+
+## Usage
+
+## Installation
+
+Make sure to have a working `JAX` installation. Depending whether you want to use CPU/GPU/TPU,
+please follow [these instructions](https://github.com/google/jax#installation).
+
+To install from PyPI, just call the following on the command line:
+
+```bash
+pip install sbijax
+```
+
+To install the latest GitHub <RELEASE>, use:
+
+```bash
+pip install git+https://github.com/dirmeier/sbijax@<RELEASE>
+```
+
+## Author
+
+Simon Dirmeier <a href="mailto:sfyrbnd @ pm me">sfyrbnd @ pm me</a>
