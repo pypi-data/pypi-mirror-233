@@ -1,0 +1,10 @@
+h2o_mlops_scoring_client/VERSION,sha256=spvVGfA2UeP1h4ywydEjWZBHuxIdIBjp0tIIjr8OAqw,8
+h2o_mlops_scoring_client/__init__.py,sha256=ZGnQjeiDgFH6vQNWdeUB2zGUh9rLGiAfsIkSJfD9c2A,11734
+h2o_mlops_scoring_client/_configs.py,sha256=0cqxxDStSGmTv-9tXrGM8ThVhUL_YtTZ5Puu8_fqZ2E,1406
+h2o_mlops_scoring_client/_utils.py,sha256=TOo6evew9D0UFI25ejGCsC17Fb8jea8yYVjezyUxo50,17292
+h2o_mlops_scoring_client/_version.py,sha256=xSFev2acw6sH4HhRIFTczsDXl8HZlO172zFY8jjbdLs,497
+h2o_mlops_scoring_client/log4j.properties,sha256=VFvumzeQUxBHEfFvxJ4AqHTX0wQXxdWEt8ifMMgZSCM,1635
+h2o_mlops_scoring_client-0.1.2b1.dist-info/METADATA,sha256=YF09MNwwUQ-WktktxBOEk0em10HgX-odXzmpoLgWlYM,3054
+h2o_mlops_scoring_client-0.1.2b1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+h2o_mlops_scoring_client-0.1.2b1.dist-info/top_level.txt,sha256=QqsGjPwyloWBgEOjck-e-Bdmk2YW_AaAcX7YWz40UKg,25
+h2o_mlops_scoring_client-0.1.2b1.dist-info/RECORD,,
