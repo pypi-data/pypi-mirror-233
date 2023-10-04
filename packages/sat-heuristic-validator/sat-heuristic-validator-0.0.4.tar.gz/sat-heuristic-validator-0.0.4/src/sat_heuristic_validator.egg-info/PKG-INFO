@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sat-heuristic-validator
+Version: 0.0.4
+Summary: A tool that tests correctness performance of heuristic algorithms for SAT problem.
+Author: Paweł Wanat
+Author-email: wanatpj+sat@gmail.com
+Project-URL: Homepage, https://github.com/wanatpj/sat-heuristic-validator
+License-File: LICENSE
