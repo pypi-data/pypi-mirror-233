@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+build.cmd
+build.sh
+clean.sh
+localinstall.sh
+pyproject.toml
+test_config_path.py
+update.sh
+upload-to-pypi.cmd
+upload-to-pypi.sh
+src/config_path/__init__.py
+src/config_path.egg-info/PKG-INFO
+src/config_path.egg-info/SOURCES.txt
+src/config_path.egg-info/dependency_links.txt
+src/config_path.egg-info/top_level.txt
