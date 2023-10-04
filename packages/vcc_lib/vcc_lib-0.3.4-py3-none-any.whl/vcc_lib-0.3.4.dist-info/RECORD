@@ -1,0 +1,11 @@
+vcc/__init__.py,sha256=S1iPunfvaeKP4ziVI6u-lfb-c8eTIx5sOEFxahLehR8,102
+vcc/c.py,sha256=tWrphPn_lBworvdyHpaal9C-6n6XjUxKNOuEv-pCJAA,359
+vcc/rpc.py,sha256=gq02pOJVbQI7tjiM4ZJoIKGa2Cnhm2ko9kzfYbqG1fo,761
+vcc/s.py,sha256=VZ6Xi1AOQU_9sW5mCvUGbqGWbQYlaGIbb8G7IXZLVIc,215
+vcc/service.py,sha256=UFn_A8bPgXSzDAWVE8ZJhMIfahMu01ZtmbOlzUw_eFc,14675
+vcc/test.py,sha256=8LpfwMI6TKzz_vvqM9g8_liS4d1FOFMBx_P5ua3LI8s,168
+vcc/tools.py,sha256=45SmqlP2R_O5aoP5s4UGDtv3rHdNR_pdY1SxQJlsGnQ,4552
+vcc/vcc.py,sha256=EUb178J22qpJYfYai3LJus77zJ-mQZXfE5_g0vQUaPQ,26159
+vcc_lib-0.3.4.dist-info/METADATA,sha256=qBDVb5-VzvsM3kBlnyzeUFLEapF8OAsKrn221Al2Yzk,376
+vcc_lib-0.3.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+vcc_lib-0.3.4.dist-info/RECORD,,
