@@ -1,0 +1,3 @@
+[console_scripts]
+searchadscli=searchadscli.main:app
+

@@ -1,0 +1,16 @@
+searchadscli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+searchadscli/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+searchadscli/commands/campaign.py,sha256=zlQNhwM16NR1MT7eWrYVOQyAxVH8KayGSCRZjculKUg,12800
+searchadscli/commands/configure.py,sha256=qGn3l8RffC8g6rs4iikbTgT0F82qrtD5BuS2hGOiHOc,5180
+searchadscli/commands/keywords.py,sha256=ZFsnmMXcSvU17dg6h6NwVpAq2wGVuuTPs-n5fyOIOdg,12811
+searchadscli/main.py,sha256=IpatjdjSIPqfg0qhALqqsx23JuMgjsFrBN7lGHkpdNg,2951
+searchadscli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+searchadscli/utils/access_token.py,sha256=PzV6YUjDnHLGlrG5qSmwWx8UtFEKl6_BduXSwxLckWM,3197
+searchadscli/utils/adgroups_api.py,sha256=-l9FhnREBf5r5Ry0yO6pSETcustn_jAUjeEiAp6Wxp0,1942
+searchadscli/utils/campaigns_api.py,sha256=k4mxKYrDMl2KtxQdar0cFNgLS8YdxQ3g5PIg3v9ROtQ,3140
+searchadscli/utils/config.py,sha256=yxchrI-uobi9COij_wAfJ9uacavvTXcD__pjg8EWfr0,1916
+searchadscli/utils/keywords_api.py,sha256=qJ_OGrh_uHfB6tTj6emkE2d_Tu7jkPldjEyACa5PVJ8,3430
+searchadscli-0.1.0.dist-info/METADATA,sha256=VjIFrUYU_TRhM5hkSjIMgEPAQZmZwqaTfnhAQ6gfG5I,8619
+searchadscli-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+searchadscli-0.1.0.dist-info/entry_points.txt,sha256=3IOaRQXOXbsVzW--TvPfkqp53_0F851osKiBXOgnh2s,54
+searchadscli-0.1.0.dist-info/RECORD,,
