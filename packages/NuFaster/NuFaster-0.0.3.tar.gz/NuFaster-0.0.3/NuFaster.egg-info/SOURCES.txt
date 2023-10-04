@@ -1,0 +1,14 @@
+README.md
+setup.py
+NuFaster/__init__.py
+NuFaster/get_library_depand.py
+NuFaster/get_library_dll.py
+NuFaster/nuitka_parser.py
+NuFaster/setting.py
+NuFaster/to_pack.py
+NuFaster/tools.py
+NuFaster.egg-info/PKG-INFO
+NuFaster.egg-info/SOURCES.txt
+NuFaster.egg-info/dependency_links.txt
+NuFaster.egg-info/requires.txt
+NuFaster.egg-info/top_level.txt
