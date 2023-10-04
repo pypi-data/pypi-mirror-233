@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pymuster
+Version: 0.1.2
+Summary: A registration tool for medical images
+Home-page: https://github.com/CRAI-OUS/MUSTER
+License: MIT
+Keywords: registration,medical,MRI,CT,PET,SPECT,non-rigid,deformation
+Author: Edvard Grødem
+Author-email: edvard.grodem@gmail.com
+Requires-Python: >=3.11,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: alive-progress (>=3.1.4,<4.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: torch (==2.0.0)
+Project-URL: Repository, https://github.com/CRAI-OUS/MUSTER
+Description-Content-Type: text/markdown
+
+# MUSTER
+Multi Session Temporal Registration
+
+## Installation
+```bash
+pip install pymuster
+```
