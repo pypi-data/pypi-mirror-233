@@ -1,0 +1,2 @@
+[console_scripts]
+streamlit = streamlit_df.web.cli:main
