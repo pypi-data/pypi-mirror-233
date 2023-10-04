@@ -1,0 +1,20 @@
+name: napari-microtubule-analyzer
+display_name: Microtubule Analyzer
+contributions:
+  commands:
+    - id: napari-microtubule-analyzer.get_reader
+      python_name: napari_microtubule_analyzer._reader:napari_get_reader
+      title: Open data with Microtubule Analyzer
+    - id: napari-microtubule-analyzer.degree_of_radiality
+      python_name: napari_microtubule_analyzer._widget:RadialityPlotter
+      title: Make DoR widget
+
+  readers:
+  - command: napari-microtubule-analyzer.get_reader
+    filename_patterns:
+    - '*.tif'
+    - '*.tiff'
+    accepts_directories: true
+  widgets:
+    - command: napari-microtubule-analyzer.degree_of_radiality
+      display_name: Compute degree of radiality
