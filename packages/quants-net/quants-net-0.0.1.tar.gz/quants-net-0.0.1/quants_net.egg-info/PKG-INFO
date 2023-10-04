@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: quants-net
+Version: 0.0.1
+Summary: Quants Net Python
+Home-page: https://github.com/quants-net/quants-net-py
+Author: Quants Net
+Author-email: quants-net-py@quants.net
+Project-URL: Bug Tracker, https://github.com/quants-net/quants-net-py/issues
+Description-Content-Type: text/markdown
+
+# quants-net-py
+Python  package of quants-net
