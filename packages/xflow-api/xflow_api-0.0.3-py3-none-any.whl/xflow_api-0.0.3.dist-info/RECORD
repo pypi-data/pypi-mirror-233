@@ -1,0 +1,15 @@
+xflow/__init__.py,sha256=ZjVTavhRB4BV8A2JT1OWpxslC0MrvNc_HvYl0VAgJsc,91
+xflow/_flow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xflow/_flow/component.py,sha256=Aa0qrPEzGPlKZniujPmWi_KL2odeHQsKMHUm9boQooQ,5051
+xflow/_flow/pipeline.py,sha256=IIU3PuUugzoCq5lbleDjAGRbxe08OAtqaKoGUYbWqU8,54
+xflow/_private/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xflow/_private/client.py,sha256=_4QipQ322WNWrSSwjxsesTPpS7m8bmV1QnFybe9weok,2108
+xflow/_private/request_vo.py,sha256=iXzSRdCirvLxnkbTowlKlDB86J7dMiTbdUCp2A_nn2o,295
+xflow/_private/response_vo.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xflow/data/__init__.py,sha256=q_wJyAll_6MRQOYNUCiQy1V49KDEC0eR18-wteFQx6Y,95
+xflow/data/data_pipeline.py,sha256=RGkD3S1b4TRmNOUsW8b4G9KU4ojBgr7TG1ZPxfOJydw,414
+xflow/data/rw_api.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xflow_api-0.0.3.dist-info/METADATA,sha256=Z8g7-zdhVpEUixS-8Uwg-2kdrWrhLVR1iglZaQqb6EI,309
+xflow_api-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+xflow_api-0.0.3.dist-info/top_level.txt,sha256=KpSEzlVEQPRF8tqL3Szng-Fmb9CnOqIcGfPoiHRjZ8c,6
+xflow_api-0.0.3.dist-info/RECORD,,
