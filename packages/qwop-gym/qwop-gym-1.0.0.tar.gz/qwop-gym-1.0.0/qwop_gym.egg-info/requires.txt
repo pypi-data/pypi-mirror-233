@@ -1,0 +1,15 @@
+gymnasium~=0.29.1
+websockets~=11.0
+numpy~=1.24
+selenium~=4.11
+pillow~=10.0
+pygame~=2.5
+pyyaml>=6.0
+
+[sb3]
+stable_baselines3~=2.1
+sb3-contrib~=2.1
+tensorboard
+tensorflow
+tqdm
+rich
