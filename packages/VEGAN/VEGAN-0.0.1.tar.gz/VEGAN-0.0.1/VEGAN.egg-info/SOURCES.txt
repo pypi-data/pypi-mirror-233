@@ -1,0 +1,5 @@
+setup.py
+VEGAN.egg-info/PKG-INFO
+VEGAN.egg-info/SOURCES.txt
+VEGAN.egg-info/dependency_links.txt
+VEGAN.egg-info/top_level.txt
