@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: LBLDataAccess
+Version: 0.2.2
+Author: Ilkka Sipila
+Author-email: ilkka.sipila@lewisham.gov.uk
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+
