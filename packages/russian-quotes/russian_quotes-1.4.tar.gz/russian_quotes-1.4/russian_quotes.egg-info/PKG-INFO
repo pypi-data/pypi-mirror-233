@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: russian-quotes
+Version: 1.4
+Summary: Quotes of famous people on russian
+Author: liner
+Author-email: contact.liner999@gmail.com
+License: MIT
+Project-URL: GitHub, https://github.com/r-liner/russian_quotes/
+Project-URL: Bug Tracker, https://github.com/r-liner/russian_quotes/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# russian_quotes
+
+## Установка
+```shell
+pip install russian-quotes
+```
+
+## Пример использования
+```py
+from russian_quotes import get_quote
+
+text, author = get_quote()
+
+print(f'Text: {text} Author: {author}')
+```
+
+## Зависимости
+
+[Python >=3.10](https://www.python.org/downloads/release/python-310)
+
+## Лицензия
+
+[MIT](http://en.wikipedia.org/wiki/MIT_License)
