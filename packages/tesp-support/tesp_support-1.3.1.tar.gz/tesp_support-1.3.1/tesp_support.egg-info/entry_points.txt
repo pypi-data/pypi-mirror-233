@@ -1,0 +1,4 @@
+[console_scripts]
+download_analysis = tesp_support.api.data:download_analysis
+download_data = tesp_support.api.data:download_data
+download_examples = tesp_support.api.data:download_examples
