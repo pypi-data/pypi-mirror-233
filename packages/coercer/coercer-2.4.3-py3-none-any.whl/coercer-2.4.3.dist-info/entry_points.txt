@@ -1,0 +1,3 @@
+[console_scripts]
+coercer=coercer.__main__:main
+
