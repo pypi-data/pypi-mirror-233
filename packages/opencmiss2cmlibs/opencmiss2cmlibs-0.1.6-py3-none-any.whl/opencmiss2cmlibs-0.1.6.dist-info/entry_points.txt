@@ -1,0 +1,3 @@
+[console_scripts]
+opencmiss2cmlibs = opencmiss2cmlibs:entry_point
+upgradeargondocuments = upgradeargondocuments:entry_point

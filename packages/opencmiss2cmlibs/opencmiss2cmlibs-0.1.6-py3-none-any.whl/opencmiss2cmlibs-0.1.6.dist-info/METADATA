@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: opencmiss2cmlibs
+Version: 0.1.6
+Summary: Application converting packages that use OpenCMISS-Zinc to CMLibs Zinc.
+License: Apache Software License
+Keywords: continuum modelling
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+OpenCMISS 2 CMLibs
+==================
+
+This tool is meant to help update code from using OpenCMISS python packages to CMLibs python packages.
+It also contains a tool to upgrade Argon documents from OpenCMISS to CMLibs.
+
+Install with::
+
+  pip install opencmiss2cmlibs
+
+Usage::
+
+  opencmiss2cmlibs <directory-of-python-packge-to-update>
+
+This displays a diff of the changes on *stdout*.
+To make the changes in-place and not create a backup file use::
+
+  opencmiss2cmlibs -w -n <directory-of-python-packge-to-update>
+
+This form of the command is best suited for use with code that is under version control, Git or the like.
+
+To upgrade Argon documents us the following command::
+
+  upgradeargondocuments <directory-containing-argon-files>
+
+This command will search through the directory tree looking for old Argon documents and convert them to new ones.
+
+
+   Copyright 2023 University of Auckland
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
