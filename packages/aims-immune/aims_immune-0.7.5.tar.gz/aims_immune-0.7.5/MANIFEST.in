@@ -1,0 +1,4 @@
+include src/aims_immune/app_data/*
+include src/aims_immune/app_data/screens/*
+include src/aims_immune/*.py
+include src/aims_immune/*.kv
