@@ -1,0 +1,4 @@
+[console_scripts]
+pstealth=chameleontools.pstealth:main
+test1=chameleontools.StealthParser.pipeline:main
+
