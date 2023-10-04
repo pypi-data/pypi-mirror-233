@@ -1,0 +1,8 @@
+pyjson
+PyYAML
+pyBase64
+tqdm
+requests
+matplotlib
+numpy
+opencv-python
