@@ -1,0 +1,10 @@
+attrs
+bidict
+bo4e
+frozendict
+injector
+networkx
+pvframework
+pydantic>=2.0.0
+python-generics
+typeguard>=4.0.1
