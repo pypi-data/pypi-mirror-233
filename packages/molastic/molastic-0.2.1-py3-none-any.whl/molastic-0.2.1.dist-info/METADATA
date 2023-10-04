@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: molastic
+Version: 0.2.1
+Summary: Library to easymock out elasticsearch for your tests
+Author-email: Brian Estrada <brianseg014@gmail.com>
+Project-URL: Homepage, https://github.com/brianseg014/molastic
+Requires-Python: >3.9
+Description-Content-Type: text/markdown
+Requires-Dist: python-dateutil >=2.8.2
+Requires-Dist: requests-mock >=1.9.3
+Requires-Dist: Shapely >=1.7.1
+Requires-Dist: haversine >=2.5.1
+Requires-Dist: pygeohash >=1.2.0
+Requires-Dist: deepmerge >=1.0.1
+Requires-Dist: furl >=2.1.3
+Requires-Dist: ply >=3.11
+Requires-Dist: pyjnius >=1.4.1
+Provides-Extra: dev
+Requires-Dist: pytest ==7.1.2 ; extra == 'dev'
+Requires-Dist: furl ==2.1.3 ; extra == 'dev'
+Requires-Dist: black ==22.3.0 ; extra == 'dev'
+Requires-Dist: flake8 ==4.0.1 ; extra == 'dev'
+Requires-Dist: mypy ==0.961 ; extra == 'dev'
+Requires-Dist: pylint ==2.14.5 ; extra == 'dev'
+Requires-Dist: coverage ==6.4.2 ; extra == 'dev'
+
+# Molastic
+
+## Install
+
+```console
+$ pip install molastic
+```
+
+## Quickstart
+
+Molastic is a library to easymock out elasticsearch for your tests
+
+```python
+import molastic
+import requests
+
+def test_something():
+    base_url = 'mock://elastic'
+    with molastic.mock_elasticsearch(base_url):
+        requests.post(
+            url=f'{base_url}/my-index/_doc',
+            json={ 
+                "user": {
+                    "id": "kimchy"
+                } 
+            }
+        )
+```
+
+## Features
+
+- Types supported: Text, SearchAsYouType, Long, Float, Double, Boolean, Keyword, Date, Geopoint, Geoshape
+- Analyzers: Standard
+- Document APIs: Index, Update, Delete, Get
+- Index APIs: Create index, Delete index, Exists, Update mapping, Get Mapping
+    - Multi-Fields
+- Queries DSL supported: DisjunctionMaxQuery, Boolean, Match, MatchBoolPrefix, MultiMatch, MatchAll, Term, Prefix, Range, Geoshape, Geodistance
+- Scripting: painless (but maps cannot be accessed by dot notation)
