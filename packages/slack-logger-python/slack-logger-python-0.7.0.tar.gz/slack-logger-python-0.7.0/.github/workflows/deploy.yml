@@ -1,0 +1,141 @@
+name: "Check & Deploy Slack Logger"
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ v* ]
+  pull_request:
+    types: [ opened, synchronize ]
+  workflow_dispatch:
+
+
+permissions:
+  contents: write
+  id-token: write
+
+env:
+  REGISTRY: ghcr.io
+  REPOSITORY: ${{ github.repository }} # <owner/repo>
+  MODULE_NAME: slack_logger
+  VERSION: ${{ github.ref_type == 'tag' && github.ref_name || github.event.pull_request.head.sha || github.sha  }}
+
+jobs:
+  check:
+    name: "Checks"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: ${{ github.ref_type == 'tag' && 'prod' || 'dev' }}
+    steps:
+
+      - name: Log Arguments
+        run: |
+          echo "::notice title=REGISTRY::${{ env.REGISTRY }}"
+          echo "::notice title=REPOSITORY::${{ env.REPOSITORY }}"
+          echo "::notice title=MODULE_NAME::${{ env.MODULE_NAME }}"
+          echo "::notice title=VERSION::${{ env.VERSION }}"
+          echo "::notice title=REF|BRANCH::${{ github.ref_name }}"
+
+      - name: Checkout Source Code
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # pin@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Python
+        uses: actions/setup-python@3542bca2639a428e1796aaa6a2ffef0c0f575566 # pin@v3
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: pip | Install Dependencies
+        run: pip install -r requirements_dev.txt -r requirements.txt
+
+      # The official isort action does not provide any output in the success case
+      - name: isort | Import Order Check
+        run: isort --check-only --diff --verbose .
+
+      - name: black | Format Check
+        uses: psf/black@193ee766ca496871f93621d6b58d57a6564ff81b # pin@stable
+        with:
+          options: "--check --diff --verbose"
+
+      - name: ruff | Lint Check
+        id: lint
+        run: ruff check ${{env.MODULE_NAME}} tests
+
+      - name: mypy | Type Check
+        run: |
+          set -o pipefail
+          mypy ${{env.MODULE_NAME}} tests
+
+      - name: pytest | Run Tests
+        run: |
+          pytest
+
+      - name: Gather Badge Data
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        run: |
+          coverage run -m pytest -s
+          coverage report -m
+
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # pin@v3
+        if: always() && github.ref_name == 'main' && github.event_name == 'push'
+        with:
+          ref: assets
+          path: assets
+
+      - name: Create Badge Directory
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        run: mkdir -p assets/badges
+
+      - name: Create Coverage Badge
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        uses: tj-actions/coverage-badge-py@782bdaaa8b2e37612e6b6fac5e559e5544e6eef2 # pin@v2
+        with:
+          output: assets/badges/coverage.svg
+
+      - name: Commit Badge
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        run: |
+          cd assets
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add badges/coverage.svg
+            git commit -m "Update coverage badge"
+            git push
+          fi
+
+
+  deploy:
+    name: "Deploy"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: github.ref_type == 'tag'
+    environment: 'prod'
+    needs:
+      - check
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # pin@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Python
+        uses: actions/setup-python@3542bca2639a428e1796aaa6a2ffef0c0f575566 # pin@v3
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: pip | Install Dependencies
+        run: pip install build
+
+      - name: Get Version
+        run: |
+          echo "${VERSION:1}" > VERSION
+
+      - name: Build
+        run: python -m build
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@f8c70e705ffc13c3b4d1221169b84f12a75d6ca8 # pin@release/v1

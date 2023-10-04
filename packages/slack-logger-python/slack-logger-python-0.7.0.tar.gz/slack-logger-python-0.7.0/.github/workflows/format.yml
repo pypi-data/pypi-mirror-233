@@ -1,0 +1,81 @@
+name: "Python Black Formatter"
+
+on:
+  pull_request:
+    types: [ opened ]
+  issue_comment:
+    types: [ created ]
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    name: "Format"
+    runs-on: ubuntu-22.04
+    if: github.event.issue.pull_request
+    steps:
+      - uses: khan/pull-request-comment-trigger@edab8d9ba7759221187ef7120592a6fbfada0d18 # pin@v1.1.0
+        id: check
+        with:
+          trigger: '/format'
+          reaction: "+1" # Reaction must be one of the reactions here: https://developer.github.com/v3/reactions/#reaction-types
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # pin@v3
+        if: steps.check.outputs.triggered == 'true'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check out PR
+        if: steps.check.outputs.triggered == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr checkout ${{ github.event.issue.number }}
+
+      - name: Set up Python
+        uses: actions/setup-python@3542bca2639a428e1796aaa6a2ffef0c0f575566 # pin@v3
+        if: steps.check.outputs.triggered == 'true'
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install
+        if: steps.check.outputs.triggered == 'true'
+        run: pip install black isort
+
+      - name: Format using black
+        uses: psf/black@193ee766ca496871f93621d6b58d57a6564ff81b # pin@stable
+        if: steps.check.outputs.triggered == 'true'
+        with:
+          options: "--verbose"
+
+      - name: Sort imports using isort
+        if: steps.check.outputs.triggered == 'true'
+        run: isort --verbose .
+
+      - name: Commit changes
+        if: steps.check.outputs.triggered == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+          git status
+          git diff --stat
+          git commit -am "chore: format code"
+
+          git log --oneline --max-count=10
+
+          git push
+
+      - uses: khan/pull-request-comment-trigger@edab8d9ba7759221187ef7120592a6fbfada0d18 # pin@v1.1.0
+        if: failure()
+        with:
+          trigger: '/format'
+          reaction: "confused" # Reaction must be one of the reactions here: https://developer.github.com/v3/reactions/#reaction-types
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
