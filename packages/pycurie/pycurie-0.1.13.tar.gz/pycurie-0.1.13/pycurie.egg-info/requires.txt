@@ -1,0 +1,7 @@
+PyYAML
+Jinja2
+boto3
+python-dotenv
+pandas
+IPython
+sqlparse
