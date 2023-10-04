@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+symusic.pyi
+symusic.egg-info/PKG-INFO
+symusic.egg-info/SOURCES.txt
+symusic.egg-info/dependency_links.txt
+symusic.egg-info/not-zip-safe
+symusic.egg-info/requires.txt
+symusic.egg-info/top_level.txt
