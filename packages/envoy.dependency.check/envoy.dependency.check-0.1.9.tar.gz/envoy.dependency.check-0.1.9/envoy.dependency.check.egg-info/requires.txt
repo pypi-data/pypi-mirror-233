@@ -1,0 +1,10 @@
+abstracts>=0.0.12
+aio.api.github>=0.2.5
+aio.api.nist>=0.0.3
+aio.core>=0.10.0
+aio.run.checker>=0.5.7
+aiohttp>=3.8.1
+envoy.base.utils>=0.4.7
+gidgethub
+jinja2
+packaging>=23.0
