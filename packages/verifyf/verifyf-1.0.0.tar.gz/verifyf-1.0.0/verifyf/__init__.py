@@ -1,0 +1,1 @@
+from verifyf.verify import verify

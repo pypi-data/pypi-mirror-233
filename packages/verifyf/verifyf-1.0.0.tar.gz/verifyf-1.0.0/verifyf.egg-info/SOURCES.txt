@@ -1,0 +1,8 @@
+setup.py
+verifyf/__init__.py
+verifyf/verify.py
+verifyf.egg-info/PKG-INFO
+verifyf.egg-info/SOURCES.txt
+verifyf.egg-info/dependency_links.txt
+verifyf.egg-info/requires.txt
+verifyf.egg-info/top_level.txt
