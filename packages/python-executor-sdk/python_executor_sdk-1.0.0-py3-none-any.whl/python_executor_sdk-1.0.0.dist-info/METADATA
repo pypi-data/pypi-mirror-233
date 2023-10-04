@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: python-executor-sdk
+Version: 1.0.0
+Summary: Python Crawling Executors
+Home-page: https://github.com/haohoangofficial/executor
+Download-URL: https://github.com/haohoangofficial/executor/tarball/1.0.0
+Author: Hao Hoang
+Author-email: haohoangofficial@gmail.com
+License: LICENSE.txt
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4 ==4.12.2
+Requires-Dist: certifi ==2023.7.22
+Requires-Dist: charset-normalizer ==3.3.0
+Requires-Dist: idna ==3.4
+Requires-Dist: requests ==2.31.0
+Requires-Dist: soupsieve ==2.5
+Requires-Dist: urllib3 ==2.0.6
+
+# executor
+The Crawling Executors
