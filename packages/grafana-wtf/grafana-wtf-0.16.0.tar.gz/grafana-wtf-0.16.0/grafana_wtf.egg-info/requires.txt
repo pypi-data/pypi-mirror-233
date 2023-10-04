@@ -1,0 +1,24 @@
+six
+docopt<0.7,>=0.6.2
+munch<5,>=2.5.0
+tqdm<5,>=4.60.0
+requests<3,>=2.26
+grafana-client<4,>=3.9.1
+jsonpath-rw<2,>=1.4.0
+requests-cache<2,>=0.8.0
+tabulate<0.10,>=0.8.5
+colored<3,>=1.4.3
+Pygments<3,>=2.7.4
+PyYAML<7,>=5
+
+[:platform_system != "Linux" or (platform_machine != "armv7l" and platform_machine != "aarch64")]
+pandas<2.1
+duckdb<0.10
+
+[:python_version < "3.7"]
+dataclasses
+
+[test]
+pytest<8
+lovely-pytest-docker<1
+grafanalib<0.8
