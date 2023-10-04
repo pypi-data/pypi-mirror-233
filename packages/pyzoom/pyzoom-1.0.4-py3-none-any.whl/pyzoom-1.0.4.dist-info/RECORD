@@ -1,0 +1,9 @@
+pyzoom/__init__.py,sha256=tGlgm_Wtw8wnsx0Dl_djUUzHXF_a0PB2dA3wvREYwYE,114
+pyzoom/_base.py,sha256=QQViAAfGpymgEt1o-IRZAwxbbVjTsFuNTjrGO9EPu0Q,4523
+pyzoom/_client.py,sha256=TeKh1bOe4LQ2DWqsLX9U_WWLPqP5fXgsH8syYHzwtaE,7311
+pyzoom/err.py,sha256=HfM60xJzl1-6jVu2FbBDzkbOwC_31jE3OJJpY5cytKY,438
+pyzoom/oauth.py,sha256=F357wgtg3CleKa-nPlk648rRpmytJYJ0NZ8L8n4kqZg,5953
+pyzoom/schemas.py,sha256=uPZK9jn0vG9MS_ozH2k3-Wb3uMfMjIS8KGbmoJoYlJw,4865
+pyzoom-1.0.4.dist-info/METADATA,sha256=p9KcGV-oFJ-HMSmnaz8xZBmy4Yz6A51uVBvlLuAGx8U,6800
+pyzoom-1.0.4.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pyzoom-1.0.4.dist-info/RECORD,,
