@@ -1,0 +1,13 @@
+saludador/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saludador/launcher/__author__.py,sha256=kFq2uJ00OYmACF7Xgdia46KPV9UZl07xoofe8YQJEy0,37
+saludador/launcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saludador/launcher/__main__.py,sha256=Ow8E6c01iE7LI65jq46UoGUt0tSMVpoUWpryLlENZ1Y,223
+saludador/launcher/__version__.py,sha256=SXawVhAJ1Gn0T_0EYTgsNMiqYzB-FNRYb6RX53v60GA,22
+saludador/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saludador/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saludador-0.0.2.dist-info/LICENSE,sha256=PTLqq_5C7hFzUzV4IyH865Neyd0rh_rebnYENgLQSPI,1070
+saludador-0.0.2.dist-info/METADATA,sha256=MXnHIcH2tJ-LowjV6i53rjMqy9c9JJQq_QXlEloguQw,1063
+saludador-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+saludador-0.0.2.dist-info/entry_points.txt,sha256=VgzHUMe44rBrFJLgsdOxU7DOZ5cc0Jm5fVV74C6KvCo,60
+saludador-0.0.2.dist-info/top_level.txt,sha256=Ay3Kk1Q5krysxTzhRGFhICgH3hWy-oH7uf82h7emFNM,10
+saludador-0.0.2.dist-info/RECORD,,
