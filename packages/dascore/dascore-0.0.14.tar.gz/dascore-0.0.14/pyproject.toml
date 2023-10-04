@@ -1,0 +1,165 @@
+
+# --- Build system configuration
+
+[build-system]
+requires = [ "setuptools>=41", "setuptools-scm", ]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[tool.setuptools]
+include-package-data = true
+packages = ["dascore"]
+
+[tool.setuptools_scm]  # this empty section enables the tool
+
+# --- Project Metadata
+
+[project]
+name = "dascore"
+dynamic = ["version"]  # version is fetched by setuptools-git-versioning
+
+authors = [
+  { name="Derrick Chambers", email="chambers.ja.derrick@gmail.com" },
+]
+
+description = "A python library distributed fiber optic sensing"
+readme = "readme.md"
+license = { file="docs/LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+
+keywords = ["geophysics", "distributed-acoustic-sensing"]
+
+# --- Dependencies
+
+dependencies = [
+     "matplotlib>=3.5",
+     "numpy>=1.24",
+     "packaging",
+     "pandas>=2.0",
+     "pooch>=1.2",
+     "pydantic>2.1",
+     "rich",
+     "scipy>=1.10.0",
+     "tables>=3.7",
+     "typing_extensions",
+     "pint",
+     "segyio",
+]
+
+[project.optional-dependencies]
+
+extras = [
+    "xarray",
+    "findiff",
+]
+
+docs = [
+    "jinja2",
+    "ipywidgets",
+]
+
+test = [
+    "coverage",
+    "coveralls",
+    "pre-commit",
+    "pytest",
+    "pytest-codeblocks",
+    "pytest-cov",
+    "twine",
+]
+
+profile = [
+    "asv",
+    "typer",
+]
+
+all = ["dascore[extras]"]
+
+dev = ["dascore[test]", "dascore[docs]", "dascore[profile]", "dascore[extras]"]
+
+# --- URLs for project
+
+[project.urls]
+"Bug Tracker" = "https://github.com/DASDAE/dascore/issues"
+"Documentation" = "https://dascore.org"
+"Homepage" = "https://dascore.org"
+
+# --- Entry Points
+
+[project.entry-points."dascore.fiber_io"]
+DASDAE__V1 = "dascore.io.dasdae.core:DASDAEV1"
+H5SIMPLE__V1 = "dascore.io.h5simple.core:H5Simple"
+PICKLE = "dascore.io.pickle.core:PickleIO"
+PRODML__V2_0 = "dascore.io.prodml.core:ProdMLV2_0"
+PRODML__V2_1 = "dascore.io.prodml.core:ProdMLV2_1"
+TDMS__V4713 = "dascore.io.tdms.core:TDMSFormatterV4713"
+TERRA15__V4 = "dascore.io.terra15.core:Terra15FormatterV4"
+TERRA15__V5 = "dascore.io.terra15.core:Terra15FormatterV5"
+TERRA15__V6 = "dascore.io.terra15.core:Terra15FormatterV6"
+SEGY__V2 = "dascore.io.segy.core:SegyV2"
+WAV = "dascore.io.wav.core:WavIO"
+
+
+# --- External tool configuration
+
+[tool.ruff]
+
+# enable certain types of linting
+select = ["E", "F", "UP", "RUF", "I001", "D", "FA"]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "__init__.py"
+]
+
+# lowest python version supported
+target-version = "py310"
+
+fixable = ["ALL"]
+
+# List of codes to ignore
+ignore = ["D105", "D107", "D401", "D205"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+# config for docstring parsing
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    # Ignore hdf5 warnings from pytables, See pytables #1035
+    'ignore::Warning:tables:'
+]
