@@ -1,0 +1,9 @@
+cryptography
+doit
+schema
+pydantic
+pyaml
+
+[tests]
+freezegun
+pyopenssl
