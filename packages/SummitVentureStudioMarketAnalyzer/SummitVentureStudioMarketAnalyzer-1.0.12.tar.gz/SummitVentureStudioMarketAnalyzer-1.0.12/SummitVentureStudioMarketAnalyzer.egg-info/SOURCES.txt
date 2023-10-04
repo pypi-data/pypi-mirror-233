@@ -1,0 +1,12 @@
+README.md
+setup.py
+SummitVentureStudioMarketAnalyzer/ChatGPTApi.py
+SummitVentureStudioMarketAnalyzer/GovGrantsAPI.py
+SummitVentureStudioMarketAnalyzer/PatentAPI.py
+SummitVentureStudioMarketAnalyzer/PitchBookAPI.py
+SummitVentureStudioMarketAnalyzer/__init__.py
+SummitVentureStudioMarketAnalyzer.egg-info/PKG-INFO
+SummitVentureStudioMarketAnalyzer.egg-info/SOURCES.txt
+SummitVentureStudioMarketAnalyzer.egg-info/dependency_links.txt
+SummitVentureStudioMarketAnalyzer.egg-info/requires.txt
+SummitVentureStudioMarketAnalyzer.egg-info/top_level.txt
