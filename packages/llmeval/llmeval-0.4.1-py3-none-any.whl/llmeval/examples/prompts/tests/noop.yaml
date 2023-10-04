@@ -1,0 +1,14 @@
+# Copyright Log10, Inc 2023
+
+skip: True
+metrics:
+  - name: exact_match
+    code: |
+      metric = False
+      result = False
+    skip: True
+references:
+  - input:
+      question: "What is the meaning of life?"
+    expected: "42"
+    skip: True

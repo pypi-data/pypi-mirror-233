@@ -1,0 +1,11 @@
+# Copyright Log10, Inc 2023
+
+metrics:
+  - name: contains
+    code: |
+      metric = expected in actual.lower()
+      result = metric
+references:
+  - input:
+      message: "Ping?"
+    expected: "pong"

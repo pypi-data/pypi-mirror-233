@@ -1,0 +1,18 @@
+# Copyright Log10, Inc 2023
+
+# TODO: Add base class for prompt and tests.
+defaults:
+  - prompts: ???
+  - _self_
+
+version: 0.1.0
+n_tries: 5
+
+hydra:
+  job:
+    chdir: True
+  mode: MULTIRUN
+  sweeper:
+    params:
+      prompts: glob(*)
+      prompts.model: choice("gpt-3.5-turbo", "gpt-4", "claude-2")

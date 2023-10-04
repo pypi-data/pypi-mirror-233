@@ -1,0 +1,73 @@
+# Copyright Log10, Inc 2023
+
+metrics:
+  - name: diagram_grading
+    code: |
+      import json
+      from langchain.chat_models import ChatOpenAI
+      from langchain.schema import HumanMessage, SystemMessage
+
+      llm = ChatOpenAI()
+      messages = [
+        SystemMessage(
+          content="""
+      You are a critic of diagrams in mermaid.js.
+
+      You will be given a user prompt asking about something that you know about or asking to represent custom data in a diagram.
+
+      Where:
+
+      1 means the diagram looks very wrong, or you think it might not compile with mermaid.js.
+
+      2 means its inconsistent with your knowledge and is too far from the correct form that it should just be discarded.
+
+      3 means its okay, but needs some adjustments to better answer the user. In this case output an improvement suggestion.
+
+      4 means its good. Give an optional suggestion.
+
+      5 means its perfect. You wouldn't change anything about it.
+          """,
+        ),
+        HumanMessage(content="""
+      The output should be formed strictly in json.
+      Examples of output:
+
+      ## Example 1
+
+      {
+        "grade": 5
+        "reason": "This is a great diagram because it clearly communicates the meaning of the system."
+      }
+
+      ## Example 2
+
+      {
+        "grade": 1
+        "reason": "This diagram is not very good, as it is convoluted and isn't well formed mermaid.js code."
+      }
+
+      # Instructions
+
+      Please grade the following diagram code:
+
+      ###
+
+      {code}
+
+      ###
+
+      Based on the 1-5 criteria defined above.
+          """)
+      ]
+      output = llm(messages)
+      output = json.loads(output.content)
+
+      metric = output.get("grade", "N/A")
+      result = int(metric) >= 3
+references:
+  - input:
+      description: |
+        A diagram that shows the flow of data from a user to a server and back.
+    expected:
+        "3"
+    skip: true

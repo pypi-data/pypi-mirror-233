@@ -1,0 +1,16 @@
+# Copyright Log10, Inc 2023
+
+defaults:
+  - tests/code
+name: code
+model: gpt-4-16k
+temperature: 0.0
+variables:
+  - name: task
+messages:
+  - role: "human"
+    content: |
+      Generate a python function which {task}.
+      Do not include any surrounding explanation or context.
+      Strictly only python code which can be passed to a python interpreter.
+      Do not prepend "python".
