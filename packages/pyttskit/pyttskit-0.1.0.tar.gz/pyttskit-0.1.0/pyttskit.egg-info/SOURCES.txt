@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+setup.py
+pyttskit.egg-info/PKG-INFO
+pyttskit.egg-info/SOURCES.txt
+pyttskit.egg-info/dependency_links.txt
+pyttskit.egg-info/top_level.txt
+ttskit/__init__.py
