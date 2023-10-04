@@ -1,0 +1,14 @@
+.DS_Store,sha256=NBzPRPznSSUfVg6Dmfyk9AndFPlnke0PebpxGo0l7jM,6148
+address_formatter/__init__.py,sha256=3e8um1-lzVyp4LEDX_nV5yrFnPLEnmDOgCQDRkhXkEY,143
+address_formatter/main.py,sha256=_xHyp9tH1vbFeJoI5fSW3yr-VZ_TTh5M7_R76uRO91A,6608
+address_formatter/version.py,sha256=Q8raD6k02z4DoYniAz3iui5d6EdM1el95SMTLXJbeCA,18
+cwaddressformatter/.DS_Store,sha256=JACaso_PI4pfKHBxlOdqlRqU4OjRSCnlEjOmmIoGAf0,6148
+cwaddressformatter/__init__.py,sha256=3e8um1-lzVyp4LEDX_nV5yrFnPLEnmDOgCQDRkhXkEY,143
+cwaddressformatter/main.py,sha256=EvSz7eHy6MAS8m9hzfsZ6N7tJgIf_x0zaUrmbxCHoo8,9953
+cwaddressformatter/opendata111road.csv,sha256=qm5hD9pKA9ctJOUYcJXoSmS22vmTOVrY523pEXewX-4,1416702
+cwaddressformatter/version.py,sha256=JJN_E8LPcrB-9t0_2FLJuTLaoT-Iszj5E4vZ5ai6ktg,18
+cwaddressformatter-0.1.5.dist-info/METADATA,sha256=Uf2reTxRze02vp4zfMi397IxiXFxvrbHKwfRvADGyPc,3703
+cwaddressformatter-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cwaddressformatter-0.1.5.dist-info/entry_points.txt,sha256=Pd9sw7w4pm-BMSffmkbjCvdtHwd6Fqzizk1tUoacTWM,64
+cwaddressformatter-0.1.5.dist-info/top_level.txt,sha256=8bk29FtgxiLt5rjWSr9mzI7cAeReWxaOiyU1UbYiAeo,19
+cwaddressformatter-0.1.5.dist-info/RECORD,,
