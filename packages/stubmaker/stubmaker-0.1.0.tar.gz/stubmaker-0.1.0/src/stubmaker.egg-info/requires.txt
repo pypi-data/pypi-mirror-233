@@ -1,0 +1,3 @@
+docstring-parser
+typing_inspect
+markdown-it-py
