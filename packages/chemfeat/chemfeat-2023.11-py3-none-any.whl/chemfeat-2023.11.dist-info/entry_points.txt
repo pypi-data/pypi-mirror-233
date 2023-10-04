@@ -1,0 +1,2 @@
+[console_scripts]
+chemfeat = chemfeat.main:main
