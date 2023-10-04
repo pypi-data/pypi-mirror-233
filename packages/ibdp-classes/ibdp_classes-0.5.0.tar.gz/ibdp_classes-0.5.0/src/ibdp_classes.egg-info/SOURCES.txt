@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+readme.md
+src/ibdp_classes/__init__.py
+src/ibdp_classes/__main__.py
+src/ibdp_classes/ibdp_classes.py
+src/ibdp_classes.egg-info/PKG-INFO
+src/ibdp_classes.egg-info/SOURCES.txt
+src/ibdp_classes.egg-info/dependency_links.txt
+src/ibdp_classes.egg-info/top_level.txt
