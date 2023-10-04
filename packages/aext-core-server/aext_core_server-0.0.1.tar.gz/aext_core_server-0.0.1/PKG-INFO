@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aext-core-server
+Version: 0.0.1
+Summary: The aext-core-server component of anaconda-toolbox
+License-Expression: BSD-3-Clause
+Description-Content-Type: text/markdown
+
+# aext-core-server
+
+-----
+
+`aext-core-server` is a component of the `anaconda-toolbox`. Please install using `conda install anaconda-toolbox`.
