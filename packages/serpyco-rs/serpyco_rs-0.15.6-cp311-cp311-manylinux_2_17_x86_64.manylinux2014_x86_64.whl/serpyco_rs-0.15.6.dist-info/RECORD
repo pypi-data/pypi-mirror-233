@@ -1,0 +1,17 @@
+serpyco_rs-0.15.6.dist-info/METADATA,sha256=OCNVReAuckGYebpRoE7lehdzGHyM-v_c58DW5Yn8-VM,11926
+serpyco_rs-0.15.6.dist-info/WHEEL,sha256=n5Pc2YdyKhbmRcEuCyaPTMSwYchfHqb_OXaaZObq9wY,129
+serpyco_rs-0.15.6.dist-info/license_files/LICENSE,sha256=SPHSTu7vhIdzPsfDmz027puPOQNokGCYfcJ_ojw1KX8,1069
+serpyco_rs/_impl.py,sha256=6gFgWcZfpHa4OXbnphoZ4aRgiW-vYAQoXqEAq5U9hj8,106
+serpyco_rs/exceptions.py,sha256=TDaNTRyo898bRgqkFeJlMzxk5R6ZBRcu7R4tGBku0SY,139
+serpyco_rs/_impl.pyi,sha256=RDYhLYSxICgf-X4UuJECw3ufXDPMz-3uV9o3i3RIdXU,653
+serpyco_rs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serpyco_rs/_utils.py,sha256=wq-k4c-iPBpapnKU_23CA6NoWyRCYmPaSRas1ROFKC0,167
+serpyco_rs/metadata.py,sha256=-WBuksdyJtnOBAc6Lwni3hyakIf-eG77v4cDZ1w5koo,1704
+serpyco_rs/_main.py,sha256=sD2tJrrElLSXG2AJ7dxhbkT0rjmoPLp27bvdA1XxgA0,1518
+serpyco_rs/__init__.py,sha256=AmYKnQfJoDyrp1s-ockWLUpCDCR7vvDD0Sz9kF1BjHM,93
+serpyco_rs/_json_schema/_convert.py,sha256=ekLO3kzbTPFEIozgx4NiLSRpGrKvLRa_bgMeKWExMfc,6014
+serpyco_rs/_json_schema/__init__.py,sha256=UNzcyacbMonXMh6poipZpq1YCwtQrL2pR4wQEPXWIYI,143
+serpyco_rs/_json_schema/_entities.py,sha256=nbJxCtPC20TycIWnZMTlBoRlpR2kX6qtj1ZkyaMpihE,5159
+serpyco_rs/_describe.py,sha256=VPHuv3ACAuAHJC6fFWy8Y5BEsIRt6gBvdSpxJvS2w6s,20324
+serpyco_rs/_serpyco_rs.cpython-311-x86_64-linux-gnu.so,sha256=pbpDLFCYCn28qonfNyWCzntbQjlIxhmPHRZ4A8adb3U,5848016
+serpyco_rs-0.15.6.dist-info/RECORD,,
