@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: genetic-feature-selection
+Version: 0.1.2
+Summary: Program for selecting the n best features for your machine learning model.
+Home-page: UNKNOWN
+Author: Magnus P. Nytun
+Author-email: magnus.nytun@sb1ostlandet.no
+License: UNKNOWN
+Description: This package implements a genetic algorithm used for feature search. 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
