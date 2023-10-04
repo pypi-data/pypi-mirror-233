@@ -1,0 +1,8 @@
+Orange3
+aif360==0.5.0
+numpy~=1.23.0
+
+[doc]
+sphinx
+sphinx_rtd_theme
+recommonmark
