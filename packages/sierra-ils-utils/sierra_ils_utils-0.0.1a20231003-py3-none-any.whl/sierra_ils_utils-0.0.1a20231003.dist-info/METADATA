@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sierra-ils-utils
+Version: 0.0.1a20231003
+Summary: Python wrappers for working with the Sierra ILS
+Home-page: https://github.com/chimpy-me/sierra-ils-utils/
+Author: Ray Voelker
+Author-email: ray.voelker@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psycopg2-binary ==2.9.9
+Requires-Dist: requests ==2.31.0
+
+# sierra-ils-utils
+Wrapper Classes for making working with the Sierra ILS in Python easier
