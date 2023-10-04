@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: europa-1400-tools
+Version: 1.0.4
+Summary: 
+License: MIT
+Author: Lennard Beers
+Author-email: l.beers@outlook.de
+Requires-Python: >=3.11,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: construct (>=2.10.68,<3.0.0)
+Requires-Dist: construct-typing (>=0.5.6,<0.6.0)
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: pillow (>=10.0.1,<11.0.0)
+Requires-Dist: pygltflib (>=1.15.6,<2.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Requires-Dist: types-pillow (>=10.0.0.3,<11.0.0.0)
+Description-Content-Type: text/markdown
+
+# Python Tools for Europa 1400: The Guild / Die Gilde
+
+## Setup
+
+### Windows (using PowerShell)
+
+1. Install VS Code
+
+`winget install Microsoft.VisualStudioCode`
+
+2. Install python
+
+`winget install Python.Python.3.11`
+
+3. Install ffmpeg
+
+`winget install "FFmpeg (Shared)"`
+
+4. Install poetry
+
+`(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -`
+
+5. Open this project in VS Code and run the following commands in the integrated terminal:
+
+`poetry config virtualenvs.in-project true`
+`poetry install`
+
+6. You're good to go!
