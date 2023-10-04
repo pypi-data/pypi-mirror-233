@@ -1,0 +1,15 @@
+LLMFunctionObjects/Chat.py,sha256=A-1vPI4-Zp3DYOWA6IvU3uyRRQr65mXvLHNHC6ANVcE,3898
+LLMFunctionObjects/Configuration.py,sha256=9ohizNQvVfLXRs1ID4UqcLnsZJWIISd4Q562TFLNod4,6371
+LLMFunctionObjects/Evaluator.py,sha256=CS6mhycqvR-YpQM_fe4o2D_g9xgrufcdzzL6WJ9qyFY,4966
+LLMFunctionObjects/EvaluatorChat.py,sha256=h7JHLNO41uQ_RL0tnhUOWWtRvesI-lOajdoLkW03Ghw,5270
+LLMFunctionObjects/EvaluatorChatGPT.py,sha256=hOZL_iqLBu_5IuoPf3KKSJQfMh0NUQ7Ahrbuv5NS-UQ,691
+LLMFunctionObjects/EvaluatorChatPaLM.py,sha256=Di31eL-2YhJNVIUfHGkVbnSEWPZ0l0H7lGd9qS0M2hY,2817
+LLMFunctionObjects/Functor.py,sha256=7ecPb8lBWzc4vVPB3wjdWf3FjeynvEZhRqd9rmy9ajk,1521
+LLMFunctionObjects/LLMFunctions.py,sha256=IXA3ji4Fiue0pXftCmBM0KZwhrt102oDRkQI9FI3p4I,14149
+LLMFunctionObjects/SubParser.py,sha256=pVpHKCKpMd0fMApDErb0Zt9dS_XvJJ_ESmS7ZhX0SFo,3651
+LLMFunctionObjects/__init__.py,sha256=KmLavqy7gl2_lufyWPNHUAebo6-aoS0TfORY6E1SQ3k,1151
+LLMFunctionObjects-0.1.4.dist-info/LICENSE,sha256=954n9Craluo3KzfoGE9swqN_TlkUHlK5E0sDnCJH7DM,1513
+LLMFunctionObjects-0.1.4.dist-info/METADATA,sha256=PGvDIdeR4VRbIv26XUVsKn0SaWXZzlpZUjk5aRE2G4I,17319
+LLMFunctionObjects-0.1.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+LLMFunctionObjects-0.1.4.dist-info/top_level.txt,sha256=bG3U-y2T_m5cekMbr2dmCGMItuyWIOmDotA9GoR2MSI,19
+LLMFunctionObjects-0.1.4.dist-info/RECORD,,
