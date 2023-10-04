@@ -1,0 +1,14 @@
+wireup/__init__.py,sha256=HqFgpbPDpQIj43w1dz3_q5-rAonFaR1ngQaxVTuFX6w,633
+wireup/annotation/__init__.py,sha256=oevUH8WS0DOi71ngfE6JsFfO-4kzcc7Rfu5rlsBqOu4,2289
+wireup/ioc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wireup/ioc/dependency_container.py,sha256=6gyLBKeFnvLUVjRLrurUXQuCNMnpQ6dLi3pM8M7-XcY,13423
+wireup/ioc/initialization_context.py,sha256=QaqBMtqdp9YA-9vd6hrTRlRUB2LCoK7Ha51hLk4mQrw,3167
+wireup/ioc/parameter.py,sha256=9pxujkyVYDgBVi6ufkXj7eB2q0TZlcGzc62IoTf90lQ,3680
+wireup/ioc/proxy.py,sha256=bFMkSrkURxS2mXGXlXnHBwor7QFlnEIz_bXRTXSqK4w,1190
+wireup/ioc/service_registry.py,sha256=7pLDzZW6bnRpJykgaz_XxprvVUN6TbqMnpAruh4Pi8Y,5324
+wireup/ioc/types.py,sha256=Mi0nA-5zFUIVdCH3Zae_Y4sFVE0JXT8m_68COgIt6P8,2635
+wireup/ioc/util.py,sha256=TAwg_c6nQm_-EpOIMFRehsXvx9mumkn3Z0g9roqtn-g,2238
+wireup/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wireup-0.4.0.dist-info/METADATA,sha256=sZ5bKNlbz7xTXC7Wl6y5qnb2eCTZZyw2Nc0y6VtbnIQ,3070
+wireup-0.4.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+wireup-0.4.0.dist-info/RECORD,,
