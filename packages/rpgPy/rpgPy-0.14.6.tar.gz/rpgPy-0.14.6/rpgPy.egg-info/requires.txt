@@ -1,0 +1,14 @@
+numpy
+cython
+netCDF4
+tqdm
+numba
+
+[dev]
+pre-commit
+
+[test]
+pytest-flakefinder
+pylint
+mypy
+types-tqdm
