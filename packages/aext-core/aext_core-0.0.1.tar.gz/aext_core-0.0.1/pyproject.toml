@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aext-core"
+dynamic = ["version"]
+description = 'The aext-core component of anaconda-toolbox'
+readme = "README.md"
+license = "BSD-3-Clause"
+
+[tool.hatch.version]
+path = "src/aext_core/__init__.py"
