@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: python-jptk
+Version: 1.0.0
+Summary: Python Japanese Toolkit
+Home-page: https://github.com/haohoangofficial/jptk
+Download-URL: https://github.com/haohoangofficial/jptk/tarball/1.0.0
+Author: Hao Hoang
+Author-email: haohoangofficial@gmail.com
+License: LICENSE.txt
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# jptk
+Japanese Toolkit
