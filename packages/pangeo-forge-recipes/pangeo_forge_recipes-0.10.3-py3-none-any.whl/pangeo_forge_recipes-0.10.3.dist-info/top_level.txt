@@ -1,0 +1,5 @@
+ci
+docs
+examples
+pangeo_forge_recipes
+tests
