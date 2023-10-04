@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ucsc-cse40
+Version: 0.7.3
+Summary: Dependencies for UCSC's CSE 40 - ML Basics: Data Analysis and Empirical Methods
+Home-page: https://github.com/ucsc-cse-40/ucsc-cse40
+Maintainer: Eriq Augustine
+Maintainer-email: eaugusti@ucsc.edu
+Keywords: grading
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: jupyterlab >=3.5.0
+Requires-Dist: matplotlib >=3.6.2
+Requires-Dist: numpy >=1.22.3
+Requires-Dist: pandas >=1.5.1
+Requires-Dist: scikit-learn >=1.2.0
+Requires-Dist: autograder-py >=0.2.3
+
+# UCSC CSE 40
+
+Materials for UCSC's CSE 40 course taught by Dr. Lise Getoor and managed by the [LINQS lab](https://linqs.org/).
+This package is available on PyPi at [ucsc-cse40](https://pypi.org/project/ucsc-cse40/).
+
+## Dependencies
+
+This package is meant to be the sole direct dependency for CSE 40 students.
+Instead of specifying each dependency for students, this package defines the necessary dependencies to be installed along with it.
+So if you install this package (e.g. via pip), then it will also install all the necessary Python package dependencies for the course.
+
+## Working with the Autograder
+
+All interfacing with the autograder is done via the [autograder-py](https://pypi.org/project/autograder-py/) package.
+You should refer to [the documentation](https://github.com/eriq-augustine/autograder-py) for information on how to use it.
