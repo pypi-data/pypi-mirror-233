@@ -1,0 +1,112 @@
+[build-system]
+build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+
+[tool.check-wheel-contents]
+package = "src/keyrings"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_decorated = true
+disallow_any_explicit = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+implicit_reexport = true
+namespace_packages = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.poetry]
+authors = ["wwuck <wirelessduck+py@gmail.com>"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+description = "keyring backend plugin to retrieve credentials from environment variables."
+license = "MIT"
+name = "keyrings.envvars"
+packages = [{from = "src", include = "keyrings"}]
+readme = "README.rst"
+repository = "https://codeberg.org/wwuck/keyrings.envvars"
+version = "1.0.6"
+
+[tool.poetry.dependencies]
+keyring = ">=23.4.0"
+python = "^3.9"
+
+[tool.poetry.group.build-check.dependencies]
+check-wheel-contents = "^0.4.0"
+twine = "^4.0.2"
+
+[tool.poetry.group.mypy.dependencies]
+keyring = "^24.2.0"
+mypy = "^1.5.1"
+nox = "^2023.4.22"
+pytest = "^7.4.1"
+
+[tool.poetry.group.ruff.dependencies]
+ruff = "^0.0.287"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.1"
+pytest-antilru = "^1.1.1"
+pytest-cov = "^4.1.0"
+pytest-flakefinder = "^1.1.0"
+pytest-randomly = "^3.15.0"
+pytest-xdist = {extras = ["psutil"], version = "^3.3.1"}
+
+[tool.poetry.group.yamllint.dependencies]
+yamllint = "^1.32.0"
+
+[tool.poetry.plugins."keyring.backends"]
+envvars = "keyrings.envvars.keyring:EnvvarsKeyring"
+
+[tool.poetry.urls]
+Documentation = "https://codeberg.org/wwuck/keyrings.envvars"
+Tracker = "https://codeberg.org/wwuck/keyrings.envvars/issues"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+pattern = "default-unprefixed"
+vcs = "git"
+
+[tool.pydoclint]
+arg-type-hints-in-docstring = false
+style = "sphinx"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "error",
+  "ignore:The --rsyncdir command line argument and rsyncdirs config variable are deprecated.:DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.isort]
+known-first-party = ["src"]
+
+[tool.tomlsort]
+all = true
+in_place = true
+trailing_comma_inline_array = true
+
+[tool.yamlfix]
+section_whitelines = 1
+sequence_style = "block_style"
