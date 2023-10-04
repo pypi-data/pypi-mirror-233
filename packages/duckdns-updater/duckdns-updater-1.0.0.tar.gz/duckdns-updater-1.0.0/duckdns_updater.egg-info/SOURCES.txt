@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+duckdns_updater/__init__.py
+duckdns_updater/duckupdater.bat
+duckdns_updater/icon.ico
+duckdns_updater.egg-info/PKG-INFO
+duckdns_updater.egg-info/SOURCES.txt
+duckdns_updater.egg-info/dependency_links.txt
+duckdns_updater.egg-info/entry_points.txt
+duckdns_updater.egg-info/requires.txt
+duckdns_updater.egg-info/top_level.txt
