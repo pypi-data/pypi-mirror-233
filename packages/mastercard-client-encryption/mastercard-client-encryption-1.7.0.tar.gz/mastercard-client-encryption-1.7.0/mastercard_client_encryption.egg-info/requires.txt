@@ -1,0 +1,4 @@
+pycryptodome>=3.8.1
+pyOpenSSL>=22.0.0
+setuptools>=39.0.1
+cryptography>=38.0.0
