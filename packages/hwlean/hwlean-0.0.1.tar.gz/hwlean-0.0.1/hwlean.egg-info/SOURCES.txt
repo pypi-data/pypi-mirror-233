@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+hwlean.egg-info/PKG-INFO
+hwlean.egg-info/SOURCES.txt
+hwlean.egg-info/dependency_links.txt
+hwlean.egg-info/requires.txt
+hwlean.egg-info/top_level.txt
+hwlearn/Learning.py
+hwlearn/Network.py
+hwlearn/__init__.py
