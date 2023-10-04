@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: microagent
+Version: 1.7.0rc1
+Summary: Tool for agent ecosystem
+Author-email: Dmitriy Vlasov <scailer@yandex.ru>
+License: MIT License
+        
+        Copyright (c) 2019 Dmitry Vlasov
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/scailer/microagent
+Project-URL: Documentation, https://microagent.readthedocs.io/en/stable/
+Project-URL: Repository, https://github.com/scailer/microagent.git
+Project-URL: Changelog, https://github.com/scailer/microagent/blob/master/CHANGELOG.rst
+Keywords: async,pubsub,queue,agent,periodic,cron
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Provides-Extra: amqp
+Requires-Dist: aiormq ==6.7.* ; extra == 'amqp'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-runner ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: redis ==5.* ; extra == 'dev'
+Requires-Dist: aiormq ==6.7.* ; extra == 'dev'
+Requires-Dist: aiokafka ==0.8.* ; extra == 'dev'
+Provides-Extra: kafka
+Requires-Dist: aiokafka ==0.8.* ; extra == 'kafka'
+Provides-Extra: redis
+Requires-Dist: redis[hiredis] ==5.* ; extra == 'redis'
+
