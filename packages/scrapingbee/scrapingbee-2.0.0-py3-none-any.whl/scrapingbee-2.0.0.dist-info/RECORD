@@ -1,0 +1,8 @@
+scrapingbee/__init__.py,sha256=iJ_Q3oaAEWYbyoQJi5rvrgxaE6wrwLecJVBS1cQtgCg,82
+scrapingbee/__version__.py,sha256=_7OlQdbVkK4jad0CLdpI0grT-zEAb-qgFmH5mFzDXiA,22
+scrapingbee/client.py,sha256=jmKJT6IGh_WqmaWbNMJ-rX2Uw98JlF-US2peEBvUtzw,2470
+scrapingbee/utils.py,sha256=mLVnlCGotRyiGgQbSAoHBlOAkhk2LiL0uVHd1T9LyLU,2027
+scrapingbee-2.0.0.dist-info/METADATA,sha256=mwzfE5hFd0dfdUIp9MzscyvzFc1rwcGsf3p-Jv1CqVg,5793
+scrapingbee-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scrapingbee-2.0.0.dist-info/top_level.txt,sha256=IyRE0ZvGMAEhHdGKBc0kns7-cOJ1-DYpysArQ2_LOwk,12
+scrapingbee-2.0.0.dist-info/RECORD,,
