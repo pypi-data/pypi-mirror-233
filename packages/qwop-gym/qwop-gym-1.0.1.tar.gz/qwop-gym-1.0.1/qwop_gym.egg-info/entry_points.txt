@@ -1,0 +1,2 @@
+[console_scripts]
+qwop-gym = qwop_gym.tools.main:main
