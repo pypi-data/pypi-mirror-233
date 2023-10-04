@@ -1,0 +1,5 @@
+[console_scripts]
+mgpsogui = mgpsogui:main
+
+[setuptools.installation]
+eggsecutable = mgpsogui:main
