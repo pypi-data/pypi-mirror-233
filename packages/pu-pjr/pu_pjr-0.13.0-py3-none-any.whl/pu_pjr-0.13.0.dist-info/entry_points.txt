@@ -1,0 +1,4 @@
+[console_scripts]
+dirstats=pu_pjr.dir_stats.__main__:main
+quickplot=pu_pjr.plotting.__main__:main
+
