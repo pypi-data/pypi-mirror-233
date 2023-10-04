@@ -1,0 +1,12 @@
+cemir_error/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cemir_error/ccerror.py,sha256=Poc_DQxoiRb_Z8Q8FDXe-6dnM70ha7R4YoJG6V0dSEY,2477
+cemir_error/errors_de.py,sha256=Agje2QTH5Tt6gHA6RHbLK5DGbkxFPalEmP6BeH_ZBe0,2375
+cemir_error/errors_en.py,sha256=fQ-X37oXiaW6a25g350FOHNP5hvHLn_6GLajNEiHWzo,1988
+cemir_error/errors_fr.py,sha256=7xyJ0vV-9lQxkoKYboTsdFkoO0JWZBV2rVwwlP__hvc,2078
+cemir_error/errors_tr.py,sha256=49xc-Fv3Jikvq3etSJDNq4_wqen2AANOq0bfg19UOXo,2194
+cemir_error/testet.py,sha256=PkPzmSOnoZpZ9STUwBFTaWXsdoIKF1C1si4Aql-SU04,218
+cemir_error-202231003.1.dist-info/LICENSE,sha256=hF8Urkxbs0GlZFaHGXCQm76bE75jtScVIjukrgcEfpc,1074
+cemir_error-202231003.1.dist-info/METADATA,sha256=8SeCQPFeT22GkFXZcfr44f2Kp0D0wzkiL1VXPM6oVpk,669
+cemir_error-202231003.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cemir_error-202231003.1.dist-info/top_level.txt,sha256=hiDTtD7gFw4FuOvcDJMOhA4AFvgUEI20vaL2I0Rr2Kg,12
+cemir_error-202231003.1.dist-info/RECORD,,

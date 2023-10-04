@@ -1,0 +1,20 @@
+error_messages = {
+    "ZeroDivisionError": {"detail": "Nullteilungsfehler aufgetreten.", "fix": "Überprüfen Sie den Divisor in Ihrer Divisionsoperation."},
+    "ValueError": {"detail": "Ungültiger Wert Fehler aufgetreten.", "fix": "Stellen Sie sicher, dass Sie einen gültigen Wert angeben."},
+    "TypeError": {"detail": "Datentyp Fehler aufgetreten.", "fix": "Stellen Sie sicher, dass Sie den richtigen Datentyp verwenden."},
+    "KeyError": {"detail": "Schlüssel Fehler aufgetreten.", "fix": "Stellen Sie sicher, dass der Schlüssel korrekt ist."},
+    "FileNotFoundError": {"detail": "Datei nicht gefunden Fehler aufgetreten.", "fix": "Überprüfen Sie den Dateipfad oder erstellen Sie die Datei."},
+    "IndexError": {"detail": "Index Fehler aufgetreten.", "fix": "Stellen Sie sicher, dass Sie den richtigen Index verwenden."},
+    "AssertionError": {"detail": "Assertion Fehler aufgetreten.", "fix": "Überprüfen Sie Ihre Assertion-Anweisung."},
+    "AttributeError": {"detail": "Attribut Fehler aufgetreten.", "fix": "Stellen Sie sicher, dass Sie das richtige Attribut verwenden."},
+    "IOError": {"detail": "Eingabe/Ausgabe Fehler aufgetreten.", "fix": "Überprüfen Sie Ihre Dateioperationen."},
+    "NameError": {"detail": "Namens Fehler aufgetreten.", "fix": "Überprüfen Sie Ihren Variablennamen oder Funktionsnamen."},
+    "ImportError": {"detail": "Import Fehler aufgetreten.", "fix": "Überprüfen Sie den Importpfad."},
+    "ModuleNotFoundError": {"detail": "Modul nicht gefunden Fehler.", "fix": "Stellen Sie sicher, dass das Modul installiert ist."},
+    "MemoryError": {"detail": "Speicher Fehler aufgetreten.", "fix": "Reduzieren Sie den Speicherverbrauch oder optimieren Sie ihn."},
+    "SyntaxError": {"detail": "Syntax Fehler aufgetreten.", "fix": "Überprüfen und korrigieren Sie Ihre Syntax."},
+    "IndentationError": {"detail": "Einrückungs Fehler aufgetreten.", "fix": "Passen Sie die Einrückungen ordnungsgemäß an."},
+    "EOFError": {"detail": "Dateiende Fehler aufgetreten.", "fix": "Überprüfen Sie, ob Sie das Dateiende erreicht haben."},
+    "ArithmeticError": {"detail": "Arithmetik Fehler aufgetreten.", "fix": "Überprüfen Sie Ihre arithmetischen Operationen."},
+    "FileExistsError": {"detail": "Datei existiert bereits Fehler.", "fix": "Verwenden Sie einen anderen Dateinamen oder löschen Sie die vorhandene Datei."}
+}
