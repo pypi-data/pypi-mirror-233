@@ -1,0 +1,9 @@
+nonebot_plugin_blockwords/__init__.py,sha256=nTkLZlaPh8wWrbuz3OKdmPJRN0tdVb2vQhaJgZY1o28,4390
+nonebot_plugin_blockwords/check.py,sha256=uN1a_5fw7vv7uvB7UFxWBYYs0km4_9_AmaTHbxKa0wY,2045
+nonebot_plugin_blockwords/config.py,sha256=x96NzRHohwEAKDdgMtJaereS_0Z08c6OzntViaBlkNM,1104
+nonebot_plugin_blockwords/params.py,sha256=vqmOS_rSZp0qj7Gze29WDAoucI0r9N3WomusxZ9lsmM,307
+nonebot_plugin_blockwords/utils.py,sha256=knU_Ycdkt_-I5W93ZZ-jekG6ZL9rSycGu5ZUrmiYC8w,1590
+nonebot_plugin_blockwords-0.1.1.dist-info/LICENSE,sha256=b9KxxhMRDKmyUhn6qozlQjkyCqMx2ZS3aSXDhEMPHQ8,1088
+nonebot_plugin_blockwords-0.1.1.dist-info/METADATA,sha256=6exM38RvGFGkEZhSaNSb87jt2nOTaoR4AI6UKJSALtQ,2369
+nonebot_plugin_blockwords-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+nonebot_plugin_blockwords-0.1.1.dist-info/RECORD,,
