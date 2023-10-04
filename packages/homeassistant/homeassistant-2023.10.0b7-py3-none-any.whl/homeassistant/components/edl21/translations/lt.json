@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "sensor": {
+            "positive_active_instantaneous_power": {
+                "name": "Teigiama aktyvioji momentin\u0117 galia"
+            }
+        }
+    }
+}

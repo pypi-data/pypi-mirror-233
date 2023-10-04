@@ -1,0 +1,63 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "I\u0161jungta"
+            },
+            "state_attributes": {
+                "fan_mode": {
+                    "state": {
+                        "off": "I\u0161jungta"
+                    }
+                },
+                "hvac_action": {
+                    "state": {
+                        "off": "I\u0161jungta",
+                        "preheating": "Pakaitinimas"
+                    }
+                },
+                "swing_mode": {
+                    "state": {
+                        "off": "I\u0161jungta"
+                    }
+                }
+            }
+        }
+    },
+    "selector": {
+        "hvac_mode": {
+            "options": {
+                "auto": "Automatinis",
+                "cool": "\u0160altas",
+                "dry": "Sausas",
+                "fan_only": "Tik ventiliatorius",
+                "heat": "\u0160iluma",
+                "heat_cool": "\u0160ildymas / v\u0117sinimas",
+                "off": "I\u0161jungta"
+            }
+        }
+    },
+    "services": {
+        "set_aux_heat": {
+            "description": "\u012ejungia/i\u0161jungia papildom\u0105 \u0161ildytuv\u0105.",
+            "fields": {
+                "aux_heat": {
+                    "description": "Nauja pagalbinio \u0161ildytuvo vert\u0117.",
+                    "name": "Pagalbinis \u0161ildymas"
+                }
+            },
+            "name": "\u012ejunkite / i\u0161junkite papildom\u0105 \u0161ildytuv\u0105"
+        },
+        "set_fan_mode": {
+            "description": "Nustato ventiliatoriaus veikimo re\u017eim\u0105.",
+            "fields": {
+                "fan_mode": {
+                    "description": "Ventiliatoriaus veikimo re\u017eimas.",
+                    "name": "Ventiliatoriaus re\u017eimas"
+                }
+            },
+            "name": "Nustatykite ventiliatoriaus re\u017eim\u0105"
+        }
+    },
+    "title": "Termostatas"
+}

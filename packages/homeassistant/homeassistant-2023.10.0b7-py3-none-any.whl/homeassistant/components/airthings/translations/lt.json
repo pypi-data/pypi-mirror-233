@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "sensor": {
+            "light": {
+                "name": "\u0160viesa"
+            }
+        }
+    }
+}
