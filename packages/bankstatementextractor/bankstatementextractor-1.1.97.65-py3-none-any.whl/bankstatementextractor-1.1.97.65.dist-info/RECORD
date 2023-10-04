@@ -1,0 +1,16 @@
+bankstatementextractor/BanksExtractor.py,sha256=tozUQVIX3zlsgWXkl1GSirT8D4mAPkJxYB2KXlcspUA,7306
+bankstatementextractor/Incom_expense.py,sha256=zLERA0n6C-usVL4NX-4n9S0228QKm8_RRaL16DnxAYk,78645
+bankstatementextractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bankstatementextractor/banks.py,sha256=9g4nAbI-I-14Jmmygw6FAYCyy0c2_cQcYOMC5GVugFs,6975
+bankstatementextractor/banks_utils.py,sha256=Bykl9TnGsarq9eRDqcIdHJSSYa_tL-4CO2ctHoj8oQA,602
+bankstatementextractor/constants.py,sha256=lR-cHe7gtfmLdRkWynYYQqbpEa1BnYT7u9GAXOJtoKA,1401
+bankstatementextractor/global_percentiles.json,sha256=ReHrjcf-8lFLtZWMJxBwSnsACC-e2Mwp8aY2NSVJyjc,72
+bankstatementextractor/keywords.csv,sha256=Wovg0sgU23WlmIt978qmNyi0S1dxXui6Am9Oe3wvdFI,2445
+bankstatementextractor/test.py,sha256=MN5pV7XLUURUaIUxBcIJCP-XD8IHU1cifdWaE_Zt184,498
+bankstatementextractor/throw_away.csv,sha256=C5Li9aI-V_HM11TFON-jSrf_DtptyHjXDwc96Nrwl8I,131
+bankstatementextractor/models/best.pt,sha256=7k7476CdZroF2d2-rZVDKqfwlNFbXuCGV9MGx8KhWJk,14588861
+bankstatementextractor-1.1.97.65.dist-info/LICENSE,sha256=JTmNGOPPvG2XBgkW2R2xwzJeR_OEjaFKeePN1jGYVt8,1068
+bankstatementextractor-1.1.97.65.dist-info/METADATA,sha256=Iqnor2gS1TqiKKaJ3VZ3sMX2m-zvfltSMyJ9i-FvRrY,4329
+bankstatementextractor-1.1.97.65.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bankstatementextractor-1.1.97.65.dist-info/top_level.txt,sha256=HzeQA-9AsRdftJJEKKP_sUBoU0k-3zoH7OqBFdTKw10,23
+bankstatementextractor-1.1.97.65.dist-info/RECORD,,
