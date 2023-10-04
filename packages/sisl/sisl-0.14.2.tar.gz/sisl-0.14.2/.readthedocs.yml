@@ -1,0 +1,19 @@
+version: 2
+
+submodules:
+  include:
+    - files
+
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "mambaforge-22.9"
+
+sphinx:
+  configuration: docs/conf.py
+  fail_on_warning: false
+
+conda:
+  environment: ci/doc.yml
+
+formats: []

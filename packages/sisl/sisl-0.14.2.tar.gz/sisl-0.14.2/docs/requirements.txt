@@ -1,0 +1,20 @@
+netCDF4
+matplotlib
+ipykernel
+nbsphinx
+dill>=0.3.2
+pathos
+scikit-image
+plotly>=5.12.0
+sphinx-rtd-theme
+sphinx-gallery
+sphinx-autodoc-typehints
+sphinx-inline-tabs
+sphinxcontrib-bibtex
+tqdm
+ipywidgets
+jupyterlab-widgets
+kaleido
+# Visualizing nodes
+networkx
+pyvis

@@ -1,0 +1,11 @@
+ignore:
+  - benchmarks
+  - data
+  - developments
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        base: auto
