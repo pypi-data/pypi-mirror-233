@@ -1,0 +1,9 @@
+gdmath/__init__.py,sha256=QsArwWWSDWHmfp_b4wVfGA2nqNQSbJByPUA8nwU1_mQ,225
+gdmath/_gdmath.c,sha256=ilFMokM-eB00O9c4R3dtlhZCX1cSelXknIRJG8Up9Ho,23658799
+gdmath/_gdmath.cp39-win_amd64.pyd,sha256=SfPVovhQDJfyKG3oLsWjdjVIcfaNZfwp8ZrmPMjIYfI,1739776
+gdmath/_gdmath.pyx,sha256=FESi1WbpvK0E8T-wA4gVnjx7bThZly7LoluDfTJYjYE,1177822
+gdmath-1.3.1.dist-info/LICENSE.txt,sha256=PiENDEMtBYS9f7YV8Aw0vSwGeJD-yqmFuEPBLdvLoUc,1091
+gdmath-1.3.1.dist-info/METADATA,sha256=ASklzTwcS6Ou-IXNmlu9WPnXYrzy8XSE3C6n9Rwpi_k,4572
+gdmath-1.3.1.dist-info/WHEEL,sha256=2xSj8c4s_gFbWpcImYQptdXS3JLuzC2uK5Om8I_SEKg,100
+gdmath-1.3.1.dist-info/top_level.txt,sha256=wLlc6ns6jYyOmzPu-QJhG68lxRn_acZjaL1I7A7uQGw,7
+gdmath-1.3.1.dist-info/RECORD,,
