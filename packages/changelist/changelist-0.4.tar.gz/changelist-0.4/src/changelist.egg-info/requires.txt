@@ -1,0 +1,7 @@
+requests
+requests-cache
+tqdm
+PyGithub
+
+[lint]
+pre-commit==3.4.0

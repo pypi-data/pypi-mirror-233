@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+src/changelist/__init__.py
+src/changelist/__main__.py
+src/changelist/_cli.py
+src/changelist/_config.py
+src/changelist/_format.py
+src/changelist/_query.py
+src/changelist/default_config.toml
+src/changelist.egg-info/PKG-INFO
+src/changelist.egg-info/SOURCES.txt
+src/changelist.egg-info/dependency_links.txt
+src/changelist.egg-info/entry_points.txt
+src/changelist.egg-info/requires.txt
+src/changelist.egg-info/top_level.txt
