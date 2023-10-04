@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "fs-monitor-mqtt"
+version = "0.3.0"
+description = "A file system monitor that can publish file change events to MQTT broker."
+license = "MIT"
+authors = ["Likai Ren <lebsfi@gmail.com>"]
+repository = "https://github.com/likair/fs-monitor-mqtt"
+homepage = "https://github.com/likair/fs-monitor-mqtt"
+readme = ["README.md", "LICENSE"]
+keywords = ["filesystem", "mqtt", "monitor"]
+packages = [{ include = "fs_monitor_mqtt" }]
+
+[tool.poetry.scripts]
+fs-monitor-mqtt = 'fs_monitor_mqtt.cli:app'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+paho-mqtt = "^1.6.1"
+watchdog = "^3.0.0"
+typer = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.4.0"
+pytest = "^7.4.2"
+pytest-mock = "^3.11.1"
+pytest-cov = "^4.1.0"
+pytest-html = "^4.0.2"
+mock = "^5.1.0"
+robotframework = "^6.1.1"
+black = "^23.9.1"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.5.1"
+bandit = "^1.7.5"
+robotframework-lint = "^1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [".", "fs_monitor_mqtt"]
+addopts = "--cov --cov-report term-missing --cov-report html -v -s --html=results/pytest/report.html"
+testpaths = "tests"
+mock_use_standalone_module = true
+
+[tool.coverage.run]
+source = ["fs_monitor_mqtt"]
+
+[tool.coverage.report]
+include = ["fs_monitor_mqtt/*"]
+omit = ["monitor.py"]
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs         # exclude a few common directories in the
+  | \.git          # root of the project
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
