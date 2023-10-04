@@ -1,0 +1,14 @@
+astyle_py/__init__.py,sha256=SOeP9GKqnWMctZPkMRFm5TivOAVYpSBMOti7HoYueDE,200
+astyle_py/__main__.py,sha256=JZr-R5ELJozdfh7e5adHcgWd_TPmsnhJLZ3rL5lRF6c,2715
+astyle_py/args.py,sha256=tyg0EXbNMw9qawu7nlOCmTrSn3rLN3WATrL-eCp9JgY,2677
+astyle_py/astyle_wrapper.py,sha256=w4U_jMrSszLqX11wnKpWHtjyIzxcJGntVRyuoNSgAJ8,4336
+astyle_py/files_iter.py,sha256=XEVEEsUUEiZ763PweFtzwCcxMZVvttNVIfc_B6iKH-w,4198
+astyle_py/utils.py,sha256=kA4nodwuW5mSnPbD4p21Hf3vC76Hs-F_MbWGf-UoAUA,1591
+astyle_py/lib/3.1/libastyle.wasm,sha256=GX0ltmIynwqVirEjtHH8ovg6dHWfIcgPtb4RuD1QTZo,385962
+astyle_py/lib/3.4.7/libastyle.wasm,sha256=DCJbzKhdWP7gzjQfrKwpft-nn9vm9mW05MQ0tA25cB4,391949
+astyle_py-1.0.4.dist-info/LICENSE,sha256=kYq0n8MganWTXEo4p9lGjyWGZhDogCwPIbznhYZQOzk,1273
+astyle_py-1.0.4.dist-info/METADATA,sha256=2vopS3g96dqvx-es138ovj1fuAONkb-a--nzQcmcAFk,8661
+astyle_py-1.0.4.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+astyle_py-1.0.4.dist-info/entry_points.txt,sha256=y_h5bFUKULNHDLOdiwz_X4kObCRZJqOLwvKW9JvOzNI,54
+astyle_py-1.0.4.dist-info/top_level.txt,sha256=sgHTQq8D7WlD6WRlhhN7AQVUZNT3BxdFuIQb27dC520,10
+astyle_py-1.0.4.dist-info/RECORD,,
