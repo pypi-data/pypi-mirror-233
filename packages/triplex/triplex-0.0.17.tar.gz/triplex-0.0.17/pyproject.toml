@@ -1,0 +1,55 @@
+[build-system]
+requires = [
+    "hatchling"
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "triplex"
+version = "0.0.17"
+authors = [
+  { name="Mattia Setzu", email="mattia.setzu@unipi.it" },
+]
+description = "Explaining models, with Triples."
+readme = "README.md"
+requires-python = ">=3.8, <3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers"
+]
+dependencies = [
+    "click==7.1.2",
+    "fire",
+    "huggingface-hub",
+    "logzero",
+    "nltk",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "pylint",
+    "smart-open==6.3.0",
+    "scipy",
+    "spacy",
+    "spacy-legacy",
+    "spacy-wordnet",
+    "srsly",
+    "stanford-openie",
+    "stanfordnlp",
+    "torch",
+    "tqdm",
+    "transformers",
+    "urllib3",
+    "wasabi",
+    "wcwidth",
+    "webencodings",
+    "wget",
+    "wrapt",
+    "xxhash"
+]
+
+[project.urls]
+	"Homepage" = "https://github.com/msetzu/triplex"
+	"Bug Tracker" = "https://github.com/msetzu/triplex/issues"
