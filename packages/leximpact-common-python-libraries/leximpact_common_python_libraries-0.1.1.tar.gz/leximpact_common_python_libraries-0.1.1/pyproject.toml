@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "leximpact-common-python-libraries"
+version = "0.1.1"
+description = "Python libraries for LexImpact projects"
+authors = ["LexImpact"]
+license = "AGPL3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nbdev = "^2.3.12"
+python-decouple = "^3.5"
+redis = { version = "^3.5.3", optional = true}
+
+[tool.poetry.extras]
+cache = ["redis"]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.4.0"
+papermill = "^2.3.3"
+ipykernel = "^6.25.2"
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
