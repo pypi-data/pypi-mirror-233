@@ -1,0 +1,10 @@
+sfftk-rw>=0.8.1
+numpy
+ahds
+styled
+mrcfile
+bitarray
+requests
+mock
+numpy-stl
+gemmi
