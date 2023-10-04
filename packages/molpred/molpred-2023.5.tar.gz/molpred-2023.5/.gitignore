@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+
+public/
+tmp/
+venv/
+
+version.py
