@@ -1,0 +1,5 @@
+include README.md
+include src/LICENSE
+recursive-include src/linguist *.yml
+recursive-include src/linguist *.py
+recursive-include src/linguist/strategy *.py
