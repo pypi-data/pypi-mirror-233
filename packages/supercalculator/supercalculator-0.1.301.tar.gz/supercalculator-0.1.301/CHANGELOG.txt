@@ -1,0 +1,19 @@
+Change Log
+==========
+
+0.1.3 (10/3/2023)
+-----------------
+- Updated documentation
+
+0.1.2 (10/2/2023)
+-----------------
+- Fixed negative numbers in limits
+
+0.1.1 (10/2/2023)
+-----------------
+- Added functionality to equation builder.
+- Added functions / limits
+
+0.1.0 (10/1/2023)
+-----------------
+- Initial Release
