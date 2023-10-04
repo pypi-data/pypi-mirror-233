@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "gtimes"
+version = "0.3.1"
+authors = ["Benedikt Gunnar Ófeigsson <bgo@vedur.is>"]
+description = "Collection of modules to handle time related conversions and strings formating. Handles GPS-time"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pytz = "^2023.3.post1"
+python-dateutil = "^2.8.2"
+pandas = "^2.1.1"
+
+[tool.poetry.scripts]
+    timecalc = 'gtimes.timecalc:main'
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/gpskings/gpslibrary.git"
