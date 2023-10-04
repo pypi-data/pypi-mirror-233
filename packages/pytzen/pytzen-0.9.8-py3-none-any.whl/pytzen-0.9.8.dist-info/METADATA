@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: pytzen
+Version: 0.9.8
+Summary: PYTZEN
+Author: PYTZEN
+Project-URL: Documentation, https://www.pytzen.com/design-pattern/source-code/pytzen
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## **pytzen Package Documentation**
+
+### Overview:
+The `pytzen` package is a collection of utilities designed to streamline common tasks like data management, logging, and documentation generation in Python. It provides a flexible and adaptable framework for working with configurations, generating logs, and auto-generating documentation for Python objects.
+
+### Components:
+
+1. **DataStore Class**:
+    - **Purpose**: Manages configurations by reading from JSON files, parsing command-line arguments, and fetching environment variables.
+    - **Key Features**:
+        - Reads configurations from a JSON file.
+        - Parses command-line arguments prefixed with `--`.
+        - Integrates environment variables based on the JSON file's keys.
+        - Merges configurations from multiple sources.
+
+2. **LogBuild Class**:
+    - **Purpose**: Provides a streamlined interface for logging operations, allowing easy setup and usage of loggers.
+    - **Key Features**:
+        - Instantiates and configures loggers with a given name and logging level.
+        - Offers methods to log messages of various severity: debug, info, warning, error, and critical.
+        - Configures console output with a specific message format.
+
+3. **DocGen Class**:
+    - **Purpose**: Generates structured documentation for Python objects, categorizing their attributes and methods.
+    - **Key Features**:
+        - Parses an object's attributes to classify them into 'methods' and 'attributes'.
+        - Captures docstrings for methods and data types for attributes.
+        - Stores the generated documentation in a structured dictionary.
+
+4. **ProtoType Class with MetaType Metaclass**:
+    - **Purpose**: Acts as a prototype for other classes, ensuring that their initialization is done correctly, and also integrating logging and documentation utilities.
+    - **Key Features**:
+        - Uses the `MetaType` metaclass to ensure the proper order of initialization for derived classes.
+        - Sets up logging based on the class's name.
+        - Generates and updates configurations using `DocGen`.
+
+5. **Utility Functions**:
+    - **update_config**:
+        - **Purpose**: Updates the `DataStore` configuration with details about a class and its documentation.
+        - **Key Features**:
+            - Checks and updates class-specific documentation.
+            - Reflects changes back to the JSON file if there are modifications.
+
+### Typical Usage:
+
+1. **Setting Up Configuration**:
+    - Create a JSON file with default configurations.
+    - Instantiate the `DataStore` class, which will pull configurations from the JSON, environment variables, and command-line arguments.
+
+2. **Logging**:
+    - Instantiate the `LogBuild` class with a desired name and logging level.
+    - Use the logging methods (`debug`, `info`, `warning`, `error`, `critical`) to log messages.
+
+3. **Auto-generating Documentation**:
+    - Instantiate the `DocGen` class, passing in the attributes of an object.
+    - Access the `doc` attribute of the `DocGen` instance to retrieve the generated documentation.
+
+4. **Creating New Classes**:
+    - Derive from the `ProtoType` class to automatically gain the benefits of logging and auto-documentation.
+    - The initialization of the new class will automatically set up logging and update configurations with its documentation.
