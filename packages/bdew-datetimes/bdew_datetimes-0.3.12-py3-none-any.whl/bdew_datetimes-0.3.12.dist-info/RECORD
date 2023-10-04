@@ -1,0 +1,10 @@
+_bdew_datetimes_version.py,sha256=I5vkl4vo0hPmQdc7JBOOwtd4n2_OXM6J1gT3jKsuejE,19
+bdew_datetimes/__init__.py,sha256=zv9Xnamqaheq5oKBaC-fvWkwEpOqMQ4H9ooi96Wx-aA,221
+bdew_datetimes/calendar.py,sha256=EeJnXQ_2J84cZ3dNT8AFNTqlYFPv9WdbNWxvEauJyJo,2332
+bdew_datetimes/german_strom_and_gas_tag.py,sha256=VVRttBZOGyqyAxSgTuMIlwmTmcXNYVrOuDTSKkAzrXw,3491
+bdew_datetimes/periods.py,sha256=Au55qjHDso9MKcXQwyp_sD9TiETQE_7RfFLDaGzZUO4,8447
+bdew_datetimes/py.typed,sha256=UMj6hnFihehUfxt0cdFZhinH-WhK5OI0ZC4Hxa6eiY0,170
+bdew_datetimes-0.3.12.dist-info/METADATA,sha256=fVswKEosn6uNqGkChNVQmBx2u6hgtmFSKEsLmg40A9E,6951
+bdew_datetimes-0.3.12.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+bdew_datetimes-0.3.12.dist-info/licenses/LICENSE,sha256=5CQf-Y46R5vjfkEM6aIIq3LD2TtKDQeane0hR0shJCA,1063
+bdew_datetimes-0.3.12.dist-info/RECORD,,
