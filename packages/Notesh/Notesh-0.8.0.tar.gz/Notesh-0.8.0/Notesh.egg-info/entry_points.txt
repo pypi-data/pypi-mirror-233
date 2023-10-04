@@ -1,0 +1,2 @@
+[console_scripts]
+notesh = notesh.command_line:run
