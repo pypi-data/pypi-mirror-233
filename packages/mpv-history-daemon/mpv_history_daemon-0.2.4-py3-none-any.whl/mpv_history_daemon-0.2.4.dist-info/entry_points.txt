@@ -1,0 +1,2 @@
+[console_scripts]
+mpv_history_daemon = mpv_history_daemon.__main__:cli
