@@ -1,0 +1,11 @@
+lightning_graphcore/__about__.py,sha256=f8k4T6gorzCuC81w4Cj00RH2EZh5MYGSIwFhq7EX-k4,460
+lightning_graphcore/__init__.py,sha256=vsMwg0XaqyAGU-QpXZkiyLqZR0YTUymvg1MbsIU9enY,435
+lightning_graphcore/accelerator.py,sha256=lbYlg3-6Tqp3-pRcwEi8trfd1fLznZ2V6Wt-VFwokfQ,2648
+lightning_graphcore/precision.py,sha256=XbnR0_x83Kch8gdU0GXKm6xXCygfW8NO9dLIu_ZVkNg,5126
+lightning_graphcore/strategy.py,sha256=TtY3DZ5wZlGgfcDBg_ejOgNWLbYiXC-zqHKOimgFE6Y,18021
+lightning_graphcore/utils.py,sha256=C8yjF7MUgMs6nKj4TVLNyj3SweLryX4fp3O5F_KTV-8,3725
+lightning_graphcore-0.1.0.dist-info/LICENSE,sha256=egEaW31il0xXi3pa43tywG1TRF_haci5JUUAujkexLc,11352
+lightning_graphcore-0.1.0.dist-info/METADATA,sha256=CwPq37MJV_5uIcErk48q3Yfg6ajVw2_cphIgdlAM3sg,5836
+lightning_graphcore-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+lightning_graphcore-0.1.0.dist-info/top_level.txt,sha256=zJLNEZH8j_FAEMWni6Urd8wV5jKAvIwzqUn65GLlfyc,20
+lightning_graphcore-0.1.0.dist-info/RECORD,,
