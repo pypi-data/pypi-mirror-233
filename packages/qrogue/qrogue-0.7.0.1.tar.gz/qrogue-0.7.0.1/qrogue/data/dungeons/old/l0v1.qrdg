@@ -1,0 +1,137 @@
+Qrogue<
+Name = "Lesson 2: Twos everywhere"
+Description = Speaker "0" "Lesson 2 will take the //05complexity// to a new level. Previously your Qubot's //02Circuit// had only //05one// //02Qubit//. Now we //05extended// the circuit to //05two// //02Qubits//. It's still //05normal// matrix vector multiplication though."
+NO_TELEPORTER
+
+// Introduced Concepts:
+// 2nd Qubit, 2nd (X-)Gate
+
+[Robot]
+2 qubits [ *xgate ]
+circuit_space = 2
+maxenergy = 100000 // it should not be possible to run out of energy in this level
+
+[Layout]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| __ .. __ .. SR == aa .. __ .. __ .. __ |
+| ..    ..    ==    ==    ..    ..    .. |
+| __ .. __ .. cc == bb == ff .. __ .. __ |
+| ..    ..    ..    ==    11    ..    .. |
+| __ .. __ .. __ .. dd 11 ee .. __ .. __ |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Custom Rooms]
+
+aa (Wild):
+#############
+# _ _ 0 _ _ #
+# _ o _ o _ #
+# 0 _ _ _ 0 #
+# _ o _ o _ #
+# _ _ 0 _ _ #
+#############
+0 *reach1X		// first occurrence in room
+0 [0, 1, 0, 0] tutorial *firstPuzzle trigger *solvedFirstPuzzle		// second occurrence is the first one we step on
+0 *reach1X
+0 *reach1X none tutorial *hotkeys 
+
+bb (Gate):
+#############
+# o o _ o o #
+# o o _ o o #
+# _ _ c _ _ #
+# o o _ o o #
+# o o _ o o #
+#############
+c gate *x
+
+cc (Wild):
+#############
+# o _ _ _ o #
+# _ o 0 o _ #
+# _ 0 _ 0 _ #
+# _ o 0 o _ #
+# o _ _ _ o #
+#############
+0 [0, 1, 0, 0] tutorial *firstPuzzle trigger *solvedFirstPuzzle
+0 *reach1X
+0 *reach1X none tutorial *hotkeys
+0 *reach1X
+
+dd (Wild):
+#############
+# o _ 0 _ c #
+# o o _ 0 _ #
+# o o o _ 0 #
+# o o o o _ #
+# o o o o o #
+#############
+c key 1
+0 *reach1X *rewDD
+0 *base11 *rewDD
+0 *reach2X *rewDD
+
+ee (Wild):
+#############
+# 0 _ _ o o #
+# _ _ _ o o #
+# _ _ 0 0 o #
+# o o 0 0 _ #
+# o o o _ m #
+#############
+0 *base11
+0 *reach1X
+0 *reach1X
+0 *reach1X
+0 *base11
+m *doneMsg trigger *done
+
+ff (Wild):
+#############
+# o o o o o #
+# _ o o o o #
+# 0 _ o o o #
+# _ 0 _ o o #
+# c _ 0 _ o #
+#############
+c key 1
+0 *reach1X *rewFF
+0 *base11 *rewFF
+0 *reach2X *rewFF
+
+
+[Hallways]
+11 (locked; ; )
+
+[StateVector Pools]
+custom
+*base01 [ {num_qubits=2: gX @ q0} ]
+*base10 [ [0, 0, 1, 0] ]
+*base11 [ [0, 0, 0, 1] ]
+
+*reach1X [ *base01, *base10 ]
+*reach2X [ *reach1X, [0, 0, 0, 1] ]
+
+default *reach1X
+
+[Reward Pools]
+custom 
+
+*rewDD ordered [none]
+*rewFF ordered [none]
+
+default *none
+
+
+[Messages]
+// highlight text by encapsulating it in "//02abcd//" where "abcd" is the text to highlight and "02" one of the available styles: 01 is for tiles, 02 is for game objects, 03 for actions, 04 for keys on the keyboard and 05 for other words
+// speaker: 0 = Examiner, 1 = Scientist, 2 = System, 3 = Player
+
+*firstPuzzle Speaker "0" prio pos 5 "Now that you have a //05second// //02Qubit// you can use the //04navigation keys// to not only //03choose// the target //02Slot// but also the target //02Qubit// of a //02Gate// you're placing in your //02Circuit//."
+"The displayed //02Puzzle// should look familiar. It's //05basically the same// as the previous one but now with //05two// //02Qubits//." when *solvedFirstPuzzle then *None
+
+*hotkeys "Instead of //03selecting// and //03confirming// //05-Back-// you can also press //04Backspace// as a shortcut."
+
+*doneMsg Speaker "0" "Ready for the next lesson?" "In case you want to pause or stop playing you can press //04Tab// or //04P// to open the //05Pause menu//. Progress is //05saved level-wise// so make sure to not accidentally stop just before finishing a level!"
+
+>Qrogue
