@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PyGitLinguist
+Version: 1.1.0
+Summary: Pythonic version of github's Linguist
+Home-page: https://github.com/guy-nachshon/pylinguist
+Author: Guy Nachshon
+Author-email: guy.na8@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7, <4
+
