@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+qsketchmetric/__init__.py
+qsketchmetric/renderer.py
+qsketchmetric/semiautomatic.py
+qsketchmetric.egg-info/PKG-INFO
+qsketchmetric.egg-info/SOURCES.txt
+qsketchmetric.egg-info/dependency_links.txt
+qsketchmetric.egg-info/requires.txt
+qsketchmetric.egg-info/top_level.txt
+tests/__init__.py
+tests/test_renderer.py
+tests/test_semiautomatic.py
