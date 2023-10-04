@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cubicweb-compound
+Version: 1.0.0
+Summary: Library cube to handle assemblies of composite entities
+Home-page: https://forge.extranet.logilab.fr/cubicweb/cubes/cubicweb-compound
+Author: LOGILAB S.A. (Paris, FRANCE)
+Author-email: contact@logilab.fr
+License: LGPL
+Classifier: Environment :: Web Environment
+Classifier: Framework :: CubicWeb
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: JavaScript
+Requires-Dist: cubicweb <5.0.0,>=4.0.0
+Requires-Dist: cubicweb-web <2.0.0,>=1.0.0
+
+Summary
+-------
+Library cube to handle assemblies of composite entities

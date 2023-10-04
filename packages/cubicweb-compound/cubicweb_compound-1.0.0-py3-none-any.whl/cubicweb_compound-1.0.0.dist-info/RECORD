@@ -1,0 +1,14 @@
+cubicweb_compound/__init__.py,sha256=GPb_SLTVB6uRvCYFy6GsIBdjuGBnNLNiOj9DOeCMIEE,8225
+cubicweb_compound/__pkginfo__.py,sha256=lovQj8Yorch2o2GnSDXbcUMWAXcG6mNU9IeJYJajSSU,739
+cubicweb_compound/entities.py,sha256=7XjBmENt01X7cJndDlAZQ1QhDl5Fc0fgHkbbyIrSdUc,10130
+cubicweb_compound/hooks.py,sha256=wV5C4F3FLlV6hjAI38oEclAEfhrq7uiH3Tb-xuWZe1k,2003
+cubicweb_compound/utils.py,sha256=-x8kUIXczJqm8LT28ayRYqy9eLKZywmoZaJ0GEvtBgQ,8390
+cubicweb_compound/views.py,sha256=P_fUx--E9gTBe2R95f6XeFi7h9d4EpTnwvsk4LJrkO8,4145
+cubicweb_compound/i18n/en.po,sha256=Sh0oueYzchYoJIB0L3UEjOF4uQPGtvtBfBvEe7HJGfU,336
+cubicweb_compound/i18n/fr.po,sha256=iwY4tO64_Rc_Fe6B5XG6OD_OnNyBczBppUC74xnCqks,387
+cubicweb_compound/migration/postcreate.py,sha256=B6odxi6QA4nyYgl8vgLdo_KoKKjw1QUEOoiE9JYjsRE,987
+cubicweb_compound-1.0.0.dist-info/METADATA,sha256=rrSf6HuJM-5tPU8n2ftLsG1gSstDOUJUDWog0E9qz2I,610
+cubicweb_compound-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cubicweb_compound-1.0.0.dist-info/entry_points.txt,sha256=jBSh2Wfrqzk4XkHAdpRBErrFM5XdYOeHQQ9LqRtOV9g,46
+cubicweb_compound-1.0.0.dist-info/top_level.txt,sha256=sOa7N2mq3ud16xYo-8_Ql7wUDK0LOw3zJRx5JpHXBDk,18
+cubicweb_compound-1.0.0.dist-info/RECORD,,
