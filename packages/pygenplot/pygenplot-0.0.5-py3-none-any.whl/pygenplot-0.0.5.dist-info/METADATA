@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pygenplot
+Version: 0.0.5
+Summary: A software for plotting data
+Home-page: UNKNOWN
+Author: E.C. Pellegrini
+Author-email: pellegrini@ill.fr
+Maintainer: E.C. Pellegrini, R. Perenon
+Maintainer-email: pellegrini@ill.fr, perenon@ill.fr
+License: GPL 3
+Platform: Unix
+Platform: Windows
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: PyQt5
+Requires-Dist: qtpy
+Requires-Dist: pyyaml
+
+pygenplot is a software used for plotting data based on netCDF or HDF file format.
+
+
