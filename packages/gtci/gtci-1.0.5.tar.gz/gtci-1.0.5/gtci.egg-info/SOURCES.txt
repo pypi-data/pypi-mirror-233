@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gtci/__init__.py
+gtci/main.py
+gtci/utils.py
+gtci.egg-info/PKG-INFO
+gtci.egg-info/SOURCES.txt
+gtci.egg-info/dependency_links.txt
+gtci.egg-info/entry_points.txt
+gtci.egg-info/requires.txt
+gtci.egg-info/top_level.txt
