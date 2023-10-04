@@ -1,0 +1,11 @@
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE
+
+# Include the stub file
+include pyoptional/pyoptional.pyi
+
+# Include py.typed
+include pymonitors/py.typed
