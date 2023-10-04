@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lazy-nessus"
+dynamic = ["version", "dependencies"]
+description = 'Pause, resume, list, check the status of, or export a Nessus scan. There is also the option to schedule a pause or resume action. Telegram bot support is also included.'
+readme = "README.md"
+requires-python = ">=3.7"
+license = "GPL-3.0-or-later"
+keywords = [
+  "nessus",
+  "lazy-nessus",
+  "nessus pause",
+  "nessus resume",
+  "nessus status",
+  "nessus export",
+  "nessus schedule",
+  "nessus telegram",
+  "nessus bot",
+  "nessus telegram bot",
+  "nessus telegram bot pause",
+  "nessus telegram bot resume",
+  "nessus telegram bot status",
+  "nessus telegram bot export",
+  "nessus telegram bot schedule",
+  "nessus telegram bot schedule pause",
+  "nessus telegram bot schedule resume",
+]
+authors = [
+  { name = "Luke Minniear", email = "lukeminniear@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[project.urls]
+Documentation = "https://github.com/minniear/lazy-nessus#readme"
+Issues = "https://github.com/minniear/lazy-nessus/issues"
+Source = "https://github.com/minniear/lazy-nessus"
+
+[tool.hatch.version]
+path = "src/lazy_nessus/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "certifi==2023.7.22",
+  "charset-normalizer==3.2.0",
+  "idna==3.4",
+  "python-dotenv==1.0.0",
+  "requests==2.31.0",
+  "urllib3==2.0.4"
+]
+[tool.hatch.envs.default.scripts]
+help = "python3 src/lazy_nessus/main.py {args:-h}"
+
+[project.scripts]
+lazy-nessus="lazy_nessus.main:main"
+
