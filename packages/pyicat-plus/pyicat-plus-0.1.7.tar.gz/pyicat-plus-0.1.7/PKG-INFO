@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: pyicat-plus
+Version: 0.1.7
+Summary: Python client to ICAT+
+Home-page: https://gitlab.esrf.fr/icat/pyicat-plus/
+Author: ESRF
+Author-email: wout.de_nolf@esrf.fr
+License: MIT
+Project-URL: Source, https://gitlab.esrf.fr/icat/pyicat-plus/
+Project-URL: Documentation, https://pyicat-plus.readthedocs.io/
+Project-URL: Tracker, https://gitlab.esrf.fr/icat/pyicat-plus/issues/
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: doc
+License-File: LICENSE.md
+
+# PyIcat-Plus
+
+A python client for ICAT+.
+
+## Getting started
+
+Register raw datasets with ICAT
+
+```bash
+icat-store-raw --beamline id00 \
+    --proposal id002207 \
+    --path /data/visitor/path/to/dataset1 \
+    --dataset test1 \
+    --sample mysample
+
+icat-store-raw --beamline id00 \
+    --proposal id002207 \
+    --path /data/visitor/path/to/dataset2 \
+    --dataset test2 \
+    --sample mysample
+```
+
+Register processed data with ICAT
+
+```bash
+icat-store-processed --beamline id00 \
+    --proposal id002207 \
+    --path /data/visitor/path/to/processed \
+    --dataset testproc \
+    --sample mysample \
+    --raw /data/visitor/path/to/dataset1 \
+    --raw /data/visitor/path/to/dataset2
+```
+
+## Test
+
+With threads
+
+```bash
+python -m pip install -e .[test]
+pytest
+```
+
+With gevent
+
+```bash
+python -m pip install -e .[test]
+python -m pip install gevent
+python -m gevent.monkey --module pytest
+```
+
+## Documentation
+
+https://pyicat-plus.readthedocs.io/

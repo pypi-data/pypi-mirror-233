@@ -1,0 +1,4 @@
+[console_scripts]
+icat-store-from-file = pyicat_plus.apps.store_from_file:main
+icat-store-processed = pyicat_plus.apps.store_processed:main
+icat-store-raw = pyicat_plus.apps.store_raw:main
