@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: kring
+Version: 0.0.1
+Summary: Zig library
+Project-URL: Homepage, https://github.com/jackokring/zig-kring
+Project-URL: Bug Tracker, https://github.com/jackokring/zig-kring/issues
+Author-email: Simon Jackson <jackokring@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# The `zig-kring` Library
+
+Written in `zig` this library useable with many tools. It is a `python` module `kring`,
+but can be used directly from `zig`.
+
+**When building with zig you may have to `zig build` twice for dependancy resolution**
+
+Better still use `./publish.sh` from the repository root.

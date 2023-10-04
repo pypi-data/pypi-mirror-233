@@ -1,0 +1,8 @@
+.gitignore,sha256=C1Vk4Ap85kRH-KGLv78e8HYPxN38bGbJUDu4e61DGLE,45
+PKG-INFO,sha256=2xBgR3wzXe6LvB9onPWpA3l7S_ar17APNiostckZ2LY,767
+hatch_build.py,sha256=7VSB-2J4uqsQ9rUZsi1IErLIEaYAd6Apx2EdLol2U_k,262
+pyproject.toml,sha256=fZY-XlldeHZ5MFIRdssEObdUGIPJ7tEDwJhFHba_IKU,705
+bin/kring,sha256=GKrPXycvBJabS4p_-1DtTDrmMWChiA-pBKD8xVHp4Zw,1339208
+kring-0.0.1.dist-info/METADATA,sha256=2xBgR3wzXe6LvB9onPWpA3l7S_ar17APNiostckZ2LY,767
+kring-0.0.1.dist-info/WHEEL,sha256=t-DuuFAMtXPmdMiOthy7v4KSm6ebhkrVItQlt9AGJJE,106
+kring-0.0.1.dist-info/RECORD,,
