@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  marops_ui:
+    build:
+      dockerfile: ./docker/Dockerfile.marops_ui
+      args:
+        VITE_HASURA_HTTP_URL: http://localhost:7003/v1/graphql
+        VITE_HASURA_WS_URL: ws://localhost:7003/v1/graphql
+        VITE_CORE_URL: http://localhost:7004
+        VITE_TILER_URL: http://localhost:7001
+        VITE_DOCS_URL: http://localhost:7005
+        VITE_STUDIO_URL: http://localhost:7006
+    restart: always
+    command: yarn serve
+
+  marops_docs:
+    restart: always
+    command: yarn serve
+ 
+  marops_chart_tiler:
+    restart: always
+  
+  marops_chart_api:
+    restart: always
+
+  marops_hasura:
+    restart: always
+  
+  marops_core:
+    restart: always
+    command: yarn start:prod
