@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: coercer
+Version: 2.4.2
+Summary: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through 15 methods.
+Author: p0dalirius
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: impacket (>=0.10.0,<0.11.0)
+Requires-Dist: xlsxWriter (>=3.0.0)
