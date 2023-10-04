@@ -1,0 +1,13 @@
+grpcio-tools~=1.58
+
+[dev]
+pytest
+bump2version
+check-manifest
+
+[tests]
+pytest
+bump2version
+
+[versioning]
+bump2version

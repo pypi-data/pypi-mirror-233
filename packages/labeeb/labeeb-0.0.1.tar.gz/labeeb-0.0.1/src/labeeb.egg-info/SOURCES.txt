@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+UNLICENSE.txt
+setup.py
+src/__init__.py
+src/labeeb.egg-info/PKG-INFO
+src/labeeb.egg-info/SOURCES.txt
+src/labeeb.egg-info/dependency_links.txt
+src/labeeb.egg-info/requires.txt
+src/labeeb.egg-info/top_level.txt
