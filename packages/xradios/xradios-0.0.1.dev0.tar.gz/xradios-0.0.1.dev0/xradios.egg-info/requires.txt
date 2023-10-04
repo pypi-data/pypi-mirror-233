@@ -1,0 +1,16 @@
+appdirs>=1.4.4
+prompt-toolkit>=3.0.8
+notify-send>=1.1.0
+Pygments>=2.7.3
+streamscrobbler3>=0.0.4
+python-mpv>=0.5.2
+pyradios>=1.0.0
+python-vlc>=3.0.12118
+pluginbase>=1.0.1
+tinydb>=4.5.2
+cmd-parser>=0.0.1.dev2
+
+[dev]
+flake8
+pre-commit
+build
