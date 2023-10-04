@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+captcharesolverbyziziak.egg-info/PKG-INFO
+captcharesolverbyziziak.egg-info/SOURCES.txt
+captcharesolverbyziziak.egg-info/dependency_links.txt
+captcharesolverbyziziak.egg-info/requires.txt
+captcharesolverbyziziak.egg-info/top_level.txt
