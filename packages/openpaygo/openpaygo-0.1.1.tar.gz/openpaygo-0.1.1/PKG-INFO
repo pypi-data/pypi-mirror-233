@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: openpaygo
+Version: 0.1.1
+Home-page: https://github.com/openpaygo/openpaygo-python
+Author: Solaris Offgrid
+License: MIT
+Requires-Python: >=2.7
+License-File: LICENSE
