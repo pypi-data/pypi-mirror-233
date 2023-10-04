@@ -1,0 +1,8 @@
+pymisp==2.4.148.1
+cyjax-cti==2.0.*
+
+[test]
+pytest
+pylint==3.0.0
+flake8
+twine
