@@ -1,0 +1,10 @@
+gemseo[all]>=5
+matplotlib
+numpy
+sphinx<8
+
+[test]
+covdefaults
+pytest
+pytest-cov
+pytest-xdist
