@@ -1,0 +1,11 @@
+LICENSE
+README.md
+one_to_one.py
+semantic_model.py
+setup.py
+semantic_model.egg-info/PKG-INFO
+semantic_model.egg-info/SOURCES.txt
+semantic_model.egg-info/dependency_links.txt
+semantic_model.egg-info/requires.txt
+semantic_model.egg-info/top_level.txt
+tests/tests.py
