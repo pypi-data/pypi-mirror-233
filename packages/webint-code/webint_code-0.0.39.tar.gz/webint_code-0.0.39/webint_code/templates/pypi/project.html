@@ -1,0 +1,8 @@
+$def with (project, packages)
+$var title: Links for $project
+
+$for package in packages:
+    $ path = f"/projects/{package['name']}/releases/{package['filename']}"
+    <a href="$path#sha256=$package['sha256_digest']"
+    data-gpg-sig=true>$package['filename']</a>
+    <small><a href=$(path).asc>sig</a></small><br>
