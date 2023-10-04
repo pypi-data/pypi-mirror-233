@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "corpus-writer"
+description = "Update pre-existing opinion file with statutes, citations, short title."
+version = "0.0.5"
+authors = ["Marcelino G. Veloso III <contact@mv3.dev>"]
+readme = "README.md"
+homepage = "https://mv3.dev"
+repository = "https://github.com/justmars/corpus-writer"
+documentation = "https://justmars.github.io/corpus-writer"
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Typing :: Typed",
+  "Development Status :: 4 - Beta",
+  "Framework :: Pytest",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+environs = "^9.5.0"
+citation-utils = "^0.4.10"
+citation-title = "^0.0.1"
+statute-utils = "^0.6.8"
+python-frontmatter = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+pytest-django = "^4.5.2"
+pytest-cov = "^4.1"
+pre-commit = "^3.3"
+ipykernel = "^6.25.2"
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = "-ra -q --cov"
+# filterwarnings = ["ignore::DeprecationWarning"] see pkg_resources
+testpaths = ["tests", "src"]
+
+[tool.ruff]
+ignore = ["F401", "F403"]
+fixable = ["F", "E", "W", "I001"]
+select = ["F", "E", "W", "I001"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
