@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: HounaarToolkit
+Version: 0.1.2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: reportlab
+Requires-Dist: scikit-learn
+Requires-Dist: pyautogui
+Requires-Dist: colorama
+Requires-Dist: PyPDF2
+Requires-Dist: pytube
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: scapy
+Requires-Dist: python-nmap

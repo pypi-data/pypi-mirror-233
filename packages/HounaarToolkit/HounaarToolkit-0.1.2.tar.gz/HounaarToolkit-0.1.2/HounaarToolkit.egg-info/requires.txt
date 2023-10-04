@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+seaborn
+reportlab
+scikit-learn
+pyautogui
+colorama
+PyPDF2
+pytube
+requests
+beautifulsoup4
+scapy
+python-nmap
