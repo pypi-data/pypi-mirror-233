@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+version.py
+src/ai/__init__.py
+src/ai.fri3d.egg-info/PKG-INFO
+src/ai.fri3d.egg-info/SOURCES.txt
+src/ai.fri3d.egg-info/dependency_links.txt
+src/ai.fri3d.egg-info/requires.txt
+src/ai.fri3d.egg-info/top_level.txt
+src/ai/fri3d/__init__.py
+src/ai/fri3d/differentialevolution.py
+src/ai/fri3d/lib.pyx
+src/ai/fri3d/model.py
+src/ai/fri3d/optimize.py
