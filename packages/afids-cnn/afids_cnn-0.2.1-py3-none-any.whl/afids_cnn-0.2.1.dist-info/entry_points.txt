@@ -1,0 +1,6 @@
+[console_scripts]
+auto_afids_cnn_apply=afids_cnn.apply:main
+auto_afids_cnn_apply_bids=afids_cnn.apply_workflow.run:main
+auto_afids_cnn_train=afids_cnn.train:main
+auto_afids_cnn_train_bids=afids_cnn.train_workflow.run:main
+
