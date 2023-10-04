@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: labeeb
+Version: 0.0.1
+Summary: A deep learning engine made easy
+Home-page: https://github.com/disooqi/labeeb
+Author: Mohamed Eldesouki
+Author-email: labeeb@eldesouki.com
+Project-URL: Bug Tracker, https://github.com/disooqi/labeeb/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio-tools ~=1.58
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: bump2version ; extra == 'tests'
+Provides-Extra: versioning
+Requires-Dist: bump2version ; extra == 'versioning'
+
+# labeeb
