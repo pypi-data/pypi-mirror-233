@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: openworld-sdk-python-fraudpreventionv2
+Version: 2.0.0
+Summary: Expedia Group Fraud Prevention V2 SDK for Python
+Description-Content-Type: text/markdown
+Requires-Dist: expediagroup-fraudpreventionv2-sdk
+
+# ⚠️⚠️⚠️ Summary ⚠️⚠️⚠️
+
+⚠️⚠️⚠️ The **`openworld-sdk-python-fraudpreventionv2` PyPI package is deprecated use `expediagroup-fraudpreventionv2-sdk` instead** ⚠️⚠️⚠️
