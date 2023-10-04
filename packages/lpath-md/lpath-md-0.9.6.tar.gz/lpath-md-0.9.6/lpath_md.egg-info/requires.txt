@@ -1,0 +1,25 @@
+scikit-learn
+scipy
+numpy
+pylcs
+ray
+tqdm
+networkx
+matplotlib
+timedinput
+
+[:python_version < "3.10"]
+importlib-resources
+
+[dev]
+lpath-md[test,tui,westpa]
+
+[test]
+pytest>=6.1.2
+pytest-runner
+
+[tui]
+argparse-tui
+
+[westpa]
+westpa>=2022.03
