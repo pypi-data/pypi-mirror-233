@@ -1,0 +1,9 @@
+firebird/uuid/__about__.py,sha256=C6Lvg_3VeSoEwkUxq8r7eWH6FI2PbWCmoMYXJLIxDrc,138
+firebird/uuid/__init__.py,sha256=HIwZ2hBJMWHnJfurE1U0rTk36nwVcUyHGDNfNv5WGww,1868
+firebird/uuid/_model.py,sha256=spBdGmJAvaaiqyUc8EUVJPTFgetvU1Xnic0VTgifUG4,8645
+firebird/uuid/_registry.py,sha256=sGdn9onJeogpvAGjAd2U_tUSmZVrMtDy3bPQhXqvxGE,5230
+firebird/uuid/_spec.py,sha256=KLDnnXJJpk344hzJ7uRuXEOf4rBxtIiyhLgZsyNKfQs,14393
+firebird_uuid-0.3.0.dist-info/METADATA,sha256=ruYZ1qTYOYpQb-BiwE894V1w0qbhLJV-6phAF1K1ihM,3716
+firebird_uuid-0.3.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+firebird_uuid-0.3.0.dist-info/licenses/LICENSE,sha256=wiBkj4i3d0pSWeF_lWwvgOoxb-ljJd_xIFpUNWcWd8w,1118
+firebird_uuid-0.3.0.dist-info/RECORD,,
