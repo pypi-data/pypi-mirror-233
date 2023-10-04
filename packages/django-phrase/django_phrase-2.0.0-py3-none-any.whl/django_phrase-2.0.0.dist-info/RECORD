@@ -1,0 +1,12 @@
+phrase/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+phrase/compat.py,sha256=mfJ_MC9hlZtYNugBy9RcfRJS0_kGDK1n5auoBRqghlg,352
+phrase/nodes.py,sha256=Yd37eudn34XSRvb0lgzrEuHhoEVY7IEzz-sscIY95yM,4310
+phrase/settings.py,sha256=QrXPc7PzJLbM9bac_PRmVVZQlRy8pmdBmN5H5A86Ymc,849
+phrase/utils.py,sha256=LQtyzy0wKrt2UWLq6h4YlT3d4TjxNK6u3H9xgWUuc7Y,1107
+phrase/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+phrase/templatetags/phrase_i18n.py,sha256=qtLhadMSisr_j53_uDBKGSXzIFAXSRwZrof6GfN2wRU,8116
+django_phrase-2.0.0.dist-info/LICENSE,sha256=zmL9YQTS1ygoL5IB71y93eUIjJKahHtB2iop_dLLmDE,1069
+django_phrase-2.0.0.dist-info/METADATA,sha256=AVzSEaMxymq2RFqrqRpjWPZi6ZEb7q7j6xSNOjolAXA,4577
+django_phrase-2.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_phrase-2.0.0.dist-info/top_level.txt,sha256=pN3djjTblUz8n3Z1EZUntNQzmWcnA-EGoNbl2kUvTF8,7
+django_phrase-2.0.0.dist-info/RECORD,,
