@@ -1,0 +1,61 @@
+[project]
+name = "darbiadev-shipping-types"
+version = "0.1.0"
+description = "A set of types to provide a consistent interface across multiple packages"
+readme = "README.md"
+authors = [
+    { name = "Bradley Reynolds", email = "bradley.reynolds@darbia.dev" },
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+repository = "https://github.com/darbiadev/darbiadev-shipping-types/"
+documentation = "https://darbiadev.github.io/darbiadev-shipping-types/"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "black",
+    "ruff",
+]
+tests = [
+    "pytest",
+]
+docs = [
+    "sphinx",
+    "furo",
+    "sphinx-autoapi",
+    "releases",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ["py38"]
+line-length = 120
+
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+select = ["ALL"]
+ignore = []
+
+[tool.ruff.extend-per-file-ignores]
+"docs/*" = [
+    "INP001", # (File `tests/*.py` is part of an implicit namespace package. Add an `__init__.py`.) - Docs are not modules
+    "FA102", # (Missing `from __future__ import annotations`, but uses PEP 585 collection) - Docs are actually built on the latest stable release of Python
+]
+"tests/*" = [
+    "INP001", # (File `tests/*.py` is part of an implicit namespace package. Add an `__init__.py`.) - Tests are not modules
+    "S101", # (Use of `assert` detected) - Yes, that's the point
+]
+
+[tool.ruff.isort]
+known-first-party = ["letsbuilda.pypi"]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"

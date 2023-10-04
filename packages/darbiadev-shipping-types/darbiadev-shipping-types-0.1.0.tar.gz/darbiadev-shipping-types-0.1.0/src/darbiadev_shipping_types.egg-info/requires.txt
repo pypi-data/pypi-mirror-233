@@ -1,0 +1,14 @@
+
+[dev]
+pre-commit
+black
+ruff
+
+[docs]
+sphinx
+furo
+sphinx-autoapi
+releases
+
+[tests]
+pytest

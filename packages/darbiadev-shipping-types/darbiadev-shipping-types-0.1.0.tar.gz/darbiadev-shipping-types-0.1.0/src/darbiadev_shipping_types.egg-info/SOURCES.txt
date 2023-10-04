@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/darbia/shipping/types/__init__.py
+src/darbia/shipping/types/models.py
+src/darbiadev_shipping_types.egg-info/PKG-INFO
+src/darbiadev_shipping_types.egg-info/SOURCES.txt
+src/darbiadev_shipping_types.egg-info/dependency_links.txt
+src/darbiadev_shipping_types.egg-info/requires.txt
+src/darbiadev_shipping_types.egg-info/top_level.txt
+tests/test_models.py
