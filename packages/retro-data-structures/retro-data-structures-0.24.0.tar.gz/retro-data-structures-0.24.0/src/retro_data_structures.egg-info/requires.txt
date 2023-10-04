@@ -1,0 +1,8 @@
+construct>=2.10.0
+lzokay
+nod>=1.7.0
+typing-extensions>=4.0.0
+
+[test]
+pytest
+pytest-cov
