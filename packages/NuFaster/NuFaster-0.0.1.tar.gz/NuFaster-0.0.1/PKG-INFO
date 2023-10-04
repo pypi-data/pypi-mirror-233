@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: NuFaster
+Version: 0.0.1
+Summary: 借助nuitka更快的打包(分模块打包)
+Home-page: https://github.com/toca-Y/NuitkaPackV2
+Author: toca-Y
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+
+分模块打包
+
