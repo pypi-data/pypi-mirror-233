@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cipherspy
+Version: 0.1.2
+Summary: Strong Passwords Generator made with python.
+Home-page: https://github.com/fathiabdelmalek/cipherspy.git
+Author: Fathi AbdelMalek
+Author-email: abdelmalek.fathi.2001@gmail.com
+License: OSI Approved :: MIT License
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cipher-py
