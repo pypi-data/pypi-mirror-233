@@ -1,0 +1,4 @@
+include_package_data=True
+include README.md
+include LICENSE
+recursive-include botipy/src/ *

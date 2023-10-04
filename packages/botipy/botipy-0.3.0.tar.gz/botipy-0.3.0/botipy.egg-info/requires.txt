@@ -1,0 +1,5 @@
+virtualenv
+discord
+flask
+gunicorn
+python-dotenv
