@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["openNucleome"]
+namespaces = false
+
+[project]
+name = "openNucleome"
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy", 
+    "pandas", 
+    "scikit-learn",
+    "mdtraj", 
+    "MDAnalysis", 
+    "OpenMM", 
+]
+
+[tool.setuptools]
+include-package-data = true
