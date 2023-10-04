@@ -1,0 +1,8 @@
+wf_airtable_api_client/__init__.py,sha256=12tOQh_mHLXFrZbYt9bEbSaIz5dFWRcLmxX0_IyvTQ8,19
+wf_airtable_api_client/api/__init__.py,sha256=d0Q6Fn44e7wFfLabDOBxpcJ1DPKWlFunGYDUBmO-4hA,22
+wf_airtable_api_client/api/client.py,sha256=HF5b1mnKMtNk6GXZcaBr8lEE-gyJZ8CTBJgR0ny2hbM,10348
+wf_airtable_api_client/const.py,sha256=yp9WGdCok7ChuVUvor3aAETwai8jXPLJces2DewXoao,338
+wf_airtable_api_client-1.4.1.dist-info/LICENSE,sha256=VV4EHqsjRsZIw9RC6SYL63Tm9kzPQsYaZn7a1cT9X3w,1088
+wf_airtable_api_client-1.4.1.dist-info/METADATA,sha256=yTPnJIHkcb7qhGddpYA269Fq5SvM0t-e2t805-Ljzls,554
+wf_airtable_api_client-1.4.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+wf_airtable_api_client-1.4.1.dist-info/RECORD,,
