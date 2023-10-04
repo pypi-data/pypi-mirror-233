@@ -1,0 +1,10 @@
+sphinx
+sphinx-rtd-theme
+numpy
+scipy
+matplotlib
+pyvista
+simcoon
+pypardiso
+pandas
+pytest

@@ -1,0 +1,32 @@
+package:
+  name: fedoo
+  version: 1.0.0
+
+source:
+  git_url: https://github.com/3MAH/fedoo.git
+  
+build:
+  noarch: python
+
+requirements:
+  host:
+    - python
+  run:
+    - python
+    - numpy
+    - scipy
+    - pyvista    
+    - simcoon
+    - pardiso4py
+
+test:
+  imports:
+    - fedoo
+  source_files:
+    - tests
+  requires:
+    - pytest
+  commands:
+    - cd $SRC_DIR/tests
+    - $PYTHON run_tests.py
+  
