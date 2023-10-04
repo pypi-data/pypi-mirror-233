@@ -1,0 +1,10 @@
+ektis/__init__.py,sha256=DUroaCreKlq6CJTtOvxIadki9uK3tJa2MsfkUG4AYGE,137
+ektis/client.py,sha256=50f4xHqNvFP1z9xRX9sFiwRwwTYnJ-b_JoHb6eoNnx8,2251
+ektis/embed.py,sha256=7Gqig4CHaRop5rXM6MYFmnUEodx_LbOo_WKaE3EekY0,2350
+ektis/logging.py,sha256=kxRK0WJxXeRJb-RVlsOIHi9xVCnSxqovNRnH2ANESO0,909
+ektis/moraapi.py,sha256=Qvar8ZuN9Ol130u-EgUtZ7MWZtrJyks1QfxjVBRTWKU,3285
+ektis/send.py,sha256=2Q42-wr2ZVl_L8gLaE00KHUZ_5Ke4vtjxRaPPC8f0gA,1003
+ektis-0.0.3.dist-info/METADATA,sha256=w1nKZSVEJiyRmL2n2fqirq4KfJ8ZCw_poulY5xH4ORs,947
+ektis-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ektis-0.0.3.dist-info/top_level.txt,sha256=LKpaotTmHlr7jxXpagjq0lmYp9L9ENCAVFdGQv5C8wo,6
+ektis-0.0.3.dist-info/RECORD,,
