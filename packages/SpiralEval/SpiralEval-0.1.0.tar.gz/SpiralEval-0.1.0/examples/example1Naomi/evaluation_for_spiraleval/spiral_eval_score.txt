@@ -1,0 +1,5 @@
+Score_Naomi: 17
+Score_Easy: 19
+Score_Hard: 18
+Score: 54
+Accuracy: 90.00%

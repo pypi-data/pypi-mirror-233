@@ -1,0 +1,14 @@
+# Include the README and LICENSE
+include README.md
+include LICENSE
+
+# Include all files under the examples directory
+recursive-include examples *
+
+# Include the pdf files under the references directory
+recursive-include references *.pdf
+
+# Include the non-python files in the root directory
+include openai_api.txt
+include val_references.json
+include val_references_only_answers.txt
