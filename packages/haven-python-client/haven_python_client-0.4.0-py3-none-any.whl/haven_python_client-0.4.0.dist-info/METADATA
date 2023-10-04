@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: haven-python-client
+Version: 0.4.0
+Summary: Python client for Haven endpoints
+Author: Haven
+Author-email: hello@haven.run
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+Requires-Dist: munch
+
