@@ -1,0 +1,3 @@
+foliumYandexPracticum
+foliumYandexPracticum/plugins
+foliumYandexPracticum/templates
