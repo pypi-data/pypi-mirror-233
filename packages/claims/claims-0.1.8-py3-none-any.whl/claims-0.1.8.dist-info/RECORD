@@ -1,0 +1,13 @@
+claims/__init__.py,sha256=4b9liwZltI_59rCO8MIRW0SotZfkZjQoov7SU-V94ms,621
+claims/ability.py,sha256=fGymhKHzr6sXut_-sprmXd_hdUSbxD0y8LZktYpN2FU,2307
+claims/claim.py,sha256=ZQvFqFAh_R8p2gIfgqEabnLrr3dt6CsADMOdolfsMh8,7607
+claims/claim_set.py,sha256=Ia8Tv4eLsGsjkx4-5COvLtVaR_HNjqI3o-rmN9p6EX0,2795
+claims/errors.py,sha256=MymLbY1Pgjr3wfEWbKVgDsoJKyjJioS1VIS4WBURXwo,952
+claims/parsing.py,sha256=amZeEBkVF9SdbiJlDUnSoAqtY_db6deIVc46jB9kS44,1220
+claims/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claims-0.1.8.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+claims-0.1.8.dist-info/METADATA,sha256=Hf-H5ja5laXXXQqrLAnIP05cIzBJ1VXB2pOphXiBWuE,2071
+claims-0.1.8.dist-info/README.md,sha256=KmN47nHogCN7Hxv-AMxjDrMct3Z__oSjI4IHHdqUebs,1165
+claims-0.1.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+claims-0.1.8.dist-info/top_level.txt,sha256=yURqsZCCiZwTy2uN0WbQwnIfV_d0HMPL63ReCQHc3dk,7
+claims-0.1.8.dist-info/RECORD,,
