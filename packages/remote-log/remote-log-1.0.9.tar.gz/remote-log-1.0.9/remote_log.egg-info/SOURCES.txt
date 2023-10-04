@@ -1,0 +1,12 @@
+README.md
+setup.py
+remote_log/__init__.py
+remote_log/__main__.py
+remote_log/remote_log.py
+remote_log/sysinfo.py
+remote_log/tests.py
+remote_log.egg-info/PKG-INFO
+remote_log.egg-info/SOURCES.txt
+remote_log.egg-info/dependency_links.txt
+remote_log.egg-info/requires.txt
+remote_log.egg-info/top_level.txt
