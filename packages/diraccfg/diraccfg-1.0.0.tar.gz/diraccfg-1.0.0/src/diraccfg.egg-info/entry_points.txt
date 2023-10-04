@@ -1,0 +1,2 @@
+[console_scripts]
+diraccfg = diraccfg.__main__:parseArgs
