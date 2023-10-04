@@ -1,0 +1,13 @@
+changelist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changelist/__main__.py,sha256=B2tlmXzhifmjzTqWyU_2jU__TYTzF20FRduK6phAwGI,251
+changelist/_cli.py,sha256=_oaA4_Lj_pxWaCRv3LJVsWauoE2GxJGRTotCcbJeeW8,5653
+changelist/_config.py,sha256=3RYxUboXLfvqDNj9J88INcpKdD-0-EDDkYQmOGLf0H0,1686
+changelist/_format.py,sha256=Jgr-OP0wa_VwLXQOBZwZRZQ_gowMdbIpbg86aFn4wmU,6941
+changelist/_query.py,sha256=56mRcyUxd1rwxcNIxSJVduG1COcdBtUADxHoEAtfQNk,5913
+changelist/default_config.toml,sha256=s_fhbIf8LfLn-cNdwyuQqjWRllqvZIK9JIb6H--xqGY,2176
+changelist-0.4.dist-info/LICENSE.txt,sha256=Nhrk7t82VNxsosvWGs83lfDPLK-XN0sbhu6DgF_AfCc,1504
+changelist-0.4.dist-info/METADATA,sha256=CC-G6vuGLhhGFv_XP5vYkoKe4pF7H0xtWj-BWgkVc60,7970
+changelist-0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+changelist-0.4.dist-info/entry_points.txt,sha256=FSUleY-UlllTiGxAGaSz_f6OMEoje4wE0WRQIKF-u0w,56
+changelist-0.4.dist-info/top_level.txt,sha256=bupk_blPCU-dzbo4tnm6IsqRGX4z3wxXS4nE9rhy5fk,11
+changelist-0.4.dist-info/RECORD,,
