@@ -1,0 +1,15 @@
+LICENSE
+setup.cfg
+setup.py
+dockside/__init__.py
+dockside/io.py
+dockside/nwis.py
+dockside.egg-info/PKG-INFO
+dockside.egg-info/SOURCES.txt
+dockside.egg-info/dependency_links.txt
+dockside.egg-info/requires.txt
+dockside.egg-info/top_level.txt
+dockside/tests/__init__.py
+dockside/tests/test_io.py
+dockside/tests/test_nwis.py
+dockside/tests/util.py
