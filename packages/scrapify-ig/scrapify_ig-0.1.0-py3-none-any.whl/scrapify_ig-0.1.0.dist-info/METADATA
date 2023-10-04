@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: scrapify-ig
+Version: 0.1.0
+Summary: Python Instagram API SDK
+Author: Oleksii Stulen
+Author-email: oleksii.stulen.workspace@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: certifi (==2023.7.22)
+Requires-Dist: charset-normalizer (==3.3.0)
+Requires-Dist: idna (==3.4)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: urllib3 (==2.0.6)
+Description-Content-Type: text/markdown
+
+# Python Instagram API SDK
+
+---
+
