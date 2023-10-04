@@ -1,0 +1,9 @@
+setuptools
+psycopg2
+Zope>=5
+Products.ZSQLMethods
+
+[docs]
+Sphinx
+sphinx_rtd_theme
+pkginfo
