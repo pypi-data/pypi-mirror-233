@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: wytness
+Version: 0.0.0
+Summary: A simple script.
+Home-page: https://github.com/fridex/wytness
+Author: me
+Author-email: fridex.devel@gmail.com
+Maintainer: me
+Maintainer-email: fridex.devel@gmail.com
+License: LGPLv3+
+Download-URL: https://pypi.org/project/wytness
+Keywords: packaging,pip,dependencies,dependency-management,utilities,security
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: LICENSE-GPL
+License-File: LICENSE-LGPL
+Requires-Dist: pip (>=9)
+
+fortify
+-------
+
+Do you want a fortress?
+
+
