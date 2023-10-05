@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: jaxqualin
+Version: 0.0.0
+Summary: A package for extracting quasinormal modes from time domain data
+Project-URL: Homepage, https://github.com/mhycheung/Jaxqualin
+Project-URL: Bug Tracker, https://github.com/mhycheung/Jaxqualin/issues
+Author-email: Mark Ho-Yeuk Cheung <hcheung5@jhu.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: adjusttext==0.8
+Requires-Dist: jax>0.3.23
+Requires-Dist: jaxfit==0.0.3
+Requires-Dist: jaxlib>0.3.23
+Requires-Dist: matplotlib>3.6.1
+Requires-Dist: numpy>1.23
+Requires-Dist: pandas>1.5.1
+Requires-Dist: pykerr==0.1.0
+Requires-Dist: qnm==0.4.3
+Requires-Dist: scipy>1.9.3
+Requires-Dist: sxs>2022.4.5
+Requires-Dist: tqdm>4.61.1
+Provides-Extra: pycbc
+Requires-Dist: pycbc>2.0.6; extra == 'pycbc'
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
