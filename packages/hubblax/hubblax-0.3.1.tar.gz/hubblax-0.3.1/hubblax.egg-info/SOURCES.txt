@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+hubblax/__init__.py
+hubblax/covariance.py
+hubblax/fitter.py
+hubblax/hubblax.py
+hubblax/likelihood.py
+hubblax.egg-info/PKG-INFO
+hubblax.egg-info/SOURCES.txt
+hubblax.egg-info/dependency_links.txt
+hubblax.egg-info/not-zip-safe
+hubblax.egg-info/requires.txt
+hubblax.egg-info/top_level.txt
