@@ -1,0 +1,4 @@
+distconfig3>=1.0.1
+toml>=0.10.0
+PyYAML>=6.0.1
+watchdog>=3.0.0
