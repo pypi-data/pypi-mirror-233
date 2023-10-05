@@ -1,0 +1,14 @@
+master_dac/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+master_dac/__main__.py,sha256=ccdx6urJxDEvpNUHlLyXd0X4emSEP7b64QPQZt9aguY,1974
+master_dac/configuration.py,sha256=Z-5esMUrKT1Bc8SlJDgtOuumXOQ8oCYlq2PsWDoTgwA,838
+master_dac/datasets.py,sha256=FprS8WCiki7QOuuwk6do-T6MV_LNEKd1DQc1aVVXBmU,1594
+master_dac/install.py,sha256=gGz81RuOFkp7n8D7bItvGRALoHoBkzFFY1S4VBNQOhY,2175
+master_dac/requirements/amal.txt,sha256=7MGbNER08iVQYKlIqzISZKVO-FniufcwsGXGtezfz2I,464
+master_dac/requirements/deep.txt,sha256=MlSkH4DCxlYC3MIiFk6oSxxILGWy_u2BEoNKFSBpabQ,374
+master_dac/requirements/rital.txt,sha256=NpmA3-5WHZ6BVuCso5KTihStkSpbUdAv9SL6SFPoS6g,32
+master_dac/requirements/rld.txt,sha256=eXzoWFmA0iscSgAlVWT9oDzuEUR0jFEhXYDw__inZrc,160
+master_dac/utils.py,sha256=sxzyHtL4-r_7GbGpPlEImB2MV_C76ZtBrXNVr7KB64M,1325
+master_dac-2023.10.4.dist-info/METADATA,sha256=9QCVdLUUi88_3mD-fYL_92s6R_0ysqmblmzC5f-XBXc,1031
+master_dac-2023.10.4.dist-info/WHEEL,sha256=RsNcXn1ku1cI7LVkdbiD4HxFH-ZNt6-iSezWxkqUYi4,92
+master_dac-2023.10.4.dist-info/entry_points.txt,sha256=NoTakIiobGS6ujxr5hMGKGdiH06KeEipduosKZvsDBs,55
+master_dac-2023.10.4.dist-info/RECORD,,
