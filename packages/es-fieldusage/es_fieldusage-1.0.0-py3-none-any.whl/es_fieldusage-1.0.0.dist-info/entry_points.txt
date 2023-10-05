@@ -1,0 +1,2 @@
+[console_scripts]
+es-fieldusage = es_fieldusage.cli:run
