@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gfrancodev-glogger
+Version: 0.2
+Summary: Log Aggregator
+Author: Gustavo Franco
+Author-email: conctact@gfrancodev.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: boto3 ==1.18.2
+Requires-Dist: configparser ==5.0.2
+Requires-Dist: google-cloud ==0.34.0
+Requires-Dist: websockets ==11.0.3
+Requires-Dist: google-cloud-logging ==3.7.0
+Requires-Dist: google-cloud-storage ==2.11.0
+Requires-Dist: azure-storage-blob ==12.18.2
+Requires-Dist: appinsights ==0.13.0
+Requires-Dist: colorama ==0.4.6
+
