@@ -1,0 +1,2 @@
+[flake8.extension]
+TR = flake8_qt_tr.checker:TrChecker

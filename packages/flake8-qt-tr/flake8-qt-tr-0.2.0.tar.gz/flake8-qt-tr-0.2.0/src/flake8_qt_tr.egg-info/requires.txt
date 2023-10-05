@@ -1,0 +1,7 @@
+flake8>=6.0.0
+
+[all]
+flake8-qt-tr[test]
+
+[test]
+pytest

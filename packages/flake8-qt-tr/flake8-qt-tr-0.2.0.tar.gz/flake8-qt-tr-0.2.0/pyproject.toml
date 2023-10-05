@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flake8-qt-tr"
+description = "Flake8 extension for detecting incorrect QT translation"
+requires-python = ">=3.10"
+version = "0.2.0"
+
+authors = [{ name = "ostr00000" }]
+readme = "README.md"
+keywords = ["flake8", "qt", "translation"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Framework :: Flake8",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Internationalization",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = ["flake8>=6.0.0"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+all = ["flake8-qt-tr[test]"]
+
+[project.entry-points]
+"flake8.extension" = { TR = "flake8_qt_tr.checker:TrChecker" }
+
+[project.urls]
+Homepage = "https://github.com/ostr00000/flake8-qt-tr"
+
+[tool.ruff]
+select = ["ALL"]
+ignore = [
+    "D203", # one-blank-line-before-class
+    "D213", # multi-line-summary-second-line
+    "ANN101", # Missing type annotation for `self` in method
+    "D10", # missing codsting
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.per-file-ignores]
+"tests/**/*.py" = [# SKIP: we are testing
+    "S101", # Use of `assert` detected
+    "ARG", # flake8-unused-arguments
+    "FBT", # flake8-boolean-trap
+    "ANN201", # Missing return type annotation for public function
+    "ANN001", # Missing type annotation for function argument
+    "PLR2004", # Magic value used in comparison
+    "S311", # Standard pseudo-random generators are not suitable for cryptographic purposes
+]
