@@ -1,0 +1,4 @@
+[console_scripts]
+copy_demo = HEDM_Platform.utilities:copy_demo_func
+hedm-platform = HEDM_Platform.HEDM_Platform:main
+
