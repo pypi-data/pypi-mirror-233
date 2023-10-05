@@ -1,0 +1,11 @@
+scrapy_huo_utilities/MIDDLEWARES/Downloader_Middleware_Utils.py,sha256=yNOfJj3YCcpqX9ZK8nWtM7TNn4c3I5S4JegORsqu0Jo,992
+scrapy_huo_utilities/MIDDLEWARES/Spider_Middleware_Utils.py,sha256=7KoQ3lSWWAorsldwxM4VsnHQd3ky7vvJgkVXurZGXuo,1615
+scrapy_huo_utilities/MIDDLEWARES/__init__.py,sha256=RSXcdV1Ax6kDFgB5Y1rcpvJheUT01DDp4huHp3sVmsY,123
+scrapy_huo_utilities/MIDDLEWARES/test.py,sha256=3N2uEVIyyGWFflaSjr0GsT3caPSyB-lp4kCnoIGUZHk,1006
+scrapy_huo_utilities/PROCESSORS/__init__.py,sha256=epFORzokSx8tL7es65gKliht88Ze45BJum83CKg5wMk,26
+scrapy_huo_utilities/PROCESSORS/html_clean.py,sha256=bSupy_WO1YkhynjcW7MxHGbtsYph76hX6j11pPz8_q0,3328
+scrapy_huo_utilities/__init__.py,sha256=XvEy-iV-IJUJGa8IxoZA4cTSVYlExV7WdcuN4M3IhNU,102
+scrapy_huo_utilities-0.0.1.dist-info/LICENSE,sha256=K35mzmNgZthWgrA7P0hsGbN6BBELhCFhUsRd2VKrxJ0,1064
+scrapy_huo_utilities-0.0.1.dist-info/METADATA,sha256=bB5JtWf1B39V-R3d9YrxZL-zUjIHXjeAqG5_gpvMcKE,2444
+scrapy_huo_utilities-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+scrapy_huo_utilities-0.0.1.dist-info/RECORD,,
