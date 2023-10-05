@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: ne2001
+Version: 0.0.1
+Summary: Python implementation of Cordes-Lazio's NE2001 Galactic Free Electron Density Model
+Home-page: https://github.com/benbaror/ne2001
+Author: Ben Bar-Or
+Author-email: benbaror@gmail.com
+License: BSD
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+Overview
+========
+
+
+
+Python implementation of Cordes-Lazio's NE2001 Galactic Free Electron Density Model.
+BEWARE:  The code as implemented in FORTRAN differs in several ways from the
+2003 posting (astro-ph/0301598: http://adsabs.harvard.edu/abs/2003astro.ph..1598C ).
+See the docs for details.
+
+* Free software: BSD license
+
+.. Installation
+.. ============
+
+.. ::
+
+..    pip install ne2001
+
+.. Documentation
+.. =============
+
+.. https://ne2001.readthedocs.io/
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.1 ('')
+-----------------------------------------
+
+* First release on PyPI.
+
+0.0.2 ('Not released yet')
+-----------------------------------------
+
+* Add simple_lb script
+* Add units
