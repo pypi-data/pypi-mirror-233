@@ -1,0 +1,2 @@
+[console_scripts]
+acct = acct.scripts:start
