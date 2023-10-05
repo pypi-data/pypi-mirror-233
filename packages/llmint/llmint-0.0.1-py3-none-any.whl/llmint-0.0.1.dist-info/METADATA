@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: llmint
+Version: 0.0.1
+Summary: Llmint python library
+Home-page: UNKNOWN
+Author: silveryfu
+Author-email: silveryfu@gmail.com
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: openai
+
+UNKNOWN
+
+
