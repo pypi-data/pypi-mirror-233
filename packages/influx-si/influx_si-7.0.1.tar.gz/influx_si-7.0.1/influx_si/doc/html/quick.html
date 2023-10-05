@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Quick Start &#8212; influx_si 7.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User’s manual" href="manual.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="manual.html" title="User’s manual"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">influx_si 7.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quick Start</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="quick-start">
+<span id="quick"></span><h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading">¶</a></h1>
+<p>A basic work-flow with <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> is composed of the following steps:</p>
+<ol class="arabic simple">
+<li><p>Create a MTF file set (Multiple TSV Files) describing your metabolic reactions and carbon transitions (.netw), experimental data (.miso) label input (.linp), some non mandatory measurements (.mflux, .mmet) and optional files providing initial values for estimated parameters, constraints and so on (.tvar, .cntsr, .opt). Let an example MTF set have a prefix <code class="docutils literal notranslate"><span class="pre">mynetwork</span></code>. The syntax rules for reactions will be more or less obvious to someone working on metabolism biochemistry. So, to go quickly, you can inspire from example files <code class="docutils literal notranslate"><span class="pre">test/mtf/e_coli.netw</span></code> and co. distributed with the <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> software (run <code class="docutils literal notranslate"><span class="pre">influx_s</span> <span class="pre">--copy_test</span></code> to bring them to your current directory). You can also consult the help message from <code class="docutils literal notranslate"><span class="pre">txt2ftbl</span> <span class="pre">-h</span></code> for <code class="docutils literal notranslate"><span class="pre">--mtf</span></code> option.</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">NA</span></code> values (as “Non Available”) are admitted as measurements values where appropriate. The difference with the situation where measurements are simply omitted from a file is that NA measurements are simulated and are present in the result files <code class="docutils literal notranslate"><span class="pre">*.sim</span></code> while absent measurements are not.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case of <code class="docutils literal notranslate"><span class="pre">influx_i</span></code>, label kinetics can be provided in .miso file using non-empty <code class="docutils literal notranslate"><span class="pre">Time</span></code> column.
+Empty cells in <code class="docutils literal notranslate"><span class="pre">Value</span></code> column are equivalent to <code class="docutils literal notranslate"><span class="pre">NA</span></code>.</p>
+</div>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>Set your current directory to the directory of <code class="docutils literal notranslate"><span class="pre">mynetwork.*</span></code> and run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ influx_s.py --prefix mynetwork
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ influx_i.py --prefix mynetwork
+</pre></div>
+</div>
+<p>depending on stationary or instationary labeling context. We suppose here that directory of <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> binaries is in the PATH variable.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> run will produce result files in <code class="docutils literal notranslate"><span class="pre">mynetwok_res</span></code> directory. The detailed description of these files can be found in the next section. However, general idea is that simulated measurements are written in the files similar to MTF format with <code class="docutils literal notranslate"><span class="pre">.sim</span></code> (as “simulated”) suffix appended, e.g. <code class="docutils literal notranslate"><span class="pre">mynetwork.miso.sim</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It can be helpful to do some “dry runs” by executing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ influx_s.py --noopt --pref mynetwork
+</pre></div>
+</div>
+<p>before collecting actual measurement data to see if intended measurements will be sufficient to well define all fluxes, or at least the fluxes of interest. It is possible to do so because the measurement values in the .miso file have no impact on flux SD calculation when <code class="docutils literal notranslate"><span class="pre">--noopt</span></code> option is used. So it can be used any values, even NA at this moment. On the contrary, <code class="docutils literal notranslate"><span class="pre">SD</span></code> values set in .miso file, must be realistic. It is generally not a problem as they express measurements errors and are more or less known for a given measurement method.</p>
+<p>It is worthwhile to stress that a “dry run” is done for some presumed free flux values. If they reveal to be very different from actual flux values, it can happen that a network considered as well defined at moment of “dry run” turned into a badly defined network with actual measurement data and corresponding estimated fluxes. So it is important to do his best to guess the most realistic free fluxes for “dry runs” and log their values in .tvar file.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>See warning and error messages in <code class="docutils literal notranslate"><span class="pre">mynetwork.err</span></code> if any. Correct what has to be corrected and retry p. 2</p></li>
+<li><p>Extract and use the numerical results from the <code class="docutils literal notranslate"><span class="pre">mynetwork_res/*.sim</span></code> files.</p></li>
+<li><p>Optionally, visualize net fluxes (or exchange fluxes or logarithm of metabolite concentrations <span class="math notranslate nohighlight">\(\log_2(M)\)</span>) in cytoscape using <code class="docutils literal notranslate"><span class="pre">ftbl2xgmml</span></code> to produce a .xgmml file and then mapping files from <code class="docutils literal notranslate"><span class="pre">mynetwork_res/tmp</span></code> (<code class="docutils literal notranslate"><span class="pre">edge.netflux.mynetwok.attrs</span></code>, <code class="docutils literal notranslate"><span class="pre">edge.xchflux.mynetwok.attrs</span></code> or <code class="docutils literal notranslate"><span class="pre">node.log2pool.mynetwork.attrs</span></code>) to graphical attributes like edge width, color etc. in cytoscape.</p></li>
+</ol>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="install.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="manual.html"
+                          title="next chapter">User’s manual</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quick.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="manual.html" title="User’s manual"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">influx_si 7.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quick Start</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2012-2020, INRAE/INSA/CNRS.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
+    </div>
+  </body>
+</html>

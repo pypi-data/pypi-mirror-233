@@ -1,0 +1,46 @@
+"/home/sokol/.local/bin/influx_i" "--pref" "e_coli_i" "--pref" "e_coli_iv" "--pref" "ex_i_2box_var" "--pref" "../prl_exp/mtf/e_coli_GX_prl"
+code gen: 2023-10-04 17:22:22
+calcul  : 2023-10-04 17:22:24
+load    : 2023-10-04 17:22:25.40 cpu=0.999
+rinit   : 2023-10-04 17:22:25.41 cpu=1.005
+r_flux  : 2023-10-04 17:22:25.41 cpu=1.005
+Afl qr(): 2023-10-04 17:22:25.46 cpu=1.055
+dfl_dffg: 2023-10-04 17:22:25.47 cpu=1.06
+spAbr   : 2023-10-04 17:22:25.47 cpu=1.062
+weight 1: 2023-10-04 17:22:25.47 cpu=1.062
+weight 2: 2023-10-04 17:22:25.47 cpu=1.063
+weight 3: 2023-10-04 17:22:25.47 cpu=1.065
+weight 4: 2023-10-04 17:22:25.48 cpu=1.066
+weight 5: 2023-10-04 17:22:25.48 cpu=1.068
+weight 6: 2023-10-04 17:22:25.48 cpu=1.068
+measure : 2023-10-04 17:22:25.53 cpu=1.125
+ineq    : 2023-10-04 17:22:25.55 cpu=1.146
+preopt  : 2023-10-04 17:22:25.64 cpu=1.225
+labargs : 2023-10-04 17:22:25.64 cpu=1.227
+cl expor: 2023-10-04 17:22:25.90 cpu=1.232
+cl sourc: 2023-10-04 17:22:27.00 cpu=1.365
+run    1: 2023-10-04 17:22:27.18 cpu=1.372
+
+Starting point
+zc ineq : 2023-10-04 17:22:27.18 cpu=1.373
+kvh init: 2023-10-04 17:22:27.21 cpu=1.401
+check ja: 2023-10-04 17:22:27.83 cpu=1.43
+optim   : 2023-10-04 17:22:34.04 cpu=1.438
+it=0	res=237.7947
+it=1	res=70.06248	normstep=30.47659	btk=1
+it=2	res=36.43491	normstep=31.35182	btk=1
+it=3	res=21.83319	normstep=0.2793447	btk=1
+it=4	res=21.7384	normstep=0.03332941	btk=1
+it=5	res=21.72383	normstep=0.03867587	btk=1
+it=6	res=21.6348	normstep=0.08885869	btk=1
+it=7	res=21.37745	normstep=0.4890458	btk=0.5
+it=8	res=21.24931	normstep=0.6490092	btk=1
+it=9	res=20.96647	normstep=0.3171006	btk=1
+it=10	res=20.96366	normstep=0.1287473	btk=1
+it=15	res=20.96358	normstep=5.449313e-05	btk=1
+secondzc: 2023-10-04 17:22:43.38 cpu=1.623
+After the first optimization, no zero crossing inequality was activated. So no reoptimization
+postopt : 2023-10-04 17:22:43.39 cpu=1.63
+linstats: 2023-10-04 17:22:44.00 cpu=1.903
+rend    : 2023-10-04 17:22:44.27 cpu=2.023
+***Warning: 'plot_imass.R' is deprecated. Use 'plot_ilab.R' instead.

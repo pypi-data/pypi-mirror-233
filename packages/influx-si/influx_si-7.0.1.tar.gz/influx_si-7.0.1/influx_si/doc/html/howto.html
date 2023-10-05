@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>How to … &#8212; influx_si 7.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting" href="trouble.html" />
+    <link rel="prev" title="Programmer’s documentation for influx_si" href="progdoc.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="trouble.html" title="Troubleshooting"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="progdoc.html" title="Programmer’s documentation for influx_si"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">influx_si 7.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">How to …</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="how-to">
+<span id="howto"></span><h1>How to …<a class="headerlink" href="#how-to" title="Permalink to this heading">¶</a></h1>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">choose</span> <span class="pre">free</span> <span class="pre">fluxes?</span></span></dt>
+<dd><p>Since v7.0, this step is not really necessary. Using MTF input format allows user to create its <code class="docutils literal notranslate"><span class="pre">.netw</span></code> file with just a network. And at first run of <code class="docutils literal notranslate"><span class="pre">influx_si</span></code>, a new file <code class="docutils literal notranslate"><span class="pre">.tvar.def</span></code> with default values will be generated. It can be used as <code class="docutils literal notranslate"><span class="pre">.tvar</span></code> file with partition between free and dependent fluxes. User can label some fluxes as constrained in this <code class="docutils literal notranslate"><span class="pre">.tvar</span></code>. In which case, a newly introduced possible incoherence in flux partition will be signaled as error and recommendations will be given about how to avoid such situation.</p>
+<p>Don’t use 0 as starting value in NET fluxes as it might lead to singular matrices in cumomer balances.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">get</span> <span class="pre">statistical</span> <span class="pre">information</span> <span class="pre">for</span> <span class="pre">a</span> <span class="pre">given</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">free</span> <span class="pre">fluxes</span> <span class="pre">without</span></span></dt>
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">fitting</span> <span class="pre">measurements?</span></span></dt>
+<dd><p>Put these values in the corresponding FTBL file as starting values for free fluxes and use <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> with <code class="docutils literal notranslate"><span class="pre">--noopt</span></code> option.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">accelerate</span> <span class="pre">calculations?</span></span></dt>
+<dd><p>You can relax stopping criterion and pass from 1.e-5 (by default) to, for example, 1.e-2 if this precision is sufficient for you. Use <code class="docutils literal notranslate"><span class="pre">optctrl:nlsic:errx</span></code> option in FTBL file (section <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>) for this.</p>
+<p>If you mean to accelerate Monte-Carlo simulations in Unix environment, you can use a hardware with many cores. In this case, the wall clock time can be reduced significantly. Note that distant nodes, even inside of the same cluster, are not used in the such kind of Monte-Carlo simulations.</p>
+<p>Check that your system is not using swap (disk) memory. If it is the case, stop other applications running in parallel with <code class="docutils literal notranslate"><span class="pre">influx_si</span></code>. If possible extend the RAM on your hardware.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">extend</span> <span class="pre">upper</span> <span class="pre">limit</span> <span class="pre">for</span> <span class="pre">non</span> <span class="pre">linear</span> <span class="pre">iterations?</span></span></dt>
+<dd><p>By default, this value is 50 which should be largely sufficient for most cases. If not, you can set another value via <code class="docutils literal notranslate"><span class="pre">optctrl:nlsic:maxit</span></code> option in the FTBL file (section <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>). But most probably, you would like to check your network definition or to add some data or to change a substrate labeling, anyway to do something to get a well defined network instead of trying to make converge the fitting on some biologically almost meaningless situation.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">make</span> <span class="pre">FTBL</span> <span class="pre">file</span> <span class="pre">with</span> <span class="pre">synthetic</span> <span class="pre">data?</span></span></dt>
+<dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Deprecated since v7.0. Simply use <code class="docutils literal notranslate"><span class="pre">*.sim</span></code> files as MTF input files (cf. examples in notes of <a class="reference internal" href="manual.html#ex-sim1"><span class="std std-ref">res2ftbl_meas: simulated data</span></a> and <a class="reference internal" href="manual.html#ex-sim2"><span class="std std-ref">ffres2ftbl: import free fluxes</span></a>)</p>
+</div>
+<dl>
+<dt>Follow for example steps outlined hereafter:</dt><dd><ul>
+<li><p>edit FTBL file(s) with <code class="docutils literal notranslate"><span class="pre">NA</span></code> in measurements and realistic SD, name it e.g. <code class="docutils literal notranslate"><span class="pre">new_NA.ftbl</span></code></p></li>
+<li><p>simulate data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ influx_s.py --noopt --addnoise new_NA
+</pre></div>
+</div>
+</li>
+<li><p>prepare FTBL sections with simulated data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ res2ftbl_meas.py new_NA_res.kvh
+</pre></div>
+</div>
+<p>It will create file (or files if there are parallel experiments) with synthetic data formatted for inclusion in FTBL file: <code class="docutils literal notranslate"><span class="pre">new_NA_sim1.ftbl</span></code>, <code class="docutils literal notranslate"><span class="pre">new_NA_sim2.ftbl</span></code>, etc.)</p>
+</li>
+<li><p>copy/paste simulated data to a new file <code class="docutils literal notranslate"><span class="pre">new.ftbl</span></code> with numeric data instead of <code class="docutils literal notranslate"><span class="pre">NA</span></code>.</p></li>
+<li><p>use FTBL with synthetic data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ influx_s.py new.ftbl
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">...</span> <span class="pre">do</span> <span class="pre">custom</span> <span class="pre">post-treatment</span> <span class="pre">of</span> <span class="pre">Monte-Carlo</span> <span class="pre">iterations?</span></span></dt>
+<dd><p>Let suppose you want to filter some of Monte-Carlo (MC) iterations based on their cost values.
+In <code class="docutils literal notranslate"><span class="pre">OPTIONS/posttreat_R</span></code> of your FTBL file add <code class="docutils literal notranslate"><span class="pre">save_all.R</span></code>. The file <code class="docutils literal notranslate"><span class="pre">save_all.R</span></code> can be found in <code class="docutils literal notranslate"><span class="pre">R</span></code> directory of <code class="docutils literal notranslate"><span class="pre">influx_si</span></code> distribution. Execution of <code class="docutils literal notranslate"><span class="pre">save_all.R</span></code> at the end of calculations will simply save all session variables in <code class="docutils literal notranslate"><span class="pre">mynetwork.RData</span></code> file (supposing that your FTBL file is named <code class="docutils literal notranslate"><span class="pre">mynetwork.ftbl</span></code>). In particular, you need <code class="docutils literal notranslate"><span class="pre">free_mc</span></code> matrix which contains free parameters (each column results from a given MC iteration). After that you can open an interactive R session in your working directory and run something similar to:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># preparations</span>
+<span class="nf">load</span><span class="p">(</span><span class="s">&quot;mynetwork.RData&quot;</span><span class="p">)</span> <span class="c1"># to obtain .RData file in &#39;my_res/my/tmp/&#39;, use &#39;posttreat_R save_all.R&#39; in &#39;my.opt&#39; file</span>
+<span class="nf">source</span><span class="p">(</span><span class="nf">file.path</span><span class="p">(</span><span class="n">dirx</span><span class="p">,</span> <span class="s">&quot;libs.R&quot;</span><span class="p">))</span>
+<span class="nf">source</span><span class="p">(</span><span class="nf">file.path</span><span class="p">(</span><span class="n">dirx</span><span class="p">,</span> <span class="s">&quot;opt_cumo_tools.R&quot;</span><span class="p">))</span>
+<span class="c1">#source(file.path(dirx, &quot;opt_icumo_tools.R&quot;)) # uncoment for influx_i use</span>
+<span class="n">tmp</span><span class="o">=</span><span class="nf">sparse2spa</span><span class="p">(</span><span class="n">spa</span><span class="p">)</span>
+
+<span class="c1"># doing something useful</span>
+<span class="c1"># here, we calculate a vector of cost values, one per MC iteration</span>
+<span class="n">cost_mc</span><span class="o">=</span><span class="nf">apply</span><span class="p">(</span><span class="n">free_mc</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="nf">cumo_cost</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">labargs</span><span class="p">))</span>
+<span class="c1"># do something else ...</span>
+</pre></div>
+</div>
+<p>If, instead of cost values, you need for example a full set of net-xch fluxes then do</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">allflux_mc</span><span class="o">=</span><span class="nf">apply</span><span class="p">(</span><span class="n">free_mc</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="nf">param2fl</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">labargs</span><span class="p">)</span><span class="o">$</span><span class="n">fallnx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for residuals, do:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">resid_mc</span><span class="o">=</span><span class="nf">apply</span><span class="p">(</span><span class="n">free_mc</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="nf">lab_resid</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">labargs</span><span class="p">)</span><span class="o">$</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After that, you can filter or do whatever needed with obtained vectors and matrices.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="progdoc.html"
+                          title="previous chapter">Programmer’s documentation for influx_si</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="trouble.html"
+                          title="next chapter">Troubleshooting</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/howto.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="trouble.html" title="Troubleshooting"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="progdoc.html" title="Programmer’s documentation for influx_si"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">influx_si 7.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">How to …</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2012-2020, INRAE/INSA/CNRS.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.2.3.
+    </div>
+  </body>
+</html>

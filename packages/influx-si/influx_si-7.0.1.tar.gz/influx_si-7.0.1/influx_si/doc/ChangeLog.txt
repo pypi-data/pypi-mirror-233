@@ -1,0 +1,562 @@
+========================
+Change Log for influx_si
+========================
+
+2023-10-04 version 7.0.1
+------------------------
+
+Bug fix:
+ - fixed move of .ikin file to tmp/ directory
+ - fixed moving files on Windows
+ - fixed panda warning about concatenation of empty DataFrame
+
+2023-07-11 version 7.0
+----------------------
+
+New feature:
+ - new output format is introduced. All result files go in ``<mynetwork>_res`` directory
+ - ff2ftbl and res2ftbl_meas are now deprecated. Use \*.sim files from new output format.
+ - in influx_i, unscaled simulated mass measurements (in .miso.sim) are clamped to [0; 1] and full MID sets are normalized to sum up to 1 (requested by Noémi Butin and Pierre Millard, TBI, France)
+ - default MTF values lacking in input files are now explicitly written in newly created files .def
+ - scaling factors are now calculated even if --noopt is set.
+ - pooled measurements with spaces around "+" sign are now allowed (seen at Magalie Poirier Pocovi, U. of Bordeaux, France)
+ - plot_imes.R is deprecated, use plot_ilab.R instead
+ - txt2ftbl: now, peak measurements are translated to PEAK_MEASUREMENTS and no more to LABEL_MEASUREMENTS in ftbl
+
+Bug fix:
+ - fixed error messages from funlab in which reported time point could be erroneous.
+ - fixed plot_ilab.R in simulation mode
+ - fixed non ordered time points in .ikin while converted from .miso (seen at Magalie Poirier Pocovi, U. of Bordeaux, France)
+ - txt2ftbl: fixed a possible appearance of non labeled metabolites in METABILITE_POOLS
+ - influx_si: better Exception handling and error reporting
+ - ftbl2labcin: fixed mapping ftbl<->miso for peak and label measurements
+ - influx_si: better handling of file names with a dot "." in the name
+
+2022-10-11 version 6.1
+----------------------
+
+New feature:
+ - species not carrying labeled atoms cannot appear in FTBL/METABOLITE_POOLS
+ - ftbl2cumoAb and other ftbl2... utilities can use '--prefix'/'--mtf' options
+ - ftbl2cumoAb eliminates linearly dependent rows from Afl
+ - ftbl2cumoAb gets '--flux' option to read flux values from a 2-columns tsv file
+ - kvh, nlsic modules are moved to independent package
+ - error about dependent stoichiometric equations is turned into warning
+ 
+Bug fix:
+ - stoichiometric coefficients in .netw can be written with "*", not necessarily with " * "
+ - fixed biomass-like reactions in C13ftbl
+ - made explicit error message when cumomer system has b=0
+
+2022-06-23 version 6.0.4
+------------------------
+
+New feature:
+ - `Time` values <= 0 in .miso are silently filtered out in instationary mode
+ - ftbl2mtf and txt2ftbl now write their results in UTF-8 encoding
+ 
+Bug fix:
+ - fixed reading MTF and FTBL files not in UTF-8 encoding
+
+2022-06-13 version 6.0.1
+------------------------
+ 
+Bug fix:
+ - fixed inclusion of test/* files, namely mtf/* files (reported by Younes Dellero, INRAE, Rennes, France)
+
+2022-06-08 version 6.0
+----------------------
+New features:
+ - introduced new front-end MTF format (cf. ftbl2mtf, txt2ftbl)
+ - added plot_ilab.R for plotting instationary MS/NMR measurements and simulations (replaces plot_imass.R)
+ - ftbl2xgmml: added orange color for dead-end metabolites
+ - txt2ftbl: added detection of disconnected sub-networks
+ - ftbl2netan: dead-ends are reported
+ - ftbl2metxml: added pathway information and compartment treatment
+ 
+Bug fix:
+ - fixed MS measurements on long molecules in --emu mode
+
+2021-02-26 version 5.4.0
+------------------------
+New features:
+ - influx_i: user can add custom R expressions for label input varying in time (cf. funlabR)
+ - influx_i: explicit error message on non valid entries in label kinetic data (requested by Pierre Millard, INRAE, France)
+ - added optctrl:mumps:icntl_NN option (case reported by Albert Fina Romero, UAB, Spain)
+ - influx_i: comment string in kinetic data has changed to ``//`` (``#`` will still work with old files)
+ - added ``-i`` option to ftbl2netan (for influx_i-like analysis)
+ 
+Bug fix:
+ - fixed error raising on redundant equality when ``--ffguess`` is used (reported by Pierre Millard, INRAE, France)
+ - fixed fatal error with scale factor infrastructure in some cases  when ``--ffguess`` is used
+ - ``plot_imass.R`` is fixed for a case when there is no any MS measurement
+ - explicit error message on fail while reading label kinetic data
+ - fixed not working error messages in few utilities
+ - fixed too early closed kvh file connection
+ - fixed post-production calculations when optimization in influx_si failed
+
+
+2020-07-24 version 5.3.0
+------------------------
+New features:
+ - added PSO optimization method (suggested by Pierre Millard, INRAE, Toulouse, France)
+ - now optimization methods can be chained in the same run, e.g. ``--meth pso --meth nlsic``
+ - the field ``optctrl...`` is now formatted to allow homonym parameters with different values for different optimization methods
+ - option ``--install_rdep`` becomes interactive and reproduces the behavior of R's ``install.packages()`` to allow installation in a user's R personal library  when the default directory is not writable (suggested by Matthieu Guionnet, CNRS, Toulouse, France)
+ 
+Bug fix:
+ - ``plot_smeas.R`` is fixed for cases where NA is present in MS measurements.
+
+2020-05-28 version 5.2.0
+------------------------
+New features:
+ - ``ff2ftbl`` can accept an input kvh file not ending with ``_res.kvh``
+ - ``ftbl2netan`` will write a partial output in case of error during FTBL parsing
+ - added error message if input metabolite appears in measurment FTBL sections
+ - in kvh module added optional boolean parameter 'strip'
+
+Bug fix:
+ - fixed txt2ftbl, removed xrange() hidden call
+ - fixed kvh.dict2kvh() for writing objects derived from dict()
+ - fixed putting border line starting values inside feasible domain for BFGS method
+ - fixed endline problem in ftbl2metxml and res2ftbl_meas on Windows (reported by Loic Le Gregam, INSA, Toulouse, France)
+
+2020-04-07 version 5.1.0
+------------------------
+New features:
+ - option --cupn is now considered in absolute sens, i.e. net fluxes are limited from both sides: '-cupn <= netflux <= cupn' (before it was 'netflux <= cupn' only)
+ - influx_i.py is no more symbolic link neither just a copy of influx_s.py, just a python proxy based on exec().
+ - e_coli.ftbl file from test collection is configured to create e_coli.pdf with graphics instead of e_coli.RData
+
+Bug fix:
+ - fixed executable files of additional tools
+ - fixed plot_smeas.R for plotting simulated but not measured MS data
+ - fixed plot_smeas.R for plotting repeatedly measured fragments by MS
+ - fixed non reproducible R code generation (Python must be >= 3.6 for this)
+ - fixed kvh reading which was impacting several additional tools
+ - parallel experiment examples are back in the test/prl_exp/ directory
+
+2020-03-05 version 5.0.3
+------------------------
+New feature:
+ - all Python scripts are doubled with executable files without '.py' extension (suggested by Pierre Millard, INRAE, and Matthieu Guionnet, CNRS, Toulouse, France)
+
+Bug fix:
+ - fixed few typos in documentation
+
+2020-02-26 version 5.0.2
+------------------------
+Bug fix:
+ - fixed parallel execution of multiple FTBL on windows
+ - fixed influx_si hanging on in-existing directory in FTBL name
+ - fixed dimnames()[[1]]<- failure when nrow==1 (reported by Younes Dellero, INRAE, Rennes, France)
+ - fixed --ffguess silently failing when redundant reaction was present (idem)
+ - fixed use of `influx_s.py --install_rdep` (reported by Loic Le Gregam, INSA, Toulouse, France)
+ - updated user manual for trouble-shooting and consulting services
+
+2020-01-10 version 5.0.1
+------------------------
+Bug fix:
+ - fixed fatal error on windows platform
+ - fixed startup message about Rcpp_Rmumps module on some platforms
+ - fixed dependency on libsbml
+
+2019-10-25 version 5.0
+----------------------
+New features:
+ - converted to Python 3
+ - packaged with python distutils and Conda package management system. Now installation can be made as simple as ``pip install influx_si`` or ``conda install influx_si``. Internet connection is required for both methods.
+ - auxiliary C++ routines are placed in multbxxc R packages. So, no more compilation is needed at first execution of ``influx_si``.
+
+Bug fix (all bugs in this release are reported by Baudoin Delépine, INSA, Toulouse, France):
+ - fixed doc about R version (now 3.4.0 or higher) and rmumps (now 5.2.1-3 or higher)
+ - fixed use of `--sln` option
+ - added explicit error message if ``tmax`` is Inf (can happen if time grid could not be read from file indicated in ``file_labcin`` ftbl field)
+
+2017-07-04 version 4.4.3
+------------------------
+New features:
+ - added 95% quantile in monte-carlo/cost/ci field in _res.kvh file. It makes possible to do a mono-tail chi2 test for goodness of fit
+ - added possibility for FTBL files to be encoded in UTF16 and UTF32 (based on case reported by Lucille Stuani, INSERM, Toulouse, France)
+ - added an explicit error message if no label information could be found in parallel experiment FTBL (reported idem)
+
+Bug fix:
+ - fixed a warning in Monte-Carlo iteration about multiple values in if() close (reported idem)
+
+2017-06-15 version 4.4.2
+------------------------
+New features:
+ - added a new field "constrained net-xch01 fluxes" to the result kvh file
+ - ff2ftbl.py: instead of only free fluxes, all fluxes are read in kvh file. Thus in a modified FTBL, a partition on free/dependent/constrained fluxes can differ from those used in the kvh file.
+ - ff2ftbl.py: if kvh and ftbl files have the same prefix, only this prefix can be given as a unique command line argument
+
+Bug fix:
+ - ff2ftbl.py: fixed "end of line" bug on Windows platform
+ - plot_smeas.R: fixed metabolite names retrieving in parallel experiments
+ - plot_smeas.R: fixed disgraceful exit if simulation in influx_s failed
+
+2017-05-24 version 4.4.1
+------------------------
+New features:
+ - in plot_smeas.R and plot_imass.R few cosmetic improvements in plot titles and legends
+
+Bug fix:
+ - fixed non varying free pools in influx_s
+ - fixed cases where some cumomer (or EMU) weights can have no cumomers (EMU)
+ - fixed libs.R by including some files (impacted preamble.R)
+
+2017-05-22 version 4.4
+----------------------
+New features:
+ - added plot_smeas.R file to be included in posttreat_R field in FTBL/OPTIONS. It plots all stationary measurements vs their simulated counterparts in a pdf file.
+ - added preamble.R, an example of starting session when working with mynetwork.RData issued from save_all.R or save_minenv.R
+ - R can be again of version 3.3+ (not necessarily 3.4+)
+ - minor speedup in instationary simulations
+
+Bug fix:
+ - fixed names in dev vector of pool measurements
+
+2017-04-28 version 4.3
+----------------------
+New features:
+ - speed up of about 30-40% is achieved for instationary simulations with 2nd order time scheme (need upgrade R at least to 3.4.0).
+ - in plot_imass.R, each measured mass fragment is presented in a separate plot instead of regrouping all fragments for a given metabolite on the same plot.
+ - in plot_imass.R, non measured metabolites are plotted too now
+
+Bug fix:
+ - fixed Monte-Carlo iterations with --np=1
+ - added a mention of python-libsbml in installation procedure
+
+2017-03-30 version 4.2
+----------------------
+New features:
+ - added a script ftbl2metxml.py converting an ftbl to an xml file suitable for visualization on http://metexplore.toulouse.inra.fr . Additionally, it reads flux values from corresponding ..._res.kvh file (if available) and put them in files ..._net.txt, ..._fwd.txt and ..._rev.txt for later copy/pasting on the MetExplore site (suggested by Tony Palama, INSA, Toulouse, France)
+ - added comment tags '###' to txt network format (recognized by txt2ftbl.py and respectively '//##' tag in FTBL format recognized by all programs using FTBL format) to mark a new pathway. It allows ftbl2metxml.py to assign reactions to pathways and thus make a network graph more readable.
+Bug fix:
+ - a duly error message is added to signal a network without any label entry in a reduced cumomer network.
+
+2017-03-03 version 4.1
+----------------------
+New features:
+ - added explicit error message when label transitions are missing for any reaction in NETWORK section
+ - improved speed of labeling simulation in influx_i
+ - added parameter --tblimit[=0] for trace back limit in errors generated by python (for developers only).
+Bug fix:
+ - fixed error appearing in influx_i during parallel experiments in situation where time intervals are different in different experiments (reported by Maria Fatarova, INSA, Toulouse, France)
+ - fixed file creation in plot_imass.R (it created pdf in the current directory instead of the working one)
+
+2016-12-20 version 4.0.1
+------------------------
+Bug fix:
+ - file txt2ftbl.py was lacking in the previous version (reported by Tony Palama, INSA, Toulouse, France)
+
+2016-12-19 version 4.0
+----------------------
+New features:
+ - parallel experiments (i.e. same metabolic state but different label entries) can now be processed both in stationary (influx_s) and instationary (influx_i) labeling
+ - reaction having more than 2 metabolites on ever side can now be entered in FTBL as a series of reactions with the same name
+ - metabolites with no carbon transitions (like ATP, NADP etc. when they are just co-factors) can now be entered in NETWORK section. They can have stoechiometric coefficients different from 1
+ - the same metabolite can now appear on both sides of a reaction. It can be helpful for some special carbon shuffles
+ - reactions without carbon transitions can now be entered in a new FTBL section NOTRACER_NETWORK. It is a good place to enter for example biomass reaction. Stoechiometric coefficients different from one are allowed at this place
+ - new utility txt2ftbl.py translates an easier readable/writable format for chemical reactions to an FTBL file
+ - added --addnoise option to facilitate creation of realistic simulated measurements
+
+Bug fixes:
+ - fixed a bug preventing Monte-Carlo simulations with influx_i (reported by Maria Fatarova, INSA, Toulouse, France)
+
+2016-07-29 version 3.2
+----------------------
+New features:
+ - added controls for coherence of label transitions
+ - added detection of incoherent fragments in MASS_MEASUREMENTS (e.g. longer one than a whole molecule)
+ - in LABEL_INPUT section, if incomplete labeled forms don't sum up to 1, and several labeled forms are absent, the lacking label fraction is assigned to the fully unlabeled form
+ - R package 'snow' is no more needed on windows platform to run Monte-Carlo simulations in parallel mode
+ - on all platforms, Monte-Carlo simulations are now run on a PSOCK cluster and no more on a FORK cluster (Linux) or SOCK (Windows)
+ - inequalities involving only constrained fluxes or depending solely on such fluxes are now simply ignored with a warning
+ - fixed Jacobian calculation when no free flux exists
+ 
+Bug fixes:
+ - fixed building a library mult_bxxc.dll on Windows platform (reported by Tony Palama, INSA/MetaToul Toulouse, France)
+ - fixed building mult_bxxc.so in parallel context (multiple ftbls)
+ - fixed formulas in equalities and inequalities with flux names having parenthesis, brackets, spaces and alike
+ - cluster workers are parsimoniously created in case of multiple starting points
+ 
+2016-06-13 version 3.1
+----------------------
+New features:
+ - added controls and explicit error messages for DEVIATION=0 in FTBL file
+ - added column "p-value" to residual values in _res.kvh file (may help for outlier choice)
+ - added check-points for infinite values that can appear in residual and Jacobian
+
+Bug fixes:
+ - fixed EMU mode in instationary case
+ - fixed renewal of mult_bxxc.so library in case of source update
+ - fixed cost value calculation in case of outlier exclusion
+
+2016-04-18 version 3.0.1
+------------------------
+Bug fixes:
+ - fixed including mult_bxxc.so file in zip archive which prevented from proper compiling of this dynamic library
+ - fixed an absence of C++11 flag on platforms where it is not a standard by default.
+
+2016-04-15 version 3.0
+----------------------
+New features:
+ - influx_i.py is introduced for instationary label modeling
+ - some critical calculations are written in C++ so some compilation is needed at first execution.
+ - new optional package limSolve is used and need to be installed (as well as its dependencies) if ``--lim`` option is used
+ - more TIMEIT points introduced for finer time control
+
+Bug fixes:
+ - fixed performance issue in slam package for '-' and '+' operations
+ - fixed sparse matrix preparation when there is only one non zero entry
+
+2016-02-18 version 2.15
+-----------------------
+New features:
+ - calculation speed was improved due to the use of packages slam and rmumps instead of Matrix;
+ - added "cpu" field when timing is requested
+
+Bug fixes:
+ - fixed a bug preventing a use of a flux added in EQALITIES in measured fluxes (reported by Edern Cahoreau, INSA, Toulouse, France)
+ - fixed minor problems in MC iterations (parameter distribution was not significantly affected)
+
+2015-01-19 version 2.14
+-----------------------
+New features:
+ - ``commandArgs`` field in FTBL file can have comments in it and occur more than once somewhere in the ``OPTIONS`` section
+ - ``--DEBUG`` option is removed as obsolete
+ - R package ``bitops`` is not required anymore to be installed (valid for R-3.0.0 or higher)
+
+Bug fixes:
+ - fixed a bug in delivering an error message when ``commandArgs`` had a comment in it
+ - fixed the precedence of command line options over ``commandArgs`` given in FTBL
+ - fixed a bug in parsing FTBL file having a BOM (invisible utf8 encoding mark) in it (reported by Yanfen Fu, University of Washington, USA)
+ - fixed representation of growth fluxes by ftbl2xgmml.py utility
+
+2014-09-17 version 2.13
+-----------------------
+New features:
+ - ``posttreat_R`` field can have several file names separated by ``'; '``
+ - added explicit error message if a valid float value is missing for free or constrained flux
+ - added explicit error message if no dependent flux is included in the balance on any metabolite (suggested by a case submitted by Marc O. Warmoes, Cornell University, USA)
+ - in the documentation, added a paragraph about consulting offer
+ - result .kvh file is greatly shortened, keeping only essential information. Custom additional information can be stored in some file via ``posttreat_R`` option
+ - now, ``influx_s`` returns a non zero code to shell if an error occurred during execution;
+ - added a parameter ``monotone`` to the control list of NLSIC.
+ 
+Bug fixes:
+ - fixed a bug in generating EMU systems (manifested in some special cases)
+ - fixed an error preventing from producing a message suggesting a new partition among dependent, free and constrained fluxes (reported by Stéphane Mottelet, University of Compiegne, France)
+ - fixed metabolite pooling weights (manifested in some special cases)
+ - Windows platform: fixed passing command line options to R code
+ - Windows platform: precompiled ``nnls`` R package (version 32 bits) can produce wrong results. Recompile it by hand or use 64 bits version.
+
+
+2014-07-02 version 2.12
+-----------------------
+New features:
+ - parsing badly formatted ftbl files is made more robust
+Bug fixes:
+ - fixed a bug in ``--emu`` option (was introduced in v.2.11)
+
+
+2014-06-12 version 2.11.1
+-------------------------
+Bug fix:
+ - an option ``--noopt`` broken in 2.11 is repaired (reported by Pierre Millard, Manchester Institute of Biotechnology, UK)
+
+2014-06-11 version 2.11
+-----------------------
+New features:
+ - a joint use of the options ``--fseries`` and ``--irand`` gives a possibility to mix fixed and random values in starting points
+ - post treatment option ``posttreat_R`` is introduced in FTBL file. A user script written in R can be used to chain flux estimation and customized data treatment, e.g. graph plotting in a pdf file or simply saving of all the environment for later use and exploring in an R interactive session
+ - added optional ``INEQUALITIES/METAB`` section in FTBL file. It can be helpful to limit variations of estimated metabolite concentrations (suggested by Marc Carnicer, INSA of Toulouse, France)
+ - added optional ``EQUALITIES/METAB`` section in FTBL file. It can be helpful to fix a ratio between varying metabolite concentrations (suggested by Marc Carnicer, idem)
+ - the default value of ``btdesc`` parameter in NLSIC algorithm is lowered from 0.75 to 0.1. In some cases, it can accelerate the optimization convergence.
+Bug fixes:
+ - fixed EMU list of participants in measurements
+ - fixed measurement matrix when only one measurement is available
+ - fixed a fatal error when no free flux is available but at least one metabolite quantity must be estimated
+ - fixed a bug in pooled measurements. This bug was harmful only if the metabolite pooling was used in more than one type of measurements, e.g. mass *and* labeling. If only one type of measurements used pooling (e.g. mass), the bug was without effect
+ - where appropriate, a word "labeling" was replaced by "label" in the field names of the ``_res.kvh`` file
+ - fixed superfluous backtracking iterations present for some particular residual functions
+ - if a flux or a metabolite is present more than once in formulas of (IN)EQUALITIES sections, its coefficients are summed up instead of taking only the last one
+ - fixed a fatal error in generating inequality matrix for net fluxes
+
+2014-04-08 version 2.10
+-----------------------
+New features:
+ - added an option ``--tikhreg`` which is an alternative for ``--ln`` option. In case of rank deficient Jacobian, it calculates an increment step of the smallest norm in  *approximative* way. It is done by Tikhonov regularization
+ - added an option ``--ffguess`` which makes to ignore the partition between free and dependent fluxes defined in FTBL file(s) and automatically guess a new free/dependent flux partition (suggested by Roland Nilsson, Karolinska Institutet, Sweden)
+ - added utility ``ftbl2kvh.py`` which is useful for debugging purposes only
+ - utilities ``ftbl2xgmml.py``, ``ftbl2cumoAb.py``, ``ftbl2netan.py`` and ``ftbl2kvh.py`` are rewritten in such a way that if no output redirection (with operands '>' or '|') occurs on the command line, the name of the output file is automatically derived from the input one. The suffix ``.ftbl`` is simply replaced with ``.xgmml``, ``.sys``, ``.netan`` or ``.kvh`` respectively. Thus a plain drug-and-drop can work with these utilities
+ - option ``--TIMEIT`` reports times with subsecond precision. The actual precision depends on the platform but typically a 0.01 s precision should be available. On Windows, the precision is usually 1/60 of a second
+ 
+Bug fixes:
+ - fixed ``include_growth_flux`` option for ``ftbl2cumoAb.py`` utility (reported by Marc Carnicer, INSA of Toulouse, France)
+ - fixed a bug preventing from checking for a linear dependence between rows of stoechiometric matrix if no constrained net flux is defined in the FTBL file (reported by Roland Nilsson, idem)
+
+2014-02-05 version 2.9
+----------------------
+New features:
+ - utility ``ftbl2xgmml.py`` replaces ``ftbl2rsif.py``. Now, a standalone XGMML file describes both a network and its graphical properties instead of a collection of files where this information was spread. New graphical conventions are now used.
+ - an obsolete utility ``ftbl2cytoscape.bat`` is removed form the distribution.
+ - added utility ``res2ftbl_meas.py`` generating measurement section from a result file _res.kvh
+ - added utility ``expa2ftbl.R`` transforming stoechiometric information in EXPA format (http://gcrg.ucsd.edu/Downloads/ExtremePathwayAnalysis) to various sections of FTBL file, namely to ``EQUALITY`` section where non carbon carrying fluxes can appear
+ - files generated by ``influx_s`` and collecting values for graphical representation (like ``edge.netflux.mynetwork`` and others) are renamed by adding a suffix ``.attrs`` to make them compatible with Cytoscape v3.0
+ - utilities ``ffres2ftbl.sh`` and ``ff2ftbl.py`` distributed for a long time ago, are now mentioned in the documentation
+
+Bug fixes:
+ - fixed ``--fullsys`` option broken in the previous release.
+
+2014-01-27 version 2.8
+----------------------
+New features:
+ - ``EQUALITY`` section in FTBL file may include fluxes absent in ``NETWORK`` section, e.g. fluxes involved in non carbon carrying reactions (suggested by Roland Nilsson, Karolinska Institutet, Sweden)
+ - when a meaningful partition between free and dependent fluxes cannot be made, a proposition is made as to stoechiometric equations to be eliminated by hand (suggested by Roland Nilsson, idem) 
+ - when ``--clownr`` option is used, reduced size of cumomer system is more efficient than without this option (replace a fix in 2.6 version)
+
+Bug fixes:
+ - fixed useless memory consumption during ftbl parsing when ``--emu`` option is used and very long molecules (say >20 carbons) are present (reported by Roland Nilsson, idem)
+ - some error messages are made more explicit during FTBL parsing
+ - fixed Jacobian calculation for condensing input reaction
+ - fixed matrix constructions when no free flux is defined
+ - fixed b term for full cumomer system
+ - fixed inequality enforcement when adaptive backtracking is used in NLSIC
+ - fixed inequality precedence, now specific inequalities from FTBL file prevail on ``--cupn=CUPN`` option 
+
+2013-10-22 version 2.7
+----------------------
+New features:
+ - Monte-Carlo simulations are done in parallel on Windows platform too (needs R package ``snow``)
+ - if the option ``--seed=SEED`` is used, Monte-Carlo simulations are now reproducible even if run in parallel on multiple cores
+ - for rank deficient Jacobian, the inequalities are now better enforced
+ - starting value for ``maxstep`` parameter is set to :math:`10||p||` instead of :math:`||p||` where *p* is a vector of starting values for free parameters to fit.
+Bug fixes:
+ - fixed a bug preventing to report partial Monte-Carlo results if some simulations failed and some not
+ - fixed a bug making to use all available cores instead of only one when ``NP`` was set to 1
+ - fixed a fatal error when inequality enforcement fails
+ - error and log messages during zero cross passes are made more explicit
+ - fixed sending some error messages on standard output instead of ``.err`` file
+ - when cumomer matrix is singular, fixed an error message about zero fluxes
+
+2013-10-02 version 2.6
+----------------------
+New features:
+ - added option ``--sln`` (solution least norm) which applies 'least norm' to the whole solution vector of free parameters, not just to the increment vector (like ``--ln`` does)
+ - a parallel calculation of multiple FTBLs is moved from python to R code. In such a way, some economies of repeated R starting up and library loading are made
+ - when zero crossing is used (``--zc=ZC``) a third pass is added without any zc constraint.
+ - added an option ``maxstep`` to control list of nlsic(). In some situations, it can make the convergence more stable at early iterations.
+
+Bug fixes:
+ - fixed a fatal error preventing from using BFGS optimization method
+ - fixed an error in calculating reduced size of cumomer or EMU systems. It did not impact the results (at least for well defined network) but made calculations a little bit longer (reported by Stephane Mottelet, University of Compiegne, France).
+ - a more explicit error message is generated when a given choice of free fluxes leads to a square but singular flux (stoechiometric) matrix.
+ - some error messages were printed on standard output instead of ``.err`` file.
+
+2013-06-28 version 2.5
+----------------------
+New features:
+ - an argument of the option ``--np=NP`` (number of processes) can be fractional, between 0 and 1 in which case the number of requested cores is calculated as NP*number_of_available_cores
+ - in documentation, added a section describing some problematic cases and measures which could be undertaken to solve or to work around them. Few more field names in the output file are described (based on discussions with Yanfen Fu, University of Washington, USA)
+ - missing values in measurements (NA as Non Available) are allowed in FTBL files.
+
+Bug fixes:
+ - fixed a fatal error if the rights of generated R file cannot be changed
+ - fixed a bug for ``--ln`` (least norm) option when without inequalities, increments were not of least norm (reported by Stephane Massou, INSA of Toulouse, France)
+ - fixed an algorithm used in ``--ln``. Now for all inequality systems, both least residual norm and least solution norm are achieved (before, for some systems it was not the case). **Due to this fix, we highly recommend to update to this version if you use** ``--ln`` **option**
+ - fixed a bug in "zero crossing" inequalities. Now, inequalities involving only constrained fluxes are canceled.
+
+2013-04-11 version 2.4
+----------------------
+New features:
+ - number of parallel processes (in case of multiple FTBL files) is limited to a number of cores or to an argument of the ``--np`` option
+ - some consistency controls were added on flux names in various FTBL sections.
+
+Bug fixes:
+ - fixed a bug in formatting some error messages during FTBL parsing;
+ - fixed an accidental removing of kvh.py file from the previous release;
+ - fixed non signaling to check ``.err`` file while some parsing errors did produce;
+
+2013-03-28 version 2.3
+----------------------
+New features:
+ - external ``multicore`` R package is replaced by native ``parallel`` package;
+ - convergence information of Monte-Carlo simulations is reported in the result file;
+ - relative SD (rsd) in Monte-Carlo statistics is calculated as SD/abs(mean) and no more as SD/abs(estimated parameter);
+ - if the number of really calculated samples in Monte-Carlo is less than 2, statistics are not calculated;
+ - R code is self sufficient to be executed via source() function, even in parallel way;
+ - with a new option ``--nocalc``, R code is generated but not executed.
+
+Bug fixes:
+ - fixed concurrent access to a global variable in Monte-Carlo parallel execution;
+ - fixed scope issue in Monte-Carlo simulations preventing from update of the current solution;
+ - fixed some redundant warning messages;
+ - fixed placement of .err and .log files if FTBL(s) is (are) given with subdirectories in their names.
+
+2013-03-15 version 2.2.1
+------------------------
+Bug fixes:
+ - fixed a fatal error in Jacobian matrix construction when no measured fluxes are provided in FTBL file (reported by Yanfen Fu, University of Washington, USA);
+ - in the User's manual, added a naming convention for variable growth fluxes.
+
+2013-03-13 version 2.2
+----------------------
+New features:
+ - if more than one FTBL file is given in argument to ``influx_s``, all files are proceeded simultaneously in independent processes;
+ - outliers in measurements can be automatically detected and excluded from parameter fitting.
+
+Bug fixes:
+ - fixed an error preventing Monte-Carlo results to be written if ``multicore`` package is not installed;
+ - fixed a documentation error about :math:`\ln(M)` in ``mynetwork.pres.csv`` file;
+ - fixed warning resuming if there are many of them;
+ - fixed some error message generation on FTBL parsing.
+
+2013-02-15 version 2.1
+----------------------
+New features:
+ - in nlsic() a new field 'retres' is added to the list of returned values. It transfers "as is" the list returned by a last call to residual calculation function;
+ - added a writing of generalized inverse of Jacobian to the result file;
+
+Bug fix:
+ - fixed a typo preventing Monte-Carlo statistics on forward-reverse fluxes to be written in the result file.
+
+2013-02-05 version 2.0
+----------------------
+
+New features:
+ - metabolite pooling is modeled. Such pooling can appear due to compartmentation phenomenon or due to isomer coelution in chromatography. Starting from this version, metabolite concentrations can be part of fitted parameters;
+ - adaptive backtracking algorithm is introduced to NLSIC algorithm;
+ - history of convergence during minimization can be retrieved;
+ - symbolic equations for dependent fluxes expressed as functions of free and constrained fluxes are generated by ftbl2cumoAb.py script;
+ - METAB_MEASUREMENTS section is added to FTBL format;
+ - added :math:`\chi^2` test for evaluating the goodness of fit;
+ - removed ``metab_scale`` field from OPTIONS section in FTBL format;
+ - "dead end" internal metabolites are allowed in a network without being an output metabolite. As consequence, input-output fluxes must be explicitly declared as non reversible in the FTBL;
+ - added optional EMU framework (``--emu``);
+ - added optional series of starting points, fixed or randomly generated
+   (``--fseries``, ``--iseries``);
+ - matrix construction is reworked and fortran code is removed. Now, no more ``Rtool`` installation is required for running ``influx_s``;
+ - some error messages are made more explicit and more precise;
+ - outdated R package ``fUtilities`` is no more required;
+
+Bug fixes:
+ - fixed stoechiometric matrix construction when for a given metabolite;
+   all fluxes are free or constrained;
+ - fixed candidate propositions for free fluxes;
+ - fixed standard deviation value for a ``DD/T`` field in ``PEAK_MEASUREMENTS`` section.
+
+2011-10-11 version 1.0
+----------------------
+
+Initial release. Main features:
+ - NLSIC algorithm;
+ - FTBL input format from 13CFlux project;
+ - reduced cumomer set for cumomer balance equations;
+ - sparse matrices;
+ - usage of ``multicore`` R package for Monte-Carlo simulations on Unix platform;
+ - usable on platforms having Python+numpy and R+some modules;
+ - command line interface;
+ - brief user's and programmer's documentation;
+ - OpenSource (ECL) license.

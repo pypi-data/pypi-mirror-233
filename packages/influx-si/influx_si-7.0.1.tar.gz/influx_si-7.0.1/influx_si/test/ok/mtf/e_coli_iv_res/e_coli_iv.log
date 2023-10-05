@@ -1,0 +1,30 @@
+"/home/sokol/.local/bin/influx_i" "--pref" "e_coli_i" "--pref" "e_coli_iv" "--pref" "ex_i_2box_var" "--pref" "../prl_exp/mtf/e_coli_GX_prl"
+code gen: 2023-10-04 17:22:22
+calcul  : 2023-10-04 17:22:24
+load    : 2023-10-04 17:22:25.42 cpu=1.008
+rinit   : 2023-10-04 17:22:25.43 cpu=1.014
+r_flux  : 2023-10-04 17:22:25.43 cpu=1.014
+Afl qr(): 2023-10-04 17:22:25.48 cpu=1.064
+dfl_dffg: 2023-10-04 17:22:25.49 cpu=1.073
+spAbr   : 2023-10-04 17:22:25.49 cpu=1.075
+weight 1: 2023-10-04 17:22:25.49 cpu=1.075
+weight 2: 2023-10-04 17:22:25.49 cpu=1.077
+weight 3: 2023-10-04 17:22:25.49 cpu=1.078
+weight 4: 2023-10-04 17:22:25.49 cpu=1.08
+weight 5: 2023-10-04 17:22:25.49 cpu=1.081
+weight 6: 2023-10-04 17:22:25.49 cpu=1.082
+measure : 2023-10-04 17:22:25.55 cpu=1.14
+ineq    : 2023-10-04 17:22:25.57 cpu=1.161
+preopt  : 2023-10-04 17:22:25.67 cpu=1.244
+labargs : 2023-10-04 17:22:25.67 cpu=1.246
+cl expor: 2023-10-04 17:22:25.95 cpu=1.248
+cl sourc: 2023-10-04 17:22:27.40 cpu=1.396
+run    1: 2023-10-04 17:22:27.59 cpu=1.401
+
+Starting point
+zc ineq : 2023-10-04 17:22:27.59 cpu=1.402
+kvh init: 2023-10-04 17:22:27.62 cpu=1.433
+postopt : 2023-10-04 17:22:34.59 cpu=1.466
+linstats: 2023-10-04 17:22:34.93 cpu=1.587
+***Warning: chi2: Measurement number 7 is lower or equal to parameter number 26. Chi2 test cannot be done.
+rend    : 2023-10-04 17:22:35.18 cpu=1.71
