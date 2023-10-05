@@ -1,0 +1,10 @@
+pylapy/__init__.py,sha256=Qw5PxL5qk-0pDGDbPfIWFO0D6-Kz4bB_2z4pHDibKac,54
+pylapy/cost_extension.py,sha256=8AyaM0Jx7uYArZa7Lx1Oc0SBK4IDpv0nQiUVv2AMe3g,11956
+pylapy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pylapy/shape_extension.py,sha256=Ic-jB46RVHxdFwhv75L0Z3cLBr6FnktrlItAaPk-UDI,5210
+pylapy/solver.py,sha256=4O57h_76WxtegNGBxhTJqihyFT2TbOujq_ylEcwQ5uY,9785
+pylapy-0.1.0.dist-info/LICENSE,sha256=mTZcRcQZEJ2Wbp_A0P1mCeetemSOdyl043X0DbupM10,1068
+pylapy-0.1.0.dist-info/METADATA,sha256=_uSUyRoaSe6QlPt4fR_5OWvx2eoJdWTPsz30hXfmobM,8048
+pylapy-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pylapy-0.1.0.dist-info/top_level.txt,sha256=dZmSvHNc1iCfi2134KCkN0Vx44ciXAXx6EoCUUrzxV4,7
+pylapy-0.1.0.dist-info/RECORD,,
