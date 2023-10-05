@@ -1,0 +1,15 @@
+
+[develop]
+tox~=4.1
+wheel~=0.38
+twine~=4.0
+
+[testing]
+pytest~=7.2
+pytest-asyncio~=0.20
+coverage~=7.0
+pylama~=8.4
+mypy~=0.991
+
+[testing:python_version >= "3.12"]
+setuptools~=68.2
