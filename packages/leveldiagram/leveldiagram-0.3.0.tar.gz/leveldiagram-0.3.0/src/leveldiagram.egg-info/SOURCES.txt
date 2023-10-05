@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/leveldiagram/__init__.py
+src/leveldiagram/artists.py
+src/leveldiagram/ld.py
+src/leveldiagram/utils.py
+src/leveldiagram.egg-info/PKG-INFO
+src/leveldiagram.egg-info/SOURCES.txt
+src/leveldiagram.egg-info/dependency_links.txt
+src/leveldiagram.egg-info/not-zip-safe
+src/leveldiagram.egg-info/requires.txt
+src/leveldiagram.egg-info/top_level.txt
