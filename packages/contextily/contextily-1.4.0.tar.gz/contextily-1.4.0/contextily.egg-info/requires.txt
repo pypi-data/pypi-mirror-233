@@ -1,0 +1,8 @@
+geopy
+matplotlib
+mercantile
+pillow
+rasterio
+requests
+joblib
+xyzservices
