@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pythoness"
+version = "0.1.0"
+authors = [
+  { name="Emery Berger", email="emery.berger@gmail.com" },
+]
+dependencies = ["openai>=0.27.0", "ast-comments>=1.0.0"]
+description = "Pythoness: use natural language to define Python functions."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/plasma-umass/pythoness"
+"Bug Tracker" = "https://github.com/plasma-umass/pythoness/issues"

@@ -1,0 +1,2 @@
+openai>=0.27.0
+ast-comments>=1.0.0
