@@ -1,0 +1,3 @@
+[console_scripts]
+jrnl = minchin.jrnl.cli:cli
+minchin.jrnl = minchin.jrnl.cli:cli
