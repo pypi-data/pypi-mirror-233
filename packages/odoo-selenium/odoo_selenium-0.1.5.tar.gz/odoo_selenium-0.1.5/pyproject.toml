@@ -1,0 +1,41 @@
+[project]
+name = "odoo-selenium"
+readme = "README.md"
+requires-python = ">=3.7.0"
+license = {file = "LICENSE"}
+dynamic = ["version", "description"]
+authors = [{name = "Vauxoo", email = "info@vauxoo.com"}]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "selenium >= 4.11"
+]
+
+[project.urls]
+Source = "https://github.com/vauxoo/odoo-selenium"
+
+[tool.black]
+line-length=119
+
+[tool.pylint]
+max-line-length=119
+
+[build-system]
+requires = ["flit_core >=3.9,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "odoo_selenium"
