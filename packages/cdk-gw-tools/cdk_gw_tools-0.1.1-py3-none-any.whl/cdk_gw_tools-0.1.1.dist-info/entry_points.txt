@@ -1,0 +1,3 @@
+[console_scripts]
+cdk-cli=cdk_gw_tools.cli:main
+
