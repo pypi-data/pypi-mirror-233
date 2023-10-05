@@ -1,0 +1,16 @@
+kirami-plugin-qweather/__init__.py,sha256=3_GrN1sJqwlMT06JZ3uDzwK5uugXeyUK2Qgd2CvBnbc,10931
+kirami-plugin-qweather/config.py,sha256=mNuud4NJeIHMe81RGqAJLEPaaHzJXEsjHNiCorGhqwU,526
+kirami-plugin-qweather/model.py,sha256=AXuKE_0lw62EccKd2FRo7LHugl_lSwjZTbEvH7CuzuM,1446
+kirami-plugin-qweather/render_pic.py,sha256=BFcm1hm3l3NWgz1YStKexPnIFcl2Be4vM0ZcEMe4eoM,2435
+kirami-plugin-qweather/templates/css/fonts/qweather-icons.ttf,sha256=iiPCaNds3VPlgReCzfSnSaNr1IbQjll1yBMkcMGe72c,69948
+kirami-plugin-qweather/templates/css/fonts/qweather-icons.woff,sha256=r8tiwRYd_9RH0-5eW8BOSMMuo1iQNCkxgGt64BUUbdQ,27920
+kirami-plugin-qweather/templates/css/fonts/qweather-icons.woff2,sha256=GSqb_dKHSOlGEWMe1fmgLprYFrz0eerKO6EOnAU-TBo,19688
+kirami-plugin-qweather/templates/css/qweather-icons.css,sha256=5jZT_C-NvC0_Zm3UpvXCF4d2vD7daWurhs3jgcYY4lk,20240
+kirami-plugin-qweather/templates/css/qweather-icons.json,sha256=0Oj79IgPK74iWspJGNxSKYtToq2JRMyqgpkCy1ci19M,9784
+kirami-plugin-qweather/templates/css/weather.css,sha256=vyakPhlaHS14a8_Zb8yisPD9xY_CJBLehF_nep_Zncw,3338
+kirami-plugin-qweather/templates/weather.html,sha256=lnUmLc8WbVJozJL_LpybF6N9D8dCLkwfolMtaCt2A0A,5881
+kirami-plugin-qweather/weather_data.py,sha256=on6e1m_7jECL88qovjOYtajAAaww-Jsk7hgzih0HQoc,5411
+kirami_plugin_qweather-0.1.0.dist-info/METADATA,sha256=wTQ15Z1OSZKFhcf8OVn3tY2qJD4rTi-rSyW67Y21lyI,4594
+kirami_plugin_qweather-0.1.0.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+kirami_plugin_qweather-0.1.0.dist-info/licenses/LICENSE,sha256=Xto27m-beb5Q41mq3hURn9SveXYmnvvW8DozOgt5xoM,1066
+kirami_plugin_qweather-0.1.0.dist-info/RECORD,,
