@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: plotador
+Version: 3.0.10
+Summary: Interface para ilustracao grafica de arquivos de modelos energeticos
+Home-page: https://github.com/davidAlexander08/iplot
+Author: David Alexander
+Author-email: david.tbsilva@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: cfinterface >=1.5.2
+Requires-Dist: isddp
+Requires-Dist: inewave
+Requires-Dist: pyarrow
+Requires-Dist: plotly
+
+# iplot
+Biblioteca de Plot com base no inewave e isddp
