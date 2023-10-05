@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pydtoc/__init__.py
+python_dtoc.egg-info/PKG-INFO
+python_dtoc.egg-info/SOURCES.txt
+python_dtoc.egg-info/dependency_links.txt
+python_dtoc.egg-info/top_level.txt

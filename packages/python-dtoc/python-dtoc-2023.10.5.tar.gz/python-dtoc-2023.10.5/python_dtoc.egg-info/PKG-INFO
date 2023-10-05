@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: python-dtoc
+Version: 2023.10.5
+Summary: Awesome module for conver dict to class
+Author: ZAID
+Author-email: y8838@hotmail.com
+Keywords: json
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# About this project:
+- This project created to convert any dict into class in python :) check [github](https://github.com/x72x/PyDTOC/tree/main)
+
+
+# Install:
+- `pip install python-dtoc`
+
+
+## Simple example:
+- <b>Print the object :</b>
+---
+```python
+from pydtoc import dtc
+foo = dtc({'str': 'string', 'int': 1, 'list': [1, 2, 3, 4, {'hi': True}]})
+print(foo)
+```
+
+- <b>Output :</b>
+```json
+{
+    "str": "string",
+    "int": 1,
+    "list": [
+        1,
+        2,
+        3,
+        4,
+        {
+            "hi": true
+        }
+    ]
+}
+```
+
+- <b>Print key of value :</b>
+---
+```python
+from pydtoc import dtc
+foo = dtc({'str': 'string', 'int': 1, 'list': [1, 2, 3, 4, {'hi': True}]})
+print(foo.list[-1].hi)
+print(foo.str)
+```
+
+- <b>Output :</b>
+```
+True
+string
+```
