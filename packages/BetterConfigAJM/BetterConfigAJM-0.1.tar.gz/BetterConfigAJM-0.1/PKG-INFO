@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: BetterConfigAJM
+Version: 0.1
+Summary: More streamlined ConfigParser with fewer options available. Inherits from ConfigParser
+Home-page: https://github.com/amcsparron2793-Water/BetterConfigAJM
+Download-URL: https://github.com/amcsparron2793-Water/BetterConfigAJM/archive/refs/tags/0.1.tar.gz
+Author: Amcsparron
+Author-email: amcsparron@albanyny.gov
+License: MIT License
+License-File: LICENSE.txt

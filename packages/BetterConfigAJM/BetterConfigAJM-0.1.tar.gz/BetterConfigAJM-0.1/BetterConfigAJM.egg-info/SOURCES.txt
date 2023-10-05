@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+BetterConfigAJM/BetterConfigAJM.py
+BetterConfigAJM/__init__.py
+BetterConfigAJM.egg-info/PKG-INFO
+BetterConfigAJM.egg-info/SOURCES.txt
+BetterConfigAJM.egg-info/dependency_links.txt
+BetterConfigAJM.egg-info/top_level.txt
