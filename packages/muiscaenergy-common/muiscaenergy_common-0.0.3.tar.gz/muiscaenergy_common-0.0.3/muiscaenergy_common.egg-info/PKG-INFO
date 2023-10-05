@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: muiscaenergy-common
+Version: 0.0.3
+Summary: common functions for muiscaenergy projects
+Home-page: https://pypi.org/project/
+Author: Jairo Hernando Cervantes Garcia
+License: MIT license
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Muisca Energy Commons
+Common functions for muiscaenergy projects.
+
+## Time Series
+
+Example usage:
+    from datetime import datetime
+    from muiscaenergy_common.src.timeseries.base import get_timeseries
+
+
+    ts_from = datetime(2023, 9, 30, 12, 0, 0)
+    ts_to = datetime(2023, 10, 1, 11, 0, 0)
+    freq = 'H'
+    lat = 52.5200
+    lon = 13.4050
+    tz = 'America/Los_Angeles'
+
+    # Get a TimeSeriesMessage object without notion of location
+    ts1 = get_timeseries(ts_from=ts_from,
+                     ts_to=ts_to,
+                     freq=freq)
+    print(ts1.df)
+
+    # Get a TimeSeriesMessage object with notion of location via lat and lon
+    ts2 = get_timeseries(ts_from=ts_from,
+                     ts_to=ts_to,
+                     freq=freq,
+                     lat=lat,
+                     lon=lon)
+    print(ts2.df)
+
+    # Get a TimeSeriesMessage object with notion of location via tz (timezone)
+    ts3 = get_timeseries(ts_from=ts_from,
+                     ts_to=ts_to,
+                     freq=freq,
+                     tz=tz)
+    print(ts3.df)
+
+
+## Learning Material
+# Espanol
+* https://www.youtube.com/watch?v=AczMuVzUrkE&ab_channel=SebastianBelmonte
+* https://www.youtube.com/watch?v=xQGT9RZrBjg&ab_channel=AnartzMugikaLedo-Desarrollo%26Formaci%C3%B3n
+
+# English
+* https://www.youtube.com/watch?v=5KEObONUkik&ab_channel=ArjanCodes
+* https://www.youtube.com/watch?v=WhRKSf6I0F0&ab_channel=SpencerPao
+* https://www.youtube.com/watch?v=v4bkJef4W94&ab_channel=DevOpsJourney
+* https://www.youtube.com/watch?v=GIF3LaRqgXo&ab_channel=CodingTech
