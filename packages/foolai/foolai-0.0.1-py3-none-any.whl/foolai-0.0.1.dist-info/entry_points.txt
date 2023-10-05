@@ -1,0 +1,3 @@
+[console_scripts]
+foolai=foolai.main:app
+
