@@ -1,0 +1,7 @@
+simsimd.cpython-310-aarch64-linux-gnu.so,sha256=bZPtLVB0VcCB3URYRYb8jX7FNz-BqPVQnh1Z3ONpWqs,263513
+simsimd./libgomp-50ff2515.so.1.0.0,sha256=ltvo9nqMyHEme1FWcIz34R0qWB2ar9SQrfIbB324mDo,343345
+simsimd-2.0.4.dist-info/METADATA,sha256=k9ekzjkq1F3bQQGLhfG6pHINBLjELLY29Te_1ddee4E,6901
+simsimd-2.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+simsimd-2.0.4.dist-info/WHEEL,sha256=8FH_qAdToQRlaylWjoJaUgYTMHnalimHEEnz0BYk_UA,115
+simsimd-2.0.4.dist-info/RECORD,,
+simsimd-2.0.4.dist-info/top_level.txt,sha256=kA2CGlVhy5wNyCLTKLh20j75IM5fnuQ_-4bK53XLl8o,8
