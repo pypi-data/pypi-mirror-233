@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/sop_deutils/__init__.py
+src/sop_deutils/y4a_airflow.py
+src/sop_deutils/y4a_retry.py
+src/sop_deutils/y4a_telegram.py
+src/sop_deutils/datalake/y4a_minio.py
+src/sop_deutils/gg_api/y4a_sheet.py
+src/sop_deutils/sql/y4a_monitor_user_external.py
+src/sop_deutils/sql/y4a_postgresql.py
+src/sop_deutils_demo.egg-info/PKG-INFO
+src/sop_deutils_demo.egg-info/SOURCES.txt
+src/sop_deutils_demo.egg-info/dependency_links.txt
+src/sop_deutils_demo.egg-info/requires.txt
+src/sop_deutils_demo.egg-info/top_level.txt
