@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/MLPyVersioneer/__main__.py
+src/MLPyVersioneer/exporter.py
+src/MLPyVersioneer/summary.py
+src/MLPyVersioneer/training_phase_metric.py
+src/MLPyVersioneer/training_phase_metric_storage.py
+src/MLPyVersioneer.egg-info/PKG-INFO
+src/MLPyVersioneer.egg-info/SOURCES.txt
+src/MLPyVersioneer.egg-info/dependency_links.txt
+src/MLPyVersioneer.egg-info/entry_points.txt
+src/MLPyVersioneer.egg-info/top_level.txt
