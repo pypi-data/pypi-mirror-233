@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.12.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kamutils"
+version = "1.0.0"
+authors = [
+  { name="Kam One", email="info.kamutils@gmail.com" },
+]
+description = "Converts Oracle SDO_GEOMETRY into spatial objects which implements the __geo_interface__ protocol (GeoJSON-like dict). Supports also WKT conversion."
+license = "CECILL-B"
+readme = "Readme.md"
+requires-python = ">=3.7"
+classifiers = [
+		"Development Status :: 5 - Production/Stable",
+		"License :: CeCILL-B Free Software License Agreement (CECILL-B)",
+		"Programming Language :: Python :: 3.7",
+    "Operating System :: OS Independent",
+		"Intended Audience :: Developers",
+		"Topic :: Scientific/Engineering :: GIS",
+		"Topic :: Database"
+		
+]
+
