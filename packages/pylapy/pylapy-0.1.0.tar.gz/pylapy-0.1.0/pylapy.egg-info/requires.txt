@@ -1,0 +1,12 @@
+
+[lap]
+lap
+
+[lapjv]
+lapjv
+
+[lapsolver]
+lapsolver
+
+[scipy]
+scipy
