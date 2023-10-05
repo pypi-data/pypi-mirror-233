@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling","graphviz>=0.19.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "malloctag-tools"
+version = "0.0.2"
+authors = [
+  { name="Francesco Montorsi", email="francesco.montorsi@gmail.com" },
+]
+description = "Utility to postprocess malloc-tag JSON snapshots"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/f18m/malloc-tag"
+"Bug Tracker" = "https://github.com/f18m/malloc-tag/issues"
+
+[project.scripts]
+mtag-postprocess = "malloctag.mtag_postprocess.postprocess:__main__"
+mtag-json2dot = "malloctag.mtag_json2dot.json2dot:__main__"
+
+[tool.hatch.build]
+include = [
+  "tools/",
+]
+exclude = [
+  "src/",
+  "include/",
+]
+
+[tool.hatch.build.sources]
+# with this trick we write inside the Python files imports in a format like "import malloctag.libs.mtag_node"
+"tools" = "malloctag"
