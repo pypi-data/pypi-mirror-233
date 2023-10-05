@@ -1,0 +1,47 @@
+[project]
+name = "ivy-python"
+version = "4.0rc3"
+authors = [
+  { name="Sébastien Bigaret", email="sebastien.bigaret@telecom-bretagne.eu" },
+]
+maintainers = [
+  { name = "Sébastien Bigaret", email="sebastien.bigaret@telecom-bretagne.eu" }
+]
+description = "Ivy: a lightweight software bus"
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Natural Language :: English",
+    "Natural Language :: French",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+"Homepage" = "https://www.eei.cena.fr/products/ivy/"
+"Documentation" = "https://ivy-python.readthedocs.io/"
+"Bug Tracker" = "https://gitlab.com/ivybus/ivy-python/issues"
+"Source Code" = "https://gitlab.com/ivybus/ivy-python/"
+
+[tool.black]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.format]
+max-line-length = "88"
+
+[tool.setuptools]
+script-files = [ "examples/ivyprobe.py" ]
+packages = [ "ivy" ]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
