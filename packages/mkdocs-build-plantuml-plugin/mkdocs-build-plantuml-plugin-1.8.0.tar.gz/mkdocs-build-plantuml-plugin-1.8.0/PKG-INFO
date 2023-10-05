@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mkdocs-build-plantuml-plugin
+Version: 1.8.0
+Summary: An MkDocs plugin to call plantuml locally or remote
+Home-page: https://github.com/christo-ph/mkdocs_build_plantuml
+Author: Christoph Galler
+Author-email: galler@quantor.consulting
+License: MIT
+Keywords: mkdocs plantuml publishing documentation uml sequence diagram
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.2
+License-File: LICENSE
