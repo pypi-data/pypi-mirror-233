@@ -1,0 +1,3 @@
+[console_scripts]
+mtag-json2dot = malloc_tag.mtag_json2dot.json2dot:__main__
+mtag-postprocess = malloc_tag.mtag_postprocess.postprocess:__main__
