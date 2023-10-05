@@ -1,0 +1,8 @@
+appdirs
+atomicwrites
+
+[testing]
+pytest
+ruff
+mypy
+lxml
