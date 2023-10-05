@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: gmail-send
+Version: 0.1
+Summary: Una librería para enviar correos electrónicos usando Gmail
+Author: aslskks
+Author-email: davikenat@gmail.com
+Requires-Dist: smtplib
+Requires-Dist: email
+
