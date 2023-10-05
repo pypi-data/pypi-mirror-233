@@ -1,0 +1,9 @@
+README.md
+setup.py
+wpscan/__init__.py
+wpscan/cli.py
+wpscan.egg-info/PKG-INFO
+wpscan.egg-info/SOURCES.txt
+wpscan.egg-info/dependency_links.txt
+wpscan.egg-info/entry_points.txt
+wpscan.egg-info/top_level.txt

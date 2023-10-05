@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: wpscan
+Version: 0.4
+Description-Content-Type: text/markdown
+
+# WPScan Fake Package Warning
+
+**IMPORTANT: This is NOT the official WPScan tool.**
+
+## ⚠️ Warning ⚠️
+
+This package does NOT contain the WPScan vulnerability scanner for WordPress websites. WPScan is a Ruby-based tool and can be installed using the following command:
+
+```bash
+gem install wpscan
+```
+
+This Python package is created to raise awareness about the potential risks of accidentally installing incorrect packages from package repositories.
+
+## Message from Mr. Robot
+
+"Mr. Robot was here. WPscan can be installed with 'gem install wpscan'. This is a warning about installing PyPI packages. Join our discord: https://discord.gg/owlsec"
+
+## Responsible Use
+
+- Ensure that you respect user privacy and data.
+- Clearly communicate the purpose of this package and do not mislead users.
+- Always adhere to PyPI's policies and guidelines.
+
+## Installation (Not Recommended)
+
+If you still wish to install this package, you can use pip:
+
+```bash
+pip install wpscan
+```
+
+## Usage
+
+Running the command will display the warning message:
+
+```bash
+wpscan
+```
+
+## Contact
+
+For further information, join our [Discord server](https://discord.gg/owlsec).
+
+## Disclaimer
+
+This package is intended for educational and awareness purposes. The author is not responsible for misuse or for any issues that arise from using this package.
