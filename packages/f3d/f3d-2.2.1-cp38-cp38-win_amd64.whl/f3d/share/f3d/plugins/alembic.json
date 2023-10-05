@@ -1,0 +1,16 @@
+{
+  "description" : "Alembic support (version 1.8.5)",
+  "name" : "alembic",
+  "readers" : 
+  [
+    {
+      "description" : "Alembic",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "abc" ],
+      "mimetypes" : [ "application/vnd.abc" ],
+      "name" : "Alembic"
+    }
+  ],
+  "type" : "STATIC",
+  "version" : "1.0"
+}
