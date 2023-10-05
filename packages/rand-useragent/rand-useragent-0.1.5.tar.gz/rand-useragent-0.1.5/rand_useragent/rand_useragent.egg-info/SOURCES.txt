@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+rand_useragent/rand_useragent.egg-info/PKG-INFO
+rand_useragent/rand_useragent.egg-info/SOURCES.txt
+rand_useragent/rand_useragent.egg-info/dependency_links.txt
+rand_useragent/rand_useragent.egg-info/not-zip-safe
+rand_useragent/rand_useragent.egg-info/requires.txt
+rand_useragent/rand_useragent.egg-info/top_level.txt
