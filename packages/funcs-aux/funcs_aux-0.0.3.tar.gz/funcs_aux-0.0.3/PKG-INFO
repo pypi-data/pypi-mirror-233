@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: funcs_aux
+Version: 0.0.3
+Summary: useful funcs in one place
+Home-page: https://github.com/centroid457/
+Author: Andrei Starichenko
+Author-email: centroid@mail.ru
+Project-URL: Source, https://github.com/centroid457/funcs_aux
+Keywords: functions,auxiliary
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# funcs_aux
+Now its just a beginning!
+Designed to collect useful funcs in one place!
+
+## Features
+1. 
+
+
+## License
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+
+
+## Release history
+See the [HISTORY.md](HISTORY.md) file for release history.
+
+
+## Installation
+```commandline
+pip install funcs-aux
+```
+
+## Import
+
+```python
+from funcs_aux import *
+```
+
+
+## GUIDE
