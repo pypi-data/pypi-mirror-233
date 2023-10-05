@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+paspailleur/__init__.py
+paspailleur/mine_equivalence_classes.py
+paspailleur.egg-info/PKG-INFO
+paspailleur.egg-info/SOURCES.txt
+paspailleur.egg-info/dependency_links.txt
+paspailleur.egg-info/requires.txt
+paspailleur.egg-info/top_level.txt
+paspailleur/pattern_structures/__init__.py
+paspailleur/pattern_structures/abstract_ps.py
+paspailleur/pattern_structures/cartesian_ps.py
+paspailleur/pattern_structures/interval_ps.py
+paspailleur/pattern_structures/ngram_ps.py
+paspailleur/pattern_structures/nlp_ps.py
+paspailleur/pattern_structures/set_ps.py

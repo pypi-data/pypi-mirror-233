@@ -1,0 +1,3 @@
+caspailleur
+bitarray>=2.5.1
+tqdm
