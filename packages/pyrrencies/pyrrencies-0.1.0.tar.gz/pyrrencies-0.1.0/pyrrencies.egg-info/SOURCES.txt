@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+pyrrencies/__init__.py
+pyrrencies/main.py
+pyrrencies.egg-info/PKG-INFO
+pyrrencies.egg-info/SOURCES.txt
+pyrrencies.egg-info/dependency_links.txt
+pyrrencies.egg-info/top_level.txt
