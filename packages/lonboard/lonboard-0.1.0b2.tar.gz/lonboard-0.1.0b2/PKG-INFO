@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: lonboard
+Version: 0.1.0b2
+Summary: Extremely fast geospatial data visualization in Python.
+Author: Kyle Barron
+Author-email: kyle@developmentseed.org
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: anywidget (>=0.6.3,<0.7.0)
+Requires-Dist: comm (>=0.1.4,<0.2.0)
+Requires-Dist: geopandas (>=0.13)
+Requires-Dist: matplotlib (>=3.7,<4.0)
+Requires-Dist: palettable (>=3.3.3,<4.0.0)
+Requires-Dist: pyarrow (>=13.0.0,<14.0.0)
+Description-Content-Type: text/markdown
+
+# lonboard
+
+<img src="assets/longboard-wikimedia.jpeg" height="300" />
+
+[CC-BY from Wikipedia](https://commons.wikimedia.org/wiki/File:Longboard.JPG)
+
+> This is a new binding to the [deck.gl](https://deck.gl) geospatial data visualization library. A "deck" is the part of a skateboard you ride on. What's a fast, geospatial skateboard? A <em>lon</em>board.
+
+## Install
+
+This project requires [npm](https://www.npmjs.com/), [python](https://www.python.org/downloads/)>=3.11 and [poetry](https://python-poetry.org/).
+
+```bash
+npm install esbuild
+npm run build
+poetry install
+```
+
