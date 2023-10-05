@@ -1,0 +1,6 @@
+opentelemetry/exception/ext/__init__.py,sha256=YiMOoIzwTkfUIHeikHJJ8WMewsE2jDO986Rec7qOTAI,219
+opentelemetry/exception/ext/_internal/exception_recorder.py,sha256=VzJxz6yrVGUWZNgdP_UoNStaZxzhSwJjdQ2ySpWIoGQ,4376
+opentelemetry_exception_ext-0.0.1.dist-info/METADATA,sha256=T2NtvAFSnEGIlCpTQaCcJ78xDye2u2OWyI21lv_7pGM,2498
+opentelemetry_exception_ext-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+opentelemetry_exception_ext-0.0.1.dist-info/licenses/LICENSE,sha256=pRySM7W-ZKH9rftylyt_BAsvwL9ScBSZ-8bP4Mz_ZZE,1068
+opentelemetry_exception_ext-0.0.1.dist-info/RECORD,,
