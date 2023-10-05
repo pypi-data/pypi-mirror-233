@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "argx"
+version = "0.2.10"
+description = "Super-charged argparse for python"
+authors = ["pwwang <pwwang@pwwang.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.build]
+generate-setup-file = true
+
+[tool.poetry.dependencies]
+python = "^3.7"
+python-simpleconf = "^0.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7"
+pytest-cov = "^4"
+python-simpleconf = {version = "^0.6", extras = ["toml"]}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+allow_redefinition = true
+disable_error_code = ["attr-defined", "no-redef", "union-attr"]
+show_error_codes = true
+strict_optional = false
+
+[tool.pytest.ini_options]
+addopts = "-vv --cov-config=.coveragerc --cov=argx --cov-report xml:.coverage.xml --cov-report term-missing"
+filterwarnings = [
+    #"error"
+]
+console_output_style = "progress"
+junit_family = "xunit1"
+
+[tool.black]
+line-length = 79
+target-version = ['py37', 'py38', 'py39', 'py310']
+include = '\.pyi?$'
