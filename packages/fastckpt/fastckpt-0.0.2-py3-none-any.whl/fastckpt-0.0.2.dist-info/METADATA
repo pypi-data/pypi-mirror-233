@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: fastckpt
+Version: 0.0.2
+Summary: A fast gradient checkpointing strategy for training with memory-efficient attention (e.g., FlashAttention).
+Project-URL: Homepage, https://github.com/RulinShao/fast-ckpt
+Project-URL: Bug Tracker, https://github.com/RulinShao/fast-ckpt/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: fastapi
+Requires-Dist: httpx
+Requires-Dist: markdown2[all]
+Requires-Dist: nh3
+Requires-Dist: numpy
+Requires-Dist: prompt-toolkit >=3.0.0
+Requires-Dist: pydantic <2,>=1
+Requires-Dist: requests
+Requires-Dist: rich >=10.0.0
+Requires-Dist: shortuuid
+Requires-Dist: tiktoken
+Requires-Dist: uvicorn
+Provides-Extra: dev
+Requires-Dist: black ==23.3.0 ; extra == 'dev'
+Requires-Dist: pylint ==2.8.2 ; extra == 'dev'
+Provides-Extra: llm_judge
+Requires-Dist: openai ; extra == 'llm_judge'
+Requires-Dist: anthropic >=0.3 ; extra == 'llm_judge'
+Requires-Dist: ray ; extra == 'llm_judge'
+Provides-Extra: model_worker
+Requires-Dist: accelerate >=0.21 ; extra == 'model_worker'
+Requires-Dist: peft ; extra == 'model_worker'
+Requires-Dist: sentencepiece ; extra == 'model_worker'
+Requires-Dist: torch ; extra == 'model_worker'
+Requires-Dist: transformers >=4.31.0 ; extra == 'model_worker'
+Requires-Dist: protobuf ; extra == 'model_worker'
+Provides-Extra: train
+Requires-Dist: einops ; extra == 'train'
+Requires-Dist: flash-attn >=2.0 ; extra == 'train'
+Requires-Dist: wandb ; extra == 'train'
+Provides-Extra: webui
+Requires-Dist: gradio ; extra == 'webui'
+
+# FastCkpt: fast gradient checkpoint for training with FlashAttention
+
+This is a test repo in development.
