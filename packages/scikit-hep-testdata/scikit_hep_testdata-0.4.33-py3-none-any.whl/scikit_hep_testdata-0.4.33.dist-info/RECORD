@@ -1,0 +1,17 @@
+skhep_testdata/__init__.py,sha256=H7UyUr41CkVDoEj3sxe5eKpuIzm_gFq3x1LEAF-aktM,268
+skhep_testdata/__main__.py,sha256=LBLeMbs8KFCG7my9TDzcyGEC8AaBm2kwAfPMxn8N510,1143
+skhep_testdata/local_files.py,sha256=KtpdvpFjCMoBB1Vl3PNsNnAyezPvB_KZviWf2o5sJJc,2436
+skhep_testdata/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skhep_testdata/remote_datasets.yml,sha256=MVVeEvMzNN6aaO0zePg2cQPNZ9RhNyMFko6i_E29JKc,787
+skhep_testdata/remote_files.py,sha256=tAeWVHwzxFIIF76pN53Wc9k_kMCBnyAiJjgRkFJgp2I,3707
+skhep_testdata/version.py,sha256=hU5Lc2VHguTJCjUi6P3mZoPABM0pyZgiUtJimoRxN2k,413
+skhep_testdata/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skhep_testdata/data/file_list.txt,sha256=GQ2PzA5i109a_nrrxlUxZqpN4SRvDdx1m-q-1_2zCzE,5123
+skhep_testdata/data/pyhf-ins1748602-probability-models.doi,sha256=1AjMI3hAu2YeT_WBbC33DBjxdlpVEZ3HI3CQUk852SQ,45
+scikit_hep_testdata-0.4.33.dist-info/LICENSE,sha256=3FK8r89wh5chLD533IEEr7ZIN7DtxiImKnnnm09mhWU,1535
+scikit_hep_testdata-0.4.33.dist-info/METADATA,sha256=qsUA1Jw1HAek1jeItfScx-Y4k038zxoZFAgpOv5_w5I,13460
+scikit_hep_testdata-0.4.33.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+scikit_hep_testdata-0.4.33.dist-info/entry_points.txt,sha256=3KP8DoTfAJvZ6aY-0aqPLO11FIugZcIPQ4G2iIoAQFQ,115
+scikit_hep_testdata-0.4.33.dist-info/top_level.txt,sha256=yo45_P3HfSJfcr4zJPwWuamnjNu6qJVvWbKQx3AQjRA,15
+scikit_hep_testdata-0.4.33.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+scikit_hep_testdata-0.4.33.dist-info/RECORD,,
