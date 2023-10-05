@@ -1,0 +1,10 @@
+cursesplus/__init__.py,sha256=UYRf15_lOpp9ezTQY-GuFX9ohZmCvOefESeaW3GWH5Y,1061
+cursesplus/cp.py,sha256=yFnxuh7PM2QLNZglwY1qsekRI-GNkuVI6ltBHDW2Q4I,24115
+cursesplus/filedialog.py,sha256=Qf0CRb4JmiZWkvsdfoFntMjlYCWd44P2Nn_BUnPrn8g,21952
+cursesplus/messagebox.py,sha256=nQ529iDzOj4n4krZ4katW1pAYPl5GN6pRUhhF8N-SO4,9323
+cursesplus/transitions.py,sha256=QOjrW2WZDpwW8KaqsVfF4R74nmUL8tVj3y1dBf21mTE,3497
+cursesplus-2.10.2.dist-info/LICENSE,sha256=CbDrth0-grPmkdeCiAaTEwQVhY5WMwRyKHg96lcQY7M,1089
+cursesplus-2.10.2.dist-info/METADATA,sha256=uaPZuNAVB9OpcLPoJtl2CHtRBx9ETOY-2UcCfkRMwSc,1185
+cursesplus-2.10.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cursesplus-2.10.2.dist-info/top_level.txt,sha256=CJZU7eeEIekDlgKYxHGejyPhjsHfVbX0SY8WN4DIm0I,11
+cursesplus-2.10.2.dist-info/RECORD,,
