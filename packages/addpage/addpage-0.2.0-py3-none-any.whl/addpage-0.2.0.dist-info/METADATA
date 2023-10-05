@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: addpage
+Version: 0.2.0
+Summary: `addpage` is a package for adding page number to PDF file.
+Home-page: https://github.com/SaitoTsutomu/addpage
+License: Apache-2.0
+Author: SaitoTsutomu
+Author-email: tsutomu7@hotmail.co.jp
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Dist: pdfformfiller (>=0.4,<0.5)
+Requires-Dist: pypdf2 (==1.26)
+Requires-Dist: reportlab (>=4.0,<5.0)
+Description-Content-Type: text/x-rst
+
+`addpage` is a package for adding page number to PDF file.
+::
+
+   $ addpage -h
+   usage: addpage [-h] [-o OUTFILE] [-n FONT_NAME] [-z FONT_SIZE] [-s START]
+                  [-k SKIP] [-x MARGIN_X] [-y MARGIN_Y]
+                  [-a {center,left,right}] [-f FORMAT]
+                  infile
+   
+   Add page number to PDF file.
+   
+   positional arguments:
+     infile                input PDF file
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -o OUTFILE, --outfile OUTFILE
+     -n FONT_NAME, --font-name FONT_NAME
+     -z FONT_SIZE, --font-size FONT_SIZE
+     -s START, --start START
+     -k SKIP, --skip SKIP
+     -x MARGIN_X, --margin-x MARGIN_X
+     -y MARGIN_Y, --margin-y MARGIN_Y
+     -a {center,left,right}, --alignment {center,left,right}
+     -f FORMAT, --format FORMAT
+
+
+Requirements
+------------
+* Python 3.6 later
+
+Features
+--------
+* nothing
+
+Setup
+-----
+::
+
+   $ pip install addpage
+
+History
+-------
+0.0.1 (2018-9-23)
+~~~~~~~~~~~~~~~~~~
+* first release
+
