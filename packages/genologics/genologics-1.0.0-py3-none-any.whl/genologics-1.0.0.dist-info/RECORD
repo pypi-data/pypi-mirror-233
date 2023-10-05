@@ -1,0 +1,16 @@
+genologics/__init__.py,sha256=QFhwVMHNgRIt6OV31139NiX-zcOfbypfDfyM6gQ_8oc,56
+genologics/config.py,sha256=1X0mEdSSyCqzRQmnkM8Xd_m-cWCdQJjzGEwXMVq7LZw,1893
+genologics/constants.py,sha256=gkVwCzNNYJhejCDnMzOlq_kpKnMzdJUDlwXHKiFtWWQ,2138
+genologics/descriptors.py,sha256=tKGwYH2fZ-ghnUpc97CZx8WQ_kyRMnO4w_IsLPqhRpo,24092
+genologics/entities.py,sha256=an4ZwvxK2n-VcgVa_gpDiAoIBh0gdVuL76ySTD_2ojk,49627
+genologics/epp.py,sha256=wvHWKhQ5r096vp-3uMpF5dboORe06l-ONGRGpaf5iHQ,15708
+genologics/internal_classes.py,sha256=oMXf0-gsrVmAIKG4nA181-_3M1gQ385tiEISASU2_M4,2227
+genologics/lims.py,sha256=xNKwcDdbcY0JFQn4EvzmdiUx-B-gnQd3FU2tbRVrACg,30223
+genologics/lims_utils.py,sha256=CGSp5u-OIk-6KVVaDlyciE58iHjruF5Cbyk08rJyo1Y,2839
+genologics/test_utils.py,sha256=n0FTlEbGfhlZfWpT9eJueb_09r1ZFCYnE9Y1MxUjycs,1870
+genologics/version.py,sha256=xZawFFh80uj7MHMJJXWFcuzkX29fVkHuS5NT5dJMCf8,20
+genologics-1.0.0.dist-info/LICENSE,sha256=j3Flk3DFJo2aHclipGIyVA6PymNGJYbY76qVqrSSogg,1046
+genologics-1.0.0.dist-info/METADATA,sha256=jT6dKSabawNVLnoygUuZny8VLuUPR8knPfRbxeGTLVk,1155
+genologics-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+genologics-1.0.0.dist-info/top_level.txt,sha256=DQLzvZ_cx8NsRDdfj5-DA0DmWJ2959VqW1IzVhKjaCc,11
+genologics-1.0.0.dist-info/RECORD,,

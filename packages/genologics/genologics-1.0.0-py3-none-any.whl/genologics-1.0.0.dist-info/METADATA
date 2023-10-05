@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: genologics
+Version: 1.0.0
+Summary: Python interface to the Illumina Basespace Clarity LIMS (Laboratory Information Management System) server via its REST API.
+Home-page: https://github.com/scilifelab/genologics
+Author: Per Kraulis
+Author-email: per.kraulis@scilifelab.se
+Maintainer: Chuan Wang
+Maintainer-email: chuan.wang@scilifelab.se
+License: MIT
+Keywords: genologics api rest clarity lims illumina
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+License-File: LICENSE
+Requires-Dist: requests
+
+A basic module for interacting with the Illumina Basespace Clarity LIMS server via its REST API.
+                          The goal is to provide simple access to the most common entities and their attributes in a reasonably Pythonic fashion.
