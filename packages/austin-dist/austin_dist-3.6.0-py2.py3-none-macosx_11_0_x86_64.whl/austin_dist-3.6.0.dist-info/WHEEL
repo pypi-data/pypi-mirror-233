@@ -1,0 +1,4 @@
+Wheel-Version: 1.0
+Generator: austin-dist build-wheel.py
+Root-Is-Purelib: false
+Tag: py2.py3-none-macosx_11_0_x86_64
