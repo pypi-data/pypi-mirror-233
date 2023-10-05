@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gfrancodev_glogger.egg-info/PKG-INFO
+gfrancodev_glogger.egg-info/SOURCES.txt
+gfrancodev_glogger.egg-info/dependency_links.txt
+gfrancodev_glogger.egg-info/entry_points.txt
+gfrancodev_glogger.egg-info/requires.txt
+gfrancodev_glogger.egg-info/top_level.txt
