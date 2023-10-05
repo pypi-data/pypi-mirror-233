@@ -1,0 +1,14 @@
+pedon/__init__.py,sha256=6CFx5shFHtnjQPSQwGUpkzKiSlxwyhDz5lr6k4sgtQ8,346
+pedon/_params.py,sha256=L2HiBQyejmMDHOXmTjDpRP5GluN9PDLp_Y50dzVarEw,2850
+pedon/_typing.py,sha256=43g2GLwMRbFxzs06teMxFfm3llNISFoGYOC3o0Gyjao,98
+pedon/_version.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+pedon/soil.py,sha256=F1ff6pwdFIVIttl_MblYe0onUd1rBpEiDq8bUA_3E1s,16321
+pedon/soilmodel.py,sha256=7w5ZlJbTQn6HIltt31oMQZOZ2RcWjHj6YSbpt_q8HUs,10975
+pedon/datasets/Soil_Parameters.xlsx,sha256=AAesDmpQKSb5xLCDraBKICrV9yZoMuFrrN99Vjnw5Xg,15232
+pedon/datasets/Staring_2001.xlsx,sha256=rIfC321aFaitTMczRnHLMEyF3I4z6UJnsjU6g_rDafk,25888
+pedon/datasets/Staring_2018.xlsx,sha256=oZ_TshNinmLnB-o_uHZpdAM7TrhAmNc14wxE-UFxJ6M,18413
+pedon-0.0.4.dist-info/LICENSE,sha256=wfMqmuEErCqlTxZZWvNT253wsdWe0GwqwvvGJ7zruPI,1068
+pedon-0.0.4.dist-info/METADATA,sha256=98K8Hw58UvN2unRtOD9Eg88fBoImtTcd-sTDolUYK4o,6162
+pedon-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pedon-0.0.4.dist-info/top_level.txt,sha256=8khIEW4iPxnOa_HOyC74EnR1V31fzY72vo7wZpuq6Kg,6
+pedon-0.0.4.dist-info/RECORD,,
