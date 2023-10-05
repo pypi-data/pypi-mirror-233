@@ -1,0 +1,26 @@
+[build-system]
+requires = [
+    "setuptools >= 51",
+    "setuptools_scm[toml] >= 5",
+    "wheel >= 0.36",
+]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+write_to = "src/jomiel_messages/__init__.py"
+write_to_template = "__version__ = {version!r}"
+
+[tool.black]
+target-version = ['py38']
+line-length = 72
+exclude = '''
+(
+    /(
+        \.eggs
+        \.git
+        \.tox
+        build
+        dist
+    )/
+)
+'''
