@@ -1,0 +1,49 @@
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  deploy-to-cloud-run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v3
+      
+      - id: 'auth'
+        name: 'Authenticate with Google Cloud'
+        uses: google-github-actions/auth@v0.5.0
+        with:
+          workload_identity_provider: projects/308449306617/locations/global/workloadIdentityPools/github-explore-deployment/providers/github-actions
+          service_account: explore-deployment@visium-brain-dev.iam.gserviceaccount.com
+      
+      - name: 'Set up Cloud SDK'
+        uses: google-github-actions/setup-gcloud@v0.3.0
+
+      - name: 'Build a docker image'
+        run: |
+          docker build -t gcr.io/visium-brain-dev/explore-${{ inputs.environment }}:latest .
+          
+      - name: 'Configure Docker to use the gcloud command-line tool as a credential helper'
+        run: |
+          gcloud auth configure-docker
+
+      - name: 'Push the docker image to Google Container Registry'
+        run: |
+          docker push gcr.io/visium-brain-dev/explore-${{ inputs.environment }}:latest
+
+      - name: 'Deploy to Cloud Run'
+        run: |
+          gcloud run deploy explore-${{ inputs.environment }} \
+            --image gcr.io/visium-brain-dev/explore-${{ inputs.environment }}:latest \
+            --platform managed \
+            --allow-unauthenticated \
+            --region europe-west6 \
+
+          
+    
