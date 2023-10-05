@@ -1,0 +1,6 @@
+/venv*
+.DS_Store
+.pypirc
+*build/
+*dist/
+*hapi_schema.egg-info/
