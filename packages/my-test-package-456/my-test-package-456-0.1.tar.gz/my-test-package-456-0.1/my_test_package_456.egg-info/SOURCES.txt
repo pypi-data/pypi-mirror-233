@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pypi_setup.py
+my_test_package_456.egg-info/PKG-INFO
+my_test_package_456.egg-info/SOURCES.txt
+my_test_package_456.egg-info/dependency_links.txt
+my_test_package_456.egg-info/top_level.txt
+test_package_kNzQoY/__init__.py
