@@ -1,0 +1,9 @@
+KratosMultiphysics/.libs/KratosCSharpWrapperApplication.cpython-38-x86_64-linux-gnu.so,sha256=QUnI4t_wGxZvHR5RZ968-Iw3YcLnyFlv1BtJqMkeARA,1542633
+KratosMultiphysics/.libs/libKratosCSharpWrapperCore.so,sha256=BN9pxVb-_1KBUCI0PjEibj2T8U0tMVzvjjhjbHP1KsU,5399553
+KratosMultiphysics/CSharpWrapperApplication/__init__.py,sha256=IHJ_xbWBRdO8NqQshij80YDJwYavnGUzqi7Db3IBcks,302
+KratosCSharpWrapperApplication-9.4.1.dist-info/METADATA,sha256=9GKJunSZUcg4Y1nGY5mAdMeS6Hunjoto1X2jXucmytA,1359
+KratosCSharpWrapperApplication-9.4.1.dist-info/WHEEL,sha256=82Wkr2Lag2dORBGM375Z9_JVKxb2Fhvp7wOacHsh7mU,148
+KratosCSharpWrapperApplication-9.4.1.dist-info/top_level.txt,sha256=8Ov--opRCptLbHStjyiZUVpzN1OUU_F7c7fGmsR5cMc,19
+KratosCSharpWrapperApplication-9.4.1.dist-info/RECORD,,
+KratosCSharpWrapperApplication.libs/libKratosCSharpWrapperCore-f7fcdef8.so,sha256=lJnjLt-QXGieo4Ry0e9jahMEWjQxNvQym1AMrhyNLZI,5890441
+KratosCSharpWrapperApplication.libs/libKratosStructuralMechanicsCore-dcf6a393.so,sha256=3snxwcxYhtlVYQ1E7o7a8c18CYpFaNNlZWbvTdVUoBc,24680529
