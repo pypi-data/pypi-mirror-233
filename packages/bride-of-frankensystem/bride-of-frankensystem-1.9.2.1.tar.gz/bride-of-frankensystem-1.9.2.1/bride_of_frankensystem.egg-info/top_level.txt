@@ -1,0 +1,3 @@
+BOFS
+build
+dist
