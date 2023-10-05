@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: eeclass-bot
+Version: 0.0.2
+Summary: EECLASS 爬蟲API機器人
+Home-page: https://github.com/quan0715/EECLASS_Notion_API/
+Author: Quan
+Author-email: quan787887@gmail.com
+License: license.txt
+Platform: UNKNOWN
+License-File: LICENCE.txt
+Requires-Dist: requests >=2.18.4
+Requires-Dist: beautifulsoup4 >=4.9.3
+Requires-Dist: fake-user-agent >=2.1.8
+Requires-Dist: aiohttp >=3.8.3
+
+UNKNOWN
+
