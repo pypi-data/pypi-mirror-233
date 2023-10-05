@@ -1,0 +1,5 @@
+[App]
+App = toolboxv2.toolboxv2:App
+
+[console_scripts]
+toolboxv2 = toolboxv2.cli:main
