@@ -1,0 +1,16 @@
+seaplane_framework/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seaplane_framework/cli/__main__.py,sha256=Y8ktrIJ8TZAh-4wxKUj_e3Xr7tMm_Yny56EspGA2Ul0,79
+seaplane_framework/cli/auth.py,sha256=2XZo1q1hlMuyma4EhMI82WbsNaYEU6Y7HqMHAA9l6S0,990
+seaplane_framework/cli/command.py,sha256=J9euJLXFkdjTv3_Mtz24PQVf9tCJ_5FFPaSQ0UVCE-c,3812
+seaplane_framework/cli/endpoints.py,sha256=JL45-LdAjc_7aeLE7vIxrzKqiWZBzhH0FddgQn_SLzg,2599
+seaplane_framework/cli/flows.py,sha256=vIveZZNvT_iDUYMH6qXyDgadua-iiMlNSEcgx-3lggc,9970
+seaplane_framework/cli/kv.py,sha256=fmAdRjOosaumTok8tJd54mrzDby5iCwT1xyCJ1kayjQ,7800
+seaplane_framework/cli/objects.py,sha256=qGAHma8cjSGwInNzUydNfU0K5o8eSS-T7VaDgDWMJGE,9109
+seaplane_framework/cli/streams.py,sha256=JEpu1fBss5O5FsCZMX97BWeCUKtYNuLirxbkHx5x2Yw,3536
+seaplane_framework/cli/util.py,sha256=EtKA6yt-ql-1FfshJrw4BsbN3wsFrqHppC4muKPJwa4,2850
+seaplane_framework.cli-0.0.16.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+seaplane_framework.cli-0.0.16.dist-info/METADATA,sha256=aZQj6NJ0f9JzgADITzIcVcRL-xGjQJpDTwWbOWXU5zw,566
+seaplane_framework.cli-0.0.16.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+seaplane_framework.cli-0.0.16.dist-info/entry_points.txt,sha256=LZPrrB_PNoOtUoNItE8-a5kWFar8ZxhcM6P_knJNGwo,61
+seaplane_framework.cli-0.0.16.dist-info/top_level.txt,sha256=MXsrsb762m_hRgBq6kGb16KRA4r9IHB2klucXcNjUYk,19
+seaplane_framework.cli-0.0.16.dist-info/RECORD,,
