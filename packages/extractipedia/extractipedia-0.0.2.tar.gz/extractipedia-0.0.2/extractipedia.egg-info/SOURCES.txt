@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+extractipedia/CheckDatabase.py
+extractipedia/Extraction.py
+extractipedia/__init__.py
+extractipedia/utils.py
+extractipedia.egg-info/PKG-INFO
+extractipedia.egg-info/SOURCES.txt
+extractipedia.egg-info/dependency_links.txt
+extractipedia.egg-info/requires.txt
+extractipedia.egg-info/top_level.txt
