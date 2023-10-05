@@ -1,0 +1,16 @@
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/defaults/main.yaml,sha256=m_HHqBIN3UiLb9CUDbgjaYjEI7mu8691wx_IBHADCbI,212
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/files/add_ips.py,sha256=ioNM9zStz03_gVp1lfE2qPYYqWk5sQrsC9cMX4K4mLk,4906
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/meta/main.yaml,sha256=CEMX9aRHcG4BRi4kQd67FUjBy8YiaBW-nZN_h3b0C28,187
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/tasks/client.yaml,sha256=ayFWKUcO_e_WObUJDHicY6EykpeRXbwgqnbAYOMJzcw,3222
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/tasks/client_enroll.yaml,sha256=P9tCKd-N9jsYo0-_e2USzmKunhJDgNcARACQg4LWvIo,389
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/tasks/main.yaml,sha256=HgM1d4lU4vn-Yk2SUqhzWNDi1ZnV5JPOef9ESnemAj8,511
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/tasks/rfs.yaml,sha256=2Mt8V_ZuUPU144Jld819ptsU-OpI1MDDx552V_No99E,352
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/tasks/rfs_register_client.yaml,sha256=u-IGzyFdM6cBqyjuynPw46jkqQ8xlWzkFJIh5lyZjac,917
+ansible_role_thales_hsm-6.0.0.data/data/share/ansible/roles/thales_hsm/templates/cknfastrc.j2,sha256=A_59Jl2sW896KM9s2F_Hbn-ML3xSNsrcpbGh2_Qz9QU,117
+ansible_role_thales_hsm-6.0.0.dist-info/AUTHORS,sha256=HdIkGuU8XCSIL2RVgFeoe4hxfmDbtdooOtqTOAbyog0,68
+ansible_role_thales_hsm-6.0.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ansible_role_thales_hsm-6.0.0.dist-info/METADATA,sha256=VzNQCpO3qAgc1PlposOAVVWw_FH5J3GhG7TrMWJJdDg,2865
+ansible_role_thales_hsm-6.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+ansible_role_thales_hsm-6.0.0.dist-info/pbr.json,sha256=dA6OpUsypZHe344dPL7eGD4MmZnMR96fPXPqPcG0DC4,46
+ansible_role_thales_hsm-6.0.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ansible_role_thales_hsm-6.0.0.dist-info/RECORD,,
