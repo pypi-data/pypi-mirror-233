@@ -1,0 +1,3 @@
+[console_scripts]
+xmon = xnode.xmon:main
+xnode = xnode.xnode:main
