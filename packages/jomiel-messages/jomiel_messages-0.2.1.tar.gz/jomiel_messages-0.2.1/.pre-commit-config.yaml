@@ -1,0 +1,41 @@
+---
+repos:
+    - repo: https://github.com/markdownlint/markdownlint
+      rev: v0.11.0
+      hooks:
+          - id: markdownlint
+    # NOTE: See also .mdlrc and .mdlstyle.rb files
+    - repo: https://github.com/asottile/pyupgrade
+      rev: v2.19.1
+      hooks:
+          - id: pyupgrade
+            args: [--py36-plus]
+    - repo: https://github.com/asottile/reorder_python_imports
+      rev: v2.5.0
+      hooks:
+          - id: reorder-python-imports
+    - repo: https://github.com/asottile/add-trailing-comma
+      rev: v2.1.0
+      hooks:
+          - id: add-trailing-comma
+            args: [--py36-plus]
+    - repo: https://github.com/psf/black
+      rev: 21.5b2
+      hooks:
+          - id: black
+            args: [--safe]
+            language_version: python3.8
+    - repo: https://github.com/pycqa/flake8
+      rev: 3.9.2
+      hooks:
+          - id: flake8
+            additional_dependencies:
+                - flake8-implicit-str-concat == 0.1.0
+                - flake8-bugbear == 20.1.4
+            language_version: python3.8
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.0.1
+      hooks:
+          - id: fix-byte-order-marker
+          - id: check-yaml
+          - id: check-toml

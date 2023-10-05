@@ -1,0 +1,14 @@
+
+global-exclude __pycache__
+global-exclude .gitignore
+global-exclude *.py[cod]
+
+prune src/jomiel_messages/proto/
+prune patches/
+prune build/
+prune bin/
+
+recursive-include src/jomiel_messages/protobuf *_pb2.py
+
+include CHANGES.md
+include .mdl*
