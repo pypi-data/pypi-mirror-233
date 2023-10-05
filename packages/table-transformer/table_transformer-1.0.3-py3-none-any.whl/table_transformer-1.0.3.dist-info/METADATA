@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: table-transformer
+Version: 1.0.3
+Summary: Table Transformer
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: onnxruntime (~=1.14.1)
+Requires-Dist: torchvision (~=0.15.2)
+Requires-Dist: numpy (~=1.24)
+Requires-Dist: pandas (==1.5.3)
+Requires-Dist: torch (~=2.0.1)
+Requires-Dist: matplotlib (~=3.7.2)
+Requires-Dist: seaborn (~=0.12.0)
+Requires-Dist: PyMuPDF (==1.21.1)
+Requires-Dist: scikit-image (==0.20.0)
+Requires-Dist: pathlib (~=1.0.1)
+Requires-Dist: pycocotools (~=2.0.7)
+Requires-Dist: editdistance (==0.6.2)
+Requires-Dist: scipy (~=1.11.2)
+Requires-Dist: Cython (==0.29.33)
+Requires-Dist: packaging (~=23.1)
+Requires-Dist: tqdm (==4.65.0)
+Requires-Dist: Pillow (~=9.5.0)
+Requires-Dist: wheel (~=0.40.0)
+Requires-Dist: easyocr (~=1.7.1)
+
+# Table Transformer Library
+
+Original repository: https://github.com/microsoft/table-transformer
+
+## Introduction
+This is the Table Transformer Model developed by Brandon Smock et al. of Microsoft AI. This repository consists of **Table Structure Recognition (TATR)** for detecting and extracting table infomation into popular formats such as CSV or HTML table, plus text recognition using EasyOCR.
+
+## Installation
+```
+pip install table-transformer
+```
+
+## Usage
+
+The full model usage can be found here:
+
+```
+from table_transformer import (TableExtractionPipeline,
+                               get_structure_class_thresholds,
+                               visualize_cells)
+from PIL import Image
+from easyocr import Reader
+
+# Get the structure class thresholds
+structure_class_threshold = get_structure_class_thresholds(
+    table=0.5,
+    table_column=0.5,
+    table_row=0.5,
+    table_column_header=0.5,
+    table_projected_row_header=0.5,
+    table_spanning_cell=0.5,
+    no_object=10
+    )
+
+# Initiliaze EasyOCR
+reader = Reader(['en'], gpu=False)
+
+# Initialize the Pipeline with the thresholds
+table_transformer = TableExtractionPipeline(
+    structure_class_thresholds=structure_class_threshold,
+    model_path = "TATR-v1.1-All-msft.onnx",
+    ocr_model=reader)
+
+# Open the table image in PIL.Image format
+directory = "image.png"
+
+img = Image.open(directory)
+# Run the pipeline
+result = table_transformer(
+    page_image=img,
+    out_cells=True,
+    out_csv=False,
+    out_html=True)
+
+# Print the result
+#print(result["objects"][0])
+# print(result["cells"][0])
+#print(result["html"][0])
+# print(result["csv"][0])
+
+# Visualize the result as Matplotlib plot and return the figure
+visualize = visualize_cells(img=img, cells=result["cells"][0], show_plot=False)
+#print(type(visualize)) # PIL.Image.Image
+print("Test successful!")
+```
+
+
+## Evaluation
+
+With structure recognition, the original author has evaluated the v1.0 model on PubTables-1M with great results. With other datasets such as PubTabNet, the score is quite good.
+
+You can check out the score and run the evaluation with your own dataset in [this](https://colab.research.google.com/drive/1-1yRr9djVi5OxITrSf3iZsg__MNE5hN5?usp=sharing) link.
+
+## Version history
+- v1.0.3: Removed unnecessary code and added new functionalities.
+- v1.0.2: Initial version.

@@ -1,0 +1,19 @@
+table_transformer/__init__.py,sha256=fjMj3843HbRbsAxaTH_0TpaqVeD3TW2ZxMFjSfEvPNA,172
+table_transformer/main.py,sha256=zpamMpACiJkNhzkX6OatweefmEinOBxuPxVV8WGDxJA,5630
+table_transformer/.idea/.gitignore,sha256=4uN-1gxQ2OQcQqqfNQVkKl8WieZ_trx_6KBtqwmg-pY,50
+table_transformer/.idea/Table Transformers.iml,sha256=kioKaaYgG-aKnFfiYSCraAsBJk_fUWGxp83nTlcrFIs,556
+table_transformer/.idea/misc.xml,sha256=wlpuoL1X9hx1xCU5acgCA9-2FUaoZ4E23keU6KDdGfo,189
+table_transformer/.idea/modules.xml,sha256=f6m1ejDa0qqvK2hTmQdv1DQIKYu2L7-GyKGgvqjsamo,295
+table_transformer/.idea/workspace.xml,sha256=-VEMvus9wdszI-Shov7Rz0uusw9au_LLYxbzzgiCBr4,1643
+table_transformer/.idea/inspectionProfiles/Project_Default.xml,sha256=PzJXoP3W3aV9alsvMMhZOl_5mQcINcvKyidp1UGRspo,1307
+table_transformer/.idea/inspectionProfiles/profiles_settings.xml,sha256=YXLFmX7rPNGcnKK1uX1uKYPN0fpgskYNe7t0BV7cqkY,174
+table_transformer/__pycache__/__init__.cpython-310.pyc,sha256=D3_Ns1xmSnijLeIB7Wjn5jefYH6ixZX7r8aSYWAzjAs,363
+table_transformer/__pycache__/main.cpython-310.pyc,sha256=DsnAaiZtoebV4RHQpLZiHUEbld9Fpl721W4rMFw1O0E,4343
+table_transformer/engine/__init__.py,sha256=8ZolWYHJQC6EQ_5-IB0tOFG-aA67Xq3jI4Snr3P7kas,70
+table_transformer/engine/inference.py,sha256=W9pp5_YZrnu02PmIbs-dzA_cu0gkRobt1HMJ-kEaF-I,28507
+table_transformer/engine/postprocess.py,sha256=LtdrbQytY0Wy50YAAB2srXTYHvB1n8wI2crSqzlTqIg,39626
+table_transformer-1.0.3.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+table_transformer-1.0.3.dist-info/METADATA,sha256=fM53YrIJTss-vvIaxtS_g2Rj5UNxqwtgFnC8QGBVYoc,3396
+table_transformer-1.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+table_transformer-1.0.3.dist-info/top_level.txt,sha256=HUVjh0ugf9oAUTpckCGKJ96_dqFAenjSftZs8DGdmeg,18
+table_transformer-1.0.3.dist-info/RECORD,,
