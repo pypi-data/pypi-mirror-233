@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: streamlit-text-component
+Version: 0.0.1
+Summary: Streamlit component that allows you to do X
+Home-page: 
+Author: 
+Author-email: 
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
