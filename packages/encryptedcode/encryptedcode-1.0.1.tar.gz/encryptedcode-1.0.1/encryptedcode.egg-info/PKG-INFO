@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: encryptedcode
+Version: 1.0.1
+Summary: This library can be used to encrypt and decrypt passwords using a new L0123 algorithm.
+Home-page: https://github.com/leoGlez01/password_encode.git
+Author: Leandro Gonzalez Espinosa
+Author-email: lworkgonzalez01@gmail.com
+License: MIT
+Keywords: encrypt,encode
+Description-Content-Type: text/markdown
+
+# New Encoding Algorithm
+
+### This package is imported absolutely in your .py files, for example: 'import example_package', and contains two functions, one for encoding called encode() and another for decoding called decode() using the new L0123 algorithm created by Ing Software Leandro Gonzalez Espinosa
