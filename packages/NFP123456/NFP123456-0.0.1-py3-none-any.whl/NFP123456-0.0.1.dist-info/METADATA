@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: NFP123456
+Version: 0.0.1
+Summary: a package that will create NFP for two Polygons
+Home-page: UNKNOWN
+Author: Radin Sign Factory
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+UNKNOWN
+
