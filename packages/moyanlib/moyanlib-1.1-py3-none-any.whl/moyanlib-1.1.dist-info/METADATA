@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: moyanlib
+Version: 1.1
+Summary: A description of your package.
+Author: MoYan
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+
