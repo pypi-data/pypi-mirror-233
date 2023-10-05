@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+serunaiAutomation/__init__.py
+serunaiAutomation/convert_ide.py
+serunaiAutomation/serunaiAutomate.py
+serunaiAutomation.egg-info/PKG-INFO
+serunaiAutomation.egg-info/SOURCES.txt
+serunaiAutomation.egg-info/dependency_links.txt
+serunaiAutomation.egg-info/entry_points.txt
+serunaiAutomation.egg-info/requires.txt
+serunaiAutomation.egg-info/top_level.txt
