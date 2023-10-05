@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: stdf-tamer
+Version: 1.0.18
+Summary: a stdf reader/writer/analyser/converter and robotframework library
+Keywords: STDF ATE
+Author: Labor DC jona
+Author-Email: Franz Haas <franz.haas@ams-osram.com>, Roman Steiner <roman.steiner@ams-osram.com>
+License: apache 2.0
+Project-URL: Homepage, https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+Project-URL: Repository, https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+Project-URL: Documentation, https://labor-rapperswil-jona.git-pages.ams-osram.info/ams-tamer/index.html
+Requires-Python: >=3.6.0
+Requires-Dist: construct
+Requires-Dist: docopt
+Requires-Dist: rich
+Requires-Dist: dataclasses>=0.8; python_version < "3.7"
+Requires-Dist: importlib_metadata<=1.4; python_version < "3.8"
+Requires-Dist: robotframework>=6.1.1; extra == "robotframework"
+Requires-Dist: polars>=0.18.15; python_version >= "3.8" and extra == "robotframework"
+Requires-Dist: xlsx2csv; extra == "robotframework"
+Requires-Dist: polars>=0.18.15; python_version >= "3.8" and extra == "file_formats"
+Requires-Dist: XlsxWriter>=3.1.2; python_version >= "3.8" and extra == "file_formats"
+Requires-Dist: xlsx2csv>=0.8.1; python_version >= "3.8" and extra == "file_formats"
+Provides-Extra: robotframework
+Provides-Extra: file_formats
+Description-Content-Type: text/markdown
+
+## stdf tamer
+This package was originally developed at DC Jona / ams-OSRAM.
+
+It is a general purpose stdf file parser / generator / simulator / analyser and converter.
+
+But mainly it is used for these use cases.:
+
+ - write STDF files from robotframework test cases
+ - analyse STDF file content
+ - convert STDF files to other file formats
+
+Source.:
+https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+
+Documentation.:
+https://labor-rapperswil-jona.git-pages.ams-osram.info/ams-tamer/index.html
+
+
+# Tips and tricks
+
+## Speed
+
+In order to speed up conversion of STDF files to other file formats use 2 stdf-tamer installations.
+
+parse the stdf file using stdf-tamer on pypy, and create a pickle file (polars is not suported on pypy)
+convert the pickle into the desired file format using stdf-tamer and CPython
+

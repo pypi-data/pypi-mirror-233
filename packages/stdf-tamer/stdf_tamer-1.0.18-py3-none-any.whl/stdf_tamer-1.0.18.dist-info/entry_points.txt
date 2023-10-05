@@ -1,0 +1,8 @@
+[console_scripts]
+pickleconvert = ams_rw_stdf.pickleconvert:main
+stdfanalyse = ams_rw_stdf.stdfanalyser:main
+stdfanalyser_for_win_context = ams_rw_stdf.stdfanalyser_for_win_context:main
+stdfconvert = ams_rw_stdf.converter:main
+stdfconvertdir = ams_rw_stdf.convdir:main
+stdfrerunwithnewlimits = ams_rw_stdf.simulator:main
+
