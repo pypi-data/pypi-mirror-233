@@ -1,0 +1,11 @@
+selenium
+beautifulsoup4
+slugify
+tempfile
+requests
+json
+datetime
+random
+urllib
+ssl
+logger
