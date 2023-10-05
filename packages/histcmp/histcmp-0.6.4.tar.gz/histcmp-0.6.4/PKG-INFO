@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: histcmp
+Version: 0.6.4
+Summary: 
+License: MIT
+Author: Paul Gessinger
+Author-email: hello@paulgessinger.com
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Jinja2 (>=3.0.3,<4.0.0)
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: click (>=8.1.4,<9.0.0)
+Requires-Dist: hist[plot] (>=2.6.0,<3.0.0)
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0)
+Requires-Dist: mplhep (>=0.3.26,<0.4.0)
+Requires-Dist: numpy (>=1.25.0,<2.0.0)
+Requires-Dist: pandas (>=2.0.3,<3.0.0)
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: rich (>=13.4.2,<14.0.0)
+Requires-Dist: scipy (>=1.9.1,<2.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Requires-Dist: wasabi (>=0.9.0,<0.10.0)
