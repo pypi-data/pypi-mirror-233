@@ -1,0 +1,160 @@
+<head>
+<meta charset="utf-8">
+<title>gl2f local files</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+table{
+	margin:0;
+	border-collapse:collapse;
+}
+
+th{
+	padding-top:8px;
+	padding-bottom:8px;
+	position: sticky;
+	top:0;
+	background: lightcoral;
+}
+
+td{
+	padding: 4px 4px;
+	background: lavenderblush;
+}
+
+tr:nth-child(odd) td{
+	background: white;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header style="justify-content: left;">
+	<span id='columns'></span>
+	<div style='margin-left:8px;'>
+		<select id=filter_board onchange="draw()"></select>
+		<select id=filter_author onchange="draw()"></select>
+	</div>
+	<div id='hostname' style="display: flex; justify-content: right; margin-top: 2px; margin-left: auto;"></div>
+</header>
+
+<main>
+	<table>
+		<thead id='thead'></thead>
+		<tbody id='tbody'></tbody>
+	</table>
+</main>
+
+
+<script src="index.js"></script>
+<script src="constants.js"></script>
+<script type="text/javascript">
+const f = {
+	ID:{
+		data:(k, v)=>`<a href='./contents/${k}'>${k}</a>`
+	},
+	Date:{
+		key:'date',
+		data:(k, v)=>`${new Date(v['date']).toLocaleDateString('ja-JP')}`,
+	},
+	Expired:{
+		key:'expired',
+		data:(k, v)=> v['expired']? new Date(v['expired']).toLocaleDateString('ja-JP') : ""
+	},
+	Page:{
+		key:'board',
+		data:(k, v)=>`<a href='https://girls2-fc.jp/page/${v['board']}/${k}' target='_blank'>${v['board']}</a>`,
+	},
+	Author:{
+		key:'author',
+		data:(k, v)=>`<center style="white-space: nowrap">${v['author']}`,
+	},
+	Title:{
+		key:'title',
+		data:(k, v)=>['girls2radio', 'lucky2radio', 'wallpaper', 'commercialmovie', 'gtube'].includes(v['board'])?
+			`<a href=album.html?${k}>${v['title']}</a>`
+			: `<a href=article.html?${k}>${v['title']}</a>&nbsp;/&nbsp;<a href=album.html?${k}>Album</a>`,
+	},
+};
+
+const keys = Object.keys(f);
+
+var sort_state = {
+	key:'date',
+	order:-1
+};
+
+
+function filter(table, key){
+	const b = document.getElementById(`filter_${key}`).value;
+	if(b == 'all') return table;
+	else return Object.fromEntries(Object.entries(table).filter(([k, v])=>v[key]==b));
+}
+
+function sort(table, key, order){
+	const lower = (s)=>String(s).toLowerCase();
+	const entries = Object.entries(table)
+		.sort(([kl, vl], [kr, vr])=>lower(vl[key])<lower(vr[key])?-order:order);
+	return Object.fromEntries(entries);
+}
+
+
+function draw(){
+	const columns = keys.filter(k=>document.getElementById(`col_${k}`).checked);
+	document.getElementById('thead')
+	.innerHTML = '<tr>'
+		+ columns.map(c=>`<th><div class="buttonlike" id=thead_${c}>${c}&thinsp;${f[c].key==sort_state.key?(sort_state.order==1?'↑':'↓')+'&ensp;':'↑↓'}</div></th>`).join('')
+		+ '</tr>';
+	columns.forEach((c)=>{
+		document.getElementById(`thead_${c}`).onclick = ()=>{
+			if (sort_state.key == f[c].key)
+				sort_state.order *= -1;
+			else{
+				sort_state.key = f[c].key;
+				sort_state.order = 1;
+			}
+			draw();
+		};
+	});
+
+	document.getElementById('tbody').innerHTML = Object.entries(
+		sort(filter(filter(table, 'board'), 'author'), sort_state.key, sort_state.order)
+	).map(([k, v])=>'<tr>'
+		+ columns.map((c)=>`<td>${f[c].data(k, v)}</td>`).join('')
+		+ '</tr>'
+	).join('');
+};
+
+
+document.title = `${hostname}/gl2f`;
+
+document.getElementById('hostname').innerHTML = `<div style="font-size:10;">hosted on&nbsp;</div><div style="font-weight: bold; font-size:14;">${hostname}</div>`;
+
+document.getElementById('columns').innerHTML = keys.map(
+	k=>`<label class=buttonlike><input id=col_${k} class=buttonlike type='checkbox' checked>${k}</label>`
+).join('');
+
+document.getElementById('col_ID').checked = false;
+document.getElementById('col_Expired').checked = false;
+
+keys.map(k=>document.getElementById(`col_${k}`))
+.forEach(b=>b.addEventListener('change', draw));
+
+
+document.getElementById('filter_board').innerHTML = '<option value=all>page / all</option>'
+	+	[...new Set(Object.values(table).map(v=>v['board']))].sort()
+	.map(b=>`<option value=${b}>${b}</option>`).join('');
+
+document.getElementById('filter_author').innerHTML = '<option value=all>author / all</option>'
+	+ [...new Set(Object.values(table).map(v=>v['author']))]
+	.sort().map(a=>`<option value=${a}>${a}</option>`).join('');
+
+draw();
+</script>
+
+</body>

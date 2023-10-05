@@ -1,0 +1,9 @@
+*__pycache__
+build/
+*.egg-info
+*.json
+.DS_Store
+dist/
+*.spec
+venv
+gl2f/__version__.py
