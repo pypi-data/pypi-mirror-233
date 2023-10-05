@@ -1,0 +1,12 @@
+fastapi
+pydantic
+requests
+uvicorn
+argparse
+pyjwt
+tiktoken
+llama-cpp-python
+python-dotenv
+GPUtil
+psutil
+beautifulsoup4
