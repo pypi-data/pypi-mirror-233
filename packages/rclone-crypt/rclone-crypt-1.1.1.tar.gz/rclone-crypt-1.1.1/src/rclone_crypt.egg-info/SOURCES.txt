@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/rclone/__init__.py
+src/rclone/eme.py
+src/rclone/file_cipher.py
+src/rclone/name_cipher.py
+src/rclone/util.py
+src/rclone_crypt.egg-info/PKG-INFO
+src/rclone_crypt.egg-info/SOURCES.txt
+src/rclone_crypt.egg-info/dependency_links.txt
+src/rclone_crypt.egg-info/requires.txt
+src/rclone_crypt.egg-info/top_level.txt
+tests/test_deobscure.py
+tests/test_file_cipher.py
+tests/test_name_cipher.py
+tests/test_util.py
