@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/electoral_system_analysis/__init__.py
+src/electoral_system_analysis/clean_electoral_data.py
+src/electoral_system_analysis/distribution_formulas.py
+src/electoral_system_analysis/distribution_regions.py
+src/electoral_system_analysis.egg-info/PKG-INFO
+src/electoral_system_analysis.egg-info/SOURCES.txt
+src/electoral_system_analysis.egg-info/dependency_links.txt
+src/electoral_system_analysis.egg-info/requires.txt
+src/electoral_system_analysis.egg-info/top_level.txt
+src/tests/__init__.py
+src/tests/test_distribution_formulas.py
+src/tests/test_distribution_regions.py
