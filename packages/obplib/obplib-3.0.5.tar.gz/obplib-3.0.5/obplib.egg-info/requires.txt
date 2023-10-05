@@ -1,0 +1,4 @@
+click
+grpcio
+protobuf
+svg.path==3.0

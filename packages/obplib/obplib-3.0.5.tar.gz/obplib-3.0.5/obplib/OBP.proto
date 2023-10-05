@@ -1,0 +1,111 @@
+// SPDX-FileCopyrightText: 2018,2019,2020 Freemelt AB
+//
+// SPDX-License-Identifier: Apache-2.0
+
+syntax = "proto3";
+import "google/protobuf/any.proto";
+
+option csharp_namespace = "Openmelt.OBPprotobuf";
+
+package OBPprotobuf;
+
+// Metadata
+
+message Metadata {
+  map<string, string> attributes = 1;
+}
+
+// Scanning
+
+message BeamParameters {
+  float spot_size = 1;		// unit: µm
+  float beam_power = 2;		// unit: W
+}
+
+message Line {
+  BeamParameters params = 1;
+  double x0 = 2;		// unit: µm
+  double y0 = 3;		// unit: µm
+  double x1 = 4;		// unit: µm
+  double y1 = 5;		// unit: µm
+  uint64 speed = 6;		// unit: µm/s
+}
+
+message TimedPoints {
+  BeamParameters params = 1;
+  message TimedPoint {
+    double x = 1;		// unit: µm
+    double y = 2;		// unit: µm
+    uint32 t = 3;		// unit: ns (0 = previous time)
+  }
+  repeated TimedPoint points = 2;
+}
+
+message Curve {			// cubic Bézier curve
+  BeamParameters params = 1;
+  message Point {
+    double x = 1;		// unit: µm
+    double y = 2;		// unit: µm
+  };
+  Point p0 = 2;
+  Point p1 = 3;
+  Point p2 = 4;
+  Point p3 = 5;
+  uint64 speed = 6;		// unit: µm/s
+}
+
+// Like a line, but with an initial and final speed.
+message AcceleratingLine {
+  BeamParameters params = 1;
+  double x0 = 2;		// unit: µm
+  double y0 = 3;		// unit: µm
+  double x1 = 4;		// unit: µm
+  double y1 = 5;		// unit: µm
+  uint64 si = 6;		// unit: µm/s
+  uint64 sf = 7;		// unit: µm/s
+}
+
+// Like a Curve, but wiht an initial and final speed. Support in
+// FieldConstruct is experimental.
+message AcceleratingCurve {	// cubic Bézier curve
+  BeamParameters params = 1;
+  Curve.Point p0 = 2;
+  Curve.Point p1 = 3;
+  Curve.Point p2 = 4;
+  Curve.Point p3 = 5;
+  uint64 si = 6;		// unit: µm/s
+  uint64 sf = 7;		// unit: µm/s
+}
+
+// Restore defaults (undo the setup commands and zero digital lines)
+message Restore {
+}
+
+// Synchronization points
+message SyncPoint {
+  // The name of a digital line. These are user-defined and specific
+  // to the machine configuration.
+  string endpoint = 1;
+  bool value = 2;        // True = HIGH, False = LOW
+  // Time that the sync will have the value and after which it will
+  // return to the opposite value (0 = keep until changed)
+  float duration = 3;    // unit: ms
+}
+
+// The main message type in the protocol. On the wire these are
+// prefixed by the message length as a varint32.
+message Packet {
+  oneof payload {
+    // Scanning
+    Line line = 10;
+    TimedPoints timed_points = 11;
+    Curve curve = 12;
+    AcceleratingLine accelerating_line = 13;
+    AcceleratingCurve accelerating_curve = 14;
+    // Miscellaneous
+    Restore restore_defaults = 21;
+    Metadata metadata = 22;
+    google.protobuf.Any vendor_setup = 23;
+    SyncPoint sync_point = 24;
+  }
+}
