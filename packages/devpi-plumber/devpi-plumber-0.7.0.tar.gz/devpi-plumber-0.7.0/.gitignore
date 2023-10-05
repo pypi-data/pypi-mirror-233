@@ -1,0 +1,13 @@
+*.egg
+.eggs
+*.egg-info
+.idea
+.coverage
+atlassian-ide-plugin.xml
+*.pyc
+venv*/
+build
+tests/fixture/package/dist
+dist/
+
+README.html

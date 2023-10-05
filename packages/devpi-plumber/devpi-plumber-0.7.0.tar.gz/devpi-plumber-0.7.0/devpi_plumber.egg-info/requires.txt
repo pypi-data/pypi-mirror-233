@@ -1,0 +1,6 @@
+devpi-client
+requests
+twitter.common.contextutil
+
+[test]
+devpi-server>=5.2.0
