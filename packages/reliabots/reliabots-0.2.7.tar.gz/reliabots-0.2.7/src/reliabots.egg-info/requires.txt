@@ -1,0 +1,7 @@
+numpy
+scikit-learn
+scipy
+plotly>=4.14.3
+kaleido>=0.2.1
+pandas
+nonconformist>=2.1.0
