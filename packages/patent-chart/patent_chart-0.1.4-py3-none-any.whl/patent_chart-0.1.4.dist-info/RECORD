@@ -1,0 +1,6 @@
+patent_chart/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+patent_chart/parser.py,sha256=6NmHN18m4BIsV3A219fsoc2fp24a2cdnUBibFWuqghQ,11030
+patent_chart/tests.py,sha256=BEZ_StO0iYEyUzZFQpgzU0x-fyVJaK_M-YUdsv0poDU,1092
+patent_chart-0.1.4.dist-info/METADATA,sha256=nGSixTKRkOVdvR3bDYJ1hL7rMr385dQh6nfb12PCWMI,403
+patent_chart-0.1.4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+patent_chart-0.1.4.dist-info/RECORD,,
