@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gogstools
+Version: 0.1
+Summary: GenOuest tools for manipulating Official Gene Sets
+Home-page: https://github.com/genouest/ogs-tools
+Author: Anthony Bretaudeau
+Author-email: anthony.bretaudeau@inrae.fr
+License: GPLv3
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: bcbio-gff
+
+GenOuest tools for manipulating Official Gene Sets

@@ -1,0 +1,11 @@
+gogstools-0.1.data/scripts/gff2embl,sha256=2zWj2cOF4H09pebywdStA87Fmak_JejmanuV4OUV5_s,16268
+gogstools-0.1.data/scripts/ogs_check,sha256=cMqDJ1ELE-SCGBDWJ6IO_qsdtebZYKdATy24RVinvNc,18401
+gogstools-0.1.data/scripts/ogs_merge,sha256=T3jha_FTVrAD0jfjzx-T96XfgnUo-Tf38sNe2v19jr4,52535
+ogswriters/BipaaEmblSubmitWriter.py,sha256=IxImpl7VURj3DbzSSsyvadG2ujrtpsIGX3Imas1tXk8,6105
+ogswriters/BipaaEmblWriter.py,sha256=BahbyGp3NjpkNpET-mIFrvOi_IO3NKtyJJU7X229mhk,4600
+ogswriters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gogstools-0.1.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+gogstools-0.1.dist-info/METADATA,sha256=CxA1c1tJGJX630ZdfUYx9slt3ABOKPhubh3dFOKNMYQ,720
+gogstools-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gogstools-0.1.dist-info/top_level.txt,sha256=DnKIYMgG6CZMyEAX6SoYMEX7Y_odamlGtVIbmf0RlMU,11
+gogstools-0.1.dist-info/RECORD,,
