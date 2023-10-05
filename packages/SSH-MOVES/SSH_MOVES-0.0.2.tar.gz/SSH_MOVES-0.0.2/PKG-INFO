@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: SSH_MOVES
+Version: 0.0.2
+Description-Content-Type: text/plain
+
+
+
+
+SSH MOVES:
+
+	<b>PUBLISHING</b>
+		# change setup.py version
+		
+		(rm -rf dist && python3 -m build --sdist && twine upload dist/*)
+		(git commit -am "0.0.16" && git tag 0.0.16)
+	
+	
+	
+	<b>KEYGEN</b>
+		CAUTION: USES A RANDOMIZER.
+	
+		<b>ELLIPTIC CURVES</b>
+			(ssh-keygen -t ecdsa -N "" -C "" -b 521 -f ECDSA_521_KEY)
+		
+			ssh-keygen -t ed25519 
+		
+			ssh-keygen -t ecdsa -b 521
+			
+		
+		(ssh-keygen -t rsa -N "" -b 3072 -C "" -f RSA_KEY)
+			
+			
+		ssh-keygen -t rsa -b 4096
