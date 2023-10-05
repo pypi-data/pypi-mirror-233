@@ -1,0 +1,3 @@
+[console_scripts]
+shroud = shroud.main:main
+
