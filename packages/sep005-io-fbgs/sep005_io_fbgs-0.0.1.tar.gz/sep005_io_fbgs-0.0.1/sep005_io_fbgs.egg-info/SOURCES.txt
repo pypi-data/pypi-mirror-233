@@ -1,0 +1,9 @@
+README.rst
+setup.py
+sep005_io_fbgs/__init__.py
+sep005_io_fbgs/fbgs.py
+sep005_io_fbgs.egg-info/PKG-INFO
+sep005_io_fbgs.egg-info/SOURCES.txt
+sep005_io_fbgs.egg-info/dependency_links.txt
+sep005_io_fbgs.egg-info/top_level.txt
+tests/test_fbgs.py
