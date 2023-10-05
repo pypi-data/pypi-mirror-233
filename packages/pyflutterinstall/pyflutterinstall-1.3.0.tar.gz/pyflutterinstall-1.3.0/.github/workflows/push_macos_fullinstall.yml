@@ -1,0 +1,86 @@
+name: Mac_Fullinstall
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.11.5]
+        os: [macos-latest]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/cache@v3
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - uses: actions/cache@v3
+      name: Install Cache
+      with:
+        path: ./.downloads
+        key: install-${{ hashFiles('.downloads') }}
+        restore-keys: install-
+
+    - name: Generate Day Stamp
+      id: date
+      run: |
+        echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        echo "GITHUB_ENV: $GITHUB_ENV"
+    - uses: actions/cache@v3
+      name: Configure flutter caching
+      with:
+        path: |
+          ./.downloads
+        key: ${{ runner.os }}-pyflutter-${{ env.date }}-6
+        restore-keys: |
+          ${{ runner.os }}-pyflutter-
+
+    - name: Install Xcode Deps
+      run: brew install coreutils &&
+           echo "$CERTIFICATES_P12" > cert.txt &&
+           echo "$CERTIFICATES_PROFILE" > profile.txt &&
+           gbase64 -di cert.txt > cert.p12 &&
+           gbase64 -di profile.txt > profile.mobileprovision &&
+           KEYCHAIN_PATH=$RUNNER_TEMP/login.keychain
+
+    - name: Install dependencies
+      run: |
+        pip install -e '.[test]'
+
+    - name: check prerun
+      run: python test_install/prerun.py
+
+    - name: Run tests
+      run: pytest tests
+
+    - name: install all
+      run: pyflutterinstall --skip-confirmation
+
+    - name: post install check
+      run: python -m pyflutterinstall.postrun
+
+    - name: Print Flutter SDK Folder
+      run: python test_install/print_flutter_folder.py
+
+    - name: which java
+      run: which java
+
+    - name: java --which
+      run: java --which
+    
+    - name: java -version
+      run: java -version
+
+    - name: Test java is 20
+      run: python test_install/is_java_version.py 20
+
+    - name: Test Install
+      run: pytest tests

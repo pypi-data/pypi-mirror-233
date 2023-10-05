@@ -1,0 +1,89 @@
+name: Ubuntu_Fullinstall
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.11.5]
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/cache@v3
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Generate Day Stamp
+      id: date
+      run: |
+        echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        echo "GITHUB_ENV: $GITHUB_ENV"
+    - uses: actions/cache@v3
+      name: Configure flutter caching
+      with:
+        path: |
+          ./.downloads
+        key: ${{ runner.os }}-pyflutter-${{ env.date }}-6
+        restore-keys: |
+          ${{ runner.os }}-pyflutter-
+
+
+    - name: Print current working directory
+      run: pwd
+    - name: Print all files in current working directory
+      run: ls -la
+
+    - name: set local apt cache directory to .downloads
+      run: sudo apt-get -o dir::cache=/home/runner/work/pyflutterinstall/pyflutterinstall/.downloads update
+
+    - name: Install apt-get update
+      run: sudo apt-get update
+
+    - name: Install ninja && gtk
+      run: sudo apt install ninja-build libgtk-3-dev -y
+
+    - name: Install dependencies
+      run: pip install -e '.[test]'
+
+    - name: Pre Run Environment state
+      run: python test_install/prerun.py
+
+    - name: Run tests
+      run: pytest tests
+
+    - name: install flutter
+      run: pyflutterinstall --skip-confirmation --skip-chrome
+
+    - name: post install check
+      run: python -m pyflutterinstall.postrun
+
+    - name: Print Flutter SDK Folder
+      run: python test_install/print_flutter_folder.py
+
+    - name: print out downloads folder
+      run: cd ./.downloads && find .
+
+    - name: which java
+      run: which java
+      
+    - name: Test java is 20
+      run: python test_install/is_java_version.py 20
+
+    - name: Which avdmanager
+      run: which avdmanager
+
+    - name: Test Install
+      run: |
+        pytest tests
+
+    - name: Remove all symlinks in .downloads directory
+      run: find ./.downloads -type l -delete

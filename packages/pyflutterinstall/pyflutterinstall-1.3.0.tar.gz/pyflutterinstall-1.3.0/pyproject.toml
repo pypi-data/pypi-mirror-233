@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyflutterinstall"
+description = "Installs Android studio and everything using the flutter doctor command."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["zcmds"]
+license = { text = "BSD 3-Clause License" }
+classifiers = ["Programming Language :: Python :: 3"]
+dynamic = ["dependencies"]
+# Change this with the version number bump.
+# Also make the change in zcmds/version.py
+version = "1.3.0"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.scripts]
+pyflutterinstall = "pyflutterinstall.cli:main"
+pyflutteractivate = "pyflutterinstall.setenv:init_dotenv"
+pyflutterprintconfig = "pyflutterinstall.config:print_config"
+sdkmanager = "pyflutterinstall.cmds.sdkmanager:main"
+avdmanager = "pyflutterinstall.cmds.avdmanager:main"
+adb = "pyflutterinstall.cmds.adb:main"
+gradle = "pyflutterinstall.cmds.gradle:main"
+emulator = "pyflutterinstall.cmds.emulator:main"
+java = "pyflutterinstall.cmds.java:main"
+apkanalyzer = "pyflutterinstall.cmds.apkanalyzer:main"

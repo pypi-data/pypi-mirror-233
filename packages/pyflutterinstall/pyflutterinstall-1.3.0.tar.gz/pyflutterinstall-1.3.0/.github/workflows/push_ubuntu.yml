@@ -1,0 +1,68 @@
+name: Ubuntu_Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.11.5]
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/cache@v3
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install apt-get update
+      run: sudo apt-get update
+
+    - name: Install ninja && gtk
+      run: sudo apt install ninja-build libgtk-3-dev -y
+
+    - name: Install dependencies
+      run: |
+        pip install -e '.[test]'
+
+    - name: Pre Run Environment state
+      run: python test_install/prerun.py
+
+    - name: Run tests
+      run: pytest tests
+
+    - name: install java
+      run: pyflutterinstall --skip-confirmation --skip-android --skip-flutter --skip-chrome
+
+    - name: which java
+      run: which java
+      
+    - name: Test java is 20
+      run: |
+        java -version 2>&1 | grep -q 'version "20' && echo "Java 20 is installed" || (echo "Java 20 is not installed" && exit 1)
+
+    - name: install android
+      run: pyflutterinstall --skip-confirmation --skip-java --skip-flutter --skip-chrome
+
+    - name: install ant
+      run: python -m pyflutterinstall.install.ant_sdk
+
+    - name: install gradle
+      run: python -m pyflutterinstall.install.gradle
+
+    - name: install flutter
+      run: pyflutterinstall --skip-confirmation --skip-java  --skip-android --skip-chrome
+
+    - name: post install check
+      run: python -m pyflutterinstall.postrun
+
+    - name: Print Flutter SDK Folder
+      run: python test_install/print_flutter_folder.py

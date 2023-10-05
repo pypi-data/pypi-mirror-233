@@ -1,0 +1,67 @@
+name: Win_FullInstall
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.11.5]
+        os: [windows-latest]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/cache@v3
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - uses: actions/cache@v3
+      name: Install Cache
+      with:
+        path: ./.downloads
+        key: install-${{ hashFiles('.downloads') }}
+        restore-keys: install-
+
+    - name: Set utf-8 Encoding
+      run: |
+        setx PYTHONIOENCODING "utf-8" && setx PYTHONLEGACYWINDOWSSTDIO "utf-8"
+    - name: Install dependencies
+      run: |
+        pip install -e '.[test]'
+
+    - name: Run tests
+      run: pytest tests
+
+    - name: Pre Run Environment state
+      run: python test_install/prerun.py
+
+    - name: install all
+      run: pyflutterinstall --skip-confirmation --skip-chrome
+
+    - name: post install check
+      run: python -m pyflutterinstall.postrun
+
+    - name: Print Flutter SDK Folder
+      run: python test_install/print_flutter_folder.py
+
+    - name: Where Java?
+      run: where java
+
+    - name: What java version?
+      run: |
+        java --version
+        java --which || true
+      shell: bash
+
+    - name: Test java is 20
+      run: python test_install/is_java_version.py 20
+
+    - name: Test Install
+      run: pytest tests

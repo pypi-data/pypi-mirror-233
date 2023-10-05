@@ -1,0 +1,9 @@
+// just my code = false
+"configurations": [
+
+    {
+        "name": "Debug Unit Test",
+        "type": "python",
+        "justMyCode": false,
+    }
+]
