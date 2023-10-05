@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: wsqluse
+Version: 2.0
+Author: PunchyArchy
+Author-email: ksmdrmvscthny@gmail.com
+Requires-Dist: psycopg2-binary
+
