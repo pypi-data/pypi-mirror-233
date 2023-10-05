@@ -1,0 +1,12 @@
+[console_scripts]
+kachery-cloud = kachery_cloud.cli:cli
+kachery-cloud-admin-delete-file = kachery_cloud.cli:admin_delete_file
+kachery-cloud-cat = kachery_cloud.cli:cat_file
+kachery-cloud-init = kachery_cloud.cli:init
+kachery-cloud-link = kachery_cloud.cli:link_file
+kachery-cloud-load = kachery_cloud.cli:load_file
+kachery-cloud-load-info = kachery_cloud.cli:load_file_info
+kachery-cloud-request-file-experimental = kachery_cloud.cli:request_file_experimental
+kachery-cloud-share-local-files-experimental = kachery_cloud.cli:share_local_files_experimental
+kachery-cloud-store = kachery_cloud.cli:store_file
+kachery-cloud-store-local = kachery_cloud.cli:store_file_local
