@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "serverish"
+version = "0.6.3"
+description = "helpers for server alike projects"
+authors = ["Mikołaj Kałuszyński"]
+readme = "README.md"
+repository = "https://github.com/AkondLab/serverish"
+include = ["serverish/schema/*"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiodns = "^3.0.0"
+param = "^1.13.0"
+nats-py = { version = "^2.3.1", optional = true }
+jsonschema = "^4.19.0"
+
+[tool.poetry.extras]
+messenger = ["nats-py"]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+nats-py = "^2.3.1"
+jupyter = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
