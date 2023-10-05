@@ -1,0 +1,135 @@
+---
+
+# -- I/O -----------------------------------------------------------------
+
+# Directories for input catalogue(s) and output measurement(s).
+# The paths can be either absolute or relative to the working directory.
+# If unset, the current working directory is assumed.
+directories:
+  catalogues: tests/test_input/ctlgs
+  measurements: tests/test_output/
+
+# Filenames (with extension) of input catalogues.  These are relative
+# to the catalogue directory.
+files:
+  data_catalogue:
+  rand_catalogue:
+
+# FUTURE: This parameter currently has no effect in the Python interface.
+# Field names of catalogue data columns as a list in the order of
+# appearance.  If unset, the catalogue files are assumed to contain
+# an approriate header.
+catalogue_columns: []
+
+# Tags to be appended as an input/output filename suffix.
+tags:
+  output:
+
+
+# -- Sampling ------------------------------------------------------------
+
+# Box size in each dimension (in length units). [mandatory]
+boxsize:
+  x: 1000.
+  y: 1000.
+  z: 1000.
+
+# Grid cell number in each dimension. [mandatory]
+ngrid:
+  x: 64
+  y: 64
+  z: 64
+
+# Box alignment: {'centre' (default), 'pad'}.
+# The catalogues are either centred or padded from the
+# mininum-coordinate corner.
+alignment: centre
+
+# Padding scale: {'box' (default), 'grid'}.
+# The padding scale is either the box size or the grid cell size.
+# Only applicable if `alignment` is set to 'pad'.
+padscale: box
+
+# Padding factor as a multiple of the size of padding scale.
+# Only applicable if `alignment` is set to 'pad'.
+padfactor: ~
+
+# Mesh assignment scheme: {'ngp', 'cic', 'tsc' (default), 'pcs'}.
+assignment: tsc
+
+# Interlacing switch: {true/on, false/off (default))}.
+# The switch is overriden to `false` when measuring three-point statistics.
+interlace: off
+
+
+# -- Measurements --------------------------------------------------------
+
+# Type of catalogue(s): {'survey', 'random', 'sim', 'none'}.
+# If of type 'sim', global-plane-parallel measurements are made;
+# otherwise, local-plane-parallel measurements are made.
+catalogue_type:
+
+# Type of measurement: {
+#   'powspec', '2pcf', '2pcf-win',
+#   'bispec', '3pcf', '3pcf-win', '3pcf-win-wa',
+#   'modes', 'pairs'
+# }.
+statistic_type:
+
+# Degrees of the multipoles.
+degrees:
+  ell1:
+  ell2:
+  ELL: 0  # placeholder
+
+# Orders of wide-angle corrections.
+wa_orders:
+  i:
+  j:
+
+# Form of the three-point statistic measurements:
+# {'full', 'diag' (default), 'off-diag', 'row'}.
+form: diag
+
+# Normalisation convention: {
+#   'none', 'particle' (default), 'mesh',
+#   'mesh-mixed' (two-point statistics only)
+# }.
+norm_convention: particle
+
+# Binning scheme: {'lin' (default), 'log', 'linpad', 'logpad', 'custom'}.
+binning: lin
+
+# Range of measurement scales.
+# The binning coordinate is either wavenumbers in Fourier space,
+# or separations in configuration space. [mandatory]
+range: [0.005, 0.105]  # placeholder
+
+# Number of measurement bins (i.e. data vector dimension).
+# Must be >=2, or >=7 if padding is used in binning. [mandatory]
+num_bins: 4
+
+# Fixed bin index when the `form` of three-point statistics measurements
+# is set to 'off-diag' or 'row'.  If 'off-diag', the bin index is the
+# positive off-diagonal index; if `form` is set to 'row', the bin index
+# is the row index.
+idx_bin:
+
+
+# -- Misc ----------------------------------------------------------------
+
+# FUTURE: This parameter currently has no effect in the Python interface.
+# Save binning details to file:
+# {true/on, false/off (default), <relpath-to-file>}.
+# If a path is provided, it is relative to the measurement directory.
+# An empty path is equivalent to false/off.
+save_binned_vectors: false
+
+# Logging verbosity level: a non-negative integer.
+# Typical values are: {
+#   0 (NSET, unset), 10 (DBUG, debug), 20 (STAT, status) (default),
+#   30 (INFO, info), 40 (WARN, warning), 50 (ERRO, error)
+# }.
+verbose: 20
+
+...
