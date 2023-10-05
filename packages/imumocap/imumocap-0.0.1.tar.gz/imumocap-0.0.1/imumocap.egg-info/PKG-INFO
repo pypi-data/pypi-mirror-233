@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: imumocap
+Version: 0.0.1
+Summary: IMU Mocap
+Home-page: https://github.com/xioTechnologies/IMU-Mocap
+Author: x-io Technologies Limited
+Author-email: info@x-io.co.uk
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+See [github](https://github.com/xioTechnologies/IMU-Mocap) for documentation and examples.
