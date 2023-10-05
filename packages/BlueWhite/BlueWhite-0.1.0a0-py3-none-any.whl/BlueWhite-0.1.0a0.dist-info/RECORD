@@ -1,0 +1,10 @@
+BWO/__init__.py,sha256=5r4VLZiURqxMIm5yBICBCerYNUA2bzXxl3EtterRNfU,20
+BWO/bwo.py,sha256=lvJhlmWFmcGahFo1FzE0a1RClhy5UXDfxnmRMvWWenw,23715
+BWO/constant.py,sha256=j6sKpwJlVmV1SRif7ew1SUuL-01gK0LP8hLxUvABMxY,57
+BWO/regex.py,sha256=EDd5uPjKLTCiiTNSGS5wKA6I6D2aE_IwVGk6fI3opCw,1020
+BWO/compute/Random.py,sha256=mTlMrrvZj4F4rb1cHx9WLle9d2q1P9pNuCvg0AagBkQ,251
+BWO/compute/__init__.py,sha256=6HFKn1XxPAZxBz3InGH1I6wJLggfUioDvgvC013rPpI,22
+BlueWhite-0.1.0a0.dist-info/METADATA,sha256=r6acwbO9M0cDSHPB1pJ7JqCCqhmBhKsCh2DfFgn0Oeg,2260
+BlueWhite-0.1.0a0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+BlueWhite-0.1.0a0.dist-info/top_level.txt,sha256=A671g75TlSU9uWW6uqvhBdlATfKuIb3nR7VeewJUtQU,4
+BlueWhite-0.1.0a0.dist-info/RECORD,,
