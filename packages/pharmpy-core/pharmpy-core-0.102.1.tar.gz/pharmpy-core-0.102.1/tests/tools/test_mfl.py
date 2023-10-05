@@ -1,0 +1,649 @@
+from typing import Tuple
+
+import pytest
+
+from pharmpy.modeling import add_iiv, create_basic_pk_model, set_direct_effect
+from pharmpy.tools import get_model_features
+from pharmpy.tools.mfl.helpers import all_funcs
+from pharmpy.tools.mfl.parse import ModelFeatures, parse
+from pharmpy.tools.mfl.statement.feature.absorption import Absorption
+from pharmpy.tools.mfl.statement.feature.covariate import Covariate, Ref
+from pharmpy.tools.mfl.statement.feature.elimination import Elimination
+from pharmpy.tools.mfl.statement.feature.lagtime import LagTime
+from pharmpy.tools.mfl.statement.feature.peripherals import Peripherals
+from pharmpy.tools.mfl.statement.feature.symbols import Name, Wildcard
+from pharmpy.tools.mfl.statement.feature.transits import Transits
+from pharmpy.tools.mfl.statement.statement import Statement
+from pharmpy.tools.mfl.stringify import stringify
+
+
+@pytest.mark.parametrize(
+    ('source', 'expected'),
+    (
+        (
+            'ABSORPTION(INST)',
+            (('ABSORPTION', 'INST'),),
+        ),
+        (
+            'ABSORPTION(FO)',
+            (('ABSORPTION', 'FO'),),
+        ),
+        (
+            'ABSORPTION(* )',
+            (
+                ('ABSORPTION', 'FO'),
+                ('ABSORPTION', 'ZO'),
+                ('ABSORPTION', 'SEQ-ZO-FO'),
+                ('ABSORPTION', 'INST'),
+            ),
+        ),
+        (
+            'ABSORPTION([ZO,FO])',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'ZO')),
+        ),
+        (
+            'ABSORPTION([ZO,  FO])',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'ZO')),
+        ),
+        (
+            'ABSORPTION( [   SEQ-ZO-FO,  FO   ]  )',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'SEQ-ZO-FO')),
+        ),
+        (
+            'ABSORPTION([zo, fo])',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'ZO')),
+        ),
+        (
+            'ABSORPTION(FO);ABSORPTION(ZO)',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'ZO')),
+        ),
+        (
+            'ABSORPTION(FO)\nABSORPTION([FO, SEQ-ZO-FO])',
+            (('ABSORPTION', 'FO'), ('ABSORPTION', 'SEQ-ZO-FO')),
+        ),
+        (
+            'ELIMINATION(FO)',
+            (('ELIMINATION', 'FO'),),
+        ),
+        (
+            'ELIMINATION( *)',
+            (
+                ('ELIMINATION', 'FO'),
+                ('ELIMINATION', 'ZO'),
+                ('ELIMINATION', 'MM'),
+                ('ELIMINATION', 'MIX-FO-MM'),
+            ),
+        ),
+        (
+            'ELIMINATION([ZO,FO])',
+            (('ELIMINATION', 'FO'), ('ELIMINATION', 'ZO')),
+        ),
+        (
+            'ELIMINATION([ZO,  FO])',
+            (('ELIMINATION', 'FO'), ('ELIMINATION', 'ZO')),
+        ),
+        (
+            'ELIMINATION( [   MIX-FO-MM,  FO   ]  )',
+            (('ELIMINATION', 'FO'), ('ELIMINATION', 'MIX-FO-MM')),
+        ),
+        (
+            'elimination([zo, fo])',
+            (('ELIMINATION', 'FO'), ('ELIMINATION', 'ZO')),
+        ),
+        (
+            'ELIMINATION(FO);ABSORPTION(ZO)',
+            (
+                ('ELIMINATION', 'FO'),
+                ('ABSORPTION', 'ZO'),
+            ),
+        ),
+        ('TRANSITS(0)', (('TRANSITS', 0, 'DEPOT'),)),
+        (
+            'TRANSITS([0, 1])',
+            (
+                ('TRANSITS', 0, 'DEPOT'),
+                ('TRANSITS', 1, 'DEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS([0, 2, 4])',
+            (
+                ('TRANSITS', 0, 'DEPOT'),
+                ('TRANSITS', 2, 'DEPOT'),
+                ('TRANSITS', 4, 'DEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS(0..1)',
+            (
+                ('TRANSITS', 0, 'DEPOT'),
+                ('TRANSITS', 1, 'DEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS(1..4)',
+            (
+                ('TRANSITS', 1, 'DEPOT'),
+                ('TRANSITS', 2, 'DEPOT'),
+                ('TRANSITS', 3, 'DEPOT'),
+                ('TRANSITS', 4, 'DEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS(1..4); TRANSITS(5)',
+            (
+                ('TRANSITS', 1, 'DEPOT'),
+                ('TRANSITS', 2, 'DEPOT'),
+                ('TRANSITS', 3, 'DEPOT'),
+                ('TRANSITS', 4, 'DEPOT'),
+                ('TRANSITS', 5, 'DEPOT'),
+            ),
+        ),
+        ('TRANSITS(0);PERIPHERALS(0)', (('TRANSITS', 0, 'DEPOT'), ('PERIPHERALS', 0))),
+        (
+            'TRANSITS(1..4, DEPOT)',
+            (
+                ('TRANSITS', 1, 'DEPOT'),
+                ('TRANSITS', 2, 'DEPOT'),
+                ('TRANSITS', 3, 'DEPOT'),
+                ('TRANSITS', 4, 'DEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS(1..4, NODEPOT)',
+            (
+                ('TRANSITS', 1, 'NODEPOT'),
+                ('TRANSITS', 2, 'NODEPOT'),
+                ('TRANSITS', 3, 'NODEPOT'),
+                ('TRANSITS', 4, 'NODEPOT'),
+            ),
+        ),
+        (
+            'TRANSITS(1..4, *)',
+            (
+                ('TRANSITS', 1, 'DEPOT'),
+                ('TRANSITS', 2, 'DEPOT'),
+                ('TRANSITS', 3, 'DEPOT'),
+                ('TRANSITS', 4, 'DEPOT'),
+                ('TRANSITS', 1, 'NODEPOT'),
+                ('TRANSITS', 2, 'NODEPOT'),
+                ('TRANSITS', 3, 'NODEPOT'),
+                ('TRANSITS', 4, 'NODEPOT'),
+            ),
+        ),
+        ('PERIPHERALS(0)', (('PERIPHERALS', 0),)),
+        (
+            'PERIPHERALS([0, 1])',
+            (
+                ('PERIPHERALS', 0),
+                ('PERIPHERALS', 1),
+            ),
+        ),
+        (
+            'PERIPHERALS([0, 2, 4])',
+            (
+                ('PERIPHERALS', 0),
+                ('PERIPHERALS', 2),
+                ('PERIPHERALS', 4),
+            ),
+        ),
+        (
+            'PERIPHERALS(0..1)',
+            (
+                ('PERIPHERALS', 0),
+                ('PERIPHERALS', 1),
+            ),
+        ),
+        (
+            'PERIPHERALS(1..4)',
+            (
+                ('PERIPHERALS', 1),
+                ('PERIPHERALS', 2),
+                ('PERIPHERALS', 3),
+                ('PERIPHERALS', 4),
+            ),
+        ),
+        (
+            'PERIPHERALS(1..4); PERIPHERALS(5)',
+            (
+                ('PERIPHERALS', 1),
+                ('PERIPHERALS', 2),
+                ('PERIPHERALS', 3),
+                ('PERIPHERALS', 4),
+                ('PERIPHERALS', 5),
+            ),
+        ),
+        ('LAGTIME(ON)', (('LAGTIME', 'ON'),)),
+        ('LAGTIME ( ON )', (('LAGTIME', 'ON'),)),
+        ('LAGTIME(OFF)', (('LAGTIME', 'OFF'),)),
+        ('LAGTIME([ON, OFF])', (('LAGTIME', 'OFF'), ('LAGTIME', 'ON'))),
+        (
+            'TRANSITS(1, *)',
+            (
+                ('TRANSITS', 1, 'DEPOT'),
+                ('TRANSITS', 1, 'NODEPOT'),
+            ),
+        ),
+        ('TRANSITS(1)', (('TRANSITS', 1, 'DEPOT'),)),
+        ('TRANSITS(1, DEPOT)', (('TRANSITS', 1, 'DEPOT'),)),
+        ('TRANSITS(1, NODEPOT)', (('TRANSITS', 1, 'NODEPOT'),)),
+        ('LET(CONTINUOUS, [AGE, WT]); LET(CATEGORICAL, SEX)', []),
+        (
+            'COVARIATE([CL, MAT, VC], @CONTINUOUS, EXP, *)\n'
+            'COVARIATE([CL, MAT, VC], @CATEGORICAL, CAT, +)',
+            (
+                ('COVARIATE', 'CL', 'APGR', 'cat', '+'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'MAT', 'APGR', 'cat', '+'),
+                ('COVARIATE', 'MAT', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'VC', 'APGR', 'cat', '+'),
+                ('COVARIATE', 'VC', 'WGT', 'exp', '*'),
+            ),
+        ),
+        (
+            'LET(CONTINUOUS, [AGE, WT]); LET(CATEGORICAL, SEX)\n'
+            'COVARIATE([CL, MAT, VC], @CONTINUOUS, EXP, *)\n'
+            'COVARIATE([CL, MAT, VC], @CATEGORICAL, CAT, +)',
+            (
+                ('COVARIATE', 'CL', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'CL', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'CL', 'WT', 'exp', '*'),
+                ('COVARIATE', 'MAT', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'MAT', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'MAT', 'WT', 'exp', '*'),
+                ('COVARIATE', 'VC', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'VC', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'VC', 'WT', 'exp', '*'),
+            ),
+        ),
+        (
+            'LET(CONTINUOUS, [AGE, WT]); LET(CATEGORICAL, SEX)\n'
+            'COVARIATE([CL, MAT, VC], @CONTINUOUS, [EXP])\n'
+            'COVARIATE([CL, MAT, VC], @CATEGORICAL, CAT, +)',
+            (
+                ('COVARIATE', 'CL', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'CL', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'CL', 'WT', 'exp', '*'),
+                ('COVARIATE', 'MAT', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'MAT', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'MAT', 'WT', 'exp', '*'),
+                ('COVARIATE', 'VC', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'VC', 'SEX', 'cat', '+'),
+                ('COVARIATE', 'VC', 'WT', 'exp', '*'),
+            ),
+        ),
+        (
+            'LET(CONTINUOUS, AGE); LET(CATEGORICAL, SEX)\n'
+            'COVARIATE([CL], @CONTINUOUS, *)\n'
+            'COVARIATE([VC], @CATEGORICAL, CAT, +)',
+            (
+                ('COVARIATE', 'CL', 'AGE', 'exp', '*'),
+                ('COVARIATE', 'CL', 'AGE', 'lin', '*'),
+                ('COVARIATE', 'CL', 'AGE', 'piece_lin', '*'),
+                ('COVARIATE', 'CL', 'AGE', 'pow', '*'),
+                ('COVARIATE', 'VC', 'SEX', 'cat', '+'),
+            ),
+        ),
+        (
+            'COVARIATE(@IIV, @CONTINUOUS, *);' 'COVARIATE(*, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'CL', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'V', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'V', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'pow', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@PK, @CONTINUOUS, *);' 'COVARIATE(@PK, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'CL', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'V', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'V', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'V', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@ABSORPTION, APGR, CAT);'
+            'COVARIATE(@DISTRIBUTION, WGT, EXP);'
+            'COVARIATE(@ELIMINATION, SEX, CAT)',
+            (
+                ('COVARIATE', 'CL', 'SEX', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@BIOAVAIL, APGR, CAT)',
+            (),
+        ),
+    ),
+    ids=repr,
+)
+def test_all_funcs(load_model_for_test, pheno_path, source, expected):
+    pheno = load_model_for_test(pheno_path)
+    statements = parse(source)
+    funcs = all_funcs(pheno, statements)
+    keys = funcs.keys()
+    assert set(keys) == set(expected)
+
+
+@pytest.mark.parametrize(
+    ('source', 'expected'),
+    (
+        (
+            'COVARIATE(@PK, @CONTINUOUS, *);' 'COVARIATE(@PK, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'CL', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'V', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'V', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'V', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@PD, @CONTINUOUS, *);' 'COVARIATE(@PD, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'B', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'B', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'B', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'B', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'B', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'SLOPE', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+    ),
+    ids=repr,
+)
+def test_all_funcs_pd(load_model_for_test, pheno_path, source, expected):
+    model = load_model_for_test(pheno_path)
+    model = set_direct_effect(model, 'linear')
+    statements = parse(source)
+    funcs = all_funcs(model, statements)
+    keys = funcs.keys()
+    assert set(keys) == set(expected)
+
+
+@pytest.mark.parametrize(
+    ('source', 'expected'),
+    (
+        (
+            'COVARIATE(@PD_IIV, @CONTINUOUS, *);' 'COVARIATE(@PD_IIV, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'SLOPE', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@PK_IIV, @CONTINUOUS, *);' 'COVARIATE(@PK_IIV, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'CL', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'V', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'V', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'V', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+        (
+            'COVARIATE(@IIV, @CONTINUOUS, *);' 'COVARIATE(@IIV, @CATEGORICAL, CAT, *)',
+            (
+                ('COVARIATE', 'SLOPE', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'SLOPE', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'CL', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'CL', 'WGT', 'piece_lin', '*'),
+                ('COVARIATE', 'V', 'APGR', 'cat', '*'),
+                ('COVARIATE', 'V', 'WGT', 'exp', '*'),
+                ('COVARIATE', 'V', 'WGT', 'lin', '*'),
+                ('COVARIATE', 'V', 'WGT', 'pow', '*'),
+                ('COVARIATE', 'V', 'WGT', 'piece_lin', '*'),
+            ),
+        ),
+    ),
+    ids=repr,
+)
+def test_all_funcs_pd_iiv(load_model_for_test, pheno_path, source, expected):
+    model = load_model_for_test(pheno_path)
+    model = set_direct_effect(model, 'linear')
+    model = add_iiv(model, 'SLOPE', 'exp')
+    statements = parse(source)
+    funcs = all_funcs(model, statements)
+    keys = funcs.keys()
+    assert set(keys) == set(expected)
+
+
+@pytest.mark.parametrize(
+    ('source', 'expected'),
+    (
+        (
+            'COVARIATE(@BIOAVAIL, APGR, CAT, +)',
+            (('COVARIATE', 'BIO', 'APGR', 'cat', '+'),),
+        ),
+    ),
+    ids=repr,
+)
+def test_funcs_ivoral(source, expected):
+    model = create_basic_pk_model(administration='ivoral')
+    statements = parse(source)
+    funcs = all_funcs(model, statements)
+    keys = funcs.keys()
+    assert set(keys) == set(expected)
+
+
+@pytest.mark.parametrize(
+    'code',
+    [
+        ('ABSORPTION(ILLEGAL)'),
+        ('ELIMINATION(ALSOILLEGAL)'),
+        ('LAGTIME(0)'),
+        ('TRANSITS(*)'),
+    ],
+)
+def test_illegal_mfl(code):
+    with pytest.raises(Exception):
+        parse(code)
+
+
+@pytest.mark.parametrize(
+    ('statements', 'expected'),
+    (
+        (
+            (
+                Absorption((Name('ZO'), Name('SEQ-ZO-FO'))),
+                Elimination((Name('MM'), Name('MIX-FO-MM'))),
+                LagTime((Name('ON'),)),
+                Transits((1, 3, 10), Wildcard()),
+                Peripherals((1,)),
+            ),
+            'ABSORPTION([ZO,SEQ-ZO-FO]);'
+            'ELIMINATION([MM,MIX-FO-MM]);'
+            'LAGTIME(ON);'
+            'TRANSITS([1,3,10],*);'
+            'PERIPHERALS(1)',
+        ),
+        (
+            (
+                Elimination((Name('MM'), Name('MIX-FO-MM'))),
+                Peripherals((1, 2)),
+            ),
+            'ELIMINATION([MM,MIX-FO-MM]);' 'PERIPHERALS(1..2)',
+        ),
+        (
+            (
+                Covariate(Ref('IIV'), Ref('CONTINUOUS'), ('EXP',), '*'),
+                Covariate(Ref('IIV'), Ref('CATEGORICAL'), ('CAT',), '*'),
+            ),
+            'COVARIATE(@IIV,@CONTINUOUS,EXP);' 'COVARIATE(@IIV,@CATEGORICAL,CAT)',
+        ),
+    ),
+)
+def test_stringify(statements: Tuple[Statement, ...], expected: str):
+    result = stringify(statements)
+    assert result == expected
+    parsed = parse(result)
+    assert tuple(parsed) == statements
+
+
+def test_get_model_features(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    assert 'ABSORPTION(INST);ELIMINATION(FO)' == get_model_features(model)
+
+
+def test_ModelFeatures(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    model_string = get_model_features(model)
+    model_mfl = ModelFeatures.create_from_mfl_string(model_string)
+    assert model_mfl.absorption == Absorption(modes=(Name(name='INST'),))
+    assert model_mfl.elimination == Elimination(modes=(Name(name='FO'),))
+    assert model_mfl.transits == (Transits(counts=(0,), depot=(Name(name='DEPOT'),)),)
+    assert model_mfl.peripherals == Peripherals(counts=(0,))
+    assert model_mfl.lagtime == LagTime(modes=(Name(name='OFF'),))
+
+
+def test_ModelFeatures_eq(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    model_string = get_model_features(model)
+    model_mfl = ModelFeatures.create_from_mfl_string(model_string)
+    assert ModelFeatures() == model_mfl
+
+
+def test_ModelFeatures_add(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    model_string = get_model_features(model)
+    model_mfl = ModelFeatures.create_from_mfl_string(model_string)
+    mfl = ModelFeatures.create(
+        absorption=Absorption(
+            (Name("FO"), Name("ZO")),
+        ),
+        peripherals=Peripherals(counts=(1,)),
+    )
+
+    expected_mfl = ModelFeatures.create(
+        absorption=Absorption(
+            (Name("INST"), Name("FO"), Name("ZO")),
+        ),
+        elimination=Elimination(modes=(Name(name='FO'),)),
+        transits=(Transits(counts=(0,), depot=(Name(name='DEPOT'),)),),
+        peripherals=Peripherals(counts=(0, 1)),
+        lagtime=LagTime(modes=(Name(name='OFF'),)),
+    )
+
+    assert mfl + model_mfl == expected_mfl
+
+
+def test_ModelFeatures_sub(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    model_string = get_model_features(model)
+    model_mfl = ModelFeatures.create_from_mfl_string(model_string)
+    mfl = ModelFeatures.create(
+        absorption=Absorption(
+            (Name("INST"), Name("ZO")),
+        ),
+        peripherals=Peripherals(counts=(0, 1)),
+    )
+
+    expected_mfl = ModelFeatures.create(
+        absorption=Absorption(modes=(Name(name='ZO'),)),
+        elimination=Elimination(modes=(Name(name='FO'),)),
+        transits=(Transits(counts=(0,), depot=(Name(name='DEPOT'),)),),
+        peripherals=Peripherals(counts=(1,)),
+        lagtime=LagTime(modes=(Name(name='OFF'),)),
+    )
+
+    res_mfl = mfl - model_mfl
+    assert res_mfl == expected_mfl
+
+    mfl = ModelFeatures.create(
+        absorption=Absorption(
+            (Name("INST"), Name("ZO")),
+        ),
+        peripherals=Peripherals(counts=(0, 1)),
+    )
+
+    expected_mfl = ModelFeatures.create(
+        absorption=Absorption((Name("INST"),)),
+        elimination=Elimination(modes=(Name(name='FO'),)),
+        transits=(Transits(counts=(0,), depot=(Name(name='DEPOT'),)),),
+        peripherals=Peripherals(counts=(0,)),
+        lagtime=LagTime(modes=(Name(name='OFF'),)),
+    )
+
+    res_mfl = model_mfl - mfl
+    assert res_mfl == expected_mfl
+
+
+def test_least_number_of_transformations(load_model_for_test, pheno_path):
+    model = load_model_for_test(pheno_path)
+    model_string = get_model_features(model)
+    model_mfl = ModelFeatures.create_from_mfl_string(model_string)
+    ss = "ABSORPTION([FO,ZO]);ELIMINATION(ZO);PERIPHERALS(1)"
+    ss_mfl = parse(ss, mfl_class=True)
+
+    lnt = model_mfl.least_number_of_transformations(ss_mfl)
+    assert ('ABSORPTION', 'FO') in lnt
+    assert ('ELIMINATION', 'ZO') in lnt
+    assert ('PERIPHERALS', 1) in lnt
+    assert len(lnt) == 3
+
+
+@pytest.mark.parametrize(
+    ('source', 'expected'),
+    (
+        (
+            'DIRECTEFFECT(*); EFFECTCOMP(*); INDIRECTEFFECT(*, *)',
+            (
+                ('DIRECT', 'LINEAR'),
+                ('DIRECT', 'EMAX'),
+                ('DIRECT', 'SIGMOID'),
+                ('EFFECTCOMP', 'LINEAR'),
+                ('EFFECTCOMP', 'EMAX'),
+                ('EFFECTCOMP', 'SIGMOID'),
+                ('INDIRECT', 'LINEAR', 'PRODUCTION'),
+                ('INDIRECT', 'LINEAR', 'DEGRADATION'),
+                ('INDIRECT', 'EMAX', 'PRODUCTION'),
+                ('INDIRECT', 'EMAX', 'DEGRADATION'),
+                ('INDIRECT', 'SIGMOID', 'PRODUCTION'),
+                ('INDIRECT', 'SIGMOID', 'DEGRADATION'),
+            ),
+        ),
+    ),
+    ids=repr,
+)
+def test_mfl_structsearch(load_model_for_test, pheno_path, source, expected):
+    model = load_model_for_test(pheno_path)
+    statements = parse(source)
+    funcs = all_funcs(model, statements)
+    keys = funcs.keys()
+    assert set(keys) == set(expected)
