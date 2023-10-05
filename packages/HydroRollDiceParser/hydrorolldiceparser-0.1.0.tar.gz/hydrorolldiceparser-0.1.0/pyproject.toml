@@ -1,0 +1,21 @@
+[project]
+name = "HydroRollDiceParser"
+version = "0.1.0"
+description = "HydroRoll's Dice Parser lib."
+authors = [
+    { name = "简律纯", email = "i@jyunko.cn" },
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]

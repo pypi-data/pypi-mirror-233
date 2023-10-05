@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: HydroRollDiceParser
+Version: 0.1.0
+Summary: HydroRoll's Dice Parser lib.
+Author-Email: 简律纯 <i@jyunko.cn>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# DiceParser
