@@ -1,0 +1,4 @@
+numpy
+gdal
+pygeotools
+wget
