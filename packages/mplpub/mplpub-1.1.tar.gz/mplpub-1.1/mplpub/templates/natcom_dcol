@@ -1,0 +1,9 @@
+# template for nature communication double column version
+font.size = 8
+figure.titlesize = 8
+figure.figsize = (7.0866, 2.1)
+axes.labelsize = 8
+axes.titlesize = 8
+xtick.labelsize = 7
+ytick.labelsize = 7
+legend.fontsize = 7

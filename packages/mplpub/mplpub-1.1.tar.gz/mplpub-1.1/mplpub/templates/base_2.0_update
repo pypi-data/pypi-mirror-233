@@ -1,0 +1,7 @@
+xtick.top = True
+xtick.direction = 'in'
+ytick.right = True
+ytick.direction = 'in'
+legend.fancybox = False
+legend.framealpha = None
+legend.edgecolor = 'inherit'

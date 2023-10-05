@@ -1,0 +1,9 @@
+# template for ACS journals
+font.size = 8
+figure.titlesize = 8
+figure.figsize = (3.25, 2.1)
+axes.labelsize = 8
+axes.titlesize = 8
+xtick.labelsize = 7
+ytick.labelsize = 7
+legend.fontsize = 7
