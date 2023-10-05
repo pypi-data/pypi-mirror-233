@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: amuse
+Version: 2023.10.0rc2
+Summary: The Astrophysical Multipurpose Software Environment
+Home-page: http://www.amusecode.org/
+Author: The AMUSE team
+Author-email: info@amusecode.org
+License: Apache License 2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Fortran
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=2.2
+Requires-Dist: amuse-framework>=2023.10.0rc2
+Requires-Dist: amuse-athena>=2023.10.0rc2
+Requires-Dist: amuse-bhtree>=2023.10.0rc2
+Requires-Dist: amuse-bse>=2023.10.0rc2
+Requires-Dist: amuse-capreole>=2023.10.0rc2
+Requires-Dist: amuse-evtwin>=2023.10.0rc2
+Requires-Dist: amuse-fastkick>=2023.10.0rc2
+Requires-Dist: amuse-fi>=2023.10.0rc2
+Requires-Dist: amuse-fractalcluster>=2023.10.0rc2
+Requires-Dist: amuse-framework>=2023.10.0rc2
+Requires-Dist: amuse-gadget2>=2023.10.0rc2
+Requires-Dist: amuse-galactics>=2023.10.0rc2
+Requires-Dist: amuse-galaxia>=2023.10.0rc2
+Requires-Dist: amuse-halogen>=2023.10.0rc2
+Requires-Dist: amuse-hermite>=2023.10.0rc2
+Requires-Dist: amuse-hop>=2023.10.0rc2
+Requires-Dist: amuse-huayno>=2023.10.0rc2
+Requires-Dist: amuse-kepler>=2023.10.0rc2
+Requires-Dist: amuse-kepler-orbiters>=2023.10.0rc2
+Requires-Dist: amuse-mameclot>=2023.10.0rc2
+Requires-Dist: amuse-mercury>=2023.10.0rc2
+Requires-Dist: amuse-mmams>=2023.10.0rc2
+Requires-Dist: amuse-ph4>=2023.10.0rc2
+Requires-Dist: amuse-phigrape>=2023.10.0rc2
+Requires-Dist: amuse-seba>=2023.10.0rc2
+Requires-Dist: amuse-secularmultiple>=2023.10.0rc2
+Requires-Dist: amuse-simplex>=2023.10.0rc2
+Requires-Dist: amuse-smalln>=2023.10.0rc2
+Requires-Dist: amuse-sphray>=2023.10.0rc2
+Requires-Dist: amuse-sse>=2023.10.0rc2
+Requires-Dist: amuse-twobody>=2023.10.0rc2
+
+This package installs the Astrophysical Multipurpose Software Environment (AMUSE).
