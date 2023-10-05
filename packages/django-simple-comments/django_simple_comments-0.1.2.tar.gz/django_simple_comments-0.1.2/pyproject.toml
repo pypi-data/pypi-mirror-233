@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django-simple-comments"
+version = "0.1.2"
+description = ""
+authors = ["Akash NP <akashnp1998@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_simple_comments"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
