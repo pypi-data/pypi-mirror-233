@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+funcs_aux/__init__.py
+funcs_aux/np.py
+funcs_aux.egg-info/PKG-INFO
+funcs_aux.egg-info/SOURCES.txt
+funcs_aux.egg-info/dependency_links.txt
+funcs_aux.egg-info/top_level.txt
