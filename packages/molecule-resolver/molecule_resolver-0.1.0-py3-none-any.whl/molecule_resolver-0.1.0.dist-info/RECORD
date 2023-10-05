@@ -1,0 +1,9 @@
+moleculeresolver/SqliteMoleculeCache.py,sha256=htqZKaZTzdP7Qsy5fJp3NB_0GZ9gnxm7vPgQvaSK7do,18044
+moleculeresolver/__init__.py,sha256=M1XLyS3DnVNWh8zoanUagVkBlfx6FoIY-rQAPEdf0Ak,85
+moleculeresolver/molecule.py,sha256=QI8yE2SaIGBrn2votuMvS2JmAfztSuiZYJ0yDPZkiMM,426
+moleculeresolver/moleculeresolver.py,sha256=trkXZkoQSRNBbacOJTxI4Zar66deEQI3cLwvwtGqWOI,237732
+moleculeresolver/rdkitmods.py,sha256=LpZxnaQ2-_xJIQGzExDHSzi4Ku1CU-SyfaaJvsOnZmY,1609
+molecule_resolver-0.1.0.dist-info/LICENSE.txt,sha256=jf_Z44GDsBPI9LZpr-k2pGBYk5btJANakRkYM7paRRc,1052
+molecule_resolver-0.1.0.dist-info/METADATA,sha256=CcWlT7-Ft1fGwkw23RDu3zy-Fp9EDvDw4rcel1ZYB9s,2421
+molecule_resolver-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+molecule_resolver-0.1.0.dist-info/RECORD,,
