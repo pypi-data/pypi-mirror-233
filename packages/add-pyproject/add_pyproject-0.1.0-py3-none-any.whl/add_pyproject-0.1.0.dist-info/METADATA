@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: add-pyproject
+Version: 0.1.0
+Summary: CLI to add python dependencies to pyproject.toml
+Project-URL: Documentation, https://github.com/ketozhang/add-pyproject#readme
+Project-URL: Issues, https://github.com/ketozhang/add-pyproject/issues
+Project-URL: Source, https://github.com/ketozhang/add-pyproject
+Author-email: "Keto D. Zhang" <ketozhang@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: tomlkit
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# add-pyproject
+
+[![PyPI - Version](https://img.shields.io/pypi/v/add-pyproject.svg)](https://pypi.org/project/add-pyproject)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/add-pyproject.svg)](https://pypi.org/project/add-pyproject)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install add-pyproject
+```
+
+## License
+
+`add-pyproject` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
