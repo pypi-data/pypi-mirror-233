@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: serunaiAutomation
+Version: 1.0.8
+Summary: Automation Framework for Seamless Testing and Data Extraction
+Author: Maimul
+Author-email: maimulskates@gmail.com
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: selenium
+Requires-Dist: seleniumbase
+Requires-Dist: openpyxl
+
+This is an automation framework for automating test cases and also would be useful for web scrapping.
