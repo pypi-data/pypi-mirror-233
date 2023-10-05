@@ -1,0 +1,17 @@
+{
+    "services": {
+        "reload": {
+            "description": "\u91cd\u65b0\u8f09\u5165 intent \u8a2d\u5b9a\u3002",
+            "fields": {
+                "agent_id": {
+                    "description": "\u91cd\u65b0\u8f09\u5165\u5c0d\u8a71\u52a9\u7406\u3002"
+                },
+                "language": {
+                    "description": "\u8981\u6e05\u9664\u66ab\u5b58 intent \u7684\u8a9e\u8a00\u3002\u9810\u8a2d\u70ba\u4f3a\u670d\u5668\u8a9e\u8a00\u3002"
+                }
+            },
+            "name": "\u91cd\u65b0\u8f09\u5165"
+        }
+    },
+    "title": "\u8a9e\u97f3\u4e92\u52d5"
+}

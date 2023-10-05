@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "sensor": {
+            "actions": {
+                "name": "Veiksmai"
+            }
+        }
+    }
+}
