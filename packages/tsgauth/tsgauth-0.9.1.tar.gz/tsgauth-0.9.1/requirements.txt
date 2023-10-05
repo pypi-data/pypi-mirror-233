@@ -1,0 +1,6 @@
+authlib >= 0.15
+flask
+requests
+requests_gssapi
+pytest
+bs4
