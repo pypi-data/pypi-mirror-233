@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sop-deutils-demo
+Version: 0.0.46
+Summary: A utils package for Yes4All SOP
+Author-email: liuliukiki <longnc@yes4all.com>
+Project-URL: Author_Github, https://github.com/dribblewithclong
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openpyxl>=3.1.0
+Requires-Dist: pytz>=2018.5
+Requires-Dist: pandas==2.1.1
+Requires-Dist: python-telegram-bot>=20.3
+Requires-Dist: SQLAlchemy>=1.4.48
+Requires-Dist: lxml>=4.9.2
+Requires-Dist: gspread>=5.10.0
+Requires-Dist: psycopg2-binary>=2.9.7
+Requires-Dist: minio>=7.1.15
+Requires-Dist: aiofiles>=23.1.0
+Requires-Dist: pyarrow>=12.0.1
+Requires-Dist: fastparquet>=2023.4.0
+Requires-Dist: requests>=2.30.0
+
+# Yes4All SOP Utils Packages
+
+This is a package that abc xyz hahaha kiki
