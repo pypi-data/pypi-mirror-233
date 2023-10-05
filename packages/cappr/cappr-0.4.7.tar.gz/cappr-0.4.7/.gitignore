@@ -1,0 +1,10 @@
+*.pyc
+*.egg-info/
+__pycache__/
+.coverage*
+docs/_build
+docs/build
+dist/
+.vscode/
+.DS_Store
+demos/COPA-resources
