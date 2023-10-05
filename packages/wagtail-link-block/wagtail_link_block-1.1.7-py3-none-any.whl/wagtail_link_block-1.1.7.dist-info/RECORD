@@ -1,0 +1,12 @@
+wagtail_link_block/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_link_block/blocks.py,sha256=Ch_FBVGQddbmZokcmAYjdWcqlo80NtOC108bsijXikQ,5235
+wagtail_link_block/locale/fr/LC_MESSAGES/django.mo,sha256=1UhENU8v0c9_qYzTyHFmKySa0d5XL4wua00ty448GgE,652
+wagtail_link_block/locale/fr/LC_MESSAGES/django.po,sha256=s993APmuBYwHQUVly5xqZulmTtIGzo5aDg0k0pH0Az0,1222
+wagtail_link_block/static/link_block/link_block.css,sha256=2ljDvN6-7PeLJWXu3nuulEyiCucgGgxXhqxm1MTbvow,43
+wagtail_link_block/static/link_block/link_block.js,sha256=Zl_iXtL7bxFKSWilIx84wWMicAxSm-DgSW1AYf29b2A,2932
+wagtail_link_block/templates/wagtailadmin/block_forms/link_block.html,sha256=i0nCXBDHM2FbI2j1tD7l_hvGL52Jt-Emago--OV97Ns,1132
+wagtail_link_block/wagtail_hooks.py,sha256=fEYa2IZ_R_LDpz66xdU1fK8rU7Q9cTHSzNWCWWz3H7I,567
+wagtail_link_block-1.1.7.dist-info/LICENSE,sha256=gE8s_EpJVhK0XCP2CFN-ECXf9Wzkr8zYWiuOe7xqqT0,1503
+wagtail_link_block-1.1.7.dist-info/METADATA,sha256=wN2dj8bCS3yVA7UFxBg7Kyg2ASqRuxOFg1ZduKjIJhE,2945
+wagtail_link_block-1.1.7.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+wagtail_link_block-1.1.7.dist-info/RECORD,,
