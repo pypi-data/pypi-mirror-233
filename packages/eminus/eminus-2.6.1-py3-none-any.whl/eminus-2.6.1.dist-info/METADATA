@@ -1,0 +1,170 @@
+Metadata-Version: 2.1
+Name: eminus
+Version: 2.6.1
+Summary: A plane wave density functional theory code.
+Home-page: https://github.com/wangenau/eminus
+Author: Wanja Timm Schulze
+Author-email: wangenau@protonmail.com
+License: APACHE2.0
+Project-URL: Bug Tracker, https://gitlab.com/wangenau/eminus/-/issues
+Project-URL: Changelog, https://wangenau.gitlab.io/eminus/changelog.html
+Project-URL: Documentation, https://wangenau.gitlab.io/eminus
+Project-URL: Source code, https://gitlab.com/wangenau/eminus
+Keywords: Python,DFT,DFT++
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.17
+Requires-Dist: scipy >=1.6
+Provides-Extra: all
+Requires-Dist: dftd3 >=0.6.0 ; extra == 'all'
+Requires-Dist: pyscf >=1.7.3 ; extra == 'all'
+Requires-Dist: torch >=1.8 ; extra == 'all'
+Requires-Dist: matplotlib >=1.5.0 ; extra == 'all'
+Requires-Dist: nglview >=2.6.5 ; extra == 'all'
+Requires-Dist: plotly >=4.5 ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: coverage >=4.4 ; extra == 'dev'
+Requires-Dist: furo >=2022.02.14.1 ; extra == 'dev'
+Requires-Dist: mypy >=0.931 ; extra == 'dev'
+Requires-Dist: notebook <7 ; extra == 'dev'
+Requires-Dist: pytest >=5.4 ; extra == 'dev'
+Requires-Dist: pytest-cov >=2.6.1 ; extra == 'dev'
+Requires-Dist: ruff >=0.0.276 ; extra == 'dev'
+Requires-Dist: sphinx >=4 ; extra == 'dev'
+Requires-Dist: sphinxcontrib-bibtex >=2 ; extra == 'dev'
+Provides-Extra: dispersion
+Requires-Dist: dftd3 >=0.6.0 ; extra == 'dispersion'
+Provides-Extra: fods
+Requires-Dist: pyscf >=1.7.3 ; extra == 'fods'
+Provides-Extra: libxc
+Requires-Dist: pyscf >=1.7.3 ; extra == 'libxc'
+Provides-Extra: torch
+Requires-Dist: torch >=1.8 ; extra == 'torch'
+Provides-Extra: viewer
+Requires-Dist: matplotlib >=1.5.0 ; extra == 'viewer'
+Requires-Dist: nglview >=2.6.5 ; extra == 'viewer'
+Requires-Dist: plotly >=4.5 ; extra == 'viewer'
+
+![eminus logo](https://gitlab.com/wangenau/eminus/-/raw/main/docs/_static/logo/eminus_logo.png)
+
+# eminus
+[![pypi](https://img.shields.io/pypi/v/eminus?color=1a962b)](https://pypi.org/project/eminus)
+[![coverage](https://gitlab.com/wangenau/eminus/badges/main/coverage.svg)](https://wangenau.gitlab.io/eminus/htmlcov)
+[![python](https://img.shields.io/pypi/pyversions/eminus?color=green)](https://wangenau.gitlab.io/eminus/installation.html)
+[![license](https://img.shields.io/badge/license-Apache2.0-yellowgreen)](https://wangenau.gitlab.io/eminus/license.html)
+[![doi](https://zenodo.org/badge/431079841.svg)](https://zenodo.org/badge/latestdoi/431079841)
+
+The eminus package is a plane wave density functional theory (DFT) code.
+It is built upon the [DFT++](https://arxiv.org/abs/cond-mat/9909130) pragmas, that aim to let programming languages and theory coincide.
+The goal is to create a simple code that is easy to read and easy to extend while using minimal dependencies.
+
+## Documentation
+
+To learn more about the implementation and usage of eminus, take a look inside the [documentation](https://wangenau.gitlab.io/eminus).
+
+## Installation
+
+The package and all necessary dependencies can be installed using pip
+
+```terminal
+pip install eminus
+```
+
+More information about the installation process can be found [here](https://wangenau.gitlab.io/eminus/installation.html).
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://gitlab.com/wangenau/eminus/-/blob/main/LICENSE) file for details.
+
+
+Changelog
+=========
+
+v2.6.1 - Oct 04, 2023
+---------------------
+- New features
+   - Add a Cell generation function
+   - Add k-point generation functionalities
+   - Add support to handle trajectory files
+- Updated docs
+   - Add a FOD optimization and a reduced density gradient example
+   - Add references to data
+- Miscellaneous
+   - Breaking:
+      - Rename X to pos in Atoms
+      - Merge R into a in Atoms
+   - Indicate Python 3.12 support
+   - Support viewing multiple files
+   - Support non-cubic cells in Atoms, io, and viewer functions
+   - Support viewing multiple files
+   - Fix Nix flake
+
+v2.6.0 - Aug 07, 2023
+---------------------
+- New features
+   - Complete rewrite of the Atoms and SCF classes
+      - Easily allow systems with different charge or multiplicity
+      - Document all public properties
+      - Use properties when parsing input arguments
+      - Allow direct setting of attributes
+      - Better input handling
+      - Use an Occupations object to store electronic states information in Atoms
+      - Use a GTH object to store GTH data in SCF
+      - Add some properties to the objects, e.g., the volume element dV in Atoms
+      - Indicate non-input arguments and non-results as private or read-only
+      - Breaking:
+         - Use unrestricted instead of Nspin
+         - Use spin and charge instead of Nstate and f
+         - Remove f and s as keyword arguments, can be set after initialization
+         - Remove cgform as a keyword argument, use the run function to pass it to minimizers
+         - Rename min keyword to opt
+         - Merge symmetric with guess
+   - Add DFT-D3 dispersion correction as an extra
+- Updated docs
+   - Add a theory introduction page
+   - Add documentation to module data/constants
+   - Add a list of all packages and their respective licenses
+   - Re-add documentation of operators to Atoms
+   - Add a custom functional example
+   - Improve the geometry optimization example
+   - Add PNGs to the downloads section
+   - Sort attributes groupwise
+   - Fix a lot of typos
+- Coding style
+   - Type check with mypy
+   - Fix a lot of type warnings from mypy
+   - Add type hints to scripts in docs and setup.py
+   - Rename some arguments to not shadow builtins
+- Miscellaneous
+   - Create the eminus-benchmarks repository
+      -  Move the SimpleDFT example to said repository
+   - Small performance improvements, mostly for meta-GGAs
+   - Add an error message when attempting to use operators of an unbuilt Atoms object
+   - Add Matplotlib to the viewer setup to generate images in the examples
+   - More tests, e.g, for different spin and charge states
+   - Add a small demo function
