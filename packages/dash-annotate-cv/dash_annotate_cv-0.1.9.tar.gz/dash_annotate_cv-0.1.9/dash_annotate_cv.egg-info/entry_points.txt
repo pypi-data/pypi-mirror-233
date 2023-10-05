@@ -1,0 +1,2 @@
+[console_scripts]
+dacv = dash_annotate_cv.command_line:cli
