@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: emailbook-verification
+Version: 1.0.0
+Summary: Verfify emailbook format and match with xlsx
+Author: AeroH
+Author-email: zhang.yuh@outlook.com
+Requires-Python: >=3.9
+Requires-Dist: pandas ==2.0.3
+
