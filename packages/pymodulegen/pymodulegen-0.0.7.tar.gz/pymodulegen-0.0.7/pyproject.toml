@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymodulegen"
+version = "0.0.7"
+authors = [
+  { name="Narendran A I", email="narenkrithick@gmail.com" },
+]
+description = " Generate module and __init__.py (in case of package) files in the specified directory. Set root directory and add root directory path to sys path so that absolute path imports will work even in child modules."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+pymodulegen = "pymodulegen:__main__.main"
+
+
+[project.urls]
+"Homepage" = "https://github.com/YashNarK/pymodulegen"
+"Bug Tracker" = "https://github.com/YashNarK/pymodulegen/issues"
