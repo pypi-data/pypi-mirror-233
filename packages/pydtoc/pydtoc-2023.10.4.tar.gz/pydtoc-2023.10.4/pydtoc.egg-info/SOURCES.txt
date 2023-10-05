@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+pydtoc.egg-info/PKG-INFO
+pydtoc.egg-info/SOURCES.txt
+pydtoc.egg-info/dependency_links.txt
+pydtoc.egg-info/top_level.txt
