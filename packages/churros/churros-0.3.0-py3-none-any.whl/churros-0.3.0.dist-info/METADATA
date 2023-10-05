@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: churros
+Version: 0.3.0
+Summary: A CLI for Churros, the student association platform
+License: AGPL-3.0
+Author: Ewen Le Bihan
+Author-email: hey@ewen.works
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: gql[all] (>=3.4.1,<4.0.0)
+Requires-Dist: rich (>=13.5.3,<14.0.0)
+Description-Content-Type: text/markdown
+
+# Churros' CLI
+
