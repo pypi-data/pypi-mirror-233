@@ -1,0 +1,84 @@
+{
+    "$id": "https://alwaysai.co/qaicModelParameters.json",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "qaicModelProperties": {
+            "type": "object",
+            "required": [
+                "architecture",
+                "purpose",
+                "batch_size"
+                ],
+            "properties": {
+                "purpose": {
+                    "enum": [
+                        "ObjectDetection",
+                        "PoseEstimation"
+                    ],
+                    "type": "string"
+                },
+                "batch_size": {
+                    "type": "number"
+                }
+            },
+        
+            "allOf": [
+                {
+                    "if": {
+                        "type": "object",
+                        "properties": {
+                            "purpose": {
+                                "const": "ObjectDetection"
+                            }
+                        }
+                    },
+                    "then": {
+                        "type": "object",
+                        "properties": {
+                            "architecture": {
+                                "type": "string",
+                                "$ref": "QaicArchitecture_ObjectDetection"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "type": "object",
+                        "properties": {
+                            "purpose": {
+                                "const": "PoseEstimation"
+                            }
+                        }
+                    },
+                    "then": {
+                        "type": "object",
+                        "properties": {
+                            "architecture": {
+                                "type": "string",
+                                "$ref": "QaicArchitecture_PoseEstimation"
+                            }
+                        }
+                    }
+                }
+
+            ]
+        },
+        "QaicArchitecture_objectdetection": {
+            "$id": "QaicArchitecture_ObjectDetection",
+            "type": "string",
+            "enum": [
+                "yolov4",
+                "yolov3"
+            ]
+        },
+        "QaicArchitecture_poseestimation": {
+            "$id": "QaicArchitecture_PoseEstimation",
+            "type": "string",
+            "enum": [
+                "human_pose"
+            ]
+        }
+    }
+}
