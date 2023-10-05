@@ -1,0 +1,16 @@
+corva_data_datasetdepth/__init__.py,sha256=e7HyKFwHyDXnYS8N522BEQOMVe9y_PBBRF-34p-BWVs,1251
+corva_data_datasetdepth/api_client.py,sha256=Ap9SWaj7NKVUwMY8CRbUJ6U7F_dZdvE9hHKbX3dHq7k,30378
+corva_data_datasetdepth/api_response.py,sha256=uCehWdXXDnAO2HAHGKe0SgpQ_mJiGDbcu-BHDF3n_IM,852
+corva_data_datasetdepth/configuration.py,sha256=wzBS-wznv0Mm6LOeJBEqA5ooXpwr3c_Qfjz9gZCP5g8,15536
+corva_data_datasetdepth/exceptions.py,sha256=Lj-iD9LNKSuBCZmK0MO9K9JHdxAgfYkDto6tQvRvQXI,5432
+corva_data_datasetdepth/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corva_data_datasetdepth/rest.py,sha256=pmRiAzQjCg3V5kQPjfEc3DmwjQAYWP3zIGhJSaonXAY,12939
+corva_data_datasetdepth/api/__init__.py,sha256=dn--BU1_1ot7yjzrOnuH6Ay4EY70esTHxSkyRvVH1Mw,133
+corva_data_datasetdepth/api/corva_dataset_depth_api.py,sha256=3Qbt09qAY8hTeNgRbQBBNqHG9xDPAI7mTqG83FKuA7k,10165
+corva_data_datasetdepth/models/__init__.py,sha256=BxcezNn0ACH--wdWp0NlM9zchCrh2LrTuo_Rem79aSE,541
+corva_data_datasetdepth/models/corva_dataset_depth.py,sha256=rnDOGrivuIL3V10bKPsef-P_OyBrbGolr7keY_V7Zz4,3747
+corva_data_datasetdepth/models/http_validation_error.py,sha256=C079K_WMlUA7nA_KBWwktxGPIQl7--PowbaCvgHY0Wo,2024
+corva_data_datasetdepth-1.0.1.dist-info/METADATA,sha256=WwJuKj6pLlcMBsNBo_-_FAgQJ-WTHO0-rMiljrqKlgk,517
+corva_data_datasetdepth-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+corva_data_datasetdepth-1.0.1.dist-info/top_level.txt,sha256=WhscQmTNNww2aISIzW5eN00chS0PZ1s5IoCcPtmZMCk,24
+corva_data_datasetdepth-1.0.1.dist-info/RECORD,,
