@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: fcbypass
+Version: 1.0.6
+Summary: A package to get Solved Funcaptcha tokens for Roblox.
+Home-page: https://github.com/Vertable/fcbypass
+Author: Vertable
+Author-email: author@example.com
+Project-URL: Bug Tracker, https://github.com/Vertable/fcbypass/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FcBypass
+A python module to get Funcaptcha tokens from capbypass
+
+**Create a FcBypass instance**
+```python
+import FcBypass
+fcbypass = FcBypass.Solver(Key="ENTER_YOUR_CAPBYPASS_KEY_HERE")
+```
+The variable ```fcbypass``` can then be used multiple times to fetch tokens from capbypass.
+
+# Use cases
+
+### Signup:
+```python
+response = fcbypass.FunCaptchaTask(
+    blob = "Submit your blob String here",
+    proxy = "http://username:password@ip:port",
+    Signup = True
+                        )
+print(response.Token)
+```
+
+### Login:
+```python
+response = fcbypass.FunCaptchaTask(
+    blob = "Submit your blob String here",
+    proxy = "http://username:password@ip:port",
+    Login = True
+                        )
+print(response.Token)
+```
+
+### Action:
+```python
+response = fcbypass.FunCaptchaTask(
+    blob = "Submit your blob String here",
+    proxy = "http://username:password@ip:port",
+    Action = True
+                        )
+print(response.Token)
+```
+
+
+Your response.Token 
