@@ -1,0 +1,12 @@
+quantile_forest-1.2.1.dist-info/RECORD,,
+quantile_forest-1.2.1.dist-info/LICENSE,sha256=8Com4XRjvXmwVOz3SEEJ-b5qkmwBzca8l54lEEjbW1s,11341
+quantile_forest-1.2.1.dist-info/WHEEL,sha256=keHNpQgVCtZmnassXI38bYehVkiZ8Lrud_k-zLyqsEg,111
+quantile_forest-1.2.1.dist-info/top_level.txt,sha256=rPyfu7keb-34R9gjyiTdbcv_DfNQxbThmdG2xwBVHjw,16
+quantile_forest-1.2.1.dist-info/METADATA,sha256=jC98UbK1vr3P0iQsvtk-DEAFCwcuanDA4CJ01Oy1NGY,4203
+quantile_forest/_quantile_forest.py,sha256=V_2DZe2tlrR24cvjqLKVKnSi-XRnC6ceC5osAvvZsSw,52449
+quantile_forest/version.py,sha256=Mlm4Gvmb_6yQxwUbv2Ksc-BJFXLPg9H1Vt2iV7wXrA4,22
+quantile_forest/_quantile_forest_fast.cpython-312-darwin.so,sha256=Hf9jFnTiZ6wMBYvooD_pD1wDx4Kd8lKflrOFXbIxsSs,431784
+quantile_forest/__init__.py,sha256=dCVyIVOZnkxfbzcBNBquvEcVg_wWN2XQRFcTQNcI5bs,956
+quantile_forest/_min_dependencies.py,sha256=jNSCZvNRa6DijxmpNoQiMSfzx7YvGme0tKv8UyN8i-s,1177
+quantile_forest/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantile_forest/tests/test_quantile_forest.py,sha256=XGs8Isz3Hg76zqAohXL_wU-_Tm7mB9-71h4XVZOxb7U,45771
