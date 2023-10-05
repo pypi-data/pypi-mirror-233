@@ -1,0 +1,31 @@
+{% extends 'core/page.html' %}
+{% load i18n %}
+
+{% block page %}
+
+    <h1>{% trans "Contact Form" %}</h1>
+
+    {% if user.is_authenticated %}
+        <p>
+            {% trans "Please enter your message." %}
+        </p>
+        <p>
+            {% trans "The answer will be sent to " %}<b>{{ user.email }}</b>
+        </p>
+
+        <form method="post" action="{% url 'contact:contact' %}" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}" />
+
+            {% include 'core/partials/form_fields.html' %}
+
+            <input type="submit" value="{% trans 'Send message' %}" class="btn {{ submit_danger|yesno:'btn-danger,btn-primary' }}" />
+            <input type="submit" name="cancel" value="{% trans 'Cancel' %}" class="btn btn-default" />
+        </form>
+    {% else %}
+        <p>
+            {% trans "Please log in to be able to fill the contact form." %}
+        </p>
+    {% endif %}
+
+{% endblock %}
