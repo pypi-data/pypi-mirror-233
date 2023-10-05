@@ -1,0 +1,2 @@
+[console_scripts]
+igwn-alert-listener = gw.astrology.igwn_alert_listener:main

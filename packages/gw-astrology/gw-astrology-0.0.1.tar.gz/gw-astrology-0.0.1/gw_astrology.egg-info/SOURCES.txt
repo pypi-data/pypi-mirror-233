@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gw/__init__.py
+gw/astrology/__init__.py
+gw/astrology/igwn_alert_listener.py
+gw/astrology/sign_calculator.py
+gw_astrology.egg-info/PKG-INFO
+gw_astrology.egg-info/SOURCES.txt
+gw_astrology.egg-info/dependency_links.txt
+gw_astrology.egg-info/entry_points.txt
+gw_astrology.egg-info/not-zip-safe
+gw_astrology.egg-info/requires.txt
+gw_astrology.egg-info/top_level.txt
