@@ -1,0 +1,2 @@
+[console_scripts]
+nandai = nandai.scripts.cli:cli
