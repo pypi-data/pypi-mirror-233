@@ -1,0 +1,9 @@
+okareo/__init__.py,sha256=k0rDSIFOlwjSDcl1XjzcC-fLhXJODQKvm29i3wiePiY,50
+okareo/client.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+okareo/common.py,sha256=6C7yGVwvXMAyxxW_sX1LL8s6EhwRPKcKVcv09w2Mv4U,111
+okareo/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+okareo/okareo.py,sha256=eitQZItgxFwnHTXHEoe3slNHd_RgfvIWZC5CI3y2n3g,982
+okareo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+okareo-0.0.5.dist-info/METADATA,sha256=p-Q-1BWTRinIMd5vpn-4exHotIX5-gJgafgwYkeZIs8,3597
+okareo-0.0.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+okareo-0.0.5.dist-info/RECORD,,
