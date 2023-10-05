@@ -1,0 +1,95 @@
+{% extends 'core/page.html' %}
+{% load i18n %}
+
+{% block page %}
+
+    <h1>{% trans "Create a new account" %}</h1>
+
+    <p>
+        {% blocktrans trimmed with provider_name=account.get_provider.name site_name=site.name %}
+        You are about to use your <strong>{{provider_name}}</strong> account to login to {{site_name}}.
+        {% endblocktrans %}
+    </p>
+
+    {% if settings.AUTH_WORKFLOW %}
+    <p>
+        {% trans 'Please note that after registration, your account needs to be manually activated by an admin. This can take one or two days. You will receive an email when you can log in.'%}
+    </p>
+    {% endif %}
+
+    <form method="post" action="{% url 'socialaccount_signup' %}" novalidate>
+        {% csrf_token %}
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+
+        {% for field in form.visible_fields %}
+            {% if settings.AUTH_TERMS_OF_USE and field.html_name == 'consent' %}
+
+            <div class="form-group{% if field.errors %} has-error{% endif %} field-{{field.html_name}}">
+                <div class="checkbox">
+                    <label>
+                        {{ field }}
+                        {% trans 'I agree to the <a href="">terms of use</a>.' %}
+                    </label>
+                </div>
+            </div>
+
+            {% if field.errors %}
+            <div class="help-block error">
+                <p class="text-danger">{% trans 'You need to agree to the terms of use to proceed.' %}</p>
+            </div>
+            {% endif %}
+
+            {% else %}
+            {% include 'core/partials/form_field.html' with field=field %}
+            {% endif %}
+        {% endfor %}
+
+        <input type="submit" class="btn btn-primary" value="{% trans 'Create account' %}" />
+    </form>
+
+    <ul class="list-unstyled text-danger">
+    {% for error in form.non_field_errors %}
+        <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+
+    {% if settings.AUTH_TERMS_OF_USE %}
+    <script>
+        $(document).ready(function() {
+            $('.form-group.field-consent a').on('click', function (event) {
+                console.log(1);
+                $('#terms-of-use-modal').modal('show');
+                event.preventDefault();
+            });
+        });
+    </script>
+
+    <div class="modal" id="terms-of-use-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        {% trans 'Terms of use' %}
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+                    {% include 'account/terms_of_use.html' %}
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" tabindex="-1">
+                        {% trans 'Close' %}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
