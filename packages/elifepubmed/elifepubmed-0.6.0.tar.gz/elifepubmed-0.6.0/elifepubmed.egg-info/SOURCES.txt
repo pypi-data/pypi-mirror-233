@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+elifepubmed/__init__.py
+elifepubmed/conf.py
+elifepubmed/generate.py
+elifepubmed/utils.py
+elifepubmed.egg-info/PKG-INFO
+elifepubmed.egg-info/SOURCES.txt
+elifepubmed.egg-info/dependency_links.txt
+elifepubmed.egg-info/requires.txt
+elifepubmed.egg-info/top_level.txt
+tests/test_generate.py
+tests/test_generate_edge_cases.py
+tests/test_utils.py

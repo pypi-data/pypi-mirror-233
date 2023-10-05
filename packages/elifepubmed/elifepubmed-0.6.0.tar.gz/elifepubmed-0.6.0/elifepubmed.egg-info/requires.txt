@@ -1,0 +1,4 @@
+elifetools>=0.33.0
+elifearticle>=0.16.0
+configparser
+PyYAML
