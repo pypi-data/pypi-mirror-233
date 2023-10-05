@@ -1,0 +1,23 @@
+[project]
+name = "oneroll"
+version = "1.0.1-rc2"
+description = "onedice? no, this is just another Dice Parser lib. NO OFFENSE!"
+authors = [
+    { name = "简律纯", email = "i@jyunko.cn" },
+]
+dependencies = [
+    "docutils>=0.20.1",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]

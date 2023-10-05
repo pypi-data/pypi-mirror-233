@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: oneroll
+Version: 1.0.1rc2
+Summary: onedice? no, this is just another Dice Parser lib. NO OFFENSE!
+Author-Email: 简律纯 <i@jyunko.cn>
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: docutils>=0.20.1
+Description-Content-Type: text/markdown
+
+OneRoll
+=======
+
+This is a fork from Rolisteam/DiceParser, but all rewritten in Python.
