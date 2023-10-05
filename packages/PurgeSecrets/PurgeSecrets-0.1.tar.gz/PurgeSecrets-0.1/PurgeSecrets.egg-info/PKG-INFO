@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: PurgeSecrets
+Version: 0.1
+Summary: Easy deletion of INI/key etc files
+Home-page: https://github.com/amcsparron2793-Water/PurgeSecrets
+Download-URL: https://github.com/amcsparron2793-Water/PurgeSecrets/archive/refs/tags/0.1.tar.gz
+Author: Amcsparron
+Author-email: amcsparron@albanyny.gov
+License: MIT License
+License-File: LICENSE.txt

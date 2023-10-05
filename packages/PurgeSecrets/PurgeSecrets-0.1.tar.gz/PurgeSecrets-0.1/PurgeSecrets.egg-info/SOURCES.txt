@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+PurgeSecrets/PurgeSecrets.py
+PurgeSecrets/__init__.py
+PurgeSecrets.egg-info/PKG-INFO
+PurgeSecrets.egg-info/SOURCES.txt
+PurgeSecrets.egg-info/dependency_links.txt
+PurgeSecrets.egg-info/top_level.txt
