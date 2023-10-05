@@ -1,0 +1,3 @@
+[console_scripts]
+mtag-json2dot = mtag_json2dot:__main__
+mtag-postprocess = mtag_postprocess:__main__
