@@ -1,0 +1,46 @@
+site_name: Formulaic
+nav:
+  - Getting Started:
+    - Introduction: index.md
+    - What are formulas?: formulas.md
+    - Installation: installation.md
+    - Migrating from Patsy/R: migration.md
+    - Changelog: changelog.md
+  - User Guides:
+    - Introduction: guides/index.md
+    - Quickstart: guides/quickstart.ipynb
+    - How it works: guides/formulae.ipynb
+    - Formula Grammar: guides/grammar.md
+    - Model Specs: guides/model_specs.ipynb
+    - Transforms: guides/transforms.ipynb
+    - Categorical Encoding: guides/contrasts.ipynb
+    - Spline Encoding: guides/splines.ipynb
+    - Using with existing libraries: guides/integration.ipynb
+  - Developer Guides:
+    - Introduction: dev/index.md
+    - API: dev/api.md
+    - Recommendations: dev/recommendations.md
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+  logo: assets/images/logo.svg
+  palette:
+    primary: light blue
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - search
+  - mkdocs-jupyter
+extra_css:
+  - assets/styles.css
