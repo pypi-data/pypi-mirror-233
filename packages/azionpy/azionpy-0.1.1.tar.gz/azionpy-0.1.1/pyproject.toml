@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "azionpy"
+version = "0.1.1"
+description = "Um pacote simples para interagir com a API da Azion e seus serviços."
+authors = ["Cesar Freire <cesar.freire@magazord.com.br>"]
+readme = "README.md"
+homepage = "https://azionpy.freire.live/"
+documentation = "https://azionpy.freire.live/"
+repository = "https://github.com/cesarmagazord/azionpy"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.4.2"
+httpx = "^0.25.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
