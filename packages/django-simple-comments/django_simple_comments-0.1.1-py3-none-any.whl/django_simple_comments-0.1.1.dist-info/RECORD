@@ -1,0 +1,6 @@
+django_simple_comments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_simple_comments/apps.py,sha256=vQDLkSiaxJ5QYZlluljvJA8mlwNGN1qZOWUhSZJPz5U,164
+django_simple_comments/models.py,sha256=_znUfBlM0jUqhUf944Vl8aa8mEpbB763X5lIqGcsPoA,920
+django_simple_comments-0.1.1.dist-info/METADATA,sha256=l5wFZCfses2Op7vpjF_FW7RwfbDjpAeQ6b306n97cHM,338
+django_simple_comments-0.1.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+django_simple_comments-0.1.1.dist-info/RECORD,,
