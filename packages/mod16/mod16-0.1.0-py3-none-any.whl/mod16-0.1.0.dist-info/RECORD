@@ -1,0 +1,12 @@
+mod16/__init__.py,sha256=_wE70piWlltNRruIFQy4gIUC8cCQIpWppSS3wl84aPY,52164
+mod16/calibration.py,sha256=p5vmOKpY58xuI55R5ZMUwTaIMry4H_Uet9_H4BTjxIc,18287
+mod16/sensitivity.py,sha256=HkpaMNFK9nYmPUxW2syPjWMHfWWhrz2rqDkox9JAcSE,4769
+mod16/utils.py,sha256=wBAfF_CKLUINu1W6k8-lWF_wtIksWvy33J-halV0k2w,4617
+mod16/data/MOD16_BPLUT_C5.1_05deg_MCD43B_Albedo_MERRA_GMAO.csv,sha256=JQpuXcf10k4i78GJn3oKDZ-NcB_a90-q8qcy7qggInY,731
+mod16/data/MOD16_BPLUT_CX.X_05deg_MCD43B_Albedo_MERRA.csv,sha256=tdaNXAQPt5TYD4TFeD4U0JGQQpzV1WmEpcqsDC1F8DA,746
+mod16/data/VNP16_BPLUT_CX.X_05deg_MCD43B_Albedo_MERRA.csv,sha256=HMu4DgSQYxLr_-0n6cvdPt_CG2CxYh9PsHxScxjx2ik,790
+mod16-0.1.0.dist-info/LICENSE,sha256=ulMhz-S6FVrOcISK-2s-GiNAXuocHIT9yZPmSobjYd8,1174
+mod16-0.1.0.dist-info/METADATA,sha256=dOU-iY0ClP-e_dMA2IPEaSJZ5H3aK84u-euuWwzAZoA,27689
+mod16-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mod16-0.1.0.dist-info/top_level.txt,sha256=Q4wHbVZHFJ_YObEPJKjLEj7mputiLN5imG9RJ4fYJAQ,6
+mod16-0.1.0.dist-info/RECORD,,
