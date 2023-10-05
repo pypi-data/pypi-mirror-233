@@ -1,0 +1,7 @@
+PyQt5
+numpy
+scipy
+h5py
+matplotlib
+Pillow
+natsort
