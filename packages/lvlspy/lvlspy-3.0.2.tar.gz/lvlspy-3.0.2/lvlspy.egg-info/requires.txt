@@ -1,0 +1,9 @@
+lxml
+numpy
+gslconsts
+
+[dev]
+check-manifest
+
+[test]
+coverage
