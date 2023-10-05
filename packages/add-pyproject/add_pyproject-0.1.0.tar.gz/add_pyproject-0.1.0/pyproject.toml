@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "add-pyproject"
+dynamic = ["version"]
+description = 'CLI to add python dependencies to pyproject.toml'
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Keto D. Zhang", email = "ketozhang@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "typer",
+  "tomlkit",
+]
+
+[project.urls]
+Documentation = "https://github.com/ketozhang/add-pyproject#readme"
+Issues = "https://github.com/ketozhang/add-pyproject/issues"
+Source = "https://github.com/ketozhang/add-pyproject"
+
+[tool.hatch.version]
+path = "add_pyproject/__about__.py"
+
+[tool.hatch.envs.default.scripts]
+add = "python -m add_pyproject {args}"
+
+[tool.black]
+target-version = ["py37"]
+skip-string-normalization = true
