@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pytzen
+Version: 0.9.10
+Summary: PYTZEN
+Author: PYTZEN
+Project-URL: Documentation, https://www.pytzen.com/design-pattern/documentation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# `pytzen`
+
+## Disclaimer:
+This library is offered 'as-is' with **no official support, maintenance, or warranty**. Primarily, `pytzen` is an experimentation, which may not be apt for production settings. Users are encouraged to delve into the library but should note that the developers won't actively address arising issues.
+
+## Usage Caution:
+`pytzen` is primarily intended for prototyping, such as in Proof-of-Concept (POC) or Minimum Viable Product (MVP) stages. We are not liable for issues arising from the library's usage in production environments. Before considering any wider implementation, users should extensively test and vet the library in a safe, controlled environment.
+
+## Documentation:
+For a detailed guide on how to use `pytzen`, please refer to the [documentation](https://www.pytzen.com/design-pattern/documentation). Here, you'll find in-depth information on all aspects of the library.
