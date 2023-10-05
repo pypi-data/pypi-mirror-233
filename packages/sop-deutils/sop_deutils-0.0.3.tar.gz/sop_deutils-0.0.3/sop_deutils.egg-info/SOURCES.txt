@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sop_deutils/__init__.py
+sop_deutils/y4a_airflow.py
+sop_deutils/y4a_retry.py
+sop_deutils/y4a_telegram.py
+sop_deutils.egg-info/PKG-INFO
+sop_deutils.egg-info/SOURCES.txt
+sop_deutils.egg-info/dependency_links.txt
+sop_deutils.egg-info/not-zip-safe
+sop_deutils.egg-info/requires.txt
+sop_deutils.egg-info/top_level.txt
+sop_deutils/gg_api/config.ini
