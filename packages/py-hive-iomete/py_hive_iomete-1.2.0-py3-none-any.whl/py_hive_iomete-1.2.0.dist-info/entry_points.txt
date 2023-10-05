@@ -1,0 +1,8 @@
+[sqlalchemy.dialects]
+hive = pyhive.sqlalchemy_hive:HiveIometeDialect
+hive.http = pyhive.sqlalchemy_hive:HiveHTTPDialect
+hive.https = pyhive.sqlalchemy_hive:HiveHTTPSDialect
+hive.iomete = pyhive.sqlalchemy_hive:HiveIometeDialect
+iomete = pyhive.sqlalchemy_iomete:IometeDialect
+presto = pyhive.sqlalchemy_presto:PrestoDialect
+trino.pyhive = pyhive.sqlalchemy_trino:TrinoDialect
