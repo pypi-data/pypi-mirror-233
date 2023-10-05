@@ -1,0 +1,9 @@
+README.md
+setup.py
+labrinth/__init__.py
+labrinth/labrinth.py
+labrinth.egg-info/PKG-INFO
+labrinth.egg-info/SOURCES.txt
+labrinth.egg-info/dependency_links.txt
+labrinth.egg-info/requires.txt
+labrinth.egg-info/top_level.txt
