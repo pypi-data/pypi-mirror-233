@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gff2embl/gff2embl
+gogstools.egg-info/PKG-INFO
+gogstools.egg-info/SOURCES.txt
+gogstools.egg-info/dependency_links.txt
+gogstools.egg-info/requires.txt
+gogstools.egg-info/top_level.txt
+ogs_check/ogs_check
+ogs_merge/ogs_merge
+ogswriters/BipaaEmblSubmitWriter.py
+ogswriters/BipaaEmblWriter.py
+ogswriters/__init__.py
