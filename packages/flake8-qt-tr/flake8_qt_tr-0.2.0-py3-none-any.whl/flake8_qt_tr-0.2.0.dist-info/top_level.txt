@@ -1,0 +1,1 @@
+flake8_qt_tr
