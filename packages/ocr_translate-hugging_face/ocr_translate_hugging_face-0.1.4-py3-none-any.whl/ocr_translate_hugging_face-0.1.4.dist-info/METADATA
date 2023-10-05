@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ocr_translate-hugging_face
+Version: 0.1.4
+Summary: Plugins to enable usage of HuggingFace Models in ocr_translate
+Keywords: django,translation
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: django-ocr_translate>=0.2.1,<1.0
+Requires-Dist: opencv-python-headless~=4.8.0.74
+Requires-Dist: torch~=2.0.1
+Requires-Dist: torchvision~=0.15.2
+Requires-Dist: transformers~=4.30.2
+Requires-Dist: fugashi~=1.2.1
+Requires-Dist: unidic-lite~=1.0.8
+Requires-Dist: sacremoses~=0.0.53
+Requires-Dist: safetensors~=0.3.1
+Requires-Dist: sentencepiece~=0.1.99
+Requires-Dist: pre-commit~=3.3.3 ; extra == "pre-commit"
+Requires-Dist: pylint~=2.17.4 ; extra == "pre-commit"
+Requires-Dist: pylint-pytest~=1.1.2 ; extra == "pre-commit"
+Requires-Dist: pylint-django~=2.5.3 ; extra == "pre-commit"
+Requires-Dist: flit ; extra == "release"
+Requires-Dist: pytest ; extra == "tests"
+Requires-Dist: pytest-cov ; extra == "tests"
+Requires-Dist: pytest-django~=4.5.2 ; extra == "tests"
+Project-URL: Source, https://github.com/Crivella/ocr_translate-hugging_face
+Provides-Extra: pre-commit
+Provides-Extra: release
+Provides-Extra: tests
+
+# Plugin ocr_translate_hugging_face
+
+This is a plugin for the [ocr_translate](https://github.com/Crivella/ocr_translate).
+Plugins to enable usage of HuggingFace Models in ocr_translate
+
+## Usage
+
+- Install this by running `pip install ocr_translate-hugging_face`
+- Add `ocr_translate_hugging_face` to your `INSTALLED_APPS` in `settings.py`
+- Run the server with `AUTOCREATE_VALIDATED_MODELS` once
+
