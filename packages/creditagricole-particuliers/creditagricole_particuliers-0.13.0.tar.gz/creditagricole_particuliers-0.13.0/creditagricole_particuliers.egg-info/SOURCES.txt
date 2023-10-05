@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+creditagricole_particuliers/__init__.py
+creditagricole_particuliers/accounts.py
+creditagricole_particuliers/aliases.json
+creditagricole_particuliers/authenticator.py
+creditagricole_particuliers/cards.py
+creditagricole_particuliers/iban.py
+creditagricole_particuliers/logout.py
+creditagricole_particuliers/operations.py
+creditagricole_particuliers/regionalbanks.py
+creditagricole_particuliers.egg-info/PKG-INFO
+creditagricole_particuliers.egg-info/SOURCES.txt
+creditagricole_particuliers.egg-info/dependency_links.txt
+creditagricole_particuliers.egg-info/requires.txt
+creditagricole_particuliers.egg-info/top_level.txt
