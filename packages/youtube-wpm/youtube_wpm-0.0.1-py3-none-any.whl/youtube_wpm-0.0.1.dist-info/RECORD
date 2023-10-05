@@ -1,0 +1,12 @@
+youtube_wpm/__init__.py,sha256=XOL6wHg6Soy0p0rLr8rTl6ER9yKknp0H1d0WjfbxA50,88
+youtube_wpm/__main__.py,sha256=vP5sLetj5CjzX1SP_scKZgLH4Qq1tKG49CH_lJUtM4c,3874
+youtube_wpm/__version__.py,sha256=yj7KfjG1n3QUJN-FbZm0M2W-895noqFgvJzUhco4aTM,300
+youtube_wpm/_const.py,sha256=yI9ce_IsrKpwfWEybJq3ekT0T-MBfmzVpDsnRchDs5E,184
+youtube_wpm/_logger.py,sha256=UeL7g5vs58R-ksXpmRRZsyp_vxGwgVV1uZXpUfHJ2ew,945
+youtube_wpm/_youtube.py,sha256=KG_sBrcq--lqvMMm4yYYOM4kp9Jx4kQ-gjYzc70Y9Lg,3590
+youtube_wpm-0.0.1.dist-info/LICENSE,sha256=n-zm5lyi6FCgHyIS0WxVbZNCJ3YK9T4ARVdUbe8Gkl8,1074
+youtube_wpm-0.0.1.dist-info/METADATA,sha256=_3v_0ybe0FtWF71n40rum7y6Y0QCh4G4ZjO7X5x1K-4,2523
+youtube_wpm-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+youtube_wpm-0.0.1.dist-info/entry_points.txt,sha256=CtgnHaJgntOsGdo3vheOGF8W5TKFKRE_lbX8n9RALKs,58
+youtube_wpm-0.0.1.dist-info/top_level.txt,sha256=-rn0gIvR9ehhLaw5mMZSpvnKz1xDReEqdHYB0kC5ybU,12
+youtube_wpm-0.0.1.dist-info/RECORD,,
