@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: flow-agent-package
+Version: 0.0.32
+Summary: This is my agent tools package
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: semantic-kernel
+Requires-Dist: keyrings.alt
+
+UNKNOWN
+
