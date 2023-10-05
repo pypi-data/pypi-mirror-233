@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=65.3.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gppc"
+requires-python = ">=3.8,<=3.12"
+keywords = [
+    "OSRS",
+    "Grand Exchange",
+    "GrandExchange",
+    "GE",
+    "OSRS Grand Exchange",
+    "Runescape",
+    "Oldschool Runescape",
+    "Old School Runescape",
+    "OS Runescape",
+]
+authors = [{ name = "moxxos" }, { email = "moxxos@proton.me" }]
+license = { text = "GNU AGPLv3" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["requests", "climage", "platformdirs", "pandas"]
+dynamic = ["version", "description", "readme", "urls"]
+
+[project.scripts]
+gppc = "gppc:_main"
+
+[project.optional-dependencies]
+dev = ["autopep8>=1.7.0", "flake8>=5.0.4", "pylint>=2.15.2", "sphinx>=5.3.0"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+license-files = ["LICENSE.txt"]
+
+[tool.setuptools.dynamic]
+version = { attr = "gppc.__version__.__version__" }

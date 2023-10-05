@@ -1,0 +1,10 @@
+requests
+climage
+platformdirs
+pandas
+
+[dev]
+autopep8>=1.7.0
+flake8>=5.0.4
+pylint>=2.15.2
+sphinx>=5.3.0
