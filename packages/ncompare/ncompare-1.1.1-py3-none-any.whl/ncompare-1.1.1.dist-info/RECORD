@@ -1,0 +1,10 @@
+ncompare/__init__.py,sha256=DucGaqaYCBb4ef0kWf3b117WhcoqgjEj2wXtBVErFHo,44
+ncompare/console.py,sha256=ZagtlZ7cV3KjfQe8jvY9kxEZRNT_Il-UktGYlHYSYfI,1869
+ncompare/core.py,sha256=jjjQhCZC6nlp9zNorLqxW9iH3jPj3nqv9AwpEeJoRUs,19273
+ncompare/printing.py,sha256=xghu_xKxt81u9nT3dvL30ijzJQp-X0-4xxu8HWiVVNA,10452
+ncompare/sequence_operations.py,sha256=MttGOXhfxMf9fZYFFSlPWHCqveTd_fnD8ySCHcrHTaU,2258
+ncompare/utils.py,sha256=iuxeWM-qIqY9HePEwRCavVsqmbIvVmi1rULR72Z-IfA,1802
+ncompare-1.1.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+ncompare-1.1.1.dist-info/METADATA,sha256=M7W1BFdV--yYhVJYGk_wrcCVdvWqPMBk_8nXAfJDHPM,7774
+ncompare-1.1.1.dist-info/entry_points.txt,sha256=lwFjYSg-KCrsBLHUkA7WPu-gJsid_5nJ6_f14Dq6QMk,50
+ncompare-1.1.1.dist-info/RECORD,,
