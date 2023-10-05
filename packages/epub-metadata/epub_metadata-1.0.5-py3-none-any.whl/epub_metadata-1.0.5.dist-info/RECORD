@@ -1,0 +1,8 @@
+epub_metadata/__init__.py,sha256=tDWCBilm-Z2Lj9lW0_WJXVv9j-jyiq0xB8T1p1n3e2w,78
+epub_metadata/epub.py,sha256=ERbKAxB5Xy2PNXcdSq62CNNmndRRNHeUvY5rKIuJg90,2338
+epub_metadata/metadata.py,sha256=zgRw6376ffH7pZ_zOpbNTM1NkKkcDoFrxfCgNswSGy8,1923
+epub_metadata/opf_parser.py,sha256=VUE9j3vGln1-G9JksxSOR5hAzZ318mKF1Kf6kCmhbxo,3842
+epub_metadata-1.0.5.dist-info/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+epub_metadata-1.0.5.dist-info/METADATA,sha256=As67LPCxV37F-ZnWFmvK6Xy2UPE4WHyUDCLVjmr-vGg,1218
+epub_metadata-1.0.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+epub_metadata-1.0.5.dist-info/RECORD,,
