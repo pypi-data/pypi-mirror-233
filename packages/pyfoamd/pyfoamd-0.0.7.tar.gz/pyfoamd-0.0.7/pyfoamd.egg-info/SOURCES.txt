@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+pyfoamd/__init__.py
+pyfoamd/__main__.py
+pyfoamd/functions.trash.py
+pyfoamd/richinclude.py
+pyfoamd.egg-info/PKG-INFO
+pyfoamd.egg-info/SOURCES.txt
+pyfoamd.egg-info/dependency_links.txt
+pyfoamd.egg-info/entry_points.txt
+pyfoamd.egg-info/requires.txt
+pyfoamd.egg-info/top_level.txt
