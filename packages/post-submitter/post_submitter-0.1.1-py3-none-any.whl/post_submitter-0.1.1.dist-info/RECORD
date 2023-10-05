@@ -1,0 +1,9 @@
+submitter/__init__.py,sha256=HpBwtIxwe3HAE0IOtICGsTQmmO0s-f5VMxNPs_1t1FY,373
+submitter/client.py,sha256=2YneYHku6UwobPtuSAJ3h6OhfI5QxOH-9PbL9cO-sD0,5203
+submitter/data.py,sha256=E_gVaMDomPWttteztBQf_lDaIHwc2GGl10E1PFmOnb4,2524
+submitter/network.py,sha256=3-AgWEbgkC55XxRhiQSJDbKzWE8A7Xh2XDVIkD8sv1w,3750
+post_submitter-0.1.1.dist-info/LICENSE,sha256=PK7es5k8qjkUjp16en4gZ4gMqFMgvZZ8MXcJazPp0bs,1066
+post_submitter-0.1.1.dist-info/METADATA,sha256=HnkA4yy9i7PxVXu2Wl68cyt_KAZHhsq3HVYCZbLLmKI,1288
+post_submitter-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+post_submitter-0.1.1.dist-info/top_level.txt,sha256=-aHpkwHEjVi1VqiRwgT23mvEZT32oMj883ip_2RE-l0,10
+post_submitter-0.1.1.dist-info/RECORD,,
