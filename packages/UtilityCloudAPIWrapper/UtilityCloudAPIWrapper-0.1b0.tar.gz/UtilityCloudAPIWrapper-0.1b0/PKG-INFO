@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: UtilityCloudAPIWrapper
+Version: 0.1b0
+Summary: Python wrapper for the utility cloud API
+Home-page: https://github.com/amcsparron2793-Water/UtilityCloudAPIWrapper
+Download-URL: https://github.com/amcsparron2793-Water/UtilityCloudAPIWrapper/archive/refs/tags/0.1b.tar.gz
+Author: Amcsparron
+Author-email: amcsparron@albanyny.gov
+License: MIT License
+License-File: LICENSE.txt
