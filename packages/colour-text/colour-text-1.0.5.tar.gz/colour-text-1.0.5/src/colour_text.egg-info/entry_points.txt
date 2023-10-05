@@ -1,0 +1,2 @@
+[console_scripts]
+colour-print = colour_text.__main__:main

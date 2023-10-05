@@ -1,0 +1,12 @@
+LICENSE
+README.md
+colour-print-help.png
+pyproject.toml
+run-test.sh
+src/colour_text/__init__.py
+src/colour_text/__main__.py
+src/colour_text.egg-info/PKG-INFO
+src/colour_text.egg-info/SOURCES.txt
+src/colour_text.egg-info/dependency_links.txt
+src/colour_text.egg-info/entry_points.txt
+src/colour_text.egg-info/top_level.txt
