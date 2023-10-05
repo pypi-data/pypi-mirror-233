@@ -1,0 +1,10 @@
+servicex_did_finder_lib/__init__.py,sha256=M1erZHQCJ2AVQDjPwkeU8kTZzSfeRqtoDl76yHdmzxA,113
+servicex_did_finder_lib/communication.py,sha256=XfPivE1ejuvTY7ttDE-P_o77PZV7jPvLSzXa6eDV52c,10319
+servicex_did_finder_lib/did_logging.py,sha256=wGRnfype3ytuJx0_--HcoGyU9FLGbRKLYEcRLJ-lnds,1537
+servicex_did_finder_lib/did_summary.py,sha256=Rs3HGaarhMbgMa8VmHLgbucm1V7SqXNKm6iuAQlBub8,3558
+servicex_did_finder_lib/servicex_adaptor.py,sha256=MKGSlWHxxkAhgQ7YlclO1KEwgfAMyKipGfDCm8n7TSg,6304
+servicex_did_finder_lib/util_uri.py,sha256=an8YTo20yxhQfqBjVhk6eqwUXhZVrm3hBxjczUhZvZY,1817
+servicex_did_finder_lib-1.4.5.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+servicex_did_finder_lib-1.4.5.dist-info/METADATA,sha256=FerSVJDGF9hAzaVhSdW9-aLVo-Euu5fRtXQujAXPHSk,550
+servicex_did_finder_lib-1.4.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+servicex_did_finder_lib-1.4.5.dist-info/RECORD,,
