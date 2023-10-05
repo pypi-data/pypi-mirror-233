@@ -1,0 +1,21 @@
+[project]
+name = "nikescraperbykejora"
+version = "0.3"
+authors = [
+  { name = "Hasan Ash", email = "hasan40p30m@gmail.com" }
+]
+description = "A simple package for scraping product information on the Nike website (nike.com/id)"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/Kejoramedia/nikescraperbykejora"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
