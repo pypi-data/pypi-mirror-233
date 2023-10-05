@@ -1,0 +1,5 @@
+boto3>=1.26.62
+backoff>=1.10.0
+requests>=2.22.0
+rollbar>=0.14.7
+xmltodict>=0.13.0
