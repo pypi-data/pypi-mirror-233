@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nvkvictim-second
+Version: 9.8
+Summary: Dependency confiuse Attack
+Author: nvk0x
+Author-email: nvk@gmail.com
+Description-Content-Type: text/markdown
+
+
+<h1 align="center">This Python package vulnerable to dependency confusion vulnerability</h1>
