@@ -1,0 +1,5 @@
+setup.py
+HYDROPONICS.egg-info/PKG-INFO
+HYDROPONICS.egg-info/SOURCES.txt
+HYDROPONICS.egg-info/dependency_links.txt
+HYDROPONICS.egg-info/top_level.txt
