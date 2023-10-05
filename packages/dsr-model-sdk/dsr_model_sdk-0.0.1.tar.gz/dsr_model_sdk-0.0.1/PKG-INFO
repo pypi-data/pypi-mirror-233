@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dsr-model-sdk
+Version: 0.0.1
+Summary: A agent helper support send data out the service
+Project-URL: Homepage, https://the-hash.com
+Project-URL: Bug Tracker, https://github.com/hashgroup/dsr-model-sdk/issues
+Author-email: An Quach <an.quach@the-hash.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# DataSpire Model SDK
+
+Help easy to send the event out the AI Model to processing center for observer
+
+## Quick Starts
+
+<div class="termy">
+
+```console
+$ pip install dsrsdk
+
+---> 100%
+```
+
+</div>
