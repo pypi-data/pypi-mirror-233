@@ -1,0 +1,10 @@
+hubblax/__init__.py,sha256=rhIgp5Qmut9yGf0yfPaSn7JHaFW4cBS9dX17iNDsXcM,52
+hubblax/covariance.py,sha256=FyBGzegoSyuLnmtEPc7vPqthZg7cQ78-91kzM4R3a4c,8879
+hubblax/fitter.py,sha256=VgjgrvYQ1EmONIuszl9L08WYQMGjIUa69WynptI9Yk8,804
+hubblax/hubblax.py,sha256=mdUegukNqh2_AIP6keW7o6o6PjNnjGAcastugDzqOoI,6082
+hubblax/likelihood.py,sha256=SY_oQgHY9qi1MiwmmMGUFsKRKDcK0sMmOrk1k8inyo0,3714
+hubblax-0.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hubblax-0.3.0.dist-info/METADATA,sha256=k0EPT_JF0krmRECFjZEZtr4q67037TFmYNAPTufSQPA,992
+hubblax-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+hubblax-0.3.0.dist-info/top_level.txt,sha256=aG26TV4w-7TZAntuKtzePtMbil-xaj01lq-JVOWapik,8
+hubblax-0.3.0.dist-info/RECORD,,
