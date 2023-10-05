@@ -1,0 +1,174 @@
+# GitHub Actions configuration **EXAMPLE**,
+# MODIFY IT ACCORDING TO YOUR NEEDS!
+# Reference: https://docs.github.com/en/actions
+
+name: tests
+
+on:
+  push:
+    # Avoid using all the resources/limits available by checking only
+    # relevant branches and tags. Other branches can be checked via PRs.
+    branches: [main]
+    tags: ['v[0-9]*', '[0-9]+.[0-9]+*']  # Match tags that resemble a version
+  pull_request:  # Run in every PR
+  workflow_dispatch:  # Allow manually triggering the workflow
+  schedule:
+    # Run roughly every 15 days at 00:00 UTC
+    # (useful to check if updates on dependencies break the package)
+    - cron: '0 0 1,16 * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: >-
+    ${{ github.workflow }}-${{ github.ref_type }}-
+    ${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      wheel-distribution: ${{ steps.wheel-distribution.outputs.path }}
+    steps:
+      - uses: actions/checkout@v3
+        with: {fetch-depth: 0}  # deep clone for setuptools-scm
+      - uses: actions/setup-python@v4
+        id: setup-python
+        with: {python-version: "3.11"}
+      - name: Run static analysis and format checkers
+        run: pipx run pre-commit run --all-files --show-diff-on-failure
+      - name: Build package distribution files
+        run: >-
+          pipx run --python '${{ steps.setup-python.outputs.python-path }}'
+          tox -e clean,build
+      - name: Record the path of wheel distribution
+        id: wheel-distribution
+        run: echo "path=$(ls dist/*.whl)" >> $GITHUB_OUTPUT
+      - name: Store the distribution files for use in other stages
+        # `tests` and `publish` will use the same pre-built distributions,
+        # so we make sure to release the exact same package that was tested
+        uses: actions/upload-artifact@v3
+        with:
+          name: python-distribution-files
+          path: dist/
+          retention-days: 1
+
+  build-win-exe:
+    needs: prepare
+    runs-on: windows-latest
+    outputs:
+      windows-distribution: ${{ steps.windows-distribution.outputs.path }}
+    steps:
+      - uses: actions/checkout@v3
+        with: {fetch-depth: 0}  # deep clone for setuptools-scm
+      - uses: actions/setup-python@v4
+        id: setup-python
+        with: {python-version: "3.9"}
+
+      - name: Retrieve pre-built distribution files
+        uses: actions/download-artifact@v3
+        with: {name: python-distribution-files, path: dist/}
+      - name: Build Windows executable
+        run: pipx run tox -e winexe
+
+      - name: Record the path of windows distribution
+        id: windows-distribution
+        run: echo "path=$(ls dist/windows/*.exe)" >> $GITHUB_OUTPUT
+
+      - name: Store the distribution files for use in other stages
+        # `tests` and `publish` will use the same pre-built distributions,
+        # so we make sure to release the exact same package that was tested
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-distribution-files
+          path: dist/windows/
+          retention-days: 1
+
+#  sign-win-exe:
+#    needs: build-win-exe
+#    if: ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Retrieve pre-built distribution files
+#        uses: actions/download-artifact@v3
+#        with: {name: python-distribution-files, path: dist/}
+#
+#        # https://www.ssl.com/how-to/cloud-code-signing-integration-with-github-actions/
+#      - name: Sign Artifact
+#        uses: sslcom/actions-codesigner@develop
+#        with:
+#          command: sign
+#          username: ${{secrets.ES_USERNAME}}
+#          password: ${{secrets.ES_PASSWORD}}
+#          credential_id: ${{secrets.CREDENTIAL_ID}}
+#          # OAuth TOTP Secret (https://www.ssl.com/how-to/automate-esigner-ev-code-signing)
+#          totp_secret: ${{secrets.ES_TOTP_SECRET}}
+#          # Path of code object to be signed. (DLL, JAR, EXE, MSI files vb… )
+##          file_path: ${GITHUB_WORKSPACE}/packages/${{env.PROJECT_NAME}}.jar
+#          file_path: '${GITHUB_WORKSPACE}/dist/windows/data-extractor.exe'
+#          output_path: ${GITHUB_WORKSPACE}/dist/windows-signed
+#
+#      - name: Upload Signed Files
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: windows-signed-files
+#          path: dist/windows-signed/
+#          retention-days: 1
+
+#  build-msi:
+#    needs: build-win-exe
+#    runs-on: windows-latest
+#    steps:
+#      - name: Install go-msi
+#        run: choco install -y "go-msi"
+#
+#      - name: Retrieve pre-built distribution files
+#        uses: actions/download-artifact@v3
+#        with: {name: python-distribution-files, path: dist/}
+#
+#      - name: Build Windows Installer MSI from exe file
+#        uses: AliceOh/CreateWindowsInstaller@1.0.0
+#        with:
+#          exefile: 'dist/windows/data-extractor.exe'
+#
+#  publish-msi:
+#    needs: build-msi
+#    runs-on: windows-latest
+#    steps:
+#      - name: Upload MSI for Windows to release page
+#        uses: "marvinpinto/action-automatic-releases@latest"
+#        with:
+#          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+#          automatic_release_tag: "test"
+#          prerelease: true
+#          title: "Windows Development Build"
+#          files: |
+#            data-extractor.exe.msi
+
+
+
+  publish:
+#    needs: finalize
+    needs: prepare
+    if: ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: {python-version: "3.11"}
+      - name: Retrieve pre-built distribution files
+        uses: actions/download-artifact@v3
+        with: {name: python-distribution-files, path: dist/}
+      - name: Publish Package
+        env:
+          # TODO: Set your PYPI_TOKEN as a secret using GitHub UI
+          # - https://pypi.org/help/#apitoken
+          # - https://docs.github.com/en/actions/security-guides/encrypted-secrets
+          TWINE_REPOSITORY: pypi
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: pipx run tox -e publish

@@ -1,0 +1,2 @@
+[console_scripts]
+qt-data-extractor = qt_data_extractor.main:run

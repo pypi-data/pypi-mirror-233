@@ -1,0 +1,16 @@
+pandas
+PySide6
+data-agent
+data-agent-osisoft-pi
+data-agent-zip
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+
+[winexe]
+pyinstaller
