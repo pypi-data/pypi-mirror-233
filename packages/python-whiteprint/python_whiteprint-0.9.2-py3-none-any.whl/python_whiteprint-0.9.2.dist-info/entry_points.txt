@@ -1,0 +1,3 @@
+[console_scripts]
+whiteprint=python_whiteprint.cli.entrypoint:__app__
+
