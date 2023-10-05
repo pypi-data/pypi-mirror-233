@@ -1,0 +1,9 @@
+README.md
+setup.py
+ADAMModbusDriver/AdamClient.py
+ADAMModbusDriver/__init__.py
+ADAMModbusDriver.egg-info/PKG-INFO
+ADAMModbusDriver.egg-info/SOURCES.txt
+ADAMModbusDriver.egg-info/dependency_links.txt
+ADAMModbusDriver.egg-info/requires.txt
+ADAMModbusDriver.egg-info/top_level.txt
