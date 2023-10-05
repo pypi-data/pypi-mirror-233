@@ -1,0 +1,10 @@
+attrs
+boltons
+qtpy
+
+[dev]
+black
+mypy
+pre-commit
+pytest-qt
+requests

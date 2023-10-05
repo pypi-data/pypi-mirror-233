@@ -1,0 +1,41 @@
+default_language_version:
+    python: python3.10
+repos:
+-   repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+    -   id: black
+-   repo: https://github.com/asottile/blacken-docs
+    rev: 1.16.0
+    hooks:
+    -   id: blacken-docs
+        additional_dependencies: [black==23.7.0]
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.11.0
+    hooks:
+    -   id: reorder-python-imports
+        name: "reorder python imports"
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-merge-conflict
+-   repo: https://github.com/PyCQA/autoflake
+    rev: v2.2.1
+    hooks:
+    -   id: autoflake
+        name: autoflake
+        args: ["--in-place", "--remove-unused-variables", "--remove-all-unused-imports"]
+        language: python
+        files: \.py$
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1
+    hooks:
+    -   id: mypy
+        files: ^(src/|tests/|docs/examples/)
+        args: []
+        additional_dependencies:
+          - attrs
+          - tomli

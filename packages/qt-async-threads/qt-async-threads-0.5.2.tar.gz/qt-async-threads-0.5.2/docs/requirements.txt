@@ -1,0 +1,4 @@
+furo
+pyqt6
+sphinx
+sphinx-copybutton
