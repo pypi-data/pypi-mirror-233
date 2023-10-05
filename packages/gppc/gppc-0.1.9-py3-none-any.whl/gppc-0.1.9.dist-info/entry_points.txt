@@ -1,0 +1,2 @@
+[console_scripts]
+gppc = gppc:_main
