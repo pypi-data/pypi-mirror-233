@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: minchin.jrnl.contrib.exporter.obsidian
+Version: 1.0.0
+Summary: Obsidian Custom Exporter for `minchin.jrnl`
+Author-email: William Minchin <w_minchin@hotmail.com>
+Maintainer-email: William Minchin <w_minchin@hotmail.com>
+License: MIT
+Project-URL: Homepage, http://minchin.ca/minchin.jrnl/
+Project-URL: Bug Tracker, https://github.com/MinchinWeb/minchin.jrnl.contrib.exporter.obsidian/issues
+Project-URL: Repository, https://github.com/MinchinWeb/minchin.jrnl.contrib.exporter.obsidian
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: minchin.jrnl >=7.1
+Provides-Extra: dev
+Requires-Dist: pip-tools >=7 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: minchin.releaser ; extra == 'dev'
+
+Obsidian Custom Exporter for `minchin.jrnl`
+===========================================
+
+This is an custom exporter for `minchin.jrnl
+<http://minchin.ca/minchin.jrnl/>`_. The exported files are intended to be
+loaded into `Obsidian <https://obsidian.md/>`_. In particular, metadata is
+exported to the front matter format Obsidian understands and the body of the
+entry is exported as is (but is generally assumed to be Markdown).
+
+The exporter is installable from PyPI::
+
+    pip install minchin.jrnl.contrib.exporter.obsidian
+
+Please note that there are no safeties to ensure that exported files do not
+overwrite existing files, or that two entries don't overwrite each other
+during the export process.
+
+Pull Requests to improve the functionality of this plugin are always
+appreciated. As well, it may provide a helpful template if you want to write
+your own custom exporter.
