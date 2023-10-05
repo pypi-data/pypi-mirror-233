@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/FSMD/__init__.py
+src/FSMD/install.py
+src/FSMD/main.py
+src/FSMD.egg-info/PKG-INFO
+src/FSMD.egg-info/SOURCES.txt
+src/FSMD.egg-info/dependency_links.txt
+src/FSMD.egg-info/entry_points.txt
+src/FSMD.egg-info/requires.txt
+src/FSMD.egg-info/top_level.txt
