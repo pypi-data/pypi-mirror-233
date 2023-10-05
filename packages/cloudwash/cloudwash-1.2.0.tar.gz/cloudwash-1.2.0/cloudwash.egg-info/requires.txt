@@ -1,0 +1,14 @@
+wrapanapi
+dynaconf
+click
+wget
+
+[dev]
+pre-commit
+flake8
+
+[setup]
+setuptools
+setuptools-scm
+wheel
+twine
