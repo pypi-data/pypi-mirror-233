@@ -1,0 +1,7 @@
+setup.py
+censorify/__init__.py
+censorify.egg-info/PKG-INFO
+censorify.egg-info/SOURCES.txt
+censorify.egg-info/dependency_links.txt
+censorify.egg-info/requires.txt
+censorify.egg-info/top_level.txt
