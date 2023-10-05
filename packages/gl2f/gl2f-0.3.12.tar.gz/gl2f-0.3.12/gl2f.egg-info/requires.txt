@@ -1,0 +1,3 @@
+requests
+libsixel-python
+Pillow
