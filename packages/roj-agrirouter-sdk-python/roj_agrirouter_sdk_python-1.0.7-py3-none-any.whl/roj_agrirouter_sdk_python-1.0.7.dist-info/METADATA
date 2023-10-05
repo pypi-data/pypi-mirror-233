@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: roj-agrirouter-sdk-python
+Version: 1.0.7
+Summary: Agrirouter SDK Python patched by ROJ for experimental test to run on App mobile
+Home-page: https://github.com/ROJ-ITALY/agrirouter-sdk-python
+Author: Stefano Gurrieri
+Author-email: stefano.gurrieri@vandewiele.com
+License: Apache-2.0
+Project-URL: Documentation, https://github.com/ROJ-ITALY/agrirouter-sdk-python
+Project-URL: Source, https://github.com/ROJ-ITALY/agrirouter-sdk-python
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >= 3.6
+License-File: LICENSE
+Requires-Dist: certifi (~=2021.5.30)
+Requires-Dist: charset-normalizer (~=2.0.6)
+Requires-Dist: idna (~=3.2)
+Requires-Dist: requests (~=2.26.0)
+Requires-Dist: urllib3 (~=1.26.7)
+Requires-Dist: paho-mqtt (~=1.5.1)
+Requires-Dist: protobuf (~=3.18.0)
+
