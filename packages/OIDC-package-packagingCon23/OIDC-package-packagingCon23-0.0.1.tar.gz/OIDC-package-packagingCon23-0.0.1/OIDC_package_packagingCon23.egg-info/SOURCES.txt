@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+OIDC_package_packagingCon23.egg-info/PKG-INFO
+OIDC_package_packagingCon23.egg-info/SOURCES.txt
+OIDC_package_packagingCon23.egg-info/dependency_links.txt
+OIDC_package_packagingCon23.egg-info/top_level.txt
