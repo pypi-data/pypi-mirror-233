@@ -1,0 +1,9 @@
+inpython/__init__.py,sha256=ZZMTm5QeMRlmewa5jmhBldUYnLX-ZbLxLut_PyXHFmw,47
+inpython/__main__.py,sha256=_WTI7FZVtIi59VDIyBe4IL0mii4TWinjfmPNxNc7Fy0,30
+inpython/ingraph/__init__.py,sha256=FMGklQI9h9OL3qvXadTPja-WUZkS5ugdzZCNQhtuKq0,162
+inpython/ingraph/ingraph.py,sha256=pBGBof744cfQ6h1VFmrf1Ovep0ZWthUGB8VRKJHdPqM,2466
+inpython_package-1.0.5.dist-info/LICENSE.txt,sha256=IirBHVsB--MNPRVyUzq8A99ot9-F-IiAW2t2auIxJDA,1092
+inpython_package-1.0.5.dist-info/METADATA,sha256=Vwc85iXZtF_MVVEyRtxrpiNkR-9eNMRWaG9RQWvDb9g,1106
+inpython_package-1.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+inpython_package-1.0.5.dist-info/top_level.txt,sha256=cY6uggTAnozInE_EbHweIn8VjImvJcHc1w9WK4kYmXI,9
+inpython_package-1.0.5.dist-info/RECORD,,
