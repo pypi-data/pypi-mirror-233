@@ -1,0 +1,74 @@
+[build-system]
+requires = ["maturin>=0.13,<0.14"]
+build-backend = "maturin"
+
+[project]
+name = "egglog"
+description = "e-graphs in Python built around the the egglog rust library"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Environment :: MacOS X",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+    "Typing :: Typed",
+]
+dependencies = ["typing-extensions", "black", "graphviz"]
+
+[project.optional-dependencies]
+dev = ["pre-commit", "black", "mypy", "flake8", "isort"]
+
+test = ["pytest", "mypy", "scikit-learn", "array_api_compat", "syrupy"]
+
+docs = [
+    "pydata-sphinx-theme",
+    "myst-nb",
+    "sphinx-autodoc-typehints",
+    "sphinx-gallery",
+    "nbconvert",
+    "scikit-learn",
+    "array_api_compat",
+    "matplotlib",
+]
+
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_redundant_casts = true
+check_untyped_defs = true
+strict_equality = true
+warn_unused_configs = true
+allow_redefinition = true
+enable_incomplete_feature = ["Unpack"]
+exclude = ["__snapshots__", "_build", "^conftest.py$"]
+
+[tool.maturin]
+python-source = "python"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+testpaths = ["python"]
+python_files = ["test_*.py", "test.py"]
+markers = ["slow: marks tests as slow (deselect with '-m \"not slow\"')"]
+norecursedirs = ["__snapshots__"]
