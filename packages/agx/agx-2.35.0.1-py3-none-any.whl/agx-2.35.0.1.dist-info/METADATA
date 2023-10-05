@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: agx
+Version: 2.35.0.1
+Summary: Project containing the AGX Dynamics version that is installed, to support pypi libraries depending on AGX. Will develop into downloading AGX Dynamics itself.
+Home-page: https://www.algoryx.se/agx-dynamics/
+License: Proprietary
+Author: Algoryx Simulation
+Author-email: contact@algoryx.se
+Requires-Python: >=3.8
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Description-Content-Type: text/markdown
+
+# AGX Dynamics
+
+The purpose of this package is to enable other packages to depend on the the AGX Dynamics version that is installed and used locally.
+
+## You should not install this package from pypi.org
+
+Instead, after installing AGX Dynamics, do:
+
+On Windows:
+
+```cmd
+setup_env.bat
+pip install %AGX_DATA_DIR%/agx-pypi
+```
+
+On OSX, Linux:
+
+```bash
+source setup_env.sh
+pip3 install $AGX_DATA_DIR/agx-pypi
+```
+
+You may now go ahead and `pip install` the package(s) depending on AGX. Pip versioning will make sure the correct one is installed.
+
+
+## Why you should not install this package
+
+AGX Dynamics will be available via pip, but until then:
+
+To get started – apply for a [free trial](https://www.algoryx.se/agx-dynamics/#popmake-10967)
+
+We also recommend taking a look at the [documentation](https://www.algoryx.se/documentation/complete/agx/tags/latest/doc/UserManual/source/index.html) for AGX Dynamics.
+
+If you need additional support we provide training courses and onboarding packages to help you succeed with your project. Please [contact us](https://www.algoryx.se/agx-dynamics) for more information.
+
+If you already have a license file you can [download AGX Dynamics](https://www.algoryx.se/download/).
+
