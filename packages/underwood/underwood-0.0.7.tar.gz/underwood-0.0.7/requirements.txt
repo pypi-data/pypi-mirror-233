@@ -1,0 +1,13 @@
+# Deps.
+jsonschema
+types-jsonschema
+
+# Dev deps.
+black
+mypy
+pylint[spelling]
+pytest
+
+# Build deps.
+build
+twine
