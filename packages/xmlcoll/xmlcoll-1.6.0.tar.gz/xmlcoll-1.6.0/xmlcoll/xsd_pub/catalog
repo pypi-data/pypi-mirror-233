@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <system
+    systemId="https://xmlcoll.sourceforge.net/xsd_pub/2022-09-26/xmlcoll.xsd"
+    uri="xmlcoll.xsd"/>
+
+  <system
+    systemId="https://xmlcoll.sourceforge.net/xsd_pub/2022-09-26/xmlcoll_types.xsd"
+    uri="xmlcoll_types.xsd"/>
+
+</catalog>

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+xmlcoll/__about__.py
+xmlcoll/__init__.py
+xmlcoll/base.py
+xmlcoll/coll.py
+xmlcoll.egg-info/PKG-INFO
+xmlcoll.egg-info/SOURCES.txt
+xmlcoll.egg-info/dependency_links.txt
+xmlcoll.egg-info/requires.txt
+xmlcoll.egg-info/top_level.txt
+xmlcoll/xsd_pub/catalog
+xmlcoll/xsd_pub/xmlcoll.xsd
+xmlcoll/xsd_pub/xmlcoll_types.xsd
