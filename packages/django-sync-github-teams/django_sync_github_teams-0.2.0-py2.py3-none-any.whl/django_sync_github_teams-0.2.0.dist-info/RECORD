@@ -1,0 +1,8 @@
+django_sync_github_teams/__init__.py,sha256=uW-41UG_g27WNE0x42q0tMd9ZdScUu8BZ3wrKCRk06M,63
+django_sync_github_teams/apps.py,sha256=qy0bmcI5KYfpphHoWzdf_3uC105gpXmde4HLzl4ycCA,371
+django_sync_github_teams/sync.py,sha256=MO_BrqnmXSHjikz1rrWuWmdScUenZbY4N-PxIXu4vWA,2003
+django_sync_github_teams/management/commands/sync-github-teams.py,sha256=bIuzLq3wod2Iq6In0H0eRXeVgfzox3IJMpu89GWqbpU,402
+django_sync_github_teams-0.2.0.dist-info/LICENSE,sha256=cMNQZZw7ED4jLUso6ep3bPRC_oMA29wwyh5UzSCrL9c,1083
+django_sync_github_teams-0.2.0.dist-info/WHEEL,sha256=kdeDBNPvBI0w3meLKPoGgAnEr54n1jzrZWUoaLmGzVY,99
+django_sync_github_teams-0.2.0.dist-info/METADATA,sha256=5EZTW4ZKVvUX4FyUpfRE6czVzxe6woGjLIRRYyJ9dEg,3290
+django_sync_github_teams-0.2.0.dist-info/RECORD,,
