@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: gitscrap
+Version: 1.0.0
+Summary: Escape Python Template Project
+Home-page: https://caross.io/
+License: MIT
+Author: Antoine Carossio
+Author-email: antoine.carossio@me.com
+Maintainer: Antoine Carossio
+Maintainer-email: antoine.carossio@me.com
+Requires-Python: >=3.9,<=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Repository, https://github.com/iCarossio/GitScrap
+Description-Content-Type: text/markdown
+
+# GitScrap
+
+A CLI tool for scraping email addresses from a Github repo, icluding `STARGAZERS`, `CONTRIBUTORS`, `COMMITERS` & `WATCHERS`.
+
+## Contribute
+
+```bash
+./install-dev.sh
+```
+
+## Setup
+
+### Get your Github token
+
+Create a personal access token: [https://github.com/settings/tokens](https://github.com/settings/tokens).
+Make sure to create a classic token, not a fine-grained token.
+Make sure to enable at least those scopes:
+
+```text
+repo
+read:packages
+read:org
+read:public_key
+read:repo_hook
+user
+read:discussion
+read:enterprise
+read:gpg_key
+```
+
+### Use
+
+```bash
+# run the script, URL being the Github repo URl to scrap
+gitscrap -t TOKEN -u URL -c
+```
+
+This will create a `owner-repo.csv` file in your current working directory.
+

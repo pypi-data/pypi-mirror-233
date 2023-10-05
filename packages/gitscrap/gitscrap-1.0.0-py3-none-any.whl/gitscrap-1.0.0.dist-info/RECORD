@@ -1,0 +1,13 @@
+gitscrap/__init__.py,sha256=8sCbT1PS1cFiuIfpVPGRfYUHz4m4PEZ8TK-J66hqUVU,84
+gitscrap/__main__.py,sha256=-SNHKZf2g68urL2FQv3YTStCDv6yq6Iwr7yoCtLaMjE,144
+gitscrap/api.py,sha256=r6mr0FG2y3H0ThemERo9rSHr-cvz29wKiMjQ8c4MrUU,6398
+gitscrap/helpers.py,sha256=lqlplBP-9SrzVR0t39OqTw35zgwZ1-SuuqDlLB3tbfM,2113
+gitscrap/main.py,sha256=XM0Mho6I79uJd2iAuDwvY3_YQWaOD-wJ_yHH6iQVGSo,2546
+gitscrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitscrap/scrapers.py,sha256=w_4nEOF1WIVF-J6XuAxDL46XDKz4qV_sV0VBSXdaUc8,5201
+gitscrap/type.py,sha256=vt3kTA_i3Jnct5sgkegLeb9H83C-OWAto4poolJHl8E,555
+gitscrap-1.0.0.dist-info/LICENSE,sha256=IQ0snVXg4gtVMtky26GkTTzY7HZSS8gSNaIoOC7bFGA,1084
+gitscrap-1.0.0.dist-info/METADATA,sha256=T5uYnpq90mRmbDog1yFM2ScfHSPnekWvmF5gBYjCSCI,1435
+gitscrap-1.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+gitscrap-1.0.0.dist-info/entry_points.txt,sha256=Dky21Lu75L-NCjFOcoTd1Vw4M6dpxM-KIrxE4HxZLCw,42
+gitscrap-1.0.0.dist-info/RECORD,,
