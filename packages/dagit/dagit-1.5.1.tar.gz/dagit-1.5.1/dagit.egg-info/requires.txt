@@ -1,0 +1,7 @@
+dagster-webserver==1.5.1
+
+[notebook]
+dagster-webserver[notebook]==1.5.1
+
+[test]
+dagster-webserver[test]==1.5.1
