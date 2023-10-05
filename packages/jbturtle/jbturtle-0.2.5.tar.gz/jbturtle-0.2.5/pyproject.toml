@@ -1,0 +1,8 @@
+[tool.poetry]
+name = "jupyterlab-jbturtle"
+version = "0.2.3"
+description = "Simple turtle system for JupyterLab"
+authors = ["Fumi.Iseki<fumi.hax@gmail.com>"]
+homepage = "https://github.com/fiseki"
+repository = "https://github.com/fiseki/jupyterlab-jbturtle"
+readme = "README.md" 
