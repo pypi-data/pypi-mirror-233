@@ -1,0 +1,10 @@
+xmlhelpy/__init__.py,sha256=MEr5mzAt8cmXJFG5ah7Sd2My3emRrTpG8al0D_TFwmc,1078
+xmlhelpy/core.py,sha256=XclNRx0t4wGNzY_9reYcsTTP3zYPMprVHfSoeddlrxw,10191
+xmlhelpy/decorators.py,sha256=Yo4tkWIobp57siY-OqaE4YxL3Gnkjp3tU4Z2fzjevnE,11435
+xmlhelpy/formatting.py,sha256=5c6pz3Q9z_rtV1eJov-YwrQcokWgm0yye7esdi_TApg,2561
+xmlhelpy/types.py,sha256=m2r0cFvTyF2YF5lPnAooGkgk_R11zlC-nP5A2XdoyPM,7925
+xmlhelpy-0.13.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+xmlhelpy-0.13.0.dist-info/METADATA,sha256=H880H6tegbyBsSPBg_cN8rvG9bIRZpGwJvPg3KDeMjk,9682
+xmlhelpy-0.13.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+xmlhelpy-0.13.0.dist-info/top_level.txt,sha256=lLM0gegxJ4pjetNVrZKgyT60X7c7szF_4sdcADlPD6s,9
+xmlhelpy-0.13.0.dist-info/RECORD,,
