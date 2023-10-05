@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lrclibpy
+Version: 0.1.0
+Summary: python wrapper for the lrclib.net api
+License: MIT
+Author: Dr-Blank
+Author-email: 64108942+Dr-Blank@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+Python Wrapper for [lrclib.net](https://lrclib.net/)
