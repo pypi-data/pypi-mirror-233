@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GammaHeatingControl"
+version = "0.0.3"
+authors = [
+  { name="Patrick Menschel", email="menschel.p@posteo.de" },
+]
+description = "A python 3 interface to EBV Gamma Heating Control."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "License :: Free for non-commercial use",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Embedded Systems",
+]
+dependencies = [
+    "pyserial",
+    "crccheck",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine"
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "tox"
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/menschel/GammaHeatingControl"
+"Bug Tracker" = "https://gitlab.com/menschel/GammaHeatingControl/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report xml --cov-report term-missing"
