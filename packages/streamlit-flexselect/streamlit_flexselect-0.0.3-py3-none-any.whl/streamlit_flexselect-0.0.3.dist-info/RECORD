@@ -1,0 +1,14 @@
+streamlit_flexselect/__init__.py,sha256=70jiA_OmryHtiMnyrMScNfXfWfiT-jrQFEGUKEzHAFg,2682
+streamlit_flexselect/example.py,sha256=hEq_3EBf9ZryRlNbK1QWXrp5tX25Dh0IS61CEhI9HB4,1187
+streamlit_flexselect/streamlit_callback.py,sha256=L-yhHTVVBuqefcBTJ9kJ11_NH16eJXna5oaE7-JRY5k,1452
+streamlit_flexselect/frontend/build/asset-manifest.json,sha256=7hQMeFYgiBNePiVh8RmMWcHtZn1NqQPmuynZ7QRuUeA,221
+streamlit_flexselect/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+streamlit_flexselect/frontend/build/index.html,sha256=2X_BYbC7mZhpF7kdvsQJ_kzfeZ3zszi0Hc0dAQZo5xY,492
+streamlit_flexselect/frontend/build/static/js/main.e422096e.js,sha256=75S9_zrWvZu-nof-w1WlMtpVjq7dJnzKawlCVD3KXoU,506991
+streamlit_flexselect/frontend/build/static/js/main.e422096e.js.LICENSE.txt,sha256=vkssGRWF7QbrlODfMSA_C3adJJ4ZPgoGvhKm0OMJp0Q,4006
+streamlit_flexselect/frontend/build/static/js/main.e422096e.js.map,sha256=VjnzJgxhWl0-LAIgCzpbODfpmT9SBnC4DAEONoSB3Vk,1718410
+streamlit_flexselect-0.0.3.dist-info/LICENSE,sha256=9VDWIUfeWnnobvVpN2KtC5cHaNpAmxhdjyF4LivEPNw,1063
+streamlit_flexselect-0.0.3.dist-info/METADATA,sha256=9bPYDrmNYmqCr-GLsDebJUVasab-EX3-rHTGB7eNRZc,3728
+streamlit_flexselect-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+streamlit_flexselect-0.0.3.dist-info/top_level.txt,sha256=y0fAnNRh5ElVThuae_w0DfSvSeWyHD9aC1U2sKAUWTo,21
+streamlit_flexselect-0.0.3.dist-info/RECORD,,
