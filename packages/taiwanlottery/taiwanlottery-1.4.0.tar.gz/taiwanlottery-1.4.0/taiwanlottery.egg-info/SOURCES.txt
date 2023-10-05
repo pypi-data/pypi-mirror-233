@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+./TaiwanLottery/__init__.py
+./TaiwanLottery/utils.py
+./tests/__init__.py
+./tests/test_lottery.py
+./tests/test_utils.py
+taiwanlottery.egg-info/PKG-INFO
+taiwanlottery.egg-info/SOURCES.txt
+taiwanlottery.egg-info/dependency_links.txt
+taiwanlottery.egg-info/not-zip-safe
+taiwanlottery.egg-info/requires.txt
+taiwanlottery.egg-info/top_level.txt
