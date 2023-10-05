@@ -1,0 +1,9 @@
+[aiida.calculations]
+abinit=aiida_abinit.calculations:AbinitCalculation
+
+[aiida.parsers]
+abinit=aiida_abinit.parsers:AbinitParser
+
+[aiida.workflows]
+abinit.base=aiida_abinit.workflows.base:AbinitBaseWorkChain
+
