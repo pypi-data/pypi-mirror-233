@@ -1,0 +1,15 @@
+gaitalytics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gaitalytics/analysis.py,sha256=xfsZsJlRpx1FEI-RYy5mHQ0JcIN7F6G-0rJHakFplwg,36532
+gaitalytics/api.py,sha256=8fXOiqt-ZmNZdQS4ghscYoY-ZiakXgOv6Wl_E49mW5U,15018
+gaitalytics/c3d.py,sha256=WspcqMeOwBG03noUoyKm9gcePEexfIg4Ve9CB6ukZds,3204
+gaitalytics/cycle.py,sha256=RQoFVw4thwwuzhhQemWS2RE6i0ZgcSPCSgOG1j24VHg,13357
+gaitalytics/emg.py,sha256=m4A8jedNLpOFYFZOE3Rv1FeBQ1lupRNp1dmZ_iN69cg,3340
+gaitalytics/events.py,sha256=OqalMqV2klqYj05jgRfpVGp8RBfYDI9x2sg1FYuOOqQ,19238
+gaitalytics/modelling.py,sha256=sNE8hUUaQHPZ1T_9z5SpjBjfGPraf393YW6iLjWBNmU,11276
+gaitalytics/plot.py,sha256=yqyrUVqZdCCzemVeAfVXUycYYDLY2GhoPSjdw7zqCkY,6139
+gaitalytics/utils.py,sha256=82bhsw1Sf4aXdSaUyJjuIaDpSRVFPVVyAdrYnZ9iXqo,14710
+gaitalytics-0.1.6b0.dist-info/LICENSE,sha256=XLHb0uGqouZjL1ou0hPFJcco3ly1kwB2Z9YUAGWvp8U,1096
+gaitalytics-0.1.6b0.dist-info/METADATA,sha256=dgxkJFceHnTSaAVdkYbXbBECud04s5VdmzNdKR7ZMJM,682
+gaitalytics-0.1.6b0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gaitalytics-0.1.6b0.dist-info/top_level.txt,sha256=ghiXn4oVnqrr4ec1pZ2xTSiSyqQ-80rPJjTJ32o7fiE,12
+gaitalytics-0.1.6b0.dist-info/RECORD,,

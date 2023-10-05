@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gaitalytics
+Version: 0.1.6b0
+Summary: Library to analyse gait data captured with a mocap system
+Home-page: https://github.com/cereneo-foundation/gaitalytics
+Author: André Böni
+Author-email: andre.boeni@cereneo.foundation
+License: MIT
+Keywords: gait,analysis,c3d,mocap
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.8.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+file: README.md
