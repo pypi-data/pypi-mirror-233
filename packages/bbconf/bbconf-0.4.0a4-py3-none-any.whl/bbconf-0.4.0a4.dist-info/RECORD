@@ -1,0 +1,14 @@
+bbconf/__init__.py,sha256=CXvaxQ_1-MpRALF4CVkzAPU9q4-b3wuSlQACR-1z9ZA,188
+bbconf/_version.py,sha256=iSQSgutypUibyWb7EqLVqJSVG54z8Mc9ajZ0d4H2cjM,24
+bbconf/bbconf.py,sha256=iBhS4kQVqo55S2gZePK1ofstFbp4F5iY7xBhDGHy7hI,17533
+bbconf/const.py,sha256=7o4MK4W4iYg8LgXlqpmm_psBBHMYZYxXs06zXjjaVWc,2749
+bbconf/exceptions.py,sha256=PqmbdhAMk_i8T18AN5Mtm13Up8Y9IwkjcUBy1eu9NCw,604
+bbconf/helpers.py,sha256=6CYzjtq5uCnlPV1g1-xzN8-G5VYcpHxx2jb1QKD-LEw,1019
+bbconf/schemas/bedfiles_schema.yaml,sha256=VqC8QCPRiCXUHvLi5Ir8kX8Pym8_3Vk6ejVR60L9eBc,2810
+bbconf/schemas/bedsets_schema.yaml,sha256=bszNQg2L8l4_VMHHc1G80oQB4esZAfBxcf_DxFY72As,1205
+bbconf/schemas/distance_schema.yaml,sha256=J4edXTBO90v8hDiKcKaL8sZ9G7yaLq09_7OodiZ_Las,408
+bbconf-0.4.0a4.dist-info/LICENSE.txt,sha256=oB6ZGDa4kcznznJKJsLLFFcOZyi8Y6e2Jv0rJozgp-I,1269
+bbconf-0.4.0a4.dist-info/METADATA,sha256=ahrWumVynzTntpiyXp85a1derTUBMwcbVEs4fYBmS90,1890
+bbconf-0.4.0a4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bbconf-0.4.0a4.dist-info/top_level.txt,sha256=5YVFG20OPCXsdCdH0Ovn1b6SVEE-cs06aGgv8DLiaAs,7
+bbconf-0.4.0a4.dist-info/RECORD,,
