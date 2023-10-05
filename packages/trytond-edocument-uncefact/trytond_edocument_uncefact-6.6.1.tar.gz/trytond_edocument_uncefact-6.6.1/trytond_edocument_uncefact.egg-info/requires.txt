@@ -1,0 +1,7 @@
+Genshi
+trytond_edocument_unece<6.7,>=6.6
+trytond<6.7,>=6.6
+
+[test]
+lxml
+trytond_account_invoice<6.7,>=6.6
