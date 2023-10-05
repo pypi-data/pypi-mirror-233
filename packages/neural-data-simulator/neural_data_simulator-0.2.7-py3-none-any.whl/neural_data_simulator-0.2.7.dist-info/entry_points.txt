@@ -1,0 +1,10 @@
+[console_scripts]
+center_out_reach=tasks.run_center_out_reach:run
+decoder=decoder.run_decoder:run
+encoder=neural_data_simulator.scripts.run_encoder:run
+ephys_generator=neural_data_simulator.scripts.run_ephys_generator:run
+nds_post_install_config=neural_data_simulator.scripts.post_install_config:run
+recorder=recorder.run_recorder:run
+run_closed_loop=tasks.run_closed_loop:run
+streamer=neural_data_simulator.scripts.run_streamer:run
+
