@@ -1,0 +1,255 @@
+import os
+
+import pytest
+
+from tests.test_data.sender_id import (
+    fetch_payload as fetch_sender_id_payload,
+    request_payload as request_sender_id_payload,
+)
+from tests.test_data.messaging import data as messaging_response
+from tests.test_data.campaign import (
+    get_phonebook,
+    get_contacts,
+    add_contact,
+    fetch_campaigns,
+    fetch_campaign_history,
+)
+from termii.utils import requests
+
+
+@pytest.fixture()
+def test_environments():
+    """
+    Add required variables to environment.
+    """
+    os.environ["TERMII_API_KEY"] = "test123"
+    os.environ["TERMII_ENDPOINT_URL"] = "https://api.ng.termii.com"
+    os.environ["TERMII_SENDER_ID"] = "test"
+
+
+class MockFetchSenderIDResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return fetch_sender_id_payload
+
+
+@pytest.fixture()
+def mock_fetch_sender_id(monkeypatch):
+    """Requests.get() mocked to return custom response."""
+
+    def mock_get(*args, **kwargs):
+        return MockFetchSenderIDResponse()
+
+    monkeypatch.setattr(requests, "get", mock_get)
+
+
+class MockRequestSenderIDResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return request_sender_id_payload
+
+
+@pytest.fixture()
+def mock_request_sender_id(monkeypatch):
+    """Requests.get() mocked to return custom response."""
+
+    def mock_post(*args, **kwargs):
+        return MockRequestSenderIDResponse()
+
+    monkeypatch.setattr(requests, "post", mock_post)
+
+
+class MockMessageResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return messaging_response
+
+
+@pytest.fixture()
+def mock_send_messaging(monkeypatch):
+    def mock_post(*args, **kwargs):
+        return MockMessageResponse()
+
+    monkeypatch.setattr(requests, "post", mock_post)
+
+
+class MockGetPhonebookResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return get_phonebook
+
+
+@pytest.fixture()
+def mock_get_phonebook(monkeypatch):
+    def mock_get(*args, **kwargs):
+        return MockGetPhonebookResponse()
+
+    monkeypatch.setattr(requests, "get", mock_get)
+
+
+class MockCreatePhonebookResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Phonebook added successfully"}
+
+
+@pytest.fixture()
+def mock_create_phonebook(monkeypatch):
+    def mock_post(*args, **kwargs):
+        return MockCreatePhonebookResponse()
+
+    monkeypatch.setattr(requests, "post", mock_post)
+
+
+class MockUpdatePhonebookResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Phonebook updated successfully"}
+
+
+@pytest.fixture()
+def mock_update_phonebook(monkeypatch):
+    def mock_patch(*args, **kwargs):
+        return MockUpdatePhonebookResponse()
+
+    monkeypatch.setattr(requests, "patch", mock_patch)
+
+
+class MockDeletePhonebookResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Phonebook deleted successfully"}
+
+
+@pytest.fixture()
+def mock_delete_phonebook(monkeypatch):
+    def mock_delete(*args, **kwargs):
+        return MockDeletePhonebookResponse()
+
+    monkeypatch.setattr(requests, "delete", mock_delete)
+
+
+class MockGetContactsResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return get_contacts
+
+
+@pytest.fixture()
+def mock_get_contacts(monkeypatch):
+    def mock_get(*args, **kwargs):
+        return MockGetContactsResponse()
+
+    monkeypatch.setattr(requests, "get", mock_get)
+
+
+class MockAddContactsResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return add_contact
+
+
+@pytest.fixture()
+def mock_add_contacts(monkeypatch):
+    def mock_post(*args, **kwargs):
+        return MockAddContactsResponse()
+
+    monkeypatch.setattr(requests, "post", mock_post)
+
+
+class MockAddMultipleContactsResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Your list is being uploaded in the background."}
+
+
+@pytest.fixture()
+def mock_add_multi_contacts(monkeypatch):
+    def mock_post(*args, **kwargs):
+        return MockAddMultipleContactsResponse()
+
+    monkeypatch.setattr(requests, "post", mock_post)
+
+
+class MockDeleteContactResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Contact deleted successfully"}
+
+
+@pytest.fixture()
+def mock_delete_contact(monkeypatch):
+    def mock_delete(*args, **kwargs):
+        return MockDeleteContactResponse()
+
+    monkeypatch.setattr(requests, "delete", mock_delete)
+
+
+class MockSendCampaignResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return {"message": "Your campaign has been scheduled"}
+
+
+@pytest.fixture()
+def mock_send_campaign_contact(monkeypatch):
+    def mock_send_campaign(*args, **kwargs):
+        return MockSendCampaignResponse()
+
+    monkeypatch.setattr(requests, "post", mock_send_campaign)
+
+
+class MockFetchCampaignsResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return fetch_campaigns
+
+
+@pytest.fixture()
+def mock_fetch_campaigns(monkeypatch):
+    def mock_fetch_campaign(*args, **kwargs):
+        return MockFetchCampaignsResponse()
+
+    monkeypatch.setattr(requests, "get", mock_fetch_campaign)
+
+
+class MockFetchCampaignHistoryResponse:
+    status_code = 200
+
+    @staticmethod
+    def json():
+        return fetch_campaign_history
+
+
+@pytest.fixture()
+def mock_fetch_campaign_history(monkeypatch):
+    def mock_fetch_campaign(*args, **kwargs):
+        return MockFetchCampaignHistoryResponse()
+
+    monkeypatch.setattr(requests, "get", mock_fetch_campaign)

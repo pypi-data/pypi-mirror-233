@@ -1,0 +1,19 @@
+# Optionals
+-e .
+
+# Core lib
+requests>=2.23.0,<=2.31.0
+pydantic>=2.0.1,<=2.3.0
+
+
+# Build
+build
+twine
+
+# Tests
+coverage==7.3.0
+pytest==7.4.0
+
+# Code formatting.
+black==23.7.0
+flake8==6.1.0
