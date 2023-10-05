@@ -1,0 +1,6 @@
+
+[:platform_system == "Linux"]
+evdev>=1.4.0
+
+[:platform_system == "Windows"]
+pywinusb~=0.4.2

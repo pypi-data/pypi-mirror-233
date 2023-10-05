@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+powermate/__init__.py
+powermate/__main__.py
+powermate/base.py
+powermate/linux.py
+powermate/win.py
+powermateusb.egg-info/PKG-INFO
+powermateusb.egg-info/SOURCES.txt
+powermateusb.egg-info/dependency_links.txt
+powermateusb.egg-info/requires.txt
+powermateusb.egg-info/top_level.txt
