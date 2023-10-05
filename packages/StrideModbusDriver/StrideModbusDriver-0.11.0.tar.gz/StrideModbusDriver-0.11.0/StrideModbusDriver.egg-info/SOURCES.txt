@@ -1,0 +1,9 @@
+README.md
+setup.py
+StrideModbusDriver/StrideClient.py
+StrideModbusDriver/__init__.py
+StrideModbusDriver.egg-info/PKG-INFO
+StrideModbusDriver.egg-info/SOURCES.txt
+StrideModbusDriver.egg-info/dependency_links.txt
+StrideModbusDriver.egg-info/requires.txt
+StrideModbusDriver.egg-info/top_level.txt
