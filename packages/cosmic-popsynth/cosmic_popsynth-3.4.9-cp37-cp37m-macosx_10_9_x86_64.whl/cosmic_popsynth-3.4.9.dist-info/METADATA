@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: cosmic-popsynth
+Version: 3.4.9
+Summary: Compact Object Synthesis and Monte Carlo Investigation Code
+Home-page: https://github.com/COSMIC-PopSynth/COSMIC
+Author: Katie Breivik
+Author-email: katie.breivik@gmail.com
+License: GPLv3
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Provides: cosmic
+Requires-Python: >3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy (>=0.12.1)
+Requires-Dist: numpy (>=1.16)
+Requires-Dist: astropy (>=1.1.1)
+Requires-Dist: configparser
+Requires-Dist: tqdm (>=4.0)
+Requires-Dist: pandas (>=2.0.0)
+Requires-Dist: tables (>3.5.0)
+Requires-Dist: h5py (>=1.3)
+Requires-Dist: schwimmbad (>=0.3.1)
+Requires-Dist: matplotlib (>=2.0.0)
+Requires-Dist: importlib-metadata (<5.0)
+Provides-Extra: doc
+Requires-Dist: sphinx (>=1.6.1) ; extra == 'doc'
+Requires-Dist: numpydoc (>=0.8.0) ; extra == 'doc'
+Requires-Dist: sphinx-bootstrap-theme (>=0.6) ; extra == 'doc'
+Requires-Dist: sphinxcontrib-programoutput ; extra == 'doc'
+Requires-Dist: sphinx-automodapi ; extra == 'doc'
+Requires-Dist: ipython ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+
+# COSMIC
+COSMIC (Compact Object Synthesis and Monte Carlo Investigation Code)
+
+COSMIC is a rapid binary population synthesis suite with a special purpose of generating realistic compact binary populations. COSMIC can also be used to evolve binaries with BSE in a python environment.
+
+COSMIC currently implements binary evolutionary processes using BSE ([Hurley+2002](https://ui.adsabs.harvard.edu/abs/2002MNRAS.329..897H/abstract)). Several modifications have been applied to BSE to account for recent updates to binary evolution especially important to compact binary formation (e.g. metallicity-dependent stellar winds or black hole natal kick strengths). For a detailed discussion of these modifications, see [Breivik et al 2020](https://ui.adsabs.harvard.edu/abs/2020ApJ...898...71B/abstract))
+
+<https://cosmic-popsynth.github.io/>
+
+# Release Status
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3561144.svg)](https://doi.org/10.5281/zenodo.3561144)
+
+
+[![PyPI version](https://badge.fury.io/py/cosmic-popsynth.svg)](https://badge.fury.io/py/cosmic-popsynth)
+
+
+# Installation
+
+The easiest method to install cosmic is using pip directly:
+
+```
+pip install cosmic-popsynth
+```
+
+[![Unit Test COSMIC](https://github.com/COSMIC-PopSynth/COSMIC/actions/workflows/python-package.yml/badge.svg)](https://github.com/COSMIC-PopSynth/COSMIC/actions/workflows/python-package.yml)
+
+[![codecov](https://codecov.io/gh/COSMIC-PopSynth/COSMIC/branch/develop/graph/badge.svg)](https://codecov.io/gh/COSMIC-PopSynth/COSMIC)
