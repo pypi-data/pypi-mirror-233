@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: agentware
+Version: 1.1.0
+Summary: A framework that makes it easy to generate controlled LLM output in json format
+Home-page: UNKNOWN
+Author: darthjaja
+Author-email: darthjaja6@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Agentware
+
+Do you want your LLM, like ChatGPT, to output json formatted output? \
+Have you written validation and retry logic? \
+This is a super simple library that you can wrap around your LLM client and do the boring job for you. \
+It does nothing but
+1. Taking prompt and a json schema from you
+2. Keep calling the LLM client until output is correct
+
+## Installation
+* The recommended way is `pip install agentware`
+* If you want to build from local
+```
+cd <your root>/agentware
+pip install -r requirements.txt
+cd /src 
+sh build.sh
+```
+
+## Quickstart
+Below is an example that extracts formatted key points from a speech
+```
+import agentware
+from agentware.agent import Agent, PromptProcessor
+
+agentware.openai_api_key = "<Your openai api key>"
+
+prompt_processor = PromptProcessor(
+    "You are a helpful assistant who helps summarize documents.", 
+    """
+    You are given a document between the triple backsticks: ```{{{document}}}```, Please show the key points of it.
+    Your output must be a json in the format of {"output": [<key point 1>, <key point 2>]} """,
+    {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+                "output": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+        },
+        "required": ["output"],
+        "additionalProperties": "false"
+    })
+
+agent = Agent(prompt_processor=prompt_processor)
+
+some_document = """
+Ladies and gentlemen, esteemed faculty, beloved students, and distinguished guests, Thank you for gathering here today on this momentous occasion, under the auspices of the great cosmic dance, where the stars have aligned and the universe has conspired to bring us together. As the 47th and a half president of the Prestigious University of Nebulous Knowledge, I stand before you, humbled by the weight of my own self-importance.
+
+Our university, as you know, is built upon the ancient ruins of a forgotten civilization that once used organic, gluten-free bricks. These bricks, as legend has it, were the very foundation of enlightenment, and it is said that anyone who touches them is instantly imbued with the wisdom of a thousand influencers.
+
+Today, we are on the cusp of a new era. An era where we no longer rely on books, but on the ethereal wisdom of cloud-based consciousness. Our state-of-the-art campus, with its holographic classrooms and virtual reality cafeterias, is a testament to our commitment to embracing the future, while also being deeply rooted in the past. A past that, quite frankly, no one really remembers, but we like to reference it to sound profound.
+"""
+
+print("Summary of document: ", agent.run(document=some_document))
+```
+For more examples, please go to https://github.com/agentware/agentware/blob/main/src/example.py
+
