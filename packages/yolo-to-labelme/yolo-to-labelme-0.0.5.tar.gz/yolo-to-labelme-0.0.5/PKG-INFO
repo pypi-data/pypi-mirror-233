@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: yolo-to-labelme
+Version: 0.0.5
+Summary: Tool to convert yolo format dataset to labelme json format.
+Author-email: Adeel Waheed <itsadeelemail@gmail.com>
+Project-URL: Homepage, https://github.com/adeel-maker/yolo-to-labelme
+Project-URL: Bug Tracker, https://github.com/adeel-maker/yolo-to-labelme/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# yolo2labelme
+
+Tool to convert yolo format dataset to labelme json format.
+
+## Installation
+```bash
+pip install yolo-to-labelme
+```
+## Usage
+Arguments:
+
+`--yolo-annotation-dir` : path to dataset directory
+
+`--labelme-output-dir` : path to output directory.
+ 
+`--image-width` default value is 1024.
+
+`--image-height` default value is 1024.
+
+`--class-mapping-file` classes name file.
+### CLI Usage:
+
+Specify yolo-labels-directory, output directory and classes file.
+
+```bash
+yolo-to-labelme --yolo-annotation-dir path/to/yoloDataset --labelme-output-dir path/to/labelmeJsonDir --class-mapping-file path/to/classes-file
+```
+
+## Useful links
+https://github.com/adeel-maker/yolo-to-labelme
+
+Lableme to yolo : https://pypi.org/project/labelme2yolo/
