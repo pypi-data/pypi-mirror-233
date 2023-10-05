@@ -1,0 +1,80 @@
+html{
+  font-family: arial;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 8px 4px 8px;
+  background: linear-gradient(to right, #F486BA, #FFCE5D);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+header a{
+  color: #0066b2;
+  text-decoration: none;
+}
+
+.header-links{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 4 0;
+  align-content: flex-start;
+}
+
+.header-links a {
+  margin: 0 6px 0px 0;
+}
+
+
+.header-title{
+  margin: 0px;
+}
+
+.title-meta{
+  font-size:14;
+  margin:0;
+}
+
+.header-controls{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.header-links,
+.header-controls{
+  flex:1;
+}
+
+main {
+  margin: 0;
+  padding: 0 10px 30px 10px;
+  overflow: auto;
+}
+
+label, .buttonlike{
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+p{
+  margin:0;
+}
+
+h1{
+  margin: 0;
+  font-size:20;
+}

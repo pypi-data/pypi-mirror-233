@@ -1,0 +1,169 @@
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.tile{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list-item{
+  font-size: 16;
+  width:fit-content
+}
+
+.modaal-inner-wrapper {
+  height: 100%;
+  padding: 25px 25px;
+}
+
+.modaal-gallery-item img {
+  max-height: calc(100vh - 60px);
+}
+
+
+.header-controls{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+#list-checkbox {
+  display: none; /* Hide the actual checkbox input */
+}
+
+.list-checkbox {
+  border-radius: 4px;
+  padding: 2px 5px; /* Adjust the padding values as needed */
+  color: #000; /* Default text color when not checked */
+  background: #a5a5a5;
+}
+
+#list-checkbox:checked + .list-checkbox {
+  color: white;
+  background: cadetblue; /* Change text color when checked */
+}
+
+
+@media screen and (max-width: 600px){
+  .blog-header{
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header class="blog-header">
+  <nav id=links class="header-links"></nav>
+
+  <div class="header-title">
+    <div id=title></div>
+    <div id=meta class=title-meta></div>
+  </div>
+
+  <div class=header-controls>
+    <div>
+      <input type="checkbox" id="list-checkbox" onchange="draw()">
+      <label class="list-checkbox" for="list-checkbox" title='on/off file list'>List</label>
+
+      <input type="range" id="cols" min="1" max="7" step="1" title='adjust number of colmuns' oninput="draw()">
+    </div>
+  </div>
+</header>
+
+<main>
+  <center><span id='media'></span></center>
+</main>
+
+<script src="constants.js"></script>
+<script src="index.js"></script>
+<script>
+const contentId = location.search.split("?")[1];
+const content = table[contentId];
+const dir = `contents/${contentId}`
+const media_table = content['media'];
+
+document.title = `${hostname}/Album - ${content['title']}`;
+
+document.getElementById('links').innerHTML = [
+  `<a href=index.html title=${hostname}>Home</a>`,
+  `<a href=article.html?${contentId}>Article</a>`
+]
+.join('');
+
+
+document.getElementById('title').innerHTML = `<h1>${content['title']}</h1>`;
+document.getElementById('meta').innerHTML = [
+ content['author'],
+ new Date(content['date']).toLocaleDateString('ja-JP'),
+ `<a href=https://girls2-fc.jp/page/${content['board']}/${contentId} target=_blank><i class="fa fa-external-link"></i></i></a>`
+].join('&nbsp;');
+const cols = document.getElementById('cols');
+cols.value = Math.min(
+  Math.ceil(Math.sqrt(media_table.length * window.innerWidth/window.innerHeight)),
+  media_table.length
+);
+
+
+function list(size){
+  const min = 250;
+  return `<div class="tile" style="width:${Math.max(min, size)}; margin-top:20px; margin-bottom:20px;">`
+  + '<div style="width:fit-content; padding:20px; background: pink;text-align:left;">'
+  + `<a class=list-item href=./contents/${contentId}>Directory</a>`
+  + media_table.map(i=>`<div class=list-item>${i}</div>`).join('')
+  + '</div></div>'
+  + ((size<min)?'<br>':'');
+}
+
+const media = document.getElementById('media');
+function draw(){
+  const size = (window.innerWidth-100)/cols.value;
+
+  media.innerHTML = (document.getElementById('list-checkbox').checked?list(size):'')
+    + media_table.map(function(e){
+      const src = `${dir}/${e}`;
+      const ext = src.slice(src.lastIndexOf('.'));
+
+      if([".jpeg", ".png"].indexOf(ext) > -1){
+        return `<a class="image tile" data-group="gallery" href=${src}>`
+          + `<img src="${src}" width=${size}></img>`
+          + `</a>`;
+      }
+      else if([".mp4"].indexOf(ext) > -1){
+        return `<a class="iframe tile" href=${src}>`
+          + `<video controls autoplay muted loop src="${src}" width=${size}></video>`
+          + `</a>`;
+      }
+      else if([".mov"].indexOf(ext) > -1){
+        return `<video controls autoplay muted loop src="${src}" class="tile" width=${size}></video>`;
+      }
+    }).join('');
+
+  $('.image').modaal({
+    type: 'image',
+    hide_close: true,
+  })
+  $('.iframe').modaal({
+    type: 'iframe',
+    hide_close: true,
+  });
+}
+
+draw();
+
+</script>
+
+</body>
