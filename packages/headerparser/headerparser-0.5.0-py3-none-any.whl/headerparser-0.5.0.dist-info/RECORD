@@ -1,0 +1,12 @@
+headerparser/__init__.py,sha256=0b6ODvSLK4P-LVw_HIvoZ1XDp_8EavoEPzGSoSKVdfw,1979
+headerparser/errors.py,sha256=CH8wfSHKsCkkaiksJA2fWn91sMhshRy7xRFMTUkgr-4,4066
+headerparser/normdict.py,sha256=46L6J4DKvPnlUgLoE04SCYdxDabtb6tpR1fVKRkTZg0,4897
+headerparser/parser.py,sha256=upUgpP2AnxJSQB-mSFV0lOD5RUpiHyHqYPKrNz1sTYs,22783
+headerparser/scanner.py,sha256=T0fdAYWFvh6PqMm1f9f25D12kG9Uq9thbQtPnfMFpkI,14873
+headerparser/types.py,sha256=DvTUXX6-JtuEU7hcMO9I_WveLNDFKwBLmcCFzZNAtdE,1656
+headerparser/util.py,sha256=wWv7QaX_F9SCiB5fuglxkWHQ-WdldxvBk8nbzuM6pH0,308
+headerparser-0.5.0.dist-info/LICENSE,sha256=XTlk6Khip7RYFUP7ExZu8MYLIYHeYxO6r2rgftl2A5o,1095
+headerparser-0.5.0.dist-info/METADATA,sha256=GsiJgB8ba_nFyj47m3obiJt7veKdfFqhTw2TU2wifX4,6643
+headerparser-0.5.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+headerparser-0.5.0.dist-info/top_level.txt,sha256=EBBww2hQV5qwcYc7T5F9oK7JbS1mcHBgoOKtb8yY-Vo,13
+headerparser-0.5.0.dist-info/RECORD,,
