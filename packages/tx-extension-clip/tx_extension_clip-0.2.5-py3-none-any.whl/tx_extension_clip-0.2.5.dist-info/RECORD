@@ -1,0 +1,14 @@
+tx_extension_clip/__init__.py,sha256=wwEvmTPNAmNjLORq9WgDrvDfFdbwslk0EsesExPtzMg,181
+tx_extension_clip/config.py,sha256=p36LG0ye8QSs9ngf4rsuhzoMEqcblWQi4KL-75LwEPE,578
+tx_extension_clip/hasher.py,sha256=cWWepdd3SDaS8dkI5-azcRcSNyqen-tCYhdmzfoJUgk,6769
+tx_extension_clip/index.py,sha256=Ai-RbulBnG8VClIpdWAaFbqXOZKPRRwEU4EDIp-sH2E,3015
+tx_extension_clip/manifest.py,sha256=tqw3olXGfjslpGv3HfGoxZOTJ61NiQv28dyFi866ZO8,700
+tx_extension_clip/matcher.py,sha256=dkVJ3eDoaVseEqWp7SwB-9FA6sRnnsN9cHcHIzL0L0k,11550
+tx_extension_clip/signal.py,sha256=S58sSnOPI5vw3I3WG9g_0i49D4QDoP7tpbTnv7sXTuY,6664
+tx_extension_clip/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tx_extension_clip/utils/distance.py,sha256=vCm91MsAiVCvEsrMKmbhqoIqEnjd5lErxtyJ6qLVGQA,419
+tx_extension_clip/utils/uint.py,sha256=gPUlJYm0N5xcnCRRAXS0kAkCe7yHRhpGY4448EVAvQU,541
+tx_extension_clip-0.2.5.dist-info/METADATA,sha256=3zqzSC0sp_iYk_x7kDIxq7mihPMym0jaY0Ti_uqzGTg,1192
+tx_extension_clip-0.2.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tx_extension_clip-0.2.5.dist-info/top_level.txt,sha256=6KSAtIyG7Es3vrWHvMHs3whHvz8E-yY7b9nH2QOxzDk,18
+tx_extension_clip-0.2.5.dist-info/RECORD,,
