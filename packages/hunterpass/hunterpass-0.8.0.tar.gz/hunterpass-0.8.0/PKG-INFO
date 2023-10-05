@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hunterpass
+Version: 0.8.0
+Summary: Generate dictionary with AI
+Author: rafa_dev (Rafael Macedo)
+Author-email: <rafaelrodriguesmacedo2004@gmail.com>
+Keywords: python,dictionary,generate,llm,security,hashes,hash,cybersecurity,cyber,hacking
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A python tool that generates a dictionary for break password. This passwords will be generatedby a LLM (AI) and this tool will have an integration with John, The Ripper
