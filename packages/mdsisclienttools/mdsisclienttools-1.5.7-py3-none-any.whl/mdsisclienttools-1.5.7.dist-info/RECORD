@@ -1,0 +1,9 @@
+mdsisclienttools/__init__.py,sha256=q3syw6eoRZ77SQWvX0rFDvmnbtCpGvC66quNIln7nJM,448
+mdsisclienttools/auth/TokenManager.py,sha256=8na1nuAHrL6iEUGC81DDPfBuTsNwDbx8LMnF_mlrpvw,30864
+mdsisclienttools/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdsisclienttools/datastore/ReadWriteHelper.py,sha256=8kGMp_GNe5w9tbAxvcj9zAmL8Aat4iG_qvS61PCUU7Y,10251
+mdsisclienttools/datastore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdsisclienttools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdsisclienttools-1.5.7.dist-info/METADATA,sha256=h95ocx6bV8kBUczvGhsd0lO_O5cY2q96AfkvQGihZRg,2023
+mdsisclienttools-1.5.7.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+mdsisclienttools-1.5.7.dist-info/RECORD,,
