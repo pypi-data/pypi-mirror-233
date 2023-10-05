@@ -1,0 +1,8 @@
+LICENSE
+README.md
+filewrap.py
+setup.py
+filewrap.egg-info/PKG-INFO
+filewrap.egg-info/SOURCES.txt
+filewrap.egg-info/dependency_links.txt
+filewrap.egg-info/top_level.txt
