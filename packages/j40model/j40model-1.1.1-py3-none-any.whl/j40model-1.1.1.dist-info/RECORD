@@ -1,0 +1,12 @@
+j40_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+j40_model/aux_functions.py,sha256=z1aPR6eCf100GwT6xt4JF1okNlDbEZcvyQkvf4jxYDc,2157
+j40_model/community_case.py,sha256=WKfaEzx4ycV_XFf0H6F7wHqdOEPLdW7Tw8mM-nOb2hY,5527
+j40_model/interventions.py,sha256=KPzNlUe4Nm22lzFCjUFyCRPF9vVcqy8K0xuHDMNgwPg,1980
+j40_model/nomenclature.py,sha256=EEzeXR9pR3ZY3OUvebVvPjxj0VzZ7f1DMFsIbTM51z4,2687
+j40_model/optimization_model.py,sha256=yh9eALfyrDApyxgALIyqmtrS3uZSdDBaliT2BmfdgKA,12024
+j40_model/simulation_heuristic.py,sha256=1XE7u59fx1MkD5upLBaf1W4LjGnMZNpYZqzW1cFCsBU,4836
+j40model-1.1.1.dist-info/LICENSE,sha256=TUx_tAmauPidu8XGH8uFMoX9A2-84kjqSKvVg4Z68-4,2478
+j40model-1.1.1.dist-info/METADATA,sha256=DeT3X9dxMLVMVK9XUJ7y3h14FYYQSEJIqvZvTz52fjw,1767
+j40model-1.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+j40model-1.1.1.dist-info/top_level.txt,sha256=iVWdVdMTUPWTbYp2B1xuKgOHjhxfDRcDgie02RU5btA,10
+j40model-1.1.1.dist-info/RECORD,,
