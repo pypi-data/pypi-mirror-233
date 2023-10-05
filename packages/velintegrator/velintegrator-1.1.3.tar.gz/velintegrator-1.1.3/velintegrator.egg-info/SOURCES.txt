@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+readme.md
+setup.py
+velintegrator/__init__.py
+velintegrator/handler.py
+velintegrator/sdk.py
+velintegrator.egg-info/PKG-INFO
+velintegrator.egg-info/SOURCES.txt
+velintegrator.egg-info/dependency_links.txt
+velintegrator.egg-info/top_level.txt
