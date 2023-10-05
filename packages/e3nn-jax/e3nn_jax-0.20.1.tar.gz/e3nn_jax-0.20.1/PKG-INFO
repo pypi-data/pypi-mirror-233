@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: e3nn_jax
+Version: 0.20.1
+Summary: Equivariant convolutional neural networks for the group E(3) of 3 dimensional rotations, translations, and mirrors.
+License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: sympy
+Requires-Dist: numpy
+Requires-Dist: attrs
