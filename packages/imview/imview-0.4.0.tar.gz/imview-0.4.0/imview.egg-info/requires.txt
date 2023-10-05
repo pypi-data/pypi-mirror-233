@@ -1,0 +1,6 @@
+numpy
+gdal
+matplotlib
+pygeotools
+matplotlib-scalebar
+matplotlib-colorbar
