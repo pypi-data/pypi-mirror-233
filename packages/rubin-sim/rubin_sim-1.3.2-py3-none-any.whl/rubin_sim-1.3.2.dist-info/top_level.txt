@@ -1,0 +1,4 @@
+ci
+doc
+rubin_sim
+tests
