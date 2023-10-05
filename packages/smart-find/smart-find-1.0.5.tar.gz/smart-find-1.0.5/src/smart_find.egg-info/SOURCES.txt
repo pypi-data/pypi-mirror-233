@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+run-test.sh
+src/smart_find/__init__.py
+src/smart_find/__main__.py
+src/smart_find.egg-info/PKG-INFO
+src/smart_find.egg-info/SOURCES.txt
+src/smart_find.egg-info/dependency_links.txt
+src/smart_find.egg-info/entry_points.txt
+src/smart_find.egg-info/requires.txt
+src/smart_find.egg-info/top_level.txt
