@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: oneroll
+Version: 0.1.0
+Summary: onedice? no, this is just another Dice Parser lib. NO OFFENSE!
+Author-Email: 简律纯 <i@jyunko.cn>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# DiceParser
