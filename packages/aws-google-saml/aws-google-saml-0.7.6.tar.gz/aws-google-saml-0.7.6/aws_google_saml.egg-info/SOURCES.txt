@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.cfg
+setup.py
+aws_google_saml/__init__.py
+aws_google_saml/google_saml_auth.py
+aws_google_saml.egg-info/PKG-INFO
+aws_google_saml.egg-info/SOURCES.txt
+aws_google_saml.egg-info/dependency_links.txt
+aws_google_saml.egg-info/requires.txt
+aws_google_saml.egg-info/top_level.txt
