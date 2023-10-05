@@ -1,0 +1,8 @@
+specarray/__init__.py,sha256=_4aRG_VGlDiOvi3I4-y5eG8udmvH7Xm9ht_yuqri3BE,411
+specarray/specarray.py,sha256=kjuzA8sfvUCbNTIL7WFWH2Ps_WenLkiOdrH0Cv1cWqs,2644
+specarray/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+specarray/io/specim_folder.py,sha256=Ineqy12E0dHldNVfap8hTdvbZT6g-odiX6zxwi5f7R8,3439
+specarray-0.1.1rc118.post1.dist-info/LICENSE,sha256=kUQEMB_3fKes2-DWobsSUfhOHxxaAPDq085KVpgNREg,1134
+specarray-0.1.1rc118.post1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+specarray-0.1.1rc118.post1.dist-info/METADATA,sha256=1NL92Fo6wKCCVqQ-Ip9smbuAYGa_GVt9f-tIAFh9oks,3456
+specarray-0.1.1rc118.post1.dist-info/RECORD,,
