@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Torrscrape
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: pandas
+Requires-Dist: qbittorrent-api
+Requires-Dist: requests
+Requires-Dist: tabulate
+
