@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+StreamLoom.egg-info/PKG-INFO
+StreamLoom.egg-info/SOURCES.txt
+StreamLoom.egg-info/dependency_links.txt
+StreamLoom.egg-info/top_level.txt
+streamloom/__init__.py
