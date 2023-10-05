@@ -1,0 +1,12 @@
+README.md
+license
+setup.cfg
+setup.py
+TensorFlow1/TensorFlow1.py
+TensorFlow1/__init__.py
+TensorFlow1.egg-info/PKG-INFO
+TensorFlow1.egg-info/SOURCES.txt
+TensorFlow1.egg-info/dependency_links.txt
+TensorFlow1.egg-info/not-zip-safe
+TensorFlow1.egg-info/requires.txt
+TensorFlow1.egg-info/top_level.txt

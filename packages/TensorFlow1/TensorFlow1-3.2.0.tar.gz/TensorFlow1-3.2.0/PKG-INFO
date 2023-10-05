@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: TensorFlow1
+Version: 3.2.0
+Summary: TensorFlow1, Effortless Dataset Extraction
+Author: Ibrahim
+Author-email: string2025@gmail.com
+Description-Content-Type: text/markdown
+License-File: license
+
+All in one module to scrap: YOUTUBE, kaggle, imdb, AI-jobs.net, g2.com, vesselfiner.com, indeed.
+This is module is only for research purpose. 
