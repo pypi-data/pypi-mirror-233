@@ -1,0 +1,14 @@
+swampyer/__init__.py,sha256=1xtLxc8mtKDTRExYkeWvHJxFG_462UbzZ2IISPn-B6o,168
+swampyer/client.py,sha256=HYIPHEYDh0IS2nBf55_UYvd2vPFtJfECQpZ9jLmWSiQ,39866
+swampyer/common.py,sha256=kXEQpRArRh-eA7uZSHeWDQ0pfc5HUgao1NGeCLNN1ds,1098
+swampyer/exceptions.py,sha256=px9qWu5X9cv_qej_-Y5hR4c9R-Ud6NF4Kar0ZNUH47I,658
+swampyer/fields.py,sha256=dfT9vdtn3LnSpzh0BqsUP-lfbA8Opk-dISrCJud3WXA,1014
+swampyer/messages.py,sha256=Ax2nW1LuwghBklAyPS_yoyfKHEKtCbrtY44bLWgHRKg,7101
+swampyer/queues.py,sha256=iivaMCuu05aRbkxrGu9YY1P-oqWrW2CHX9RIUihqido,11295
+swampyer/serializers.py,sha256=rnASj5FGRlvnt361nLsRA34k78KREL6-naP0CN9roSI,4696
+swampyer/transport.py,sha256=7sNXBZ_ppHZK3ThZrhxXiuFzM2gzabqdJsGMbx63mz8,24385
+swampyer/utils.py,sha256=Jh22SZEYI7lnPqqxi4u2EsE14ziVBT7QVxKrT6gGNyU,57
+swampyer-3.0.20231004.dist-info/METADATA,sha256=SG_D9MGa35YNdSBGT5TTJ5zKYkRNUvbG6jDStj3dhcE,948
+swampyer-3.0.20231004.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swampyer-3.0.20231004.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+swampyer-3.0.20231004.dist-info/RECORD,,
