@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: arthur-client
+Version: 0.6.0
+Summary: Arthur API Python Client
+Author-email: Arthur <info@arthur.ai>
+License: MIT
+Project-URL: Arthur Homepage, https://arthur.ai
+Project-URL: Documentation, https://docs.arthur.ai
+Keywords: api arthur ArthurAI client ml model monitoring llm
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests<3,>=2.13.0
+Requires-Dist: requests-toolbelt<1,>=0.9
+Requires-Dist: pydantic<2,>=1.10
+Requires-Dist: pyjwt<3,>=2.6
+Requires-Dist: urllib3<2
+Requires-Dist: pytz>=2022.7
+
+# Arthur Client
+
+This library provides a lightweight Python API for interacting with [Arthur's REST API](https://docs.arthur.ai/reference/getting-started-with-your-api).  
+
+### Example: Fetch Models
+
+```python
+from typing import List
+from arthur.client.rest import ArthurClient
+from arthur.client.rest.models.models import ModelResponse
+
+# create client
+client = ArthurClient(url="https://app.arthur.ai",
+                      login="<my_username>")
+# enter your password when prompted
+
+# fetch first page of models
+models_p1: List[ModelResponse] = client.models.get_paginated_models(page=1, page_size=10).data
+
+# print model names
+print(f"Found {len(models_p1)} models on first page: {', '.join([m.display_name for m in models_p1])}")
+```
+
