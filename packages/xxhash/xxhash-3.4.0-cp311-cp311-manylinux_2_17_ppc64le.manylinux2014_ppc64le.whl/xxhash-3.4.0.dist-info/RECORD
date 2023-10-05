@@ -1,0 +1,10 @@
+xxhash/version.py,sha256=H3CBbALu_y09DXv-breHtv1AZAzpF25DQclZhtoddvs,44
+xxhash/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xxhash/__init__.py,sha256=mPEdihxDMU0rjLWum3FrU9Ua2jQ-rzfewYgIg-J-Jlc,1147
+xxhash/__init__.pyi,sha256=Te-hUGiCW_4Y65lyrGCOgeQrL35XTFM-qunbz0R9MiE,1786
+xxhash/_xxhash.cpython-311-powerpc64le-linux-gnu.so,sha256=NLLRqiLdWgA94HLRjUKLqioyW3vuT4nEChcE9lxr08c,890504
+xxhash-3.4.0.dist-info/LICENSE,sha256=-OnvAMeL5NLaUmssN-QJnJIMf-C52UO_Da6y78MKOls,1313
+xxhash-3.4.0.dist-info/top_level.txt,sha256=1PPSBP-gnjG59E5bigzMTzmT6BVWjHwnpzMiisPWZ5I,15
+xxhash-3.4.0.dist-info/WHEEL,sha256=OwBfOjxNzqCDtwkP-Q-f-5himxwcOSIuRzx5y5yss8o,154
+xxhash-3.4.0.dist-info/RECORD,,
+xxhash-3.4.0.dist-info/METADATA,sha256=WRT7bkueSCI7bRrrEOjVwqWcB81bh3Lhd7ufD6xQcNg,12344
