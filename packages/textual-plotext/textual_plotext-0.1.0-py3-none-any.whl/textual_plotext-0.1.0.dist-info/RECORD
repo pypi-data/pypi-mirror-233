@@ -1,0 +1,13 @@
+textual_plotext/__init__.py,sha256=pSdAgoxM4isJDQxz5lFhi_phLGH8ZxBEsBb80aEl8sQ,198
+textual_plotext/__main__.py,sha256=r9jgZwiR-b8QQlzxBXAJTsD4ok_ngRBXwLZ61h5EhQ8,14840
+textual_plotext/plot.py,sha256=DA2ZszOMG4C3Y4Hm4dKzEc_KK9lm3aUlSXzYZ2Ueirw,4512
+textual_plotext/plotext/__init__.py,sha256=MD6dIr1Ayqa_iLnw9Tw_Qlsj1p_eHWQSGZ_9_vxa8U0,186
+textual_plotext/plotext/__init__.pyi,sha256=Y-UJ2OvkPY4fxytiED_sc22jM1wRTvzvQjaMsqotKZc,801
+textual_plotext/plotext/_figure.py,sha256=ZWPRhKoJCUOLSNX9dKUn4z0o_0SlbTGg5D9es9Ls8N0,229
+textual_plotext/plotext/_figure.pyi,sha256=M4Bktk_KzJELsaBfdOenJJWaM9ylva-TGpLaXUUu4GI,12140
+textual_plotext/plotext_plot.py,sha256=L3n4sCbYYkU6mHmxrKybDsgFKj-1QTFbyQsbVRQjCZU,3294
+textual_plotext/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_plotext-0.1.0.dist-info/LICENSE,sha256=B2cUgEyDDc33uw-dZmcM20ajXtOR8FDyEyuemt_2rt4,1072
+textual_plotext-0.1.0.dist-info/METADATA,sha256=0UFM28_1zxUjhyHyv857_L4ZEGy_-j9EEGbhlkZLH1E,6638
+textual_plotext-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+textual_plotext-0.1.0.dist-info/RECORD,,
