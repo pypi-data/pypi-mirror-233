@@ -1,0 +1,3 @@
+[console_scripts]
+apilyzer=apilyzer.cli:app
+

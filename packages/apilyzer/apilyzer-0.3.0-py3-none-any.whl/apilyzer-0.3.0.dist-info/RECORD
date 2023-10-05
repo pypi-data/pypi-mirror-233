@@ -1,0 +1,8 @@
+apilyzer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apilyzer/cli.py,sha256=af0L07S9kTLWgMJGXSuCg085KuaSwYvWKCD8joAVeG8,2348
+apilyzer/verify.py,sha256=OtMHIxWAX7v2XnimpsPDNQNKqTmKQtRgQ1tHyHESRy4,13879
+apilyzer-0.3.0.dist-info/LICENSE,sha256=f85vhric2rIxrFlbm1Oj4Uj_uJ66h0pIhqvmAMiohhs,1090
+apilyzer-0.3.0.dist-info/METADATA,sha256=7ZrcKXxMgyyMfGLPUl_CN_VUFuQELYs-2Q10mhCQw-Q,6841
+apilyzer-0.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+apilyzer-0.3.0.dist-info/entry_points.txt,sha256=93DdUtMAyx6JOeBR8nkWJzSu6qtJ7XKwYFJcDknfLsg,45
+apilyzer-0.3.0.dist-info/RECORD,,
