@@ -1,0 +1,16 @@
+{
+  "description" : "VTK Exodus support",
+  "name" : "exodus",
+  "readers" : 
+  [
+    {
+      "description" : "Exodus II",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "exo", "ex2", "e" ],
+      "mimetypes" : [ "application/vnd.exodus" ],
+      "name" : "ExodusII"
+    }
+  ],
+  "type" : "STATIC",
+  "version" : "1.0"
+}

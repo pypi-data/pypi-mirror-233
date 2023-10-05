@@ -1,0 +1,30 @@
+{
+  "description" : "OpenCASCADE support (version 7.6.3)",
+  "name" : "occt",
+  "readers" : 
+  [
+    {
+      "description" : "STEP ISO 10303",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "stp", "step", "stpnc", "p21", "210" ],
+      "mimetypes" : [ "application/vnd.step" ],
+      "name" : "STEP"
+    },
+    {
+      "description" : "Initial Graphics Exchange Specification",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "igs", "iges" ],
+      "mimetypes" : [ "model/iges" ],
+      "name" : "IGES"
+    },
+    {
+      "description" : "Open CASCADE BRep",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "brep" ],
+      "mimetypes" : [ "application/vnd.brep" ],
+      "name" : "BREP"
+    }
+  ],
+  "type" : "STATIC",
+  "version" : "1.0"
+}
