@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: easyliftover
+Version: 0.0.13
+Summary: A python package for lifting over biological files
+Home-page: https://github.com/biomedbigdata/easyLiftover
+License: GPL3
+Author: Nico Trummer
+Author-email: nictru32@gmail.com
+Requires-Python: >=3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: bigwig
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: numpy (>=1.25.2,<2.0.0) ; extra == "bigwig"
+Requires-Dist: pybigwig (>=0.3.22,<0.4.0) ; extra == "bigwig"
+Requires-Dist: requests (>=2.26.0,<3.0.0)
+Project-URL: Repository, https://github.com/biomedbigdata/easyLiftover
+Description-Content-Type: text/markdown
+
+# easy-liftover
+
+This repository wraps the [pyliftover](https://pypi.org/project/pyliftover/) package to provide an option for lifting over whole files.
+
+## Usage
+This package is available via [PyPi](https://pypi.org/project/easyliftover/). To install it, run:
+```
+pip install easyliftover
+```
+
+## Supported file types
+Information about which file types are supported can be found [here](https://github.com/biomedbigdata/easyLiftover/blob/main/src/types.json)
