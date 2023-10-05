@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{_title}
+    link(rel='stylesheet', type='text/css', href='/static/content/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/content/navbar-fixed-side.css')
+    link(rel='stylesheet', type='text/css', href='/static/content/site.css')
+    script(src='/static/scripts/modernizr-2.6.2.js')
+  body
+    .container-fluid
+      .row
+        .col-xs-4.col-sm-3.col-md-2
+          .navbar.navbar.navbar-fixed-side
+            ul.nav
+              li
+                a(href='/') メイン
+                a(href='/desc') 発表申込の流れ
+              if user['email']
+                li
+                  a(href='/account') アカウント
+                li
+                  a(href='/articles') 発表申込一覧
+                li
+                  a(href='/submit') 新規発表申込
+                li
+                  a(href='/logout') ログアウト (#{user['name']})
+              else
+                li
+                  a(href='/signup') 新規アカウント作成
+                li
+                  a(href='/login') ログイン
+              if user['email'] == 'admin'
+                li
+                  a(href='/signup') 新規アカウント作成
+                li
+                  a(href='/summary') サマリ
+                li
+                  a(href='/del_user') アカウント削除
+                li
+                  a(href='/assign') 割付
+                li
+                  a(href='/check') チェック
+                li
+                  a(href='/dl_log') [保存] アクセスログ
+                li
+                  a(href='/dl_list') [保存] 発表申込一覧
+                li
+                  a(href='/dl_allpdf') [保存] 全PDF
+                li
+                  a(href='/dl_all') [保存] 全データ
+        .col-xs-8.col-sm-9.col-md-10
+          .ttl #{setting.orsj} #{setting.year} #{setting.ncon} #{setting.header}
+          .container.body-content
+            block content
+            hr.fter
+            | [
+            a(href='http://www.orsj.or.jp/whatisor/statute.html') 定款・規定
+            | ]&nbsp;&nbsp;&nbsp;[
+            a(href='http://www.orsj.or.jp/whatisor/privacypolicy.html') プライバシーポリシー
+            | ]&nbsp;&nbsp;&nbsp;[実行委員へのお問合せ &nbsp;
+            a(href='mailto:#{setting.staffmail}') mailto: #{setting.staffmail}
+            | ]
+
+    script(src='/static/scripts/jquery-1.10.2.js')
+    script(src='/static/scripts/bootstrap.js')
+    script(src='/static/scripts/respond.js')
+
+    block scripts

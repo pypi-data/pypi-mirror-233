@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  h2 #{_title}
+  p #{message}
+  .row
+    form(action='/articles', method='POST')
+      p タイトルをクリックして編集できます．PDFをクリックしてダウンロードできます
+      table.table-condensed.table-bordered.table-striped
+        tr
+          if admin
+            td
+            td キー
+            td(width="60") 割付 
+            td 名前
+            td E-mail
+          else
+            td
+          for c in ['タイトル', '発表者', 'PDF', '発表区分', 'コメント']
+            td= c
+        for ar in articles
+          tr
+            td
+              input(type='checkbox', name='#{ar["key"]}')
+            if admin
+              td= ar["key"]
+              td= ar["assign"]
+              td= ar["name"]
+              td= ar["email"]
+              if ar["email"] != "admin"
+                td= ar["title"]
+              else
+                td
+                  a(href='/submit/#{ar["key"]}')!= ar["title"]
+            else
+              td
+                a(href='/submit/#{ar["key"]}')!= ar["title"]
+            td= ar['presenter']
+            td
+              if ar["file"]
+                a(href='/dl_pdf/#{ar["key"]}') DL
+            td= ar['session']
+            td= ar['comment'][:12]
+      input(type='submit', name='btn', value='発表申込削除')
+      if admin
+        p
+          b From E-mail
+          | ：
+          input(type='text', name='fremail', size='20', value='#{fremail}')
+          b To E-mail
+          | ：
+          input(type='text', name='toemail', size='20', value='#{toemail}')
+        p
+        input(type='submit', name='btn', value='発表申込オーナー変更')
+

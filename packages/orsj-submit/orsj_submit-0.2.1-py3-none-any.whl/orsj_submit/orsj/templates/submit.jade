@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  h2 #{_title}
+  if message
+    pre #{message}
+  form(action='/submit#{dc["_key"]}', method='POST', enctype='multipart/form-data')
+    p
+      b 発表タイトル
+        span.required ＊
+        | ：
+      input(type='text', name='title', size='30', value='#{dc["title"]}', required)
+    for i in ['1', '2', '3', '4', '5']
+      p
+        b 著者#{i}
+          if i=='1'
+            span.required ＊
+          else
+            | &nbsp;&nbsp;&nbsp;
+          | ：
+        != '<input type="text" name="author%s_last" size="6" value="%s" placeholder="姓"%s>'%(i, dc['author%s_last'%i], 'required' if i=='1' else '')
+        != '<input type="text" name="author%s_first" size="6" value="%s" placeholder="名"%s>'%(i, dc['author%s_first'%i], 'required' if i=='1' else '')
+        | &nbsp;
+        select(name='author#{i}_type')
+          for j in ['正会員', '賛助会員', '学生会員', '非会員', '申請中']
+            != '<option value="%s"%s>%s</option>'%(j, ' selected' if dc['author%s_type'%i]==j else '', j)
+        input(type='text', name='author#{i}_id', size='6', value='#{dc["author%s_id"%i]}', placeholder='会員番号')
+        | &nbsp;
+        input(type='text', name='author#{i}_dep', size='14', value='#{dc["author%s_dep"%i]}', placeholder='所属')
+        | &nbsp;
+        != '<input type="radio" name="presentation" value="%s"%s />'%(i, ' checked' if dc['presentation']==i else '')
+        | (発表者の場合に選択)
+    p.indent
+      | (賛助会員，非会員，申請中の方は，会員番号を空欄にしてください．)
+      br
+      | (所属は，XX…大学もしくは，XX…会社までに留めてください．)
+      br
+      | (著者を追加したい場合は，連絡事項欄に「著者6 氏名/種類/会員番号/所属」の要領で記入してください．)
+    p
+      b 発表区分
+        span.required ＊
+        | ：
+      select(name='session', required)
+        option(value='') 発表区分
+        for i in sessions
+          != '<option value="%s"%s>%s</option>'%(i, ' selected' if dc['session']==i else '', i)
+    p
+      b 希望セッション(セッション分類の際に参考にします)
+        span.required ＊
+        | ：
+      p.indent
+        select(name='keyword1', required)
+          option(value='') 希望セッション(第一希望)
+          for i in keywords
+            != '<option value="%s"%s>%s</option>'%(i, ' selected' if dc['keyword1']==i else '', i)
+        select(name='keyword2')
+          option(value='') 希望セッション(第二希望)
+          for i in keywords
+            != '<option value="%s"%s>%s</option>'%(i, ' selected' if dc['keyword2']==i else '', i)
+    p
+      b アブストラクト原稿
+        span.required ＊
+      | (PDFで，ページ番号を入れずに，2MBまで)：
+      if dc['_key']
+        p.indent
+          != '<input type="radio" name="change" value="0"%s />'%(' checked' if dc['change']=='0' else '')
+          | 差替える
+          input(type='file', name='abstract', size='30')
+        p.indent
+          != '<input type="radio" name="change" value="1"%s />'%(' checked' if dc['change']=='1' else '')
+          | 以前の原稿(#{dc['file']})
+      else
+        p.indent
+          input(type='file', name='abstract', size='30')
+    p
+      b アブストラクトの公開
+      | ：
+      != '<input type="checkbox" name="refuse_abst" %s />'%(' checked' if dc['refuse_abst'] else '')
+      | 希望しない
+    p
+      b 連絡事項
+      | ：実行委員宛に連絡事項等がありましたらご記入ください．
+      br
+      textarea.tall(name='comment', rows='4', cols='40')= dc["comment"]
+    p
+      | (
+      span.required ＊
+      | は必須)
+    input(type='submit', value='発表申込')
+    input(type='reset', value='リセット')

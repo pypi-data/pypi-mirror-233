@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h2 #{_title}
+  .row
+    form(action='/del_user', method='POST')
+      table.table-condensed.table-bordered.table-striped
+        tr
+          for c in ['', 'User', 'Email', 'Articles']
+            td= c
+        for us in users
+          tr
+            td
+              input(type='checkbox', name='#{us["email"]}')
+            for i in ['name', 'email']
+              td= us[i]
+            td= nar[us["email"]]
+      input(type='submit', name='btn', value='削除')
+

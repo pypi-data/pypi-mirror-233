@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .jumbotron
+    table.table-condensed.table-bordered
+      tr
+        td(width="100") HP
+        td
+          a(href='#{setting.sympurl}') #{setting.symp}
+        td
+          a(href='#{setting.nconurl}') #{setting.ncon}
+      tr
+        td 期間
+        td #{setting.sympdate}
+        td #{setting.ncondate}
+      tr
+        td 会場
+        td(colspan="2") #{setting.place}
+      tr
+        td 主催
+        td(colspan="2")
+          a(href='#{setting.orsjurl}') #{setting.orsj}
+  p 
+    strong 参加のみの申込
+    | は、上記HPの参加申込をご覧ください
+

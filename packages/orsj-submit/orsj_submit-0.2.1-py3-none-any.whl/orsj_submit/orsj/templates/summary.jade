@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  h2 #{_title}
+  p #{message}
+  h3 Keywords.
+  p
+    ul
+      each k, v in dc1.items()
+        li= k+': '+v
+  p
+    ul
+      each k, v in dc2.items()
+        li= k+': '+v
+
+  h3 Setting
+  p
+    ul
+      li Expired #{setting.expired}
+
+  h3 For start service
+  p
+    ul
+      li Click "[保存] 全データ".
+      li Do next command.(Please adjust at XXX.)
+        div tar xf orsj.tgz
+        div # EDIT orsj/setting.yml and orsj/start_cmd
+        div docker run -d -u root -p 80:80 -e MAIL_USER=XXX -e MAIL_PASSWD=XXX \ 
+        div   -v $PWD/orsj:/orsj -w /orsj --name orsj tsutomu7/scientific-python ash start_cmd
+
+  h3 Avaiable ENV
+  table.table-condensed.table-bordered
+    tr
+      td necessary
+      td variable
+      td current
+      td default
+      td desc.
+    tr
+      td
+      td SERVER_HOST
+      td #{os.environ.get('SERVER_HOST')}
+      td 0.0.0.0
+      td Host
+    tr
+      td
+      td SERVER_PORT
+      td #{os.environ.get('SERVER_PORT')}
+      td 8888
+      td Port
+    tr
+      td
+      td MAX_CONTENT_LENGTH
+      td #{os.environ.get('MAX_CONTENT_LENGTH')}
+      td 2100200
+      td Limit(byte) size of pdf
+    tr
+      td
+      td SMTP_HOST
+      td #{os.environ.get('SMTP_HOST')}
+      td smtp.gmail.com
+      td Host of SMTP
+    tr
+      td *
+      td MAIL_USER
+      td #{os.environ.get('MAIL_USER')}
+      td
+      td User of E-mail
+    tr
+      td *
+      td MAIL_PASSWD
+      td #{os.environ.get('MAIL_PASSWD')}
+      td
+      td Password of E-mail
+    tr
+      td
+      td REPLY_TO
+      td #{os.environ.get('REPLY_TO')}
+      td
+      td Reply-To of E-mail
+

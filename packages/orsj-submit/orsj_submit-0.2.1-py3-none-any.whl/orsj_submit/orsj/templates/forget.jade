@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h2 #{_title}
+  if message
+    pre #{message}
+  form(action='/forget', method='POST')
+    input(type='hidden', name='name', value='_')
+    table.table-condensed
+      tr
+        td E-mail:
+        td
+          input(type='text', name='email', value='')
+      tr
+        td New Password:
+        td
+          input(type='password', name='pw', value='')
+      tr
+        td Re-type password:
+        td
+          input(type='password', name='pw2', value='')
+    input(type='submit', value='確認メール送信')

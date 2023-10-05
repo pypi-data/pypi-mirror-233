@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h2 #{_title}
+  if message
+    pre #{message}
+  form(action='/account', method='POST')
+    table.table-condensed
+      tr
+        td 名前:
+        td
+          input(type='text', name='name', value='#{name}', readonly)
+      tr
+        td E-mail:
+        td
+          input(type='text', name='email', value='#{email}', readonly)
+      if not first
+        tr
+          td Old password:
+          td
+            input(type='password', name='opw')
+      tr
+        td New password:
+        td
+          input(type='password', name='pw')
+      tr
+        td Re-type new password:
+        td
+          input(type='password', name='pw2')
+    input(type='submit', value='パスワード変更')

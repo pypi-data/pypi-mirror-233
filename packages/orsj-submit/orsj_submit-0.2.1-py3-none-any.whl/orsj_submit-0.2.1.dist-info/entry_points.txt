@@ -1,0 +1,3 @@
+[console_scripts]
+orsj-submit=orsj_submit:main
+

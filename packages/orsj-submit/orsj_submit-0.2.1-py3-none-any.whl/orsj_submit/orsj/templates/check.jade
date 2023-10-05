@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h2 #{_title}
+  p #{message}
+
+  if sa
+    h3 Same assign.
+    p
+    ul
+      each s in sa
+        li= s
+
+  if ss
+    h3 Same titles.
+    p
+    ul
+      each s in ss
+        li= s
+
+  h3 Plural
+  table.table-condensed.table-bordered
+    tr
+      td No.
+      td 名前
+      td 著者に含まれるもの
+    for nm in names
+      tr
+        td= nm[0]
+        td= nm[1]
+        td= nm[2]
+
+  h3 Program
+  table.table-condensed.table-bordered.table-striped
+    for tb in tables
+      tr
+        for t in tb
+          td!= t
+

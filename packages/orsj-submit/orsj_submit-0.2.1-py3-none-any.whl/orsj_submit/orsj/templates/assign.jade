@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h2 #{_title}
+  if message
+    pre #{message}
+  form(action='/assign', method='POST')
+    p 割付(キー 値)
+      textarea(name='val', rows='12', cols='30')
+    input(type='submit', value='実行')
