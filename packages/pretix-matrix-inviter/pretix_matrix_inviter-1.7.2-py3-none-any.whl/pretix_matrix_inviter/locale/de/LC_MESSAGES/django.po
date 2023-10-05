@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-09 10:33+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Felix Schäfer\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: pretix_matrix_inviter/apps.py:16 pretix_matrix_inviter/signals.py:139
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:6
+msgid "Matrix inviter"
+msgstr "Matrix Inviter"
+
+#: pretix_matrix_inviter/apps.py:18
+msgid "Invite participants to a Matrix Room or Space."
+msgstr "Teilnehmende zu einem Matrix-Raum oder -Space einladen."
+
+#: pretix_matrix_inviter/forms.py:17
+msgid "Ask Matrix ID for"
+msgstr "Matrix-ID abfragen für"
+
+#: pretix_matrix_inviter/forms.py:20
+msgid "These products will ask for a Matrix ID."
+msgstr "Bei diesen Produkten wird eine Matrix-ID abgefragt."
+
+#: pretix_matrix_inviter/forms.py:23
+msgid "Access token"
+msgstr "Zugriffstoken"
+
+#: pretix_matrix_inviter/forms.py:26
+msgid ""
+"This should be the access token of a user that can invite attendees to the "
+"target Room or Space. Please note that other administrators of this event "
+"will be able to see this token, it should not be from your own Matrix "
+"account but from a dedicated Matrix account."
+msgstr ""
+"Der Zugriffstoken eines Nutzers, der Teilnehmende zum Ziel-Matrix-Raum oder -"
+"Space einladen kann. Andere Administratoren mit Zugriff auf diese "
+"Veranstaltung werden diesen Zugriffstoken sehen können, der Zugriffstoken "
+"sollte nicht von einem persönlichen Matrix-Account sondern von einem zur "
+"Einladung von Teilnehmenden dedizierten Matrix-Account sein."
+
+#: pretix_matrix_inviter/forms.py:32
+msgid "Matrix server"
+msgstr "Matrix-Server"
+
+#: pretix_matrix_inviter/forms.py:35
+msgid "The matrix server the above access token is valid for."
+msgstr ""
+"Der Matrix-Server für den der oben angegebene Zugriffstoken gültig ist."
+
+#: pretix_matrix_inviter/forms.py:40
+msgid "Matrix ID field help text"
+msgstr "Hilfetext für Matrix-ID-Feld"
+
+#: pretix_matrix_inviter/forms.py:43
+msgid ""
+"This will be shown as help text on the Matrix ID field. It is recommended to "
+"inform your attendees which room they will be invited to and what that room "
+"will be used for."
+msgstr ""
+"Dieser Text wird als Hilfe unter dem Matrix-ID-Feld angezeigt. Es wird "
+"empfohlen Ihre Teilnehmer darüber zu informieren in welchen Raum sie "
+"eingeladen werden und wozu dieser Raum dient."
+
+#: pretix_matrix_inviter/forms.py:49
+msgid "Invitation message"
+msgstr "Einladungstext"
+
+#: pretix_matrix_inviter/forms.py:52
+msgid "This message will be added to the invitation to the Matrix room."
+msgstr "Dieser Text wird der Einladung zum Matrix-Raum zugefügt."
+
+#: pretix_matrix_inviter/forms.py:56
+msgid "Matrix room"
+msgstr "Matrix-Raum"
+
+#: pretix_matrix_inviter/forms.py:70
+msgid "Comma-separated list of room IDs or aliases to invite users to."
+msgstr ""
+"Komma-separierte Liste von Matrix-Raum-IDs oder -Aliase, in die Teilnehmende "
+"eingeladen werden sollen."
+
+#: pretix_matrix_inviter/forms.py:79
+#, python-brace-format
+msgid "\"{name}\" (main address: <code>{canonical_alias}</code>)"
+msgstr "„{name}“ (primäre Adresse: <code>{canonical_alias}</code>)"
+
+#: pretix_matrix_inviter/forms.py:83
+#, python-brace-format
+msgid "\"{name}\""
+msgstr "„{name}“"
+
+#: pretix_matrix_inviter/forms.py:88
+#, python-brace-format
+msgid ""
+"\"{name}\" (<code>{room_id}</code>, main address: <code>{canonical_alias}</"
+"code>)"
+msgstr ""
+"„{name}“ (<code>{room_id}</code>, primäre Adresse: <code>{canonical_alias}</"
+"code>)"
+
+#: pretix_matrix_inviter/forms.py:94
+#, python-brace-format
+msgid "\"{name}\" (<code>{room_id}</code>)"
+msgstr "„{name}“ (<code>{room_id}</code>)"
+
+#: pretix_matrix_inviter/signals.py:31
+msgid "You will be invited to the event's Matrix Space."
+msgstr "Sie werden in den Matrix-Space dieser Veranstaltung eingeladen."
+
+#: pretix_matrix_inviter/signals.py:56 pretix_matrix_inviter/signals.py:188
+msgid "Matrix ID"
+msgstr "Matrix-ID"
+
+#: pretix_matrix_inviter/signals.py:62
+msgid "Enter a Matrix ID of the form @username:homeserver.tld"
+msgstr "Eine Matrix-ID der Form @benutzername:heimserver.tld eingeben"
+
+#: pretix_matrix_inviter/signals.py:160
+#, python-brace-format
+msgid "{matrix_id} has been invited to {matrix_room}."
+msgstr "{matrix_id} wurde in den Raum {matrix_room} eingeladen."
+
+#: pretix_matrix_inviter/signals.py:163
+#, python-brace-format
+msgid "{matrix_id} has been removed from {matrix_room}."
+msgstr "{matrix_id} wurde aus dem Raum {matrix_room} entfernt."
+
+#: pretix_matrix_inviter/signals.py:166
+#, python-brace-format
+msgid "There was an error inviting {matrix_id} to {matrix_room}: {error}"
+msgstr ""
+"{matrix_id} konnte nicht in den Raum {matrix_room} eingeladen werden: {error}"
+
+#: pretix_matrix_inviter/signals.py:169
+#, python-brace-format
+msgid "There was an error removing {matrix_id} from {matrix_room}: {error}"
+msgstr ""
+"{matrix_id} konnte nicht aus dem Raum {matrix_room} entfernt werden: {error}"
+
+#: pretix_matrix_inviter/signals.py:189
+msgid "@username:homeserver.tld"
+msgstr "@benutzername:heimserver.tld"
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:4
+msgid "Matrix inviter settings"
+msgstr "Einstellungen für Matrix Inviter"
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:10
+msgid "Settings"
+msgstr ""
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:15
+msgid "Save"
+msgstr ""
+
+#~ msgid "Matrix Inviter"
+#~ msgstr "Matrix Inviter"
+
+#~ msgid "Pretix Matrix Inviter"
+#~ msgstr "Pretix Matrix Inviter"
+
+#~ msgid "Authorization token"
+#~ msgstr "Zugriffstoken"

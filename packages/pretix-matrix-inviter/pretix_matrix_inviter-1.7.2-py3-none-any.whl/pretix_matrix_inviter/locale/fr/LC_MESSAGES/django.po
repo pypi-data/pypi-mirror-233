@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-09 10:33+0100\n"
+"PO-Revision-Date: 2023-02-09 10:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: pretix_matrix_inviter/apps.py:16 pretix_matrix_inviter/signals.py:139
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:6
+msgid "Matrix inviter"
+msgstr "Inviteur Matrix"
+
+#: pretix_matrix_inviter/apps.py:18
+msgid "Invite participants to a Matrix Room or Space."
+msgstr "Invitez vos participant·es à un salon ou espace Matrix."
+
+#: pretix_matrix_inviter/forms.py:17
+msgid "Ask Matrix ID for"
+msgstr "Demander l’identifiant Matrix pour"
+
+#: pretix_matrix_inviter/forms.py:20
+msgid "These products will ask for a Matrix ID."
+msgstr "L’identifiant Matrix sera demandé lors de la commande de ces produits."
+
+#: pretix_matrix_inviter/forms.py:23
+msgid "Access token"
+msgstr "Jeton d’accès"
+
+#: pretix_matrix_inviter/forms.py:26
+msgid ""
+"This should be the access token of a user that can invite attendees to the "
+"target Room or Space. Please note that other administrators of this event "
+"will be able to see this token, it should not be from your own Matrix "
+"account but from a dedicated Matrix account."
+msgstr ""
+"Ce jeton d’accès doit être celui d’un utilisateur pouvant inviter des "
+"participant·es à votre salon ou espace Matrix. D’autres administrateurs de "
+"cet événement pourront voir ce jeton d’accès, il est recommandé de ne pas "
+"utiliser celui de votre utilisateur Matrix mais d’un utilisateur Matrix "
+"dédié."
+
+#: pretix_matrix_inviter/forms.py:32
+msgid "Matrix server"
+msgstr "Serveur Matrix"
+
+#: pretix_matrix_inviter/forms.py:35
+msgid "The matrix server the above access token is valid for."
+msgstr "Serveur Matrix pour lequel le jeton d’accès ci-dessus est valable."
+
+#: pretix_matrix_inviter/forms.py:40
+msgid "Matrix ID field help text"
+msgstr "Aide pour le champ identifiant Matrix"
+
+#: pretix_matrix_inviter/forms.py:43
+msgid ""
+"This will be shown as help text on the Matrix ID field. It is recommended to "
+"inform your attendees which room they will be invited to and what that room "
+"will be used for."
+msgstr ""
+"Ce texte sera attaché en tant que message d’aide au champ identifiant "
+"Matrix. Il est recommandé d’indiquer à vos participant·es quel salon Matrix "
+"iels seront invité·es ainsi que l’utilisation qui sera faite de ce salon."
+
+#: pretix_matrix_inviter/forms.py:49
+msgid "Invitation message"
+msgstr "Message d’invitation"
+
+#: pretix_matrix_inviter/forms.py:52
+msgid "This message will be added to the invitation to the Matrix room."
+msgstr "Ce message sera joint à l’invitation au salon Matrix."
+
+#: pretix_matrix_inviter/forms.py:56
+msgid "Matrix room"
+msgstr "Salon Matrix"
+
+#: pretix_matrix_inviter/forms.py:70
+msgid "Comma-separated list of room IDs or aliases to invite users to."
+msgstr ""
+"Identifiants ou alias des salons dans lesquels inviter les participant·es, "
+"liste de valeurs séparées par des virgules."
+
+#: pretix_matrix_inviter/forms.py:79
+#, python-brace-format
+msgid "\"{name}\" (main address: <code>{canonical_alias}</code>)"
+msgstr "« {name} » (adresse principale : <code>{canonical_alias}</code>)"
+
+#: pretix_matrix_inviter/forms.py:83
+#, python-brace-format
+msgid "\"{name}\""
+msgstr "« {name} »"
+
+#: pretix_matrix_inviter/forms.py:88
+#, python-brace-format
+msgid ""
+"\"{name}\" (<code>{room_id}</code>, main address: <code>{canonical_alias}</"
+"code>)"
+msgstr ""
+"« {name} » (<code>{room_id}</code>, adresse principale : "
+"<code>{canonical_alias}</code>)"
+
+#: pretix_matrix_inviter/forms.py:94
+#, python-brace-format
+msgid "\"{name}\" (<code>{room_id}</code>)"
+msgstr "« {name} » (<code>{room_id}</code>)"
+
+#: pretix_matrix_inviter/signals.py:31
+msgid "You will be invited to the event's Matrix Space."
+msgstr "Vous serez invité dans l’espace Matrix de cette événement."
+
+#: pretix_matrix_inviter/signals.py:56 pretix_matrix_inviter/signals.py:188
+msgid "Matrix ID"
+msgstr "Identifiant Matrix"
+
+#: pretix_matrix_inviter/signals.py:62
+msgid "Enter a Matrix ID of the form @username:homeserver.tld"
+msgstr "Entrez un identifiant Matrix de la forme @utilisateur:serveur.tld"
+
+#: pretix_matrix_inviter/signals.py:160
+#, python-brace-format
+msgid "{matrix_id} has been invited to {matrix_room}."
+msgstr "{matrix_id} a été invité à joindre {matrix_room}."
+
+#: pretix_matrix_inviter/signals.py:163
+#, python-brace-format
+msgid "{matrix_id} has been removed from {matrix_room}."
+msgstr "{matrix_id} a été supprimé de {matrix_room}."
+
+#: pretix_matrix_inviter/signals.py:166
+#, python-brace-format
+msgid "There was an error inviting {matrix_id} to {matrix_room}: {error}"
+msgstr ""
+"Il y a eu une erreur lors de l’invitation de {matrix_id} à joindre "
+"{matrix_room} : {error}"
+
+#: pretix_matrix_inviter/signals.py:169
+#, python-brace-format
+msgid "There was an error removing {matrix_id} from {matrix_room}: {error}"
+msgstr ""
+"Il y a eu une erreur lors de la suppression de {matrix_id} de "
+"{matrix_room} : {error}"
+
+#: pretix_matrix_inviter/signals.py:189
+msgid "@username:homeserver.tld"
+msgstr "@utilisateur:serveur.tld"
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:4
+msgid "Matrix inviter settings"
+msgstr "Réglages inviteur Matrix"
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:10
+msgid "Settings"
+msgstr ""
+
+#: pretix_matrix_inviter/templates/pretix_matrix_inviter/settings.html:15
+msgid "Save"
+msgstr ""
+
+#~ msgid "Matrix Inviter"
+#~ msgstr "Inviteur Matrix"
+
+#~ msgid "Pretix Matrix Inviter"
+#~ msgstr "Inviteur Matrix pour pretix"
