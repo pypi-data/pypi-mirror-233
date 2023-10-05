@@ -1,0 +1,7 @@
+setup.py
+package_1/init.py
+package_1/test1.py
+packages_yang_test1.egg-info/PKG-INFO
+packages_yang_test1.egg-info/SOURCES.txt
+packages_yang_test1.egg-info/dependency_links.txt
+packages_yang_test1.egg-info/top_level.txt
