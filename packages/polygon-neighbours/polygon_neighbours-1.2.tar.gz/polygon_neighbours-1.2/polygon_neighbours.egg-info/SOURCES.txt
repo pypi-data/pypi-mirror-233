@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+polygon_neighbours.egg-info/PKG-INFO
+polygon_neighbours.egg-info/SOURCES.txt
+polygon_neighbours.egg-info/dependency_links.txt
+polygon_neighbours.egg-info/requires.txt
+polygon_neighbours.egg-info/top_level.txt
+src/polygon_neighbours/find_neighbours.cpp
+tests/test_bordering_polygons.py

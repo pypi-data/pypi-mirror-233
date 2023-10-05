@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: polygon_neighbours
+Version: 1.2
+Summary: CPython extension for finding bordering polygons.
+Home-page: https://github.com/sgaebel/polygon_neighbours
+Author: Dr. Sebastian M. Gaebel
+Author-email: gaebel.sebastian@gmail.com
+License: MIT
+Keywords: geometry polygon
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+
+Various CPython extensions for manipulating and analysing
+polygons.
