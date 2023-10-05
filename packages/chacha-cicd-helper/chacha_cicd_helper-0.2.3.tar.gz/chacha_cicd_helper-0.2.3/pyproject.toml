@@ -1,0 +1,88 @@
+# pyChaChaDummyProject (c) by chacha
+#
+# pyChaChaDummyProject is licensed under a
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Unported License.
+#
+# You should have received a copy of the license along with this
+# work.  If not, see <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
+
+[build-system]
+requires = ["setuptools>=63", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme= "post-release"
+
+[project]
+name = "chacha_cicd_helper"
+description = "A bundle of cicd helper tools"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["chacha","chacha","template","chacha_cicd_helper"]
+license = { file = "LICENSE.md" }
+
+authors = [
+    {name="chacha",email="1000CHACHA0001@gmail.com"},
+]
+maintainers = [
+    {name="chacha",email="1000CHACHA0001@gmail.com"},
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    'importlib-metadata; python_version<"3.9"',
+    'typed-argument-parser==1.*',
+    'packaging',
+    "junitparser>=2.8",
+    "junit2html>=30.1",
+    "xmlrunner>=1.7",
+    "mypy>=0.99",
+    "coverage>=7.0",
+    "radon>=5.1",
+    "pylint>=2.15,<3",
+    "pylint-json2html>=0.4",
+    "pandas>=1.5",
+    "mypy[reports]>=0.99",
+    "mkdocs>=1.4.0",
+    "mkdocs-material>=8.5",
+    "mkdocs-pymdownx-material-extras",
+    "mkdocs-localsearch>=0.9.0",
+    "mkdocstrings[python]>=0.19",
+    "mkdocs-with-pdf>=0.9.3",
+    "pyyaml>=6.0",
+    "pymdown-extensions>=9",
+    "mkdocs-markdownextradata-plugin",
+    "mkdocs-mermaid2-plugin"
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+platforms = ["any"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"chacha_cicd_helper.data" = ["*.*"]
+"chacha_cicd_helper" = ["py.typed"]
+
+[project.urls]
+Homepage        = "https://chacha.ddns.net/gitea/chacha/chacha_cicd_helper"
+Documentation   = "https://chacha.ddns.net/mkdocs-web/chacha/chacha_cicd_helper/master/latest/"
+Tracker         = "https://chacha.ddns.net/gitea/chacha/chacha_cicd_helper/issues"
+
+[project.optional-dependencies]
+test              = ["junitparser>=2.8","junit2html>=30.1","xmlrunner>=1.7","mypy>=0.99" ]
+coverage-check    = ["coverage>=7.0"]
+complexity-check  = ["radon>=5.1"]
+quality-check     = ["pylint>=2.15","pylint-json2html>=0.4","pandas>=1.5","types-PyYAML"]
+type-check        = ["mypy[reports]>=0.99" ]
+doc-gen           = ["mkdocs>=1.4.0", "mkdocs-material>=8.5","mkdocs-pymdownx-material-extras", "mkdocs-localsearch>=0.9.0", "mkdocstrings[python]>=0.19", "mkdocs-with-pdf>=0.9.3","pyyaml>=6.0","pymdown-extensions>=9","mkdocs-markdownextradata-plugin","mkdocs-mermaid2-plugin"]
+
+# [project.scripts]
+# my-script = "my_package.module:function"
+
