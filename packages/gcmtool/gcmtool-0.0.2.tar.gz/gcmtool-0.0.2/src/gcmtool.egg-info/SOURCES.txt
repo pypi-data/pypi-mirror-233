@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+.github/workflows/release.yml
+src/gcmtool/app.py
+src/gcmtool.egg-info/PKG-INFO
+src/gcmtool.egg-info/SOURCES.txt
+src/gcmtool.egg-info/dependency_links.txt
+src/gcmtool.egg-info/entry_points.txt
+src/gcmtool.egg-info/top_level.txt
