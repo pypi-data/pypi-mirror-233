@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: tutor-contrib-translations
+Version: 14.0.3
+Summary: Translations plugin for Tutor
+Home-page: https://github.com/aulasneo/tutor-contrib-translations
+Author: Andrés González
+License: AGPLv3
+Project-URL: Code, https://github.com/aulasneo/tutor-contrib-translations
+Project-URL: Issue tracker, https://github.com/aulasneo/tutor-contrib-translations/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Requires-Dist: tutor<15.0.0,>=14.0.0
+
+translations plugin for `Tutor <https://docs.tutor.overhang.io>`__
+===================================================================================
+
+This plugin allows adding or overriding translations strings easily from the ``config.yml``.
+
+Installation
+------------
+
+::
+
+    pip install git+https://github.com/aulasneo/tutor-contrib-translations
+
+Usage
+-----
+
+First, enable the plugin with
+
+::
+
+    tutor plugins enable translations
+
+
+Translations are handled in a different way in the legacy Django HTML pages and
+and in the MFEs.
+
+Translating DJANGO legacy pages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add a ``TRANSLATIONS_OPENEDX`` entry to the configuration file.
+Then add a key for each language in lower case. Finally add as many items as needed
+using the original string in english as key and the translated text as value.
+
+E.g.:
+
+::
+
+    TRANSLATIONS_OPENEDX:
+        es:
+            "Courses": "Cursos"
+            "Certificate": "Certificado"
+
+Translating MFE
+~~~~~~~~~~~~~~~
+
+Similarly, create an entry named ``TRANSLATIONS_MFE_<mfe name>``.
+Then add a key for each language in lower case. Finally add as many items as needed
+using the original string in english as key and the translated text as value.
+
+E.g.:
+
+::
+
+    TRANSLATIONS_MFE_LEARNING:
+        es:
+            "Courses": "Cursos"
+            "Certificate": "Certificado"
+
+Save the configuration to apply the translations.
+Finally, rebuild the ``openedx`` and or ``mfe`` images where the translations
+have changed.
+
+
+License
+-------
+
+This software is licensed under the terms of the AGPLv3.
