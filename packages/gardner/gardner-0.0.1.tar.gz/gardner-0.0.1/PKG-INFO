@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: gardner
+Version: 0.0.1
+Summary: gardner, to keep your forest and gardens neat, tree by tree
+Project-URL: Documentation, https://github.com/unknown/gardner#readme
+Project-URL: Issues, https://github.com/unknown/gardner/issues
+Project-URL: Source, https://github.com/unknown/gardner
+Author-email: Aarmn the limitless <aarmn80@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# gardner
+
+[![PyPI - Version](https://img.shields.io/pypi/v/gardner.svg)](https://pypi.org/project/gardner)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gardner.svg)](https://pypi.org/project/gardner)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install gardner
+```
+
+## License
+
+`gardner` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
