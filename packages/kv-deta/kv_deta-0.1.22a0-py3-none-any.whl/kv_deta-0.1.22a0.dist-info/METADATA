@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: kv-deta
+Version: 0.1.22a0
+Summary: Key-Value Model for Detabase
+Home-page: https://github.com/ablaternae/kv-deta
+Author: d;)
+License: GLWTPL
+Keywords: deta,detabase,kv,key value
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: deta
+Requires-Dist: more-itertools
+
+<!-- ![Lines of code](https://img.shields.io/tokei/lines/github/ablaternae/py-kv-deta) -->
+[![PyPI version](https://badge.fury.io/py/kv-deta.svg)](https://badge.fury.io/py/kv-deta)
+![Downloads](https://img.shields.io/pypi/dm/kv-deta)
+[![Statistic](https://pepy.tech/badge/kv-deta/week)](https://pepy.tech/project/kv-deta)
+<!-- [![GitHub](https://img.shields.io/github/license/ablaternae/kv-deta)](https://github.com/ablaternae/kv-deta/blob/trunk/LICENSE.md) -->
+
+# Key-Value Model for Detabase
+
+## API
+### constructor
+`class KVModel(dict)`
+
+example:
+```
+from kv_deta import KVModel 
+
+class Example(KVModel):
+  class Config(KVModel.Config):
+    deta_key = DETA_BASE_KEY
+    # or
+    deta = Deta(DETA_BASE_KEY)
+
+    table_name = "my_kv_table"	# optional
+
+    hash = my_hash_function	# default lambda x: hashlib.sha256(str(x).encode('utf8')).hexdigest()
+```
+```
+kv = Example({"key":"value"})
+```
+
+### update
+```
+kv.update({"k2":42})
+```
+like for dictionary
+
+### save
+```
+kv.save()
+```
+commit __all__ data to detabase
+
+### get
+mixed dict.get(key), deta.get(key), dict.setdefault(key, default)
+```
+kv.get(key="some key"[, default="newer data"])
+```
+returns value from `deta.get(key)` or update it by `default` if deta.get() returned None 
+
+### incr, decr
+based on Deta.Base.Util.incremental()
+```
+kv.incr(key="counter"[, quantity=1])
+```
+returns incremented value for `key`.
+if detabase have not specific `key`, creates it and set `value=quantity`
+
+### query
+```
+kv.query(param=criteria, limit=1000, last=None) -> Dict
+```
+* return dict(key:value)
+* query param see also https://deta.space/docs/en/build/reference/deta-base/queries
+* update current model: kv.update(kv.query(criteria)) (??? refactoring required?)
+
+### keys
+```
+kv.keys(param=None) -> List
+```
+return list(key)
+
+
+### Table Struct
+field | description
+----- | ---
+key   | hash(key)
+path  | origin key, hidden field
+value | data
+
+## News
+* v0.1.22 _bigint_'s bug is [not a bug](https://github.com/deta/deta-python/issues/95)
+> Base currently supports **maximum 16 digit** numbers (integers and floating points), 
+> [please store larger numbers as a string](https://deta.space/docs/en/build/reference/deta-base#storing-numbers).
+  * `@classmethod query() -> dict` by [rules](https://deta.space/docs/en/build/reference/deta-base/queries).
+    you can search key(s) like a other regular fields
+  * `read()` used query() and replaced all data in current object
+
+* * v0.1.20 methods implementation exchanged `incr2 <--> incr`
+* bug detected: Deta.Base.Util.incremental() doesn't work with _bigint_
+* v0.1.18 setup repaired
+* v0.1.17 hotfix
+* v0.1.16 `query(), keys()` 
+* v0.1.15 `rename()`
+* v0.1.13 **backward compatibility broken**
+* v0.1.12 `incr()` rewritten with Deta.Base.Util.incremental()
+* v0.1.11 `incr(key: str, quantity=1)`, `decr(key: str, quantity=1): return incr(key, -quantity)`
+* v0.1.8 `get()` fix
+* `get(key, default)`
+* `save()`
+
+## License
+* It's opensource and free software, see the [LICENSE](LICENSE) for more details
+
+## similar projects
+* [csv-deta](https://pypi.org/project/csv-deta/) 
+* [sql-deta](https://pypi.org/project/sql-deta/)
+
+## TODO
+* [x] `keys()` get keys list
+* [ ] save() refactor
+* [ ] set, get, del
+* [x] `rename(key, new_key)`
+* [x] `query()` return dict
+* [ ] TTL
+* [x] `incr()`, `decr()`
+* [x] `get(key)`
