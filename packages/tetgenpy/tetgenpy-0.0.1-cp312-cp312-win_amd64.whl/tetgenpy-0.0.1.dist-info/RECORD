@@ -1,0 +1,11 @@
+tetgenpy/__init__.py,sha256=n88eYLX56TiB0gZ4sGnoMJy7s_44bmrYyu8_d3RuyEw,659
+tetgenpy/_version.py,sha256=ry5O5SW74ugwOUMKSV2_LbWjYa8B0IEvUm7S-lHPA2c,23
+tetgenpy/gentet.py,sha256=WjE77MisNazdp8V_pIbTyEZFZrxDwzwYL9YrzSH8sUc,2608
+tetgenpy/plc.py,sha256=_UwQRJNX8zhyfftQ1RPUMVszI1MA_oBV1LMEq15qB7s,15574
+tetgenpy/tetgenpy_core.cp312-win_amd64.pyd,sha256=iioymz67oTe-6v6V53wmVpai5YGY2w1Ua9mv8ahmRPM,697344
+tetgenpy-0.0.1.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+tetgenpy-0.0.1.dist-info/METADATA,sha256=4IaEx7XS54IPVIxhKBm4LaGT75v46VNPaZwAvX4gJXE,3295
+tetgenpy-0.0.1.dist-info/WHEEL,sha256=aDrgWfEd5Ac7WJzHsr90rcMGiH4MHbAXoCWpyP5CEBc,102
+tetgenpy-0.0.1.dist-info/entry_points.txt,sha256=Z0v3cMH3ez2CMFfj8WrYA9rsxB2lkuY4t4OumTJyLJ8,44
+tetgenpy-0.0.1.dist-info/top_level.txt,sha256=uiE7I5AmHj9MLWQE1JNIJgNwEeuHEviWlqkzhpfMyrM,9
+tetgenpy-0.0.1.dist-info/RECORD,,
