@@ -1,0 +1,13 @@
+Flask>=1.0
+
+[:python_version < "3.9"]
+typing_extensions
+
+[dev]
+mypy
+
+[sqla]
+Flask-SQLAlchemy>=2.0
+
+[wtforms]
+Flask-WTF>=1.0
