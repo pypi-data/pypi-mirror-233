@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jbturtle/__init__.py
+jbturtle/jbturtle.py
+jbturtle.egg-info/PKG-INFO
+jbturtle.egg-info/SOURCES.txt
+jbturtle.egg-info/dependency_links.txt
+jbturtle.egg-info/requires.txt
+jbturtle.egg-info/top_level.txt
