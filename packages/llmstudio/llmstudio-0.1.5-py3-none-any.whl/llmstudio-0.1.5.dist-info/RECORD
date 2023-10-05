@@ -1,0 +1,14 @@
+llmstudio/__init__.py,sha256=6RuOGj7baseyegQtqmNfGH0utBrJCer2Au3dCA03qNc,30
+llmstudio/client.py,sha256=vZX6ezTR0xeO22zeoaZQdeVvzfnRXf_nLeBMOk4snog,56
+llmstudio/setup.py,sha256=5WBIsWYE4FHyNGwlg2ctN2jvuWIthmBTL4aFnY4bBMQ,318
+llmstudio/version.py,sha256=i1Yg6E0__XSZ3Ia6UOztSkHtemStaORUYjW8wnFWusg,111
+llmstudio/models/__init__.py,sha256=PHZ9DhbHUcaulMVaN3u3XL8MiAXtPF7iOsfKPyYkUvA,145
+llmstudio/models/bedrock.py,sha256=xVqQ7mc01LotnHmZtk9VD377D-yoUE8DnjMPBN7KvIE,3950
+llmstudio/models/models.py,sha256=0W0PGikJA00hyd0krt_PANtRAyzmCnmrKSVpJwKxezQ,6649
+llmstudio/models/openai.py,sha256=HUPGlL2PakgFb8qJYzK85KCnchxJjuLYYz4uohNSHZg,2523
+llmstudio/models/vertexai.py,sha256=TUixcqBQB0RMU3pQif5Clov3mza4d_FxUkmRMjL5AaY,2566
+llmstudio-0.1.5.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+llmstudio-0.1.5.dist-info/METADATA,sha256=cxrKN8pHR-M-jgYRbHqBYLaaIk9bn0gXqMSDYQ3WgAM,416
+llmstudio-0.1.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+llmstudio-0.1.5.dist-info/top_level.txt,sha256=bdS6gBjU8JW5NuPv3WqKzSPDlOR6_olotWYhJZHUUeI,10
+llmstudio-0.1.5.dist-info/RECORD,,

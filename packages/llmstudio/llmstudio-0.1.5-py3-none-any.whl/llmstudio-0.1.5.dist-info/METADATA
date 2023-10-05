@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: llmstudio
+Version: 0.1.5
+Summary: Prompt Perfection at Your Fingertips
+Home-page: https://llmstudio.ai/
+Author: TensorOps
+Author-email: contact@tensorops.ai
+Project-URL: Source Code, https://github.com/tensoropsai/llmstudio
+Project-URL: Bug Tracker, https://github.com/tensoropsai/llmstudio/issues
+Keywords: ml ai llm llmstudio tensorops
+License-File: LICENSE
+Requires-Dist: requests <3
+
