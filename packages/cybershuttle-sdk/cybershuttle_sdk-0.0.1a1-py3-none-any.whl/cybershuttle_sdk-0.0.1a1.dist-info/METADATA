@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cybershuttle-sdk
+Version: 0.0.1a1
+Summary: Python SDK for Apache Airavata Cybershuttle
+Home-page: https://github.com/apache/airavata
+Author: Airavata Cybershuttle Developers
+Author-email: dev@airavata.apache.org
+Project-URL: Bug Tracker, https://github.com/apache/airavata/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: google-api-python-client >=2.0.0
+Requires-Dist: grpcio ==1.46.3 ; platform_machine != "arm64"
+Requires-Dist: grpcio-tools ==1.46.3 ; platform_machine != "arm64"
+Requires-Dist: grpcio ==1.47.0rc1 ; platform_machine == "arm64"
+Requires-Dist: grpcio-tools ==1.47.0rc1 ; platform_machine == "arm64"
+
+Python SDK for Apache Airavata Cybershuttle
