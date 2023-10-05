@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pollination_dash_io
+Version: 1.8.0
+Summary: Pollination input/output components for Dash to use with pollination apps
+Home-page: https://github.com/pollination/pollination-dash-io
+Author: Ladybug Tools <info@ladybug.tools>
+Author-email: info@ladybug.tools
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+Requires-Python: >=3.7
+License-File: LICENSE
+
+Pollination input/output components for Dash to use with pollination apps
+
