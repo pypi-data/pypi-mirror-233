@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/nikescraperbykejora/__init__.py
+src/nikescraperbykejora/datascraper.py
+src/nikescraperbykejora/linksscraper.py
+src/nikescraperbykejora/scrapingresult.py
+src/nikescraperbykejora.egg-info/PKG-INFO
+src/nikescraperbykejora.egg-info/SOURCES.txt
+src/nikescraperbykejora.egg-info/dependency_links.txt
+src/nikescraperbykejora.egg-info/top_level.txt
