@@ -1,0 +1,29 @@
+asttokens<3,>=2
+typing_extensions
+
+[:python_version == "3.6"]
+contextvars
+
+[dev]
+tox>=3.0.0
+pydocstyle<7,>=6.3.0
+coverage<5,>=4.5.1
+docutils<1,>=0.14
+pygments<3,>=2.2.0
+dpcontracts==0.6.0
+tabulate<1,>=0.8.7
+py-cpuinfo<6,>=5.0.0
+typeguard<3,>=2
+astor==0.8.1
+numpy<2,>=1
+
+[dev:python_version > "=3.8"]
+deal==4.23.3
+
+[dev:python_version >= "3.7"]
+pylint==2.17.5
+
+[dev:python_version >= "3.8"]
+mypy==1.5.1
+black==23.9.1
+asyncstdlib==3.9.1
