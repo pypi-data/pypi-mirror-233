@@ -1,0 +1,766 @@
+metadata:
+  title: |
+    Legal Aid of West Virginia Electronic Release Tool
+  short title: |
+    LAWV Release
+  description: |
+    This interview allows advocates to generate and email
+    a release of information to a client and receive a signed
+    copy back.
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2023-09-29
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+objects:
+  - a: Individual
+  - c: Individual
+  - custodian: Individual
+  - endpoint: DADict
+  - lawv_img: DAStaticFile.using(filename='lawv_release.png', alt_text='Standard LAWV Authorization and Release')
+  - voca_img: DAStaticFile.using(filename='voca_release.png', alt_text='VOCA Authorization and Release')
+  - cps_img: DAStaticFile.using(filename='cps_release.png', alt_text='DHHR CPS Authorization and Release')
+  - lis_img: DAStaticFile.using(filename='lis_release.png', alt_text='Lawyer in the School Release/Referral')
+  - fast_release_img: DAStaticFile.using(filename='fast_release.png', alt_text='FAST Authorization and Release')
+  - fast_represent_img: DAStaticFile.using(filename='fast_represent.png', alt_text='FAST Authorization to Represent')
+---
+mandatory: True
+code: |
+  multi_user = True
+  attorney_setup  
+  if not birthdays_match:
+    failure_reason = "Sorry the birthday you entered did not match."
+    challenge_fail
+  if release_select == "lawv":
+    if lawv_client_review == 'reject':
+      recipients = [a]
+      send_email(to=recipients,template=client_reject)      
+      reject
+  elif release_select == "voca":
+    if voca_client_review == 'reject':
+      recipients = [a]
+      send_email(to=recipients,template=client_reject)      
+      reject
+  elif release_select == "cps":
+    if cps_client_review == 'reject':
+      recipients = [a]
+      send_email(to=recipients,template=client_reject)      
+      reject
+  elif release_select == 'lis':
+    if lis_client_review == 'reject':
+      recipients = [a]
+      send_email(to=recipients,template=client_reject)      
+      reject    
+  elif release_select == "fast":
+    if fast_choice["release"]:
+      if fast_release_client_review == 'reject':
+        recipients = [a]
+        send_email(to=recipients,template=client_reject)      
+        reject
+    if fast_choice["represent"]:
+      if fast_represent_client_review == 'reject':
+        recipients = [a]
+        send_email(to=recipients,template=client_reject)      
+        reject
+  c_method
+  if c_method == 'type':
+    if (release_select == 'fast') and custodian_present == True:
+      c.signature = '/s/ ' + custodian.name.full()
+    else:
+      c.signature = '/s/ ' + c.name.full()
+  date = current_datetime()
+  c.signature
+  final_screen  
+---
+ga id: attorneyInfo
+question: |
+  First, enter your information
+subquestion: |
+  The information is needed to get the signed release
+  agreement back from the client.
+fields:
+  - First Name: a.name.first
+  - Last Name: a.name.last
+  - Email Address: a.email
+    datatype: email
+---
+ga id: clientInfo
+question: |
+  Now, enter some information about the client
+subquestion: |
+  Information about the client is used to make sure
+  the person who receives the release is the client
+
+  **For FAST: If the client is a minor or under a guardianship, 
+  still put the client's name/birthdate here.  You will have the opportunity to
+  specify the custodian's name later in the process.**
+fields:
+  - First Name: c.name.first
+  - Last Name: c.name.last
+  - Birthdate: c.birthdate
+    datatype: date
+  - Email Address: c.email
+    datatype: email
+---
+ga id: releaseType
+question: |
+  Please select the type of release
+subquestion: |
+  Click the "?" next to the question to see a preview of the release.  You can click the preview to see the full-size document.
+fields: 
+  - no label: release_select
+    input type: radio
+    choices:
+      - Standard LAWV Authorization for Release of Information: lawv
+        help: |
+          [${ lawv_img }](${ lawv_img.url_for() })
+      - VOCA Authorization of Release of Information: voca
+        help: |
+          [${ voca_img }](${ voca_img.url_for() })
+      - DHHR CPS Authorization for Release of Information: cps
+        help: |
+          [${ cps_img }](${ cps_img.url_for() })
+      - Lawyer in the School Release/Referral: lis
+        help: |
+          [${ lis_img }](${ lis_img.url_for() })
+      - FAST Forms (Click to Expand): fast
+  - FAST Authorization Options *(Select All That Apply)*: fast_choice
+    datatype: checkboxes
+    choices:
+      - FAST Authorization for Release of Information: release
+        help: |
+          [${ fast_release_img }](${ fast_release_img.url_for() })
+      - FAST Authorization for Representation: represent
+        help: |
+          [${ fast_represent_img }](${ fast_represent_img.url_for() })
+    show if:
+      variable: release_select
+      is: fast
+    none of the above: False
+---
+ga id: custodianInfo
+question: |
+  Provide information on ${ c.possessive('custodian') }
+subquestion: |
+  A custodian can be a parent, guardian, or other person who will sign
+  on the client's behalf.
+fields:
+  - First Name: custodian.name.first
+  - Last Name: custodian.name.last
+---
+ga id: lawvOptions
+question: |
+  Should the release include family?
+subquestion: |
+  The language of the release states:
+
+  *...any and all requested records for information, including psychiatric records or records relating to treatment for alcoholism or substance addiction pertaining to me* ***(optional: [ ] and my family)*** *that the person or agency may have...*
+
+  **Note**: The release will be reviewed by the client before they sign.
+yesno: lawv_options
+---
+ga id: vocaOptions
+question: |
+  Additional VOCA Information
+subquestion: |
+  The VOCA release authorizes LAWV to disclose information to another person or agency.  Enter that information here
+
+  **Note**: The release will be reviewed by the client before they sign.
+fields:
+  - Individual Name: voca_name
+    required: False
+  - Organization/Agency Name: voca_org
+    required: False
+  - Address/Phone Number: voca_contact
+  - Scope of Release: voca_scope
+    input type: area
+    hint: |
+      What information may be shared?
+  - Share method(s): voca_method
+    datatype: checkboxes
+    choices:
+      - In Person: person
+      - Phone: phone
+      - Email: email
+      - Mail: mail
+      - Fax: fax
+    none of the above: False
+  - Fixed End Date?: voca_end
+    datatype: yesnoradio
+    help: |
+      If no end date selected, the release automatically expires one year after signature.
+  - End Date: voca_end_date
+    datatype: date
+    max: ${ today().plus(years=1) }
+    min: ${ today() }
+    show if: voca_end
+---
+ga id: cpsOptions
+question: |
+  Please provide the following information
+subquestion: |
+  **Note**: The release will be reviewed by the client before they sign.
+fields:
+  - Client's Last 4 digits of SSN: social
+---
+ga id: lisOptions
+question: |
+  Please provide the following information
+subquestion: |
+  **Note**: The release will be reviewed by the client before they sign.
+fields:
+  - Address: c.address.address
+    address autocomplete: True
+  - Unit/Apt.: c.address.unit
+    required: False
+  - City: c.address.city
+  - State: c.address.state
+    code: states_list()
+    default: WV
+  - Zip: c.address.zip
+  - Phone Number: c.phone
+  - Text OK?: lis_text_ok
+    datatype: yesnoradio
+  - Is there a student involved that may need help?: client_as_student
+    datatype: yesnoradio
+    required: False
+  - Student(s) Name: lis_student_names
+    show if: client_as_student
+  - Client relationship to student: lis_relationship
+    show if: client_as_student
+  - Purpose of Referral: lis_purpose
+    hint: Get possible services from...
+---
+ga id: fastOptions
+question: |
+  What authorizations does FAST have?
+subquestion: |
+  **Note**: These will be reviewed by the client before they sign.
+fields:
+  - no label: fast_options
+    datatype: checkboxes
+    choices:
+      - Permission to obtain all medical, psychological, educational records, and correspondence pertaining to my child.: medical
+      - Permission to communicate with the school, county Board of Education, personnel and agents on behalf myself and my child.: communicate
+      - Permission for my Legal Aid FAST representative and the school to freely and independently discuss issues, concerns, etc. pertaining to my child.: independent
+      - Authorization for my representative to request, schedule, and meaningfully participate in formal and informal meetings, conferences, and discussions relating to my child's education and educational records, including my child's behavioral needs and records.: meetings
+    none of the above: False
+---
+ga id: clientBirthday
+question: |
+  % if release_select == "fast":
+    Please enter ${ c.possessive('birthday') }
+  % else:
+    Please enter your birthday
+  % endif
+fields:
+  - no label: challenge
+    datatype: date
+---
+ga id: lawvClientReview
+question: |
+  LAWV Release Review
+subquestion: |
+  ${ a.name.full() } has submitted a release for your signature. Legal 
+  Aid of West Virginia is asking you to sign this release so that 
+  our advocates can get important paperwork about your case.
+
+  % if lawv_options == True:
+  The release authorizes Legal Aid of West Virginia to access "any 
+  and all requested records for information, including psychiatric 
+  records or records relating to treatment for alcoholism or substance 
+  addiction pertaining to me and my family that the person or agency may have, 
+  including written or electronic reports, copies, computations and excerpts, and 
+  hereby waive the limitations on access of information about me 
+  provided in the Privacy Act of 1974."
+  % else:
+  The release authorizes Legal Aid of West Virginia to access "any 
+  and all requested records for information, including psychiatric 
+  records or records relating to treatment for alcoholism or substance 
+  addiction pertaining to me that the person or agency may have, including 
+  written or electronic reports, copies, computations and excerpts, and 
+  hereby waive the limitations on access of information about me 
+  provided in the Privacy Act of 1974."
+  % endif
+
+  The release is effective for 1 year after you sign it.
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature on the next page.**
+field: lawv_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: vocaClientReview
+question: |
+  VOCA Release Review
+subquestion: |
+  ${ a.name.full() } has submitted a release for your signature. Legal 
+  Aid of West Virginia is asking you to sign this release so that 
+  our advocates can provide information about your case to a third party.
+
+  Specifically, Legal Aid would like to be able to share information with:
+
+  % if defined('voca_name') and voca_name != "":
+  *${ voca_name }*  
+  % endif
+  % if defined('voca_org') and voca_org != "":
+  *${ voca_org }*  
+  % endif
+
+  The scope of the information to be shared is:
+
+  *${ voca_scope }*
+
+  and the information may be shared by the following methods:
+
+  % if voca_method['person']:
+  * *In person;*
+  % endif 
+  % if voca_method['phone']:
+  * *Phone;* 
+  % endif
+  % if voca_method['email']:
+  * *E-mail;*
+  % endif
+  % if voca_method['mail']:
+  * *Mail;* 
+  % endif
+  % if voca_method['fax']:
+  * *Fax;*
+  % endif
+
+  % if voca_end:
+    The release will be valid until *${ voca_end_date }*.
+  % else:
+    The release will expire 1 year after you sign.
+  % endif
+
+  Finally, the release has the following understandings:
+
+  * You may receive help from LAWV even if you don't agree to release this information.
+  * Other people or organizations outside of LAWV may not be required to keep you information confidential.
+  * If the information you agree to share relates to where you live or your address, this means that a third party outside of LAWV would have that information. This organization or person may not have the same obligations to protect your privacy.
+  * This release is limited to the information you agree to share. If you want LAWV to share more information about you, you can sign another release.
+  * You may cancel this release at any time, verbally or in writing.
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature on the next page.**
+field: voca_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: cpsClientReview
+question: |
+  DHHR CPS Release Review
+subquestion: |
+  ${ a.name.full() } has submitted a release for your signature. Legal 
+  Aid of West Virginia is asking you to sign this release so that 
+  our advocates can get important paperwork about your case.
+
+  This release authorizes the West Virginia Department of Health and Human
+  Resources (DHHR) Child Protective Services (CPS) to release:
+
+  *any and all child abuse and neglect records relating to services provided to ${ c.name.full() }*
+
+  Additionally:
+
+  * You understand that you have the right to revoke this authorization at any time except to the extent that action has been taken in reliance on it. 
+  * You understand that if you revoke this authorization that you must do so in writing and present my written revocation to the General Counsel for Bureau for Social Services, 350 Capitol Street, Charleston, West Virginia 25301.
+  * You understand that authorizing the disclosure of this information is voluntary.
+  * You can refuse to sign this authorization.
+  * You understand that any disclosure of information carries with it the potential for an unauthorized re-disclosure. 
+  * If you have questions about disclosure of this information, you can contact the West Virginia Department of Health and Human Resources Bureau of Social Services, phone number (304) 558-4194.
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature on the next page.**
+field: cps_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: lisClientReview
+question: |
+  Lawyer in the School Referral Review
+subquestion: |
+  ${ a.name.full() } has submitted a referral for your signature. Legal 
+  Aid of West Virginia (LAWV) is asking you to sign this referral so that 
+  you can receive additional services.
+
+  Specifically, LAWV is seeking services on your behalf from:
+
+  *${ lis_purpose }*
+
+  Additionally, you understand that:
+
+  * LAWV may share my contact information with the school or community partner written on this form.
+  * Agreeing to this referral is voluntary. You can withdraw my consent at any time.
+  * LAWV does not guarantee eligibility for services provided by school or community providers.
+  * LAWV will treat my personal information as confidential. LAWV will only disclose this information to school or community providers on this form.
+  * You will receive communications from LAWV or the school or community provider regarding the referred services. 
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature on the next page.**
+field: lis_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: fastReleaseClientReview
+question: |
+  FAST Release Review
+subquestion: |
+  ${ a.name.full() } has submitted a release for your signature. Legal 
+  Aid of West Virginia is asking you to sign this release so that 
+  our advocates can get important paperwork about ${ c.possessive('case') }.
+
+  Specifically:
+
+  * You hereby acknowledge that you are authorized to provide consent for release of the records of the child named in this Authorization for Release of Information.
+  * You hereby acknowledge that there are statutes and regulations protecting the confidentiality of authorized information and that any released information will not be re-disclosed to a third party without prior informed written consent given by yourself.
+  * You hereby acknowledge that this consent is truly voluntary and is valid until performed.
+  * You hereby acknowledge that you may revoke this consent at any time, except to the extent that action based on this consent has been taken.
+  * Unless and until revoked, this consent shall be valid for one year from the date of your signature.
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature at the end of this process.**
+field: fast_release_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: fastRepresentClientReview
+question: |
+  FAST Authorization for Representation Review
+subquestion: |
+  ${ a.name.full() } has submitted an Authorization for Representation 
+  for your signature. Legal Aid of West Virginia is asking you to sign 
+  this authorization so that our advocates can work ${ c.possessive('case') }.
+
+  Specifically, LAWV is seeking:
+
+  % if fast_options["medical"]:
+  * Permission to obtain all medical, psychological, educational records, and correspondence pertaining to my child.
+  % endif
+  % if fast_options["communicate"]:
+  * Permission to communicate with the school, county Board of Education, personnel and agents on behalf myself and my child.
+  % endif
+  %if fast_options["independent"]:
+  * Permission for my Legal Aid FAST representative and the school to freely and independently discuss issues, concerns, etc. pertaining to my child.
+  % endif
+  % if fast_options["meetings"]:
+  * Authorization for my representative to request, schedule, and meaningfully participate in formal and informal meetings, conferences, and discussions relating to my child's education and educational records, including my child's behavioral needs and records.: meetings
+  % endif
+
+  Further,
+
+  * Representation by Legal Aid of West Virginia's FAST Program does not limit or preclude you, and/or any other legal guardian of the child, from exercising your rights to communicate with the school, schedule meetings, request records, or from exercising any other legal rights regarding your child's education.
+  * You may revoke this authorization at any time, except with respect to actions already taken in reliance on this release. Your revocation should be in writing and sent to Legal Aid of West Virginia. Legal Aid of West Virginia will give me a copy of this form, and you may ask Legal Aid to allow me to inspect or get a copy of material disclosed to Legal Aid, or to be disclosed to Legal Aid.
+
+  **If you agree, a copy of the release will be provided to you once you complete your signature at the end of this process.**
+field: fast_represent_client_review
+Buttons:
+  - I Agree: agree
+  - I Reject: reject
+---
+ga id: rejectRelease
+event: reject
+question: |
+  You have rejected the document.
+subquestion: |
+  A notification will be sent to ${ a.name.full() }.
+action buttons:
+  - label: Exit
+    action: https://www.lawv.net
+    color: danger
+    icon: sign-out-alt
+---
+ga id: clientSignature
+question: |
+  How would you like your name signed?
+subquestion: |
+  % if release_select == "fast":
+    **Typed** will insert '/s/ ${ custodian.name.full() }'
+  % else:
+    **Typed** will insert '/s/ ${ c.name.full()}'
+  % endif
+
+  **Digitally Sign** will allow you to use the mouse, trackpad,
+  or finger (device depending) to sign your name
+field: c_method
+choices:
+  - Type: type
+  - Digitally Sign: sign
+under: |
+  After you sign the release a copy will be provided to both you and Legal Aid of West Virginia.
+---
+ga id: clientDigitalSignature
+question: |
+  Sign your name
+signature: c.signature
+under: |
+  % if release_select == "fast":
+    ${ custodian.name.full() }
+  % else:
+    ${ c.name.full() }
+  % endif
+---
+event: attorney_final
+question: |
+  Email Sent - Done for now
+subquestion: |
+  An email has been sent to ${ c.email } for them to 
+  review the terms and sign.  Once signed, a copy will
+  be sent to your email: ${ a.email }
+action buttons:
+  - label: Leave
+    action: https://legalaidwv.org/
+    color: warning
+    icon: sign-out-alt
+need:
+  - attorney_setup
+---
+ga id: releaseComplete
+event: final_screen
+question: |
+  Thank You
+subquestion: |
+  % if client_emailed and attorney_emailed:
+  Thank you for completing the signature. 
+  
+  A copy will be sent to your email: ${ c.email }.
+  % else:
+  There was a problem sending the e-mail.
+  % endif
+action buttons:
+  - label: Exit
+    action: https://legalaidwv.org/
+    color: danger
+    icon: sign-out-alt
+---
+code: |
+  if release_select == "lawv":
+    client_emailed = send_email(to=c,attachments=lawv_release,template=see_attached)
+  elif release_select == "voca":
+    client_emailed = send_email(to=c,attachments=voca_release,template=see_attached)
+  elif release_select == "cps":
+    client_emailed = send_email(to=c,attachments=cps_release,template=see_attached)
+  elif release_select == 'lis':
+    client_emailed = send_email(to=c,attachments=lis_release,template=see_attached)
+  elif release_select == "fast":
+    if fast_choice["release"] and fast_choice["represent"]:
+      client_emailed = send_email(to=c,attachments=[fast_release, fast_represent],template=see_attached)
+    elif fast_choice["release"]:
+      client_emailed = send_email(to=c,attachments=fast_release,template=see_attached)
+    elif fast_choice["represent"]:
+      client_emailed = send_email(to=c,attachments=fast_represent,template=see_attached)
+---
+code: |
+  if release_select == "lawv":
+    attorney_emailed = send_email(to=a,attachments=lawv_release,template=see_attached)
+  elif release_select == "voca":
+    attorney_emailed = send_email(to=a,attachments=voca_release,template=see_attached)
+  elif release_select == "cps":
+    attorney_emailed = send_email(to=a,attachments=cps_release,template=see_attached)
+  elif release_select == 'lis':
+    attorney_emailed = send_email(to=a,attachments=lis_release,template=see_attached)
+  elif release_select == "fast":
+    if fast_choice["release"] and fast_choice["represent"]:
+      attorney_emailed = send_email(to=a,attachments=[fast_release, fast_represent],template=see_attached)
+    elif fast_choice["release"]:
+      attorney_emailed = send_email(to=a,attachments=fast_release,template=see_attached)
+    elif fast_choice["represent"]:
+      attorney_emailed = send_email(to=a,attachments=fast_represent,template=see_attached)
+---
+ga id: challengeFail
+event: challenge_fail
+question: |
+  It appears you encountered a problem
+subquestion: |  
+  Reason: ${ failure_reason }  
+action buttons:
+  - label: Exit
+    action: https://legalaidwv.org/
+    color: danger
+    icon: sign-out-alt
+---
+template: notification
+subject: |
+  A document is awaiting your signature.
+content: |
+  Dear ${ c.name.full() },
+  
+  ${ a.name.full() } has created a document that requires your signature.
+  After you sign it, a copy will be emailed to you for your records.
+
+  Please click the following URL:
+
+  [${ interview_url() }](${ interview_url() })
+
+  Legal Aid of West Virginia
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.  
+  Contact your attorney or paralegal through your normal method of communication.*
+---
+template: see_attached
+subject: |
+  A document has been created.
+content: |
+  Here is a copy of the document you signed.
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.  
+  Contact your attorney or paralegal through your normal method of communication.*
+---
+template: client_reject
+subject: |
+  ${ c.name.full() } rejected signing the release.
+content: |
+  Dear ${ a.name.full() },
+  
+  ${ c.name.full() } rejected signing the release.  Please contact them.
+
+  Legal Aid of West Virginia
+---
+attachment:
+  - name: LAWV Authorization and Release
+    filename: ${ c.name.full() } Release
+    pdf template file: lawv_release.pdf
+    editable: False
+    variable name: lawv_release
+    fields:
+      - "client_name" : ${ c.name.full() }
+      - "family_election": ${ lawv_options }
+      - "client_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "client_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+      - "signature_date_af_date": ${ date.format() }
+---
+attachment:
+  - name: voca_release
+    filename: ${ c.name.full() } Release
+    pdf template file: voca_release.pdf
+    editable: False
+    variable name: voca_release
+    fields:
+      - "client_name": ${ c.name.full() }
+      - "share_name": ${ voca_name }
+      - "share_agency": ${ voca_org }
+      - "share_contact": ${ voca_contact }
+      - "type_of_info": ${ voca_scope }
+      - "in_person": ${ 'Yes' if voca_method["person"] else 'No' }
+      - "email": ${ 'Yes' if voca_method["email"] else 'No' }
+      - "mail": ${ 'Yes' if voca_method["mail"] else 'No' }
+      - "phone": ${ 'Yes' if voca_method["phone"] else 'No' }
+      - "fax": ${ 'Yes' if voca_method["fax"] else 'No' }
+      - "duration": ${ 'One Year' if not voca_end else '' }
+      - "expiration_af_date": ${ voca_end_date.format() if voca_end else '' }
+      - "client_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+      - "client_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "client_signature_1_af_date": ${ date.format() }
+---
+attachment:
+  - name: cps_release
+    filename: ${ c.name.full() } Release
+    pdf template file: cps_release.pdf
+    editable: False
+    variable name: cps_release
+    fields:
+      - "lawv": 'Legal Aid of West Virginia'
+      - "client_name": ${ c.name.full() }
+      - "client_dob_af_date": ${ c.birthdate.format() }
+      - "client_ssn": ${ social }
+      - "i_am_the": 'Parent'
+      - "client_initials": ${ c.initials }
+      - "client_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+      - "signature_date_af_date": ${ date.format() }
+      - "client_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+---
+attachment:
+  - name: lis_release
+    filename: ${ c.name.full() } Release
+    pdf template file: lis_release.pdf
+    editable: False
+    variable name: lis_release
+    fields:
+      - "client_name": ${ c.name.full() }
+      - "street_address": ${ c.address.address }
+      - "city": ${ c.address.city }
+      - "zip": ${ c.address.zip }
+      - "state": ${ c.address.state }
+      - "phone": ${ c.phone }
+      - "text_OK": ${ lis_text_ok }
+      - "student_name": ${ lis_student_names if client_as_student else '' }
+      - "services_from": ${ lis_purpose }
+      - "client_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+      - "client_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "signature_date_af_date": ${ date.format() }
+      - "relationship": ${ lis_relationship if client_as_student else '' }
+---
+attachment:
+  - name: fast_release
+    filename: ${ c.name.full() } Release
+    pdf template file: fast_release.pdf
+    editable: False
+    variable name: fast_release
+    fields:
+      - "parent_name": ${ custodian.name.full() }
+      - "client_name": ${ c.name.full() }
+      - "parent_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "parent_date_af_date": ${ date.format() }
+      - "parent_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+      - "client_dob_af_date": ${ c.birthdate.format() }
+---
+attachment:
+  - name: fast_represent
+    filename: ${ c.name.full() } Agreement
+    pdf template file: fast_represent.pdf
+    editable: False
+    variable name: fast_represent
+    fields:
+      - "parent_name": ${ custodian.name.full() }
+      - "client_name": ${ c.name.full() }
+      - "client_dob_af_date": ${ c.birthdate.format() }
+      - "medical": ${ custodian.initials if fast_options["medical"] else '' }
+      - "school": ${ custodian.initials if fast_options["communicate"] else '' }
+      - "independent": ${ custodian.initials if fast_options["independent"] else '' }
+      - "meetings": ${ custodian.initials if fast_options["meetings"] else '' }
+      - "parent_signature_1": ${ c.signature.show(width='3in') if c_method == 'sign' else '' }
+      - "parent_date_af_date": ${ date.format() }
+      - "parent_signature_1_text": |
+          ${ c.signature if c_method == 'type' else ''}
+---
+code: |
+  a.name.first
+  c.name.first
+  release_select
+  if release_select == "lawv":
+    lawv_options
+  elif release_select == "voca":
+    voca_scope
+  elif release_select == "cps":
+    c.initials = c.name.first[:1] + c.name.last[:1]
+    social
+  elif release_select == "lis":
+    lis_purpose    
+  elif release_select == "fast":
+    custodian_present = True
+    custodian.name.first
+    custodian.initials = custodian.name.first[:1] + custodian.name.last[:1]
+    if fast_choice["represent"]:
+      fast_options
+  
+  send_email(to=c,template=notification)
+  attorney_setup = True
+  prevent_going_back()
+  force_ask('attorney_final')
+---
+code: |
+  if c.birthdate.format() == challenge.format():
+    birthdays_match = True
+  else:
+    birthdays_match = False

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: docassemble.LAWVRelease
+Version: 1.0.7
+Summary: A docassemble extension for a multi-part interview for creating one of 5 releases (LAWV General, VOCA {Victims of Crime Act}, DHHR CPS, Lawyer in the School, and FAST).
+Home-page: https://docassemble.org
+Author: System Administrator
+Author-email: dhenry@lawv.net
+License: The MIT License (MIT)
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Multi-part interview for creating one of 5 releases (LAWV General, VOCA {Victims of Crime Act}, DHHR CPS, Lawyer in the School, and FAST).  FAST also has the option for creating a request for representation, which is separate from the FAST Retainer.  
+
