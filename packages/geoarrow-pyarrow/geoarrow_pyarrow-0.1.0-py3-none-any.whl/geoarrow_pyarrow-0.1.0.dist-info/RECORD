@@ -1,0 +1,12 @@
+geoarrow/pyarrow/__init__.py,sha256=aW676C6oNODJDqFLZdd7_PIS9oDJlko08Qe8L8BBgFM,1543
+geoarrow/pyarrow/_array.py,sha256=pwJ9lIayYNTgcs3qphbI8vYfA6CLdxCc_h3fky-kz-c,5978
+geoarrow/pyarrow/_compute.py,sha256=80YaT-1ihM_tKX9q_BlWSJi-NoPVQbYqWxrlpfHZaQU,17925
+geoarrow/pyarrow/_kernel.py,sha256=idecpqIA9cEskd8r3aFVBskmzTzjuna7XIOwP35Gs3E,3671
+geoarrow/pyarrow/_scalar.py,sha256=gofRI_w9kWSTvPGWSbc5owkE5yE_TuIdpagBxbmjWjk,3239
+geoarrow/pyarrow/_type.py,sha256=PPA9wW7JOF5nzNBpPMj_LRTeIF8Sy74Ydc8UTtTJB0E,21971
+geoarrow/pyarrow/dataset.py,sha256=p7-OmfRA30ePlYLwr31txpVfhPGY-FL2cPzI2fBxm7A,20064
+geoarrow/pyarrow/io.py,sha256=raGN3b8NbuiDOyWJyw9x-5xibm92QnLC9XUAazcGXkQ,1923
+geoarrow_pyarrow-0.1.0.dist-info/METADATA,sha256=sn6gCb9RyllA6Dyp-aj7aaGtbL56OBZBvSGw3ui2F44,583
+geoarrow_pyarrow-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+geoarrow_pyarrow-0.1.0.dist-info/top_level.txt,sha256=bFC1ZysYtHL-ycMZqyByqF3dVVpzpQrKMWUv9d1lqKQ,9
+geoarrow_pyarrow-0.1.0.dist-info/RECORD,,
