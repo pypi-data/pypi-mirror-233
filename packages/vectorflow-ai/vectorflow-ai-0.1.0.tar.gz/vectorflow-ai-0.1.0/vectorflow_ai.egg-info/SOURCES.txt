@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+vectorflow.py
+vectorflow_ai.egg-info/PKG-INFO
+vectorflow_ai.egg-info/SOURCES.txt
+vectorflow_ai.egg-info/dependency_links.txt
+vectorflow_ai.egg-info/entry_points.txt
+vectorflow_ai.egg-info/top_level.txt
