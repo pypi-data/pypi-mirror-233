@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: opendigger_pycli
+Version: 1.0.1
+Summary: Awesome CLI for OpenDigger
+Author-email: CoderChen01 <wwseyy@gmail.com>
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click==8.1.4
+Requires-Dist: rich==13.5.2
+Requires-Dist: requests==2.31.0
+Requires-Dist: types-requests==2.31.0.2
+Requires-Dist: click-plugins==1.1.1
+Requires-Dist: pyecharts==2.0.4
+Requires-Dist: openai==0.28.1
+Requires-Dist: pytest==7.4.0 ; extra == "test"
+Requires-Dist: coverage==7.2.7 ; extra == "test"
+Requires-Dist: flake8==6.0.0 ; extra == "test"
+Requires-Dist: black==23.7.0 ; extra == "test"
+Requires-Dist: isort==5.12.0 ; extra == "test"
+Requires-Dist: pytest-cov==4.1.0 ; extra == "test"
+Requires-Dist: codecov==2.1.13 ; extra == "test"
+Requires-Dist: mypy==1.4.1 ; extra == "test"
+Project-URL: AuthorGithub, https://github.com/CoderChen01
+Project-URL: Documentation, https://github.com/CoderChen01/opendigger-pycli/blob/main/README.md
+Project-URL: Source, https://github.com/CoderChen01/opendigger-pycli/
+Provides-Extra: test

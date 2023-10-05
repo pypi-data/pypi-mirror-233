@@ -1,0 +1,3 @@
+[console_scripts]
+opendigger=opendigger_pycli.__main__:opendigger
+
