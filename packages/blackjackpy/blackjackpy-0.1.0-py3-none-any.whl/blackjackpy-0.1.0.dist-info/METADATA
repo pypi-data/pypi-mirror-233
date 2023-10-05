@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: blackjackpy
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/SaitoTsutomu/blackjackpy
+License: Apache-2.0
+Author: SaitoTsutomu
+Author-email: tsutomu7@hotmail.co.jp
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+
+# How to play
+
+```
+$ blackjackpy
+Player( 6):  2(C) 4(S)
+Dealer(--):  5(C) *(*)
+Draw? (y/n) y
+Player(16):  2(C) 4(S) J(C)
+Dealer(--):  5(C) *(*)
+Draw? (y/n) n
+Player(16):  2(C) 4(S) J(C)
+Dealer(17):  5(C) 3(C) 9(S)
+You lose.
+```
+
+```
+$ blackjackpy
+Player(20): 10(S) K(C)
+Dealer(--):  7(C) *(*)
+Draw? (y/n) n
+Player(20): 10(S) K(C)
+Dealer(18):  7(C) A(H)
+You win.
+```
+
+# Ref.
+
+See: https://pyq.jp/quests/blackjack/
