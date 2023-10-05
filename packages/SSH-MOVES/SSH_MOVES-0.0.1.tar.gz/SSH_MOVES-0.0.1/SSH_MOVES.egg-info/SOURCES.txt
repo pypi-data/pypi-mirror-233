@@ -1,0 +1,5 @@
+setup.py
+SSH_MOVES.egg-info/PKG-INFO
+SSH_MOVES.egg-info/SOURCES.txt
+SSH_MOVES.egg-info/dependency_links.txt
+SSH_MOVES.egg-info/top_level.txt
