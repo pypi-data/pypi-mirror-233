@@ -1,0 +1,9 @@
+jinja2_async_environment-0.2.2.dist-info/METADATA,sha256=FJ02F5QIEWjuwCFnzWJF3u5nddHvtkAMN55VYbDepMU,519
+jinja2_async_environment-0.2.2.dist-info/WHEEL,sha256=1D4d-_ODszlK6-qFybc5BLF-ZhZvee-uKVh2hLa3IIc,90
+jinja2_async_environment-0.2.2.dist-info/licenses/LICENSE,sha256=xooT2eYHotoDtQXo9aY3W0FjLrJ7O7AkSUb0-nIfpbA,1518
+jinja2_async_environment/__init__.py,sha256=-aVN9N6sp544gW8BlfEUltWo8XOJu4d1aL9u5bgdg4Y,497
+jinja2_async_environment/bccache.py,sha256=Sn54EifxFo2qmDD6pBjdz-u4B2OwSx9r8VQRXrijamA,1507
+jinja2_async_environment/compiler.py,sha256=QImv1-Sv9J_w8i7wqG1bfluEMOFP_I0cC9Fo7svWXdA,5079
+jinja2_async_environment/environment.py,sha256=gtvVidnEtWDE6hOJXRFjaaMUH6SnEhBAFaS2BEtkmlQ,1577
+jinja2_async_environment/loaders.py,sha256=NdHKfhEr0KER6yH7SNAbftBvgebrQ2cFv4gReMzrsGM,9436
+jinja2_async_environment-0.2.2.dist-info/RECORD,,
