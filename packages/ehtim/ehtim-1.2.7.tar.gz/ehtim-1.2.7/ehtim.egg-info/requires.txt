@@ -1,0 +1,10 @@
+numpy
+scipy
+astropy
+matplotlib
+skyfield
+h5py
+pandas
+paramsurvey
+requests
+future
