@@ -1,0 +1,10 @@
+gw/__init__.py,sha256=oOAhhPxFfyPyFACpqznyxHtHggJt7ICQ32irfjf_xhs,34
+gw/astrology/__init__.py,sha256=oOAhhPxFfyPyFACpqznyxHtHggJt7ICQ32irfjf_xhs,34
+gw/astrology/igwn_alert_listener.py,sha256=mkSkMgmfwZfyH1tN5FRbOqtaeyX8HT4hVrnLghgbEoA,1373
+gw/astrology/sign_calculator.py,sha256=wyxyIPIz0JJDRLX9WeCEy-PTsWYCHCTtAt_UETBJcr0,981
+gw_astrology-0.0.1.dist-info/LICENSE,sha256=Ltani2zoIAOiICowVcQ9dE4kLtpRuK4KtGtTK1EIOUY,1068
+gw_astrology-0.0.1.dist-info/METADATA,sha256=5jFa-0NsqSoRzfqsWOUnwUCmZ37hNOA4BiQXjo9QAJs,2048
+gw_astrology-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gw_astrology-0.0.1.dist-info/entry_points.txt,sha256=VMtliuiZ7LQum9jdi6CxHNSej7JX9iijnUOqq8Pti0s,78
+gw_astrology-0.0.1.dist-info/top_level.txt,sha256=BxJVEadbPcHogn3mGrW2B93pFMo1gPucgwuA8bAU428,3
+gw_astrology-0.0.1.dist-info/RECORD,,
