@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: nxslib
+Version: 0.9.1
+Summary: NxScope client library
+Author-email: raiden00 <raiden00@railab.me>
+License: Apache-2.0
+Project-URL: Changelog, https://github.com/railab/nxslib/blob/master/CHANGES.md
+Project-URL: Homepage, https://github.com/railab/nxslib
+Keywords: nuttx
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial>=3.5
+Requires-Dist: crcmod>=1.7
+Requires-Dist: pylink-square>=1.2
+
+# Nxslib
+![master workflow](https://github.com/railab/nxslib/actions/workflows/master.yml/badge.svg)
+
+Nxslib is a Python client library for the [Apache NuttX](https://nuttx.apache.org/)
+NxScope real-time logging module.
+
+Compatible with Python 3.10+.
+
+## Features
+
+* built-in simulated NxScope device that allows application development without 
+connecting a real NuttX device
+* support for the NxScope serial protocol
+* support for Segger RTT interface based on [pylink](https://github.com/square/pylink)
+* user-specific stream data decoding (user-defined types)
+* support for custom protocols
+
+## Instalation
+
+Nxslib can be installed by running `pip install nxslib`.
+
+To install latest development version, use:
+
+`pip install git+https://github.com/railab/nxslib.git`
+
+## Contributing
+
+All contributions are welcome to this project.
+
+To get started with developing Nxslib, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Usage
+
+Look at [docs/usage](docs/usage.rst).
+
+## Tools
+* [Nxscli](https://github.com/railab/nxscli/) - a command-line interface based on Nxslib
