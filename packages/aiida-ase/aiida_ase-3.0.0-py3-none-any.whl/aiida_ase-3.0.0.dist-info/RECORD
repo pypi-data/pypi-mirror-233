@@ -1,0 +1,13 @@
+aiida_ase/__init__.py,sha256=_QWsdMU-Xjh-FPy1ZtiW-AlI_pgqstw6yiBLyBwVjaE,87
+aiida_ase/calculations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiida_ase/calculations/ase.py,sha256=X38SbBun2EjHuo75IYPKrpWj0TNTgqhzQwcHReo_k68,20573
+aiida_ase/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiida_ase/parsers/ase.py,sha256=HFoia8rGAMg109h_BvN7IPb0WF_E3fZuT0BCi4JQQwc,2460
+aiida_ase/parsers/gpaw.py,sha256=ituP5QgC5Y8ERSDlCLujuEJD7X7XiS8tFzpDTKI0wFM,7127
+aiida_ase/workflows/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiida_ase/workflows/base.py,sha256=7fADq9i4Tyj2hLUtWliIrWPevgbkLwQCiKQG7u3QmZI,6330
+aiida_ase-3.0.0.dist-info/entry_points.txt,sha256=bLLOiboCKtr_tjL_B0j3jvm9L23EHDAEk6fdOfkGBQQ,248
+aiida_ase-3.0.0.dist-info/LICENSE.txt,sha256=YUdsHY2WxyS9eY39SXR2i1taOegTty28FpOEqEXlEf8,1073
+aiida_ase-3.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+aiida_ase-3.0.0.dist-info/METADATA,sha256=6ymytLpGRsDtMWL1SbGDKIYZYZoqt_HgjRScQNibtfQ,4541
+aiida_ase-3.0.0.dist-info/RECORD,,
