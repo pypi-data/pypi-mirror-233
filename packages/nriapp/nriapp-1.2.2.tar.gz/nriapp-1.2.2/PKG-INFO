@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: nriapp
+Version: 1.2.2
+Summary: This is an internal tool for querying MS 365 Defender using MSGraph and MS Sentinels API with NRI
+Added capability for MDR portal
+Home-page: UNKNOWN
+Author: Llallum Victoria
+Author-email: llallumvictoria@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
