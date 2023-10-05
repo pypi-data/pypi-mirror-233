@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: search-query
+Version: 0.1.0
+Summary: Package for managing literature search queries.
+License: MIT
+Author: Katharina Ernst
+Author-email: katharina-maria.ernst@stud.uni-bamberg.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# Search query
+
+A python package for literature search queries.
+
+
+To use the queries, run: 
+
+```
+import search_query.query
+
+query = search_query.query.Query()
+
+```
