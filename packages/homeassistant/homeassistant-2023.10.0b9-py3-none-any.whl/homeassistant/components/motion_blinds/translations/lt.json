@@ -1,0 +1,28 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u012erenginys jau sukonfig\u016bruotas"
+        }
+    },
+    "entity": {
+        "cover": {
+            "bottom": {
+                "name": "Apa\u010dia"
+            },
+            "combined": {
+                "name": "Kombinuotas"
+            },
+            "top": {
+                "name": "\u012e vir\u0161\u0173"
+            }
+        },
+        "sensor": {
+            "bottom_battery": {
+                "name": "Apatin\u0117 baterija"
+            },
+            "top_battery": {
+                "name": "Vir\u0161utin\u0117 baterija"
+            }
+        }
+    }
+}
