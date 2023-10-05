@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: linkspace
+Version: 0.5.0
+Home-Page: https://www.linkspace.dev
+Author: Anton Sol <AntonSol919@gmail.com>
+Author-email: Anton Sol <AntonSol919@gmail.com>
+License: MPL-2.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/AntonSol919/linkspace
+
+
+# linkspace-py
+Python bindings to [linkspace](https://www.linkspace.dev)
+
+Build with `make`
+And use with `source .env/bin/activate`
+Or `make install`
+
+### Windows
+
+```bat
+python3 -m venv .env 
+.venv\Scripts\activate.bat
+pip3 install maturin 
+cargo build
+maturin develop
+```
+

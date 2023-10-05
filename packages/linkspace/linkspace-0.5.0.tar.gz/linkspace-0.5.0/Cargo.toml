@@ -1,0 +1,67 @@
+[workspace.package]
+version = "0.5.0"
+edition = "2021"
+authors = ["Anton Sol <AntonSol919@gmail.com>"]
+license = "MPL-2.0"
+homepage = "https://www.linkspace.dev"
+documentation = "https://www.linkspace.dev/guide/index.html"
+repository = "https://github.com/AntonSol919/linkspace"
+
+
+[workspace]
+resolver = "2"
+members = ["crates/*", "cli/*", "ffi/*"]
+exclude = [
+        "ffi/linkspace-js", # wasm-pack target config is poorly supported - so js is build as an individual crate.
+]
+
+
+
+
+[workspace.dependencies]
+
+anyhow = "1"
+arrayvec = "0.7"
+serde = "1"
+hex = "0.4"
+base64 ="0.21"
+tracing = {version = "0.1",features=["release_max_level_info"]}
+tracing-subscriber = "0.3"
+thiserror =  "1"
+rand = "0.8"
+rand_core = "0.6"
+clap = "4"
+futures = "0.3"
+either = "1"
+static_assertions = "1"
+auto_impl = "1"
+bytes = "1"
+bitflags = {version="2",features=["serde"]}
+blake3 = "1"
+bstr = {version = "1" ,default-features=false}
+vergen = "8.2.4"
+smallvec = {version="1",features=["const_new","const_generics","write"]}
+fxhash = "*"
+
+libc = "0.2.147"
+memmap2 = "0.7.1"
+nix = "0.26.2"
+
+
+[profile.dev.package.linkspace-argon2-identity]
+opt-level = 3
+[profile.dev.package.rust-argon2]
+opt-level = 3
+
+[profile.dev.package.linkspace-cryptography]
+opt-level = 3
+[profile.dev.package.linkspace-pkt]
+opt-level = 3
+
+
+[profile.dev]
+opt-level = 1   # Use slightly better optimizations.
+[profile.release]
+debug-assertions = true
+overflow-checks = true 
+lto = true

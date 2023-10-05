@@ -1,0 +1,28 @@
+[package]
+name = "linkspace"
+version = "0.5.0"
+edition = "2021"
+authors = ["Anton Sol <AntonSol919@gmail.com>"]
+license = "MPL-2.0"
+homepage = "https://antonsol919.github.io/linkspace/"
+documentation = "https://www.linkspace.dev/guide/index.html"
+repository = "https://github.com/AntonSol919/linkspace"
+categories = ["database","network-programming","asynchronous"]
+keywords = ["linkspace", "event-driven","distributed","log"]
+description = "an open-source library and protocol to build event-driven applications using a distributed log."
+
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["runtime"]
+# Disables Linkspace runtime 
+runtime = ["linkspace-common/default"]
+
+[dependencies]
+anyhow.workspace=true
+backtrace = "0.3.67"
+linkspace-common = { path = "../common", version = "0.5.0", default-features = false}
+tracing.workspace = true
+

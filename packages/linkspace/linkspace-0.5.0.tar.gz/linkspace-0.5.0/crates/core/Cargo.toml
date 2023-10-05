@@ -1,0 +1,43 @@
+[package]
+name = "linkspace-core"
+categories = []
+keywords = ["linkspace"]
+description = "linkspace core"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+repository.workspace = true
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default=["lmdb"]
+lmdb = ["lmdb-rkv", "lmdb-rkv-sys", "libc","ipcbus"]
+
+[dependencies]
+
+linkspace-pkt = { path = "../pkt", version="0.5.0"}
+linkspace-cryptography = { path = "../cryptography",version="0.5.0"}
+
+arrayvec.workspace=true
+anyhow.workspace=true
+thiserror.workspace = true
+tracing.workspace = true
+either.workspace = true 
+serde = { workspace = true, features = ["derive","rc"] }
+libc = { workspace = true,optional=true}
+smallvec.workspace = true
+
+dunce = "1.0.2"
+ipcbus = { path = "../ipcbus", version = "0.1.0", optional = true}
+lmdb-rkv = { git="https://github.com/AntonSol919/lmdb-rs", optional = true }
+lmdb-rkv-sys = { git="https://github.com/AntonSol919/lmdb-rs" ,optional = true }
+#lmdb-rkv = {path = "../../../lmdb-rs",optional=true}
+#lmdb-rkv-sys = {path = "../../../lmdb-rs/lmdb-sys",optional=true}
+
+time = {version="0.3",features=["parsing","formatting"]}
+parse-display = "0.8.2"

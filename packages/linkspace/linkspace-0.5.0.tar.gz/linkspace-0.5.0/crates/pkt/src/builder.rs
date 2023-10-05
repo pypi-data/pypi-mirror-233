@@ -1,0 +1,235 @@
+// Copyright Anton Sol
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+use linkspace_cryptography::SigningKey;
+
+use crate::*;
+
+pub fn datapoint(data: &[u8], netopts: impl Into<NetOpts>) -> NetPktParts<'_> {
+    try_datapoint_ref(data, netopts.into()).unwrap()
+}
+pub fn try_datapoint_ref(data: &[u8], netopts: NetOpts) -> Result<NetPktParts<'_>, Error> {
+    let pkt_parts = PointParts {
+        pkt_header: PointHeader::new_content_len(PointTypeFlags::DATA_POINT, data.len())?,
+        fields: PointFields::DataPoint(data),
+    };
+    let hash = pkt_parts.compute_hash();
+    Ok(NetPktParts {
+        net_header: netopts.into(),
+        hash,
+        point_parts: pkt_parts,
+    })
+}
+
+// TODO : decide if all default arguments should produce a try_datapoint and ifso, what the defaults are.
+#[allow(clippy::too_many_arguments)]
+pub fn try_point<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    signkey: Option<&SigningKey>,
+    netopts: impl Into<NetOpts>,
+) -> Result<NetPktParts<'t>, Error> {
+    let netopts = netopts.into();
+    match signkey {
+        Some(key) => try_keypoint_ref(group, domain, rspace, links, data, stamp, key, netopts),
+        None => try_linkpoint_ref(group, domain, rspace, links, data, stamp, netopts),
+    }
+}
+
+#[allow(clippy::too_many_arguments)]
+pub fn point<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    signkey: Option<&SigningKey>,
+    netopts: impl Into<NetOpts>,
+) -> NetPktParts<'t> {
+    try_point(
+        group,
+        domain,
+        rspace,
+        links,
+        data,
+        stamp,
+        signkey,
+        netopts.into(),
+    )
+    .unwrap()
+}
+pub fn linkpoint<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    netopts: impl Into<NetOpts>,
+) -> NetPktParts<'t> {
+    let netopts = netopts.into();
+    try_linkpoint_ref(group, domain, rspace, links, data, stamp, netopts).unwrap()
+}
+#[allow(clippy::too_many_arguments)]
+pub fn keypoint<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    signkey: &SigningKey,
+    netopts: impl Into<NetOpts>,
+) -> NetPktParts<'t> {
+    let netopts = netopts.into();
+    try_keypoint_ref(group, domain, rspace, links, data, stamp, signkey, netopts).unwrap()
+}
+
+fn linkp<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+) -> Result<(PointHeader, LinkPoint<'t>), Error> {
+    rspace.check_components().unwrap();
+    let tail = Tail {
+        links,
+        data,
+        rspace,
+    };
+    let space_size = rspace.rooted_bytes().len();
+    let offset_rspace_ptr = (size_of::<PointHeader>() + size_of::<LinkPointHeader>())
+        .saturating_add(std::mem::size_of_val(links));
+    let offset_rspace = U16::new(
+        offset_rspace_ptr
+            .try_into()
+            .map_err(|_| Error::ContentLen)?,
+    );
+    let offset_data = U16::new(
+        (offset_rspace_ptr + space_size)
+            .try_into()
+            .map_err(|_| Error::ContentLen)?,
+    );
+    let pkt_header = PointHeader::new_content_len(
+        PointTypeFlags::LINK_POINT,
+        size_of::<LinkPointHeader>() + tail.byte_len(),
+    )?;
+    let sp = LinkPoint {
+        head: LinkPointHeader {
+            info: LinkPointInfo {
+                offset_rspace,
+                offset_data,
+            },
+            group,
+            domain,
+            create_stamp: stamp,
+        },
+        tail,
+    };
+    Ok((pkt_header, sp))
+}
+
+pub fn try_linkpoint_ref<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    netopts: NetOpts,
+) -> Result<NetPktParts<'t>, Error> {
+    let (pkt_header, linkpoint) = linkp(group, domain, rspace, links, data, stamp)?;
+    let pkt_parts = PointParts {
+        pkt_header,
+        fields: PointFields::LinkPoint(linkpoint),
+    };
+    let hash = pkt_parts.compute_hash();
+    Ok(NetPktParts {
+        net_header: netopts.into(),
+        hash,
+        point_parts: pkt_parts,
+    })
+}
+
+#[allow(clippy::too_many_arguments)]
+pub fn try_keypoint_ref<'t>(
+    group: GroupID,
+    domain: Domain,
+    rspace: &'t RootedSpace,
+    links: &'t [Link],
+    data: &'t [u8],
+    stamp: Stamp,
+    signkey: &SigningKey,
+    netopts: NetOpts,
+) -> Result<NetPktParts<'t>, Error> {
+    let (pkt_header, lp_head) = linkp(group, domain, rspace, links, data, stamp)?;
+    let pkt_header = PointHeader::new_point_size(
+        pkt_header.point_type | PointTypeFlags::SIGNATURE,
+        pkt_header.uset_bytes.get() as usize + size_of::<Signed>(),
+    )?;
+    let linkpoint_hash = PointParts {
+        pkt_header,
+        fields: PointFields::LinkPoint(lp_head),
+    }
+    .compute_hash();
+    let signature = linkspace_cryptography::sign_hash(signkey, &linkpoint_hash.0).into();
+    let pkt_parts = PointParts {
+        pkt_header,
+        fields: PointFields::KeyPoint(
+            lp_head,
+            Signed {
+                pubkey: signkey.pubkey(),
+                signature,
+            },
+        ),
+    };
+    let hash = pkt_parts.compute_hash();
+    Ok(NetPktParts {
+        net_header: netopts.into(),
+        hash,
+        point_parts: pkt_parts,
+    })
+}
+
+pub fn errorpoint(error: &[u8], netopts: impl Into<NetOpts>) -> NetPktParts<'_> {
+    __error_blk_ref(error, netopts.into())
+}
+
+fn __error_blk_ref(error: &[u8], netopts: NetOpts) -> NetPktParts<'_> {
+    let pkt_parts = PointParts {
+        pkt_header: PointHeader::new_content_len(PointTypeFlags::ERROR_POINT, error.len()).unwrap(),
+        fields: PointFields::Error(error),
+    };
+    let hash = pkt_parts.compute_hash();
+    NetPktParts {
+        net_header: netopts.into(),
+        hash,
+        point_parts: pkt_parts,
+    }
+}
+
+/// Calculate the free space left in bytes. Negative values means it will not fit.
+#[inline]
+#[allow(clippy::as_conversions)]
+pub const fn calc_free_space(space: &Space, links: &[Link], data: &[u8], signed: bool) -> isize {
+    let mut size = if signed {
+        MAX_KEYPOINT_DATA_SIZE
+    } else {
+        MAX_LINKPOINT_DATA_SIZE
+    } as isize;
+    size = size.saturating_sub_unsigned(links.len() * std::mem::size_of::<Link>());
+    if !space.space_bytes().is_empty() {
+        size = size.saturating_sub_unsigned(space.space_bytes().len() + 8);
+    }
+    size = size.saturating_sub_unsigned(data.len());
+    size
+}

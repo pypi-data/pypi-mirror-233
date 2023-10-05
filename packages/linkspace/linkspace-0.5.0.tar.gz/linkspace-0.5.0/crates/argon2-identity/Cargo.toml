@@ -1,0 +1,20 @@
+[package]
+name = "linkspace-argon2-identity"
+description = "Argon2 encrypted schnorr keys"
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+repository.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+linkspace-cryptography = { path = "../cryptography", version="0.5.0"}
+
+thiserror.workspace = true
+base64.workspace=true
+
+rust-argon2 = {version = "2.0.0",default-features=false}
