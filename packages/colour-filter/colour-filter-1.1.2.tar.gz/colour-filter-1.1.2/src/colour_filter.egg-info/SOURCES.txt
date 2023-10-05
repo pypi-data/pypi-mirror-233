@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+run-test.sh
+src/colour_filter/__init__.py
+src/colour_filter/__main__.py
+src/colour_filter.egg-info/PKG-INFO
+src/colour_filter.egg-info/SOURCES.txt
+src/colour_filter.egg-info/dependency_links.txt
+src/colour_filter.egg-info/entry_points.txt
+src/colour_filter.egg-info/requires.txt
+src/colour_filter.egg-info/top_level.txt
