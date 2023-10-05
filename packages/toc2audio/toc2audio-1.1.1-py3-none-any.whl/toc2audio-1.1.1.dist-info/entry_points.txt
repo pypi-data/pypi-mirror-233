@@ -1,0 +1,3 @@
+[console_scripts]
+toc2audio=toc2audio:main
+
