@@ -1,0 +1,25 @@
+[build-system]
+requires = [ "setuptools", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ucyph"
+version = "0.2.1"
+description = "A command-line tool for encrypting and decrypting strings using various ciphers"
+readme = "README.md"
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+[[project.authors]]
+name = "Adam Slay"
+email = "adamslay11@gmail.com"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ucyph"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+ucyph = "src.ucyph.ucyph:main"
+
+[tool.setuptools]
+packages = [ "src.ucyph",]
