@@ -1,0 +1,15 @@
+CHANGELOG.md,sha256=YFCAg6815mVqqw7n72OmftRi2RaWJWL55O_so_0rcN8,1417
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyxavi/__init__,sha256=YK6iXA09RDGTXRYjtlf3Owtjl1C8Rx-WLneYX29OVwg,351
+pyxavi/config.py,sha256=PkXF6aRmSE_l_C6wadRx2IRk_ssWI7cIXq2CabGuZKM,962
+pyxavi/debugger.py,sha256=rAqgTLzDaLell40uyod6_Y1KwNca9TfWY5IrHvZoKYI,9525
+pyxavi/firefish.py,sha256=yVve32z4UrhMOKABcPiVQUy4OA7zFTtjutMR0JeWjj4,9038
+pyxavi/janitor.py,sha256=tmqhthFPaNcFASj31jOJdJGbzHtWzJYgqFe_gcXaG4g,3083
+pyxavi/logger.py,sha256=SAicWkegbtL8U3aRlzHWudK65YrZFKwQAno0SiJXtZg,1805
+pyxavi/media.py,sha256=mURvvjC7GjV-uU6YroX1POsUHqR3Os9fWJdxXdEST0E,1440
+pyxavi/storage.py,sha256=fhYJSq6XeLXjdEVD5mhkZ4Ap2TsuJXx3pvFU7gjRKsI,3323
+pyxavi/terminal_color.py,sha256=UtOySv50F6Cn8PsEjTpS_7q03LRR1uINU8MWOTEXfEk,719
+pyxavi-0.4.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyxavi-0.4.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+pyxavi-0.4.1.dist-info/METADATA,sha256=lthOE1ys1CgMmcugSN72LHxT_QDFkC1YgGGrzEzs2dU,5932
+pyxavi-0.4.1.dist-info/RECORD,,
