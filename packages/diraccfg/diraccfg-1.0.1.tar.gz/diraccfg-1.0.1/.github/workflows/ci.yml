@@ -1,0 +1,64 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'push' || github.repository == 'DIRACGrid/diraccfg'
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install pre-commit
+      run: pip install pre-commit
+    - name: Run pre-commit
+      run: pre-commit run --all-files --show-diff-on-failure
+
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: False
+      matrix:
+        python_version:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+    steps:
+    - uses: actions/checkout@v3
+    - name: Prepare environment
+      run: .github/workflows/prepare_environment.sh ${{ matrix.python_version }}
+    - name: Run pytest
+      run: |
+        . "${CONDA}/bin/activate" test-env
+        pytest
+    - name: Run mypy
+      run: |
+        . "${CONDA}/bin/activate" test-env
+        mypy
+    - name: Run pylint
+      run: |
+        . "${CONDA}/bin/activate" test-env
+        pylint -E src/diraccfg/ tests/
+
+  publish-pypi:
+    runs-on: ubuntu-latest
+    name: Publish package to PyPI
+    needs: [pytest, pre-commit]
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          git fetch --prune --unshallow
+      - name: Prepare environment
+        run: .github/workflows/prepare_environment.sh 3
+      - name: Build distributions
+        run: |
+          . "${CONDA}/bin/activate" test-env
+          python setup.py sdist bdist_wheel --universal
+      - name: Publish package
+        if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
