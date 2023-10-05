@@ -1,0 +1,2 @@
+[console_scripts]
+smart-find = smart_find.__main__:main
