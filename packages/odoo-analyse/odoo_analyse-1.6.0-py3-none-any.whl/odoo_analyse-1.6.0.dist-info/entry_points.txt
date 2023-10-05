@@ -1,0 +1,2 @@
+[console_scripts]
+odoo_analyse = odoo_analyse.__main__:main
