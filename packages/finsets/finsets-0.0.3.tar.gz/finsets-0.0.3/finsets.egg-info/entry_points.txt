@@ -1,0 +1,5 @@
+[console_scripts]
+finsets_search = finsets:search
+
+[nbdev]
+finsets = finsets._modidx:d
