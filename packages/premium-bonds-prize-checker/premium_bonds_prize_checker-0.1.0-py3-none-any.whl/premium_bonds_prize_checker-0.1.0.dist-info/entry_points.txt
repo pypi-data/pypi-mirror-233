@@ -1,0 +1,3 @@
+[console_scripts]
+premium-bonds-prize-checker=premium_bonds_prize_checker.__main__:app
+
