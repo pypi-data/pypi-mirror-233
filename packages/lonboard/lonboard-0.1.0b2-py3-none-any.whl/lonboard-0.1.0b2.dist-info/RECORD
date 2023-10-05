@@ -1,0 +1,17 @@
+lonboard/__init__.py,sha256=YB208Hm2TEAQMk3ZOooVgOYLwYy8LCY0IIqu4stXh80,87
+lonboard/colormap.py,sha256=dRq1kTER63HhJTmUN3D4W3BKFlHq9aS9gsdeDgHgdMM,998
+lonboard/geoarrow/__init__.py,sha256=1R50y6dAm9dFwwJjOyxA04QlHjin53Bg1Sqgf-b8pNw,95
+lonboard/geoarrow/extension_types.py,sha256=dQ4WL4ZprxFmO60uI5cgwzteo_9juRIKcsf3KYp1RyI,12789
+lonboard/geoarrow/geopandas_interop.py,sha256=OhVDQHbZcoOEmuLg80nk8MsF03zIi6isU6ZfnmW8sKk,631
+lonboard/layer.py,sha256=1hCmW2XxSpqP9Q0y3chLt372q5kHWCB2L-0vm-FKpig,6138
+lonboard/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lonboard/serialization.py,sha256=dc03GKkmDhQZJ-vK8n7SJC8oQJUGtG_nuwnTKDker-s,2749
+lonboard/static/index.js,sha256=VxQj3iINsKDEhgBF6R1Yd-lg1mBzW460i_kNTG0CGS8,1601330
+lonboard/static/path-layer.js,sha256=hTRMUft_sPLEslW8ThM831MKIlg0W9bybqZ141AoHHY,1586053
+lonboard/static/scatterplot-layer.js,sha256=QIraQVMdEdJiFNom0NFKCKww4sd-ZaS6xvxiqCBmRv4,1575839
+lonboard/static/solid-polygon-layer.js,sha256=dzt93rhXZCxE2z-GZEkvBB5OZQ3FA4jIlgaZh6R3_RU,1602034
+lonboard/viz.py,sha256=nxa3p3PNd28rsmY9bOB5Rfi7ENLz2e2hmMxI0v_xBAQ,933
+lonboard/widget.py,sha256=SfP5JsTweF5obmOMQuykUvrvgq1Wn1NRAmjX_DXgq3c,510
+lonboard-0.1.0b2.dist-info/METADATA,sha256=YI-P4-7MXmEsWgUOFKC8ZxQXcNDy99Zy0wI6kI-kNhU,1312
+lonboard-0.1.0b2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+lonboard-0.1.0b2.dist-info/RECORD,,
