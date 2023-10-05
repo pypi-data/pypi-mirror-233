@@ -1,0 +1,28 @@
+{
+    "entity": {
+        "select": {
+            "remote_config": {
+                "name": "Nuotolin\u0117 konfig\u016bracija"
+            },
+            "white_channel": {
+                "name": "Baltas kanalas"
+            },
+            "wiring": {
+                "name": "Laidai"
+            }
+        },
+        "sensor": {
+            "paired_remotes": {
+                "name": "Suporuoti nuotolinio valdymo pultai"
+            }
+        },
+        "switch": {
+            "music": {
+                "name": "Muzika"
+            },
+            "remote_access": {
+                "name": "Nuotolinis prisijungimas"
+            }
+        }
+    }
+}

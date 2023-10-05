@@ -1,0 +1,24 @@
+{
+    "entity": {
+        "sensor": {
+            "indoor_humidity": {
+                "name": "Vidaus dr\u0117gm\u0117"
+            },
+            "indoor_temperature": {
+                "name": "Vidaus temperat\u016bra"
+            },
+            "next_period_time": {
+                "name": "Kito laikotarpio laikas"
+            },
+            "outdoor_humidity": {
+                "name": "Lauko dr\u0117gm\u0117"
+            },
+            "outdoor_temperature": {
+                "name": "Lauko temperat\u016bra"
+            },
+            "setpoint_status": {
+                "name": "Nustatytos vert\u0117s b\u016bsena"
+            }
+        }
+    }
+}

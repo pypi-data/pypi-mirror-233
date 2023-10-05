@@ -1,0 +1,12 @@
+{
+    "entity": {
+        "number": {
+            "ventilator_min_type_away": {
+                "name": "Ventiliatoriaus min. laikas i\u0161\u0117jus"
+            },
+            "ventilator_min_type_home": {
+                "name": "Ventiliatoriaus min. laikas namuose"
+            }
+        }
+    }
+}
