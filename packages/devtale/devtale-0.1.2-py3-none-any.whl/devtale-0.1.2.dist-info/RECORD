@@ -1,0 +1,16 @@
+devtale/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devtale/aggregators/__init__.py,sha256=IQBl46kFT3iScr3ikvmvKjTbOIWUoUuVJCL6AXhnHZA,231
+devtale/aggregators/go.py,sha256=gLUbmeQdS5LlRoY4x6h9lygy9hNIZjAK4hpvSWxXHOk,3368
+devtale/aggregators/javascript.py,sha256=gQ7WQiRNYe2I-t3kJsaLwoYR-LUdMuhjkgpF0G3mqZc,5603
+devtale/aggregators/php.py,sha256=ObWe4Yy-rGNbjU2C6x81ehvImhMqdFhj5BttvzpYe1I,5420
+devtale/aggregators/python.py,sha256=RqMxulVaCtkmDofz6FbQwLiD5x6TVjeWsuY4zEf1wTE,7131
+devtale/cli.py,sha256=y47DVAPdTFn7BwshUwAYrdjI_bzNUXolsn8Ax9Pk59E,21073
+devtale/constants.py,sha256=iriO08Yhw96u73h78hIcg12ut_iQznomR5usuxsVR4I,670
+devtale/schema.py,sha256=GlWWqPadYDVKa0wZxa7HmuFVb52szchs1mGYFACnEE0,1227
+devtale/templates.py,sha256=9irCDq83IzlOkdkRL32WPcr80xnv3H0htIlc9GbTL5U,4220
+devtale/utils.py,sha256=D-0JRddgWNQRMrf26Ranap96sfg9e2fY1W37CKvqbEI,11138
+devtale-0.1.2.dist-info/LICENSE,sha256=uJBiwaljol01z4RzdBRrVHJoQGOsEsvkw8MZPtYRI4s,1067
+devtale-0.1.2.dist-info/METADATA,sha256=OTc7jsi2nh5kEvmaRpmtWpeIOp-oGSUlt77isYr1Suc,4514
+devtale-0.1.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+devtale-0.1.2.dist-info/entry_points.txt,sha256=H7QxSnLG8T_Jkm-3hlJ3hoUbIeAW4VQKVH52aso_STs,44
+devtale-0.1.2.dist-info/RECORD,,
