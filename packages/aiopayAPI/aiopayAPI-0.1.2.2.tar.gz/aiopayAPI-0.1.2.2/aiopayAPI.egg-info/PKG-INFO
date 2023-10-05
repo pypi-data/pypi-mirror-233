@@ -1,0 +1,218 @@
+Metadata-Version: 2.1
+Name: aiopayAPI
+Version: 0.1.2.2
+Summary: Асинхронный API для работы с платежной системой Payok.io.
+Home-page: https://github.com/xllebbSQ/aiopay
+Author: xllebbSQ
+Author-email: 090504opo@gmail.com
+Project-URL: GitHub, https://github.com/xllebbSQ
+Keywords: python PayOk payok api API ayncio payok api
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+
+<p align="center">
+  <img src="https://ic.wampi.ru/2023/10/04/LOGO.png" alt="Image"/>
+</p>
+
+
+<h1 align='center'><b> aiopayAPI </b>
+<h2 align="center"> Асинхронное API для работы с сайтом Payok.io</h2></h1>
+
+
+![Static Badge](https://img.shields.io/badge/author-xllebbSQ-blue) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aiopayAPI) ![PyPI - Status](https://img.shields.io/pypi/status/aiopayAPI)
+
+ 
+
+## Возможности
+--------
+- Получение баланса
+- Получение транзакций
+- Создание выплат (переводов)
+  - Методы выплат
+- Получение выплат
+- Создание ссылки для оплаты
+- Возможные ошибки
+
+
+# **Функции**
+## Инициализация класса PayOk
+```python
+class PayOk:
+    """
+    Класс для работы с PayOk
+    """
+    def __init__(self, 
+                *data: dict, 
+                json_file: str | None = None):
+```
+>`data:` Параметр в который мы указываем все dict объекты \
+\
+`json_file:` JSON файл в который будут записываться все ответы из запросов
+
+Пример использования:
+```python
+data = {
+    "API_ID": 1111 # Все эти данные берем отсюда: 
+    "API_KEY": "xxxxxxx"
+}
+pay = PayOk(data)
+```
+---
+
+## Получение баланса
+### *Запрашиваемые данные*
+
+<img src="https://ic.wampi.ru/2023/10/04/browser_ibkMt3FSHn.png" at="browser_ibkMt3FSHn.png" border="0" />
+
+Использование
+```python
+
+# Предварительно нужно указать класс pay = PayOk(data=)
+balance = await pay.get_balance()
+
+>>> {"balance":"339.44", "ref_balance":"6063.60"}
+```
+Возвращается `dict` объект с данными.
+
+Пример использования в папке **`examples/get_balance.py`**
+
+---
+## Получение транзакций
+### *Запрашиваемые данные*
+<img src="https://ic.wampi.ru/2023/10/04/browser_vi7nRQKhFU.png" alt="browser_vi7nRQKhFU.png" border="0" />
+
+
+Пример:
+
+```python
+
+trans = await pay.get_transaction()
+
+>>> {"status":"success"
+"1": {
+  "transaction":10000,
+  "email":"example@ex.com",
+  "amount":1065,
+  "currency":USD,
+  "currency_amount":14.26,
+  "comission_percent": 5 ,
+  "comission_fixed":"15",
+  "amount_profit":1000,
+  "method":Visa/Mastercard,
+  "payment_id":10500,
+  "description":Описание транзакции,
+  "date":26.09.2021 20:40:07,
+  "pay_date":26.09.2021 21:00:00
+  "transaction_status":0
+  "custom_fields":null
+  "webhook_status":1
+  "webhook_amount":1
+  }
+}
+```
+
+Пример использования в папке **`examples/get_transaction.py`**
+
+---
+## Получение выплат
+### *Параметры:*
+
+<img src="https://im.wampi.ru/2023/10/04/browser_W7DtQlhnOV.png" alt="browser_W7DtQlhnOV.png" border="0" />
+
+Код:
+```python
+payout = await pay.get_payout()
+
+>>> {
+  "status":"success"
+  "1": {
+  "payout":10000,
+  "method":"card",
+  "reciever":"5000400030002000",
+  "type":main,
+  "amount":1000,
+  "comission_percent": 2 ,
+  "comission_fixed":"50",
+  "amount_profit":930,
+  "date_create":26.09.2021 20:40:07,
+  "date_pay":26.09.2021 20:55:01,
+  "status":0
+  }
+}
+```
+---
+## Создание выплат (переводов)
+### *Запрашиваемые параметры*
+
+<img src="https://i.imgur.com/FDalqyW.png"> 
+
+
+Как использовать:
+
+```python
+payout = pay.create_payout()
+
+>>> {
+  "status":"success",
+  "remain_balance":"229.44",
+  "data": {
+  "payout_id":100,
+  "method":"card",
+  "reciever":"5000400030002000",
+  "amount":1000,
+  "comission_percent": 2 ,
+  "comission_fixed":"50",
+  "amount_profit":930,
+  "date":26.09.2021 20:40:07,
+  "payout_status_code":0,
+  "payout_status_text":"WAIT"
+  }
+}
+```
+Пример использования в папке **`examples/create_payout.py`**
+
+## Методы оплаты (`Method`)
+Используйте эти сокращения в параметре *`method`* в создании выплат
+
+Методы оплаты | Короткие названия | Использование в aiopayAPI
+--- | --- | ---
+Банковская карта | card | Method.card
+Банковская карта (Украина) | card_uah | Method.card_uah
+Банковская карта (Зарубежная) | card_foreign | Method.card_foreign
+Тинькофф | tinkoff | Method.tinkoff
+СБП | sbp | Method.sbp
+Qiwi | qiwi | Method.qiwi
+Yoomoney | yoomoney | Method.yoomoney
+Payeer | payeer | Method.payeer
+Advcash | advcash | Method.advcash
+Perfect Money | perfect_money | Method.perfect_money
+Webmoney | webmoney | Method.webmoney
+Bitcoin | bitcoin | Method.bitcoin
+Litecoin | litecoin | Method.litecoin
+Tether USDT | tether | Method.tether
+Tron | tron | Method.tron
+Dogecoin | dogecoin | Method.dogecoin
+Ethereum | ethereum | Method.ethereum
+Ripple | ripple | Method.ripple
+
+## Генерация ссылки для оплаты
+<img src="https://im.wampi.ru/2023/10/04/browser_P9IK4dYjVJ.png" alt="browser_P9IK4dYjVJ.png" border="0" />
+
+## В таблице не сказано, но одним из важных элементов является `secret` (секретный ключ) 
+![здесь](https://i.imgur.com/RCGqaJ7.png)
+
+Его нужно ОБЯЗЯТАТЕЛЬНО указать (как, см. пример: **`examples/create_payout.py`**) 
+
+Использование:
+```python
+
+link = pay.create_pay_link(dict_number=1) 
+# Поскольку можно указать несколько dict, объектов в классе PayOk, то в параметре dict_number указываем номер переменной `data`.
+# Например, если нужный dict со всеми параметрами во время инициализации класса PayOk(data1, data2) стоит на втором месте (data2), то в функции ставим цифру 2
+
+>>> https://payok.io/pay?amount=15&currency=RUB&payment=123456789&desc=test&shop=6335&method=cd&sign=ec5b7c446ce43d32c0afc79d31cc4686
+```
