@@ -1,0 +1,11 @@
+garm-0.3.3.data/purelib/garm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garm-0.3.3.data/purelib/garm/garm.py,sha256=1JhZo9OHejejfxX53wEYFnvOjgk6bBSRE9aMIyHOB3E,830
+garm-0.3.3.data/purelib/garm/libcgarm.dll,sha256=AvuvG6reZGfVRorKG4lZ7A3AycYI-B3zwTF4l7Aidgs,135168
+garm-0.3.3.data/purelib/garm/libcgarm.so,sha256=4UxdJnN8dfpKtjGemsxamHwmDZPMdpfWtO5gu-1BIYc,15800
+garm-0.3.3.data/purelib/garm/libgarm.dll,sha256=N_kvueMuO4zmfLRfa_JsB4FvkxH-1uVHlRoUIwOMF3c,41410560
+garm-0.3.3.data/purelib/garm/libgarm.so,sha256=YsHRVwrDDTq1scTs05smIF4NWU81iWvHM-aWS9OLllk,42076240
+garm-0.3.3.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+garm-0.3.3.dist-info/METADATA,sha256=RpzivEQOiugMuakEI5VltMGXPxpi-NLn9SBpEliKkok,9810
+garm-0.3.3.dist-info/WHEEL,sha256=badvNS-y9fEq0X-qzdZYvql_JFjI7Xfw-wR8FsjoK0I,102
+garm-0.3.3.dist-info/top_level.txt,sha256=sOcBXlUOWsmeO5KanjblVCd933ru6F0J67D40sAu1O0,5
+garm-0.3.3.dist-info/RECORD,,
