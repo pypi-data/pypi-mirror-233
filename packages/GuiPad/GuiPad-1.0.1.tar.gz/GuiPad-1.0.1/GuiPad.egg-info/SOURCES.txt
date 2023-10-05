@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+GuiPad/GuiPad.py
+GuiPad/__init__.py
+GuiPad.egg-info/PKG-INFO
+GuiPad.egg-info/SOURCES.txt
+GuiPad.egg-info/dependency_links.txt
+GuiPad.egg-info/top_level.txt
