@@ -1,0 +1,33 @@
+[build-system]
+requires = [
+  "setuptools>=58.0",
+  "wheel",
+]
+
+[tool.pytest.ini_options]
+addopts = "--tb=short -ra --color=yes"
+testpaths = [
+  "tests",
+]
+
+[tool.black]
+line-length = 79
+target-version = [
+  "py311",
+]
+extend-exclude = """
+^/src/third_party/
+"""
+
+[tool.isort]
+profile = "black"
+line_length = 79
+extend_skip = [
+  "src/third_party/",
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_return_any = true
+check_untyped_defs = true
