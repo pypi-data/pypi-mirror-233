@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "handpick"
+version = "0.16.0"
+description = "Traverse nested data structures."
+license = "MIT"
+authors = ["Michal Porteš <michalportes1@gmail.com>"]
+readme = "README.rst"
+homepage = "https://github.com/mportesdev/handpick"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7"
+hypothesis = "^6"
+pytest-cov = "^4"
+pytest-randomly = "^3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
