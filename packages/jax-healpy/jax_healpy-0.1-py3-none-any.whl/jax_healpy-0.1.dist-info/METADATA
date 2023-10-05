@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: jax-healpy
+Version: 0.1
+Summary: Healpix JAX implementation.
+Author-email: Pierre Chanial <pierre.chanial@gmail.com>
+Maintainer-email: Pierre Chanial <pierre.chanial@gmail.com>
+Project-URL: homepage, https://pchanial.github.io/jax-healpy
+Project-URL: repository, https://github.com/pchanial/jax-healpy
+Keywords: scientific computing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: jax
+Requires-Dist: jaxtyping
+Provides-Extra: dev
+Requires-Dist: healpy ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: setuptools-scm ; extra == 'dev'
+Requires-Dist: typer ; extra == 'dev'
+Requires-Dist: yaml ; extra == 'dev'
+
