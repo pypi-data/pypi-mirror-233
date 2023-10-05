@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: BalancerPy
+Version: 0.0.1
+Summary: Balancer for Python
+Home-page: http://github.com/icmoore/balancerpy
+Author: icmoore
+Author-email: imoore@syscoin.org
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# balancerpy
+[Python Programming] Python package for Balancer V1 modelling
