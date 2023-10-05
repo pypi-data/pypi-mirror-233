@@ -1,0 +1,6 @@
+attrs
+matplotlib
+numpy
+
+[tascipy]
+scipy
