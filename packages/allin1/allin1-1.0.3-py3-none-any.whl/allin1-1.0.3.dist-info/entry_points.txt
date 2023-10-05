@@ -1,0 +1,2 @@
+[console_scripts]
+allin1 = allin1.cli:main
