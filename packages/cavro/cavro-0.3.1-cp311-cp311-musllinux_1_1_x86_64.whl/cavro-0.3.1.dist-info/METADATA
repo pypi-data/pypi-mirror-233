@@ -1,0 +1,178 @@
+Metadata-Version: 2.1
+Name: cavro
+Version: 0.3.1
+Summary: avro codec implemented with Cython
+Home-page: https://github.com/stestagg/cavro
+Author: Stephen Stagg
+Author-email: Steve Stagg <ste@sta.gg>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.4.0
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: avro <1.11 ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: click ; extra == 'test'
+
+# cavro 
+
+An Avro serializer/deserializer for python written in cython.
+https://stestagg.github.io/cavro/
+
+# Functionality
+
+## Basic
+
+-   [x] Parse Schema json
+-   [x] Non-core attributes
+-   [x] name resolution
+-   [x] namespaced name resolution
+
+## Basic schema support
+
+-   [x] Null
+-   [x] Union array
+-   [x] boolean
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+
+## Value Reading (Binary encoding)
+
+-   [x] Null
+-   [x] bool
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+
+## Value Writing (Binary encoding)
+
+-   [x] Null
+-   [x] bool
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+
+## Value Reading (Json encoding)
+
+-   [x] Null
+-   [x] bool
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+
+## Value Writing (Json encoding)
+
+-   [x] Null
+-   [x] bool
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+
+## Schema Validation
+
+-   [ ] Null
+-   [ ] bool
+-   [ ] int
+-   [ ] long
+-   [ ] float
+-   [ ] double
+-   [ ] bytes
+-   [ ] string
+-   [ ] record
+-   [ ] fixed
+-   [ ] enum
+-   [ ] array
+-   [ ] map
+
+## Canonical form
+
+-   [x] Null
+-   [x] bool
+-   [x] int
+-   [x] long
+-   [x] float
+-   [x] double
+-   [x] bytes
+-   [x] string
+-   [x] record
+-   [x] fixed
+-   [x] enum
+-   [x] array
+-   [x] map
+-   [x] fingerprinting
+-   [x] md5, sha256
+-   [x] rabin
+
+## Container format
+
+-   [x] basic reading
+-   [x] read schema
+-   [x] read objects
+-   [ ] Write container
+-   [x] null schema
+-   [x] deflate support
+-   [x] snappy support
+-   [ ] Improved reader error handling
+-   [ ] Snappy checksum validation
+
+## Logical Types
+
+-   [ ] Decimal
+-   [ ] Date
+-   [ ] Time (millis)
+-   [ ] Time (micros)
+-   [ ] Timestamp (millis)
+-   [ ] Timestamp (micros)
+-   [ ] Duration
+
+## Other
+
+-   [ ] writing array & maps by chunk
