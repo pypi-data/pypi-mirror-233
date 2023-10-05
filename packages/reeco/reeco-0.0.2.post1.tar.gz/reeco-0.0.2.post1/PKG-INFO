@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: reeco
+Version: 0.0.2.post1
+Summary: Python library with utility functions for the REECO Framework.
+Author-email: Enrico Daga <enricodaga@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Project-URL: Home, http://github.com/reeco-framework/reeco-python
+
+
