@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+DataTypeSystem/Examiner.py
+DataTypeSystem/Predicates.py
+DataTypeSystem/TypeClasses.py
+DataTypeSystem/TypeSystem.py
+DataTypeSystem/__init__.py
+DataTypeSystem.egg-info/PKG-INFO
+DataTypeSystem.egg-info/SOURCES.txt
+DataTypeSystem.egg-info/dependency_links.txt
+DataTypeSystem.egg-info/top_level.txt
