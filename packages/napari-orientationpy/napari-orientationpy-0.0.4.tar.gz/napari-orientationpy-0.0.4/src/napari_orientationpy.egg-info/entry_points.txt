@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-orientationpy = napari_orientationpy:napari.yaml
