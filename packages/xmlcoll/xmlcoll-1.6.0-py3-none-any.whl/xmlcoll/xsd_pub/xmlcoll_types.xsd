@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!--////////////////////////////////////////////////////////////////////////////
+//  This file is part of the Clemson Webnucleo group's
+//  xmlcoll module, originally developed by Bradley S. Meyer.
+//  For more information, please see http://www.webnucleo.org.
+//
+//  This is free software; you can redistribute it and/or modify it
+//  under the terms of the GNU General Public License as published by
+//  the Free Software Foundation; either version 2 of the License, or
+//  (at your option) any later version.
+//
+//  This software is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  To obtain a copy of the GNU GPL, write to the Free Software
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+//  USA
+/////////////////////////////////////////////////////////////////////////////-->
+
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xmlcoll_types="https://xmlcoll.sourceforge.net/xsd_pub/2022-09-26/xmlcoll_types/"
+  targetNamespace="https://xmlcoll.sourceforge.net/xsd_pub/2022-09-26/xmlcoll_types/"
+>
+
+<!--############################################################################
+//  define the simple elements
+//###########################################################################-->
+
+  <xsd:simpleType name="possible_names">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-zA-Z]{1,3}[0-9]{1,3}"/>
+      <xsd:pattern value=".{1,}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+ 
+<!--############################################################################
+//  define the complex types
+//###########################################################################-->
+
+  <xsd:complexType name="collection_type">
+    <xsd:all>
+      <xsd:element
+        name="properties"
+        type="xmlcoll_types:properties_type"
+        minOccurs="0"
+      />
+      <xsd:element
+        name="items"
+        type="xmlcoll_types:items_type"
+        minOccurs="0"
+      />
+    </xsd:all>
+  </xsd:complexType>
+
+  <xsd:complexType name="items_type">
+    <xsd:sequence>
+      <xsd:element
+        name="item"
+        type="xmlcoll_types:item_type"
+        minOccurs="0"
+        maxOccurs="unbounded"
+      />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="item_type">
+    <xsd:all>
+      <xsd:element
+        name="name"
+        type="xmlcoll_types:possible_names"
+      />
+      <xsd:element
+        name="properties"
+        type="xmlcoll_types:properties_type"
+        minOccurs="0"
+      />
+    </xsd:all>
+  </xsd:complexType>
+
+  <xsd:complexType name="properties_type">
+    <xsd:sequence>
+      <xsd:element
+        name="property"
+        type="xmlcoll_types:property_type"
+        minOccurs="0"
+        maxOccurs="unbounded"
+      />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="property_type">
+    <xsd:simpleContent>
+      <xsd:extension base="xmlcoll_types:possible_names">
+        <xsd:attribute
+          name="name"
+          type="xmlcoll_types:possible_names"
+          use="required"
+        />
+        <xsd:attribute
+          name="tag1"
+          type="xmlcoll_types:possible_names"
+          use="optional"
+        />
+        <xsd:attribute
+          name="tag2"
+          type="xmlcoll_types:possible_names"
+          use="optional"
+        />
+        <xsd:attribute
+          name="tag3"
+          type="xmlcoll_types:possible_names"
+          use="optional"
+        />
+        <xsd:attribute
+          name="tag4"
+          type="xmlcoll_types:possible_names"
+          use="optional"
+        />
+        <xsd:attribute
+          name="tag5"
+          type="xmlcoll_types:possible_names"
+          use="optional"
+        />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+</xsd:schema>

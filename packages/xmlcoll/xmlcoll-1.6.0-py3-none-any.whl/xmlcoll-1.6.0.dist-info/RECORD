@@ -1,0 +1,12 @@
+xmlcoll/__about__.py,sha256=13mfkDNFAmLo0tF0_u7sHuBcJxGVNMOODI0i_U89nGI,395
+xmlcoll/__init__.py,sha256=hlDVuXLTGM-fL84WGGyAAsG1CkzP3DQbZFKe9w4raok,317
+xmlcoll/base.py,sha256=IopFSd9HUXqFOCxno6A-06ER7EIip4Mokcu19f4R-Fw,1086
+xmlcoll/coll.py,sha256=EWUn9QgS493ItjDS1saionqpmkLFkUFkELeyG2yIalI,8621
+xmlcoll/xsd_pub/catalog,sha256=B-7AioQ-nGYJu26pbudfWRZoQ52MIMBNoBfgJkgElck,334
+xmlcoll/xsd_pub/xmlcoll.xsd,sha256=SVzuhI-x2maajq43pKdC7zZQdZaSwBpLDNnsFylcJEY,1984
+xmlcoll/xsd_pub/xmlcoll_types.xsd,sha256=OjljD7n-313lpbB2g27IVEyc7frC4aKSK0HM8bZ7NaQ,3965
+xmlcoll-1.6.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xmlcoll-1.6.0.dist-info/METADATA,sha256=61bozJaV28lMPRm8WM5dvPH0lhz2VvqGEOIiWRjb-0o,3145
+xmlcoll-1.6.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+xmlcoll-1.6.0.dist-info/top_level.txt,sha256=ku0Drz8rIruBsK8BMSaXCbUKTCVjo75rW0HsV18bFqQ,8
+xmlcoll-1.6.0.dist-info/RECORD,,
