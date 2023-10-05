@@ -1,0 +1,2 @@
+[console_scripts]
+mlpyversioneer = mlpyversioneer.__main__:main
