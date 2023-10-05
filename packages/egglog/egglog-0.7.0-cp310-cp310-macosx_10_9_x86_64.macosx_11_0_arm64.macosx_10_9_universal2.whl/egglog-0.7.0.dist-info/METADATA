@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: egglog
+Version: 0.7.0
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Typing :: Typed
+Requires-Dist: typing-extensions
+Requires-Dist: black
+Requires-Dist: graphviz
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: mypy; extra == 'test'
+Requires-Dist: scikit-learn; extra == 'test'
+Requires-Dist: array_api_compat; extra == 'test'
+Requires-Dist: syrupy; extra == 'test'
+Requires-Dist: pydata-sphinx-theme; extra == 'docs'
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-gallery; extra == 'docs'
+Requires-Dist: nbconvert; extra == 'docs'
+Requires-Dist: scikit-learn; extra == 'docs'
+Requires-Dist: array_api_compat; extra == 'docs'
+Requires-Dist: matplotlib; extra == 'docs'
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: docs
+License-File: LICENSE
+Summary: e-graphs in Python built around the the egglog rust library
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# `egglog` Python wrapper
+
+[![Documentation Status](https://readthedocs.org/projects/egg-smol-python/badge/?version=latest)](https://egg-smol-python.readthedocs.io/en/latest/?badge=latest) [![Test](https://github.com/metadsl/egglog-python/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/metadsl/egglog-python/actions/workflows/CI.yml) [![PyPi Package](https://img.shields.io/pypi/v/egglog.svg)](https://pypi.org/project/egglog/) [![License](https://img.shields.io/pypi/l/egglog.svg)](https://pypi.org/project/egglog/) [![Python Versions](https://img.shields.io/pypi/pyversions/egglog.svg)](https://pypi.org/project/egglog/) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
+`egglog` is a Python package that provides bindings to the Rust library [`egglog`](https://github.com/egraphs-good/egglog/),
+allowing you to use e-graphs in Python for optimization, symbolic computation, and analysis.
+
+Please see the [documentation](https://egg-smol-python.readthedocs.io/en/latest/?badge=latest) for more information.
+
+Come say hello [on the e-graphs Zulip](https://egraphs.zulipchat.com/#narrow/stream/375765-egglog/topic/Python.20bindings) or [open an issue](https://github.com/metadsl/egglog-python/issues/new/choose)!
+
