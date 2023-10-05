@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pythern
+Version: 0.0.4
+Summary: A dependency injection container for python applications
+Home-page: https://github.com/abantos/dichotomy
+Author: Isaac Rodriguez
+Author-email: oss.abantos@outlook.com
+License: MIT
+Keywords: dependency injection container inversion control
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+License-File: LICENSE
+
+
+pythern
+=======
+
+
+.. image:: https://github.com/abantos/pythern/actions/workflows/python-verify-library.yml/badge.svg
+   :target: https://github.com/abantos/pythern/actions/workflows/python-verify-library.yml
+   :alt: Verify Python Library
+
+
+.. image:: https://github.com/abantos/pythern/actions/workflows/python-release-pypi.yml/badge.svg
+   :target: https://github.com/abantos/pythern/actions/workflows/python-release-pypi.yml
+   :alt: Upload Python Package
+
+
+A library of design patterns in Python. Coming Soon!!!
+
+
