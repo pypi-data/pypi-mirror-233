@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: django-po-translate
+Version: 0.13
+Summary: Django app with updated makemessages command to add automatic translation.
+Home-page: https://github.com/KokocGroup/django-po-translate
+Author: KokocGroup
+Author-email: dev@kokoc.com
+License: BSD
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: polib >=1.1.1
+
+===================
+Django-po-translate
+===================
+
+
+Quick start
+-----------
+
+1. Add "po_translate" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...,
+        "po_translate",
+    ]
+2. If you already have a makemessges command defined somewhere in your application, remove your command or specify the po_translate application on top of it like this::
+
+    INSTALLED_APPS = [
+        ...,
+        "po_translate",
+        "app"
+    ]
+
+3. Run the command as usual::
+
+    python manage.py makemessages -l en -d django
+
+If your .po file contains lines without translation, then the translation of the specified locale will be added to them
+
+4.If you do not want translation to be added, run the command with the -no--translate switch::
+
+    python manage.py makemessages -l en -d django --no-translate

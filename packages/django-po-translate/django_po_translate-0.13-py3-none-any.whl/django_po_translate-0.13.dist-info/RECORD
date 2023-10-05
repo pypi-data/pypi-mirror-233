@@ -1,0 +1,15 @@
+po_translate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+po_translate/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+po_translate/apps.py,sha256=1jpH0nZZl3ZdHhtb2FJU7uD_Bm41Rrfg0KyeWO7BTSE,155
+po_translate/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+po_translate/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+po_translate/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+po_translate/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+po_translate/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+po_translate/management/commands/makemessages.py,sha256=y-eP-vrsK3Sel4-iQNkYgkYALoaOaTlYDlPwEXrhI2I,2847
+po_translate/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_po_translate-0.13.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+django_po_translate-0.13.dist-info/METADATA,sha256=W9lX__ormLtpWGQBuYt-W9Ipn5wwTir2LSttb4uZZUw,1632
+django_po_translate-0.13.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_po_translate-0.13.dist-info/top_level.txt,sha256=eZj23amelnres3sR7D9eZ-075zaH1oXflfY7DUqvpyo,13
+django_po_translate-0.13.dist-info/RECORD,,
