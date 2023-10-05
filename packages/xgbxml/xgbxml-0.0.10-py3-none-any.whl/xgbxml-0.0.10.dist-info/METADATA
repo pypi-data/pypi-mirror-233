@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: xgbxml
+Version: 0.0.10
+Summary: lxml parser for gbXML files - create and edit gbXML files with custom Python lxml Element classes
+Home-page: https://github.com/stevenkfirth/xgbxml
+Author: Steven Firth
+Author-email: s.k.firth@lboro.ac.uk
+Project-URL: Documentation, https://xgbxml.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/stevenkfirth/xgbxml
+Project-URL: Bug Tracker, https://github.com/stevenkfirth/xgbxml/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# xgbxml
+lxml parser for gbXML files - create and edit gbXML files with custom python Element classes
+
+Documentation here: https://xgbxml.readthedocs.io/en/latest/
+
+
+
