@@ -1,0 +1,2 @@
+[console_scripts]
+colour-filter = colour_filter.__main__:main
