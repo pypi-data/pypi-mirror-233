@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+plisio/__init__.py
+plisio/plisio_client.py
+plisio/plisio_enums.py
+plisio/plisio_exceptions.py
+plisio/plisio_models.py
+plisio.egg-info/PKG-INFO
+plisio.egg-info/SOURCES.txt
+plisio.egg-info/dependency_links.txt
+plisio.egg-info/requires.txt
+plisio.egg-info/top_level.txt
