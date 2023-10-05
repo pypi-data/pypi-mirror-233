@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: polygons-share-edge
+Version: 1.2
+Summary: CPython extension for checking if two polygons share an edge.
+Home-page: https://github.com/sgaebel/polygon_edges
+Author: Dr. Sebastian M. Gaebel
+Author-email: gaebel.sebastian@gmail.com
+License: MIT
+Keywords: geometry polygon
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+License-File: LICENSE
+
+A CPython extension which checks two polygons
+for any shared edge vector.
