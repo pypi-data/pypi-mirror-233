@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+skself/__init__.py
+skself/test.py
+skself/utils.py
+skself.egg-info/PKG-INFO
+skself.egg-info/SOURCES.txt
+skself.egg-info/dependency_links.txt
+skself.egg-info/requires.txt
+skself.egg-info/top_level.txt
+skself/partial_annotations/__init__.py
+skself/partial_annotations/lazy_model.py
