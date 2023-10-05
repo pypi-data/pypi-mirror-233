@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: firefw
+Version: 0.8.1
+Summary: Frame for IR Runtime
+Author: FireDucks Development Team
+Author-email: fireducks@dtd.jp.nec.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
