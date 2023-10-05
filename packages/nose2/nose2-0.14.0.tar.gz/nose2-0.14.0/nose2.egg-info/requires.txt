@@ -1,0 +1,8 @@
+
+[coverage_plugin]
+coverage
+
+[dev]
+Sphinx
+sphinx-issues
+sphinx_rtd_theme
