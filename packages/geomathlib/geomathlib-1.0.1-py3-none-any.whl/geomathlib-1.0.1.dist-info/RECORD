@@ -1,0 +1,8 @@
+figures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+figures/area_calculator.py,sha256=zRhd9tdC3YPL7Dg1zKv_sLo564zgyWju0OAM_-blaFk,2932
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=3rJ-f1kOrzm-upXp9sMeCnkSpFbuDZbMzlBNkqCUgpk,853
+geomathlib-1.0.1.dist-info/METADATA,sha256=HTk_1xykXJNfn5sajGvZxwU-sGDnfzNAXqXua744xO0,2836
+geomathlib-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+geomathlib-1.0.1.dist-info/top_level.txt,sha256=Mz7FICmJbwV1JccTk1HDVg_GlJNb5_6KzcWUJPclZrU,14
+geomathlib-1.0.1.dist-info/RECORD,,
