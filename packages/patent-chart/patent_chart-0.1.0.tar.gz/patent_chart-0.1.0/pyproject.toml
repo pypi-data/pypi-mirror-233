@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "patent-chart"
+version = "0.1.0"
+description = "Automated invalidity contention charts"
+authors = ["Josh Hedtke"]
+license = "Proprietary"
+readme = "README.md"
+
+exclude = ["experiments.ipynb"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pypdf2 = "^3.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pdfplumber = "^0.10.2"
+jupyter = "^1.0.0"
+tiktoken = "^0.5.1"
+openai = "^0.28.1"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
