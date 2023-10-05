@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pinecone-client-nightly
+Version: 2.2.4
+Summary: Pinecone client and SDK
+Home-page: https://www.pinecone.io
+License: Apache-2.0
+Keywords: Pinecone,vector,database,cloud
+Author: Pinecone Systems, Inc.
+Author-email: support@pinecone.io
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: grpc
+Requires-Dist: dnspython (>=2.0.0)
+Requires-Dist: googleapis-common-protos (>=1.53.0) ; extra == "grpc"
+Requires-Dist: grpc-gateway-protoc-gen-openapiv2 (==0.1.0) ; extra == "grpc"
+Requires-Dist: grpcio (>=1.44.0) ; extra == "grpc"
+Requires-Dist: loguru (==0.5.0)
+Requires-Dist: lz4 (>=3.1.3) ; extra == "grpc"
+Requires-Dist: numpy (>=1.22.0)
+Requires-Dist: protobuf (>=3.20.0,<3.21.0) ; extra == "grpc"
+Requires-Dist: python-dateutil (>=2.5.3)
+Requires-Dist: pyyaml (>=5.4)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: tqdm (>=4.64.1)
+Requires-Dist: typing-extensions (>=3.7.4)
+Requires-Dist: urllib3 (>=1.21.1)
+Project-URL: Documentation, https://pinecone.io/docs
+Description-Content-Type: text/markdown
+
+This is a nightly developer build of the Pinecone Python client. It is not intended for production use.
+
