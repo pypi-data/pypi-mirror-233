@@ -1,0 +1,11 @@
+jomiel_messages/__init__.py,sha256=gX2I7zI12WKSgSqhtHejQij5j7SVi59O7pEseAd6CC0,23
+jomiel_messages/protobuf/v1beta1/media_pb2.py,sha256=ng3aFTcg-6WtAfCZ-CSvNkFGFv8dALyLdPwT_0DFXQU,4066
+jomiel_messages/protobuf/v1beta1/message_pb2.py,sha256=tsEJGs3wQFNCW-C5CnFjZYF0ImZmYjhkhvJKTJJmh0A,2097
+jomiel_messages/protobuf/v1beta1/status_pb2.py,sha256=AdRpH6vTmID7QXvFkDv_mPZNmLXxhdPHjvZlQRVI_lQ,2697
+jomiel_messages-0.2.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jomiel_messages-0.2.1.1.dist-info/METADATA,sha256=-WHGMyyeVjEqnaby0_2RzANrmc-yyeh6C4eHWxNJb08,2791
+jomiel_messages-0.2.1.1.dist-info/NOTICE,sha256=bX8uXgHu5K9o-_morF5zklddkN-Ebx3UIpZuHra7kDg,561
+jomiel_messages-0.2.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+jomiel_messages-0.2.1.1.dist-info/top_level.txt,sha256=CEkQz1Iv3LifeaF7wyvMCBu3lK2DFm_Kuu7-SSbxxmw,16
+jomiel_messages-0.2.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+jomiel_messages-0.2.1.1.dist-info/RECORD,,
