@@ -1,0 +1,2 @@
+[console_scripts]
+youtube-wpm = youtube_wpm.__main__:main

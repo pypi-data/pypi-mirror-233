@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: youtube-wpm
+Version: 0.0.1
+Summary: youtube-wpm is a CLI tool to get a YouTube video's words per minute (WPM).
+Home-page: https://github.com/thombashi/youtube-wpm
+Author: Tsuyoshi Hombashi
+Author-email: tsuyoshi.hombashi@gmail.com
+License: MIT License
+Project-URL: Source, https://github.com/thombashi/youtube-wpm
+Project-URL: Tracker, https://github.com/thombashi/youtube-wpm/issues
+Keywords: Youtube,Transcript,WPM
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Terminals
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: humanreadable<1,>=0.3
+Requires-Dist: loguru<1,>=0.4.1
+Requires-Dist: youtube-transcript-api<1,>=0.5
+Provides-Extra: test
+Requires-Dist: pytest>=6.0.1; extra == "test"
+Requires-Dist: pytest-md-report>=0.4.1; extra == "test"
+
+# **youtube-wpm**
+
+
+## Summary
+
+`youtube-wpm` is a CLI tool to get a YouTube video's words per minute (WPM).
+
+
+## Installation
+
+```
+pip install youtube-wpm
+```
+
+
+## Usage
+
+```
+$ youtube-wpm https://youtu.be/QpBTM0GO6xI
+Total word count: 1373
+Approximate blank time: 1 minutes 47 seconds
+Approximate speaking time: 7 minutes 39 seconds
+Words Per Minute: 179.1
+```
+
+
+## Command help
+
+```
+usage: youtube-wpm [-h] [-V] [--language LANGUAGE] [--initial-wpm INITIAL_WPM] [--debug | --quiet] video_id
+
+A CLI tool to calculate the words per minute (WPM) of a YouTube video.
+
+positional arguments:
+  video_id              Youtube video ID
+
+options:
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
+  --language LANGUAGE   language code of the transcript. defaults to 'en'.
+  --initial-wpm INITIAL_WPM
+                        initial approximate words per minute. defaults to 180.
+  --debug               for debug print.
+  --quiet               suppress execution log messages.
+
+Issue tracker: https://github.com/thombashi/youtube-wpm/issues
+```
+
+
+## Dependencies
+- Python 3.8+
