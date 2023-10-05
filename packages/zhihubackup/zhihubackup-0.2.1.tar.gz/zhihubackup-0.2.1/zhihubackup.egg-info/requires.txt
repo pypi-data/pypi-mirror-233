@@ -1,0 +1,9 @@
+requests
+tqdm
+
+[node]
+nodejs-wheel
+
+[test]
+pytest
+pytest-cov

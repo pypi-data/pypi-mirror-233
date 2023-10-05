@@ -1,0 +1,2 @@
+[console_scripts]
+zhihubackup = zhihubackup.cli:main
