@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: doublesided
+Version: 0.0.1
+Summary: This library make printable flashcard.
+Project-URL: Homepage, https://github.com/dataset-sh/templatex
+Project-URL: Bug Tracker, https://github.com/dataset-sh/templatex/issues
+Author-email: Hao Wu <haowu@dataset.sh>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: pillow~=9.5.0
+Requires-Dist: reportlab~=4.0.0
+Description-Content-Type: text/markdown
+
+# DoubleSided
+
+This library make printable flashcard.
+
+See `/example/example_deck.py` for usage.
+
+This is an experimental package, and are not thoroughly tested, please use at your own risk.

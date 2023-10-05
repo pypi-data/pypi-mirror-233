@@ -1,0 +1,10 @@
+doublesided/__init__.py,sha256=VmU_X0qf8ZOMyxR5qRjDh14zDixnizHDrcUvmPj_iLw,112
+doublesided/card.py,sha256=gtFKpwx5loqIZ1A9LU2SoxAktSdWyS7ovDUH31WwCoo,6732
+doublesided/font.py,sha256=zoJ0FoFAt7oG6DFiOMawoI9LOm-snCJnmvUPlV3xsUE,2360
+doublesided/image.py,sha256=Qj3Po2qeBl5wHcBTp2_eox20QfcW0JWU67QhE7jXcsc,1760
+doublesided/layout.py,sha256=cXFDn3RsdNCFvlWRT2_MVElhB0HDVNlTbHChUrXYUF4,2627
+doublesided/paper.py,sha256=OOtUp-3n7lZWX3C3FE4zH6_GlNkvyJmxCXHDg3egohE,541
+doublesided-0.0.1.dist-info/METADATA,sha256=BPQWo36ctPdtFeBA1dVnA2KJ-grSYCUaunPhF6hwe3U,640
+doublesided-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+doublesided-0.0.1.dist-info/licenses/LICENSE,sha256=sjgVBBb12PftavJK-tROLp5LEbVa9_lb67NNIcdve28,1055
+doublesided-0.0.1.dist-info/RECORD,,
