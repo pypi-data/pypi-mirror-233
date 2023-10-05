@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: curated-transformers-addons
+Version: 2.0.0.dev0
+Summary: Add-ons for curated transformers
+Home-page: https://github.com/explosion/curated-transformers-addons
+Author: Explosion
+Author-email: contact@explosion.ai
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
