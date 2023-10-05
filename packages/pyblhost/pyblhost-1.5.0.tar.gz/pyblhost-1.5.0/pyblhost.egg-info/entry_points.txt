@@ -1,0 +1,2 @@
+[console_scripts]
+pyblhost = pyblhost.pyblhost:cli
