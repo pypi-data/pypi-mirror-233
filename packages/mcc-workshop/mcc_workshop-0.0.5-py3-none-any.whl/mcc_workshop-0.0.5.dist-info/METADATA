@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mcc-workshop
+Version: 0.0.5
+Requires-Dist: python-telegram-bot ==20.5
+Requires-Dist: python-dotenv ==1.0.0
+Requires-Dist: openai ==0.27.6
+
