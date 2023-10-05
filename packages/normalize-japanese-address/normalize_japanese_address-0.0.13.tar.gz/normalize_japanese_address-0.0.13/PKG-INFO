@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: normalize_japanese_address
+Version: 0.0.13
+Summary: To standardize Japanese addresses by separating them into sets of prefecture, city, town, and additional details
+Home-page: https://github.com/fanannan/normalize-japanese-address
+License: MIT
+Author: SAWADA takahiro
+Author-email: saw@computer.org
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: kanjize (>=1.0.0,<2.0.0)
+Requires-Dist: mojimoji (>=0.0.12,<0.0.13)
+Requires-Dist: neologdn (>=0.5.1,<0.6.0)
+Requires-Dist: nose (>=1.3.7,<2.0.0)
+Requires-Dist: orjson (>=3.5.3,<4.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://github.com/fanannan/normalize-japanese-address
+Description-Content-Type: text/markdown
+
+
+This is to standardize Japanese addresses by separating them into sets of prefecture, city, town, and additional details, based on Geolonia's TypeScript library (https://github.com/geolonia/normalize-japanese-addresses). 
+It is 
+currently still in the early stage and does not behave exactly the same as Geolonia's original library (fails 
+in 7.1% of tests). 
+
+Geolonia様のオープンソースの住所正規化ライブラリ( https://github.com/geolonia/normalize-japanese-addresses )をPythonに移植したものです。
+現在まだ試作段階であり、Geolonia様のもとのライブラリと完全に同じ動作にはなっていません（テストのうち7.1%で失敗）。
+
+## インストール方法
+
+- Windows環境の場合は、インストールの前に環境変数を設定してください
+```
+set PYTHONUTF8=1
+```
+
+```
+pip install --upgrade normalize_japanese_address
+```
+
+## 使い方
+
+```python
+from normalize_japanese_address.normalize import normalize
+
+result = normalize('大阪府堺市北区新金岡町4丁1−8')
+print(result)
+```
+
+とすると、resultに
+```python
+{'pref': '大阪府', 'city': '堺市北区', 'town': '新金岡町四丁', 'address': '1-8', 'level': 3, 'lat': 34.568184,  'long': 135.519409}
+```
+を返します。levelは、住所文字列のどこまでを判別できたかを以下の数値で示しています。
+
+* `0` - 都道府県も判別できなかった。
+* `1` - 都道府県まで判別できた。
+* `2` - 市区町村まで判別できた。
+* `3` - 町丁目まで判別できた。
+
+## ライブラリの名称
+- normalize-japanese-addressesではなく、normalize_japanese_address という名称になっています。ハイフンがアンダーバーになっているほか、addressが単数になっているのに深い意味はありません。
+
+
+## メンテナンス
+- https://github.com/geolonia/japanese-addresses/tree/develop/api が更新された場合、それに対応している japanese_address/api 以下を新しいものに差し替えれることで更新できます。
+
+## ライセンス、利用規約
+- 本プログラムは、下記のプログラムをもとに開発されています。住所データのライセンスは CC BY 4.0、それ以外はMITとされており、本プログラムもそれに従います。
+
+https://github.com/geolonia/normalize-japanese-addresses
+https://github.com/geolonia/japanese-addresses
+
