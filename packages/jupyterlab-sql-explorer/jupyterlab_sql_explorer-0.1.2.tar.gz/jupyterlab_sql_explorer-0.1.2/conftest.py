@@ -1,0 +1,11 @@
+import pytest
+
+pytest_plugins = ("pytest_jupyter.jupyter_server", )
+
+
+@pytest.fixture
+def jp_server_config(jp_server_config):
+    return {
+        "ServerApp": {"jpserver_extensions": {"jupyterlab_sql_explorer": True}},
+        # "JupyterLabSqlExplorer": {"comments_store": 'database::mysql+pymysql://root:12345@192.168.1.100:3306/data'},
+    }
