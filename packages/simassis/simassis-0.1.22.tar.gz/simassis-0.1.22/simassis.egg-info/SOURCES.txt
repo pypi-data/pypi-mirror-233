@@ -1,0 +1,9 @@
+setup.py
+simassis/__init__.py
+simassis/files.py
+simassis/general.py
+simassis.egg-info/PKG-INFO
+simassis.egg-info/SOURCES.txt
+simassis.egg-info/dependency_links.txt
+simassis.egg-info/requires.txt
+simassis.egg-info/top_level.txt
