@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pltgui
+Version: 0.26
+Summary: A GUI with matplotlib, can use on all OS.
+Home-page: https://gitee.com/drjiezheng/pltgui
+Author: Dr Jie Zheng
+Author-email: jiezheng@nao.cas.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires: numpy
+Requires: matplotlib
+Description-Content-Type: text/markdown
+
+# pltgui
+
+> Author: Dr Jie Zheng & Dr Lin-qiao Jiang
+> v0.1 2022
+> v0.2 2023R
+
+## Introduction
+
+Working with a GUI, or adding interaction in plotting, will help a lot in data analysis.
+However, the common GUI of Python is OS-dependent, 
+while manually adding interactive codes is too complex. 
+A pseudo-GUI tool is introduced in this work. 
+It will help to add buttons/checkers in the graph and assign callback functions to them.
+The remaining problem is that the documents in this package are in Chinese and will be in English in the next version.
+This program is published to the PyPI, and can be installed by 'pip install pltgui'.
+
+This package provides a button class and a button controller  nager class.
+A button will be drawn on a specified position with a specified size, text and color.
+A callback function as the click event handler can be bind to the button.
+The button controller will help to adjust the axes, and control the message loop,
+call the event handler when the button is clicked.
+
+Since we are using the native matplotlib plotting, it is OS-independent.
+Programs using this package has same behaviour on macOS, Linux, and Windows.
+
+一个用matplotlib画按钮到图形界面，用于在科学图像绘制之外额外增加互动操作功能。
+目前很简单，只提供了按钮，以及按钮的颜色等（可以当复选框用）。
+
+由于使用matplotlib，而不是专门的图形界面，因此可以在任何具有交互能力的操作系统上使用，
+经过实测，在macOS，Linux，Windows上均可以很好地实现互动操作。
+
+## Sample 范例
+
+See `sample.py` and `sample-calc.py`.
+
+见 `sample.py` 与 `sample-calc.py`。
+
