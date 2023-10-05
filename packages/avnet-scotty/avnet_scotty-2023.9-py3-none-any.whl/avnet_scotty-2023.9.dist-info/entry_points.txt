@@ -1,0 +1,3 @@
+[console_scripts]
+bumper = bumper.__main__:main
+scotty-test = scotty_test.__main__:main

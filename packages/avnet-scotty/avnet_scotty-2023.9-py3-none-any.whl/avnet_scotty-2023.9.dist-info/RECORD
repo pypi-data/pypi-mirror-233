@@ -1,0 +1,13 @@
+avnet_scotty-2023.9.data/scripts/scotty,sha256=NOiebi-XcUS4KMnUQR-mXngJ4TVla0y-LQMErUEZ_PY,6730
+avnet_scotty-2023.9.data/scripts/scotty-runqemu,sha256=nAD3oCWvoMsRR6DWA4KuNd-2G5KQhZcZc5mkaOWhQ2o,2368
+avnet_scotty-2023.9.data/scripts/vm_bundle.sh,sha256=NIl6blDnRHj3L429pJV9ioloylMvR6NAvDw1-31bHPc,811
+avnet_scotty-2023.9.data/scripts/vm_create.sh.template,sha256=DDUC5EgrbniDwnQ7Vjv7xXzbTWKI3lbRLFs3r2IHzK0,1137
+bumper/__init__.py,sha256=xxfJc4uecUUtO9QxLLOoU2D3IGQpn4rZA104D_zGRUE,110
+bumper/__main__.py,sha256=qIMMeA8yzRgB8rf03lAamJryo6n0tFUuvshcQZ-NsCY,4006
+scotty_test/__main__.py,sha256=izz1e8aVzBuv0jE-jecB6qYK-BoInp7foqBaau9TCUs,4424
+avnet_scotty-2023.9.dist-info/LICENSE,sha256=FMH7tTD6Urp-4k81nujS8IJYymYIZdsTnDhsAggkn9w,32879
+avnet_scotty-2023.9.dist-info/METADATA,sha256=oCECM6NeZXtev-ajqHsnA3v1dveL-XsDacojfVAKZ4Q,20427
+avnet_scotty-2023.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+avnet_scotty-2023.9.dist-info/entry_points.txt,sha256=V7rY6YQge3m98t1nH3HzvTA9f6XKc35AZjw1PyG7CkQ,88
+avnet_scotty-2023.9.dist-info/top_level.txt,sha256=M6Y9FG7Qva5hi5wJLHi9nOKHZYJ8Bf8g1LlrfwPpOUw,19
+avnet_scotty-2023.9.dist-info/RECORD,,
