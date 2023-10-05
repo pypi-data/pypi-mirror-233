@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ubicquia
+Version: 0.8.4
+Summary: Ubicquia API Client Library
+Author: CiberC Dev
+License: GPLv3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests >=2.28
+Requires-Dist: requests-oauthlib
+Requires-Dist: pydantic >=1.9
+
+# Ubicquia API client
+
+SDK for Ubicquia that expose a light client to platform.
+
+## Use
+
+```python
+from ubicquia import UbicquiaSession, Ubicquia,
+
+session = UbicquiaSession(..., )
+ubicquia = Ubicquia(session)
+```
+
+## Changes
+
+[v082] Change behavor for expired token
+
+[v080] Implement report kilowatt_hour
+
+[v070] Start adding support for breaking changes Pydantic V2 migrations
+
+[v031] Breaking changes
+
+- Oauth2 session client updated to grant type: client_credentials
+- Add enviroment LOG_LEVEL optional
+
+[v020] Remove python-decouple dependency
+
+[v014] New reports (energy usage and energy usage chart)
+
+[v012] Add node method current_node_state
