@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "yapomo"
+version = "1.0.19"
+authors = [
+    {name = "João Dias", email = "joao.alberto.ferreira.dias@gmail.com"},
+]
+description = "yapomo - Yet Another Pomodoro Timer"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Scheduling",
+]
+keywords = [ "pomodoro", "timer", "tkinter" ]
+
+[project.gui-scripts]
+yapomo = "yapomo.yapomo:main"
