@@ -1,0 +1,144 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad",
+            "no_plants": "Inga v\u00e4xter har hittats p\u00e5 detta konto"
+        },
+        "error": {
+            "invalid_auth": "Ogiltig autentisering"
+        },
+        "step": {
+            "plant": {
+                "data": {
+                    "plant_id": "Anl\u00e4ggning"
+                },
+                "title": "V\u00e4lj din anl\u00e4ggning"
+            },
+            "user": {
+                "data": {
+                    "name": "Namn",
+                    "password": "L\u00f6senord",
+                    "url": "URL",
+                    "username": "Anv\u00e4ndarnamn"
+                },
+                "title": "Ange din Growatt-information"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "inverter_reactive_voltage": {
+                "name": "Reaktiv sp\u00e4nning"
+            },
+            "mix_battery_voltage": {
+                "name": "Batterisp\u00e4nning"
+            },
+            "mix_export_to_grid": {
+                "name": "Export till eln\u00e4tet"
+            },
+            "mix_export_to_grid_lifetime": {
+                "name": "Total export till eln\u00e4tet"
+            },
+            "mix_export_to_grid_today": {
+                "name": "Export till eln\u00e4tet idag"
+            },
+            "mix_grid_voltage": {
+                "name": "N\u00e4tsp\u00e4nning"
+            },
+            "mix_import_from_grid": {
+                "name": "Import fr\u00e5n eln\u00e4tet"
+            },
+            "mix_last_update": {
+                "name": "Senaste datauppdatering"
+            },
+            "mix_pv1_voltage": {
+                "name": "PV1 sp\u00e4nning"
+            },
+            "mix_pv2_voltage": {
+                "name": "PV2 sp\u00e4nning"
+            },
+            "mix_self_consumption_today": {
+                "name": "Egenf\u00f6rbrukning idag (sol + batteri)"
+            },
+            "mix_solar_generation_lifetime": {
+                "name": "Total solenergiproduktion"
+            },
+            "mix_solar_generation_today": {
+                "name": "Solproduktion idag"
+            },
+            "mix_system_production_today": {
+                "name": "Systemproduktion idag (egenkonsumtion + export)"
+            },
+            "mix_wattage_pv_1": {
+                "name": "PV1 Watt"
+            },
+            "mix_wattage_pv_2": {
+                "name": "PV2 Watt"
+            },
+            "storage_ac_input_frequency_out": {
+                "name": "AC ing\u00e5ngsfrekvens"
+            },
+            "storage_ac_output_frequency": {
+                "name": "Ac utg\u00e5ngsfrekvens"
+            },
+            "storage_battery_percentage": {
+                "name": "Batteriniv\u00e5"
+            },
+            "storage_battery_voltage": {
+                "name": "Batterisp\u00e4nning"
+            },
+            "storage_charge_today": {
+                "name": "Laddat idag"
+            },
+            "storage_grid_voltage": {
+                "name": "AC Insp\u00e4nning"
+            },
+            "storage_import_from_grid": {
+                "name": "Import fr\u00e5n eln\u00e4tet"
+            },
+            "storage_import_from_grid_today": {
+                "name": "Import fr\u00e5n eln\u00e4tet idag"
+            },
+            "storage_import_from_grid_total": {
+                "name": "Import fr\u00e5n eln\u00e4tet totalt"
+            },
+            "storage_output_voltage": {
+                "name": "Utsp\u00e4nning"
+            },
+            "storage_solar_production": {
+                "name": "Solcellsproduktion"
+            },
+            "tlx_export_to_grid_today": {
+                "name": "Export till eln\u00e4tet idag"
+            },
+            "tlx_export_to_grid_total": {
+                "name": "Total export till eln\u00e4tet"
+            },
+            "tlx_reactive_voltage": {
+                "name": "Reaktiv sp\u00e4nning"
+            },
+            "tlx_temperature_1": {
+                "name": "Temperatur 1"
+            },
+            "tlx_temperature_2": {
+                "name": "Temperatur 2"
+            },
+            "tlx_temperature_3": {
+                "name": "Temperatur 3"
+            },
+            "tlx_temperature_4": {
+                "name": "Temperatur 4"
+            },
+            "tlx_temperature_5": {
+                "name": "Temperatur 5"
+            },
+            "tlx_voltage_input_4": {
+                "name": "Ing\u00e5ng 4 sp\u00e4nning"
+            },
+            "tlx_wattage_input_4": {
+                "name": "Ing\u00e5ng 4 Watt"
+            }
+        }
+    },
+    "title": "Growatt-server"
+}

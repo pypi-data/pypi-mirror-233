@@ -1,0 +1,19 @@
+{
+    "entity": {
+        "button": {
+            "dismiss_alert": {
+                "name": "Atmesti \u012fsp\u0117jim\u0105"
+            }
+        },
+        "camera": {
+            "cleaning_map": {
+                "name": "Valymo \u017eem\u0117lapis"
+            }
+        },
+        "switch": {
+            "schedule": {
+                "name": "Tvarkara\u0161tis"
+            }
+        }
+    }
+}
