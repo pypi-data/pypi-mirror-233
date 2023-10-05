@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+j40_model/__init__.py
+j40_model/aux_functions.py
+j40_model/community_case.py
+j40_model/interventions.py
+j40_model/nomenclature.py
+j40_model/optimization_model.py
+j40_model/simulation_heuristic.py
+j40model.egg-info/PKG-INFO
+j40model.egg-info/SOURCES.txt
+j40model.egg-info/dependency_links.txt
+j40model.egg-info/requires.txt
+j40model.egg-info/top_level.txt
