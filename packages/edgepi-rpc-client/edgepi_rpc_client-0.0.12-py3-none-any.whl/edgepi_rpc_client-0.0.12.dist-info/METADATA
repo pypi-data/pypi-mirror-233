@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: edgepi-rpc-client
+Version: 0.0.12
+Summary: Client for EdgePi RPC Server
+Author: Josiah Kievit, Isaac James
+Author-email: jkievit@osensa.com, ijames@osensa.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: protobuf >=3.20.3
+Requires-Dist: edgepi-rpc-protobuf >=1.0.15
+Requires-Dist: pyzmq >=25.1.0
+Requires-Dist: edgepi-python-sdk >=1.2.13
+
+# edgepi-rpc-client-py
+EdgePi RPC Client Python
