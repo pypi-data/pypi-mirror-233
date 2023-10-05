@@ -1,0 +1,47 @@
+site_name: jaxqualin
+site_url: "https://mhycheung.github.io/jaxqualin/"
+
+theme: mkdocs    # This theme is mandatory for now, see below
+
+nav:
+  - Home: index.md
+  - Examples:
+    - Fitting the ringdown: notebooks/fit_testing.ipynb
+    - Mode search: notebooks/mode_selection_testing.ipynb
+    - Loading hyperfits and interpolators: notebooks/hyperfit_load.ipynb
+  - Results: 
+    - 2,2,0: mode_md/2.2.0.md
+    - 2,2,1: mode_md/2.2.1.md
+    - 2,1,0: mode_md/2.1.0.md
+    - 2,1,1: mode_md/2.1.1.md
+    - 3,3,0: mode_md/3.3.0.md
+    - 3,3,1: mode_md/3.3.1.md
+    - 3,2,0: mode_md/3.2.0.md
+    - 4,4,0: mode_md/4.4.0.md
+    - 5,5,0: mode_md/5.5.0.md
+    - r2,2,0: mode_md/-2.2.0.md
+    - r2,1,0: mode_md/-2.1.0.md
+  - Data: data.md
+  - API: references.md
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      ignore_h1_titles: True
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_submodules: true
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - docs/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
