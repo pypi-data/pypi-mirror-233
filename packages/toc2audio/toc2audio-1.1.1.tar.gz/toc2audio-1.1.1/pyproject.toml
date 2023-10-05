@@ -1,0 +1,34 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "toc2audio"
+authors = [
+    {name = "Jesús Cea Avión", email = "jcea@jcea.es"},
+]
+readme = "docs/readme.rst"
+requires-python = ">=3.7"
+dependencies = [
+    "mutagen",
+    "markdown",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Topic :: Multimedia :: Sound/Audio :: Editors",
+]
+license = {file = "LICENSE.txt"}
+
+dynamic = ["version", "description"]
+
+[project.urls]
+# We can use any name here, and these will be links in the PyPI project page
+Homepage = "https://docs.jcea.es/toc2audio/"
+Repository = "https://hg.jcea.es/toc2audio/"
+Changelog = "https://docs.jcea.es/toc2audio/changelog.html"
+Documentation = "https://docs.jcea.es/toc2audio/"
+ToDo = "https://docs.jcea.es/toc2audio/todo.html"
+
+[project.scripts]
+toc2audio = "toc2audio:main"
