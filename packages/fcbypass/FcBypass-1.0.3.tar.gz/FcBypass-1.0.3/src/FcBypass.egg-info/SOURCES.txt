@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/FcBypass/__init__.py
+src/FcBypass.egg-info/PKG-INFO
+src/FcBypass.egg-info/SOURCES.txt
+src/FcBypass.egg-info/dependency_links.txt
+src/FcBypass.egg-info/top_level.txt
+src/fcbypass/__init__.py
+src/fcbypass/bypass.py
