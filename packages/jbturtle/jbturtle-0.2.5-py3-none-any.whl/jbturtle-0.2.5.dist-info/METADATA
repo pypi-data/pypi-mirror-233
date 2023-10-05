@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: jbturtle
+Version: 0.2.5
+Summary: Simple turtle system for JupyterLab
+Home-page: https://github.com/fiseki/jupyterlab-jbturtle
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Fumi.Iseki
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USEQ
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Download-URL: https://github.com/fiseki/jupyterlab-jbturtle.git
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+
+# jupyterlab-jbturtle
+Simple turtle module for JupyterLab
+
+## JBTurtle
+* This module uses **Pillow**
+* Attention: Almost impractical with FireFox because of FOUC. **Do not use with FireFox.**
+
+## Install
+```
+pip install Pillow
+pip install jbturtle
+``` 
+## Sample
+```
+from jbturtle import *
+
+turtle = JBTurtle(640, 400)
+nn = 0
+for count in range(100):
+  turtle.line_hsv(nn, 1, 1)
+  turtle.forward(100)
+  turtle.turn_right(85)
+  nn += 5
+```
+## Functions
+* JBTurtle(xs, ys)
+  * Constructor
+  * xs: x-size of workspace
+  * ys: y-size of workspace
+* init(xs, ys)
+  * Initialization
+  * xs: x-size of workspace
+  * ys: y-size of workspace
+* forward(dst)
+* turn_right(angle)
+* turn_left(angle)
+* move(x, y)
+* pen_up()
+* pen_down()       
+* speed(spd)
+* line_width(lw)
+* line_color((r, g, b))
+* line_rgb(r, g, b)
+* line_hsv(h, s, v)
+
+
