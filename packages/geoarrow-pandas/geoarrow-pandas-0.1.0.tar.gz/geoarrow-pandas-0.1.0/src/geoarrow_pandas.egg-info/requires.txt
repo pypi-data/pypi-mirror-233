@@ -1,0 +1,8 @@
+geoarrow-c
+pandas
+pyarrow
+
+[test]
+pytest
+numpy
+geopandas
