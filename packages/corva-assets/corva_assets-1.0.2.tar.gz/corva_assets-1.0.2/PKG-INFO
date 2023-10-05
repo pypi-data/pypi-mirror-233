@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: corva_assets
+Version: 1.0.2
+Summary: Corva Assets API Client
+Home-page: 
+Author: Tung Nguyen
+Author-email: tungnq@gmail.com
+Keywords: OpenAPI,OpenAPI-Generator,Corva Assets API
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic<2,>=1.10.5
+Requires-Dist: aenum
+
+    The Corva API is a powerful interface providing great flexibility and extensibility with Corva. Whether your needs are simple UI visualizations, data entry, replication/sync tasks, real-time stream processing, or complex machine learning CPU-intensive apps, the Corva API is the way to make it happen. Our concepts are split into three distinct silos: data apps, visualization apps, and a REST API
+    
