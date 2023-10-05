@@ -1,0 +1,11 @@
+---
+- name: Run anonkneti to get hash for "{{ item.ip }}"
+  ansible.builtin.command: /opt/nfast/bin/anonkneti "{{ item.ip }}"
+  register: anonkneti
+
+- name: Output of anonkneti
+  ansible.builtin.debug:
+    var: anonkneti.stdout_lines
+
+- name: Enroll client to HSM "{{ item.ip }}"
+  ansible.builtin.command: /opt/nfast/bin/nethsmenroll --force {{ item.ip }} {{ anonkneti.stdout_lines[0] }}

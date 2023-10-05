@@ -1,0 +1,16 @@
+---
+- name: Allow using legacy variables for backwards compatibility
+  ansible.builtin.set_fact:
+    nshield_hsms:
+      - name: Legacy variables HSM
+        ip: "{{ thales_hsm_ip_address }}"
+  when: nshield_hsms is not defined and thales_hsm_ip_address is defined
+  notify: Legacy vars warning
+
+- name: Include RFS tasks
+  ansible.builtin.include_tasks: rfs.yaml
+  when: thales_configure_rfs
+
+- name: Include client installation tasks
+  ansible.builtin.include_tasks: client.yaml
+  when: thales_install_client
