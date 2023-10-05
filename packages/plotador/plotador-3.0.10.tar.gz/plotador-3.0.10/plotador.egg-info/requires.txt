@@ -1,0 +1,7 @@
+numpy
+pandas
+cfinterface>=1.5.2
+isddp
+inewave
+pyarrow
+plotly
