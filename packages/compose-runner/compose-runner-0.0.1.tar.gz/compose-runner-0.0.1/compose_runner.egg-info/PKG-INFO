@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: compose-runner
+Version: 0.0.1
+Summary: A package for running neurosynth-compose analyses
+Home-page: https://github.com/neurostuff/nsc-runner
+Author: James Kent
+Author-email: jamesdkent21@gmail.com
+License: BSD 3-Clause License
+Keywords: neurosynth-compose,neurosynth,neuroimaging,meta-analysis
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: nimare==0.2.0rc3
+Requires-Dist: click
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-recording; extra == "tests"
+Requires-Dist: vcrpy; extra == "tests"
+
+# nsc-runner
