@@ -1,0 +1,17 @@
+salesgpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+salesgpt/agents.py,sha256=P0Nl6a5pkW47nRfY03HzlelD04zYZ3A7FcJCAOfv5QI,14033
+salesgpt/chains.py,sha256=-CwFNaPCuaFj_3lQjdQRGFM47rT2eMM1l-qMdfmd55s,2553
+salesgpt/logger.py,sha256=0xTCAU4-jA6m-6P_Gjrm2iL9Sf1w8lOmVukuNZUEOWI,1119
+salesgpt/parsers.py,sha256=CcfPmKo6mrxbxi2nYjiJJtdrON64uoB_U4vXTBGV3D8,1544
+salesgpt/prompts.py,sha256=e3BSvDo0UJXYxRXXL3EZ5cpjSdHgj4VEF5EP7H_XH_w,7420
+salesgpt/prompts_cn.py,sha256=BI3BPhzyAulU-Rl_-eMEZCrUpi58TsQsIKITGGecXIY,5560
+salesgpt/salesgptapi.py,sha256=YVqKDsWVaQ74jO_WTTBcrcMVy1gJ91urpBjEB0QLkxM,2501
+salesgpt/stages.py,sha256=cuDd078jgbV_fw8ez6aO38-ATEcHdfzakE5ZCqWX2gw,1606
+salesgpt/templates.py,sha256=CzwJtrCJ2Xeg82_G6UzEac88zqtO9kX2kSHjwTtRrmM,1254
+salesgpt/tools.py,sha256=NqrZugbPZi-Vd5Pp4AJ35WPj3dGPpiUifUANQbFK9fA,1300
+salesgpt/version.py,sha256=KDd70lydTa1RITOCXsQ617yyg-vndBIQVVncn8q9qmA,50
+salesgpt-0.0.8.dist-info/LICENSE,sha256=j4wL18FxN6y15wa3btW-Wf-7dNXCYb-GA4NjtdD4cOc,1071
+salesgpt-0.0.8.dist-info/METADATA,sha256=oaRRt8sm1bSyPRPyXjRWzXPQYfeqf8wgxWiEErGQpnQ,11023
+salesgpt-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+salesgpt-0.0.8.dist-info/top_level.txt,sha256=fj2ZcQJXKxAQV9AjayWvxOo32FsQHOs5zwv4va7lGCI,9
+salesgpt-0.0.8.dist-info/RECORD,,
