@@ -1,0 +1,6 @@
+README.md
+setup.py
+whoot.egg-info/PKG-INFO
+whoot.egg-info/SOURCES.txt
+whoot.egg-info/dependency_links.txt
+whoot.egg-info/top_level.txt

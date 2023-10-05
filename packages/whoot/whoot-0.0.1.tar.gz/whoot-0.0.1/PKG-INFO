@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: whoot
+Version: 0.0.1
+Summary: Tools for analyzing, capturing, and parsing audio data
+Home-page: https://github.com/conservationtechlab/whoot
+Author: Katie Garwood
+Author-email: kgarwood@sdzwa.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+whoot
