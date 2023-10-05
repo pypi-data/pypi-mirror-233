@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: strawberry-django-extras
+Version: 0.1.0
+Summary: Strawberry GraphQL Django Extras
+Home-page: https://github.com/m4riok/strawberry-django-extras
+License: MIT
+Keywords: graphql,api,django,strawberry-graphql
+Author: Giorgos Gernas
+Author-email: m4riok@gmail.com
+Maintainer: Giorgos Gernas
+Maintainer-email: m4riok@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=4.0)
+Requires-Dist: PyJWT (>=2.1.0)
+Requires-Dist: cryptography (>=38.0)
+Requires-Dist: graphql-core (>=3.1.5)
+Requires-Dist: makefun (>=1.15.1)
+Requires-Dist: strawberry-graphql (>=0.209.4)
+Requires-Dist: strawberry-graphql-django (>=0.20.0)
+Project-URL: Repository, https://github.com/m4riok/strawberry-django-extras
+Description-Content-Type: text/markdown
+
+# strawberry-django-extras
+Nested Mutations / Input Validation / Permissions on Inputs / Pre - Post Hooks for Mutations and JWT mutations for Strawberry and Django
+
