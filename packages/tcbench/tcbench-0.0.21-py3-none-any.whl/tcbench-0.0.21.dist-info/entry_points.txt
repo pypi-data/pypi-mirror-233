@@ -1,0 +1,2 @@
+[console_scripts]
+tcbench = tcbench.cli.main:main

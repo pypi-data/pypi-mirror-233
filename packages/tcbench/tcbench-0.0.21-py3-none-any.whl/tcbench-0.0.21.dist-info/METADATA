@@ -1,0 +1,153 @@
+Metadata-Version: 2.1
+Name: tcbench
+Version: 0.0.21
+Summary: A ML/DL framework for Traffic Classification
+Author-email: Alessandro Finamore <alessandro.finamore@huawei.com>
+License: MIT License
+        
+        Copyright (c) 2023 tcbenchstack
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://tcbenchstack.github.io/tcbench/
+Keywords: machine learning,deep learning,traffic classification,time series
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aim ==3.17.4
+Requires-Dist: autorank
+Requires-Dist: click
+Requires-Dist: dask <=2023.5.1
+Requires-Dist: distributed
+Requires-Dist: numpy
+Requires-Dist: pandas ==2.0.2
+Requires-Dist: pyarrow ==12.0.0
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: rich-click
+Requires-Dist: scikit-learn
+Requires-Dist: statsmodels
+Requires-Dist: torch
+Requires-Dist: torchsummary
+Requires-Dist: torchvision
+Requires-Dist: xgboost
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: click-plugins ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: jupyterlab ; extra == 'dev'
+Requires-Dist: matplotlib ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: mkdocs-autorefs ; extra == 'dev'
+Requires-Dist: mkdocs-glightbox ; extra == 'dev'
+Requires-Dist: mkdocs-jupyter ; extra == 'dev'
+Requires-Dist: mkdocs-material ; extra == 'dev'
+Requires-Dist: mkdocs-material-extensions ; extra == 'dev'
+Requires-Dist: mkdocs-table-reader-plugin ; extra == 'dev'
+Requires-Dist: mkdocstrings ; extra == 'dev'
+Requires-Dist: mkdocstrings-python ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-helpers-namespace ; extra == 'dev'
+Requires-Dist: seaborn ; extra == 'dev'
+
+<div align="center">
+  <img src="https://tcbenchstack.github.io/tcbench/tcbench_logo.svg" width="400px"/>
+  <h3>An ML/DL framework for Traffic Classification (TC)</h3>
+  <a href="https://tcbenchstack.github.io/tcbench">
+  <img width="24" height="24" src="https://img.icons8.com/fluency/48/domain.png" alt="domain"/>
+  <b>Documentation</b>
+  </a>
+</div>
+
+<br>
+
+tcbench design is cored in the following objectives:
+
+* Easing ML/DL models training/testing results replicability.
+* Tight integration with public TC datasets with ease data installation and curation,
+* Model tracking via [AIM](https://github.com/aimhubio/aim). 
+* Rich command line for executing modeling campaings and collecting performance reports.
+
+
+
+## Motivations
+
+The academic literature is ripe with methods and proposals for TC.
+Yet, it is scarce of code artifacts and public datasets 
+do not offer common conventions of use.
+
+We designed tcbench with the following goals in mind:
+
+| Goal | State of the art | tcbench |
+|:-----|:-----------------|:--------|
+|__:octicons-stack-24: Data curation__ | There are a few public datasets for TC, yet no common format/schema, cleaning process, or standard train/val/test folds. | An (opinionated) curation of datasets to create easy to use parquet files with associated train/val/test fold.|
+|__:octicons-file-code-24: Code__ | TC literature has no reference code base for ML/DL modeling | tcbench is [:material-github: open source](https://github.com/tcbenchstack/tcbench) with an easy to use CLI based on [:fontawesome-solid-arrow-pointer: click](https://click.palletsprojects.com/en/8.1.x/)|
+|__:material-monitor-dashboard: Model tracking__ | Most of ML framework requires integration with cloud environments and subscription services | tcbench uses [aimstack](https://aimstack.io/) to save on local servers metrics during training which can be later explored via its web UI or aggregated in report summaries using tcbench |
+
+## Install
+
+Create a conda environment
+
+```
+conda create -n tcbench python=3.10 pip
+conda activate tcbench
+python -m pip install tcbench
+```
+
+For the development version
+```
+python -m pip isntall tcbench[dev]
+```
+
+## Features and roadmap
+
+tcbench is still under development, but (as suggested by its name) ultimately aims
+to be a reference framework for benchmarking multiple ML/DL solutions 
+related to TC.
+
+At the current stage, tcbench offers
+
+* Integration with 4 datasets, namely `ucdavis-icdm19`, `mirage19`, `mirage22` and `utmobilenet21`.
+You can use these datasets and their curated version independently from tcbench.
+Check out the [dataset install](https://tcbenchstack.github.io/tcbench/datasets/install) process and [dataset loading tutorial](https://tcbenchstack.github.io/tcbench/datasets/guides/tutorial_load_datasets/).
+
+* Good support for flowpic input representation.
+
+* Initial support for for 1d packet time series (based on network packets properties) input representation.
+
+* Data augmentation functionality for flowpic input representation.
+
+* Modeling via XGBoost, vanilla DL supervision and contrastive learning (via SimCLR or SupCon).
+
+More exiting features including more datasets and algorithms will come in the next months. 
+
+Stay tuned ;)!
+
+## Papers
+
+* ["Replication: Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation"](https://arxiv.org/abs/2309.09733) __preprint__<br>
+A. Finamore, C. Wang, J. Krolikowski, J. M. Navarro, F. Chen, D. Rossi<br>
+ACM Internet Measurements Conference (IMC), 2023
+
