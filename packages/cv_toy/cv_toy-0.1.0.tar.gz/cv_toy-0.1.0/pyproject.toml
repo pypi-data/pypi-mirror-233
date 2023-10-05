@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cv_toy"
+version = "0.1.0"
+description = ""
+authors = ["Ryabykin Aleksey <ryabykin.as@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.11"
+numpy = "1.23.4"
+opencv-python = "4.7.0.72"
+requests = "2.28.1"
+scikit-image = "0.19.3"
+scipy = "1.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
