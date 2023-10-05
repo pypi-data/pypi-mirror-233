@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+automatic_actions.egg-info/PKG-INFO
+automatic_actions.egg-info/SOURCES.txt
+automatic_actions.egg-info/dependency_links.txt
+automatic_actions.egg-info/requires.txt
+automatic_actions.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/packages.py
+src/version.py
