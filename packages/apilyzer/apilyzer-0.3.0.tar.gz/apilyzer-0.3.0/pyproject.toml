@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "apilyzer"
+version = "0.3.0"
+description = "APIlyzer is a python library that aims to analyze the level of maturity of REST APIs, following the Richardson maturity model"
+license = "MIT"
+authors = ["Marco Antônio <marcomartins06@rede.ulbra.br>"]
+readme = "README.md"
+packages = [{ include = "apilyzer" }]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Environment :: Console",
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3.9",
+    "Intended Audience :: Developers",
+]
+
+[tool.poetry.urls]
+"Documentation" = "https://apilyzer.readthedocs.io/en/latest/"
+"Source Code" = "https://github.com/Tchez/apilyzer"
+"Bug Tracker" = "https://github.com/Tchez/apilyzer/issues"
+
+
+[tool.poetry.scripts]
+apilyzer = "apilyzer.cli:app"
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.25.0"
+typer = "^0.9.0"
+rich = "^13.5.2"
+beautifulsoup4 = "^4.12.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.12.0"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.3.1"
+mkdocstrings = "^0.23.0"
+mkdocstrings-python = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+docs = "mkdocs serve"
+pre_test = "task lint"
+test = "pytest -s -x --cov=apilyzer -vv"
+post_test = "coverage html"
