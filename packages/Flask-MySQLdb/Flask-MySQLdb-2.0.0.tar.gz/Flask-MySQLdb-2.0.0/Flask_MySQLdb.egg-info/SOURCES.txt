@@ -1,0 +1,14 @@
+AUTHORS
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+Flask_MySQLdb.egg-info/PKG-INFO
+Flask_MySQLdb.egg-info/SOURCES.txt
+Flask_MySQLdb.egg-info/dependency_links.txt
+Flask_MySQLdb.egg-info/not-zip-safe
+Flask_MySQLdb.egg-info/requires.txt
+Flask_MySQLdb.egg-info/top_level.txt
+flask_mysqldb/VERSION
+flask_mysqldb/__init__.py
+tests/test_mysqldb.py
