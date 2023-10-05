@@ -1,0 +1,16 @@
+{
+  "description" : "Draco support (version 1.5.6)",
+  "name" : "draco",
+  "readers" : 
+  [
+    {
+      "description" : "Draco",
+      "exclude_thumbnailer" : false,
+      "extensions" : [ "drc" ],
+      "mimetypes" : [ "application/vnd.drc" ],
+      "name" : "Draco"
+    }
+  ],
+  "type" : "STATIC",
+  "version" : "1.0"
+}
