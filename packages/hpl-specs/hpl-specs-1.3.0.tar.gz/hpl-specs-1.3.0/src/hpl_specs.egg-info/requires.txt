@@ -1,0 +1,8 @@
+attrs~=23.0
+lark~=1.0
+typeguard~=4.1
+
+[dev]
+hypothesis[lark]~=6.82
+pytest
+tox
