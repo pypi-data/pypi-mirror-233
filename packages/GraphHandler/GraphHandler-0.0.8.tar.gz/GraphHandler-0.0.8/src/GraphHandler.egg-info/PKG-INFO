@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: GraphHandler
+Version: 0.0.8
+Summary: Unofficial Facebook Graph API Handler
+Home-page: UNKNOWN
+Author: Ambar Rizvi
+Author-email: <brannstrom9911@gmail.com>
+License: UNKNOWN
+Description: A Facebook Graph API Handler to ease the use of Meta Graph APIs.
+Keywords: python,facebook,graph api,social media,instagram,meta,meta api
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
