@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/polyhedron.egg-info/PKG-INFO
+src/polyhedron.egg-info/SOURCES.txt
+src/polyhedron.egg-info/dependency_links.txt
+src/polyhedron.egg-info/top_level.txt
