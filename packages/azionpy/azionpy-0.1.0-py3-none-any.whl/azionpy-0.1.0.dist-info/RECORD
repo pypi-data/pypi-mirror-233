@@ -1,0 +1,9 @@
+azionpy/__init__.py,sha256=E0JAQoM8brPhDSlQDa8-qMv6wsh43bdaraK_8Yc515M,33
+azionpy/api_auth.py,sha256=2vaB3ArR6DZZgiEyDh-W2p-jgEtutygM-yIhCGJt8Ao,732
+azionpy/client.py,sha256=Pei1wXjWn6pgzOShH8K0cznewe4AKiFwUaD8-yfHCl4,4924
+azionpy/exceptions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azionpy/exceptions/azion_exceptions.py,sha256=7Uo19Kh6xFqstwjyJaEwZR3LTOXbOWu-SRhaxo4wr8I,2980
+azionpy/models.py,sha256=FNJT3f2t2TmD30pQ0mYWe-v3V9RdLiKfy0ZnxszIvcM,2416
+azionpy-0.1.0.dist-info/METADATA,sha256=Z8yfm_49bnWUKGzwMdno4-r6ovpvFwzuFbsFiODWPRo,1536
+azionpy-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+azionpy-0.1.0.dist-info/RECORD,,
