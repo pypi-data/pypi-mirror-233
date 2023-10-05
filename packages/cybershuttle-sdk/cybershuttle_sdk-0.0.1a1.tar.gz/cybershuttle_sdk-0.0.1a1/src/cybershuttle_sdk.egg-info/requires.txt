@@ -1,0 +1,9 @@
+google-api-python-client>=2.0.0
+
+[:platform_machine != "arm64"]
+grpcio==1.46.3
+grpcio-tools==1.46.3
+
+[:platform_machine == "arm64"]
+grpcio==1.47.0rc1
+grpcio-tools==1.47.0rc1
