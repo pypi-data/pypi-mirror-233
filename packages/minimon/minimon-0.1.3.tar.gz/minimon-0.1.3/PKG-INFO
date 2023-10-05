@@ -1,0 +1,173 @@
+Metadata-Version: 2.1
+Name: minimon
+Version: 0.1.3
+Summary: minimon
+Home-page: https://projects.om-office.de/frans/minimon.git
+Author: Frans Fürst
+Author-email: frans.fuerst@protonmail.com
+Requires-Python: >=3.10,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: asyncinotify (>=4.0,<5.0)
+Requires-Dist: asyncssh (>=2.13,<3.0)
+Requires-Dist: bcrypt (>=4.0.1,<5.0.0)
+Requires-Dist: psutil (>=5.9,<6.0)
+Requires-Dist: scapy (>=2.5,<3.0)
+Requires-Dist: textual (>=0,<1)
+Project-URL: Repository, https://projects.om-office.de/frans/minimon.git
+Description-Content-Type: text/markdown
+
+# Minimon
+
+**minimon** is a 'minimal' (as in minimal music) IT monitoring tool for the command line.
+
+Compared to lots of other IT monitoring solutions it has the following main attributes:
+
+- It follows a 'configuration as application' approach, i.e. instead of configuring your monitoring
+  via UI you will 'write' your whole executable application yourself!
+  (see example below for clarification)
+- It's ultra-flexible by being more an 'automation with functional pipes' framework letting
+  you anything do anything you can automate rather than a configurable application
+- It's _minimal_ also in terms of a hobby project. Don't expect something which competes with
+  Checkmk, Prometheus, etc.
+- Since instead of configuring some black box application you have to implement / modify the main
+  executable using plain Python, as a user you might get into Python programming rather quickly.
+
+
+There are some technical properties and maxims you might be interested in as well:
+
+- `textual` / `rich` based
+- Heavy use of asynchronous programming
+- Functional approaches wherever possible
+- `asyncssh` instead of `paramiko`
+
+
+## Installation
+
+While you can just clone and use minimon, the intended way to use it is to install it from PyPI.org
+or run it from inside a virtual environment.
+
+Install it locally using `pip`:
+
+```sh
+[<PYTHON> -m] pip[3] install [--user] [--upgrade] minimon
+```
+
+Currently you need at least Python **v3.10+** installed in order to run **minimon**. In case your
+system provides older versions only, consider using `pyenv` to install any other version next
+to your system-Python.
+
+
+## Example
+
+The following snippet is taken from a recent **minimon** installation folder, e.g.
+`~/.local/lib/python3.11/site-packages/minimon/sites/mvm.py` and shows a poorly minimalistic but
+working example of a fully functional **minimon** site:
+
+```python
+from minimon import *
+from minimon.plugins import *
+
+with Monitor("MVM"):
+
+    @view("host", [Host("localhost")])  # type: ignore[arg-type]
+    async def local_resources(host: Host) -> AInsights:
+        """This async generator will be invoked by the above `view` and run continuously to
+        gather and yield monitoring data"""
+        async for _, insight in Bundler(
+            ps=Pipeline(process_output(host, "ps wauxw", "1")).chain(parse_ps).chain(check_ps),
+            df=Pipeline(process_output(host, "df -P", "2")).chain(parse_df).chain(check_df),
+        ):
+            yield insight
+```
+
+Create/copy your own file to test and modify:
+
+```sh
+mkdir minimon-sites                                                                                                 130 ↵
+cp ~/.local/lib/python3.11/site-packages/minimon/sites/mvm.py minimon-sites
+chmod +x minimon-sites/mvm.py
+```
+
+Start it by executing
+```
+minimon-sites/mvm.py
+```
+
+
+## Why (do I do this?)
+
+- async
+- functional
+- testability
+- bullet proof
+
+
+## Todo
+
+This is very early development, no real todo-list here, yet. Some of the bigger tasks include
+
+- [x] provide a way to use data propagating through functions by different consumers
+- [x] provide monadic (async) function chaining
+- [ ] capture and persist metrics
+- [ ] provide broader set of useful data sources and handlers (a.k.a 'plugins')
+- [ ] support for endless processes ("dmesg -w")
+- [ ] mature error handling and restart management
+- [ ] support for multi line scripts
+- [ ] visualize metrics
+- [ ] provide ways to interact
+- [ ] improve logging: to file, log threads, log task context
+
+
+## Development & Contribution
+
+### Setup
+
+For active development you need to have `poetry` and `pre-commit` installed
+
+```sh
+python3 -m pip install --upgrade --user poetry pre-commit
+git clone git@projects.om-office.de:frans/minimon.git
+cd minimon
+pre-commit install
+# if you need a specific version of Python inside your dev environment
+poetry env use ~/.pyenv/versions/3.10.4/bin/python3
+poetry install
+```
+
+
+### Workflow
+
+* Create/test/commit changes and check commits via `pre-commit`
+* after work is done locally:
+  - adapt version in `pyproject.toml`
+  - build and check a package
+```sh
+poetry build && \
+twine check dist/* &&
+python3 -m pip uninstall -y minimon && \
+python3 -m pip install --user dist/minimon-$(grep -E "^version.?=" pyproject.toml | cut -d '"' -f 2)-py3-none-any.whl
+```
+  - check installed package
+  - publish the new package `poetry publish --build`
+  - commit new version && push
+
+
+## License
+
+For all code contained in this repository the rules of GPLv3 apply unless
+otherwise noted. That means that you can do what you want with the source
+code as long as you make the files with their original copyright notice
+and all modifications available.
+
+See [GNU / GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) for details.
+
+This project is not free for machine learning. If you're using any content
+of this repository to train any sort of machine learned model (e.g. LLMs),
+you agree to make the whole model trained with this repository and all data
+needed to train (i.e. reproduce) the model publicly and freely available
+(i.e. free of charge and with no obligation to register to any service) and
+make sure to inform the author (me, frans.fuerst@protonmail.com) via email
+how to get and use that model and any sources needed to train it.
+
