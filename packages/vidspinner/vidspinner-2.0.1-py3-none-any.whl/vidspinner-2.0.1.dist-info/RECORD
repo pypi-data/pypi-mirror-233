@@ -1,0 +1,10 @@
+vidspinner/__init__.py,sha256=U6WTdWMdCU_jbJtcDf9Fm7giQXYxxx0jHN4VShw7uPw,50
+vidspinner/filters.py,sha256=Is5j3JE6mfQ5siRx_Ex9eG5WMHYOk1aDYg0x32e_4d0,926
+vidspinner/vidspinner.py,sha256=m-4YT8KDjpxo_vo-e9G0rPCK5_r5vTaQn3WtSCyP09s,4643
+vidspinner/builders/audio.py,sha256=rcazrEKn0zC_ajl_Su1v_6rYnL9TXe4UASLrF6Vmjh4,1147
+vidspinner/builders/text.py,sha256=0HJA1k9CHtiQ0BvJahCBKg1TrqGIgw6EGhMBVCELhEk,3157
+vidspinner-2.0.1.dist-info/LICENSE,sha256=1fJinRHR2RrRggYpp04xRbrTA6qIBjCChb7E9MG5KT8,1080
+vidspinner-2.0.1.dist-info/METADATA,sha256=itl3Th3sW27JWHGedWHVp_rJ2xNc6OELXagceue54tY,6079
+vidspinner-2.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vidspinner-2.0.1.dist-info/top_level.txt,sha256=5G0-yxonlD5RtRE_P58HNJ6LDppt3v-WxRP3JPrcFpg,11
+vidspinner-2.0.1.dist-info/RECORD,,
