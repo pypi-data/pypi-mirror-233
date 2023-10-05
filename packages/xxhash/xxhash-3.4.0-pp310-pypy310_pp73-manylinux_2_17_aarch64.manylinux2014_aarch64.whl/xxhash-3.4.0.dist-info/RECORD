@@ -1,0 +1,10 @@
+xxhash/version.py,sha256=H3CBbALu_y09DXv-breHtv1AZAzpF25DQclZhtoddvs,44
+xxhash/_xxhash.pypy310-pp73-aarch64-linux-gnu.so,sha256=5FE_EgbLQ4CecQ0VJwN49G7TmpDYnX0F74hTT7Q0Cws,86544
+xxhash/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xxhash/__init__.py,sha256=mPEdihxDMU0rjLWum3FrU9Ua2jQ-rzfewYgIg-J-Jlc,1147
+xxhash/__init__.pyi,sha256=Te-hUGiCW_4Y65lyrGCOgeQrL35XTFM-qunbz0R9MiE,1786
+xxhash-3.4.0.dist-info/LICENSE,sha256=-OnvAMeL5NLaUmssN-QJnJIMf-C52UO_Da6y78MKOls,1313
+xxhash-3.4.0.dist-info/top_level.txt,sha256=1PPSBP-gnjG59E5bigzMTzmT6BVWjHwnpzMiisPWZ5I,15
+xxhash-3.4.0.dist-info/WHEEL,sha256=V63neRT0V_9Q3Cav03MGEzzcyDB9KwIlr8vUMkG00XQ,168
+xxhash-3.4.0.dist-info/RECORD,,
+xxhash-3.4.0.dist-info/METADATA,sha256=WRT7bkueSCI7bRrrEOjVwqWcB81bh3Lhd7ufD6xQcNg,12344
