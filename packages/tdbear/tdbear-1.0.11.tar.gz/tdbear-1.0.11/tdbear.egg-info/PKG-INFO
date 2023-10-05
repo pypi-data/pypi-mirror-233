@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tdbear
+Version: 1.0.11
+Summary: A module assisting with experiments and analysis of TDS methods.
+Home-page: https://hci.fpark.tmu.ac.jp/TDbear/
+Author: TMU HCI lab.
+License: MIT
+Project-URL: Documentation, https://hci.fpark.tmu.ac.jp/TDbear/
+Project-URL: Source, https://github.com/tmu-hci/TDbear
+Keywords: TDS TDbear
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# TDbear
+
+A Python library providing experimental and analytical tools for the Temporal Dominance of Sensations (TDS) method.
+
+See [here](https://hci.fpark.tmu.ac.jp/TDbear/) for details.
