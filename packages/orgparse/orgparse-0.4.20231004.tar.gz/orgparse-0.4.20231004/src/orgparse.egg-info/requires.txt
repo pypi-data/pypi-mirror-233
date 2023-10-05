@@ -1,0 +1,9 @@
+
+[linting]
+pytest
+ruff
+mypy
+lxml
+
+[testing]
+pytest
