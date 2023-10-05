@@ -1,0 +1,16 @@
+libdescriptor-0.0.5.dist-info/WHEEL,sha256=V4BAYTiDoITMfG3VIKYWC2MwMZpP0O09WpYwi6rhZ4A,124
+libdescriptor-0.0.5.dist-info/METADATA,sha256=lpnHI86h2gJ7jRofRbUpN7aMlhrgrxJxGOmmUrcOtXY,58
+libdescriptor-0.0.5.dist-info/top_level.txt,sha256=lKe1qg_PSoaEjJ5aFscJsMq6EmrVgBM-bVrw0hRL6bQ,14
+libdescriptor-0.0.5.dist-info/RECORD,,
+libdescriptor.libs/libdescriptor-fe850a97.so,sha256=NQ6QsoRS6-GgfPigIEFewmFSZcqKe_aeUvtKq3HdPEk,591065
+libdescriptor.libs/libstdc++-672d7b41.so.6.0.30,sha256=udZV-LC1qjha5hMPgFh1suDDk7d5hi_WaXK7f1IywnY,13166641
+libdescriptor.libs/libc-2-80378c20.31.so,sha256=1l917M7FHq1TkQresA5dSKgmC2GZL69oxDNwBLo5s7k,2072057
+libdescriptor.libs/libgcc_s-32c1665e.so.1,sha256=5lsfHkzxHzms5r4189ralakQJruf_4jJDC4Kg2-ZONU,486073
+libdescriptor.libs/libm-2-888b3471.31.so,sha256=3Yvw_7Kk2RFXBuFlRgK3n6zbj2DXflJFAvdIStaYkzg,1401753
+libdescriptor/libc.so.6,sha256=gDeMIBdFaCnzJkXmqPM7TEDI76h9t-jJMaIpr6e_ZxI,2029592
+libdescriptor/libdescriptor.so,sha256=0UgH9yIcfz6OAyZg81U51Ag-X4pWstQzo_dsPSt3ypY,579273
+libdescriptor/libm.so.6,sha256=JH_H_Y4JAnt8R6N-a7J-mkR31XyI-XP0iQRLoAmxXQY,1402321
+libdescriptor/__init__.py,sha256=d2Ubjqo2S3FnDclVOu8j_CC-CW_kzpGEA1Ujzg3iTEU,183
+libdescriptor/libgcc_s.so.1,sha256=MsFmXgfVXJ4m5fLGpYIo2G1_0MdBfQsFDFZ6e_0_x5g,472072
+libdescriptor/libdescriptor.cpython-39-x86_64-linux-gnu.so,sha256=G-ExduZ6-lkAbD3pHSEe1uzFmady3xfaYtkSfspD0qM,232945
+libdescriptor/libstdc++.so.6,sha256=Zy17QYT2pQNUcB_midEdnzhe-u4w5qk0KgQGSWMim0E,12212840
