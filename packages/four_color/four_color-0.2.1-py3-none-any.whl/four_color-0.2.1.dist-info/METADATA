@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: four_color
+Version: 0.2.1
+Summary: `four_color` is a package for Four Color Problem.
+Home-page: https://github.com/SaitoTsutomu/four_color
+License: Apache-2.0
+Author: SaitoTsutomu
+Author-email: tsutomu7@hotmail.co.jp
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Dist: flask (>=3.0,<4.0)
+Requires-Dist: networkx (>=3.1,<4.0)
+Requires-Dist: pillow (>=10.0,<11.0)
+Requires-Dist: pulp (>=2.7,<3.0)
+Description-Content-Type: text/x-rst
+
+`four_color` is a package for Four Color Problem.
+::
+
+* Download picture from https://www.dropbox.com/s/twiscp9h15so8no/sample.png?dl=1
+* `python -m four_color`
+* Open http://localhost:8000/
+* Set "sample.png" and push "send" button.
+* Download "fig.png".
+
+.. image:: https://raw.githubusercontent.com/SaitoTsutomu/four_color/master/fig.gif
+   :scale: 200%
+
+Requirements
+------------
+* Python 3, Pillow, Flask, NetworkX, PuLP
+
+Features
+--------
+* nothing
+
+Setup
+-----
+::
+
+   $ pip install four_color
+
+History
+-------
+0.0.1 (2016-6-13)
+~~~~~~~~~~~~~~~~~~
+* first release
+
