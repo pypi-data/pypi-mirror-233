@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: llmgraph
+Version: 0.0.1
+Summary: llmgraph
+Home-page: https://github.com/dylanhogg
+Author: Dylan Hogg
+Author-email: dylanhogg@gmail.com
+Keywords: llm,kg,knowledge graph,chatgpt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai==0.28.0
+Requires-Dist: httpx==0.25.0
+Requires-Dist: networkx
+Requires-Dist: beautifulsoup4
+Requires-Dist: pyvis
+Requires-Dist: joblib
+Requires-Dist: tenacity
+Requires-Dist: omegaconf
+Requires-Dist: matplotlib
+Requires-Dist: python-dotenv
+Requires-Dist: click
+Requires-Dist: sphinx
+Requires-Dist: typer
+Requires-Dist: rich
+Requires-Dist: tqdm
+Requires-Dist: loguru
+
+# llmgraph
+
+Work in progress...

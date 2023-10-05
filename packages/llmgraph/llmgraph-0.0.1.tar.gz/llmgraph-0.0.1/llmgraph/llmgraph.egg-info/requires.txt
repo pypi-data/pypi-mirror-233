@@ -1,0 +1,16 @@
+openai==0.28.0
+httpx==0.25.0
+networkx
+beautifulsoup4
+pyvis
+joblib
+tenacity
+omegaconf
+matplotlib
+python-dotenv
+click
+sphinx
+typer
+rich
+tqdm
+loguru
