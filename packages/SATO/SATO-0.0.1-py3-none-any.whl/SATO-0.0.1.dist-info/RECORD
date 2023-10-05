@@ -1,0 +1,17 @@
+SATO/SATO.py,sha256=R6hjrrVAe3JvsYpGTf99YcyDt7tPa0r1QDgkgreAiOQ,27560
+SATO/__init__.py,sha256=GQTLJUlLuwfkRMYDUfgcEv8WenjG7_UJu3HaY6w_iwE,43
+SATO/about_intro.txt,sha256=y5Yp86-URt6hQfVXeZwMo1d-1W4uxe9d8ot-xgtSRLI,2352
+SATO/help.txt,sha256=lhF5242xwY7vL7ZVk7Dl1IsF8YOlIdDOODFLLQ050gY,2301
+SATO/stylesheet.css,sha256=BxbOr-K30iS66703EtOxGT_7p9mgPnm0AVivWkKemEk,512
+SATO/validation.py,sha256=qjXHRDW1z-UCySB1mtJYssTz2mnN-qU6FbAmvx9vC5M,3765
+SATO/icons/download.png,sha256=JW1l-mHcUQF97wfiL108wtrTmQ1un8WuZv5cUuRMMCc,22650
+SATO/icons/fasta.png,sha256=5IJ37zCD4OH7it5irr_PkSyqkI8L6y0MClaLk2tcJSA,216311
+SATO/icons/file.png,sha256=QmsLpXpGNGTTYQXIkeNmTp31qIe1Fm1glCJgltmSWVM,1354
+SATO/icons/logo-no-background.png,sha256=KC36AHHq21zUhqjuRL2OITeyjsWEpV7kqJ2eOxnYaGQ,53857
+SATO/icons/sato.png,sha256=4jEwBcfAf93Hzu_Z1VTTS-duMnwu3Ku4CK6gLDX1_6c,67297
+SATO-0.0.1.data/scripts/run.py,sha256=xrxAAPqazdPJIMJUPq3vTAjcTb_1s96o0kkWP3QLUW0,70
+SATO-0.0.1.dist-info/METADATA,sha256=hoIGHMyoPqyaEY0pQMiOvFipZFlIXgJx6Gaol8uv3z0,6040
+SATO-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+SATO-0.0.1.dist-info/entry_points.txt,sha256=zjhcUqczH64XOcGfXo3vF6DaMTVdouPD7Q8_8pFxnss,40
+SATO-0.0.1.dist-info/top_level.txt,sha256=hwel1FixMyWBMyK5oxMZSA1PKErtHyWD1LhLS8leJgo,5
+SATO-0.0.1.dist-info/RECORD,,
