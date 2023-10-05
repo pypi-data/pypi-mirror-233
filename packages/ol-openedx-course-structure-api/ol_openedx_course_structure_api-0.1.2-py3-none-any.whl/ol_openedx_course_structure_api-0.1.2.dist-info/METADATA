@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ol-openedx-course-structure-api
+Version: 0.1.2
+Summary: An Open edX plugin to add API for course structure
+License: BSD-3-Clause
+Requires-Python: >=3.8
+Requires-Dist: Django (>2.0)
+Requires-Dist: edx-django-utils (>4.0.0)
+
