@@ -1,0 +1,8 @@
+tsgauth/__init__.py,sha256=DGQ0AQL9tBjN9blLeyn_noqtQdGnos3Gl1cWiMz3itI,48
+tsgauth/flaskoidc.py,sha256=TDeymfCn3kbhTHUiTItWA59F7lt720bmkZJd_TNq3WY,2877
+tsgauth/oidcauth.py,sha256=bfvsvAP42vmIRUxB99gaKhZLSnCFyUFCyH1YbuEKrrY,23025
+tsgauth-0.9.1.dist-info/METADATA,sha256=Q-IHuAz3UvLZBW9bMOzaUBIxq_3SYaw3SpTzWkkhCJ0,3405
+tsgauth-0.9.1.dist-info/WHEEL,sha256=sb4ZHsmozXdkdXRvpMHZmhxsxQvL8DERDUEGA9tAfc8,83
+tsgauth-0.9.1.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tsgauth-0.9.1.dist-info/license_files/LICENSE.txt,sha256=BMTx3r7rSBdZzUdW6eLaf-wzPTVxsWnV839X3QmYEgI,1057
+tsgauth-0.9.1.dist-info/RECORD,,
