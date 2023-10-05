@@ -1,0 +1,11 @@
+appstream_python/Collection.py,sha256=D5Sx8M4YovOZ2OKkubgY0rxRA2IwhdXJqcFuAhhoIUE,2777
+appstream_python/Component.py,sha256=QrXSfWktl0Ki77m4jfySooSx6FgVVdfMFm-maJzQaGE,35969
+appstream_python/StandardConstants.py,sha256=xcpEJixO662W_vCuGV8RSByN70_0tXaM-ODHfNPhdwo,2186
+appstream_python/__init__.py,sha256=Bj7IpeFc_-HflTaV8I1LRxe1vIbBp2iZfXEJEtBE8Uw,164
+appstream_python/_helper.py,sha256=T1On8-taSPoKgpz9u8briuRO0uurcBL415o8g2Gc678,326
+appstream_python/version.txt,sha256=yfVuuTSMvINFva6nyiTJ-WDhWYrwVHJ5R2CiaC_weow,6
+appstream_python-0.6.3.dist-info/LICENSE,sha256=KHWQLS2VDTyyF0CMgSrCU2j758vzhIUXA4viB-DWlTI,1318
+appstream_python-0.6.3.dist-info/METADATA,sha256=h2XBYaJ01kE7PLNP80Auh6BltLpTalrzmv48VckNhuw,1306
+appstream_python-0.6.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+appstream_python-0.6.3.dist-info/top_level.txt,sha256=TEnvfaZcEAhAofLtB0lquKH1fwr9C-9dxpGN405dZiQ,17
+appstream_python-0.6.3.dist-info/RECORD,,
