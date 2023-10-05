@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_rest_framework_client.egg-info/PKG-INFO
+django_rest_framework_client.egg-info/SOURCES.txt
+django_rest_framework_client.egg-info/dependency_links.txt
+django_rest_framework_client.egg-info/not-zip-safe
+django_rest_framework_client.egg-info/requires.txt
+django_rest_framework_client.egg-info/top_level.txt
+drf_client/__init__.py
+drf_client/connection.py
+drf_client/exceptions.py
+drf_client/helpers/base_facade.py
+drf_client/helpers/base_main.py
