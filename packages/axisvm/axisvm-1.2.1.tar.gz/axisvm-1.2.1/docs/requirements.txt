@@ -1,0 +1,16 @@
+myst_parser
+nbsphinx
+sphinx-gallery
+sphinx_copybutton
+sphinxcontrib-bibtex==1.0.0
+nbsphinx-link
+sphinxcontrib-svg2pdfconverter
+sphinx-rtd-theme
+sphinx-plotly-directive
+networkx
+plotly
+nbformat
+furo
+pypdfium2
+matplotlib
+memory_profiler
