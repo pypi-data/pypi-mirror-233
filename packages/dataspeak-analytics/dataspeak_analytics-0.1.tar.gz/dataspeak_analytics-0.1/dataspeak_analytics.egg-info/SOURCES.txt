@@ -1,0 +1,11 @@
+README.md
+setup.py
+dataspeak_analytics/__init__.py
+dataspeak_analytics/analytics_library.py
+dataspeak_analytics/config.py
+dataspeak_analytics/dataspeak_events.py
+dataspeak_analytics.egg-info/PKG-INFO
+dataspeak_analytics.egg-info/SOURCES.txt
+dataspeak_analytics.egg-info/dependency_links.txt
+dataspeak_analytics.egg-info/requires.txt
+dataspeak_analytics.egg-info/top_level.txt

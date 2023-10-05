@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dataspeak_analytics
+Version: 0.1
+Summary: A library for analytics using Mixpanel and MongoDB
+Author: Alejandro Radisic
+Author-email: aleradisic@gmail.com
+Description-Content-Type: text/markdown
+
+md
