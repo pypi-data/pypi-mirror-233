@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.ruff]
+# Adds to default excludes: https://ruff.rs/docs/settings/#exclude
+extend-exclude = [
+    "drf_source",
+    "stubgen",
+    "out",
+]
+line-length = 120
+target-version = "py38"
+# See Rules in Ruff documentation: https://beta.ruff.rs/docs/rules/
+select = [
+    "I",    # isort
+    "F401", # Unused imports
+    "UP",   # pyupgrade
+    "TID",  # flake8-tidy-imports
+]
+
+[tool.ruff.flake8-tidy-imports.banned-api]
+"_typeshed.Self".msg = "Use typing_extensions.Self (PEP 673) instead."
+
+[tool.ruff.isort]
+split-on-trailing-comma = false
+
+[build-system]
+requires = ["setuptools<64", "wheel"]
