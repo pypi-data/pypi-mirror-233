@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py_sentry
+Version: 1.4.0
+Summary: Provides a foundation for a service that will run aa action a regular intervals.
+Author-email: Simon Patton <sjpatton@lbl.gov>
+License: BSD-3-Clause-LBNL
+Keywords: service,daemon,signals
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: <4,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: psutil>=5.9.5
+
+[py-sentry](https://gitlab.com/nest.lbl.gov/py-sentry) contains the python package that provides a foundation for a service that will run an action at a regular interval.

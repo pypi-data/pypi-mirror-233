@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py_sentry"
+version = "1.4.0"
+description = "Provides a foundation for a service that will run aa action a regular intervals."
+readme = "README.md"
+authors = [
+    { "name"="Simon Patton", "email" ="sjpatton@lbl.gov"}
+]
+license = { text = "BSD-3-Clause-LBNL" }
+classifiers=[  # Optional
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3.10",
+]
+keywords=["service", "daemon", "signals"]  # Optional
+dependencies = [ # Optional
+    "psutil >= 5.9.5"
+]
+requires-python = ">=3.10, <4"
+
+[project.scripts]
+command_service = "py_sentry:command_service.main"
+configurable_service = "py_sentry:configurable_service.main"
+log_service = "py_sentry:log_service.main"
+nop_service = "py_sentry:nop_service.main"
+task_service = "py_sentry:task_service.main"
+wait_service = "py_sentry:wait_service.main"
+wait2_service = "py_sentry:wait2_service.main"
+
+# Note the quotes around drip.dropper in order to escape the dot .
+[project.entry-points."py_sentry"]
+command_task = "py_sentry.command_task:CommandTask"
+configurable_task = "py_sentry.configurable_task:ConfigurableTask"
+log_task = "py_sentry.log_task:LogTask"
+nop_task = "py_sentry.nop_task:NopTask"
+task = "py_sentry.task:Task"
+wait_task = "py_sentry.wait_task:WaitTask"
+wait2_task = "py_sentry.wait2_task:Wait2Task"
+
+[tool.setuptools.packages.find]
+# All the following settings are optional:
+where = ["sentry_pkg"]  # ["."] by default
+# include = # ["*"] by default
+# exclude = # [] by default
+
+[tool.setuptools]
+py-modules = ["py_sentry"]
+
+[tool.setuptools.package-data]
+py_sentry = ["py.typed"]

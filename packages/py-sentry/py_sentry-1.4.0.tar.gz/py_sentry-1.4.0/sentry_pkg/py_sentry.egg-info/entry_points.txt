@@ -1,0 +1,17 @@
+[console_scripts]
+command_service = py_sentry:command_service.main
+configurable_service = py_sentry:configurable_service.main
+log_service = py_sentry:log_service.main
+nop_service = py_sentry:nop_service.main
+task_service = py_sentry:task_service.main
+wait2_service = py_sentry:wait2_service.main
+wait_service = py_sentry:wait_service.main
+
+[py_sentry]
+command_task = py_sentry.command_task:CommandTask
+configurable_task = py_sentry.configurable_task:ConfigurableTask
+log_task = py_sentry.log_task:LogTask
+nop_task = py_sentry.nop_task:NopTask
+task = py_sentry.task:Task
+wait2_task = py_sentry.wait2_task:Wait2Task
+wait_task = py_sentry.wait_task:WaitTask
