@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "/.*",
+    "/dist",
+    "/tests",
+    "/utils",
+    "/example",
+]
+
+[project]
+name = "doublesided"
+version = "0.0.1"
+authors = [
+    { name = "Hao Wu", email = "haowu@dataset.sh" },
+]
+description = "This library make printable flashcard."
+requires-python = ">=3.8"
+dependencies = [
+    'Pillow ~= 9.5.0',
+    'reportlab ~= 4.0.0',
+
+]
+license = 'MIT'
+readme = "readme.md"
+
+[project.urls]
+"Homepage" = "https://github.com/dataset-sh/templatex"
+"Bug Tracker" = "https://github.com/dataset-sh/templatex/issues"
+
