@@ -1,0 +1,6 @@
+numpy
+jax
+diffmah
+diffstar
+dsps
+h5py
