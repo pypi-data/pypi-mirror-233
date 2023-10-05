@@ -1,0 +1,13 @@
+.env
+.mypy_cache
+.ropeproject
+.ruff_cache
+.venv
+/exclude/
+dist
+pymarks/__pycache__
+tests/__pycache__
+/AUTHORS
+/History.md
+/Dockerfile
+/bookmarks.db
