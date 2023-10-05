@@ -1,0 +1,10 @@
+powermate/__init__.py,sha256=LJG0ieDHJ1YMg5O_6zLZs7CH979ZZgJMzsWMicpH2po,108
+powermate/__main__.py,sha256=yn87miQ50x4IBeU3KeOtQ5H3WJa2lcmGyKbfoWZcsOM,1681
+powermate/base.py,sha256=abMCgb6ttyzK5lYNGNVU5fQG5YLKpErmn27GR6FoFHE,41
+powermate/linux.py,sha256=6xo4YNM5xNeZKkWvBuN7zAallAf6GwdzjRvIom-0dVE,2633
+powermate/win.py,sha256=Bs2sN_wU_qKItP_8-mj-UyfUGwuVt4i6QR_aS4zavOk,3117
+powermateusb-0.0.4.dist-info/LICENSE.txt,sha256=CHcF7NkOzIEmPHWME7DS5Muf6s4zmIWLZpCSbCRdZOo,1088
+powermateusb-0.0.4.dist-info/METADATA,sha256=5wCojUgXaJz_XEfHRISlX55niMDkHMueJ1oG_ozUHhY,4403
+powermateusb-0.0.4.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+powermateusb-0.0.4.dist-info/top_level.txt,sha256=A2yQeaH3jd4bOVjianbotj88BPHqG76f-dpxuvKLzAE,10
+powermateusb-0.0.4.dist-info/RECORD,,
