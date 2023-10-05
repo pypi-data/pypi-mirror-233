@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: premium-bonds-prize-checker
+Version: 0.1.0
+Summary: 
+Author: Adam McKay
+Author-email: adam@beepboop.digital
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: httpx (>=0.25.0,<0.26.0)
+Requires-Dist: rich (>=13.6.0,<14.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# Premium Bonds Prize Checker
+
+A simple CLI tool to check whether you have won anything for the current month in the UK's Premium Bonds.
+
+# Install
+
+The recommended way to install is to use `pipx`:
+
+`pipx install premium-bonds-prize-checker`
+
+# Usage
+
+`premium-bonds-prize-checker [holders_numbers]`
+
+Multiple holders numbers can be checked by specifying them with commas, e.g. `123456,987654`.
+
+If the holders number is omitted then a config will be loaded from `~/.config/premium-bonds/config.json` which has the format:
+
+```
+{"comment or name": "<holders-number>"}
+```
+
