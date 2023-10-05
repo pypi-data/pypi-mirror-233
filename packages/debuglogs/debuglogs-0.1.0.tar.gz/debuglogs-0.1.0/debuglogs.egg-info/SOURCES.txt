@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+DebugLogs/__init__.py
+DebugLogs/debug.py
+debuglogs.egg-info/PKG-INFO
+debuglogs.egg-info/SOURCES.txt
+debuglogs.egg-info/dependency_links.txt
+debuglogs.egg-info/top_level.txt
