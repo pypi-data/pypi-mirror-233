@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: dcicpyvcf
+Version: 2.0.0
+Summary: Variant Call Format (VCF) parser for Python
+Home-page: https://github.com/4dn-dcic/PyVCF
+Author: Will Ronchetti
+Author-email: william_ronchetti@hms.harvard.edu
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: bioinformatics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
