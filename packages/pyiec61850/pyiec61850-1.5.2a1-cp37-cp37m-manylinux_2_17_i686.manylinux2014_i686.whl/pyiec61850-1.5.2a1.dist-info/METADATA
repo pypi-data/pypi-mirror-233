@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyiec61850
+Version: 1.5.2a1
+Summary: Python bindings of https://github.com/mz-automation/libiec61850.
+License-File: COPYING
+
+
+============
+pyiec61850
+============
+
+Compiled, packaged python bindings of https://github.com/mz-automation/libiec61850.
+
+Wheels are built with the CI of the fork https://github.com/nrontsis/libiec61850.
+
+License same as mz-automation/libiec61850.
+
+Use at your own risk.
