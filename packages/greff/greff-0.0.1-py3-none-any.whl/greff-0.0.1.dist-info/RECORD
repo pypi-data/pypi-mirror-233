@@ -1,0 +1,11 @@
+greff/__init__.py,sha256=9DvnxKLkAlZVGUheJrWR8alygudOV8JWOUCX0GiX-mY,66
+greff/client.py,sha256=Ba_58fP8-qUpAV05S5sNpn4gQqabRlWuns_4mTrBu2Q,624
+greff/field.py,sha256=WhSraClNCeEoErr5V8flN35MvxzlryQtF-fjNgI1rcc,354
+greff/functions.py,sha256=73d1hzlhTiU9jp-N7SNEpJMcTDZ_hDMcBrn4ZcmPpmI,499
+greff/query.py,sha256=_XqcY42fVZSdx5QOOrX9wq-iyyMQ5T7Y23SPauVj6Fs,3508
+greff/type.py,sha256=YtCaZsotJXyb5vLLEFSFVLrWBmYfKdB8bXwU3kE95Qc,1561
+greff/types.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+greff/typing.py,sha256=AeMYqnDJo8k2U_SzrE6qAqfcEgcdabI9EhQ-IulbCQ4,136
+greff-0.0.1.dist-info/METADATA,sha256=eNfyRvNnr-ycwvhm7psc1NqoXT7cPAv9E414ReBTGkg,2163
+greff-0.0.1.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+greff-0.0.1.dist-info/RECORD,,
