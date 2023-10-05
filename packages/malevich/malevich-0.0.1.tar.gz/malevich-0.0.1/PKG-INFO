@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: malevich
+Version: 0.0.1
+Summary: ('A user-friendly interface to communicate with Malevich AI (malevich.ai)',)
+License-File: LICENSE
+Requires-Dist: typer[all]
+Requires-Dist: pydantic
+Requires-Dist: jls-utils
+Requires-Dist: pandas
+Requires-Dist: pydantic-yaml
