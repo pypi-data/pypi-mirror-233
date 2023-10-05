@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: profitpulse
+Version: 1.3.0
+Summary: Manage your personal finances
+Home-page: https://github.com/luistm/profitpulse
+License: MIT
+Author: Luís Miranda
+Author-email: luistm@gmail.com
+Maintainer: Luís Miranda
+Maintainer-email: luistm@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pendulum (>=2.1.2,<3.0.0)
+Requires-Dist: rich (>=13.5.3,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: toolcat (>=0.0.12,<0.0.13)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://github.com/luistm/profitpulse
+Description-Content-Type: text/markdown
+
+# Profit Pulse: Maximize Earnings Through Smart Finance Management
+
+[![PyPI version](https://badge.fury.io/py/profitpulse.svg)](https://badge.fury.io/py/profitpulse) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/profitpulse)
+
+
+ Effortlessly
+manage your personal finances, supercharge savings , and boost profits. Gain
+depp insights into your money flow, make strategic choices, and pave your way to
+financial growth.
+
+## How to install ?
+
+### macOS
+
+```bash
+pip install profitpulse
+```
+
+## How to use ?
+
+To access the available commands, just execute:
+
+```bash
+profitpulse --help
+```
+
+## How to contribute ?
+
+The recommended setup for development uses:
+
+[PyEnv](https://github.com/pyenv/pyenv)
+
+[Poetry](https://python-poetry.org)
+
+After cloning the repository to your machine, in the project root, just run:
+
+```bash
+make all
+```
+
+If everything went smoothly you are now ready to add some contributions. Take a
+look at the CONTRIBUTING.md file for more guidelines (once I write them :).
+

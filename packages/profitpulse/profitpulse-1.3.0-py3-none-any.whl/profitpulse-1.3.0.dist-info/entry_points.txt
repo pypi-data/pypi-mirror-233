@@ -1,0 +1,3 @@
+[console_scripts]
+profitpulse=profitpulse.ui.typercli.main:app
+
