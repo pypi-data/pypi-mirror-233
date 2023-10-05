@@ -1,0 +1,2009 @@
+licences:
+  AGPL:
+    _position: 36
+    code: AGPL
+    link: https://www.gnu.org/licenses/agpl-3.0.html
+    publisher: GNU Affero General Public License
+    title: GNU Affero General Public License
+  AcademicFreeLicense30:
+    _position: 42
+    code: AcademicFreeLicense30
+    link: http://opensource.org/licenses/AFL-3.0
+    publisher: '- not specified -'
+    title: Academic Free License 3.0
+  AdaptivePublicLicense10:
+    _position: 32
+    code: AdaptivePublicLicense10
+    link: http://opensource.org/licenses/APL-1.0
+    publisher: '- not specified -'
+    title: Adaptive Public License 1.0
+  Apache-1.1:
+    _position: 20
+    code: Apache-1.1
+    link: http://www.apache.org/licenses/LICENSE-1.1
+    publisher: The Apache Software Foundation
+    title: Apache License, Version 1.1
+  Apache-2.0:
+    _position: 28
+    code: Apache-2.0
+    link: http://www.apache.org/licenses/LICENSE-2.0
+    publisher: The Apache Software Foundation
+    title: Apache License, Version 2.0
+  ApplePublicSourceLicense20:
+    _position: 10
+    code: ApplePublicSourceLicense20
+    link: http://opensource.org/licenses/APSL-2.0
+    publisher: Apple
+    title: Apple Public Source License 2.0
+  ArtisticLicense20:
+    _position: 22
+    code: ArtisticLicense20
+    link: http://opensource.org/licenses/Artistic-2.0
+    publisher: N.N.
+    title: Artistic License 2.0
+  AttributionAssuranceLicense:
+    _position: 30
+    code: AttributionAssuranceLicense
+    link: http://opensource.org/licenses/AAL
+    publisher: Edwin A. Suominen
+    title: Attribution Assurance License
+  BoostSoftwareLicense10:
+    _position: 39
+    code: BoostSoftwareLicense10
+    link: http://opensource.org/licenses/BSL-1.0
+    publisher: '- not specified -'
+    title: Boost Software License 1.0
+  CC-BY-NC-ND_v4:
+    _position: 34
+    code: CC-BY-NC-ND_v4
+    link: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+  CC-BY-NC-SA_v4:
+    _position: 51
+    code: CC-BY-NC-SA_v4
+    link: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+  CC-BY-NC_v4:
+    _position: 5
+    code: CC-BY-NC_v4
+    link: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution-NonCommercial 4.0 International
+  CC-BY-ND_v4:
+    _position: 37
+    code: CC-BY-ND_v4
+    link: https://creativecommons.org/licenses/by-nd/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution-NoDerivatives 4.0 International
+  CC-BY-SA_v4:
+    _position: 31
+    code: CC-BY-SA_v4
+    link: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution-ShareAlike 4.0 International
+  CC-BY_v4:
+    _position: 4
+    code: CC-BY_v4
+    link: https://creativecommons.org/licenses/by/4.0/legalcode
+    publisher: Creative Commons
+    title: Creative Commons Attribution 4.0 International
+  Cc010Universal:
+    _position: 3
+    code: Cc010Universal
+    link: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+    publisher: Creative Commons
+    title: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+  CeaCnrsInriaLogicielLibreLicenseVersion21:
+    _position: 19
+    code: CeaCnrsInriaLogicielLibreLicenseVersion21
+    link: http://www.cecill.info/licences/Licence_CeCILL_V2.1-fr.html
+    publisher: ' CEA, CNRS, INRIA'
+    title: Cea Cnrs Inria Logiciel Libre License, version 2.1
+  CommonDevelopmentAndDistributionLicense10:
+    _position: 45
+    code: CommonDevelopmentAndDistributionLicense10
+    link: http://opensource.org/licenses/CDDL-1.0
+    publisher: N.N.
+    title: Common Development and Distribution License 1.0
+  CommonPublicAttributionLicenseVersion10:
+    _position: 43
+    code: CommonPublicAttributionLicenseVersion10
+    link: http://opensource.org/licenses/CPAL-1.0
+    publisher: Socialtext Incorporated
+    title: Common Public Attribution License Version 1.0
+  ComputerAssociatesTrustedOpenSourceLicense11:
+    _position: 25
+    code: ComputerAssociatesTrustedOpenSourceLicense11
+    link: http://opensource.org/licenses/CATOSL-1.1
+    publisher: Computer Associates International, Inc. (CA)
+    title: Computer Associates Trusted Open Source License 1.1
+  DataExplorationLicence:
+    _position: 15
+    code: DataExplorationLicence
+    link: https://www.ordnancesurvey.co.uk/business-and-government/licensing/licences/data-exploration.html
+    publisher: Ordnance Survey
+    title: Data Exploration Licence
+  DeveloperLicense:
+    _position: 18
+    code: DeveloperLicense
+    link: http://www.nationalarchives.gov.uk/documents/information-management/developer-licence.pdf
+    publisher: The National Archives
+    title: Developer License
+  EclipsePublicLicense10:
+    _position: 24
+    code: EclipsePublicLicense10
+    link: http://opensource.org/licenses/EPL-1.0
+    publisher: Eclipse
+    title: Eclipse Public License 1.0
+  EclipsePublicLicense20:
+    _position: 27
+    code: EclipsePublicLicense20
+    link: http://opensource.org/licenses/EPL-2.0
+    publisher: N.N.
+    title: Eclipse Public License 2.0
+  FreePublicLicense100:
+    _position: 6
+    code: FreePublicLicense100
+    link: http://opensource.org/licenses/FPL-1.0.0
+    publisher: '- not specified -'
+    title: Free Public License 1.0.0
+  GNU_GPL_v2:
+    _position: 12
+    code: GNU_GPL_v2
+    link: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+    publisher: Free Software Foundation
+    title: GNU General Public License, Version 2
+  GNU_GPL_v3:
+    _position: 50
+    code: GNU_GPL_v3
+    link: https://www.gnu.org/licenses/gpl.html
+    publisher: Free Software Foundation
+    title: GNU General Public License 3
+  GnuFreeDocumentationLicense:
+    _position: 21
+    code: GnuFreeDocumentationLicense
+    link: https://www.gnu.org/licenses/fdl.html
+    publisher: Free Software Foundation
+    title: GNU Free Documentation License version 1.3
+  InspireEndUserLicence:
+    _position: 26
+    code: InspireEndUserLicence
+    link: https://www.ordnancesurvey.co.uk/business-and-government/public-sector/mapping-agreements/inspire-licence.html
+    publisher: Ordnance Survey Limited
+    title: INSPIRE End User Licence
+  IscLicense:
+    _position: 33
+    code: IscLicense
+    link: http://opensource.org/licenses/ISC
+    publisher: N.N.
+    title: ISC License
+  LGPLv3:
+    _position: 41
+    code: LGPLv3
+    link: https://www.gnu.org/licenses/lgpl-3.0.html
+    publisher: Free Software Foundation
+    title: GNU Lesser General Public License version 3.0
+  LatexProjectPublicLicenseVersion13c:
+    _position: 23
+    code: LatexProjectPublicLicenseVersion13c
+    link: http://opensource.org/licenses/LPPL-1.3c
+    publisher: LaTeX3 Project
+    title: LaTeX Project Public License, Version 1.3c
+  MicrosoftPublicLicense:
+    _position: 14
+    code: MicrosoftPublicLicense
+    link: http://opensource.org/licenses/MS-PL
+    publisher: N.N.
+    title: Microsoft Public License
+  MozillaPublicLicenseVersion20:
+    _position: 40
+    code: MozillaPublicLicenseVersion20
+    link: https://www.mozilla.org/en-US/MPL/2.0/
+    publisher: Mozilla Corporation
+    title: Mozilla Public License Version 2.0
+  NonCommercialGovernmentLicence:
+    _position: 1
+    code: NonCommercialGovernmentLicence
+    link: http://www.nationalarchives.gov.uk/doc/non-commercial-government-licence/version/2/
+    publisher: The National Archives
+    title: Non-Commercial Government Licence
+  OdcOpenDatabaseLicense:
+    _position: 44
+    code: OdcOpenDatabaseLicense
+    link: https://opendatacommons.org/licenses/odbl/1.0/
+    publisher: Socialtext Incorporated
+    title: ODC Open Database License (ODbL)
+  OdcPublicDomainDedicationAndLicence:
+    _position: 29
+    code: OdcPublicDomainDedicationAndLicence
+    link: https://opendatacommons.org/licenses/pddl/1.0/
+    publisher: Open Data Commons
+    title: ODC Public Domain Dedication and Licence (PDDL)
+  OpenDataCommonsAttributionLicenseV10:
+    _position: 17
+    code: OpenDataCommonsAttributionLicenseV10
+    link: https://opendatacommons.org/licenses/by/1.0/
+    publisher: Open Data Commons
+    title: Open Data Commons Attribution License v1.0
+  OpenDataLicenceAgreement:
+    _position: 7
+    code: OpenDataLicenceAgreement
+    link: https://lobbycanada.gc.ca/eic/site/012.nsf/eng/00873.html
+    publisher: Office of the Commissioner of Lobbying
+    title: Open Data Licence Agreement
+  OpenGovernmentLicenceCanada:
+    _position: 38
+    code: OpenGovernmentLicenceCanada
+    link: https://open.canada.ca/en/open-government-licence-canada
+    publisher: Her Majesty the Queen in right of Canada
+    title: Open Government Licence - Canada
+  OpenSoftwareLicenseV30:
+    _position: 52
+    code: OpenSoftwareLicenseV30
+    link: http://opensource.org/licenses/OSL-3.0
+    publisher: Lawrence Rosen
+    title: Open Software License v. 3.0
+  OpenSupremeCourtLicence:
+    _position: 35
+    code: OpenSupremeCourtLicence
+    link: http://www.nationalarchives.gov.uk/doc/open-supreme-court-licence/version/1/open-supreme-court-licence-version-1.0.pdf
+    publisher: The National Archives UK
+    title: Open Supreme Court Licence
+  PhpLicense30:
+    _position: 8
+    code: PhpLicense30
+    link: http://opensource.org/licenses/PHP-3.0
+    publisher: PHP Group
+    title: PHP License 3.0
+  PythonLicense20:
+    _position: 2
+    code: PythonLicense20
+    link: http://opensource.org/licenses/Python-2.0
+    publisher: Python Software Foundation
+    title: Python License-2.0
+  QPublicLicenseVersion10:
+    _position: 11
+    code: QPublicLicenseVersion10
+    link: http://opensource.org/licenses/QPL-1.0
+    publisher: Trolltech AS
+    title: Q Public License Version 1.0
+  StatisticsCanadaOpenLicenceAgreement:
+    _position: 49
+    code: StatisticsCanadaOpenLicenceAgreement
+    link: https://www.statcan.gc.ca/eng/reference/licence
+    publisher: Statistics Canada
+    title: Statistics Canada Open Licence Agreement
+  SunPublicLicenseVersion10:
+    _position: 47
+    code: SunPublicLicenseVersion10
+    link: http://opensource.org/licenses/SPL-1.0
+    publisher: Sun Microsystems, Inc.
+    title: SUN PUBLIC LICENSE Version 1.0
+  TheUniversalPermissiveLicenseUplVersion10:
+    _position: 16
+    code: TheUniversalPermissiveLicenseUplVersion10
+    link: http://opensource.org/licenses/UPL
+    publisher: '- not specified -'
+    title: The Universal Permissive License (UPL), Version 1.0
+  TheZlibLibpngLicense:
+    _position: 46
+    code: TheZlibLibpngLicense
+    link: http://opensource.org/licenses/Zlib
+    publisher: N.N.
+    title: The zlib libpng License
+  UkOpenGovernmentLicenseForPublicSectorInformation:
+    _position: 48
+    code: UkOpenGovernmentLicenseForPublicSectorInformation
+    link: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+    publisher: UK Government
+    title: UK Open Government License for Public Sector Information
+  W3cSoftwareAndDocumentNoticeAndLicense:
+    _position: 13
+    code: W3cSoftwareAndDocumentNoticeAndLicense
+    link: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+    publisher: W3C
+    title: W3C Software and Document Notice and License
+  Wtfpl:
+    _position: 9
+    code: Wtfpl
+    link: http://www.wtfpl.net/about/
+    publisher: N.N.
+    title: WTFPL
+terms:
+  Component/bibliography:
+    _position: 54
+    constraint: N
+    description: "List of bibliographic references that are relevant to the component\
+      \ but that do not fall under a specific category. \nUse \"scientific work\"\
+      \ for the main scholarly publication related to the component"
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - main-publication: \"7. Wang, Y., & Chen, X. (2013). A Novel\
+      \ Approach for Cloud Computing Security Using Homomorphic Encryption. Communications\
+      \ in Computer and Information Science, 50(1), 67-73.\"\n  - technical-report:\n\
+      \    - \"8. Li, J., & Yang, S. (2012). A New Algorithm for Text Classification\
+      \ Based on Support Vector Machines. Technical Report: Computer Science and Information\
+      \ Security, 7(4), 23-30.\"\n  - deliverable-document: \n    - \"Zhang, H., &\
+      \ Liu, Y. (2011). A Survey of Data Mining Techniques in Financial Analysis.\
+      \ Computer Science Project, 6(3), 12-18.\" "
+    label: bibliography
+    mandatory: N
+    ro-crate: cito:citesForInformation
+    scope: Component
+    spar: cito:isCreditedBy
+    term: bibliography
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.Dictionary
+  Component/bibliography/deliverable-document:
+    _position: 60
+    constraint: N
+    description: Link to the deliverable document related to this component
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - deliverable-document:\n    - \"Kim, J., & Lee, S. (2019).\
+      \ A Novel Deep Learning Approach for Predicting Customer Behavior in E-commerce.\
+      \ International Journal of Computer Science, 14(3), 45-52. http://doi.org/10.xxxx\
+      \ \"\n"
+    label: deliverable document
+    mandatory: N
+    ro-crate: cito:isDocumentedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/TechArticle
+    scope: Component
+    spar: cito:isDocumentedBy
+    super-term: bibliography
+    term: deliverable-document
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.String
+  Component/bibliography/main-publication:
+    _position: 56
+    constraint: N
+    description: The primary, peer reviewed scientific publication related to this
+      component (if non peer-reviewed, use technical-report instead).
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - main-publication:\n    - \"Kim, J., & Lee, S. (2019). A\
+      \ Novel Deep Learning Approach for Predicting Customer Behavior in E-commerce.\
+      \ International Journal of Computer Science, 14(3), 45-52. http://doi.org/10.xxxx\
+      \ \"\n"
+    label: "main \npublication"
+    mandatory: N
+    ro-crate: cito:isReferencedBy
+    schema-property: https://schema.org/citation
+    schema-range: https://schema.org/Article
+    scope: Component
+    super-term: bibliography
+    term: main-publication
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Component/bibliography/main-report:
+    _position: 58
+    constraint: N
+    description: The primary document related to this component (if peer-reviewed
+      publication, use scientific-work instead).
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - main-report:\n    - \"Kim, J., & Lee, S. (2019). A Novel\
+      \ Deep Learning Approach for Predicting Customer Behavior in E-commerce. International\
+      \ Journal of Computer Science, 14(3), 45-52. http://doi.org/10.xxxx \"\n"
+    label: main technical report
+    mandatory: N
+    ro-crate: cito:isDocumentedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Report
+    scope: Component
+    super-term: bibliography
+    term: main-report
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Component/bibliography/publication:
+    _position: 57
+    constraint: N
+    description: A peer reviewed scientific publication related to this component
+      (if non peer-reviewed, use technical-report instead).
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - publication:\n    - \"Kim, J., & Lee, S. (2019). A Novel\
+      \ Deep Learning Approach for Predicting Customer Behavior in E-commerce. International\
+      \ Journal of Computer Science, 14(3), 45-52. http://doi.org/10.xxxx \"\n"
+    label: publication
+    mandatory: N
+    ro-crate: cito:isReferencedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Article
+    scope: Component
+    super-term: bibliography
+    term: publication
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Component/bibliography/published-in:
+    _position: 55
+    constraint: N
+    description: Link to a meaningful venue where the current component is served
+      or published (e.g. a dataset published on a web portal).
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n  - published-in: \"Lee, S., & Kim, J. (2010). A Comparative\
+      \ Study of Machine Learning Algorithms for Sentiment Analysis. Communications\
+      \ in Computer and Information Science, 45(1), 23-29.\"\n  - technical-report:\n\
+      \    - \"Kim, J., & Lee, S. (2019). A Novel Deep Learning Approach for Predicting\
+      \ Customer Behavior in E-commerce. International Journal of Computer Science,\
+      \ 14(3), 45-52. http://doi.org/10.xxxx \"\n"
+    label: published in
+    mandatory: N
+    ro-crate: publisher
+    schema-property: https://schema.org/mainEntityOfPage
+    scope: Component
+    super-term: bibliography
+    term: published-in
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.String
+  Component/bibliography/report:
+    _position: 59
+    constraint: N
+    description: A document related to this component (if peer-reviewed publication,
+      use publication instead).
+    domain:
+    - Component
+    example-values:
+    - "bibliography:\n   - report:\n      - http://doi.org/10.xxxx \n  - deliverable-document:\
+      \ \n    - http://something.pdf "
+    label: technical report
+    mandatory: N
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Report
+    scope: Component
+    super-term: bibliography
+    term: report
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.String
+  Component/changelog:
+    _position: 38
+    constraint: Y
+    description: Link to a Changelog document, a file which contains a chronologically
+      ordered list of notable changes for each version of the component.
+    domain:
+    - Component
+    example-values:
+    - 'changelog: "https://github.com/my-org/my-project/releases" '
+    - '
+
+      changelog: "./CHANGELOG"'
+    label: changelog
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: discussionUrl
+    schema-property: https://schema.org/discussionUrl
+    scope: Component
+    spar: cito:isDocumentedBy
+    term: changelog
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/component-id:
+    _position: 23
+    constraint: N
+    description: The ID of the component in the Ecosystem. Can be a local identifier
+      or a URI.
+    domain:
+    - Component
+    example-values:
+    - 'component-id: my-dataset1'
+    label: component ID
+    mandatory: Y
+    regex: '[^\s]+(/[^\s]+(/[^\s]+)?)?'
+    schema-property: https://schema.org/identifier
+    scope: Component
+    spar: dcterms:identifier
+    term: component-id
+    unique: Y
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/contributors:
+    _position: 41
+    constraint: Y
+    description: 'A list of contributors in the form: "Name <name.surname@mail.com>"'
+    domain:
+    - Component
+    example-values:
+    - 'contributors:
+
+      - John Doe <john@doe.com>
+
+      - Mick1234 <mick1234@mail.com>
+
+      - Fabio009 <http://fabio009.com>
+
+      - <http://github.com/enridaga>
+
+      - Name Surname
+
+      - Name Surname <email>
+
+      - Name Surname <URI>
+
+      - Name Surname <URI> <ORCID>
+
+      - Name Surname <URI|email|ORCID>*'
+    label: contributors
+    mandatory: N
+    regex: TODO
+    ro-crate: contributor
+    schema-property: https://schema.org/contributor
+    scope: Component
+    spar: 'dcterms:creator
+
+      dcterms:contributor'
+    term: contributors
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/copyright:
+    _position: 40
+    constraint: N
+    description: Copyright info
+    domain:
+    - Component
+    example-values:
+    - 'copyright: "The project contributors" '
+    - '
+
+      copyright: "http://my.organisation.org"'
+    label: copyright
+    mandatory: N
+    schema-property: https://schema.org/copyrightNotice
+    scope: Component
+    term: copyright
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/credits:
+    _position: 61
+    constraint: N
+    description: Credits
+    domain:
+    - Component
+    example-values:
+    - This project was funded by the European Union
+    label: credits
+    mandatory: N
+    schema-property: https://schema.org/creditText
+    scope: Component
+    term: credits
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Component/demo:
+    _position: 33
+    constraint: Y
+    description: Link to an online demo of the component
+    domain:
+    - Component
+    example-values:
+    - 'http://data.open.ac.uk/sparql-demo '
+    label: demo
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: workExample
+    schema-property: https://schema.org/workExample
+    scope: Component
+    spar: fabio:isManifestationOf
+    term: demo
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/description:
+    _position: 26
+    constraint: N
+    description: A text describing the component
+    domain:
+    - Component
+    example-values:
+    - 'description: "A longer description of a dataset, a software, or some other
+      component"'
+    label: description
+    mandatory: Y
+    ro-crate: description
+    schema-property: 'https://schema.org/abstract '
+    scope: Component
+    spar: dcterms:description
+    term: description
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/doi:
+    _position: 37
+    constraint: Y
+    description: The DOI of the GitHub repository related to this component, e.g.
+      as published on Zenodo.org
+    domain:
+    - Component
+    example-values:
+    - 'doi: http://doi.org/10.xxxxxx '
+    - '
+
+      doi: 10.zenodo.1234566'
+    label: DOI
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: identifier
+    schema-property: https://schema.org/identifier
+    schema-range: 'https://schema.org/PropertyValue / https://schema.org/propertyID
+      = "doi";
+
+
+      https://schema.org/PropertyValue / https://schema.org/value = "the value of
+      the doi"'
+    scope: Component
+    term: doi
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/image:
+    _position: 27
+    constraint: N
+    description: Link to one reference image illustrating the component
+    domain:
+    - Component
+    example-values:
+    - 'image: http://www.example.org/image.jpg'
+    label: image
+    mandatory: N
+    ro-crate: image
+    schema-property: https://schema.org/image
+    scope: Component
+    spar: cito:isDocumentedBy
+    term: image
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/licence:
+    _position: 39
+    constraint: N
+    description: Link to a licence document of the resource, or a string pointing
+      to one of the supported licences in the framework.
+    domain:
+    - Component
+    example-values:
+    - 'licence:
+
+      - CC-BY '
+    - '
+
+      licence:
+
+      - https://creativecommons.org/licenses/by/4.0/ '
+    - '
+
+      licence:
+
+      - "This component is unlicenced" '
+    - '
+
+      licence:
+
+      - APACHE-2.0
+
+      - CC-BY-SA_v4'
+    label: licence
+    mandatory: N
+    ro-crate: license
+    schema-property: https://schema.org/license
+    scope: Component
+    spar: dcterms:license
+    term: licence
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/logo:
+    _position: 28
+    constraint: Y
+    description: Logo of the component in Web format. Accepted image formats are JPEG
+      and PNG.
+    domain:
+    - Component
+    example-values:
+    - 'logo: https://avatars.githubusercontent.com/u/79987779?s=200&v=4'
+    label: logo
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: logo
+    schema-property: https://schema.org/logo
+    scope: Component
+    term: logo
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/name:
+    _position: 25
+    constraint: N
+    description: The name of the component
+    domain:
+    - Component
+    example-values:
+    - 'name: "The name of my database"'
+    label: name
+    mandatory: Y
+    ro-crate: name
+    schema-property: 'https://schema.org/title '
+    scope: Component
+    spar: dcterms:title
+    term: name
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/pilot:
+    _position: 30
+    constraint: N
+    description: A pilot application or case study
+    domain:
+    - Component
+    example-values:
+    - '- MEETUPS
+
+      - BELLS'
+    label: pilot
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: https://schema.org/isPartOf
+    schema-range: '?'
+    scope: Component
+    spar: frbr:partOf
+    term: pilot
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Component/project:
+    _position: 31
+    constraint: Y
+    description: The local id of the project
+    domain:
+    - Component
+    example-values:
+    - '- polifonia'
+    label: project
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: 'https://schema.org/isPartOf / http://schema.org/identifier '
+    schema-range: https://schema.org/Project
+    scope: Component
+    term: project
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Component/related-components:
+    _position: 42
+    constraint: N
+    description: List of components that are related to this one.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n- informed-by: component-local-11\n- use-case: \n   -\
+      \ component-local-12\n   - component-local-13\n- story: [ story1, story2 ]"
+    label: "related \ncomponents"
+    mandatory: N
+    ro-crate: isRelatedTo
+    schema-property: iterate over children
+    scope: Component
+    spar: 'cito:usesDataFrom / cito:providesDataFor
+
+      cito:usesMethodIn / cito:providesMethodFor
+
+      cito:isExtendedBy / cito:extends'
+    term: related-components
+    unique: N
+    xsd-datatype:
+    - Component
+    yaml-type: List.Dictionary
+  Component/related-components/derived-from:
+    _position: 53
+    constraint: N
+    description: Link to a resource from which this component was derived from.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - derived-from: \n     - my-component-algorithm"
+    label: generated by
+    mandatory: N
+    ro-crate: prov:wasDerivedFrom
+    schema-property: https://schema.org/isBasedOn
+    scope: Component
+    super-term: related-components
+    term: derived-from
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/documentation:
+    _position: 47
+    constraint: N
+    description: 'Link to the documentation of the component. '
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - documentation: \n     - component-source-javadoc"
+    label: documentation
+    mandatory: N
+    ro-crate: cito:isDocumentedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/HowTo
+    scope: Component
+    spar: cito:isDocumentedBy
+    super-term: related-components
+    term: documentation
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/evaluated-in:
+    _position: 48
+    constraint: N
+    description: Link to a document (e.g. a user study) or source code demonstrating
+      the validity of the component.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - evaluated-in: \n     - component-notebook"
+    label: evaluated in
+    mandatory: N
+    ro-crate: cito:isSupportedBy
+    schema-property: https://schema.org/review
+    schema-range: https://schema.org/Review
+    scope: Component
+    super-term: related-components
+    term: evaluated-in
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/extends:
+    _position: 49
+    constraint: N
+    description: Link to a component that is extended by the current component. If
+      not a component, can be an external URI
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - extends: \n     - \"Apache Jena http://jena.apache.org\"\
+      \n     - other-component"
+    label: extends
+    mandatory: N
+    ro-crate: cito:extends
+    schema-property: https://schema.org/isPartOf
+    scope: Component
+    super-term: related-components
+    term: extends
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/generated-by:
+    _position: 52
+    constraint: N
+    description: Link to a software, dataset, or any other component that produced
+      or generated the current component. Can be a component or an external URL.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - generated-by: \n     - my-component-algorithm"
+    label: generated by
+    mandatory: N
+    ro-crate: cito:isCompiledBy
+    schema-property: https://schema.org/provider
+    scope: Component
+    super-term: related-components
+    term: generated-by
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/informed-by:
+    _position: 43
+    constraint: N
+    description: The component was informed by another component (or resource), for
+      example, a requirements document or a Persona, a Story, a use case, etc...
+    domain:
+    - Component
+    example-values:
+    - "related-component:\n- informed-by: \n   - requirement-document-1\n   - http://www.link-to-website-with-requirements.com"
+    label: informed by
+    mandatory: N
+    ro-crate: prov:wasInformedBy
+    schema-property: https://schema.org/usageInfo
+    scope: Component
+    super-term: related-components
+    term: informed-by
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/persona:
+    _position: 46
+    constraint: N
+    description: Link to one or more persona. This term is a specialisation of 'informed-by'.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - persona: \n     - John-component\n     - Monica-component"
+    label: persona
+    mandatory: N
+    ro-crate: prov:wasInformedBy
+    schema-property: https://schema.org/isBasedOn
+    schema-range: https://schema.org/ShortStory
+    scope: Component
+    spar: cito:obtainsBackgroundFrom
+    super-term: related-components
+    term: persona
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/reuses:
+    _position: 50
+    constraint: N
+    description: Link to a component that is reused as-is by the current component.
+      Can be a component or an external URL.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - reuses: \n     - \"Apache Jena http://jena.apache.org\"\
+      \n     - other-component"
+    label: reuses
+    mandatory: N
+    ro-crate: cito:usesMethodIn
+    schema-property: https://schema.org/hasPart
+    scope: Component
+    super-term: related-components
+    term: reuses
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/serves:
+    _position: 51
+    constraint: N
+    description: Link to a dataset that is served by the current component (e.g. an
+      API). Can be a component or an external dataset.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - serves: \n     - my-dataset"
+    label: "serves data \nfrom"
+    mandatory: N
+    ro-crate: cito:providesDataFor
+    schema-property: https://schema.org/supportingData
+    scope: Component
+    super-term: related-components
+    term: serves
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/story:
+    _position: 45
+    constraint: N
+    description: Link to one or more user stories. This term is a specialisation of
+      'informed-by'.
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - story: \n     - story1-component\n     - story2-component"
+    label: story
+    mandatory: N
+    ro-crate: prov:wasInformedBy
+    schema-property: https://schema.org/isBasedOn
+    schema-range: '?'
+    scope: Component
+    spar: cito:obtainsBackgroundFrom
+    super-term: related-components
+    term: story
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/related-components/use-case:
+    _position: 44
+    constraint: N
+    description: Link to one or more use cases. This term is a specialisation of 'informed-by'
+    domain:
+    - Component
+    example-values:
+    - "related-components:\n  - use-case: my-use-case-component"
+    label: use case
+    mandatory: N
+    ro-crate: prov:wasInformedBy
+    schema-property: https://schema.org/assesses
+    scope: Component
+    spar: cito:obtainsBackgroundFrom
+    super-term: related-components
+    term: use-case
+    unique: N
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: List.String
+  Component/release-date:
+    _position: 34
+    constraint: Y
+    description: The date the component was released. Accepted values include any
+      valid XSD date.
+    domain:
+    - Component
+    example-values:
+    - 'release-date: 2022-02-02 '
+    - '
+
+      release-date: 2020-01-10T12:00:00'
+    label: "release \ndate"
+    mandatory: N
+    ro-crate: releaseDate
+    schema-property: 'https://schema.org/releasedEvent / https://schema.org/startDate '
+    scope: Component
+    spar: dcterms:issued
+    term: release-date
+    unique: N
+    xsd-datatype:
+    - date
+    yaml-type: String
+  Component/release-link:
+    _position: 36
+    constraint: Y
+    description: Link to access or download the component release
+    domain:
+    - Component
+    example-values:
+    - 'release-link: https://github.com/SPARQL-Anything/sparql.anything/releases/tag/v0.8.1'
+    label: release link
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: downloadUrl
+    schema-property: https://schema.org/releasedEvent / https://schema.org/releaseNotes
+    scope: Component
+    spar: fabio:hasURL
+    term: release-link
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Component/release-number:
+    _position: 35
+    constraint: N
+    description: 'Version number of the release. Any value is permitted, although
+      we recommend semantic versioning: https://semver.org/'
+    domain:
+    - Component
+    example-values:
+    - 'release-number: v0.1'
+    label: "release \nnumber"
+    mandatory: N
+    ro-crate: version
+    schema-property: https://schema.org/releasedEvent / https://schema.org/softwareVersion
+    scope: Component
+    spar: prism:versionIdentifier
+    term: release-number
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/resource:
+    _position: 32
+    constraint: N
+    description: "The digital resource representing the component (e.g. if the component\
+      \ is of type Dataset, it may be my-dataset.csv or a folder in the repository).\
+      \ \nValues can be the path to a file (if 1 file), the path to a folder (if many\
+      \ files), or absolute URL of an online file (DOIs should not be used, use `doi`\
+      \ instead). It can be a URL of a remote resource, e.g. a Website or Web api."
+    domain:
+    - Component
+    example-values:
+    - 'resource: ./data.csv '
+    - '
+
+      resource: "http://www.example.org/myFile.json" '
+    - '
+
+      resource: "./data/" '
+    - '
+
+      resource: "http://data.open.ac.uk/sparql"
+
+      '
+    label: resource
+    mandatory: N
+    ro-crate: '@ id '
+    schema-property: https://schema.org/distribution
+    scope: Component
+    term: resource
+    unique: Y
+    xsd-datatype:
+    - string
+    - anyURI
+    yaml-type: String
+  Component/type:
+    _position: 24
+    constraint: Y
+    description: The component type, according to the list of components available.
+    domain:
+    - Component
+    enum:
+    - Component
+    - Dataset
+    - Registry
+    - RequirementsCollection
+    - Workflow
+    - Software
+    - Service
+    - Tutorial
+    - Web site
+    - Survey
+    - EcosystemWebsite
+    - SoftwareLibrary
+    - DockerImageContainer
+    - RunningInstance
+    - Ontology
+    - Notebook
+    - Script
+    - KnowledgeGraph
+    - InPresenceSurvey
+    - FocusGroup
+    - Story
+    - Persona
+    - Report
+    - Deliverable
+    - Documentation
+    - EvaluationReport
+    example-values:
+    - 'type: Dataset'
+    label: type
+    mandatory: Y
+    ro-crate: '@ type '
+    schema-property: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+    schema-range: "should reconstruct the class URI from the input text, \nusing the\
+      \ controlled vocabulary in Types"
+    scope: Component
+    spar: rdf:type
+    term: type
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Component/work-package:
+    _position: 29
+    constraint: N
+    description: The work package associated to this component, if any.
+    domain:
+    - Component
+    example-values:
+    - 'work-package:
+
+      - WP1
+
+      - WP5'
+    label: "work \npackage"
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: https://schema.org/isPartOf
+    schema-range: http://purl.org/spar/fabio/WorkPackage
+    scope: Component
+    spar: frbr:partOf
+    term: work-package
+    unique: N
+    xsd-datatype:
+    - 'string '
+    yaml-type: List.String
+  Container/bibliography:
+    _position: 16
+    constraint: N
+    description: List of bibliographic references that are relevant to the container
+      (activity)
+    domain:
+    - Container
+    example-values:
+    - "bibliography:\n  - main-publication: \"7. Wang, Y., & Chen, X. (2013). A Novel\
+      \ Approach for Cloud Computing Security Using Homomorphic Encryption. Communications\
+      \ in Computer and Information Science, 50(1), 67-73.\"\n  - technical-report:\n\
+      \    - \"8. Li, J., & Yang, S. (2012). A New Algorithm for Text Classification\
+      \ Based on Support Vector Machines. Technical Report: Computer Science and Information\
+      \ Security, 7(4), 23-30.\"\n  - deliverable-document: \n    - \"Zhang, H., &\
+      \ Liu, Y. (2011). A Survey of Data Mining Techniques in Financial Analysis.\
+      \ Computer Science Project, 6(3), 12-18.\" "
+    label: bibliography
+    mandatory: N
+    ro-crate: cito:citesForInformation
+    schema-property: to be ignored
+    scope: Container
+    spar: cito:isCreditedBy
+    term: bibliography
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.Dictionary
+  Container/bibliography/deliverable-document:
+    _position: 21
+    constraint: N
+    description: Link to the deliverable document related to this activity
+    domain:
+    - Container
+    example-values:
+    - "bibliography:\n- deliverable-document: \n  - \"Smith, J. (2020). The Impact\
+      \ of Social Media on Mental Health. Technical Report.\""
+    label: deliverable document
+    mandatory: N
+    ro-crate: cito:isDocumentedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/TechArticle
+    scope: Container
+    spar: cito:isDocumentedBy
+    super-term: bibliography
+    term: deliverable-document
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.String
+  Container/bibliography/main-publication:
+    _position: 17
+    constraint: N
+    description: The primary, peer reviewed scientific publication related to this
+      research (if non peer-reviewed, use technical-report instead).
+    domain:
+    - Container
+    example-values:
+    - 'bibliography:
+
+      - main-publication: "Brown, L. (2019). The Role of Parenting Styles in Child
+      Development. Child Development Perspectives, 13(3), 145-153."
+
+      '
+    label: "main \npublication"
+    mandatory: N
+    ro-crate: cito:isReferencedBy
+    schema-property: https://schema.org/citation
+    schema-range: https://schema.org/Article
+    scope: Container
+    super-term: bibliography
+    term: main-publication
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Container/bibliography/main-report:
+    _position: 20
+    constraint: N
+    description: The primary document related to this research (if peer-reviewed publication,
+      use publication instead).
+    domain:
+    - Container
+    example-values:
+    - "bibliography:\n- main-report: \n  - \"Smith, J. (2020). The Impact of Social\
+      \ Media on Mental Health. Technical Report.\""
+    label: main technical report
+    mandatory: N
+    ro-crate: cito:isDocumentedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Report
+    scope: Container
+    super-term: bibliography
+    term: main-report
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Container/bibliography/publication:
+    _position: 18
+    constraint: N
+    description: A peer reviewed scientific publication related to this component
+      (if non peer-reviewed, use technical-report instead).
+    domain:
+    - Container
+    example-values:
+    - "bibliography:\n- publication: \n  - \"Smith, J. (2020). The Impact of Social\
+      \ Media on Mental Health. Journal of Psychology and Behavioral Sciences, 15(2),\
+      \ 45-62.\""
+    label: publication
+    mandatory: N
+    ro-crate: cito:isReferencedBy
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Article
+    scope: Container
+    super-term: bibliography
+    term: publication
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: String
+  Container/bibliography/report:
+    _position: 19
+    constraint: N
+    description: A document related to this component (if peer-reviewed publication,
+      use publication instead).
+    domain:
+    - Container
+    example-values:
+    - "bibliography:\n- report: \n  - \"Smith, J. (2020). The Impact of Social Media\
+      \ on Mental Health. Technical Report.\""
+    label: technical report
+    mandatory: N
+    schema-property: https://schema.org/subjectOf
+    schema-range: https://schema.org/Report
+    scope: Container
+    super-term: bibliography
+    term: report
+    unique: N
+    xsd-datatype:
+    - string
+    - ' anyURI'
+    yaml-type: List.String
+  Container/container-id:
+    _position: 1
+    constraint: Y
+    description: Local identifier of the container
+    domain:
+    - Container
+    example-values:
+    - 'container-id: my-open-source-project'
+    label: container identifier
+    mandatory: Y
+    regex: '[^\s]+(/[^\s]+(/[^\s]+)?)?'
+    ro-crate: '@ id '
+    schema-property: 'http://schema.org/identifier '
+    scope: Container
+    term: container-id
+    unique: Y
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/credits:
+    _position: 11
+    constraint: N
+    description: Credits
+    domain:
+    - Container
+    example-values:
+    - 'credits: "This project was funded by the European Union"'
+    label: credits
+    mandatory: N
+    schema-property: https://schema.org/creditText
+    scope: Container
+    term: credits
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Container/description:
+    _position: 4
+    constraint: N
+    description: A text describing the component
+    domain:
+    - Container
+    example-values:
+    - 'description: "A longer description of a project, activity, or task."'
+    label: description
+    mandatory: Y
+    ro-crate: description
+    schema-property: 'https://schema.org/abstract '
+    scope: Container
+    spar: dcterms:description
+    term: description
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/funder:
+    _position: 7
+    constraint: N
+    description: The name of the funding body of the project and the URL
+    domain:
+    - Container
+    example-values:
+    - "funder:\n- name: H2020\n  url: www.example.org\n  grant-agreement: ABC123456\n\
+      - name: AHRC\n  url: www.another.org\n  grant-agreement: ABC234"
+    label: funder
+    mandatory: N
+    schema-property: iterate over children
+    scope: Container
+    spar: "frapo:isOutputOf (Investigation) \n> frapo:isEnabledBy (Project) \n> frapo:isFundedBy\
+      \ (Grant) \n> frapo:isAwardedBy (Funding Agency) "
+    term: funder
+    unique: N
+    yaml-type: List.Dictionary
+  Container/funder/grant-agreement:
+    _position: 8
+    constraint: N
+    description: Identifier of the grant agreement relative to the funding organisation
+    domain:
+    - Container
+    example-values:
+    - "funder:\n- name: H2020\n  url: www.example.org\n  grant-agreement: ABC123456\n\
+      - name: AHRC\n  url: www.another.org\n  grant-agreement: ABC234"
+    label: grant agreement
+    mandatory: N
+    ro-crate: funding[Grant]/identifier
+    schema-property: 'https://schema.org/funding
+
+      '
+    schema-range: 'https://schema.org/Grant '
+    scope: Container
+    spar: "frapo:isOutputOf (Investigation) \n> frapo:isEnabledBy (Project) \n> frapo:isFundedBy\
+      \ (Grant) \n> frapo:hasGrantNumber "
+    super-term: funder
+    term: grant-agreement
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/funder/name:
+    _position: 9
+    constraint: N
+    description: The name of the funder
+    domain:
+    - Container
+    example-values:
+    - "funder:\n- name: H2020\n  url: www.example.org\n  grant-agreement: ABC123456\n\
+      - name: AHRC\n  url: www.another.org\n  grant-agreement: ABC234"
+    label: funder name
+    mandatory: N
+    ro-crate: funding[Grant]/funder[Organization]/name
+    schema-property: 'https://schema.org/funding / https://schema.org/funder / https://schema.org/name '
+    scope: Container
+    super-term: funder
+    term: name
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/funder/url:
+    _position: 10
+    constraint: Y
+    description: Link to the funder organisation web site
+    domain:
+    - Container
+    example-values:
+    - "funder:\n- name: H2020\n  url: www.example.org\n  grant-agreement: ABC123456\n\
+      - name: AHRC\n  url: www.another.org\n  grant-agreement: ABC234"
+    label: funder URL
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: funding[Grant]/funder[Organization]/url
+    schema-property: 'https://schema.org/funding / https://schema.org/funder / https://schema.org/url '
+    scope: Container
+    super-term: funder
+    term: url
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Container/has-part:
+    _position: 22
+    constraint: Y
+    description: List of components or containers that are parts of this container.
+      Refer to components with organisation, repo and local id of the component
+    domain:
+    - Container
+    example-values:
+    - 'has-part:
+
+      - polifonia/musow/my-dataset
+
+      - polifonia/meetups/my-dataset
+
+      - other/repo/my-dataset'
+    label: has part
+    mandatory: N
+    regex: '[^\s]+(/[^\s]+(/[^\s]+)?)?'
+    ro-crate: 'hasPart '
+    schema-property: https://schema.org/hasPart
+    scope: Container
+    term: has-part
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Container/image:
+    _position: 5
+    constraint: N
+    description: Link to one reference image illustrating the component
+    domain:
+    - Container
+    example-values:
+    - 'image: "http://www.example.org/image.jpg"'
+    label: image
+    mandatory: N
+    ro-crate: image
+    schema-property: https://schema.org/image
+    scope: Container
+    spar: cito:isDocumentedBy
+    term: image
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Container/logo:
+    _position: 6
+    constraint: Y
+    description: Logo of the component in Web format. Accepted image formats are JPEG
+      and PNG.
+    domain:
+    - Container
+    example-values:
+    - 'logo: "https://avatars.githubusercontent.com/u/79987779?s=200&v=4"'
+    label: logo
+    mandatory: N
+    regex: ^http[s]?://.+$
+    ro-crate: logo
+    schema-property: https://schema.org/logo
+    scope: Container
+    term: logo
+    unique: N
+    xsd-datatype:
+    - anyURI
+    yaml-type: String
+  Container/name:
+    _position: 3
+    constraint: N
+    description: The container name
+    domain:
+    - Container
+    example-values:
+    - 'name: "A short project name"'
+    label: container name
+    mandatory: Y
+    ro-crate: name
+    schema-property: https://schema.org/title
+    scope: Container
+    term: name
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/pilot:
+    _position: 14
+    constraint: N
+    description: A pilot application or case study
+    domain:
+    - Container
+    example-values:
+    - '- MEETUPS
+
+      - BELLS'
+    label: pilot
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: https://schema.org/isPartOf
+    schema-range: '?'
+    scope: Container
+    spar: frbr:partOf
+    term: pilot
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Container/project:
+    _position: 15
+    constraint: Y
+    description: The local id of the project
+    domain:
+    - Container
+    example-values:
+    - '- polifonia'
+    label: project
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: 'https://schema.org/isPartOf / http://schema.org/identifier '
+    schema-range: https://schema.org/Project
+    scope: Container
+    term: project
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: List.String
+  Container/ro-crate:
+    _position: 12
+    constraint: Y
+    description: Specifies whether this yaml file is the reference file for creating
+      a RO crate.
+    domain:
+    - Container
+    enum:
+    - 'true'
+    - 'false'
+    example-values:
+    - 'ro-crate: true'
+    label: ro crate
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: to be ignored
+    scope: Container
+    term: ro-crate
+    unique: N
+    xsd-datatype:
+    - boolean
+    yaml-type: Boolean
+  Container/type:
+    _position: 2
+    constraint: Y
+    description: The type of container (Project, WorkPackage, ?)
+    domain:
+    - Container
+    example-values:
+    - 'type: Project'
+    label: container type
+    mandatory: Y
+    schema-property: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+    schema-range: "should reconstruct the class URI from the input text, \nusing the\
+      \ controlled vocabulary in Types"
+    scope: Container
+    term: type
+    unique: N
+    xsd-datatype:
+    - string
+    yaml-type: String
+  Container/work-package:
+    _position: 13
+    constraint: N
+    description: The work package associated to this component, if any.
+    domain:
+    - Container
+    example-values:
+    - 'work-package:
+
+      - WP1
+
+      - WP5'
+    label: "work \npackage"
+    mandatory: N
+    ro-crate: isPartOf
+    schema-property: https://schema.org/isPartOf
+    schema-range: http://purl.org/spar/fabio/WorkPackage
+    scope: Container
+    spar: frbr:partOf
+    term: work-package
+    unique: N
+    xsd-datatype:
+    - 'string '
+    yaml-type: List.String
+types:
+  Application/CLITool:
+    _position: 20
+    label: Command Line Interface Tool
+    supertype-id: Application
+    type: CLITool
+  Application/MobileApp:
+    _position: 19
+    label: Mobile application
+    schema: https://schema.org/MobileApplication
+    supertype-id: Application
+    type: MobileApp
+  Application/WebApplication:
+    _position: 13
+    label: WebApplication
+    schema: https://schema.org/WebApplication
+    supertype-id: Application
+    type: WebApplication
+  Application/WebService:
+    _position: 14
+    description: E.g. Web APIs
+    label: Web Service
+    schema: 'https://schema.org/WebAPI '
+    supertype-id: Application
+    type: WebService
+  Application/WebSite:
+    _position: 12
+    label: Web site
+    schema: 'https://schema.org/WebSite '
+    spar-/-prov: fabio:WebSite
+    supertype-id: Application
+    type: WebSite
+  Component:
+    _position: 3
+    description: 'A component represents any output produced or used by the project. '
+    label: Component
+    note: A component is typically associated to one or more digital objects (but
+      it does not have to). The ecosystem is expected to include a metadata record
+      for each component. However, it does not have to include a metadata record for
+      resources that are managed outside of the research project.
+    spar-/-prov: frapo:MaterialOutput
+    type: Component
+  Component/Application:
+    _position: 18
+    label: Application
+    schema: https://schema.org/SoftwareApplication
+    spar-/-prov: fabio:ComputerApplication
+    supertype-id: Component
+    type: Application
+  Component/Data:
+    _position: 4
+    description: Data in the most general sense, produced or used.
+    label: Data
+    supertype-id: Component
+    type: Data
+  Component/Report:
+    _position: 37
+    label: Report
+    schema: https://schema.org/Report
+    spar-/-prov: fabio:Report
+    supertype-id: Component
+    type: Report
+  Component/Software:
+    _position: 21
+    label: Software
+    schema: https://schema.org/SoftwareApplication
+    spar-/-prov: fabio:ComputerProgram
+    supertype-id: Component
+    type: Software
+  Container:
+    _position: 1
+    description: A container groups ecosystem components under a common theme. Typically,
+      containers reflect research activities such as projects, working groups, etc...
+    is-ro-crate: Y
+    label: Container
+    note: A container groups a set of component together so that they can be seen
+      as a collection.
+    schema: https://schema.org/Collection
+    type: Container
+  Container/Pilot:
+    _position: 45
+    label: Pilot
+    spar-/-prov: frapo:Investigation
+    supertype-id: Container
+    type: Pilot
+  Container/Project:
+    _position: 2
+    description: A project in the most general sense. Examples can be an open source
+      software development project or a spin-off applying the research in the industry.
+    label: Project
+    schema: https://schema.org/Project
+    spar-/-prov: prov:Activity
+    supertype-id: Container
+    type: Project
+  Container/Task:
+    _position: 43
+    label: Task
+    spar-/-prov: frapo:Investigation
+    supertype-id: Container
+    type: Task
+  Container/UseCase:
+    _position: 44
+    label: Use Case
+    spar-/-prov: frapo:Investigation
+    supertype-id: Container
+    type: UseCase
+  Container/WorkPackage:
+    _position: 42
+    label: Work Package
+    spar-/-prov: http://purl.org/spar/fabio/WorkPackage
+    supertype-id: Container
+    type: WorkPackage
+  Container/WorkingGroup:
+    _position: 41
+    label: Working Group
+    spar-/-prov: frapo:Division / frapo:ResearchGroup
+    supertype-id: Container
+    type: WorkingGroup
+  Data/Dataset:
+    _position: 5
+    label: Dataset
+    schema: https://schema.org/Dataset
+    spar-/-prov: fabio:Dataset
+    supertype-id: Data
+    type: Dataset
+  Data/Schema:
+    _position: 6
+    label: Schema
+    spar-/-prov: http://www.w3.org/2004/02/skos/core#ConceptScheme
+    supertype-id: Data
+    type: Schema
+  Dataset/Corpus:
+    _position: 29
+    label: Corpus
+    schema: https://schema.org/Collection
+    supertype-id: Dataset
+    type: Corpus
+  Dataset/KnowledgeGraph:
+    _position: 31
+    label: Knowledge Graph
+    spar-/-prov: fabio:Dataset
+    supertype-id: Dataset
+    type: KnowledgeGraph
+  Dataset/Lexicon:
+    _position: 30
+    label: Lexicon
+    supertype-id: Dataset
+    type: Lexicon
+  Dataset/Ontology:
+    _position: 26
+    label: Ontology
+    spar-/-prov: fabio:Ontology
+    supertype-id: Dataset
+    type: Ontology
+  Dataset/Registry:
+    _position: 8
+    label: Registry
+    schema: 'https://schema.org/Registry '
+    spar-/-prov: fabio:Catalog
+    supertype-id: Dataset
+    type: Registry
+  Dataset/Repository:
+    _position: 7
+    label: Repository
+    schema: https://schema.org/codeRepository
+    supertype-id: Dataset
+    type: Repository
+  Documentation/Tutorial:
+    _position: 11
+    label: Tutorial
+    spar-/-prov: fabio:InstructionalWork
+    supertype-id: Documentation
+    type: Tutorial
+  Report /Deliverable:
+    _position: 38
+    label: Deliverable
+    spar-/-prov: fabio:ProjectReport
+    supertype-id: 'Report '
+    type: Deliverable
+  Report/Documentation:
+    _position: 39
+    label: Documentation
+    spar-/-prov: fabio:InstructionalWork
+    supertype-id: Report
+    type: Documentation
+  Report/EvaluationReport:
+    _position: 40
+    label: Evaluation Report
+    schema: https://schema.org/Review
+    supertype-id: Report
+    type: EvaluationReport
+  Report/RequirementsCollection:
+    _position: 9
+    label: Requirements Collection
+    spar-/-prov: fabio:Specification
+    supertype-id: Report
+    type: RequirementsCollection
+  Report/Survey:
+    _position: 16
+    label: Survey
+    spar-/-prov: fabio:Questionnaire
+    supertype-id: Report
+    type: Survey
+  RequirementsCollection/Mockup:
+    _position: 36
+    label: Mockup
+    supertype-id: RequirementsCollection
+    type: Mockup
+  RequirementsCollection/Persona:
+    _position: 35
+    label: Persona
+    spar-/-prov: fabio:MetadataDocument
+    supertype-id: RequirementsCollection
+    type: Persona
+  RequirementsCollection/Story:
+    _position: 34
+    label: Story
+    spar-/-prov: fabio:MetadataDocument
+    supertype-id: RequirementsCollection
+    type: Story
+  Software/API:
+    _position: 22
+    label: API
+    schema: 'https://schema.org/WebAPI '
+    spar-/-prov: 'fabio:API '
+    supertype-id: Software
+    type: API
+  Software/DockerImageContainer:
+    _position: 24
+    label: Docker Image Container
+    spar-/-prov: fabio:ComputerApplication
+    supertype-id: Software
+    type: DockerImageContainer
+  Software/Notebook:
+    _position: 27
+    label: Notebook
+    spar-/-prov: fabio:Script
+    supertype-id: Software
+    type: Notebook
+  Software/Script:
+    _position: 28
+    label: Script
+    spar-/-prov: fabio:Script
+    supertype-id: Software
+    type: Script
+  Software/SoftwareLibrary:
+    _position: 25
+    label: Software Library
+    spar-/-prov: fabio:Script
+    supertype-id: Software
+    type: SoftwareLibrary
+  Software/UserInterface:
+    _position: 23
+    label: User interface
+    supertype-id: Software
+    type: UserInterface
+  Software/Workflow:
+    _position: 10
+    label: Workflow
+    spar-/-prov: http://purl.org/spar/fabio/Workflow
+    supertype-id: Software
+    type: Workflow
+  Survey/FocusGroup:
+    _position: 33
+    label: Focus Group
+    spar-/-prov: fabio:Questionnaire
+    supertype-id: Survey
+    type: FocusGroup
+  Survey/InPresenceSurvey:
+    _position: 32
+    label: In presence survey
+    spar-/-prov: fabio:Questionnaire
+    supertype-id: Survey
+    type: InPresenceSurvey
+  Web site/EcosystemWebsite:
+    _position: 17
+    label: Ecosystem Website
+    spar-/-prov: fabio:Wiki
+    supertype-id: Web site
+    type: EcosystemWebsite
+  WebService/SPARQLEndpoint:
+    _position: 15
+    label: SPARQL Endpoint
+    spar-/-prov: http://purl.org/spar/fabio/Triplestore
+    supertype-id: WebService
+    type: SPARQLEndpoint
