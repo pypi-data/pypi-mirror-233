@@ -1,0 +1,7 @@
+setup.py
+freo/__init__.py
+freo/main.py
+freo.egg-info/PKG-INFO
+freo.egg-info/SOURCES.txt
+freo.egg-info/dependency_links.txt
+freo.egg-info/top_level.txt
