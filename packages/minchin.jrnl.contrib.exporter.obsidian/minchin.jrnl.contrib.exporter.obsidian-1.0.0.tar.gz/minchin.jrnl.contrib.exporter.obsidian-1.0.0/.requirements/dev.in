@@ -1,0 +1,9 @@
+# meta tools
+pip-tools >= 7
+
+# lint
+black
+isort
+
+# releases
+minchin.releaser

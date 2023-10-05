@@ -1,0 +1,7 @@
+minchin.jrnl>=7.1
+
+[dev]
+pip-tools>=7
+black
+isort
+minchin.releaser

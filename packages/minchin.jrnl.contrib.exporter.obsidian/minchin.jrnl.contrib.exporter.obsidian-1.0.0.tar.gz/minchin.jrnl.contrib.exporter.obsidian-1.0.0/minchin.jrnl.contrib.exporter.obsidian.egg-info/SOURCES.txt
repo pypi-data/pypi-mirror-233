@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+.requirements/base.in
+.requirements/dev.in
+minchin.jrnl.contrib.exporter.obsidian.egg-info/PKG-INFO
+minchin.jrnl.contrib.exporter.obsidian.egg-info/SOURCES.txt
+minchin.jrnl.contrib.exporter.obsidian.egg-info/dependency_links.txt
+minchin.jrnl.contrib.exporter.obsidian.egg-info/requires.txt
+minchin.jrnl.contrib.exporter.obsidian.egg-info/top_level.txt
+minchin/jrnl/contrib/exporter/obsidian.py
