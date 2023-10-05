@@ -1,0 +1,10 @@
+License
+README.md
+setup.py
+gigi_pdf.egg-info/PKG-INFO
+gigi_pdf.egg-info/SOURCES.txt
+gigi_pdf.egg-info/dependency_links.txt
+gigi_pdf.egg-info/top_level.txt
+gigipdf/__init__.py
+gigipdf/pdf2image.py
+gigipdf/pdf2text.py
