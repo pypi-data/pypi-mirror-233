@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: aiida-abinit
+Version: 0.5.0
+Summary: The AiiDA plugin for ABINIT.
+Keywords: aiida,abinit
+Author-email: Samuel Ponce <samuel.pon@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AiiDA
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiida_core[atomic_tools]~=2.0
+Requires-Dist: aiida-pseudo~=1.0
+Requires-Dist: abipy>=0.8.0
+Requires-Dist: packaging
+Requires-Dist: pymatgen<=v2023.9.10
+Requires-Dist: numpy
+Requires-Dist: importlib_resources
+Requires-Dist: sphinx ; extra == "docs"
+Requires-Dist: docutils ; extra == "docs"
+Requires-Dist: sphinx-copybutton~=0.3.0 ; extra == "docs"
+Requires-Dist: sphinx-book-theme~=0.1.0 ; extra == "docs"
+Requires-Dist: sphinx-click~=2.7.1 ; extra == "docs"
+Requires-Dist: pre-commit~=2.2 ; extra == "pre-commit"
+Requires-Dist: pylint==2.6.0 ; extra == "pre-commit"
+Requires-Dist: pgtest~=1.3 ; extra == "tests"
+Requires-Dist: pytest~=7.2 ; extra == "tests"
+Requires-Dist: pytest-regressions~=1.0 ; extra == "tests"
+Project-URL: Home, https://github.com/sponce24/aiida-abinit
+Project-URL: Source, https://github.com/sponce24/aiida-abinit
+Provides-Extra: docs
+Provides-Extra: pre-commit
+Provides-Extra: tests
+
+# `aiida-abinit`
+[![PyPI version](https://badge.fury.io/py/aiida-abinit.svg)](https://badge.fury.io/py/aiida-abinit)
+[![Build Status](https://github.com/sponce24/aiida-abinit/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/sponce24/aiida-abinit/actions)
+
+
+This is an [AiiDA](http://www.aiida.net/) plugin for [ABINIT](https://www.abinit.org/).
+
+## Installation
+To install from PyPI, simply execute:
+
+    pip install aiida-abinit
+
+To install from source, execute:
+
+    git clone https://github.com/sponce24/aiida-abinit
+    pip install aiida-abinit
+
+## Pseudopotentials
+Pseudopotentials are installed and managed through the [`aiida-pseudo` plugin](https://pypi.org/project/aiida-pseudo/).
+The easiest way to install pseudopotentials is to install a version of the [PseudoDojo](http://www.pseudo-dojo.org/) through the CLI of `aiida-pseudo`.
+To install the default PseudoDojo version, run:
+
+    aiida-pseudo install pseudo-dojo
+
+List the installed pseudopotential families with the command `aiida-pseudo list`.
+
+## Acknowledgements
+
+This work was supported by the the European Unions Horizon 2020 Research and Innovation Programme,
+under the [Marie Skłodowska-Curie Grant Agreement SELPH2D No. 839217](https://cordis.europa.eu/project/id/839217).
+
+![MSC](docs/source/images/MSC-logo.png)
+
+## License
+
+MIT
+
+## Contact
+
+`aiida-abinit` is developed and maintained by
+
+* [Samuel Poncé](https://www.samuelponce.com/) - samuel.pon@gmail.com
+* [Guido Petretto](https://uclouvain.be/fr/repertoires/guido.petretto)
+* [Austin Zadoks](https://people.epfl.ch/austin.zadoks/?lang=en) - austin.zadoks@epfl.ch
+
