@@ -1,0 +1,5 @@
+openai
+tiktoken
+jsonschema
+dirtyjson
+llama-cpp-python
