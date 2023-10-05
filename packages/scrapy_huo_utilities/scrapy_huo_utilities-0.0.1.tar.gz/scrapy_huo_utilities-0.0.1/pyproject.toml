@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "scrapy_huo_utilities"
+version = "0.0.1"
+description = "scrapy_huo_utilities是自用的一些scrapy工具代码合集。"
+authors = ["ranvane <ranvane@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://gitee.com/ranvane/scrapy_huo_utilities"
+repository = "https://gitee.com/ranvane/scrapy_huo_utilities"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+scrapy = "^2.0.0"
+loguru = "^0.7.2"
+fake-agent = "^0.1.4"
+lxml = "^4.8.0"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
+
+#设置poetry包管理工具的自定义pypi镜像源配置
+[[tool.poetry.source]]
+name = "aliyun"
+url = "http://mirrors.aliyun.com/pypi/simple"
+default = true
