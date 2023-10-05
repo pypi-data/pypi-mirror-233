@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mesa_interactive
+Version: 0.0.1
+Summary: Interactive visualization of Mesa simulations
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.6
+Requires-Dist: altair
+Requires-Dist: mesa
+Requires-Dist: solara
+Description-Content-Type: text/markdown
+
+# mesa-interactive
+ Tools for interactive abm explorations
