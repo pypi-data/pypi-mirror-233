@@ -1,0 +1,202 @@
+# Mouritech Custome package on  Performance Logging
+## Package Name 
+### MT_PY_PerformanceLogging
+
+''' Performance in python.
+This is the project ,Whenever you need to check the performance of the code like time taken by the code to perform some task ,we will use this package in our module'''
+
+
+## Author
+
+* [Sirisha .v](siriteju343@gmail.com)
+
+## Requirements 
+'''For running this, you need to have python3 installed on your system'''
+
+
+## Debugging tools 
+
+'''supported tools pycharm ,Anakonda ,Visual Studio etc...
+
+
+## Installation 
+
+Install my-project with Python
+Install MT_PY_Performancelogging_ver2
+### At command Promt
+```cmd
+
+  pip install  MT_PY_Performancelogging_ver2
+  cd  MT_PY_PerformanceLogging_ver2
+``` 
+  (Globally )
+``` py
+pip install MT_PY_Performancelogging_ver2
+
+```
+
+## Steps 
+
+  Before using library, you need setup some things in your django project, please follow this steps
+1. Create virtual Environment for our Project ,
+2. Setup all required variables in your settings.py
+
+#### At terminal :
+
+```cmd
+
+pip install  MT_PY_Performancelogging_ver2
+
+
+
+```
+
+```py
+# locally 
+
+from  src.MT_PY_Performancelogging_ver2.MT_Performancelogger import MT_PerformanceLogging1
+# globally 
+from MT_PY_Performancelogging.MT_Performance import MT_PerformanceLogging1
+from MT_Performance import MT_PerformanceLogging1
+
+MT_PerformanceLogging1(
+
+)
+
+```
+
+### Receiver Example  
+```py
+
+from src.MT_PY_Performancelogging_ver2.MT_Performancelogger import MT_PerformanceLogging1
+# globally 
+from  MT_PY_Performancelogging_ver2.MT_Performancelogger import MT_PerformanceLogging1
+# test code for our package 
+# 
+
+import datetime
+import time
+
+import logging
+# Create an instance of PerformanceLogger
+
+logger = MT_PerformanceLogging1(__name__)
+logging.basicConfig(level=logging.INFO,filename='normfunction.log' ,format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Use the logger to measure function performance
+@logger.performance_log
+# example code to check the loggingperformance 
+# Diasum number =175
+# Disarum Number = 1¹ + 7² + 5³ = 1 + 49 + 125= 175
+# each digit is added with incrementation in power  and the addition of the powered value should be equal to actual input
+def my_function():
+    start_time = time.time()
+
+    current_time = datetime.datetime.now()
+
+    num=int(input('Enter Num value:'))
+
+    result=0
+
+    power=1
+
+    for x in str(num):
+
+        y=int(x)
+
+        result= result + y**power
+
+        power=power+1
+
+    if num==result:
+
+        print(f'The provide {num} is Disarum')
+
+    else:
+
+        print(f'The Provided {num} is Not a Disarum Number')
+
+    # time sleep function is used to add delay in the execution of a program
+
+    duration_to_add = datetime.timedelta(hours=0, minutes=1)
+
+# # Estimate the end time by adding the duration to the current time
+
+    ended_time = current_time  + duration_to_add
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logging.info(f'Code execution completed. Elapsed time: started at {current_time} {(start_time *10**3):.4f}  ended at {ended_time} {(end_time *10**3):.4f} = {elapsed_time:.4f} seconds')
+
+# Call the function
+
+my_function()
+```
+```log
+2023-09-25 18:05:33,438 - INFO - Code execution completed. Elapsed time: started at 2023-09-25 18:05:30.695571 1695645330695.5710  ended at 2023-09-25 18:06:30.695571 1695645333436.9390 = 2.7414 seconds
+2023-09-25 18:05:33,438 - INFO - Function 'my_function' executed in 2.7426 seconds
+```
+
+
+#### Example2:-
+```py
+from src.MT_PY_Performancelogging_ver2.MT_Performancelogger import MT_PerformanceLogging1
+# globally 
+from  MT_PY_Performancelogging_ver2.MT_Performancelogger import MT_PerformanceLogging1
+
+import datetime
+
+import time
+import logging
+# Create an instance of PerformanceLogger
+logger = MT_PerformanceLogging1(__name__)
+logging.basicConfig(level=logging.INFO, filename='decoresult.log', format='%(asctime)s - %(levelname)s - %(message)s')
+def outer_addition(func):  #wrapped function
+    @logger.performance_log
+    def inner_addition(a, b):
+        start_time = time.time()
+        print("I'm in addition")
+        sum_result = a + b
+        print("Sum of", a, "and", b, "is", sum_result)
+        print("Returning addition")
+        func(sum_result, a)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        logging.info(f'Addition execution completed. Elapsed time: {elapsed_time} seconds')
+    return inner_addition
+def outer_subtraction(func):  #wrapped function
+    @logger.performance_log
+    def inner_substarction(a, b):
+        start_time = time.time()
+        print("I'm in subtraction")
+        subtraction_result = a - b
+        print("Subtraction of", a, "and", b, "is", subtraction_result)
+        print("Returning subtraction")
+        func(a, b)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        logging.info(f'Subtraction execution completed. Elapsed time: {elapsed_time} seconds')
+    return inner_substarction
+@logger.performance_log
+@outer_addition
+@logger.performance_log
+@outer_subtraction
+@logger.performance_log
+def mOperations(a, b):
+    start_time = time.time()
+    print("I'm in mOperations")
+    print("mOperations execution completed")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logging.info(f'mOperations execution completed. Elapsed time: {elapsed_time} seconds')
+mOperations(15, 10)
+```
+#### output:-
+```log
+2023-09-25 18:12:08,428 - INFO - Function 'mOperations' executed in 0.0017 seconds
+2023-09-25 18:12:08,428 - INFO - Subtraction execution completed. Elapsed time: 0.001699209213256836 seconds
+2023-09-25 18:12:08,428 - INFO - Function 'inner_substarction' executed in 0.0017 seconds
+2023-09-25 18:12:08,428 - INFO - Function 'wrapper' executed in 0.0017 seconds
+2023-09-25 18:12:08,428 - INFO - Addition execution completed. Elapsed time: 0.003078937530517578 seconds
+2023-09-25 18:12:08,428 - INFO - Function 'inner_addition' executed in 0.0031 seconds
+2023-09-25 18:12:08,428 - INFO - Function 'wrapper' executed in 0.0031 seconds
+```
