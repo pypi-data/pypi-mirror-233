@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+src/actiontest/Number.py
+src/actiontest/__init__.py
+src/actiontest.egg-info/PKG-INFO
+src/actiontest.egg-info/SOURCES.txt
+src/actiontest.egg-info/dependency_links.txt
+src/actiontest.egg-info/requires.txt
+src/actiontest.egg-info/top_level.txt
+tests/test_Number.py
