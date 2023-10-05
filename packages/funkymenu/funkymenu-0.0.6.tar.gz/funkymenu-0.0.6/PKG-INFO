@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: funkymenu
+Version: 0.0.6
+Summary: A library for creating menus in the console
+Project-URL: Homepage, https://github.com/DexterHedman05/interactive_CLI_menu
+Project-URL: Bug Tracker, https://github.com/DexterHedman05/interactive_CLI_menu/issues
+Author-email: DexterH <dexterhedman05@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# interactive_CLI_menu
+
+## **Under Construction!**
+
+## Info
+
+This is a library for creating menus in the console (CLI). There are four functions:
+
+simple - Press **ENTER** to select an option
+
+multi - Press **SPACE** to select an option, then press **ENTER** to confirm
+
+mix - Same as multi, but with sliders. User **LEFT ARROW** and **RIGHT ARROW** to adjust the slider
+
+amount - Press **SPACE** to select an option, then use **LEFT ARROW** and **RIGHT ARROW** to adjust the slider
