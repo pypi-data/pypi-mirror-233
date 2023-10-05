@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pypayz"
+version = "0.1.10"
+description = ""
+authors = ["axdjuraev <axdjuraev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pypayz"}]
+
+[tool.poetry_bumpversion.file."pypayz/__init__.py"]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+httpx = "^0.24.1"
+pydantic = "1.10.4"
+python-dotenv = "0.21.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+anyio = "^3.7.1"
+pytest-asyncio = "^0.21.1"
+pytest-tornasync = "^0.6.0.post2"
+pytest-trio = "^0.8.0"
+pytest-twisted = "^1.14.0"
+twisted = "^22.10.0"
+setuptools = "^68.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
