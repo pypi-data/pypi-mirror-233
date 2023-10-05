@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+unidecode = "*"
+
+[dev-packages]
+hypothesis = "*"
+coverage = "*"
+sphinx = "*"
+recommonmark = "*"
+mypy = "*"
+twine = "*"
+flake8 = "*"
+setuptools = "*"
+build = "*"
+
+[requires]
+python_version = "3.9"
