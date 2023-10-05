@@ -1,0 +1,10 @@
+pytest_loguru/__init__.py,sha256=11ozJKiUsqDCZ3_mcAHhGYUyGK_Unl54djVSBBExFB4,59
+pytest_loguru/_version.py,sha256=Jk2iAU7m-7Vx9XV1TtdD9ZoJraIncDq_4_Wd-qtUotg,411
+pytest_loguru/plugin.py,sha256=87DKj5HZK1d81LSvPpgd91e9OU_WNEOVfP9ghXS1o0A,852
+pytest_loguru-0.3.0.dist-info/LICENSE,sha256=UwZP1VT1tDhDIprOoPiHkGF6ooCDyeAEv8Q1p3xYyWw,1061
+pytest_loguru-0.3.0.dist-info/METADATA,sha256=J8sBnqzk5hBG4k9TDkO6iL9un4WPR92FeJ48dyJc0qs,2399
+pytest_loguru-0.3.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+pytest_loguru-0.3.0.dist-info/entry_points.txt,sha256=LjzOoWvfWfZpG2q2oerk2ltSl_rDAnreRWg2I2WbF9k,41
+pytest_loguru-0.3.0.dist-info/top_level.txt,sha256=dS6gerBeqCRZzkD8ia3O-Xub317ZlFuJ-NcZhHS2S0s,14
+pytest_loguru-0.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pytest_loguru-0.3.0.dist-info/RECORD,,
