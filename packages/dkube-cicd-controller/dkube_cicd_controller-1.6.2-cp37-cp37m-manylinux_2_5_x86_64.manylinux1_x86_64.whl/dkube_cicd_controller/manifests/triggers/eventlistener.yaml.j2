@@ -1,0 +1,100 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: github-push-binding
+  namespace: dkube-cicd
+spec:
+  params:
+    - name: gitrevision
+      value: $(body.head_commit.id)
+    - name: gitrepositoryurl
+      value: $(body.repository.url)
+    - name: gitref
+      value: $(body.ref)
+    - name: historysize
+      value: $(body.historysize)
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: github-pull-binding
+  namespace: dkube-cicd
+spec:
+  params:
+    - name: gitrevision
+      value: $(body.head_commit.id)
+    - name: gitrepositoryurl
+      value: $(body.repository.url)
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: gitlab-push-binding
+  namespace: dkube-cicd
+spec:
+  params:
+    - name: gitrevision
+      value: $(body.checkout_sha)
+    - name: gitrepositoryurl
+      value: $(body.repository.git_http_url)
+    - name: gitref
+      value: $(body.ref)
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: git-listener-interceptor
+  namespace: dkube-cicd
+spec:
+  serviceAccountName: tekton-triggers-sa
+  resources:
+    kubernetesResource:
+      serviceType: {{service_type}}
+  triggers:
+{% if webhook_secret != None %}
+    - name: github-listener-with-secret
+      interceptors:
+        - github:
+            secretRef:
+              secretName: webhook-secret
+              secretKey: secretToken
+            eventTypes:
+              - push
+      bindings:
+        - ref: github-push-binding
+      template:
+        ref: pipeline-template
+
+    - name: gitlab-listener-with-secret
+      interceptors:
+        - gitlab:
+            secretRef:
+              secretName: webhook-secret
+              secretKey: secretToken
+            eventTypes:
+              - Push Hook
+      bindings:
+        - ref: gitlab-push-binding
+      template:
+        ref: pipeline-template
+{% else %}
+    - name: github-listener
+      interceptors:
+        - github:
+            eventTypes:
+              - push
+      bindings:
+        - ref: github-push-binding
+      template:
+        ref: pipeline-template
+
+    - name: gitlab-listener
+      interceptors:
+        - gitlab:
+            eventTypes:
+              - Push Hook
+      bindings:
+        - ref: gitlab-push-binding
+      template:
+        ref: pipeline-template
+{% endif %}

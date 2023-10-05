@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: job
+  namespace: dkube-cicd
+spec:
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  params:
+    - name: path
+    - name: image_url
+    - name: commit_id
+    - name: build_image
+    - name: component
+    - name: repo
+  steps:
+    - name: dkube-job-add
+      image: $(inputs.params.build_image)
+      env:
+        - name: DKUBE_SERVICE_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dkube-token
+              key: service
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","job","$(inputs.params.component)", "add"]

@@ -1,0 +1,37 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  namespace: dkube-cicd
+  labels:
+    project: {{proj_name|lower}}
+    commit: {{commit_id}}
+  generateName: {{proj_name|lower}}-{{commit_id[:10]}}-
+spec:
+  serviceAccountName: {{service_account}}
+  taskRef:
+    name: {{task}}
+  params:
+    - name: path
+      value: {{path}}
+    - name: component
+      value: {{name}}
+    - name: build_image
+      value: ocdr/d3cicd:{{d3cicd_version}}
+    - name: commit_id
+      value: {{commit_id}}
+    - name: image_url
+      value: {{image}}
+    - name: repo
+      value: {{gitrepo}}
+  resources:
+    inputs:
+      - name: git-source
+        resourceSpec:
+          type: git
+          params:
+            - name: url
+              value: {{gitrepo}}
+            - name: depth
+              value: "2"
+            - name: sslVerify
+              value: "false"

@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  registry: {{registry}}
+  config.json: |
+    {{config|tojson}}
+kind: ConfigMap
+metadata:
+  name: docker-config
+  namespace: dkube-cicd
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: docker-registry-secret
+  namespace: dkube-cicd
+data:
+  .dockerconfigjson: {{base64_config}}
+type: kubernetes.io/dockerconfigjson

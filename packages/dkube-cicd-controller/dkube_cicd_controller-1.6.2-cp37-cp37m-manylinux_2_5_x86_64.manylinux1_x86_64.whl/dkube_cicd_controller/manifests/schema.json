@@ -1,0 +1,542 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema for .dkube-ci.yaml",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "conda_env": {
+                "path": "conda_env.yaml",
+                "r_install_script": "install.sh"
+            },
+            "Dockerfile": "Dockerfile",
+            "docker_envs": [
+                "ocdr/img:tag"
+            ],
+            "images": {
+                "path": "path",
+                "images": [
+                    {
+                        "name": "my-image1",
+                        "base_image": ""
+                    }
+                ]
+            },
+            "components": {
+                "path": "path",
+                "components": [
+                    {
+                        "name": "my-image1",
+                        "base_image": ""
+                    }
+                ]
+            },
+            "pipelines": {
+                "path": "path",
+                "token": "dkube token (optional)",
+                "pipelines": [
+                    {
+                        "name": "my-image1",
+                        "build_image": "image for compiling the pipeline (optional)",
+                        "run": true
+                    }
+                ]
+            },
+            "jobs": {
+                "path": "path",
+                "jobs": [
+                    {
+                        "name": "train.yaml",
+                        "run": true
+                    }
+                ]
+            }
+        }
+    ],
+    "required": [],
+    "properties": {
+        "conda_env": {
+            "$id": "#/properties/conda_env",
+            "type": "object",
+            "title": "The conda_env schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "path": "conda_env.yaml",
+                    "r_install_script": "install.sh"
+                }
+            ],
+            "required": [
+                "path"
+            ],
+            "properties": {
+                "path": {
+                    "$id": "#/properties/conda_env/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "conda_env.yaml"
+                    ]
+                },
+                "r_install_script": {
+                    "$id": "#/properties/conda_env/properties/r_install_script",
+                    "type": "string",
+                    "title": "The r_install_script schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "install.sh"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "Dockerfile": {
+            "$id": "#/properties/Dockerfile",
+            "type": "string",
+            "title": "The Dockerfile schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Dockerfile"
+            ]
+        },
+        "docker_envs": {
+            "$id": "#/properties/docker_envs",
+            "type": "array",
+            "title": "The docker_envs schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ocdr/img:tag"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/docker_envs/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/docker_envs/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ocdr/img:tag"
+                        ]
+                    }
+                ]
+            }
+        },
+        "images": {
+            "$id": "#/properties/images",
+            "type": "object",
+            "title": "The images schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "path": "path",
+                    "images": [
+                        {
+                            "name": "my-image1",
+                            "base_image": ""
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "path",
+                "images"
+            ],
+            "properties": {
+                "path": {
+                    "$id": "#/properties/images/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "path"
+                    ]
+                },
+                "images": {
+                    "$id": "#/properties/images/properties/images",
+                    "type": "array",
+                    "title": "The images schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "name": "my-image1",
+                                "base_image": ""
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/images/properties/images/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/images/properties/images/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "name": "my-image1",
+                                        "base_image": ""
+                                    }
+                                ],
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "$id": "#/properties/images/properties/images/items/anyOf/0/properties/name",
+                                        "type": "string",
+                                        "title": "The name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "my-image1"
+                                        ]
+                                    },
+                                    "base_image": {
+                                        "$id": "#/properties/images/properties/images/items/anyOf/0/properties/base_image",
+                                        "type": "string",
+                                        "title": "The base_image schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "components": {
+            "$id": "#/properties/components",
+            "type": "object",
+            "title": "The components schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "path": "path",
+                    "components": [
+                        {
+                            "name": "my-image1",
+                            "base_image": ""
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "path",
+                "components"
+            ],
+            "properties": {
+                "path": {
+                    "$id": "#/properties/components/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "path"
+                    ]
+                },
+                "components": {
+                    "$id": "#/properties/components/properties/components",
+                    "type": "array",
+                    "title": "The components schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "name": "my-image1",
+                                "base_image": ""
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/components/properties/components/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/components/properties/components/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "name": "my-image1",
+                                        "base_image": ""
+                                    }
+                                ],
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "$id": "#/properties/components/properties/components/items/anyOf/0/properties/name",
+                                        "type": "string",
+                                        "title": "The name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "my-image1"
+                                        ]
+                                    },
+                                    "base_image": {
+                                        "$id": "#/properties/components/properties/components/items/anyOf/0/properties/base_image",
+                                        "type": "string",
+                                        "title": "The base_image schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "pipelines": {
+            "$id": "#/properties/pipelines",
+            "type": "object",
+            "title": "The pipelines schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "path": "path",
+                    "user": "dkube user name (optional)",
+                    "pipelines": [
+                        {
+                            "name": "my-image1",
+                            "build_image": "",
+                            "run": true
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "path",
+                "pipelines"
+            ],
+            "properties": {
+                "path": {
+                    "$id": "#/properties/pipelines/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "path"
+                    ]
+                },
+                "user": {
+                    "$id": "#/properties/pipelines/properties/token",
+                    "type": "string",
+                    "title": "The user schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "dkube user name (optional)"
+                    ]
+                },
+                "pipelines": {
+                    "$id": "#/properties/pipelines/properties/pipelines",
+                    "type": "array",
+                    "title": "The pipelines schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "name": "my-image1",
+                                "run": true
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/pipelines/properties/pipelines/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/pipelines/properties/pipelines/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "name": "my-image1",
+                                        "build_image": "",
+                                        "run": true
+                                    }
+                                ],
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "$id": "#/properties/pipelines/properties/pipelines/items/anyOf/0/properties/name",
+                                        "type": "string",
+                                        "title": "The name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "my-image1"
+                                        ]
+                                    },
+                                    "build_image": {
+                                        "$id": "#/properties/pipelines/properties/pipelines/items/anyOf/0/properties/run",
+                                        "type": "string",
+                                        "title": "The run schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": false,
+                                        "examples": [
+                                            ""
+                                        ]
+                                    }, 
+                                    "run": {
+                                        "$id": "#/properties/pipelines/properties/pipelines/items/anyOf/0/properties/run",
+                                        "type": "boolean",
+                                        "title": "The run schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": false,
+                                        "examples": [
+                                            true
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "jobs": {
+            "$id": "#/properties/jobs",
+            "type": "object",
+            "title": "The jobs schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "path": "path",
+                    "jobs": [
+                        {
+                            "name": "train.yaml",
+                            "run": true
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "path",
+                "jobs"
+            ],
+            "properties": {
+                "path": {
+                    "$id": "#/properties/jobs/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "path"
+                    ]
+                },
+                "jobs": {
+                    "$id": "#/properties/jobs/properties/jobs",
+                    "type": "array",
+                    "title": "The jobs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "name": "train.yaml",
+                                "run": true
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/jobs/properties/jobs/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/jobs/properties/jobs/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "name": "train.yaml",
+                                        "run": true
+                                    }
+                                ],
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "$id": "#/properties/jobs/properties/jobs/items/anyOf/0/properties/name",
+                                        "type": "string",
+                                        "title": "The name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "train.yaml"
+                                        ]
+                                    },
+                                    "run": {
+                                        "$id": "#/properties/jobs/properties/jobs/items/anyOf/0/properties/run",
+                                        "type": "boolean",
+                                        "title": "The run schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": false,
+                                        "examples": [
+                                            true
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

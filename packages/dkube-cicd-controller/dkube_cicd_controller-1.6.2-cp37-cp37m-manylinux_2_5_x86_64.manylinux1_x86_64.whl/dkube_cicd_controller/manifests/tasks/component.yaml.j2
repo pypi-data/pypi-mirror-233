@@ -1,0 +1,56 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: component
+  namespace: dkube-cicd
+spec:
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  params:
+    - name: path
+    - name: image_url
+    - name: commit_id
+    - name: build_image
+    - name: component
+    - name: repo
+  volumes:
+    - name: docker-config
+      configMap:
+        name: docker-config
+{% if caching_enabled %}
+    - name: kaniko-cache
+      persistentVolumeClaim:
+        claimName: kaniko-cache-pvc
+{% endif %}
+  steps:
+    - name: generate-dockerfile
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","component", "$(inputs.params.component)", "generate-dockerfile"]
+
+    - name: create-registry
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","component","$(inputs.params.component)", "create-docker-repo"]
+
+    - name: build-and-push
+      image: gcr.io/kaniko-project/executor:v0.24.0
+      command:
+        - /kaniko/executor
+      args:
+        - --dockerfile=Dockerfile
+        - --destination=$(inputs.params.image_url):$(inputs.params.commit_id)
+        - --context=$(inputs.resources.git-source.path)/$(inputs.params.path)
+        - --cache=true
+        - --cache-repo=$(inputs.params.image_url)-cache
+      volumeMounts:
+        - name: docker-config
+          mountPath: /kaniko/.docker
+{% if caching_enabled %}
+        - name: kaniko-cache
+          mountPath: /cache
+{% endif %}

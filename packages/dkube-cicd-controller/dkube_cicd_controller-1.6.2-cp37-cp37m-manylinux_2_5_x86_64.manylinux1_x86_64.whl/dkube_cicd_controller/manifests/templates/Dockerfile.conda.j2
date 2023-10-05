@@ -1,0 +1,12 @@
+FROM {{base_image}}
+
+ADD conda_env.yaml .
+RUN conda env create -f conda_env.yaml && \
+    conda clean -afy && conda init bash && \
+    echo "source activate {{environment}}" > ~/.bashrc
+
+ENV PATH=/opt/conda/envs/{{environment}}/bin:$PATH
+{% if r_install_script %}
+ADD {{r_install_script}} .
+RUN ./{{r_install_script}}
+{% endif %}

@@ -1,0 +1,162 @@
+
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: {{proj_name|lower}}-{{commit_id[0:10]}}
+  labels:
+    project: {{proj_name|lower}}
+    commit: {{commit_id}}
+    job_id: "{{job_id}}"
+spec:
+  serviceAccountName: {{service_account}}
+  resources:
+    - name: git-source
+      resourceSpec:
+        type: git
+        params:
+          - name: url
+            value: {{gitrepo}}
+          - name: revision
+            value: {{commit_id}}
+          - name: depth
+            value: "2"
+          - name: sslVerify
+            value: "false"
+  params:
+    - name: build_image
+      value: ocdr/d3cicd:{{d3cicd_version}}
+    - name: commit_id
+      value: {{commit_id}}
+    - name: repo
+      value: {{gitrepo}}
+  pipelineSpec:
+    resources:
+      - name: git-source
+        type: git
+    params:
+      - name: build_image
+      - name: commit_id
+      - name: repo
+    tasks:
+{% for docker_env in docker_envs %}
+    - name: environment{{loop.index}}
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+      taskSpec:
+        resources:
+          inputs:
+            - name: git-source
+              type: git
+        steps:
+          - name: register
+            image: ocdr/d3cicd:{{d3cicd_version}}
+            env:
+              - name: DKUBE_SERVICE_TOKEN
+                valueFrom:
+                  secretKeyRef:
+                    name: dkube-token
+                    key: service
+            imagePullPolicy: Always
+            workingDir: $(inputs.resources.git-source.path)/
+            command: ["dcc", "image", "project", "register", "-i", {{docker_env}}]
+{% endfor %}
+    {% for comp in components %}
+    - name: component{{loop.index}}
+      taskRef:
+        name: component
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+      params:
+        - name: path
+          value: {{comp.path}}
+        - name: component
+          value: {{comp.name}}
+        - name: image_url
+          value: {{registry}}/{{namespace}}-{{comp.name}}
+        - name: build_image
+          value: "$(params.build_image)"
+        - name: repo
+          value: "$(params.repo)"
+        - name: commit_id
+          value: "$(params.commit_id)"
+    {% endfor %}
+    {% for comp in pipelines %}
+    - name: pipeline{{loop.index}}
+      runAfter: 
+        {% for x in components %}
+        - component{{loop.index}}
+        {% endfor %}
+      taskRef:
+        name: pipeline
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+      params:
+        - name: path
+          value: {{comp.path}}
+        - name: component
+          value: {{comp.name}}
+        - name: image_url
+          value: {{registry}}/{{namespace}}-{{comp.name}}
+        - name: pipeline_build_image
+          {% if comp.build_image %}
+          value: {{comp.build_image}}
+          {% else %}
+          value: "$(params.build_image)"
+          {% endif %}
+        - name: build_image
+          value: "$(params.build_image)"
+        - name: repo
+          value: "$(params.repo)"
+        - name: commit_id
+          value: "$(params.commit_id)"
+    {% endfor %}
+    {% for comp in images %}
+    - name: image{{loop.index}}
+      taskRef:
+        name: image
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+      params:
+        - name: path
+          value: {{comp.path}}
+        - name: component
+          value: {{comp.name}}
+        - name: image_url
+          value: {{registry}}/{{namespace}}-{{comp.name}}
+        - name: build_image
+          value: "$(params.build_image)"
+        - name: repo
+          value: "$(params.repo)"
+        - name: commit_id
+          value: "$(params.commit_id)"
+    {% endfor %}
+    {% for comp in jobs %}
+    - name: job{{loop.index}}
+      taskRef:
+        name: job
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+      params:
+        - name: path
+          value: {{comp.path}}
+        - name: component
+          value: {{comp.name}}
+        - name: image_url
+          value: {{registry}}/{{namespace}}-{{comp.name}}
+        - name: build_image
+          value: "$(params.build_image)"
+        - name: repo
+          value: "$(params.repo)"
+        - name: commit_id
+          value: "$(params.commit_id)"
+    {% endfor %}

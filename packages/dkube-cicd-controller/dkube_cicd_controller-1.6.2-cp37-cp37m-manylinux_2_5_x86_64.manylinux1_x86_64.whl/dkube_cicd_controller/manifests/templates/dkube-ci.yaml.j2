@@ -1,0 +1,27 @@
+defaults:
+  enabled: true
+  base_image: ocdr/d3cicd_base:0.1.1
+
+#conda_env: conda_env.yaml
+#Dockerfile: Dockerfile
+#docker_envs: [ocdr/d3cicd_base:0.1.1]
+
+branches:
+  - {{branch}}
+
+images:
+  path: images
+  images:
+
+
+# Following are optional and required only when building kubeflow pipeline/components
+components: # defaults to all components if list is empty
+  path: components
+  components:
+
+pipelines:
+  path: pipelines
+  pipelines:
+
+
+

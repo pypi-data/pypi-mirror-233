@@ -1,0 +1,3 @@
+[console_scripts]
+dcc = dkube_cicd_controller.cli:main
+

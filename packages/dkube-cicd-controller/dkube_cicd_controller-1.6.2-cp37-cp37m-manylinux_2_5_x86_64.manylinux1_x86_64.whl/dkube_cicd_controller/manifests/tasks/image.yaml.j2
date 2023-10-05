@@ -1,0 +1,100 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Condition
+metadata:
+  name: changes
+  namespace: dkube-cicd
+spec:
+  params:
+    - name: "component"
+  resources:
+    - name: git-source
+      type: git
+  check:
+    image: ocdr/d3cicd:{{d3cicd_version}}
+    imagePullPolicy: Always
+    workingDir: $(resources.git-source.path)/
+    command: ["dcc","image", "$(params.component)", "detect-changes"]
+---
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: image
+  namespace: dkube-cicd
+spec:
+  resources:
+    inputs:
+      - name: git-source
+        type: git
+  results:
+    - name: image-digest
+  params:
+    - name: path
+    - name: image_url
+    - name: commit_id
+    - name: build_image
+    - name: component
+    - name: repo
+  volumes:
+    - name: docker-config
+      configMap:
+        name: docker-config
+{% if caching_enabled %}
+    - name: kaniko-cache
+      persistentVolumeClaim:
+        claimName: kaniko-cache-pvc
+{% endif %}
+
+  steps:
+    - name: generate-dockerfile
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","image", "$(inputs.params.component)", "generate-dockerfile"]
+
+    - name: create-registry
+      image: $(inputs.params.build_image)
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","image","$(inputs.params.component)", "create-docker-repo"]
+
+{% if debug %}
+    - name: debug
+      image: gcr.io/kaniko-project/executor:debug
+      command: ["sh","-c","cat /kaniko/.docker/*"]
+      volumeMounts:
+        - name: docker-config
+          mountPath: /kaniko/.docker
+{% endif %}
+
+    - name: build-and-push
+      image: gcr.io/kaniko-project/executor:v0.24.0
+      command:
+        - /kaniko/executor
+      args:
+        - --dockerfile=Dockerfile
+        - --destination=$(inputs.params.image_url):$(inputs.params.commit_id)
+        - --context=$(inputs.resources.git-source.path)/$(inputs.params.path)
+        - --cache=true
+        - --cache-repo=$(inputs.params.image_url)-cache
+        - --oci-layout-path=/workspace/output/built-image/
+        - --digest-file=$(results.image-digest.path)
+      volumeMounts:
+        - name: docker-config
+          mountPath: /kaniko/.docker
+{% if caching_enabled %}
+        - name: kaniko-cache
+          mountPath: /cache
+{% endif %}
+
+    - name: register-with-dkube
+      image: $(inputs.params.build_image)
+      env:
+        - name: DKUBE_SERVICE_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dkube-token
+              key: service
+
+      imagePullPolicy: Always
+      workingDir: $(inputs.resources.git-source.path)/
+      command: ["dcc","image","$(inputs.params.component)", "register", "-c",$(inputs.params.commit_id),"-f",$(results.image-digest.path)]

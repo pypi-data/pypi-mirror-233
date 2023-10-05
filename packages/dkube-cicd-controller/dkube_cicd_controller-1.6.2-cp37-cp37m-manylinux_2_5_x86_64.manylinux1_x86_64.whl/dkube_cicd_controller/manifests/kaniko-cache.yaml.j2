@@ -1,0 +1,31 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: kaniko-cache-pvc
+  namespace: dkube-cicd
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko-warmer
+  namespace: dkube-cicd
+spec:
+  containers:
+  - name: kaniko-warmer
+    image: gcr.io/kaniko-project/warmer:latest
+    args: ["--cache-dir=/cache",
+           "--image=ocdr/d3cicd_base:0.1.1"]
+    volumeMounts:
+      - name: kaniko-cache
+        mountPath: /cache
+  restartPolicy: Never
+  volumes:
+    - name: kaniko-cache
+      persistentVolumeClaim:
+        claimName: kaniko-cache-pvc

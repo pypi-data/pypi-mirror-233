@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: {{proj_name|lower}}-{{name|lower}}-{{commit_id[:10]}}
+  namespace: dkube-cicd
+  labels:
+    project: {{proj_name|lower}}
+    commit: "{{commit_id}}"
+    image: "{{name}}"
+spec:
+  type: image
+  params:
+    - name: url
+      value: {{image_url}}:{{commit_id}}
+    - name: digest
+      value: "{{digest}}"
