@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ServiceX_DID_Finder_lib"
+version = "1.4.5"
+description = "ServiceX DID Library Routines"
+authors = ["Gordon Watts <gwatts@uw.edu>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pika = "1.1.0"
+make-it-sync = "^1.0.0"
+requests = "^2.25.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+flake8 = "^3.9.1"
+pytest-mock = "^3.5.1"
+coverage = "^5.5"
+responses = "^0.14.0"
+pytest-asyncio = "^0.16.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
