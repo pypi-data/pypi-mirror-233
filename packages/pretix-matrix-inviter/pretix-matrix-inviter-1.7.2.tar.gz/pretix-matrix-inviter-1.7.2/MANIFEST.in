@@ -1,0 +1,6 @@
+recursive-include pretix_matrix_inviter/static *
+recursive-include pretix_matrix_inviter/templates *
+recursive-include pretix_matrix_inviter/locale *
+include LICENSE
+include CHANGELOG.md
+exclude .gitlab-ci.yml

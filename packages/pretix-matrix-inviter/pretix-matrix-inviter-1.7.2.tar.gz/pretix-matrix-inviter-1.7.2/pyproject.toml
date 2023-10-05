@@ -1,0 +1,52 @@
+[project]
+name = "pretix-matrix-inviter"
+dynamic = ["version"]
+description = "Invite pretix participants to a Matrix Room or Space."
+readme = "README.md"
+license = {text = "MIT License"}
+keywords = ["pretix", "matrix"]
+authors = [
+    {name = "Felix Schäfer", email = "admin@kif.rocks"},
+]
+maintainers = [
+    {name = "Felix Schäfer", email = "admin@kif.rocks"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Communications :: Chat",
+]
+
+dependencies = [
+    "requests",
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_matrix_inviter = "pretix_matrix_inviter:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+Homepage = "https://gitlab.fachschaften.org/kif/pretix-matrix-inviter"
+Repository = "https://gitlab.fachschaften.org/kif/pretix-matrix-inviter"
+Changelog = "https://gitlab.fachschaften.org/kif/pretix-matrix-inviter/-/blob/main/CHANGELOG.md"
+Tracker = "https://gitlab.fachschaften.org/kif/pretix-matrix-inviter/-/issues"
+"pretix Marketplace" = "https://marketplace.pretix.eu/products/pretix-matrix-inviter/"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_matrix_inviter.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false
