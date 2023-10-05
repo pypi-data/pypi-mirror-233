@@ -1,0 +1,5 @@
+.. <Enter lang file description>
+.. file format - parameter#text
+.. '#' ends parameter placeholder
+.. '..' starts single line comment, not interpreted
+.. '{}' use for string format
