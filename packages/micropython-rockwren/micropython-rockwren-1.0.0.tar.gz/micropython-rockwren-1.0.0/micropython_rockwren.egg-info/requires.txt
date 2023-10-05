@@ -1,0 +1,3 @@
+micropython_umqtt.simple2==2.2.0
+micropython_umqtt.robust2==2.2.0
+micropython-ccrighton-phew
