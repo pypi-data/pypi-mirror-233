@@ -1,0 +1,13 @@
+macrometa_target_s3/__init__.py,sha256=CRWmbNvlIpSIA9qXYg-J-GLbbNS7LvWZqPVRvF-cU-0,5694
+macrometa_target_s3/constants.py,sha256=SMEqDPMr8B7ZhXvcRT2z-LB6BB21HO9UCOhYhnMfk-o,767
+macrometa_target_s3/formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+macrometa_target_s3/formats/format_base.py,sha256=gebsqFVXqSwF4HIyW5Cu4C12mW52rTHrynt5nywtiP0,8659
+macrometa_target_s3/formats/format_csv.py,sha256=BqOg3HprWV-IbG81GBq6Hv-Kpvx1fxlBTaZNgPDmH0s,187
+macrometa_target_s3/formats/format_json.py,sha256=OtPRYbn3_PPs_aw359S-lb7laRzYDxlLKWtc03PzbvY,2112
+macrometa_target_s3/formats/format_parquet.py,sha256=RcnCJU6Ky1CPZEF8Eu-CRUYCgoAohZTk5MMRPjSysz4,9124
+macrometa_target_s3/sinks.py,sha256=2dtrpu-i_82S6tuGvFpX72dewVYrGyFS7t0Bp4X8sWQ,4513
+macrometa_target_s3/target.py,sha256=-zi3xJ_k_OS5gvIUa3BkL2MEZGjQg51aUC29bSqiRxE,9189
+macrometa_target_s3-0.0.14.dist-info/entry_points.txt,sha256=IPeYIb_d5F72QEDIeR7aFIEHZckx0D8b7gIqptkmp0E,79
+macrometa_target_s3-0.0.14.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+macrometa_target_s3-0.0.14.dist-info/METADATA,sha256=r0g_2M1Bv0TxJZ2zp5nQGhijwBSuVR188wx3Ejzoojk,856
+macrometa_target_s3-0.0.14.dist-info/RECORD,,

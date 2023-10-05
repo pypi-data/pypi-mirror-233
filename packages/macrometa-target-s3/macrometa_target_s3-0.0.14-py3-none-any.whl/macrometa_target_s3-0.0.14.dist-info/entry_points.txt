@@ -1,0 +1,3 @@
+[console_scripts]
+macrometa-target-s3=macrometa_target_s3.target:Targets3.cli
+
