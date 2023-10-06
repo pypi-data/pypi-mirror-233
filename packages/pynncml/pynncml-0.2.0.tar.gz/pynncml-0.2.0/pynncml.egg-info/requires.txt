@@ -1,0 +1,9 @@
+numpy
+torch
+torchvision
+matplotlib
+scipy
+pandas
+xarray
+utm
+netcdf4
