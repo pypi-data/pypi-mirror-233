@@ -1,0 +1,6 @@
+setup.py
+BRUNCH.egg-info/PKG-INFO
+BRUNCH.egg-info/SOURCES.txt
+BRUNCH.egg-info/dependency_links.txt
+BRUNCH.egg-info/top_level.txt
+STRUCTURE/MOVES/BRUNCH
