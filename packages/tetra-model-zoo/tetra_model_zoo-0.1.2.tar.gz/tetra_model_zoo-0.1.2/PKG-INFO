@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tetra_model_zoo
+Version: 0.1.2
+Summary: Models optimized for export to run on device.
+Home-page: https://tetra.ai/
+Author: Tetra Intelligence Systems Inc.
+License: MIT
+Requires-Python: >=3.8, <3.11
+Provides-Extra: yolov7
+Provides-Extra: real_esrgan_general_x4v3
+Provides-Extra: yolov8_det
+Provides-Extra: mediapipe_face
+Provides-Extra: real_esrgan_x4plus
+Provides-Extra: sam
+Provides-Extra: mediapipe_hand
+Provides-Extra: mediapipe_pose
+Provides-Extra: whisper_asr
+Provides-Extra: openai_clip
+Provides-Extra: litehrnet
+Provides-Extra: optimized_clip
+Provides-Extra: lama_dilated
+Provides-Extra: stable_diffusion
+Provides-Extra: trocr
+Provides-Extra: mediapipe_selfie
+License-File: LICENSE
+
+Models optimized for export to run on device.

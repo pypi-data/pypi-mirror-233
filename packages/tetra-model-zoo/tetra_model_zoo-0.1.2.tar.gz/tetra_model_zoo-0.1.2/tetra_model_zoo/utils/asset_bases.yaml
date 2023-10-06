@@ -1,0 +1,10 @@
+# General
+store_url: https://tetra-public-assets.s3.us-west-2.amazonaws.com/model-zoo
+
+# Web Assets
+web_asset_folder: "{model_id}/web-assets"
+static_web_banner_filename: banner.png
+animated_web_banner_filename: banner.mp4
+
+# Model Assets
+model_asset_folder: "{model_id}/v{version}"
