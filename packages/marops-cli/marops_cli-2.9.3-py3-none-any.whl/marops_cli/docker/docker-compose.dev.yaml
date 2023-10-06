@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  marops_ui:
+    environment:
+      NODE_ENV: development
+      VITE_HASURA_HTTP_URL: http://localhost:7003/v1/graphql
+      VITE_HASURA_WS_URL: ws://localhost:7003/v1/graphql
+      VITE_CORE_URL: http://localhost:7004
+      VITE_TILER_URL: http://localhost:7001
+      VITE_DOCS_URL: http://localhost:7005
+      VITE_STUDIO_URL: http://localhost:7006
+    volumes:
+      - ./libs/marops_interfaces/src:/app/libs/marops_interfaces/src
+      - ./projects/marops_ui/src:/app/projects/marops_ui/src
+
+  marops_docs:
+    volumes:
+      - ./projects/docs:/app
+    command: yarn start
+
+  marops_core:
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./libs/marops_interfaces/src:/app/libs/marops_interfaces/src
+      - ./projects/marops_core/src:/app/projects/marops_core/src
+      - ./projects/hasura/metadata:/app/projects/hasura/metadata
+
+  marops_hasura:
+    volumes:
+      - ./projects/hasura/migrations:/hasura-migrations
+      - ./projects/hasura/metadata:/hasura-metadata
+      - ./projects/hasura/seeds:/hasura-seeds
+      - ./projects/hasura/config.yml:/config.yml
+
+  marops_chart_tiler:
+    volumes:
+      - ./projects/chart_data:/app/data
+
+  marops_chart_api:
+    volumes:
+      - ./projects/chart_data:/app/data
+
+  marops_rsync:
+    volumes:
+      - ./projects/rsync/file-data:/data/dst
+
+  plugins:
+    volumes:
+      - ./projects/plugins:/app/
