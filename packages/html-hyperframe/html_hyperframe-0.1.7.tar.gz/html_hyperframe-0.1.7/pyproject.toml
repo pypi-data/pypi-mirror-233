@@ -1,0 +1,73 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "html-hyperframe"
+version = "0.1.7"
+description = ""
+authors = ["SamB <58937194+sam-lawrence@users.noreply.github.com>"]
+readme = "README.md"
+repository = "https://github.com/sam-lawrence/HyperFrame"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+]
+packages = [{ include = "hyperframe" }, { include = "hyperframe/py.typed" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "^4.11.2"
+pandas = "^2.0.3"
+lxml = "^4.9.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23"
+ipython = "^8.12.0"
+mypy = "^1.1.1"
+pandas-stubs = "^2.0.0.230412"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+ruff = "^0.0"
+types-beautifulsoup4 = "^4.12.0.3"
+
+[tool.ruff]
+target-version = "py39"
+select = ["B", "COM819", "C4", "E", "F", "I", "PT", "Q", "UP", "W"]
+ignore = ["E501"]
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+src = ["hyperframe", "tests"]
+unfixable = ["B"]
+extend-exclude = [".venv", ".git", "__pycache__", "build", "dist", "tmp"]
+
+[tool.ruff.mccabe]
+max-complexity = 12
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.isort]
+combine-as-imports = true
+known-first-party = ["hyperframe"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.mypy]
+packages = ["hyperframe"]
+disallow_untyped_defs = true
+show_error_codes = true
