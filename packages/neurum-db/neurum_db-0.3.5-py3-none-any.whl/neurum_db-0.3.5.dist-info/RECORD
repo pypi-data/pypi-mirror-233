@@ -1,0 +1,10 @@
+neurum_db/__init__.py,sha256=CR-4SJldefaggcJF90A6mrIltBNm8ItAw4TDKj_7Lf4,97
+neurum_db/delete.py,sha256=hyOMg_N5RV66vHZatzK8Va-o-3YkFXjT_-nz-A3KPUo,888
+neurum_db/get.py,sha256=oFlUpOWqWlJdXtEut9Ihzdh_tsY6D_vLE4Te0WA5KYI,888
+neurum_db/post.py,sha256=fXXVkoOoX5TjlbmMG4kKszvqt_ZuWhrRo0967qe89-c,534
+neurum_db/update.py,sha256=f7lSMmi3f9kOx5EPP7a5-TeuefpRBdw36cMuHjLRc7M,1342
+neurum_db-0.3.5.dist-info/LICENSE.txt,sha256=yew7JbAoTVNb4qPIO4bjReA9CEhyoGjnSWQNvvuYQ4M,1057
+neurum_db-0.3.5.dist-info/METADATA,sha256=-UN3-iMNbYpjnSu6sAsv_YTXAw9knyEcZpoChlCIDPo,612
+neurum_db-0.3.5.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+neurum_db-0.3.5.dist-info/top_level.txt,sha256=YoV0Z6kfx8akkZRwf5oDsGksE6wAdfnNVuTj51suc3c,10
+neurum_db-0.3.5.dist-info/RECORD,,
