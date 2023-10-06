@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+id_connect_package_packagingCon23.egg-info/PKG-INFO
+id_connect_package_packagingCon23.egg-info/SOURCES.txt
+id_connect_package_packagingCon23.egg-info/dependency_links.txt
+id_connect_package_packagingCon23.egg-info/top_level.txt
