@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: schulze-condorcet
+Version: 2.0.1
+Summary: Python package to evaluate ballots using the Schulze Concordet method.
+Home-page: https://github.com/cde-ev/schulze-condorcet
+Author: Markus Walter
+Author-email: dev@jonglieren-jena.de
+Maintainer: CdE-Datenbank development team
+Maintainer-email: cdedb@lists.cde-ev.de
+Project-URL: Bug Tracker, https://github.com/cde-ev/schulze-condorcet/issues
+Keywords: schulze,condorcet,voting
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# schulze-condorcet
+
+[![PyPI version shields.io](https://img.shields.io/pypi/v/schulze-condorcet)](https://pypi.org/project/schulze-condorcet/)
+[![Build Status](https://github.com/cde-ev/schulze-condorcet/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/cde-ev/schulze-condorcet/actions/workflows/tests.yml)
+
+Python package to evaluate ballots using the Schulze Condorcet method.
