@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/amuni_pysample.egg-info/PKG-INFO
+src/amuni_pysample.egg-info/SOURCES.txt
+src/amuni_pysample.egg-info/dependency_links.txt
+src/amuni_pysample.egg-info/requires.txt
+src/amuni_pysample.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/amuni.py
+src/sample/main.py
+tests/test_sample.py
