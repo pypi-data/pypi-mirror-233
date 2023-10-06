@@ -1,0 +1,17 @@
+tissuumaps_schema/__init__.py,sha256=3_1bJnIBfIK-Ji4UhWjELCiCLA_Znn6T_0XMrFrw9LI,173
+tissuumaps_schema/__main__.py,sha256=oRvXVrOpUuoHS1MuJxuIpk9pkekAIyBBYrex76fenLA,132
+tissuumaps_schema/_cli.py,sha256=D9a-sVvCJxxqXctvWiDm_DhRxSl35h9Eeh5Wi3rKS_w,7996
+tissuumaps_schema/base.py,sha256=8UscMKrM9xFp5FmZ_SfKV7tOXMiDJl9RPAziri5tfAQ,1503
+tissuumaps_schema/utils.py,sha256=-WGWn9p84Od7h-fyyOeNJrzncl5PIUKAl2qyAATlK8Y,417
+tissuumaps_schema/v00/__init__.py,sha256=JhSU2NhJ5FneHKyDXHdMZvq__PP5YiB_NimMjhxMhnc,89
+tissuumaps_schema/v00/base.py,sha256=DMYiga13l7fKemzVcBa6D71N-WTB-6sdxFAxFMHul9w,209
+tissuumaps_schema/v00/project.py,sha256=L2WKp7fyT-Eljr2-l56wbYGLJkqm1k1adBrWfHgFUrQ,15132
+tissuumaps_schema/v01/__init__.py,sha256=JhSU2NhJ5FneHKyDXHdMZvq__PP5YiB_NimMjhxMhnc,89
+tissuumaps_schema/v01/base.py,sha256=JZFNZzqF7mC76JJgtvrQZBbSzvVCkvmLP3ba9Q2zOm0,209
+tissuumaps_schema/v01/project.py,sha256=iytasTva0HDyFd3mzhhOKe_QcThrGCJgOcESa3kWZoU,24945
+tissuumaps_schema-1.0.1.dist-info/LICENSE,sha256=4Gnw9QQy8QVCS82PmivVDQKatyQu6uniXYM9ABIyyzY,1097
+tissuumaps_schema-1.0.1.dist-info/METADATA,sha256=h8ItZxBuVloOkERsubQs37HJucdqrF04V8XJ65gSYc0,4563
+tissuumaps_schema-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tissuumaps_schema-1.0.1.dist-info/entry_points.txt,sha256=r9XO0Wyqp15k36f0T6m-A0T-s6nZ7gwsYFkqhLx-IG8,65
+tissuumaps_schema-1.0.1.dist-info/top_level.txt,sha256=zo_09zqf6juGkr7s6QhHTgsIAkpQ1vJXTHs5fIy2fLk,18
+tissuumaps_schema-1.0.1.dist-info/RECORD,,
