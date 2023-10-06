@@ -1,0 +1,12 @@
+resilient>=50.1
+resilient-lib>=50.1
+stompest~=2.3
+circuits~=3.2
+pysocks~=1.6
+filelock~=3.2
+
+[:python_version == "2.7"]
+watchdog~=0.10
+
+[:python_version >= "3.6"]
+watchdog~=2.1
