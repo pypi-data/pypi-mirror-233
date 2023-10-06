@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+project_structure_extractor/__init__.py
+project_structure_extractor/cli.py
+project_structure_extractor/extractor.py
+project_structure_extractor.egg-info/PKG-INFO
+project_structure_extractor.egg-info/SOURCES.txt
+project_structure_extractor.egg-info/dependency_links.txt
+project_structure_extractor.egg-info/entry_points.txt
+project_structure_extractor.egg-info/requires.txt
+project_structure_extractor.egg-info/top_level.txt
