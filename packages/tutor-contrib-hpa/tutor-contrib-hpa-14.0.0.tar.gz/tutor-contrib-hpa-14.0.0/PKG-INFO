@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: tutor-contrib-hpa
+Version: 14.0.0
+Summary: Tutor plugin to enable HPA for Kubernetes installations of Open edX
+Home-page: https://github.com/myusername/tutor-contrib-hpa
+Author: Aulasneo
+Author-email: andres@aulasneo.com
+License: AGPLv3
+Project-URL: Code, https://github.com/myusername/tutor-contrib-hpa
+Project-URL: Issue tracker, https://github.com/myusername/tutor-contrib-hpa/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Requires-Dist: tutor<15.0.0,>=14.0.0
+
+hpa plugin for `Tutor <https://docs.tutor.overhang.io>`__
+===================================================================================
+
+Tutor plugin to enable HPA in K8s.
+Inspired in https://gitlab.com/opencraft/dev/tutor-contrib-grove/-/blob/d531bf4b96cd3ac1637563710da5326fc97dce87/tutorgrove/plugin.py#L18-21
+
+
+Installation
+------------
+
+::
+
+    pip install git+https://github.com/myusername/tutor-contrib-hpa
+
+Configuration
+-------------
+
+
+
+Usage
+-----
+
+::
+
+    tutor plugins enable hpa
+
+
+License
+-------
+
+This software is licensed under the terms of the AGPLv3.

@@ -1,0 +1,131 @@
+{%- if RUN_LMS and HPA_LMS_AUTOSCALING %}
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: lms-hpa
+  labels:
+    app.kubernetes.io/name: lms-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lms
+  minReplicas: {{ HPA_LMS_MIN_REPLICAS }}
+  maxReplicas: {{ HPA_LMS_MAX_REPLICAS }}
+  metrics:
+  {%- if HPA_LMS_AVG_CPU > 0 %}
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ HPA_LMS_AVG_CPU }}
+  {%- endif %}
+  {%- if HPA_LMS_AVG_MEMORY|length %}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: AverageValue
+        averageValue: {{ HPA_LMS_AVG_MEMORY }}
+  {%- endif %}
+{%- endif %}
+{%- if RUN_LMS and HPA_LMS_WORKER_AUTOSCALING %}
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: lms-worker-hpa
+  labels:
+    app.kubernetes.io/name: lms-worker-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lms-worker
+  minReplicas: {{ HPA_LMS_WORKER_MIN_REPLICAS }}
+  maxReplicas: {{ HPA_LMS_WORKER_MAX_REPLICAS }}
+  metrics:
+  {%- if HPA_LMS_WORKER_AVG_CPU > 0 %}
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ HPA_LMS_WORKER_AVG_CPU }}
+  {%- endif %}
+  {%- if HPA_LMS_WORKER_AVG_MEMORY|length %}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: AverageValue
+        averageValue: {{ HPA_LMS_WORKER_AVG_MEMORY }}
+  {%- endif %}
+{%- endif %}
+{% if RUN_CMS and HPA_CMS_AUTOSCALING %}
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: cms-hpa
+  labels:
+    app.kubernetes.io/name: cms-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cms
+  minReplicas: {{ HPA_CMS_MIN_REPLICAS }}
+  maxReplicas: {{ HPA_CMS_MAX_REPLICAS }}
+  metrics:
+  {%- if HPA_CMS_AVG_CPU > 0 %}
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ HPA_CMS_AVG_CPU }}
+  {%- endif %}
+  {%- if HPA_CMS_AVG_MEMORY|length %}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: AverageValue
+        averageValue: {{ HPA_CMS_AVG_MEMORY }}
+  {%- endif %}
+{%- endif %}
+{%- if RUN_CMS and HPA_CMS_WORKER_AUTOSCALING %}
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: cms-worker-hpa
+  labels:
+    app.kubernetes.io/name: cms-worker-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cms-worker
+  minReplicas: {{ HPA_CMS_WORKER_MIN_REPLICAS }}
+  maxReplicas: {{ HPA_CMS_WORKER_MAX_REPLICAS }}
+  metrics:
+  {%- if HPA_CMS_WORKER_AVG_CPU > 0 %}
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ HPA_CMS_WORKER_AVG_CPU }}
+  {%- endif %}
+  {%- if HPA_CMS_WORKER_AVG_MEMORY|length %}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: AverageValue
+        averageValue: {{ HPA_CMS_WORKER_AVG_MEMORY }}
+  {%- endif %}
+{%- endif %}

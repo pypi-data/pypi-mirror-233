@@ -1,0 +1,2 @@
+recursive-include tutorhpa/patches *
+recursive-include tutorhpa/templates *

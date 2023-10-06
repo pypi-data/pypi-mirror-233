@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lms
+spec:
+  template:
+    spec:
+      containers:
+        - name: lms
+          resources:
+            requests:
+              memory: {{ HPA_LMS_MEMORY_REQUEST }}
+            {%- if HPA_LMS_CPU_REQUEST > 0 %}
+              cpu: {{ HPA_LMS_CPU_REQUEST }}
+            {%- endif %}
+            limits:
+              memory: {{ HPA_LMS_MEMORY_LIMIT }}
+              {%- if HPA_LMS_CPU_LIMIT > 0 %}
+              cpu: {{ HPA_LMS_CPU_LIMIT }}
+              {% endif %}
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lms-worker
+spec:
+  template:
+    spec:
+      containers:
+        - name: lms-worker
+          resources:
+            requests:
+              memory: {{ HPA_LMS_WORKER_MEMORY_REQUEST }}
+            {%- if HPA_LMS_WORKER_CPU_REQUEST > 0 %}
+              cpu: {{ HPA_LMS_WORKER_CPU_REQUEST }}
+            {%- endif %}
+            limits:
+              memory: {{ HPA_LMS_WORKER_MEMORY_LIMIT }}
+              {%- if HPA_LMS_WORKER_CPU_LIMIT > 0 %}
+              cpu: {{ HPA_LMS_WORKER_CPU_LIMIT }}
+              {% endif %}
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms
+spec:
+  template:
+    spec:
+      containers:
+        - name: cms
+          resources:
+            requests:
+              memory: {{ HPA_CMS_WORKER_MEMORY_REQUEST }}
+            {%- if HPA_CMS_WORKER_CPU_REQUEST > 0 %}
+              cpu: {{ HPA_CMS_WORKER_CPU_REQUEST }}
+            {%- endif %}
+            limits:
+              memory: {{ HPA_CMS_WORKER_MEMORY_LIMIT }}
+              {%- if HPA_CMS_WORKER_CPU_LIMIT > 0 %}
+              cpu: {{ HPA_CMS_WORKER_CPU_LIMIT }}
+              {% endif %}
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms-worker
+spec:
+  template:
+    spec:
+      containers:
+        - name: cms-worker
+          resources:
+            requests:
+              memory: {{ HPA_CMS_WORKER_MEMORY_REQUEST }}
+            {%- if HPA_CMS_WORKER_CPU_REQUEST > 0 %}
+              cpu: {{ HPA_CMS_WORKER_CPU_REQUEST }}
+            {%- endif %}
+            limits:
+              memory: {{ HPA_CMS_WORKER_MEMORY_LIMIT }}
+              {%- if HPA_CMS_WORKER_CPU_LIMIT > 0 %}
+              cpu: {{ HPA_CMS_WORKER_CPU_LIMIT }}
+              {% endif %}
