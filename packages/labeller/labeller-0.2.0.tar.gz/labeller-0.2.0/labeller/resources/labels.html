@@ -1,0 +1,72 @@
+{% extends "bootstrap/base.html" %}
+{% set active_page = "labels" %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+
+{% block title %}Label Database{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<div class="container">
+    <h1 class="page-header">Current Images Labelled</h1>
+
+    <p><b>{{ labels|length }}</b> images have been labelled.</p>
+
+    <h2>Class Distribution</h2>
+
+    <table class="table table-hover">
+      <thead class="bg-primary">
+        <tr>
+          <th>Label String</th>
+          <th>Count</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for key, value in class_distribution.items() %}
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ value }}</td>
+          <td>{{ ((value / (labels|length)) * 100)|round(2) }}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+
+    <h2>Labels</h2>
+
+    <table class="table table-hover"> <!-- table-striped -->
+        <thead class="bg-primary">
+          <tr>
+            <th>#</th>
+            <th>Image</th>
+            <th>Label (zero-based)</th>
+            <th>Label String</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          {% for label in labels %}
+          <tr>
+            <td><b>{{loop.index}}</b></td>
+            <td><a href="./static/images/{{ label[1] }}" target="_blank">{{ label[1] }}</a></td>
+            <td>{{label[2]}}</td>
+            <td>{{label[3]}}</td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
