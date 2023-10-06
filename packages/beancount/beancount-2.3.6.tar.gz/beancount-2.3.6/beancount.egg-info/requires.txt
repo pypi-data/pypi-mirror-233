@@ -1,0 +1,13 @@
+pytest
+python-dateutil
+ply
+bottle
+lxml
+beautifulsoup4
+chardet
+requests
+google-api-python-client
+pdfminer2
+
+[:sys_platform != "win32"]
+python-magic>=0.4.12
