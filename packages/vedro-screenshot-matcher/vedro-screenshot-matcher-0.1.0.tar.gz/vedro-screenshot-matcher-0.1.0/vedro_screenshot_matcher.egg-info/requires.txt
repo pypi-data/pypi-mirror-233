@@ -1,0 +1,7 @@
+vedro<2.0,>=1.7
+playwright<2.0,>=1.21
+pixelmatch<1.0,>=0.3
+Pillow<11.0,>=10.0
+rtry==1.4.1
+pyqt5<5.16
+pyqtwebengine<5.16

@@ -1,0 +1,12 @@
+README.md
+setup.py
+vedro_screenshot_matcher/__init__.py
+vedro_screenshot_matcher/_scheduler.py
+vedro_screenshot_matcher/_screenshot_asserts.py
+vedro_screenshot_matcher/_screenshot_matcher.py
+vedro_screenshot_matcher/_screenshot_matcher_plugin.py
+vedro_screenshot_matcher.egg-info/PKG-INFO
+vedro_screenshot_matcher.egg-info/SOURCES.txt
+vedro_screenshot_matcher.egg-info/dependency_links.txt
+vedro_screenshot_matcher.egg-info/requires.txt
+vedro_screenshot_matcher.egg-info/top_level.txt
