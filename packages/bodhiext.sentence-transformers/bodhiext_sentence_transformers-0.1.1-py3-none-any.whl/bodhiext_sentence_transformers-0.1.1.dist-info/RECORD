@@ -1,0 +1,8 @@
+bodhiext/sentence_transformers/__init__.py,sha256=1XF85_OKwHdCt6TVy4tz3bosxJtXUCNanl1BAhfuJho,551
+bodhiext/sentence_transformers/_sentence_transformer_embedder.py,sha256=OGmqesNmDoEBtI0snWInIn9c0D9t22WUPleXYEc4RF0,3768
+bodhiext/sentence_transformers/_version.py,sha256=xtJA8K0XN3pF5dcc6gRfVwS6uhZrIMN64jpUQojAIpw,200
+bodhiext_sentence_transformers-0.1.1.dist-info/LICENSE,sha256=mtisxaIL94PMcU4CIC4AKpgdklsKzv08VPOnEoBmi9M,1067
+bodhiext_sentence_transformers-0.1.1.dist-info/METADATA,sha256=mOs3WGpAmKrTdEVDwbSC3c31G5noQ_OkEmC8dxJaq5I,1527
+bodhiext_sentence_transformers-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bodhiext_sentence_transformers-0.1.1.dist-info/entry_points.txt,sha256=1b5SNeAIQ1BPy83SUfBPcqeA7Q44uwqkLdoRET48iW0,74
+bodhiext_sentence_transformers-0.1.1.dist-info/RECORD,,

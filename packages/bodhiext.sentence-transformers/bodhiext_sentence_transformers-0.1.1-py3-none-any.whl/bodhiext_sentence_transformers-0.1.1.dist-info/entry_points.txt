@@ -1,0 +1,3 @@
+[bodhilib]
+bodhiext.sentence_transformers=bodhiext.sentence_transformers
+
