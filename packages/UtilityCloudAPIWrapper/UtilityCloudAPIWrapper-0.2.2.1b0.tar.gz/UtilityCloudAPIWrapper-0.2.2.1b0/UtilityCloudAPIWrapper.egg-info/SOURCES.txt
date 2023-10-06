@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+UtilityCloudAPIWrapper/UCAPIErr.py
+UtilityCloudAPIWrapper/UtilityCloudAPIWrapper.py
+UtilityCloudAPIWrapper/__init__.py
+UtilityCloudAPIWrapper.egg-info/PKG-INFO
+UtilityCloudAPIWrapper.egg-info/SOURCES.txt
+UtilityCloudAPIWrapper.egg-info/dependency_links.txt
+UtilityCloudAPIWrapper.egg-info/requires.txt
+UtilityCloudAPIWrapper.egg-info/top_level.txt
