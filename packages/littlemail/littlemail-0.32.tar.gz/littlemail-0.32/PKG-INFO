@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: littlemail
+Version: 0.32
+Summary: Command-line SMTP email sending tool in Python
+Project-URL: homepage, https://github.com/xinlin-z/littlemail
+Author-email: xinlin-z <xinlin.zhang@hotmail.com>
+License: MIT License
+        
+        Copyright (c) 2019 xinlin for maily project
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+        Additional Info:
+        Maily project page https://github.com/xinlin-z/maily
+        Author's python note blog https://www.pynote.net
+        Author's another blog https://www.maixj.net
+License-File: LICENSE
+Keywords: command line,email,python,smtp
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+[![MasterUpdate](https://github.com/xinlin-z/littlemail/actions/workflows/master_update.yml/badge.svg?branch=master)](https://github.com/xinlin-z/littlemail/actions/workflows/master_update.yml)
+
+# littlemail
+
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [API](#API)
+
+Littlemail is a straight-forward command-line SMTP email sending tool
+in Python, which sends **one email per command**. (If you send many
+emails, every sending will make a new connection with the smtp server.)
+
+## Installation
+
+```shell
+$ pip install littlemail
+```
+
+## Usage
+
+There is no way to reduce parameters provided in command-line, since
+that's the way of email. So, please refer to the inline help for options
+you need. Fortunately, many options have default value.
+
+``` shell
+$ python -m littlemail -h  # inline help
+```
+
+Anyway, here is a minimal example and a few lines of explanation:
+
+```shell
+$ python -m littlemail -s test [-c hello] \
+                -f 12345@qq.com \
+                --to 54321@qq.com \
+                --smtp smtp.qq.com [-p abcdefg]
+```
+
+`-c` means the email content, which is optional. That means you can
+send empty-content email. And this optional parameter enables the
+capability of littlemail to get content from pipe (input
+redirection), which might be easier for you to construct your message,
+such as:
+
+```shell
+$ python -m littlemail <...> < my_email_content.txt
+```
+
+`-s` represents subject, which is mandatory and cannot be empty.
+
+`-p` stands for password, and it is optional. When it's missing,
+littlemail tries to get password from `LITTLEMAIL_PASSWD`
+environment variable.
+
+When something goes wrong, try `--debug`.
+
+## API
+
+There is an API you can invoke to send email in your code:
+
+```python
+# import
+from littlemail import send_email
+# signature
+send_email(subject: str,
+           *,
+           text: str = '',
+           contype: str = 'plain',
+           alist: list[str] = [],
+           to: list[str],
+           cc: list[str] = [],
+           bcc: list[str] = [],
+           fromaddr: str,
+           smtp: str,
+           port: int = 587,
+           timeout: int = 3,
+           protocol: str = 'tls',
+           passwd: str|None,
+           debug: bool = False) -> None
+```
+
+`api_test.py` is used as an example and testcase for you try, have fun! ^___^
+

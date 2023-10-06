@@ -1,0 +1,79 @@
+name: MasterUpdate
+
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:  # manual trigger
+
+
+jobs:
+  Lint-Mypy-Send:
+    strategy:
+      matrix:
+        # if os name is wrong, queued forever
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        ver: ["3.10","3.11"]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v3    # uses actions
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.ver }}
+    - name: Install dependencies and tools
+      if: ${{ matrix.os != 'windows-latest' }}
+      shell: bash    # default is bash in Linux and Macos, but not Windows
+      run: |  # newline is effective,  run scripts
+        python -m pip install --upgrade pip
+        pip install flake8 mypy
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        ls -lha | grep -v email.txt > email.txt
+        echo '--------' >> email.txt
+        echo $(date) >> email.txt
+        echo $(python -V) >> email.txt
+        echo $(uname -a) >> email.txt
+        echo $(bash --version) >> email.txt
+        echo '--------' >> email.txt
+        # some context variables
+        echo ${{ github.workflow }} >> email.txt
+        echo ${{ github.job }} >> email.txt
+        echo ${{ github.actor }} >> email.txt
+        echo ${{ github.event_name }} >> email.txt
+        echo ${{ runner.os }} >> email.txt
+        echo ${{ github.repository }} >> email.txt
+        echo ${{ github.ref }} >> email.txt
+        echo '--------' >> email.txt
+    - name: Lint with flake8
+      id: flake8
+      if: ${{ matrix.os != 'windows-latest' }}
+      continue-on-error: true
+      shell: bash
+      run: |
+        flake8 . --count | tee -a email.txt
+    - name: Check with mypy
+      id: mypy
+      if: ${{ matrix.os != 'windows-latest' }}
+      continue-on-error: true
+      shell: bash
+      run: |
+        mypy --strict . | tee -a email.txt
+    - name: Send Email
+      if: ${{ matrix.os != 'windows-latest' }}
+      shell: bash
+      run: |
+        python littlemail.py\
+          -s "[littlemail] MasterUpdate ${{matrix.os}} Python${{matrix.ver}}"\
+          -f 3003974@qq.com\
+          --to ${{secrets.TO_LIST}}\
+          --smtp smtp.qq.com\
+          -p ${{secrets.QQMAIL_PASS4GITHUB}}\
+          --debug < email.txt
+    - name: Send Email on Windows
+      if: ${{ matrix.os == 'windows-latest' }}
+      run: |
+        python littlemail.py -s "[littlemail] MasterUpdate ${{matrix.os}} Python${{matrix.ver}}" -f 3003974@qq.com --to ${{secrets.TO_LIST}} --smtp smtp.qq.com -p ${{secrets.QQMAIL_PASS4GITHUB}} --debug
+
+
