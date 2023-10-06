@@ -1,0 +1,12 @@
+brief-news-cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brief-news-cli/api.py,sha256=H7Js8jHeZZCEsVCPNCr3-m-iyTW9XUHMzGKll3xi3zs,983
+brief-news-cli/cli.py,sha256=mAlvcx-PNMGXBq1WF9YUgJzm__EaFRqAqrgRVBvUJMA,2907
+brief-news-cli/config.py,sha256=JCceL5oLSjjMRHwir0RK-zQHaZKIDU2RnSe1F2A4xqM,838
+brief-news-cli/summarizer.py,sha256=g9kQMTUjRZf34i_bCSF8Bnk2CC3OAfp0GCynUhW28Lg,39
+brief-news-cli/utils.py,sha256=yUqyHecC5n6coAyXoFsQYBrlCB9z767MxRhre0mCzOQ,33
+briefnewscli-0.1.0.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+briefnewscli-0.1.0.dist-info/METADATA,sha256=r-iHr2K71eyCzuR1qjzmBUjCDritjB6tGl1oyWGYQoQ,284
+briefnewscli-0.1.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+briefnewscli-0.1.0.dist-info/entry_points.txt,sha256=feCyB5ohoMUnIy8Bmoehi88kN9aPwhnZhM2gFTSetwk,75
+briefnewscli-0.1.0.dist-info/top_level.txt,sha256=BRuveteDeb_wOQCghUbBVz4Xo9xeqn505afeQULx7_k,15
+briefnewscli-0.1.0.dist-info/RECORD,,
