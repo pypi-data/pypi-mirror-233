@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: projetopypiALOUIA11
+Version: 0.0.1
+Summary: Pacote python para gerar palavras dissílabas
+Author: Rafael Juliano
+Author-email: rafael22070063@aluno.cesupa.br
+License: MIT License
+Keywords: Pacote
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pacotepypi
+
+**pacotepypi** Ã© um simples pacote para gerar palavras, em Python.
+
+## DependÃªncias
+**Python 3.6** ou posterior
+
+Pacote **random**
+
+## ComeÃ§ando o uso
+VocÃª vai precisar instalar o pacote **pacotepypi**, para isso basta executar:
+```
+pip install pacotepypi
+```
+
+## FunÃ§Ã£o
+
+* `gerar_palavra_dissilaba()` - Gera uma palavra dissÃ­laba.
+* 
+* `salvar_em_arquivo()` - Salva as palavras geradas em um arquivo txt.

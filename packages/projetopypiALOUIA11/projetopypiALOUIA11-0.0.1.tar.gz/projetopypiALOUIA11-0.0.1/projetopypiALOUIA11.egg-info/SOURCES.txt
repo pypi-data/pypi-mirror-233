@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+base/Memoria.py
+base/__init__.py
+gerador/Palavra.py
+gerador/__init__.py
+projetopypiALOUIA11.egg-info/PKG-INFO
+projetopypiALOUIA11.egg-info/SOURCES.txt
+projetopypiALOUIA11.egg-info/dependency_links.txt
+projetopypiALOUIA11.egg-info/requires.txt
+projetopypiALOUIA11.egg-info/top_level.txt
