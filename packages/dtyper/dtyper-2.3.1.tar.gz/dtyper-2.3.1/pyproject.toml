@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+target-version = ['py37']
+
+[tool.doks]
+auto = true
+
+[tool.poetry]
+authors = ["Tom Ritchford <tom@swirly.com>"]
+description = "🗝 Fix and improve `typer` 🗝"
+homepage = "https://github.com/rec/dtyper"
+name = "dtyper"
+readme = "README.md"
+repository = "https://github.com/rec/dtyper"
+version = "2.3.1"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+typer = "*"
+pyright = "^1.1.318"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "*"
+flake8 = "*"
+pytest = "*"
+versy = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
