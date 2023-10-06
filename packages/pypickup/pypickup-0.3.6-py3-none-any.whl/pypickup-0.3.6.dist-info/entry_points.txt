@@ -1,0 +1,9 @@
+[console_scripts]
+pypickup = pypickup.cli:cli
+
+[pypickup.cmd]
+add = pypickup.cmd:AddEP
+config = pypickup.cmd:ConfigEP
+list = pypickup.cmd:ListEP
+rebuild-index = pypickup.cmd:RebuildIndexEP
+rm = pypickup.cmd:RemoveEP
