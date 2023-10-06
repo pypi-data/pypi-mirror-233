@@ -1,0 +1,2 @@
+[console_scripts]
+txtrpacker = txtrpacker.cli:main

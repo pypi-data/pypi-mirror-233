@@ -1,0 +1,11 @@
+txtrpacker/__init__.py,sha256=KYZdcWVwHN8c86iQ2bzSMPfGFNAPf9-lbTZ2yKqgTZ0,118
+txtrpacker/cli.py,sha256=j1mSBUPE02KJsCFqAZsdlLRUNhwx6Gp-OlhIQGOsLtM,2250
+txtrpacker/rect.py,sha256=rN32-YnSVQhmm6Eq81067DmNTbFm_nVjiSa3sHwlwfE,1927
+txtrpacker/txtrpacker.py,sha256=1AfBobAOaOwKubteVm-Rkvs9xkwUg1mAWHZR288Qw-4,6110
+txtrpacker-0.3.dist-info/AUTHORS.md,sha256=Fh3z-0vGevohiR4bGAkR7hhyV2Sl3PRj7PvpGy9oQf4,161
+txtrpacker-0.3.dist-info/LICENSE,sha256=Mvwf-n9boMe9O2UkWshert2YZBDwLwFdeADDgNRAJg8,1542
+txtrpacker-0.3.dist-info/METADATA,sha256=zfsBW_iOUiBrvnFXQ-irbtoaZYaX34mW69iSkST0hYA,3217
+txtrpacker-0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+txtrpacker-0.3.dist-info/entry_points.txt,sha256=T4cgsunVjnbqx1xmoMmLHlHcaFpbU_rHfCL4usjCIgg,51
+txtrpacker-0.3.dist-info/top_level.txt,sha256=KZcG41dlRbBmeLnA0eNw1o98OMgRj5WuR-rCAFNQF3s,11
+txtrpacker-0.3.dist-info/RECORD,,
