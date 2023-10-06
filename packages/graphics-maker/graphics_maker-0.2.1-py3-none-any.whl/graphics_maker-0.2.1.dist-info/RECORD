@@ -1,0 +1,10 @@
+graphics_maker/__init__.py,sha256=TzFx62piMRY0aa82JpFfTNiCp3YX4cZxACFQxWoWjdE,155
+graphics_maker/animation_data.py,sha256=ZhuCEvH9LrgL0h8_Gq9zCAdnbF2GuOnP-QxXCrN7-TU,2193
+graphics_maker/graphics_maker.py,sha256=h_zEPK4_hwWNqIqWX2hLUxLGXgKqKvTkZRo81aymBK4,10454
+graphics_maker/object.py,sha256=39yJHsDUczXrG0kkDWT9EJvcXuWA2aNWgsRrUrjVhls,2928
+graphics_maker/utils.py,sha256=jIjYcjsv-1yHVzwwu-zLvUYb3L9Q41gBqN7vZPx8Yy4,3722
+graphics_maker-0.2.1.dist-info/LICENSE.txt,sha256=ANCBPXjlqMI2YqjJI8ZBQ--1bBRGHRmBbkzIE0n6SjM,1072
+graphics_maker-0.2.1.dist-info/METADATA,sha256=njp-pP7XpsjEe_ja2R0FcDtpJmcxaWflXasFFJ7DzME,3281
+graphics_maker-0.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+graphics_maker-0.2.1.dist-info/top_level.txt,sha256=ISxUo70qH6bY_zF8tgf0m5gsiFu1enAnCZncQiFNgMc,15
+graphics_maker-0.2.1.dist-info/RECORD,,
