@@ -1,0 +1,5 @@
+setup.py
+captain_comeback.egg-info/PKG-INFO
+captain_comeback.egg-info/SOURCES.txt
+captain_comeback.egg-info/dependency_links.txt
+captain_comeback.egg-info/top_level.txt
