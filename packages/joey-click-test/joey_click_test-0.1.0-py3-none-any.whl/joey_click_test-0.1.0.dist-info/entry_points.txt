@@ -1,0 +1,2 @@
+[console_scripts]
+joey-click-test = joey_click_test.main:cli
