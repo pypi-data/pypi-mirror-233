@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qntpy"
+version = "1.0.4"
+authors = [
+  { name="miir", email="itsmiir@outlook.com" },
+]
+description = "a dimensional analysis module"
+
+readme = "README.md"
+
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+]
+[project.urls]
+"Homepage" = "https://github.com/itsmiir/qpy"
+"Bug Tracker" = "https://github.com/itsmiir/qpy/issues"
