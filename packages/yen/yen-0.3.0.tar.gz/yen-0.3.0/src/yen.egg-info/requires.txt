@@ -1,0 +1,9 @@
+microvenv>=2023.2.0
+rich>=13.5.3
+
+[dev]
+black
+mypy
+pytest
+pytest-cov
+tox
