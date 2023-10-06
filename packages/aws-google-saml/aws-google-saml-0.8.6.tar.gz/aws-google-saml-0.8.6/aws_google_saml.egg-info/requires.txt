@@ -1,0 +1,4 @@
+ET
+botocore
+boto3
+configparser
