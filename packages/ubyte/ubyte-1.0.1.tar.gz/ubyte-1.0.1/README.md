@@ -1,0 +1,160 @@
+# introduction
+This package(ubyte 0.1) can decode `.idx1-ubyte` and `.idx3-ubyte` files (the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset use these forments).  
+The pakage can use on python3.
+# functions
+This is about how to use the function in this package:
+##  ```decode_idx3_ubyte(fileDir)``` 
+### introduction:
+ ```decode_idx3_ubyte(fileDir)``` is a function to decode .idx3-ubyte files and return a array.
+### argument:
+```string(fileDir)```:The path of the file you want to decode.
+#### outprint:
+Outprint example:  
+
+```
+Getting platform type...
+Your computer's platform type is unix-type system .
+Start decoding train-images.idx3-ubyte (the complete directory is /xxx/train-images.idx3-ubyte.)
+Opening train-images.idx3-ubyte .
+ Successfully opened train-images.idx3-ubyte,used time 0.195663 s.
+Decoding header information .
+ Magic number: 2051,number of images: 60000,size of images: 28*28.
+ Successfully decoded header information,used time 0.310604 s.
+Decoding main part.
+ Decoded 3722 sheets,used time 0.600014 s,etc 9.072753 s.
+ Decoded 4370 sheets,used time 0.700014 s,etc 8.911483 s.
+ Decoded 5317 sheets,used time 0.800018 s,etc 8.228133 s.
+ Decoded 16771 sheets,used time 1.600019 s,etc 4.124406 s.
+ Decoded 18187 sheets,used time 1.800016 s,etc 4.138542 s.
+ Decoded 36438 sheets,used time 3.000012 s,etc 1.940070 s.
+ Decoded 38601 sheets,used time 3.200007 s,etc 1.774134 s.
+ Decoded 43789 sheets,used time 3.600013 s,etc 1.332915 s.
+ Decoded 46118 sheets,used time 3.800019 s,etc 1.144010 s.
+ Decoded 46752 sheets,used time 3.900001 s,etc 1.105301 s.
+ Decoded 47665 sheets,used time 4.000001 s,etc 1.035309 s.
+ Decoded 49086 sheets,used time 4.200022 s,etc 0.934023 s.
+ Decoded 49679 sheets,used time 4.300004 s,etc 0.893515 s.
+ Decoded 53669 sheets,used time 4.600003 s,etc 0.542805 s.
+ Decoded 55066 sheets,used time 4.800024 s,etc 0.430264 s.
+ Decoded 55453 sheets,used time 4.900000 s,etc 0.401964 s.
+ Decoded 56246 sheets,used time 5.000012 s,etc 0.333891 s.
+ Decoded 57558 sheets,used time 5.200013 s,etc 0.220800 s.
+ Successfully decoded main part,used time 5.445718 s.
+Successfully decoded train-images.idx3-ubyte,used time 5.544702 s.
+```
+
+### output:
+```numpy.array(images)```:A [numpy](https://numpy.org) array of images.  
+
+Output example:
+
+```
+array([[[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]],
+
+       [[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]],
+
+       [[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]],
+
+       ...,
+
+       [[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]],
+
+       [[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]],
+
+       [[0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.],
+        [0., 0., 0., ..., 0., 0., 0.]]])
+```
+
+
+##  ```decode_idx1_ubyte(fileDir)``` 
+### introduction:
+```decode_idx1_ubyte(fileDir)``` is a function to decode .idx1-ubyte files.
+### argument:
+```string(fileDir)```:The path of the file you want to decode and return a array.
+### outprint:
+Outprint example:  
+```
+Getting platform type...
+Your computer's platform type is unix-type system .
+Start decoding train-labels.idx1-ubyte (the complete directory is /xxx/train-labels.idx1-ubyte.)
+Opening train-labels.idx1-ubyte.
+ Successfully decoded header information,used time 0.102155 s.
+Decoding header information.
+ Magic number: 2049,number of images: 60000.
+ Successfully decoded header information,used time 0.196112 s.
+Decoding main part.
+ Decoded 3232 sheets,used time 0.300001 s,etc 5.269510 s.
+ Decoded 7921 sheets,used time 0.400006 s,etc 2.630061 s.
+ Decoded 8184 sheets,used time 0.500001 s,etc 3.165818 s.
+ Decoded 14050 sheets,used time 0.600001 s,etc 1.962366 s.
+ Decoded 15233 sheets,used time 0.700002 s,etc 2.057270 s.
+ Decoded 21160 sheets,used time 0.800005 s,etc 1.468516 s.
+ Decoded 22308 sheets,used time 0.900009 s,etc 1.520752 s.
+ Decoded 26843 sheets,used time 1.000010 s,etc 1.235306 s.
+ Decoded 26950 sheets,used time 1.100010 s,etc 1.349073 s.
+ Decoded 32656 sheets,used time 1.200010 s,etc 1.004883 s.
+ Decoded 33839 sheets,used time 1.300005 s,etc 1.005113 s.
+ Decoded 38110 sheets,used time 1.400009 s,etc 0.804225 s.
+ Decoded 42441 sheets,used time 1.500000 s,etc 0.620662 s.
+ Decoded 46652 sheets,used time 1.600003 s,etc 0.457859 s.
+ Decoded 55396 sheets,used time 1.800003 s,etc 0.149664 s.
+ Decoded 59506 sheets,used time 1.900001 s,etc 0.015837 s.
+ Successfully decoded main part,used time 1.956952 s.
+Successfully decoded train-labels.idx1-ubyte,used time 2.000741 s.
+```
+
+### output:
+```numpy.array(images)```:A numpy array of labels.  
+
+Output example:
+```
+array([5., 0., 4., ..., 5., 6., 8.])
+```
+# debug
+## 0.2.0
+1.The directory different betweens ```Windows``` and ```Unix-like OS``` .  
+- Windows:```C:\progamefile\```
+- Unix-like:```/Applications```
+> Tips:I'm using macOS 13 .
+
+## 1.0.0
+add ```requirements.txt```to fix the numpy not found error.
+
+# others 
+The package needs numpy in ```site-package```.  
+Plese visit ```README.html``` in the package to get colorful options.
