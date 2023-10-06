@@ -1,0 +1,17 @@
+setup.py
+afrinet_system.egg-info/PKG-INFO
+afrinet_system.egg-info/SOURCES.txt
+afrinet_system.egg-info/dependency_links.txt
+afrinet_system.egg-info/entry_points.txt
+afrinet_system.egg-info/requires.txt
+afrinet_system.egg-info/top_level.txt
+modules/__init__.py
+modules/src/__init__.py
+modules/src/authentication_class.py
+modules/src/base_class.py
+modules/src/id_generator_class.py
+modules/src/slugify_class.py
+modules/src/user_class.py
+modules/src/verification_class.py
+tests/__init__.py
+tests/module_test.py
