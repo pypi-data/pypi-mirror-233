@@ -1,0 +1,2 @@
+[console_scripts]
+aws-cloud-unmap = cloudunmap.cli:run
