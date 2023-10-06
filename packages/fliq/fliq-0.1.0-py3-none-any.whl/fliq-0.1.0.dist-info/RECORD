@@ -1,0 +1,9 @@
+fliq/__init__.py,sha256=ddK5U_sj0O_puvFVnDb5_dF-LD9dX22cucKE_wBbzuc,29
+fliq/channel.py,sha256=J3a4wBQp6iyltx5M_HuRDLyyO6DV3mGIx2jxmTph09E,438
+fliq/exceptions.py,sha256=0MWr-6XMrk81_lLkBgj30QiVQLVcRrm3udtEe2u-ALQ,173
+fliq/query.py,sha256=YJiRu3oTOjIk4T9wJTUwRa994OsZg9yWnIpAYF6_-yY,2115
+fliq-0.1.0.dist-info/LICENSE,sha256=dcn2-hWXZFtLG1MOWx3YDd8qVYyTadgZLeTgadzKskI,1069
+fliq-0.1.0.dist-info/METADATA,sha256=YVj-yYM2HWUVVF2_Wd0WsVNvwDgjk-U-_0L2tN22OkM,1748
+fliq-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+fliq-0.1.0.dist-info/top_level.txt,sha256=xociS3-YOX716NVFnAjQ0pjfaGXhfQved6b8DtVwhjM,5
+fliq-0.1.0.dist-info/RECORD,,
