@@ -1,0 +1,14 @@
+LICENCE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+filters_iso/__init__.py
+phx_filters_iso.egg-info/PKG-INFO
+phx_filters_iso.egg-info/SOURCES.txt
+phx_filters_iso.egg-info/dependency_links.txt
+phx_filters_iso.egg-info/entry_points.txt
+phx_filters_iso.egg-info/requires.txt
+phx_filters_iso.egg-info/top_level.txt
+test/__init__.py
+test/test_filters_iso.py

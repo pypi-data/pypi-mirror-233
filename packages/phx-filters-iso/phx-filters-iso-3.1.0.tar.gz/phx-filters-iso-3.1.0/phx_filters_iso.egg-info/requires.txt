@@ -1,0 +1,11 @@
+phx-filters>=3.4.0
+iso3166
+language_tags
+py-moneyed
+
+[build-system]
+build
+twine
+
+[test-runner]
+tox

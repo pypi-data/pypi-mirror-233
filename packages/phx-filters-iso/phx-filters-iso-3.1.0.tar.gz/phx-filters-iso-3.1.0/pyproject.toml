@@ -1,0 +1,64 @@
+# :see: https://peps.python.org/pep-0621/
+
+[project]
+name = "phx-filters-iso"
+version = "3.1.0"
+description = "Extends phx-filters, adding filters for interpreting ISO codes."
+readme = "README.rst"
+requires-python = ">= 3.10"
+license = { file = "LICENCE.txt" }
+authors = [
+    { email = "Phoenix Zerin <phx@phx.nz>" }
+]
+
+keywords = [
+    "bcp 47",
+    "data validation",
+    "i18n",
+    "ietf language tags",
+    "internationalisation",
+    "internationalization",
+    "iso",
+    "iso-3166",
+    "iso-4217",
+    "l10n",
+    "localisation",
+    "localization",
+    "standards",
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    'Topic :: Text Processing :: Filters',
+]
+
+dependencies = [
+    'phx-filters >= 3.4.0',
+    'iso3166',
+    'language_tags',
+    'py-moneyed',
+]
+
+# https://filters.readthedocs.io/en/latest/extensions.html#registering-your-filters
+[project.entry-points."filters.extensions"]
+Country = "filters_iso:Country"
+Currency = "filters_iso:Currency"
+Locale = "filters_iso:Locale"
+
+[project.optional-dependencies]
+# Utilities for Project Maintainers
+"build-system" = ["build", "twine"]
+"test-runner" = ["tox"]
+
+[project.urls]
+Documentation = "https://filters.readthedocs.io/en/latest/extension_filters.html#iso-filters"
+Changelog = "https://github.com/todofixthis/filters-iso/releases"
+Issues = "https://github.com/todofixthis/filters-iso/issues"
+Repository = "https://github.com/todofixthis/filters-iso"
