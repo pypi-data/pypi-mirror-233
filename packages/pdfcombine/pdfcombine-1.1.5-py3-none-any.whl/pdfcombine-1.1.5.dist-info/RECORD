@@ -1,0 +1,10 @@
+pdfcombine/__init__.py,sha256=sAs7dyLTLDLX1rJoTnQwaVU1M5joA50HJeRd13v1BF4,5713
+pdfcombine/_version.py,sha256=p6boDiQdasJZPY6LJZyTn_Nvo9xOGDmpaohyvr7StwY,412
+pdfcombine/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdfcombine/cli/pdfcombine.py,sha256=RPyO-K0rAOFKh0IntdH9alIeq-CE0cB2lsBAsJUEtXE,5908
+pdfcombine-1.1.5.dist-info/LICENSE,sha256=T-VugPjkf0PsKJyihdN67Q2mw06X3bCQiF_ElhFW3Fw,1068
+pdfcombine-1.1.5.dist-info/METADATA,sha256=jXOsKWmrO5S4Va6rdpQ-Te7WhyE4VfwfqCsZ_MZxpNQ,7572
+pdfcombine-1.1.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pdfcombine-1.1.5.dist-info/entry_points.txt,sha256=gP6-SGzgGpv-6SrtY14poiBAnrjRjhVekYHmBtL4rBk,62
+pdfcombine-1.1.5.dist-info/top_level.txt,sha256=g8pUKjGEbcKNSAMVd4a7O0Bl-N4F0g3Xc2ca4ZiZ59I,11
+pdfcombine-1.1.5.dist-info/RECORD,,
