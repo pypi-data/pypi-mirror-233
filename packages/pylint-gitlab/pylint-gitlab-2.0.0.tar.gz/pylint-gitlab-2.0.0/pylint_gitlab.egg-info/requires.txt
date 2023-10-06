@@ -1,0 +1,16 @@
+anybadge
+astroid
+dill
+importlib-metadata
+isort
+jinja2
+markupsafe
+mccabe
+packaging
+platformdirs
+pylint
+tomli
+tomlkit
+typing-extensions
+wrapt
+zipp
