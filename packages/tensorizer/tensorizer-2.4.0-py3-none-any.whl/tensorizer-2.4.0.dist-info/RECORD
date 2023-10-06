@@ -1,0 +1,15 @@
+tensorizer/_NumpyTensor.py,sha256=wPx_FNNuC6e9RLby9m2ZbOygTETvp_z1PcQ43UH4Sww,10354
+tensorizer/__init__.py,sha256=k0UlHNnu-8loe4q1jRcMFC0D2288U5MTfmRaPfov-7E,217
+tensorizer/_version.py,sha256=yLaFvd-K80rs_ClRVYULStijkok4RfYSaanIt_E-aKM,22
+tensorizer/_wide_pipes.py,sha256=TfC2mAmBJSpwdfB1Op-_FxkbNIMD4Lq52tXYc1CCPp8,6701
+tensorizer/protobuf.py,sha256=ZY4PYZGN4wSHFn61x-DExOpzfoNYgeNRFrBUnqB--3I,5415
+tensorizer/serialization.py,sha256=nXUu7W8-D4gDJa0Z0HdqfV0NrGfTp7ktyr8EWVcwWUU,83801
+tensorizer/stream_io.py,sha256=pebuy_Nu8cYVHTa7aA8lXZ1ssV1nfBoGZA62_fhm9mE,42098
+tensorizer/tensors.proto,sha256=c1VeA4S1LeaB7vOHHgScOoVkEpNi8qsbwOHSlgl5ZPQ,921
+tensorizer/tensors_pb2.py,sha256=J0r6E15UyooEbskKhDX8I77880TTJGiOK1SGGD8ssFM,4121
+tensorizer/utils.py,sha256=x5IeQqsu5393Ruv3DHpzRP-uROhAMoQeyyg_i8ZKMfo,12109
+tensorizer-2.4.0.dist-info/LICENSE,sha256=NUGjNLg0PcocxbA5U9mE7WED7obmHbJQ1VjD12_eo8E,1049
+tensorizer-2.4.0.dist-info/METADATA,sha256=rc1j7ZEAJpdhEIDUzCVAM4quzkZXpfbzjP60TSFhM80,30511
+tensorizer-2.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tensorizer-2.4.0.dist-info/top_level.txt,sha256=RIrySiM8zHgtmn2XM6BP6TEdVm6phPc1SFhp7fLLhTM,11
+tensorizer-2.4.0.dist-info/RECORD,,
