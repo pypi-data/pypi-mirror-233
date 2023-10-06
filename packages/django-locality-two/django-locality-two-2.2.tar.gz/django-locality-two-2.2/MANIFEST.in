@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include locality/fixtures *.json
+recursive-include locality/migrations *.py
