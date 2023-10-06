@@ -1,0 +1,16 @@
+pip>=20.3
+setuptools>=45.0.0
+
+[:python_version < "3.8"]
+typing_extensions
+importlib_metadata
+
+[dev]
+twine
+black
+isort~=5.0
+
+[docs]
+
+[tests]
+mypy

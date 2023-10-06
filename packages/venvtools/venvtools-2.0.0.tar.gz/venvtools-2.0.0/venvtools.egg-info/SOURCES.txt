@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tests/test_import.py
+venvtools/__init__.py
+venvtools/extended_env_builder.py
+venvtools/py.typed
+venvtools/virtual_env_command.py
+venvtools.egg-info/PKG-INFO
+venvtools.egg-info/SOURCES.txt
+venvtools.egg-info/dependency_links.txt
+venvtools.egg-info/entry_points.txt
+venvtools.egg-info/requires.txt
+venvtools.egg-info/top_level.txt
+venvtools.egg-info/zip-safe
