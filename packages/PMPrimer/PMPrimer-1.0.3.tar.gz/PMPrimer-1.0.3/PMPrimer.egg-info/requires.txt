@@ -1,0 +1,5 @@
+primer3-py
+seaborn
+pandas
+matplotlib
+biopython
