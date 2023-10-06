@@ -1,0 +1,3 @@
+[sitecustomize]
+autoset_pwd=autoset_pwd:entrypoint
+
