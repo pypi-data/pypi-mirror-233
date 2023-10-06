@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+pyxbar/__init__.py
+pyxbar/__main__.py
+pyxbar/config.py
+pyxbar/menu.py
+pyxbar/types.py
+pyxbar/utils.py
+pyxbar.egg-info/PKG-INFO
+pyxbar.egg-info/SOURCES.txt
+pyxbar.egg-info/dependency_links.txt
+pyxbar.egg-info/requires.txt
+pyxbar.egg-info/top_level.txt
+test/test.py
