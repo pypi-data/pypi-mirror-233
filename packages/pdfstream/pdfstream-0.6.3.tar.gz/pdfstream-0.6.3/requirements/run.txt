@@ -1,0 +1,10 @@
+bluesky
+databroker
+fire
+frozendict
+numba
+pyfai
+pyopencl
+scikit-beam
+xpdview
+xray-vision

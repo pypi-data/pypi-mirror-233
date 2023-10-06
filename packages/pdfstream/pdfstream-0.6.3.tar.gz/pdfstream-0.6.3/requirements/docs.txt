@@ -1,0 +1,6 @@
+ipython
+matplotlib
+sphinx
+numpydoc
+sphinx-copybutton
+sphinx_rtd_theme
