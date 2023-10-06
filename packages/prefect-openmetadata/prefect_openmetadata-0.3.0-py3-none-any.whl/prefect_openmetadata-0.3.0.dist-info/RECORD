@@ -1,0 +1,10 @@
+prefect_openmetadata/__init__.py,sha256=jMVE6eKegndV9O0lmGwPddirpw8Rn7Pdlqw5tyj2c4w,73
+prefect_openmetadata/_version.py,sha256=ySZF8m_TdXMWkGcZdbCHbDlwAf7o0kSieZd9O7OKXfI,497
+prefect_openmetadata/flows.py,sha256=0DaCbsynw_56E6Yrwp1Gp1DjgdfPxu9x_4BMTLm2U9M,5680
+prefect_openmetadata/ingestion_workflow.py,sha256=0Th65bCE-08OenG3Nzgulra-_f5mxCGaaVPPRT2gcjE,1292
+prefect_openmetadata/profiler_workflow.py,sha256=DBzp8xy--etapZNg4KI99yTRRERH8XS8nv7Iz64kPF8,1152
+prefect_openmetadata-0.3.0.dist-info/LICENSE,sha256=tLKlrmr0sOnPybm5TUmA2SBT-cYajF3kILQME85pqpQ,11356
+prefect_openmetadata-0.3.0.dist-info/METADATA,sha256=lO7RpWjgugBjEMyT3qNY_9fCtRj9XR-1gbpnVJTeebY,3943
+prefect_openmetadata-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+prefect_openmetadata-0.3.0.dist-info/top_level.txt,sha256=KK6g_LHRijemAwVZctWhMRMW4qUJdNnNqcWBr8-kXTU,21
+prefect_openmetadata-0.3.0.dist-info/RECORD,,
