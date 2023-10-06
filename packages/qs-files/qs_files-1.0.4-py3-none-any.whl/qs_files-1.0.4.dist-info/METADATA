@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: qs-files
+Version: 1.0.4
+Summary: Python library for managing .qs files and configurations.
+Home-page: https://github.com/QuadratNew/qs-files
+Author: Quadrat.Ik
+Author-email: quadrat.ik@yandex.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+
+# qs-files
+
+![GitHub](https://img.shields.io/github/license/QuadratNew/qs-files)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/QuadratNew/qs-files)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/QuadratNew/qs-files/Python%20CI)
+![PyPI](https://img.shields.io/pypi/v/qs-files)
+
+Python library for managing .qs files and configurations.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+"qs-files" is a Python library designed to simplify the management of .qs (QuickScript) files and configurations. It provides easy-to-use classes for reading, modifying, and saving .qs files, making it a valuable tool for developers working with QuickScript configurations.
+
+Key features of "qs-files" include:
+
+- Parsing .qs files into structured data.
+- Modifying and updating configurations programmatically.
+- Easily adding, modifying, and deleting sections and key-value pairs.
+- Simplified management of QuickScript global settings.
+
+## Installation
+
+You can install "qs-files" using pip:
+
+```bash
+pip install qs-files
+```
+
+## Usage
+
+Here's a quick example of how to use "qs-files" to load and manipulate a .qs configuration file:
+
+```python
+from qs_files.configs import Configs
+
+# Initialize a Configs object with the path to your .qs file
+config = Configs('path/to/your/config.qs')
+
+# Load the configuration from the file
+config.load()
+
+# Access a specific section and key
+value = config.get_value('section_name', 'key_name')
+
+# Modify a value
+config.set_value('section_name', 'key_name', 'new_value')
+
+# Save the changes back to the file
+config.save()
+```
+
+For more detailed usage instructions and examples, please refer to the [documentation](https://github.com/QuadratNew/qs-files) on GitHub.
+
+## Contributing
+
+Contributions to "qs-files" are welcome! If you find a bug or have an enhancement in mind, please open an issue on GitHub. If you'd like to contribute code, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Write tests for your code.
+4. Make your changes and ensure tests pass.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+Feel free to replace the placeholders with actual information about your project. This README provides an organized structure that introduces your project, explains how to install it, provides basic usage instructions, invites contributions, and mentions the licensing information.
