@@ -1,0 +1,2 @@
+class LogvistaConfig:
+    pass
