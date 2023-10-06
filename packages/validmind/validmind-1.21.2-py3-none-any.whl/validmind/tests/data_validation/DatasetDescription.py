@@ -1,0 +1,281 @@
+# Copyright © 2023 ValidMind Inc. All rights reserved.
+
+import re
+from collections import Counter
+from dataclasses import dataclass
+
+import numpy as np
+
+from validmind.logging import get_logger
+from validmind.vm_models import Metric, ResultSummary, ResultTable, ResultTableMetadata
+
+DEFAULT_HISTOGRAM_BINS = 10
+DEFAULT_HISTOGRAM_BIN_SIZES = [5, 10, 20, 50]
+
+logger = get_logger(__name__)
+
+
+@dataclass
+class DatasetDescription(Metric):
+    """
+    **Purpose**: This test is used to provide a variety of descriptive statistics about the input data used in a
+    machine learning model. Such statistics include measures of central tendency, measures of dispersion, and frequency
+    counts for each field (i.e. feature or variable) in the dataset. This helps in understanding the nature of the
+    data, identifying outliers, and understanding how well the data meets the assumptions of the model.
+
+    **Test Mechanism**: The mechanism starts by transforming the input dataset to its basic form by reversing any
+    one-hot encoding and extracting each field from the dataset. Descriptive statistics are then computed for each
+    field depending on its data type (Numeric, Categorical, Boolean, Dummy, Text, Null). For numeric fields, statistics
+    like mean, standard deviation, min, max and various percentiles are computed. For categorical and boolean fields,
+    frequency counts of each category and the most frequent category (top) are computed. Missing and distinct values
+    are computed for all fields. Additionally, the test generates histograms of the data for numeric and categorical
+    types, as well as word count histograms for text simply by counting the number of occurrences of every distinct
+    word.
+
+    **Signs of High Risk**: Areas of potential high risk include a significant proportion of missing or null values
+    which may affect the model's performance. Also, predominance of a single value (low diversity) in a feature, high
+    variance in a numeric feature, or high number of distinct categories in categorical features may signal problems
+    with the model. High frequency of a particular word in text data could also indicate bias.
+
+    **Strengths**: This test effectively provides a comprehensive, high-level summary of the dataset. It aids in
+    understanding the distribution, dispersion, and central tendency of numeric features, and the frequency
+    distribution in categorical and text features. It effectively handles different data types and provides insight
+    into the variety and distribution of field values.
+
+    **Limitations**: This metric doesn’t provide insights into the relationships between different fields or features;
+    it only provides univariate analysis. The statistical description for text data is also quite limited, essentially
+    being a bag-of-words model. The descriptive statistics like mean, standard deviation are not meaningful for ordinal
+    categorical data. Lastly, this test does not inform on how the data will influence the model's performance.
+    """
+
+    name = "dataset_description"
+    required_inputs = ["dataset"]
+    metadata = {
+        "task_types": [
+            "classification",
+            "regression",
+            "text_classification",
+            "text_summarization",
+        ],
+        "tags": ["tabular_data", "time_series_data", "text_data"],
+    }
+
+    def summary(self, metric_value):
+        """
+        Build a dataset summary table. metric_value is a list of fields where each field
+        has an id, type (Numeric or Categorical), and statistics. The statistics object
+        depends on the type being Numeric or Categorical. For Numeric fields, it has
+        the following keys: count, mean, std, min, 25%, 50%, 75%, 90%, 95%, max. For
+        categorical fields, it has the following keys: count, unique, top, freq.
+        """
+        results_table = []
+        for field in metric_value:
+            field_id = field["id"]
+            field_type = field["type"]
+            field_statistics = field["statistics"]
+
+            results_table.append(
+                {
+                    "Name": field_id,
+                    "Type": field_type,
+                    "Count": field_statistics["count"],
+                    "Missing": field_statistics["n_missing"],
+                    "Missing %": field_statistics["missing"],
+                    "Distinct": field_statistics["n_distinct"],
+                    "Distinct %": field_statistics["distinct"],
+                }
+            )
+
+        return ResultSummary(
+            results=[
+                ResultTable(
+                    data=results_table,
+                    metadata=ResultTableMetadata(title="Dataset Description"),
+                )
+            ]
+        )
+
+    def run(self):
+        self.describe()
+        # This will populate the "fields" attribute in the dataset object
+        return self.cache_results(self.dataset.fields)
+
+    def transformed_dataset(self, force_refresh=False):
+        """
+        Returns a transformed dataset that uses the features from vm_dataset.
+        Some of the features in vm_dataset are of type Dummy so we need to
+        reverse the one hot encoding and drop the individual dummy columns
+
+        Args:
+            force_refresh (bool, optional): Whether to force a refresh of the transformed dataset. Defaults to False.
+
+        Returns:
+            pd.DataFrame: The transformed dataset
+        """
+
+        # Get the list of features that are of type Dummy
+        dataset_options = self.dataset.options
+        dummy_variables = (
+            dataset_options.get("dummy_variables", []) if dataset_options else []
+        )
+        # Exclude columns that have prefixes that are in the dummy feature list
+        dummy_column_names = [
+            column_name
+            for column_name in self.dataset.df.columns
+            if any(
+                column_name.startswith(dummy_variable)
+                for dummy_variable in dummy_variables
+            )
+        ]
+        transformed_df = self.dataset.df.drop(dummy_column_names, axis=1)
+
+        # Add reversed dummy features to the transformed dataset
+        for dummy_variable in dummy_variables:
+            columns_with_dummy_prefix = [
+                col
+                for col in self.raw_dataset.columns
+                if col.startswith(dummy_variable)
+            ]
+            transformed_df[dummy_variable] = (
+                self.dataset.df[columns_with_dummy_prefix]
+                .idxmax(axis=1)
+                .replace(f"{dummy_variable}[-_:]", "", regex=True)
+            )
+
+        return transformed_df
+
+    def describe(self):
+        """
+        Extracts descriptive statistics for each field in the dataset
+        """
+        transformed_df = self.transformed_dataset()
+
+        for ds_field in self.dataset.fields:
+            self.describe_dataset_field(transformed_df, ds_field)
+
+    def describe_dataset_field(self, df, field):
+        """
+        Gets descriptive statistics for a single field in a Pandas DataFrame.
+        """
+        field_type = field["type"]
+        field_type_options = field.get("type_options", dict())
+
+        # Force a categorical field when it's declared as a primary key
+        if field_type_options.get("primary_key", False):
+            field_type = "Categorical"
+            field["type"] = "Categorical"
+
+        # - When we call describe on one field at a time, Pandas will
+        #   know better if it needs to report on numerical or categorical statistics
+        # - Boolean (binary) fields should be reported as categorical
+        #       (force to categorical when nunique == 2)
+        if field_type == ["Boolean"] or df[field["id"]].nunique() == 2:
+            top_value = df[field["id"]].value_counts().nlargest(1)
+
+            field["statistics"] = {
+                "count": df[field["id"]].count(),
+                "unique": df[field["id"]].nunique(),
+                "top": top_value.index[0],
+                "freq": top_value.values[0],
+            }
+        elif field_type == "Numeric":
+            field["statistics"] = (
+                df[field["id"]]
+                .describe(percentiles=[0.25, 0.5, 0.75, 0.9, 0.95])
+                .to_dict()
+            )
+        elif field_type == "Categorical" or field_type == "Dummy":
+            field["statistics"] = (
+                df[field["id"]].astype("category").describe().to_dict()
+            )
+
+        # Initialize statistics object for non-numeric or categorical fields
+        if "statistics" not in field:
+            field["statistics"] = {}
+
+        field["statistics"]["n_missing"] = df[field["id"]].isna().sum()
+        field["statistics"]["missing"] = field["statistics"]["n_missing"] / len(
+            df[field["id"]]
+        )
+        field["statistics"]["n_distinct"] = df[field["id"]].nunique()
+        field["statistics"]["distinct"] = field["statistics"]["n_distinct"] / len(
+            df[field["id"]]
+        )
+
+        field["histograms"] = self.get_field_histograms(df, field["id"], field_type)
+
+    def get_field_histograms(self, df, field, type_):
+        """
+        Returns a collection of histograms for a numerical or categorical field.
+        We store different combinations of bin sizes to allow analyzing the data better
+
+        Will be used in favor of _get_histogram in the future
+        """
+        # Set the minimum number of bins to nunique if it's less than the default
+        if type_ == "Numeric":
+            return self.get_numerical_histograms(df, field)
+        elif type_ == "Categorical" or type_ == "Boolean" or type_ == "Dummy":
+            value_counts = df[field].value_counts()
+            return {
+                "default": {
+                    "bin_size": len(value_counts),
+                    "histogram": value_counts.to_dict(),
+                }
+            }
+        elif type_ == "Text":
+            # Combine all the text in the specified field
+            text_data = " ".join(df[field].astype(str))
+            # Split the text into words (tokens) using a regular expression
+            words = re.findall(r"\w+", text_data)
+            # Use Counter to count the frequency of each word
+            word_counts = Counter(words)
+
+            return {
+                "default": {
+                    "bin_size": len(word_counts),
+                    "histogram": dict(word_counts),
+                }
+            }
+        elif type_ == "Null":
+            logger.info(f"Ignoring histogram generation for null column {field}")
+        else:
+            raise ValueError(
+                f"Unsupported field type found when computing its histogram: {type_}"
+            )
+
+    def get_numerical_histograms(self, df, field):
+        """
+        Returns a collection of histograms for a numerical field, each one
+        with a different bin size
+        """
+        values = df[field].to_numpy()
+        values_cleaned = values[~np.isnan(values)]
+
+        # bins='sturges'. Cannot use 'auto' until we review and fix its performance
+        #  on datasets with too many unique values
+        #
+        # 'sturges': R’s default method, only accounts for data size. Only optimal
+        # for gaussian data and underestimates number of bins for large non-gaussian datasets.
+        default_hist = np.histogram(values_cleaned, bins="sturges")
+
+        histograms = {
+            "default": {
+                "bin_size": len(default_hist[0]),
+                "histogram": {
+                    "bin_edges": default_hist[1].tolist(),
+                    "counts": default_hist[0].tolist(),
+                },
+            }
+        }
+
+        for bin_size in DEFAULT_HISTOGRAM_BIN_SIZES:
+            hist = np.histogram(values_cleaned, bins=bin_size)
+            histograms[f"bins_{bin_size}"] = {
+                "bin_size": bin_size,
+                "histogram": {
+                    "bin_edges": hist[1].tolist(),
+                    "counts": hist[0].tolist(),
+                },
+            }
+
+        return histograms
