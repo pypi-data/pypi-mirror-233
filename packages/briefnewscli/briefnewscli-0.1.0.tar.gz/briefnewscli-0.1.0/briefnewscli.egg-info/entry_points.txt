@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        briefnewscli=brief_news_cli.cli:app
+    

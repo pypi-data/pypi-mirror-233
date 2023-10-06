@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+brief-news-cli/__init__.py
+brief-news-cli/api.py
+brief-news-cli/cli.py
+brief-news-cli/config.py
+brief-news-cli/summarizer.py
+brief-news-cli/utils.py
+briefnewscli.egg-info/PKG-INFO
+briefnewscli.egg-info/SOURCES.txt
+briefnewscli.egg-info/dependency_links.txt
+briefnewscli.egg-info/entry_points.txt
+briefnewscli.egg-info/requires.txt
+briefnewscli.egg-info/top_level.txt
