@@ -1,0 +1,15 @@
+setup.py
+modules/__init__.py
+modules/src/__init__.py
+modules/src/authentication_class.py
+modules/src/base_class.py
+modules/src/id_generator_class.py
+modules/src/slugify_class.py
+modules/src/user_class.py
+modules/src/verification_class.py
+parkai_system.egg-info/PKG-INFO
+parkai_system.egg-info/SOURCES.txt
+parkai_system.egg-info/dependency_links.txt
+parkai_system.egg-info/entry_points.txt
+parkai_system.egg-info/requires.txt
+parkai_system.egg-info/top_level.txt
