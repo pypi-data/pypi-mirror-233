@@ -1,0 +1,11 @@
+gpteasy/__init__.py,sha256=ozL3FmtiLienNHMTyBhIv8Hij7m-2jmm95SAF4kIbIM,163
+gpteasy/commands.py,sha256=1I89FGH_NtDJoJxuylw7SDGnRKWj_jKxq4cP4AOL0ac,5422
+gpteasy/display.py,sha256=U8nX60cBK8l-ZCCIDvlegBHwZssFZ3PsW73MAO5hyYA,563
+gpteasy/gpt.py,sha256=a1POBI02uaM0qG1dMv_TgD7oqGY5BZDQjUcT9h5QGb8,16802
+gpteasy/prompts.py,sha256=-78qFNsFxuiUpWlKVw3j4N0Jc2FjG6mSSuiJPmsCjM0,309
+gpteasy/repl.py,sha256=M26lwV7tJiZrJ4_w1uh3m0C_VnUowalS_7N5IucJxHk,1269
+gpteasy-1.2.8.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+gpteasy-1.2.8.dist-info/METADATA,sha256=1jKlSfxAVWifZYb4icTdh1wIjE5irLrBqvPJxm0oMIY,5944
+gpteasy-1.2.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gpteasy-1.2.8.dist-info/top_level.txt,sha256=YSjQ-zPrbBAuTAU52eYgkr8uMymCmplZN2S5SbzjlnM,8
+gpteasy-1.2.8.dist-info/RECORD,,
