@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/outliner/__init__.py
+src/outliner/cli.py
+src/outliner/display.py
+src/outliner/outliner.py
+src/outliner/trace.py
+src/outliner_tracer.egg-info/PKG-INFO
+src/outliner_tracer.egg-info/SOURCES.txt
+src/outliner_tracer.egg-info/dependency_links.txt
+src/outliner_tracer.egg-info/entry_points.txt
+src/outliner_tracer.egg-info/top_level.txt
+tests/test_display.py
+tests/test_trace.py
