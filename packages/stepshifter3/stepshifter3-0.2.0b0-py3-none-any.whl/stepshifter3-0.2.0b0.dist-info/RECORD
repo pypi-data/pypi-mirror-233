@@ -1,0 +1,11 @@
+stepshifter3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stepshifter3/dask_client_manager.py,sha256=UsSb2ADFPY3A0xPPw3hK0waQIqtUK-U_JNU1EsM8X1U,4747
+stepshifter3/logger.py,sha256=UE1gFtdVJj_q4GMROvGHtJdSwPNtJ5O6gn1FxiSpNGc,1164
+stepshifter3/report.py,sha256=hbu64Vm0DC12_EPGIbx3R6sXyhTG73PTZQ2u0pInbWY,9742
+stepshifter3/stepshifter.py,sha256=iRLcMs_C5TT-75B5gtjt1LZrasW1gCMAv80harD_x6E,25940
+stepshifter3/synthetic_data_generator.py,sha256=4P_B3L_ixn7f-AG8zGARrH-WXuDlhuUELNk_4AVZjX4,9949
+stepshifter3-0.2.0b0.dist-info/LICENSE,sha256=GWaT6vJ9COZ3EX98VzXXyoX7N5DCneA1Gfptn7w6Qjo,1093
+stepshifter3-0.2.0b0.dist-info/METADATA,sha256=g2agzMwyJMt9AJfp_xd_FRZ0yM75bdRbofPl2n31M2A,7731
+stepshifter3-0.2.0b0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+stepshifter3-0.2.0b0.dist-info/top_level.txt,sha256=oAJvgkK_dsKpPEJUXuL0BCKE7Iz6-wlrfqkVA5kkPhE,13
+stepshifter3-0.2.0b0.dist-info/RECORD,,

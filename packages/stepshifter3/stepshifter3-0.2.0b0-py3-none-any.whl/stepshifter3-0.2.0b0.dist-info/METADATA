@@ -1,0 +1,181 @@
+Metadata-Version: 2.1
+Name: stepshifter3
+Version: 0.2.0b0
+Summary: A general purpose stepshifting algorithm for tabular data, based on BaseEstimator.
+Home-page: https://www.github.com/prio-data/stepshifter3
+Author: Tom Daniel Grande
+Author-email: tomdgrande@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: geopandas >=0.13.2
+Requires-Dist: ingester3 ==1.9.1
+Requires-Dist: joblib ==1.3.2
+Requires-Dist: lightgbm ==4.0.0
+Requires-Dist: matplotlib >=3.7.0
+Requires-Dist: mlflow >=2.6.0
+Requires-Dist: numpy ==1.25.0
+Requires-Dist: pandas ==1.5.2
+Requires-Dist: seaborn ==0.12.2
+Requires-Dist: scikit-learn >=1.3.0
+Requires-Dist: sqlalchemy ==1.4.49
+Requires-Dist: views-mapper2
+Requires-Dist: xgboost <=2.0.0
+Requires-Dist: viewser ==6.0.0
+Requires-Dist: tqdm ==4.66.1
+
+# StepShifter3 🛠️
+## A general purpose Python package for time series analysis of tabular data
+
+[![Official Website](https://img.shields.io/badge/PRIO_website-www.prio.org-darkgreen
+)](https://www.prio.org)
+[![VIEWS Forecasting Website](https://img.shields.io/badge/VIEWS_Forecasting-www.viewsforecasting.org-purple
+)](https://www.prio.org)
+[![GitHub Repo stars](https://img.shields.io/github/stars/prio.data/stepshifter3?style=social)](https://github.com/prio-data/stepshifter3/stargazers)
+[![Twitter Follow](https://img.shields.io/twitter/follow/PRIOresearch
+)](https://twitter.com/PRIOresearch)
+[![LinkedIn](https://img.shields.io/badge/PRIO_on_linkedin-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/prio/?originalSubdomain=no)
+[![Unit Tests](https://img.shields.io/github/actions/workflow/status/prio-data/stepshifter3/ci.yml?label=unit%20tests)](https://github.com/prio-data/stepshifter3/actions/workflows/ci.yml)
+
+StepShifter3 is a Python package designed to facilitate time series analysis of tabular data. It is developed and maintained by the [Peace Research Institute Oslo (PRIO)](https://www.prio.org) as part of the [VIEWS project](https://www.prio.org/Projects/Project/?x=1749).
+
+
+## 📚 Table of Contents 
+
+1. [🛠 Installation](#🛠-installation)
+2. [📝 Usage](#📝-usage)
+3. [🤝 Contributing](#🤝-contributing)
+4. [🐞 Common bugs](#🐞-common-bugs)
+5. [🔖 License](#🔖-license)
+6. [❓ FAQs](#❓-faqs)
+7. [🙏 Credits](#🙏-credits)
+8. [📚 References](#📚-references)
+## 🛠 Installation
+
+To install StepShifter3, you have two options:
+
+### 🚨 Recommended Branch: `stable`
+
+For a more stable experience, we recommend using the `stable` branch rather than the `main` branch. The `stable` branch contains well-tested and production-ready code, while the `main` branch may contain work-in-progress or experimental features that could be unstable.
+
+#### How to Switch to the `stable` branch:
+
+**Using Git CLI**:
+- For pip installation, clone the `stable` branch directly:
+  ```bash
+  git clone -b stable https://github.com/YourUsername/StepShifter3.git
+  ```
+- If you've already cloned the repository and are on the `main` branch, switch to `stable` with:
+  ```bash
+  git checkout stable
+  ```
+
+**Using GitHub Web Interface**:
+- If you're downloading the code from the GitHub web interface, make sure to switch to the `stable` branch using the branch dropdown before downloading.
+
+1. **Using pip**: 📦
+    ```bash
+    pip install StepShifter3
+    ```
+
+2. **From GitHub**: 🐱‍💻
+    ```bash
+    git clone https://github.com/YourUsername/StepShifter3.git
+    cd StepShifter3
+    python setup.py install
+    ```
+
+## 📝 Usage
+The Stepshifter class is the main class of the package. It handles all models which is herited from the sklearn BaseEstimator class. 
+
+### Basic Usage with XGBRegressor and dummy data from synthetic data generator
+```python
+from StepShifter3 import StepShifter, SyntheticDataGenerator
+from xgboost import XGBRegressor 
+
+# Generates a pandas multiindex dataframe with dummy data Indexes: month_id, country_id
+df_synthetic_small  = SyntheticDataGenerator("loa", n_time=516, n_prio_grid_size=50, n_country_size= 242,n_features=15,use_dask=True).generate_dataframe()
+
+
+# Initialize the StepShifter class with the XGBRegressor model, DaskClientManager and parameters
+
+
+
+params_xgb_reg = {
+        'objective': 'reg:squarederror',
+        'n_estimators': 80,
+        'max_depth': 3,
+        'learning_rate': 0.1,
+        'gamma': 0,
+        'min_child_weight': 1,
+        'subsample': 1,
+        'eval_metric': 'rmse',
+    }
+
+# Establish a connection to daskclientmanger
+dask_client = DaskClientManager(is_local=True, n_workers=8, threads_per_worker=1, memory_limit="4.5GB", remote_addresses=None,asynchronous=False)
+
+stepshifter_config_regression = { "target_column" : "ln_ged_sb_dep",    # The target column in your training dataset
+                       "ID_columns" : ["month_id", "priogrid_id"],      # The ID columns in your training dataset
+                       "time_column" : "month_id",                      # The time column in your training dataset
+                       "run_name" : 'my_first_run',                     # The name of the run in mlflow, should be changes every time a new model type is run
+                       "experiment_name" : 'ensemble_models',           # The name of the experiment in mlflow
+                       "mlflow_tracking_uri" : 'http://127.0.0.1:5000', # The uri of the mlflow server, if not set the default is localhost:5000 or 127.0.0.1:5000                                  
+                       "S": 36,                                         # Number of steps ahead to predict
+                       "metrics_report": True,                          # Not used at the moment
+                       "fit_params":{},                                 # Parameter list to be passed to the fit method of the model
+                       "dask_client": dask_client,                      # Dask Client             
+                       "is_dask": True,                                 # Set True if using dataframes from dask
+                       }
+
+# Initialize stepshifter class
+stepshifter = StepShifter(xgboost.dask.DaskXGBRegressor(**params_xgb_reg), stepshifter_config_regression)
+
+# What part of the data should be validated
+validation_range = [1, 516]
+
+X, y, is_dask = stepshifter.validate_and_filter_data(df_synthetic, validation_range)
+
+# Fit the model
+
+tau_e_0 = 121
+tau_e_t = 316
+stepshifter.fit(X,y,tau_e_0,tau_e_t)
+
+# Get predictions
+X_pred = ...
+tau_start = ...
+tau_end = ...
+stepshifter.predict(X_pred,tau_start,tau_end)
+
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+1. Make an issue describing the feature you want to add or the bug you want to fix.
+2. Create your Feature Branch (`git checkout -b <issuenumber>-<your-feature-name>`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin <issuenumber>-<your-feature-name>`)
+5. Open a Pull Request
+
+## 🐞 Common bugs
+### Using the wrong predict() function
+An easy-to-make mistake is to use the wrong predict() function. Make sure to use the StepShifter predict() function by running predict() on the StepShifter object and not on the trained models. 
+
+Correct use of the StepShifter predict():
+`stepshifter.predict(X, tau_start, tau_end)`
+
+Incorrect use of the StepShifter predict(): `stepshifter.models[<some_number_between_1_and_S>].predict(X, tau_start, tau_end)`
+
+
+## 📚 References
+
+
+1. [Hegre et.al: Partitioning and time-shifting in VIEWS, fatalities002∗†](https://viewsforecasting.org/wp-content/uploads/VIEWS_Documentation_Partitioningandtimeshifting_Fatalities002.pdf)
+## 🔖 License
+
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
+
+
+
