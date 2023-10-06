@@ -1,0 +1,6 @@
+[colcon_core.argument_parser]
+rerun = colcon_rerun.argument_parser.rerun:ReRunArgumentParserDecorator
+
+[colcon_core.verb]
+rerun = colcon_rerun.verb.rerun:ReRunVerb
+
