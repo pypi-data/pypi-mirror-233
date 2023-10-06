@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: BRUNCH
+Version: 0.0.3
+Description-Content-Type: text/plain
+
+
+
+
+
+
+
+<b>BRUNCH</b>
+	<b># DRIVE OPERATIONS</b>
+	
+	<b>CAUTION</b>
+		<b>THIS MODULE IS USED FOR ERASING PERSISTANT STORAGE DEVICES LIKE:</b>
+		<b>SOLID STATE DRIVES, HARD DRIVES, SD CARDS, MICRO SD CARDS, FLASH DRIVES</b>
+			
+	<b>DRIVE INFORMATION</b>
+		#
+		#	lsblk -b -p
+		#	lsblk -b -p --json
+		#
+		[TCSH] lsblk
+	
+			NAME        MAJ:MIN RM        SIZE RO TYPE MOUNTPOINTS
+			/dev/sda      8:0    0 40018599936  0 disk 
+			├─/dev/sda1   8:1    0   629145600  0 part /boot/efi
+			├─/dev/sda2   8:2    0  1073741824  0 part /boot
+			└─/dev/sda3   8:3    0 38313918464  0 part /home
+													   /
+			/dev/sdb      8:16   0 40018597888  0 disk 
+			/dev/zram0  252:0    0  8589934592  0 disk [SWAP]
+			
+		#
+		#	https://en.wikipedia.org/wiki/Util-linux
+		#	https://github.com/util-linux/util-linux
+		#
+		[TCSH] fdisk -l
+			
+			Disk /dev/sdc: 37.27 GiB, 40018597888 bytes, 78161324 sectors
+			Disk model: high speed      
+			Units: sectors of 1 * 512 = 512 bytes
+			Sector size (logical/physical): 512 bytes / 512 bytes
+			I/O size (minimum/optimal): 512 bytes / 512 bytes
+			
+		THEREFORE:
+			DRIVE PATH: /dev/sdb
+			BYTE INDEXES: [ 0, 40018597887 ]
+			
+			40018597888 / 78161324 = 512
+
+			#
+			#	/dev/sda is the operating system drive
+			#
+						
+	<b>SCAN</b>		
+		NEEDS ACCESS TO BLOCK SPECIAL FILE PATH WHERE DRIVE IS ATTACHED.
+			EXAMPLE: /dev/sd----
+	
+		<code>
+		import BRUNCH.SCAN as SCAN			
+			
+		BYTE_STRING = b''
+		def PROGRESS (PARAMS):
+			nonlocal BYTE_STRING;
+			BYTE_STRING += PARAMS ['PLATE']
+		
+			return;
+
+		SCAN.START ({
+			#
+			#	CAUTION:
+			#
+			#		EXAMPLE: /dev/sd----
+			# 
+			"DRIVE PATH": DRIVE_PATH, 
+			
+			"BYTES INDEXES": [ 0, 28 ],		
+			"BYTES PER PLATE": 10,
+			
+			"PROGRESS": PROGRESS
+		})	
+		
+		print (BYTE_STRING)
+		
+		</code>
+			
+
