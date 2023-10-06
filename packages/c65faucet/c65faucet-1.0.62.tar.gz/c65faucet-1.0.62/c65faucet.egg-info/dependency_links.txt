@@ -1,0 +1,2 @@
+https://github.com/c65sdn/eventlet/archive/python3.12.tar.gz
+https://github.com/faucetsdn/python3-fakencclient/archive/main.tar.gz
