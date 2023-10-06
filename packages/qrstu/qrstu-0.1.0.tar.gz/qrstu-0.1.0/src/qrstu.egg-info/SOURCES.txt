@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/qrstu/__init__.py
+src/qrstu/__main__.py
+src/qrstu/commandline.py
+src/qrstu/py.typed
+src/qrstu/reduce.py
+src/qrstu.egg-info/PKG-INFO
+src/qrstu.egg-info/SOURCES.txt
+src/qrstu.egg-info/dependency_links.txt
+src/qrstu.egg-info/top_level.txt
+tests/test_commandline.py
+tests/test_main.py
+tests/test_reduce.py
