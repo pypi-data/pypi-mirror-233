@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: json-convenience
+Version: 0.0.0
+Summary: additional methods for handling json files in python
+Home-page: https://github.com/Schnilsibus/jsonExtended.git
+Author: Nils Urbach
+Author-email: ndu01u@gmail.com
+License: MIT
+Keywords: json,extended,convenience
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# json-convenience
+Additional methods for handling json files in python.
+
+## Requirements
+None
+
+## Install
+install using pip : ```python -m pip install json-convenience```
+
+## Usage
+- import: ```import json_convenience``` or ```from json_convenience import ...```  
+- overview: start python console and run  ```help(json_convenience)```

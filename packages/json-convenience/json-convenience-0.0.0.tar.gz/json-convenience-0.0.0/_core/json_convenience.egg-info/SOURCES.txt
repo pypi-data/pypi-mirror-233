@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+_core/json_convenience.py
+_core/json_convenience.egg-info/PKG-INFO
+_core/json_convenience.egg-info/SOURCES.txt
+_core/json_convenience.egg-info/dependency_links.txt
+_core/json_convenience.egg-info/top_level.txt
+tests/testsuite_io.py
+tests/testsuite_privates.py
+tests/testsuite_publics.py
