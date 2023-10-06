@@ -1,0 +1,3 @@
+[console_scripts]
+constava = constava.__main__:main
+
