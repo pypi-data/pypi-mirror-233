@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seastar"
+dynamic = ["version"]
+description = 'A Web Framework and Toolkit for Digital Ocean Cloud Functions influenced by Starlette.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Ryan Kroon", email = "rykroon.tech@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = [
+  "multidict==6.*"
+]
+
+[project.urls]
+Documentation = "https://github.com/rykroon/seastar#readme"
+Issues = "https://github.com/rykroon/seastar/issues"
+Source = "https://github.com/rykroon/seastar"
+
+[tool.hatch.version]
+path = "src/seastar/__about__.py"
+
+[tool.hatch.envs.test]
+dependencies = [
+  "pytest",
+  "coverage",
+]
+[tool.hatch.envs.test.scripts]
+test = "coverage run --source src -m pytest"
+cov-report = "coverage report -m"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.9", "3.10", "3.11"]
+
+[tool.hatch.envs.type]
+python="3.11"
+dependencies = [
+  "mypy"
+]
+[tool.hatch.envs.type.scripts]
+check = "mypy --strict src/seastar"
+
+[tool.hatch.envs.docs]
+python="3.11"
+dependencies = [
+  "mkdocs",
+  "mkdocs-material",
+  "mkdocstrings[python]",
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+serve = "mkdocs serve"
