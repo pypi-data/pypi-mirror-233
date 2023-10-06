@@ -1,0 +1,12 @@
+timevec/__init__.py,sha256=0QBlBAl8NGJ2lNQYNPtiC7LKWDqRbBaY6r7O3100cqY,650
+timevec/_version.py,sha256=H-qsvrxCpdhaQzyddR-yajEqI71hPxLa4KxzpP3uS1g,411
+timevec/builtin_math.py,sha256=muGhzTJLhebJp8C4GJVVXzjO95eMH0Oj_6nuVmPkKio,4787
+timevec/numpy.py,sha256=ISExTWLAUMJZbIp1Sj7nYLhvIs1SJ3xCyE-1cQ5SlYo,5363
+timevec/numpy_datetime64.py,sha256=eU90YH7lXA4jUIgjvbkKoX_32AuiAQWh9W5rCiBLOLs,3670
+timevec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timevec/util.py,sha256=TdOZjIxSuaKbk0CCM4gsdLdIURA3sJvwHQQkKNZ7w5A,6053
+timevec-0.2.0.dist-info/LICENSE,sha256=ua-3l1OUSkswfaHooCJ70gmwNgFGpOrb5Z-EDwTWReg,1454
+timevec-0.2.0.dist-info/METADATA,sha256=YRHhncSju65UdzakZRjDUmLTi6EFmEdIYzzK6YTDXrY,4143
+timevec-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+timevec-0.2.0.dist-info/top_level.txt,sha256=M6GUumHlRuV5xJJAqSnJ674kZroA77KY-uPdfzV7SBY,8
+timevec-0.2.0.dist-info/RECORD,,
