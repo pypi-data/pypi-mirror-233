@@ -1,0 +1,8 @@
+agcounts/__init__.py,sha256=6ybLel-JN8jtWRx5P_q08RU6grrnOAnH5LPQAS6VS30,39
+agcounts/extract.py,sha256=sp1TsEJNwYLcMXdpkhNyTOb4z00fUrHbazELc4dOcc8,9934
+agcounts/legacy.py,sha256=zE6oTN00sU2C2CBJckA4bX0e0AaOOiTgAgWYHGd0g9o,7369
+agcounts/pow2.py,sha256=YRnGNTmohZfTLoX8wQzSJXFsnJ-OsF1zKmHpjC88MmM,5849
+agcounts-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+agcounts-0.2.1.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+agcounts-0.2.1.dist-info/METADATA,sha256=qGqKlK7oJeAIqmIfjjf6ICovswAMNVpCI-MI21QAc6s,3027
+agcounts-0.2.1.dist-info/RECORD,,
