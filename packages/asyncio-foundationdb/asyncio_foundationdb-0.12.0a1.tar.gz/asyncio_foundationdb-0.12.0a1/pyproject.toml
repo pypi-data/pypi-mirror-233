@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "asyncio-foundationdb"
+version = "0.12.0-a1"
+description = "asyncio drivers for FoundationDB"
+authors = ["Amirouche <amirouche@hyper.dev>"]
+license = "Apachev2"
+readme = "README.md"
+packages = [
+    { include = "found" },
+]
+include = ["build.py", "fdb_c2.h", "fdb_c.h", "found/*.so"]
+build = "build.py"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cffi = "*"
+foundationdb = "^7.0"
+immutables = "*"
+more-itertools = "*"
+zstandard = "*"
+aiostream = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+bandit = "*"
+pylama = "*"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "cffi>=1.14.5"]
+build-backend = "poetry.core.masonry.api"
