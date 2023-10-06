@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjupyterlab_broccoli_turtle=self.webpackChunkjupyterlab_broccoli_turtle||[]).push([[634],{4634:(O,s,L)=>{L.r(s);var T=L(7837);T.Msg.TOOLBOX_LOGIC="論理",T.Msg.TOOLBOX_LOOPS="繰返し",T.Msg.TOOLBOX_MATH="数学",T.Msg.TOOLBOX_TEXT="テキスト",T.Msg.TOOLBOX_LISTS="リスト",T.Msg.TOOLBOX_COLOR="色",T.Msg.TOOLBOX_VARIABLES="変数",T.Msg.TOOLBOX_FUNCTIONS="関数"}}]);
+//# sourceMappingURL=634.1ff4893c1e9b57dc5022.js.map?v=1ff4893c1e9b57dc5022
