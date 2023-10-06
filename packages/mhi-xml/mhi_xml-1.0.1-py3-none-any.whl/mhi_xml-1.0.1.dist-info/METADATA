@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mhi-xml
+Version: 1.0.1
+Summary: Manitoba Hydro International: XML file updaters
+Author-email: "Manitoba Hydro International Ltd." <pscad@mhi.ca>
+License: BSD-3-Clause-Clear
+Project-URL: Homepage, https://www.pscad.com/support/support-resources
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lxml
+
+# MHI XML File Readers & Updaters
+
+Work-in-progress
