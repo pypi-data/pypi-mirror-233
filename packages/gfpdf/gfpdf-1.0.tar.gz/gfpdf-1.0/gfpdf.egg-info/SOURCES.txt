@@ -1,0 +1,10 @@
+License
+README.md
+setup.py
+gfpdf/__init__.py
+gfpdf/pdf2image.py
+gfpdf/pdf2text.py
+gfpdf.egg-info/PKG-INFO
+gfpdf.egg-info/SOURCES.txt
+gfpdf.egg-info/dependency_links.txt
+gfpdf.egg-info/top_level.txt
