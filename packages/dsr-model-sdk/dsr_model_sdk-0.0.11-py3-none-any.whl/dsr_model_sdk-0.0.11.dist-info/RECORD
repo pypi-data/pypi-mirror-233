@@ -1,0 +1,12 @@
+dsr_model_sdk/__init__.py,sha256=WMwsjJywl589DBtDNVC9h2C3_dydcx0IKqbf0ppFLDE,170
+dsr_model_sdk/dsr_sdk.py,sha256=GkLRs5jQfwDGkm-bHD7Vji5Kp41skeajhvtpHUSjtUw,1702
+dsr_model_sdk/jobs.py,sha256=yYeWHWhLZxZLKzW4htUQpuczko8pRz3rLE5WxiYJyGM,1320
+dsr_model_sdk/logger.py,sha256=USttYd5kNA_1PBK09rwHtns6HEvOm4xGtJnXnZAAdQI,389
+dsr_model_sdk/message.py,sha256=VK3W0PrPrAsicrmdkUiC0cjUCrEra1tS-xiudFHg2QA,294
+dsr_model_sdk/session.py,sha256=wGuX-3f5yc3-NIzBw6XJSwC8EkPmyKonqS-MAO7er-M,5619
+dsr_model_sdk/singleton.py,sha256=QN1f4SwCFRoF_s4ZQW-cYShTPop3f4t3Pjo0BDyq7E4,1436
+dsr_model_sdk/topics.py,sha256=-FUXvVwr-USXwCF6TaWQFKOlhryDENhDeJ7658XdSXw,855
+dsr_model_sdk-0.0.11.dist-info/METADATA,sha256=gBGUfgZVMAEBasbiggAQhtRKe9c7YA0cer8cMILnFCU,2068
+dsr_model_sdk-0.0.11.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+dsr_model_sdk-0.0.11.dist-info/licenses/LICENSE,sha256=NYtnmbqmfByCVGO0a_D7D38ssiVoaA4NtrIpRrIDy_Y,1074
+dsr_model_sdk-0.0.11.dist-info/RECORD,,
