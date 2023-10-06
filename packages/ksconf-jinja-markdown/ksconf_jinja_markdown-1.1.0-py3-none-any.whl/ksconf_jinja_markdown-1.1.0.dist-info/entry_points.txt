@@ -1,0 +1,3 @@
+[ksconf_plugin]
+jinja-markdown = ksconf.plugins.jinja_markdown
+
