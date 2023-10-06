@@ -1,0 +1,12 @@
+uzum_payments/__init__.py,sha256=zwmlvfkuD5Qmboe81ybQ4SoyTps9x2ltaD_b2_BTlmY,55
+uzum_payments/client.py,sha256=mPeyXbw_C1hJ6Mr8KyA3HxdXRZ2zrfW5lvdxTK2tRyI,14239
+uzum_payments/connection.py,sha256=J4-BEhZGjXEwW8Dplu0_54n1PdA8Lis4z6QPL1rF6-E,3449
+uzum_payments/const.py,sha256=fksyXZ0mGZtqZ6Aw7cdcQ8-hOcfYZc3Iu7kPv1tKQsI,183
+uzum_payments/exceptions.py,sha256=x5LdYvvy0S6xAmsbpGgMhx-l4DjQofE9RnaIte_l8rQ,1365
+uzum_payments/receipt_producer/__init__.py,sha256=zwmlvfkuD5Qmboe81ybQ4SoyTps9x2ltaD_b2_BTlmY,55
+uzum_payments/receipt_producer/client.py,sha256=l_pLtxRDwcEAfwkXyA9zaVLSmayQMYqWoJUJWGcduDk,7143
+uzum_payments-0.0.3.dist-info/LICENSE,sha256=Jtx08dR8rQfFsKZOEDokhD5zPJ65pJUZbbHRrRo7Ajo,1055
+uzum_payments-0.0.3.dist-info/METADATA,sha256=CRBpIvl3D_pHAcjjozt5BRQq5mKNbcIA5IH_eIN0Q7c,1656
+uzum_payments-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+uzum_payments-0.0.3.dist-info/top_level.txt,sha256=bytzw9hyPCwm1lmzBacYDXCO7AR-bkrbn6LLXajC9Eg,14
+uzum_payments-0.0.3.dist-info/RECORD,,
