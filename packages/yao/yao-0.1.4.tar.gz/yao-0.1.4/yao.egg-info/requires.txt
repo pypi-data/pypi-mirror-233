@@ -1,0 +1,13 @@
+fastapi[all]==0.83.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]
+SQLAlchemy==1.4.46
+Pillow
+PyMySQL==1.0.2
+sqlalchemy-mptt==0.2.5
+user-agents==2.2.0
+requests
+openpyxl
+aioredis
+filetype==1.2.0
+pycryptodome
