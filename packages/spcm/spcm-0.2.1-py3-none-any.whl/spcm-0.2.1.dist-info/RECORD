@@ -1,0 +1,14 @@
+spcm/__init__.py,sha256=CL-kgYC920OL2KmO5EZrRqoXf7nQN23YJfITP4EVJwQ,1377
+spcm/classes.py,sha256=SJCGk5eLbfsx6ks3RrT8p9O779Gwe1wce7oh3aLC8rc,26963
+spcm/classes_card_stack.py,sha256=2XzPH68YW8Ar1ksDB0hcMbU_M82AR1dNyKAz110TTYA,3035
+spcm/classes_dds.py,sha256=sAVlCZwlbKXFWQSYwkMBbz_ui4ADk7RWbJx7QU0UK7A,17807
+spcm/classes_sync.py,sha256=pFMyYI9FDq1Xitmx7Lk5s_F3U34YL85t1Ywoxz_lBso,1161
+spcm/pyspcm.py,sha256=RovP_PK51igzfsgDgvNhAtoI9cQbS_BnhaWFVgBIWcM,10192
+spcm/regs.py,sha256=3NbUlyDa_82z8VgYwNHDn5cxqQlnjRYD27bk_WmzYAQ,91696
+spcm/spcerr.py,sha256=xnY5SdOEGRivBOApQd4C_6_9vr-evP9Iv9_L0Vke2Ls,2124
+spcm/spcm_tools.py,sha256=42JfsVyOWG2RsIPDw9ZfUKwNfsUAs5Lq5oLaCLSFLBI,1983
+spcm/spcm_win64.dll,sha256=joZpDTcPwyzaSYAGCG-u5RYkRqZ8QG4M46-a7wH5x3A,2798080
+spcm-0.2.1.dist-info/METADATA,sha256=huvfTNrGeycVQES0rbwz8r2Jbw5ZHPVf9s-1rhDlro8,687
+spcm-0.2.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+spcm-0.2.1.dist-info/licenses/LICENSE,sha256=TBiCKWvkqw6EcNs7aHvpmzi73ukF6RAwN0ICC_GLm34,1073
+spcm-0.2.1.dist-info/RECORD,,

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: spcm
+Version: 0.2.1
+Summary: Package for Spectrum Instrumentation GmbH cards
+Project-URL: Homepage, https://spectrum-instrumentation.com/
+Project-URL: Bug Tracker, https://spectrum-instrumentation.com/
+Author-email: info@spec.de
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Description-Content-Type: text/x-rst
+
+Spectrum Instrumentation GmbH - spmc Repository
+===============================================
+
+This project is a repository for controlling Spectrum Instrumentation GmbH cards.
+
