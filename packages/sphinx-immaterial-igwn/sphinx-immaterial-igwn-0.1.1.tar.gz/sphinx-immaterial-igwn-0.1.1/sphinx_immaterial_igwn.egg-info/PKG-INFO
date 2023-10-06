@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: sphinx-immaterial-igwn
+Version: 0.1.1
+Summary: IGWN extensions to sphinx-immaterial
+Author: Duncan Macleod
+Author-email: duncan.macleod@ligo.org
+License: MIT
+Project-URL: Bug Tracker, https://git.ligo.org/computing/igwn-mkdocs-material-theme/-/issues
+Project-URL: Documentation, https://computing.docs.ligo.org/igwn-mkdocs-material-theme/sphinx/
+Project-URL: Source Code, https://git.ligo.org/computing/igwn-mkdocs-material-theme.git
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Documentation
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx-immaterial
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-immaterial; extra == "docs"
+
+# sphinx-immaterial-igwn
+
+This project defines the IGWN Material theme for Sphinx, an extension of
+[Sphinx Immaterial](https://jbms.github.io/sphinx-immaterial/).
+
+To install this package:
+
+```shell
+python -m pip install sphinx-immaterial-igwn
+```
+
+To use the theme add the following to your `conf.py`:
+
+```python
+extensions = ["sphinx_immaterial_igwn"]
+html_theme = "sphinx_immaterial_igwn"
+```
+
+For full details, see <https://computing.docs.ligo.org/igwn-material/sphinx/>.

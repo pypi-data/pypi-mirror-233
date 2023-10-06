@@ -1,0 +1,44 @@
+<!--
+  copyright.html | custom IGWN Sphinx copyright footer block
+
+  This file should be kept as precisely in-sync with
+  /mkdocs/material_igwn/partials/copyright.html as
+  possible to ensure a consistent display between
+  IGWN Sphinx and MkDocs themes.
+
+  Copyright (C) 2022 Cardiff University
+  License: MIT, see LICENSE for details
+-->
+
+<div class="md-copyright">
+  {% if show_copyright %}
+    <div class="md-copyright__highlight">
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&#169;
+          <a href="{{ path }}">Copyright</a> {{ copyright }}.
+        {% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}Copyright &#169; {{ copyright }}.
+        {% endtrans %}
+      {%- endif %}
+    </div>
+  {% endif %}
+
+  {# add our acknowledgements partial immediately below the copyright statement #}
+  {% include "partials/acknowledgements.html" %}
+
+  {%- if show_sphinx %}
+    {% trans sphinx_version=sphinx_version|e %}Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    {{ sphinx_version }}
+    {% endtrans %} and
+    <a href="https://computing.docs.ligo.org/igwn-material/sphinx/"
+       target="_blank" rel="noopener">Sphinx-Immaterial-IGWN</a>
+  {%- endif %}
+
+  {%- if last_updated %}
+  <div>
+    {% trans last_updated=last_updated|e %}Last updated {{ last_updated }}.{% endtrans %}
+  </div>
+  {%- endif %}
+</div>
