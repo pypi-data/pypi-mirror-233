@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/yolotolabelme.py
+src/yolo_to_labelme.egg-info/PKG-INFO
+src/yolo_to_labelme.egg-info/SOURCES.txt
+src/yolo_to_labelme.egg-info/dependency_links.txt
+src/yolo_to_labelme.egg-info/entry_points.txt
+src/yolo_to_labelme.egg-info/top_level.txt
