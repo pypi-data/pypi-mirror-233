@@ -1,0 +1,16 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+colcon_spawn_shell/__init__.py
+colcon_spawn_shell/spawn_shell.py
+colcon_spawn_shell.egg-info/PKG-INFO
+colcon_spawn_shell.egg-info/SOURCES.txt
+colcon_spawn_shell.egg-info/dependency_links.txt
+colcon_spawn_shell.egg-info/entry_points.txt
+colcon_spawn_shell.egg-info/not-zip-safe
+colcon_spawn_shell.egg-info/requires.txt
+colcon_spawn_shell.egg-info/top_level.txt
+colcon_spawn_shell/template/__init__.py
+colcon_spawn_shell/template/spawn_shell.bash.em
+test/test_spell_check.py
