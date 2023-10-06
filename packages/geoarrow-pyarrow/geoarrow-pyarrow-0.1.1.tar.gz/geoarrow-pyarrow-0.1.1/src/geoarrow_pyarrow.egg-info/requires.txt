@@ -1,0 +1,10 @@
+geoarrow-c
+pyarrow
+
+[test]
+pytest
+pandas
+numpy
+geopandas
+pyogrio
+pyproj
