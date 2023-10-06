@@ -1,0 +1,4 @@
+[pygments.lexers]
+emfatic = lexer:EmfaticLexer
+eol = lexer:EolLexer
+etl = lexer:EtlLexer
