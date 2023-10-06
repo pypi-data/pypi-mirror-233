@@ -1,0 +1,65 @@
+Results of doctest builder run on 2023-10-05 12:16:33
+=====================================================
+
+Document: adapter
+-----------------
+1 items passed all tests:
+ 164 tests in default
+164 tests in 1 items.
+164 passed and 0 failed.
+Test passed.
+
+Document: api/specifications
+----------------------------
+1 items passed all tests:
+ 109 tests in default
+109 tests in 1 items.
+109 passed and 0 failed.
+Test passed.
+
+Document: verify
+----------------
+1 items passed all tests:
+  78 tests in default
+78 tests in 1 items.
+78 passed and 0 failed.
+Test passed.
+
+Document: foodforthought
+------------------------
+1 items passed all tests:
+  25 tests in default
+25 tests in 1 items.
+25 passed and 0 failed.
+Test passed.
+
+Document: human
+---------------
+1 items passed all tests:
+  18 tests in default
+18 tests in 1 items.
+18 passed and 0 failed.
+Test passed.
+
+Document: api/declarations
+--------------------------
+1 items passed all tests:
+ 302 tests in default
+302 tests in 1 items.
+302 passed and 0 failed.
+Test passed.
+
+Document: README
+----------------
+1 items passed all tests:
+ 218 tests in default
+218 tests in 1 items.
+218 passed and 0 failed.
+Test passed.
+
+Doctest summary
+===============
+  914 tests
+    0 failures in tests
+    0 failures in setup code
+    0 failures in cleanup code
