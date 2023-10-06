@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+
+[tool.doks]
+auto = true
+
+[tool.poetry]
+authors = ["Tom Ritchford <tom@swirly.com>"]
+description = "🗝 Fix and improve `typer` 🗝"
+homepage = "https://github.com/rec/dtyper"
+name = "dtyper"
+readme = "README.md"
+repository = "https://github.com/rec/dtyper"
+version = "2.4.0"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+typer = "*"
+
+[tool.poetry.group.dev.dependencies]
+coverage = ">=7.1.0"
+black = ">=23.9.1"
+isort = ">=5.12.0"
+mypy = ">=1.5.1"
+pytest = ">=7.4.2"
+ruff = ">=0.0.292"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
