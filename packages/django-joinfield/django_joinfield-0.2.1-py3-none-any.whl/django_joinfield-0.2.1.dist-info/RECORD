@@ -1,0 +1,7 @@
+runtests.py,sha256=DhTcxc7HuBipm5q8lvRqZxpbSZ4js5YorGCTplzbrzI,750
+joinfield/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+joinfield/joinfield.py,sha256=OP4lOfh6TgpZEXgNw7EgaRPy5UpArVqHUw-XnagrSfU,2582
+django_joinfield-0.2.1.dist-info/METADATA,sha256=7Z3spxt8j1a0ogvCQxcjbqeeecPubYoYXlkzkYN4agU,6293
+django_joinfield-0.2.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+django_joinfield-0.2.1.dist-info/licenses/LICENSE,sha256=R7GnwP8VPRyKvZ2-Xx-l1F4YmcqycZPYuAMd4FxVegA,1073
+django_joinfield-0.2.1.dist-info/RECORD,,
