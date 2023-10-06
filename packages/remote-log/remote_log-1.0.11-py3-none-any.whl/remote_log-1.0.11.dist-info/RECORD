@@ -1,0 +1,9 @@
+remote_log/__init__.py,sha256=uOmNWZx2ewSRa9IvrcTfeQsXLEQg8VwLxn1wjkH9tes,25
+remote_log/__main__.py,sha256=FHumbVrtLCcDEviOnLkd3uFZjn67rySntsRYeBxHvR4,106
+remote_log/remote_log.py,sha256=biSwSBsEJsUPf6Hwf8st4tE2KTpoeEhPpq-Klw-7Mgk,2392
+remote_log/sysinfo.py,sha256=-Q7x6bE9RxW6m9mhBsk_O9b21gCkYBo-UuWjEaNa82Y,2355
+remote_log/tests.py,sha256=ZEuL65XulSHtmXSMpMQkk3CR1H6ocyDyRdKs5-5zbcs,28
+remote_log-1.0.11.dist-info/METADATA,sha256=iEGDZXnInpvzr8crhC221Pg4G3TxzBHIHbBoD964mXY,1119
+remote_log-1.0.11.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+remote_log-1.0.11.dist-info/top_level.txt,sha256=iyYlDwNwlGMYIGN2CmbWH8kpW8Dt3XDfeA_4f1ab0D0,11
+remote_log-1.0.11.dist-info/RECORD,,
