@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: BRUNCH
+Version: 0.0.5
+Description-Content-Type: text/plain
+
+
+
+
+
+
+
+<b>BRUNCH</b>
+	<b># DRIVE OPERATIONS</b>
+	
+	<b>DANGER</b>
+		MULTIPLE SCAN FAILURES, USAGE NOT RECOMMENDED.
+	
+	<b>CAUTION</b>
+		<b>THIS MODULE IS USED FOR ERASING PERSISTANT STORAGE DEVICES LIKE:</b>
+		<b>SOLID STATE DRIVES, HARD DRIVES, SD CARDS, MICRO SD CARDS, FLASH DRIVES</b>
+	
+	
+	<b>FUNCTIONS</b>
+		THESE NEED ACCESS TO BLOCK SPECIAL FILE PATH WHERE DRIVE IS ATTACHED.
+			EXAMPLE: /dev/sd----
+		
+		CONCEPTS:
+			MEAL:  THIS IS THE ENTIRE SPAN OF INDEXES TO BE READ
+			PLATE: THIS IS THE ONE SPAN OF INDEXES WITHIN THE MEAL
+			
+		"DRIVE INFORMATION" SECTION BELOW HAS INFO PERTAINING TO FINDING
+		THE BYTES COUNT OF A DRIVE.
+		
+		<b>SCULPT (WRITE)</b>
+			<code>
+			
+			
+			
+			
+			</code>
+		
+		
+		<b>SCAN (READ)</b>		
+			<code>
+				import BRUNCH.SCAN as SCAN			
+					
+				#
+				#	CAUTION:
+				#
+				#		EXAMPLE: /dev/sd----
+				# 
+				DRIVE_PATH = ""	
+					
+				BYTE_STRING = b''
+				def PROGRESS (PARAMS):
+					nonlocal BYTE_STRING;
+					BYTE_STRING += PARAMS ['PLATE']
+				
+				SCAN.START ({
+					"DRIVE PATH": DRIVE_PATH, 
+					
+					"BYTES INDEXES": [ 0, 28 ],		
+					"BYTES PER PLATE": 10,
+					
+					"PROGRESS": PROGRESS
+				})	
+				
+				print (BYTE_STRING)
+				#
+				#	b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+				#
+			</code>
+		
+	<b>DRIVE INFORMATION</b>
+		#
+		#	lsblk -b -p
+		#	lsblk -b -p --json
+		#	lsblk -S
+		#
+		[TCSH] lsblk -b -p
+	
+			NAME        MAJ:MIN RM        SIZE RO TYPE MOUNTPOINTS
+			/dev/sda      8:0    0 40018599936  0 disk 
+			├─/dev/sda1   8:1    0   629145600  0 part /boot/efi
+			├─/dev/sda2   8:2    0  1073741824  0 part /boot
+			└─/dev/sda3   8:3    0 38313918464  0 part /home
+													   /
+			/dev/sdb      8:16   0 40018597888  0 disk 
+			/dev/zram0  252:0    0  8589934592  0 disk [SWAP]
+			
+		#
+		#	https://en.wikipedia.org/wiki/Util-linux
+		#	https://github.com/util-linux/util-linux
+		#
+		[TCSH] fdisk -l
+			
+			Disk /dev/sdc: 37.27 GiB, 40018597888 bytes, 78161324 sectors
+			Disk model: high speed      
+			Units: sectors of 1 * 512 = 512 bytes
+			Sector size (logical/physical): 512 bytes / 512 bytes
+			I/O size (minimum/optimal): 512 bytes / 512 bytes
+			
+		THEREFORE:
+			40,018,597,888
+		
+			DRIVE PATH: /dev/sdb
+			BYTE INDEXES: [ 0, 40018597887 ]
+			
+			40018597888 / 78161324 = 512
+
+			#
+			#	/dev/sda is the operating system drive
+			#
+			
+	<b>PERTINENT</b>
+		XXD:
+			#
+			#	SCAN START OF DRIVE
+			#
+			xxd -len 100 /dev/sdb
+		
+			#
+			#	SCAN END OF DRIVE:
+			#		40018597888 - 100 = 40018597788
+			#
+			xxd -len 100 -seek 40018597788 /dev/sdb
+		
+			#
+			#	THERE MIGHT BE UNWRITABLE BYTES AFTER LAST BYTE..
+			#
+			xxd -seek 40018597988 /dev/sdb
+			
+			
+		
+		CREATING BLOCK SPECIAL FILES:
+			(IF YOU, FOR INSTANCE, ACCIDENTALLY OVERWRITE /dev/sdb)
+		
+			#
+			# [TCSH] file /dev/sda	
+			#
+			[TCSH] sudo mknod /dev/sdb b 8 0
+
+	
+			
+
