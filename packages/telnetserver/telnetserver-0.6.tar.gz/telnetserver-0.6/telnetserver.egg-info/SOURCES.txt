@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+telnetserver/__init__.py
+telnetserver/telnetserver.py
+telnetserver.egg-info/PKG-INFO
+telnetserver.egg-info/SOURCES.txt
+telnetserver.egg-info/dependency_links.txt
+telnetserver.egg-info/requires.txt
+telnetserver.egg-info/top_level.txt
