@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: createllm
+Version: 0.1.2
+Summary: Python package that let you create own transformers based models on your own data
+Home-page: https://github.com/khushaljethava/createllm
+Author: Khushal Jethava
+Author-email: Khushaljethava14@outlook.com
+License: UNKNOWN
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: dill
+Requires-Dist: torch
+Requires-Dist: torchvision
+
+Python package that let you create own transformers based models on your own data
+
