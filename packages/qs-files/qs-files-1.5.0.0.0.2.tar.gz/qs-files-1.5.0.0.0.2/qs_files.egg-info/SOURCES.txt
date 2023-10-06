@@ -1,0 +1,8 @@
+setup.py
+qs_files.egg-info/PKG-INFO
+qs_files.egg-info/SOURCES.txt
+qs_files.egg-info/dependency_links.txt
+qs_files.egg-info/top_level.txt
+qs_module/__init__.py
+qs_module/config_finder.py
+qs_module/configs.py
