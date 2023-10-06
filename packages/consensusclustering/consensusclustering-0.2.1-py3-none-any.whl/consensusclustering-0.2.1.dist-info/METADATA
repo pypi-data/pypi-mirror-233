@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: consensusclustering
+Version: 0.2.1
+Summary: Python implementation of Consensus Clustering by Monti et al. (2003)
+License: MIT
+Author: Ross Burton
+Author-email: burtonrossj@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: kneed (>=0.8.5,<0.9.0)
+Requires-Dist: matplotlib (>=3.8.0,<4.0.0)
+Requires-Dist: numpy (>=1.20.0,<2.0.0)
+Requires-Dist: pandas (>=1.5.3,<2.0.0)
+Requires-Dist: seaborn (>=0.12.2,<0.13.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Consensus Clustering
+
+![PyPI](https://img.shields.io/pypi/v/consensusclustering)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/consensusclustering)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/consensusclustering)
+![PyPI - License](https://img.shields.io/pypi/l/consensusclustering)
+![Codecov](https://img.shields.io/codecov/c/github/burtonrj/consensusclustering)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/burtonrj/consensusclustering/build.yaml)
+
+## Description
+
+`consensusclustering` is a python implementation of the Consensus Clustering
+algorithm for finding the optimal number of clusters by means of clustering
+stability under resampling, as originally proposed by [Monti et al. Consensus
+Clustering: A Resampling-Based Method for Class Discovery and Visualization of Gene
+Expression Microarray Data (2003)](https://link.springer.com/article/10.1023/A:1023949509487).
+
+## Installation
+
+`consensusclustering` can be installed from PyPi using pip:
+
+```bash
+pip install consensusclustering
+```
+
+## Usage
+
+See the 'examples' directory for a detailed overview of the package's functionality.
+
+## License
+
+Cytotransform is licensed under the MIT license, is free to use, and comes with no warranty whatsoever.
+
