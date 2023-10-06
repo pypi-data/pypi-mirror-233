@@ -1,0 +1,9 @@
+gdmath-1.4.0.dist-info/RECORD,,
+gdmath-1.4.0.dist-info/WHEEL,sha256=eaDTbMedWofVq8IZjew9qeAkoA5Sw2MOU2ppdIRr1Jg,110
+gdmath-1.4.0.dist-info/top_level.txt,sha256=wLlc6ns6jYyOmzPu-QJhG68lxRn_acZjaL1I7A7uQGw,7
+gdmath-1.4.0.dist-info/LICENSE.txt,sha256=fhdKJi556V1VLa-1QQmImMadfaHckqAOv3iPLtM4j-w,1070
+gdmath-1.4.0.dist-info/METADATA,sha256=CMFlr_F1fHlU54IMLmck1HWIDEz1yK9c_H_K7radTPk,4494
+gdmath/_gdmath.c,sha256=tlG9A_MeaPD2yRqY-TKH4Lp8z7QhlA_TpnBrlt731xY,23870172
+gdmath/_gdmath.pyx,sha256=Mndel0apcTMgRITYTRK95rN3ULyWUEPocHFPQXZtNqM,1182685
+gdmath/__init__.py,sha256=TO1Ol2AopFSYDE3CgtZuEC-l2OQopjUJjsmULzshDRw,213
+gdmath/_gdmath.cpython-311-darwin.so,sha256=-Sl4LTTFE92vSV7AS12d6emengHy3gzUqj_rMfTjsZo,3187914
