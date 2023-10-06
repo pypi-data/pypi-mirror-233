@@ -1,0 +1,20 @@
+[console_scripts]
+accrual = vipersci.carto.accrual:main
+anaglyph = vipersci.vis.anaglyph:main
+colorforge = vipersci.carto.colorforge:main
+dice_buffer = vipersci.carto.dice_buffer:main
+dissolve_dice = vipersci.carto.dissolve_dice:main
+image_stats = vipersci.vis.image_statistics:main
+msolo_simulator = vipersci.carto.msolo_simulator:main
+nirvss_simulator = vipersci.carto.nirvss_simulator:main
+nss_modeler = vipersci.carto.nss_modeler:main
+nss_simulator = vipersci.carto.nss_simulator:main
+template_test = vipersci.vis.pds.template_test:main
+traverse_interpolator = vipersci.carto.traverse_interpolator:main
+tri2gpkg = vipersci.carto.tri2gpkg:main
+vis_create_dbs = vipersci.vis.db.create_vis_dbs:main
+vis_create_image = vipersci.vis.create_image:main
+vis_create_pano = vipersci.vis.create_pano:main
+vis_create_raw = vipersci.vis.pds.create_raw:main
+vis_create_tif = vipersci.vis.create_tif:main
+viseer = vipersci.vis.viseer:main
