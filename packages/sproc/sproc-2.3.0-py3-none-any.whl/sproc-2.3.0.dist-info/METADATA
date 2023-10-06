@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: sproc
+Version: 2.3.0
+Summary: ⛏ Subprocesseses for subhumanses ⛏
+License: MIT
+Author: Tom Ritchford
+Author-email: tom@swirly.com
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# ⛏️sproc: subprocesseses for subhumanses  ⛏
+
+Run a command in a subprocess and yield lines of text from `stdout` and
+`stderr` independently.
+
+Useful for handling long-running proceesses that write to both `stdout` and
+`stderr`.
+
+### Simple Example
+
+    import sproc
+
+    CMD = 'my-unix-command "My Cool File.txt" No-file.txt'
+
+    for ok, line in sproc.Sub(CMD) as sp:
+        if ok:
+             print(' ', line)
+        else:
+             print('!', line)
+
+    if sp.returncode:
+        print('Error code', sp.returncode)
+
+    # Return two lists of text lines and a returncode
+    out_lines, err_lines, returncode = sproc.run(CMD)
+
+    # Call callback functions with lines of text read from stdout and stderr
+    returncode = sproc.call(CMD, save_results, print_errors)
+
+    # Log stdout and stderr, with prefixes
+    returncode = sproc.log(CMD)
+
+
+### [API Documentation](https://rec.github.io/sproc#sproc--api-documentation)
+
