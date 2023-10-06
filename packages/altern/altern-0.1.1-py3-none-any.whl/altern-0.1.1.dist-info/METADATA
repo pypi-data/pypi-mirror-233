@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: altern
+Version: 0.1.1
+Summary: Altern API Package for python
+Home-page: https://github.com/alternbits/altern-python
+Author: Dariush Abbasi
+Author-email: poshtehani@gmail.com
+Requires-Dist: requests
+
