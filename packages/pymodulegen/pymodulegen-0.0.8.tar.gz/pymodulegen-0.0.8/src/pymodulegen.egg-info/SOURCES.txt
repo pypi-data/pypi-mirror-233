@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/pymodulegen/__init__.py
+src/pymodulegen/__main__.py
+src/pymodulegen.egg-info/PKG-INFO
+src/pymodulegen.egg-info/SOURCES.txt
+src/pymodulegen.egg-info/dependency_links.txt
+src/pymodulegen.egg-info/entry_points.txt
+src/pymodulegen.egg-info/top_level.txt
+tests/test_pymodulegen_cli.py
