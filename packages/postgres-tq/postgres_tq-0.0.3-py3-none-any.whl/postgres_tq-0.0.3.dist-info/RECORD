@@ -1,0 +1,7 @@
+postgrestq/__init__.py,sha256=WJusE_OucOH-VfF4501pR6_UU4QHjd9kvjwn4AWTopQ,50
+postgrestq/task_queue.py,sha256=gDNhk_Qltmk-GuD0L3QEjlcaO_7NNzFEl_ygPNOmv38,17561
+postgres_tq-0.0.3.dist-info/LICENSE,sha256=00Q7KCfrg0tAJnaziIqOqEyottiFlSNJtP8QZihQgcM,1079
+postgres_tq-0.0.3.dist-info/METADATA,sha256=xrJKC-LxCS1nhpVtmdq9zYjSBhqW1QUjpNN4sAL-Ads,6104
+postgres_tq-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+postgres_tq-0.0.3.dist-info/top_level.txt,sha256=xwoivla8KIbOacB1YiIS5DEWcki9vejAjJhket-G_Lc,11
+postgres_tq-0.0.3.dist-info/RECORD,,
