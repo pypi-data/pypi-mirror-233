@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: botanalytics
+Version: 3.0.0
+Summary: Botanalytics Python SDK
+Home-page: https://botanalytics.co
+License: MIT
+Keywords: conversational-analytics,conversational-agents,conversational-ai,bots,chatbot,chatbot,botanalytics,analytics,rasa,universal
+Author: Botanalytics, Inc.
+Author-email: hello@botanalytics.co
+Maintainer: Enis Gayretli
+Maintainer-email: enis@botanalytics.co
+Requires-Python: >=3.6,<3.10
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: loguru (>=0.6.0,<0.7.0)
+Requires-Dist: python-dotenv (>=0.20.0,<0.21.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: requests-toolbelt (>=0.9.1,<0.10.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Project-URL: Documentation, https://docs.beta.botanalytics.co/docs/integration/sdks/python/getting-started
+Project-URL: Repository, https://github.com/botanalytics/python-sdk
+Description-Content-Type: text/markdown
+
+# Python SDK for [Botanalytics](https://botanalytics.co)
+
+> This version of our SDK is only compatible with the newest version of Botanalytics, currently on private beta.
+> If you are using an older version, please use the SDK version 2.x.
+
+
+## Documentation
+
+Please follow up the steps in the [Getting Started](https://docs.beta.botanalytics.co/docs/integration/sdks/python/getting-started) section of Python SDK documentation.
+

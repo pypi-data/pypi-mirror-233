@@ -1,0 +1,10 @@
+LICENSE.txt,sha256=_RPepZ-QXS6d9b9w2L4mXycIErr8NJW71ez8_ErlAhE,1069
+README.md,sha256=g0iS-tBmdop0c2pvrHMml6DBT4yWrUQEKRmtXcBq4Cg,429
+botanalytics/.env,sha256=wpoVjU-r4HX0KXdabeYpu7gOXSbm-9W7FdWBT1Q5U-A,783
+botanalytics/__init__.py,sha256=EFCBOCJLWYx2dUW-oz6grNbs23AUdc8gbaQIU10A5_I,11440
+botanalytics/rasa.py,sha256=dAxCUJZsIFXae1k9boNezIVwLPZvo7TrIfp6u8tF1FU,1279
+botanalytics/universal.py,sha256=mZTcUFlzlBAWIKRhD2MZpW7MHUJeQkRLW7Kvxe90OAI,1029
+botanalytics-3.0.0.dist-info/LICENSE.txt,sha256=_RPepZ-QXS6d9b9w2L4mXycIErr8NJW71ez8_ErlAhE,1069
+botanalytics-3.0.0.dist-info/METADATA,sha256=K_gzzwUofk2SdGYx_DSSiGl4XCKxZWrA5_u00f3AF6o,1747
+botanalytics-3.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+botanalytics-3.0.0.dist-info/RECORD,,
