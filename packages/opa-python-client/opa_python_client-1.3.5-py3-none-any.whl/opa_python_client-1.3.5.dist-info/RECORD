@@ -1,0 +1,8 @@
+opa_client/__init__.py,sha256=YBbCsRP8iNENeeNDSKwROcxGm4xsqim1aQaL5IaVZK8,100
+opa_client/errors.py,sha256=cTqjWVU9GF_3sErd5by_02OFx5fWG8JQwIAHPxZ-6Zo,3039
+opa_client/opa.py,sha256=fTiFrNYA9Jmsvx0aV7GzejGwZ7UXHuVkxP3QKqMDNwI,20776
+opa_client/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opa_client/test/test_opa.py,sha256=kBDUc6ZU8TydyE-QmhCMowDNJ7yBwPXUQ-oPqXg0fqw,3843
+opa_python_client-1.3.5.dist-info/METADATA,sha256=n21hle-FFEGt-O_r_Ch4R1s4cXdx4QqQ-_XL3vSBGqA,8984
+opa_python_client-1.3.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+opa_python_client-1.3.5.dist-info/RECORD,,
