@@ -1,0 +1,6 @@
+tomtoolkit<3.0,>=2.12
+antares-client<2.0,>=1.4
+elasticsearch-dsl<7.5,>=7.3
+
+[test]
+factory_boy<3.4,>=3.1
