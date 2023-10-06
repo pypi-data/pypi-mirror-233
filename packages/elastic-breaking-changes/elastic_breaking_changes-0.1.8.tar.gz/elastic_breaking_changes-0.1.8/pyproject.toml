@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "elastic_breaking_changes"
+version = "0.1.8"
+description = "test"
+authors = ["Anthony Astarita <anthonyastarita98@gmail.com>"]
+readme = "README.md"
+packages = [{include = "elastic_breaking_changes"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
