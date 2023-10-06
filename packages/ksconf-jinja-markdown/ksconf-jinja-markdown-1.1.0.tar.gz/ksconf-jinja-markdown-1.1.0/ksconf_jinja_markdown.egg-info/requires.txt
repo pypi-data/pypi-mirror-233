@@ -1,0 +1,3 @@
+commonmark>=0.9
+jinja2>=3.0
+ksconf>=0.13.0
