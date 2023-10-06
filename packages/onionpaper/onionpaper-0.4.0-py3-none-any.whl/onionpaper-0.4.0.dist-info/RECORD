@@ -1,0 +1,10 @@
+onionpaper/__init__.py,sha256=6SUiJj5SW-iq9iRG8O3d0JGXS-5emw7uyILkVdpm3Ck,92
+onionpaper/__main__.py,sha256=89p2QvnRqQhODHxFYLYcZPKt-4GHajYqMvCWT3SOuyM,2956
+onionpaper/core.py,sha256=nPkLNsuMHmIzES2AIu4_uZuTNB4JAXl3wj5-fv9ycwE,329
+onionpaper/ctypes.py,sha256=12PdDYHCF9_z1W0ev1aQKXbJ5XCnIkz6Z9W6aGGg_bU,13465
+onionpaper/tween.py,sha256=GOVR7Pn_iJzXR1ZoZyXt9PS-xfpfQeR0eiLXn4Q-gqg,1314
+onionpaper-0.4.0.dist-info/LICENSE,sha256=VZMmX7g0PpnDjAN3ipjjyPzsVqXjnJtgpgrZuumK6fI,1068
+onionpaper-0.4.0.dist-info/METADATA,sha256=QyVjV3Al3Rh0qdGYOeUsCSEODtjZAf5HovXjsLnSsfU,1809
+onionpaper-0.4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+onionpaper-0.4.0.dist-info/top_level.txt,sha256=kMqhCjbgdRaMwFfOuS7VASTICGyXcEamDzlzf3F_e_U,11
+onionpaper-0.4.0.dist-info/RECORD,,
