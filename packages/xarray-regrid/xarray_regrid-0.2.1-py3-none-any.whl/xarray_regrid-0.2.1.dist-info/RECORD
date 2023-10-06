@@ -1,0 +1,12 @@
+xarray_regrid/__about__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+xarray_regrid/__init__.py,sha256=sR0OHPCqpkwkX9akFi4RjjefEoFfmpBTcpf3qzZ3q9M,233
+xarray_regrid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_regrid/regrid.py,sha256=eORepul4-WGaFKyYXlRztyZydp6e0Z1Ug1J1liAehsc,5435
+xarray_regrid/utils.py,sha256=F9Y7aK2wWZPmojh9LAzuz6qV03sEOTBAm0NZY9Sujzo,5279
+xarray_regrid/methods/conservative.py,sha256=RhmbebJVNrf_urSujZzZg5dsQZHGm_VJxic-c_hhNqg,7923
+xarray_regrid/methods/interp.py,sha256=3HDRtodAkMhaUndYkPZ6JQwndWZH-tN7iH1RyVFwL1Y,1095
+xarray_regrid/methods/most_common.py,sha256=-gToAsDE-DWawbhnulUbuB9GKX6itDhamclSSeC9pnU,8181
+xarray_regrid-0.2.1.dist-info/METADATA,sha256=dh1-YcbD0vBvhWmTbGYfhtNcMCedXHbIiwMzND2zPio,2955
+xarray_regrid-0.2.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+xarray_regrid-0.2.1.dist-info/licenses/LICENSE,sha256=OPzV6bHGPCXFylyiCR3GYAK-EP8seLDbcbgO87DYM1o,11359
+xarray_regrid-0.2.1.dist-info/RECORD,,
