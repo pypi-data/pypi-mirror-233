@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: rapidpro-dash
+Version: 1.14.1
+Summary: Support library for RapidPro dashboards
+License: BSD
+Author: Nyaruka Ltd
+Author-email: code@nyaruka.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=4.2.3,<5.0.0)
+Requires-Dist: Pillow (>=9.4,<11.0)
+Requires-Dist: celery (>=5.1,<6.0)
+Requires-Dist: django-compressor (>=4.0,<5.0)
+Requires-Dist: django-redis (>=5.2.0,<6.0.0)
+Requires-Dist: django-timezone-field (>=4.1.1,<5.0.0)
+Requires-Dist: isort[pyproject] (>=5.10.1,<6.0.0)
+Requires-Dist: phonenumbers (>=8.12.16,<9.0.0)
+Requires-Dist: psycopg (>=3.1.9,<4.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: rapidpro-python (>=2.12.0,<3.0.0)
+Requires-Dist: smartmin (>=4.2.1,<5.0.0)
+Requires-Dist: sorl-thumbnail (>=12.9.0,<13.0.0)
+Project-URL: repository, http://github.com/rapidpro/dash
