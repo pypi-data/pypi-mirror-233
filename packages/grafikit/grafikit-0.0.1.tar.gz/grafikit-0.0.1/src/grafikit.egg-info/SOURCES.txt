@@ -1,0 +1,8 @@
+LICENCE
+README.md
+pyproject.toml
+src/__init__.py
+src/grafikit.egg-info/PKG-INFO
+src/grafikit.egg-info/SOURCES.txt
+src/grafikit.egg-info/dependency_links.txt
+src/grafikit.egg-info/top_level.txt
