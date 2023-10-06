@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+target-version = ['py37']
+
+[tool.doks]
+auto = true
+
+[tool.poetry]
+name = "tdir"
+version = "1.7.1"
+description = "🗃 Create and fill a temporary directory 🗃"
+authors = ["Tom Ritchford <tom@swirly.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+dek = "*"
+xmod = "*"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "*"
+doks = "*"
+pytest = "*"
+flake8 = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
