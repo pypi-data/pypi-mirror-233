@@ -1,0 +1,14 @@
+PyYAML>=5.4.1
+requests>=2.26.0
+click>=8.0.0
+rich>=12.0.0
+
+[test]
+setuptools>=45
+wheel
+pylint>=2.13.9
+mypy>=0.971
+types-requests
+types-PyYAML
+black>=22.8.0
+restructuredtext-lint>=1.4.0
