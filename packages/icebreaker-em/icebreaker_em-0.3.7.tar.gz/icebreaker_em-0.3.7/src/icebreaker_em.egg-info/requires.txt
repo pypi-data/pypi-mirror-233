@@ -1,0 +1,6 @@
+gemmi
+matplotlib
+mrcfile
+numpy
+opencv-python-headless
+scipy
