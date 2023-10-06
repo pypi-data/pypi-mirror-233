@@ -1,0 +1,12 @@
+uoy_assessment_uploader/__init__.py,sha256=9_bSq9YLVC5SKiONXzetTWfyxP4kUUV7QUA5-R8pqc8,5488
+uoy_assessment_uploader/__main__.py,sha256=U9EC5f2-LJuwqkz0iqpQyHeUf6NKAj6LCevsVWtYxjc,61
+uoy_assessment_uploader/argparse.py,sha256=QSdOXYKcXovEdHIWTlvBb7OakK8D61sBLH_AkLS7DRw,3369
+uoy_assessment_uploader/constants.py,sha256=YALSD_Fv_MHLpSC1YLdo8F_lnjwNi25BR85-PH5teHE,587
+uoy_assessment_uploader/credentials.py,sha256=7GMLED683LhzrkFGIp0DgazAeElBRNlDjUmOhInEfSc,5149
+uoy_assessment_uploader/requests.py,sha256=uz6h6Rl6BeVOQYQBcE4kCkrryWIKiAKlD76n2gKMpy0,11239
+uoy_assessment_uploader/teaching-cs-york-ac-uk-chain.pem,sha256=WbFCNe59nB4eoSFxy8UfFJdGnYEW3NusiXLOjJ7FJos,6032
+uoy_assessment_uploader-0.6.1.dist-info/entry_points.txt,sha256=oN3pAmge0K7PKWatriCifP-o0J9y6o3yJOyiUdEDA40,72
+uoy_assessment_uploader-0.6.1.dist-info/LICENSE,sha256=ljOS4DjXvqEo5VzGfdaRwgRZPbNScGBmfwyC8PChvmQ,32422
+uoy_assessment_uploader-0.6.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+uoy_assessment_uploader-0.6.1.dist-info/METADATA,sha256=SeT716CvZSf_dpBaLk167GV4Lu0KV_vPG2YgcO-2a5g,2567
+uoy_assessment_uploader-0.6.1.dist-info/RECORD,,
