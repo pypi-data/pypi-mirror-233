@@ -1,0 +1,33 @@
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+target-version = ['py37']
+
+[tool.doks]
+source = 'abbrev.py'
+target = 'README.rst'
+
+[tool.poetry]
+name = "abbrev"
+version = "1.2.0"
+description = "🐜 Expand abbreviations 🐜"
+authors = ["Tom Ritchford <tom@swirly.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+xmod = "*"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "*"
+flake8 = "*"
+pytest = "*"
+readme-renderer = "*"
+mkdocs = "*"
+mkdocstrings = {extras = ["python"], version = "*"}
+mkdocs-material = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
