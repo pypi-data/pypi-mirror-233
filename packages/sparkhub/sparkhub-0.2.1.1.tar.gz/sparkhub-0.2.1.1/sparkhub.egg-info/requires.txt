@@ -1,0 +1,4 @@
+versioneer==0.29
+logzero==1.5.0
+hail>=0.2.45
+slack_sdk
