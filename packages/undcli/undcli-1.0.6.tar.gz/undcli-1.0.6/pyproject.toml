@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "undcli"
+version = "v1.0.6"
+description = ""
+authors = ["Aayushman Choudhary <aayushmanchaudhory@gmail.com>"]
+
+[tool.poetry.scripts]
+mlp = "undcli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.9.0"}
+google-cloud-storage = "^2.11.0"
+boto3 = "^1.28.60"
+tqdm = "^4.66.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
