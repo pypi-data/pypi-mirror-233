@@ -1,0 +1,3 @@
+[console_scripts]
+renderer=renderer.__main__:main
+
