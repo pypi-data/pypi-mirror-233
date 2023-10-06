@@ -1,0 +1,22 @@
+<form method="post" action="{{ action_url }}">
+    {% if markdown_top %}
+        <div class="markdown-body">{{ markdown_top|safe }}</div>
+    {% endif %}
+    
+    {% for input_component in inputs %}
+        <div class="mb-4">{{ input_component|safe }}</div>
+    {% endfor %}
+
+    {% if markdown_bottom %}
+        <div class="markdown-body mb-2">{{ markdown_bottom|safe }}</div>
+    {% endif %}
+    
+    <button 
+        type="submit" 
+        class="rounded px-2 py-1 text-sm font-semibold 
+        shadow-sm ring-1 ring-inset ring-gray-300 
+        {{ theme_colors.bg }} {{ theme_colors.text }} {{ theme_colors.hover }}"
+    >
+        Select
+    </button>
+</form>
