@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+tutor_contrib_hpa.egg-info/PKG-INFO
+tutor_contrib_hpa.egg-info/SOURCES.txt
+tutor_contrib_hpa.egg-info/dependency_links.txt
+tutor_contrib_hpa.egg-info/entry_points.txt
+tutor_contrib_hpa.egg-info/requires.txt
+tutor_contrib_hpa.egg-info/top_level.txt
+tutorhpa/__about__.py
+tutorhpa/__init__.py
+tutorhpa/plugin.py
+tutorhpa/patches/.gitignore
+tutorhpa/patches/k8s-override
+tutorhpa/patches/kustomization-resources
+tutorhpa/templates/hpa/k8s/hpa.yml
