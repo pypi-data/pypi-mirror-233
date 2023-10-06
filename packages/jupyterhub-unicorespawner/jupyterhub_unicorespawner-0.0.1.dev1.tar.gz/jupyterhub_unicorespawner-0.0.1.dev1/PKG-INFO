@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jupyterhub-unicorespawner
+Version: 0.0.1.dev1
+Summary: JupyterHub Spawner for UNICORE
+Author-email: Tim Kreuzer <t.kreuzer@fz-juelich.de>, Alice Grosch <a.grosch@fz-juelich.de>
+License-File: LICENSE
+Keywords: jupyterhub,spawner
+Requires-Python: >=3.9
+Requires-Dist: escapism
+Requires-Dist: jinja2
+Requires-Dist: jupyterhub>=4.0.0
+Requires-Dist: pyunicore
+Requires-Dist: traitlets
+Requires-Dist: urllib3
+Description-Content-Type: text/markdown
+
+# UnicoreSpawner
