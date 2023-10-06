@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: frisknstech
+Version: 1.1
+Summary: 使用打字形式显示文字
+Home-page: UNKNOWN
+Author: NsTech.
+Author-email: Frisk2010@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: wget
+
+printer("text", time)
+
+
