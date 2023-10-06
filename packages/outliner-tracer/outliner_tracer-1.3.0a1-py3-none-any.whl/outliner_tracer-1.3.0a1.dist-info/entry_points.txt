@@ -1,0 +1,2 @@
+[console_scripts]
+outliner = outliner.cli:main
