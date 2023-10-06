@@ -1,0 +1,9 @@
+@prefix schema: <https://schema.org/> .
+
+<{{uri}}> a schema:Organization ;
+    schema:dissolutionDate "2050-05-02" ;
+    schema:foundingDate "2010-01-01" ;
+    schema:name "Entreprise" ;
+    schema:parentOrganization "Toto Cie" ;
+    schema:subOrganization "Titi Cie" ;
+    schema:url "{{uri}}" .

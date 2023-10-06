@@ -1,0 +1,43 @@
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix ricoform: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<{{name_uri}}> a rico:AgentName ;
+    rico:isOrWasAgentNameOf <{{uri}}#agent> ;
+    rico:textualValue "Entreprise" ;
+    rico:type "authorized" .
+
+<{{uri}}#inst> a rico:Instantiation ;
+    rico:identifier "C123" ;
+    rico:isInstantiationOf <{{uri}}> .
+
+<{{child_of_uri}}#agent> rico:agentIsSourceOfAgentHierarchicalRelation <{{child_of_uri}}#hierarchical_to_C123> ;
+    rico:hasOrHadSubordinate <{{uri}}#agent> .
+
+<{{parent_of_uri}}#agent> rico:agentIsTargetOfAgentHierarchicalRelation <{{uri}}#hierarchical_to_P243> ;
+    rico:isOrWasSubordinateTo <{{uri}}#agent> .
+
+<{{uri}}> a rico:Record ;
+    rico:hasDocumentaryForm ricoform:AuthorityRecord ;
+    rico:describesOrDescribed <{{uri}}#agent> ;
+    rico:hasInstantiation <{{uri}}#inst> .
+
+<{{uri}}#hierarchical_to_P243> a rico:AgentHierarchicalRelation ;
+    rico:agentHierarchicalRelationHasSource <{{uri}}#agent> ;
+    rico:agentHierarchicalRelationHasTarget <{{parent_of_uri}}#agent> .
+
+<{{child_of_uri}}#hierarchical_to_C123> a rico:AgentHierarchicalRelation ;
+    rico:agentHierarchicalRelationHasSource <{{child_of_uri}}#agent> ;
+    rico:agentHierarchicalRelationHasTarget <{{uri}}#agent> .
+
+<{{uri}}#agent> a rico:Agent,
+        rico:CorporateBody ;
+    rico:agentIsSourceOfAgentHierarchicalRelation <{{uri}}#hierarchical_to_P243> ;
+    rico:agentIsTargetOfAgentHierarchicalRelation <{{child_of_uri}}#hierarchical_to_C123> ;
+    rico:beginningDate "2010-01-01"^^xsd:date ;
+    rico:isOrWasDescribedBy <{{uri}}> ;
+    rico:endDate "2050-05-02"^^xsd:date ;
+    rico:hasOrHadAgentName <{{name_uri}}> ;
+    rico:hasOrHadSubordinate <{{parent_of_uri}}#agent> ;
+    rico:isOrWasSubordinateTo <{{child_of_uri}}#agent> ;
+    rico:name "Entreprise" .
