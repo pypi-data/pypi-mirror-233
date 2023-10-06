@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ashcount/__init__.py
+ashcount/ashcount.py
+ashcount.egg-info/PKG-INFO
+ashcount.egg-info/SOURCES.txt
+ashcount.egg-info/dependency_links.txt
+ashcount.egg-info/top_level.txt

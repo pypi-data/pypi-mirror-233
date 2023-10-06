@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ashcount
+Version: 1.0.1
+Summary: A set of things that can be done with files. For example, finding the number of lines in a file Find the number of words Find the net code count of a Python file.
+Home-page: https://github.com/ashkan0201/ashcount
+Author: Ashkan Noroozi
+Author-email: ashkan02011@gmail.com
+License: MIT
+Keywords: python,package
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+
+**This package helps you to get some information from the files.**
+
+- Find the number of lines in a file
+- Find the number of original lines in a file
+- Find the word count of a file
+- Find the number of codes in a Python file
+- Find the net code count of a Python file
+- Find the number of comments in a Python file
+
