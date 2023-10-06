@@ -1,0 +1,13 @@
+client_side/__init__.py,sha256=yymJEN662hTJSKT5jubQpnHMLxke5SaVO9LopnAx7qE,120
+client_side/apps.py,sha256=27BgPORIqQO_4U0EObKtePruKa5xLpoNy-8x7xXZ9DA,168
+client_side/component.py,sha256=ofpyZHhXdi9aHS9i2unerCQiou7pfvw9XVP2jbpKhM4,1698
+client_side/templates/client_side/link.html,sha256=mQqYdsYsm7mOSMm7rGe22A1Bquf7FT9mH21eS6x_Nq8,209
+client_side/templates/client_side/script.html,sha256=UhbdZwNDCmVFO-kzKlcyB5WPA8J3l79PScNhxfddCm8,203
+client_side/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client_side/templatetags/dependency_tags.py,sha256=cunJxoqduRGwES4-Vx-oVr78CM09YhYx2r3e4kFSW5I,1398
+django_client_side-0.3.1.dist-info/LICENSE,sha256=S7YKZSaaOAPhHfsXcDbyYk_hCJnPPDuUVCTTiQGUg20,1070
+django_client_side-0.3.1.dist-info/METADATA,sha256=K3xbznPW_QfBpqwNAxUOsWpv98zUbn8hTb-8Z02Oqqo,6478
+django_client_side-0.3.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_client_side-0.3.1.dist-info/entry_points.txt,sha256=ijJs5wKn8qMNngRloBgoxQILeFl9hJi1Is85LfD8YYk,63
+django_client_side-0.3.1.dist-info/top_level.txt,sha256=tm0t-dJXX22zRFBoeEiS8ALa1iIRLKRdgYT8yDpjhMQ,12
+django_client_side-0.3.1.dist-info/RECORD,,

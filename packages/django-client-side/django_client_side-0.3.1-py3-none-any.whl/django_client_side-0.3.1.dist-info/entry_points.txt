@@ -1,0 +1,2 @@
+[console_scripts]
+manage.py = django_client_side:django_manage
