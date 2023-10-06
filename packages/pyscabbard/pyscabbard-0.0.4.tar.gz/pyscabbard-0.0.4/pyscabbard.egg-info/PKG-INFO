@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: pyscabbard
+Version: 0.0.4
+Summary: high-level python package for the DAGGER suite
+Home-page: https://github.com/bgailleton/scabbard
+Author: Boris Gailleton
+Author-email: boris.gailleton@univ-rennes1.fr
+License: MIT license
+Keywords: scabbard
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+scabbard
+========
+
+
+.. image:: https://img.shields.io/pypi/v/scabbard.svg
+        :target: https://pypi.python.org/pypi/scabbard
+
+.. image:: https://img.shields.io/travis/bgailleton/scabbard.svg
+        :target: https://travis-ci.com/bgailleton/scabbard
+
+.. image:: https://readthedocs.org/projects/scabbard/badge/?version=latest
+        :target: https://scabbard.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+high-level python package for the DAGGER suite
+
+
+* Free software: MIT license
+* Documentation: https://scabbard.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.0.2 (2023-07-31)
+------------------
+
+* Adding drainage divide quick extraction tools
+* Fixing sea_level/Z0 stuff 
+
+0.0.1 (2023-07-25)
+------------------
+
+* First release on PyPI.
+* Adding tools for quick river extraction
+* Started a big behind-the-scene refactoring and standardisation (invisible at top level)
+* Maintenance and bug fixes
