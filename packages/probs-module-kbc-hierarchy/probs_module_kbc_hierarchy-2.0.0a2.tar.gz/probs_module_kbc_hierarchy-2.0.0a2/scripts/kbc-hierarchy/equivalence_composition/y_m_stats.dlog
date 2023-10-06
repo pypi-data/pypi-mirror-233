@@ -1,0 +1,28 @@
+
+# 2: in ufu
+
+# This should be the same as 1_observations_without_measurement
+ufs:y_stat[ufs:2_EmptyMeasurement, ?Count] :-
+    AGGREGATE(
+        ufu:missingMeasurement[?Observation,true] ufu:PW
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+# This should be the same as 1_observations_with_0_as_measurement + 1_observations_without_measurement + 2_EmptyObservation
+ufs:y_stat[ufs:2_observations_with_0_as_measurement, ?Count] :-
+    AGGREGATE(
+        :measurement[?Observation,0] ufu:PW
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:2_EmptyObservation, ?Count] :-
+    AGGREGATE(
+        ufu:PlaceholderObservation[?Observation] ufu:PW
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:2_objectDefinedByForComposition, ?Count] :-
+    AGGREGATE(
+        ufu:objectDefinedByForComposition[?Observation,?Object] ufu:PW
+        BIND COUNT(?Observation, ?Object) AS ?Count
+    ) .

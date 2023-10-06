@@ -1,0 +1,58 @@
+#####################################
+##### Compatibility signatures  #####
+#####################################
+
+ufu:OriginalCompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW :-
+        :processDefinedBy[?Observation,?Process] ,
+        :hasRole[?Observation,?Role] ,
+        :hasRegion[?Observation,?Region] ,
+        :hasTime[?Observation,?Time] ,
+        :hasMetric[?Observation,?Metric] ,
+        SKOLEM("Compatibility signature", ?Process, ?Role, ?Region, ?Time, ?Metric, ?CompatibilitySignature) .
+
+ufu:OriginalCompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW :-
+        NOT EXISTS ?Process IN (
+                        :processDefinedBy[?Observation,?Process]
+                ) ,
+        :hasRole[?Observation,?Role] ,
+        :hasRegion[?Observation,?Region] ,
+        :hasTime[?Observation,?Time] ,
+        :hasMetric[?Observation,?Metric] ,
+        SKOLEM("Compatibility signature", :DummyProcess, ?Role, ?Region, ?Time, ?Metric, ?CompatibilitySignature) .
+
+# Identify observations without measurement
+ufu:missingMeasurement[?Observation,true] ufu:PW :-
+        :objectDefinedBy[?Observation,?Object] ,
+        NOT EXISTS ?Measurement IN (
+                        :measurement[?Observation,?Measurement]
+                ) .
+
+#####
+# Compatibility signature of each object (direct or inferred via composition or equivalence).
+# This is useful to identify which empty/dummy observations we need to add to each object.
+#####
+
+# Compatibility signature from "direct" (i.e., original) observations.
+# `ufu:objectOriginalCompatibilitySignature` is only used in this section.
+ufu:objectOriginalCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        :objectDefinedBy[?Observation,?Object] ,
+        ufu:OriginalCompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW .
+
+# Propagate the compatibility signature to the equivalent objects.
+# `ufu:objectEquivalentCompatibilitySignature` is only used in this section.
+ufu:objectEquivalentCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        :objectEquivalentTo[?Object,?EquivalentObject] ,
+        ufu:objectCompatibilitySignature[?EquivalentObject,?CompatibilitySignature] ufu:PW .
+
+# Propagate the compatibility signature from the component to the composite.
+ufu:objectComponentsCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        :objectComposedOf[?Object,?Component] ,
+        ufu:objectCompatibilitySignature[?Component,?CompatibilitySignature] ufu:PW .
+
+# Transitivity-like rules for compatibility signature (i.e., recursion for the compatibility signature derived with previous rules)
+ufu:objectCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        ufu:objectOriginalCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW.
+ufu:objectCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        ufu:objectEquivalentCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW.
+ufu:objectCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW :-
+        ufu:objectComponentsCompatibilitySignature[?Object,?CompatibilitySignature] ufu:PW.

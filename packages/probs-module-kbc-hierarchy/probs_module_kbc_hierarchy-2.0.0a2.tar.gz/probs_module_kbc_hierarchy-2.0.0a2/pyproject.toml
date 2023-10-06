@@ -1,0 +1,23 @@
+[project]
+name = "probs_module_kbc_hierarchy"
+version = "2.0.0a2"
+description = "Knowledge base completion RDFox scripts for the PRObs ontology"
+authors = [
+    {name = "Stefano Germano"},
+    {name = "Rick Lupton"},
+    {name = "Carla Saunders"},
+    {name = "Stephen Boyle"},
+]
+dependencies = [
+    "probs_module_ontology==2.0.0a1"
+]
+
+[tool.setuptools]
+package-dir = {"probs_system.scripts" = "scripts"}
+
+[tool.setuptools.package-data]
+"probs_system.scripts" = ["**"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

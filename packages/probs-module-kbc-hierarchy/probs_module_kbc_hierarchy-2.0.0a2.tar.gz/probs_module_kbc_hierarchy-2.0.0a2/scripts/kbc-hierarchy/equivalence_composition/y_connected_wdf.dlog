@@ -1,0 +1,11 @@
+#########################
+##### Connected WDF #####
+#########################
+
+#####
+# Identify all the observations aggreated to "infer" this new InferredObservation.
+#####
+
+:wasDerivedFrom[?PartialObservation,?Observation] ufu:PW :-
+        ufu:hasMember[?PartialObservation,?Observation] ufu:PW,
+        NOT ufu:PlaceholderObservation[?Observation] ufu:PW .

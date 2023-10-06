@@ -1,0 +1,22 @@
+############################
+##### Connected bounds #####
+############################
+
+#####
+# Identify if a new InferredObservation is a lower bound.
+#####
+
+# If an observation is inferred from at least one "EmptyObservation", it is a "LowerBound"
+:hasBound[?PartialObservation,:LowerBound] ufu:PW :-
+        ufu:hasMember[?PartialObservation,?Observation] ufu:PW,
+        ufu:PlaceholderObservation[?Observation] ufu:PW.
+
+# If an observation is inferred from at least one observation without measurement, it is a "LowerBound"
+:hasBound[?PartialObservation,:LowerBound] ufu:PW :-
+        ufu:hasMember[?PartialObservation,?Observation] ufu:PW,
+        ufu:missingMeasurement[?Observation,true] ufu:PW.
+
+# If an observation is inferred from at least one "LowerBound" observation, it is a "LowerBound"
+:hasBound[?PartialObservation,:LowerBound] ufu:PW :-
+        ufu:hasMember[?PartialObservation,?Observation] ufu:PW,
+        :hasBound[?Observation,:LowerBound].

@@ -1,0 +1,34 @@
+##############################
+##### Empty observations #####
+##############################
+
+#####
+# If one component has a compatibility signature, but another one (of the same composite) does not have that compatibility signature, a "fake" observation must be created that:
+# - does not interfere with the computation of the composition
+# - use the neutral element of the "aggregation function" that we use for the composition (`0` at the moment)
+# - allows to have only "full" compositions (i.e., exactly one observation for each component)
+# This "fake" observation must be created only for components of the same composite that do not have an observation with a valid measurement.
+# They need to be identified (at the moment implemented using `ufu:PlaceholderObservation`) to discard them at the end of the conversion (we do not want to export these "fake" observations).
+#####
+
+# Create an empty observation for this component (`?Component`) which has the `?CompatibilitySignature` compatibility signature
+ufu:objectDefinedByEmpty[?EmptyObservation,?CompositeComponent] ufu:PW ,
+ufu:CompatibilitySignature[?EmptyObservation,?CompatibilitySignature] ufu:PW :-
+        # given a composite object `?Composite` and a component `?Component`
+        :objectComposedOf[?Composite,?Component] ,
+        # if `?Composite` get a compatibility signature from one of its components (i.e., one of the components has this compatibility signature)
+        ufu:objectComponentsCompatibilitySignature[?Composite,?CompatibilitySignature] ufu:PW ,
+        # but `?Component` does not have this compatibility signature (i.e., this compatibility signature must be in a component of `?Composite` different from `?Component`)
+        NOT ufu:objectCompatibilitySignature[?Component,?CompatibilitySignature] ufu:PW ,
+        # Using an identifier for each pair <Composite,Component>
+        BIND(IRI(CONCAT("CompositeComponent-", MD5(STR(?Composite)), "-", MD5(STR(?Component))), STR(ufu:)) AS ?CompositeComponent) ,
+        # Create a new identifier to identify it (note that the same identifier is used for all the `ufu:PlaceholderObservation` with the same compatibility signature)
+        BIND(IRI(CONCAT("EmptyObservation-", MD5(STREX(?CompatibilitySignature))), STR(:)) AS ?EmptyObservation) .
+
+# Each observation in `ufu:objectDefinedByEmpty` is an `ufu:PlaceholderObservation`
+ufu:PlaceholderObservation[?EmptyObservation] ufu:PW :-
+        ufu:objectDefinedByEmpty[?EmptyObservation,?CompositeComponent] ufu:PW .
+        
+# Set the neutral element of the "aggregation function" as measurement for each `ufu:PlaceholderObservation` 
+:measurement[?EmptyObservation,0] ufu:PW :-
+        ufu:PlaceholderObservation[?EmptyObservation] ufu:PW .

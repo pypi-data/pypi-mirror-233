@@ -1,0 +1,4 @@
+info
+
+set query.answer-format text/x.tab-separated-values-abbrev
+select ?S ?O where { ?S ufs:y_stat ?O } ORDER BY ?S

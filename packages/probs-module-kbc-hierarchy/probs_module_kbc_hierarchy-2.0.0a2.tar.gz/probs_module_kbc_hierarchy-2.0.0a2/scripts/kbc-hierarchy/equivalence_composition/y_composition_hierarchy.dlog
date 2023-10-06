@@ -1,0 +1,57 @@
+###################################
+##### Composition aggregation #####
+###################################
+
+# Utility atom to store `CompositeComponent`, `CompatibilitySignature`, and `Observation` in a single atom
+CompositeComponentCompatibilitySignatureObservation(?CompositeComponent,?CompatibilitySignature,?Observation) :-
+    ufu:objectDefinedByForComposition[?Observation,?CompositeComponent] ufu:PW,
+    ufu:CompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW.
+
+#####
+# If an object (composite) has components with some at least one observation with measurement, a new (inferred) Observation must be created aggregating (the values of) one (compatible) observation from each component.
+#####
+
+CompositeComponentCompatibilitySignaturePartialObservation(?CompositeComponent,?CompatibilitySignature,?PartialObservation),
+ufu:PObsForObservation[?PartialObservation,?Observation] ufu:PW,
+:measurement[?PartialObservation,?Measurement] ufu:PW :-
+    # if this is the first component
+    ufu:firstComponent[?CompositeComponent,true] ufu:PW,
+    # and it has this an observation with this compatibility signature 
+    CompositeComponentCompatibilitySignatureObservation(?CompositeComponent,?CompatibilitySignature,?Observation),
+    # and the observation has this measurement value
+    :measurement[?Observation,?Measurement] ufu:PW,
+    # create a new identifier for the partial observation
+    BIND(IRI(CONCAT("ComposedInferredObservation-", MD5(STR(?CompositeComponent)), "_", MD5(STR(?Observation))), STR(:)) AS ?PartialObservation) .
+
+CompositeComponentCompatibilitySignaturePartialObservation(?CompositeComponent,?CompatibilitySignature,?PartialObservation),
+ufu:PObsForObservation[?PartialObservation,?Observation] ufu:PW,
+:measurement[?PartialObservation,?Measurement] ufu:PW ,
+ufu:PObsForPredecessor[?PartialObservation,?PreviousPartialObservation] ufu:PW :-
+    # if there is a previous component with a specific compatibility signature and a partial observation
+    CompositeComponentCompatibilitySignaturePartialObservation(?PreviousCompositeComponent,?PreviousCompatibilitySignature,?PreviousPartialObservation),
+    # get the next component
+    ufu:nextComponent[?PreviousCompositeComponent,?CompositeComponent] ufu:PW,
+    # and the next component has an observation with the same compatibility signature 
+    CompositeComponentCompatibilitySignatureObservation(?CompositeComponent,?CompatibilitySignature,?Observation),
+    # with this measurement value
+    :measurement[?Observation,?Omeasurement] ufu:PW,
+    # and the previous partial observation has this measurement value
+    :measurement[?PreviousPartialObservation,?Pmeasurement] ufu:PW,
+    # the measurement value of the partial observation is
+    BIND(?Pmeasurement + ?Omeasurement as ?Measurement),
+    # consider only those with the same Compatibility Signature (only needed to 'guide' the RDFox planning; otherwise, we could have used the same variable for both terms)
+    FILTER(sameTerm(?PreviousCompatibilitySignature, ?CompatibilitySignature)),
+    # create a new identifier for the partial observation
+    BIND(IRI(CONCAT("ComposedInferredObservation-", MD5(STR(?PreviousCompositeComponent)), "_", MD5(STR(?PreviousPartialObservation)), "_", MD5(STR(?CompositeComponent)), "_", MD5(STR(?Observation))), STR(:)) AS ?PartialObservation) .
+
+#####
+# Export new observations inferred via composition
+#####
+
+ufu:CompositionObservationToExport[?PartialObservation] ufu:PW ,
+ufu:CompatibilitySignature[?PartialObservation,?CompatibilitySignature] ufu:PW ,
+:objectInferredDefinedBy[?PartialObservation,?Composite] ufu:PW :-
+    # if there is a new partial observation
+    CompositeComponentCompatibilitySignaturePartialObservation(?CompositeComponent,?CompatibilitySignature,?PartialObservation),
+    # for the last component of a composite
+    ufu:lastComponent[?Composite,?CompositeComponent] ufu:PW.

@@ -1,0 +1,27 @@
+
+# Create a named graph to store triples not needed in the output
+# tupletable create ufu:PW type named-graph
+
+# Include the additional rules
+import rules.dlog
+
+# Import ontology rules
+import probs_ontology_rules.dlog
+
+# Composition-Equivalence 'algorithm'
+exec equivalence_composition/y_main
+
+# # Explicate facts
+# exec ../data-enhancement/explicate
+
+# tupletable delete ufu:CompositeComponentCompatibilitySignatureObservation force
+# tupletable delete ufu:CompositeComponentCompatibilitySignaturePartialObservation force
+
+# begin
+
+# import equivalence_composition/y_infer_new_triples.dlog
+
+# # We need to re-import it due to the explicate
+# import probs_rules.dlog
+
+# commit
