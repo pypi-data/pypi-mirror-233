@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: qless-with-throttles
+Version: 0.11.4
+Summary: Redis-based Queue Management
+Home-page: http://github.com/tdg5/qless-py
+Author: Danny Guinther
+Author-email: dannyguinther@gmail.com
+License: MIT License
+Keywords: redis,qless,job
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: argparse
+Requires-Dist: decorator
+Requires-Dist: hiredis
+Requires-Dist: redis
+Requires-Dist: six
+Requires-Dist: simplejson
+Provides-Extra: ps
+Requires-Dist: setproctitle ; extra == 'ps'
+
+Fork of seomoz/qless-py with support for throttles.
