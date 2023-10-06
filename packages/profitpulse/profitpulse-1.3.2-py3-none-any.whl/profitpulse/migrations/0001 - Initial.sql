@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS account (
+    id INTEGER NOT NULL,
+    name VARCHAR(30) unique NOT NULL,
+    status CHAR(1) CHECK (status IN ('O', 'C')),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS "transaction" (
+    id INTEGER NOT NULL,
+    date_of_movement DATETIME,
+    description VARCHAR(30),
+    value REAL NOT NULL,
+    origin VARCHAR(5),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    -- account_id FOREIGN KEY REFERENCES account(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS entity (
+    id INTEGER NOT NULL,
+    name VARCHAR(30) unique NOT NULL,
+    type VARCHAR(30) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
