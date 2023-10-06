@@ -1,0 +1,10 @@
+undcli/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+undcli/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+undcli/commands/env.py,sha256=0y-wddCmkkieBClL-UcIWzNCaiCoun6RBu08oWayLWg,4497
+undcli/commands/storage.py,sha256=Icws2X_WFVhrSpc8ypJHpWvOcT9vjWU2GagvzRDPEQ4,4159
+undcli/main.py,sha256=Yvl-bM24QhMzIWfKoRGl6K8uNStsd-qp1Fk9HNFL7Vw,1653
+undcli/utils.py,sha256=ZeE5vuteOXp74mt4z8PK8sBaXl9X6jXdEmCnZBy4640,1608
+undcli-1.0.6.dist-info/entry_points.txt,sha256=msl4vrVnm9rcTiAENZSSEVUTM_p89BSmqY_Fo7C0qhY,39
+undcli-1.0.6.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+undcli-1.0.6.dist-info/METADATA,sha256=QbrijT_iR8ya1pmdvGOBvLovFoS_OwrWKUDjlvb0_vA,384
+undcli-1.0.6.dist-info/RECORD,,
