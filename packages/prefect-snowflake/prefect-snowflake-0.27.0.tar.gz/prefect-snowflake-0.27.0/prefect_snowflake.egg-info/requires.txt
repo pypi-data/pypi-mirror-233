@@ -1,0 +1,21 @@
+prefect>=2.7.0
+snowflake-connector-python>=2.7.6
+
+[dev]
+pytest
+black
+flake8
+mypy
+mkdocs
+mkdocs-material
+mkdocstrings_python_legacy
+isort
+pre-commit
+pytest-asyncio
+mkdocs-gen-files
+interrogate
+coverage
+pillow
+
+[dev:python_version < "3.8"]
+mock
