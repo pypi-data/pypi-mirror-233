@@ -1,0 +1,13 @@
+green_agent/.ipynb_checkpoints/first-checkpoint.ipynb,sha256=eAQ3q60Ctdy0wak5qeKZrPLeuaNtLTn9Q76BnHMZPNU,19667
+green_agent/.ipynb_checkpoints/testing-checkpoint.ipynb,sha256=RhkJZLODPbSxB_E_NXG5g2iP1czefNO2VSLOdN2OHWI,7581
+green_agent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+green_agent/agents/base.py,sha256=JZMEtMX415Ynwivn1KhJooRwjdj_mCYjCPLpbl-gZs4,753
+green_agent/agents/openai_agent.py,sha256=QgKpRuvBDPFbkMKePKMrIFwhUTpC-tDwPxCMI7g12pw,1241
+green_agent/agents/vertexai_agent.py,sha256=-r__fTmg5SqDzH-1KV8HSFbXHTi12SzY-MZGsAuEUtg,1863
+green_agent/first.ipynb,sha256=eAQ3q60Ctdy0wak5qeKZrPLeuaNtLTn9Q76BnHMZPNU,19667
+green_agent/testing.ipynb,sha256=RhkJZLODPbSxB_E_NXG5g2iP1czefNO2VSLOdN2OHWI,7581
+green_agent/tmp.sak.chatonomicon-6ec09fb5e671.json,sha256=k-7siCcoMQm8otfuTCvtM2fzlZz2TlpXab9GKcRvrNE,2348
+green_agent/uis/nb.py,sha256=xFlaFvkJvwKGLWJhXYCspI9kwGe6XtlFxaUkNxNkcy0,1160
+green_agent-0.1.1.dist-info/METADATA,sha256=BCRiSHVUFfrhBelM9k8h3r73bLm3ew03uHSRYvQ3mpI,808
+green_agent-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+green_agent-0.1.1.dist-info/RECORD,,
