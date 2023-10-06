@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: Obfuscy
+Version: 0.0.1
+Summary: A package to encrypt any sort of string or data. currently HEAVILY w.i.p.
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Author-email: joploljojo3 <jorisblaauw12@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# **Encryption Package**
+
+This Python package provides basic functionality for encrypting and decrypting strings.
+
+## **Functions**
+
+### `encrypt_str`
+
+The `encrypt_str` function is used to encrypt a string using a specified key.
+
+```python
+encrypt_str(Input: str, Key: str = "", Method: int = 0) -> str
+```
+
+- `Input`: The string to be encrypted.
+- `Key`: The encryption key (optional).
+- `Method`: The encryption method (0 for custom encryption).
+
+### `decrypt_str`
+
+The `decrypt_str` function is used to decrypt an encrypted string using a specified key.
+
+```python
+decrypt_str(Input: str, Key: str, Method: int = 0) -> str
+```
+
+- `Input`: The string to be decrypted.
+- `Key`: The decryption key.
+- `Method`: The decryption method (0 for custom decryption).
+
+## **Usage**
+
+To use this package, you can call the `encrypt_str` function to encrypt a string and the `decrypt_str` function to decrypt it. Ensure that you provide the correct encryption and decryption keys for successful operations.
