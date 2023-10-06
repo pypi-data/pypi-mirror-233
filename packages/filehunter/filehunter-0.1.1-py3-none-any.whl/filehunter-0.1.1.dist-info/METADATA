@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: filehunter
+Version: 0.1.1
+Summary: small functions useful to not increase the length of your code.
+Author: Raúl Guerrero
+Requires-Python: >=3.8
+
