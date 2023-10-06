@@ -1,0 +1,11 @@
+pyproject.toml
+src/geoarrow/pandas/__init__.py
+src/geoarrow/pandas/lib.py
+src/geoarrow_pandas.egg-info/PKG-INFO
+src/geoarrow_pandas.egg-info/SOURCES.txt
+src/geoarrow_pandas.egg-info/dependency_links.txt
+src/geoarrow_pandas.egg-info/requires.txt
+src/geoarrow_pandas.egg-info/top_level.txt
+tests/test_geoarrow_pandas.py
+tests/test_geoarrow_pandas_geopandas.py
+tests/test_geoarrow_pandas_suite.py
