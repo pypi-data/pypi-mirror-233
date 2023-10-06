@@ -1,0 +1,10 @@
+nonebot_plugin_playercheck/__init__.py,sha256=6lroSI9n2LTZHs6wFwHCkx1sjD3nwhJfEiGSalyzCbk,3730
+nonebot_plugin_playercheck/datasource.py,sha256=9fluG-QTEdCiyiOLYDum8oYkKuTYB8M1GK9_z0hHOZU,2251
+nonebot_plugin_playercheck/templates/main.html,sha256=VM9yW-ymQIqIF9C-cpUFYpcKmPmcLmS26KnmyEKtczk,3767
+nonebot_plugin_playercheck/templates/main.html.bak1,sha256=T8TV0PAKIbaL_1G42F_nV2YP8hOKZVQi-L6kT6cvR-Y,1271
+nonebot_plugin_playercheck/templates/main.html.bak2,sha256=HaQTUrbjiFk04hi552d0u9R6rmP2ID24iU7z4vEc7-I,3003
+nonebot_plugin_playercheck/templates/main.html.bak3,sha256=ut3hl3wBRoRevt-v5k-TnKX06L2WP3HnsHf2v8z_5E0,3441
+nonebot_plugin_playercheck-1.0.0.dist-info/LICENSE,sha256=2sQEm0oSpjvfL3pbM2UTrB-WyKnQEMT9Y0n1m1RB-aQ,1064
+nonebot_plugin_playercheck-1.0.0.dist-info/METADATA,sha256=ijTfmvqLj-LPK6lS5JMgCY0_Jr0nt_RCZGFlqUxc7dI,3447
+nonebot_plugin_playercheck-1.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+nonebot_plugin_playercheck-1.0.0.dist-info/RECORD,,
