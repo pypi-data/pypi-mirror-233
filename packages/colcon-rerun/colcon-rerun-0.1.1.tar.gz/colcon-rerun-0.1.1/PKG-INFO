@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: colcon-rerun
+Version: 0.1.1
+Summary: Extension for colcon to quickly re-run a recently executed verb.
+Home-page: https://colcon.readthedocs.io
+Author: Scott K Logan
+Author-email: logans@cottsay.net
+Maintainer: Scott K Logan
+Maintainer-email: logans@cottsay.net
+License: Apache License, Version 2.0
+Project-URL: Changelog, https://github.com/colcon/colcon-rerun/milestones?direction=desc&sort=due_date&state=closed
+Project-URL: GitHub, https://github.com/colcon/colcon-rerun/
+Keywords: colcon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.6
+Provides-Extra: test
+License-File: LICENSE
+
+colcon-rerun
+============
+
+An extension for `colcon-core <https://github.com/colcon/colcon-core>`_ to quickly re-run a recently executed verb.
+
+
