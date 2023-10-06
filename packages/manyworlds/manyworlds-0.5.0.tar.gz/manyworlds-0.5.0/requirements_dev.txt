@@ -1,0 +1,10 @@
+pytest
+pytest-watch
+coverage
+ruff
+mypy
+black
+hatch
+sphinx
+sphinx_rtd_theme
+hatch

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "manyworlds"
+dynamic = [
+  "version",
+  "dependencies",
+]
+authors = [
+  { name="Ingo Weiss", email="ingo@ingoweiss.com" },
+]
+description = "Organize BDD scenarios as hierarchical trees for more concise and expressive feature files"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: BDD",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ingoweiss/manyworlds"
+"Bug Tracker" = "https://github.com/ingoweiss/manyworlds/issues"
+"Repository" = "https://github.com/ingoweiss/manyworlds.git"
+"Changelog" = "https://github.com/ingoweiss/manyworlds/blob/master/CHANGELOG.md"
+"Documentation" = "https://manyworlds.ingoweiss.com/"
+
+[tool.hatch.version]
+path = "manyworlds/__init__.py"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
