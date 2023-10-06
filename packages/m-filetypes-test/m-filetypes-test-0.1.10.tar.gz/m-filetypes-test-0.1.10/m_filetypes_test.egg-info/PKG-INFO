@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: m-filetypes-test
+Version: 0.1.10
+Summary: Mobio Filetype Libs
+Home-page: https://github.com/mobiovn
+Author: MOBIO
+Author-email: contact@mobio.vn
+License: MIT
+Project-URL: Source, https://github.com/mobiovn
+Keywords: mobio,filetype,contact spam
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+##  Thư viện kiểm tra file type.
+
+### Cài đặt:
+
+```bash
+ $ pip3 install m-filetype
+ ```
+
+Link chữ ký: https://en.wikipedia.org/wiki/List_of_file_signatures
+
+### Sử dụng
+```python
+from mobio.sdks.filetype.file import File
+from mobio.sdks.filetype.common import ExtensionImage
+
+File.check_filetype_by_file_extensions(
+    file_binary=file, # Check filetype của định dạng file binary.Mặc định None
+    file_path=file_path, # Check filetype của path file
+    extensions=[ExtensionImage.PNG] # Danh sách extension cần check.
+)
+
+```
+
+#### Lấy extensions support
+- Extension Image:
+```python
+from mobio.sdks.filetype.common import ExtensionImage
+ExtensionImage.LIST_EXTENSION_SUPPORTED
+```
+- Extension Document:
+```python
+from mobio.sdks.filetype.common import ExtensionDocument
+ExtensionDocument.LIST_EXTENSION_SUPPORTED
+```
+- Extension Audio:
+```python
+from mobio.sdks.filetype.common import ExtensionAudio
+ExtensionAudio.LIST_EXTENSION_SUPPORTED
+```

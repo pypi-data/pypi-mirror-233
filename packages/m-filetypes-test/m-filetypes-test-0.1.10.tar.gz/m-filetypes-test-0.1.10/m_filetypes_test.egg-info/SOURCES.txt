@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+m_filetypes_test.egg-info/PKG-INFO
+m_filetypes_test.egg-info/SOURCES.txt
+m_filetypes_test.egg-info/dependency_links.txt
+m_filetypes_test.egg-info/top_level.txt
+mobio/libs/filetypes/__init__.py
+mobio/libs/filetypes/common.py
+mobio/libs/filetypes/custom_mimetypes.py
+mobio/libs/filetypes/file.py
+mobio/libs/filetypes/file_signature.json
+mobio/libs/filetypes/utils.py
