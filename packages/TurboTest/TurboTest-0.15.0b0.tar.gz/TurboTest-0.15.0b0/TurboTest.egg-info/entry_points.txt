@@ -1,0 +1,3 @@
+[console_scripts]
+tt = TurboTest.__main__:run
+turbotest = TurboTest.__main__:run
