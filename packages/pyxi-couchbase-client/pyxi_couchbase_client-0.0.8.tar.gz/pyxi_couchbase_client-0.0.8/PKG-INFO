@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyxi_couchbase_client
+Version: 0.0.8
+Summary: A basic couchbase client for python.
+Home-page: https://github.com/stiproot/py-couchbase-client
+Author: Simon Stipcich
+Author-email: stipcich.simon@gmail.com
+License: MIT
+Keywords: python,package,couchbase,beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: environs
+Requires-Dist: couchbase
+
+# py-couchbase-client
+A simple Python Couchbase module. 
