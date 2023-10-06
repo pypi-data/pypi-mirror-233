@@ -1,0 +1,9 @@
+searchdatamodels/__init__.py,sha256=zZA1yZcE9NGzayLpOfgOl4i8QDui-HofuoWBpXiTeN0,112
+searchdatamodels/search_classes.py,sha256=hk0qEyjQEnQe7vRysJLjFpL1MdlqB-SWlY-tJfhfhk8,12634
+searchdatamodels/tagline_embedding.py,sha256=48mmx7p6fKEzl2iT8xZjsHf1bFjkPK7QK3qTgx6ZXK0,1316
+searchdatamodels/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+searchdatamodels/test/test_search_classes.py,sha256=ESVRxgvbF8tYywWCB20n1mP3ojOBxwpDVrItmNFExck,8036
+searchdatamodels-0.0.52.dist-info/METADATA,sha256=AyaetBQoURzCY98lK3NMSNbrKCHrj5HOVNzsxOEmiQk,1923
+searchdatamodels-0.0.52.dist-info/WHEEL,sha256=5sUXSg9e4bi7lTLOHcm6QEYwO5TIF1TNbTSVFVjcJcc,92
+searchdatamodels-0.0.52.dist-info/top_level.txt,sha256=iIHvOqTIHb_edybtIWU51RSyD7Bo9ifuloA69I5ZDkI,17
+searchdatamodels-0.0.52.dist-info/RECORD,,
