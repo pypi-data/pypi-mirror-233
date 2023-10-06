@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pwmaker"
+version = "1.0.0"
+
+authors = [
+    { name = "Aleksandar Gjorgjevski", email = "aleksandarski@yandex.com" },
+]
+
+description = "Generate a strong and random password with variable length through the command line interface"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["Password generator"]
+
+requires-python = ">=3.10"
+
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Source = "https://github.com/kolo-vrat/pwmaker"
+
+[project.optional-dependencies]
+test = ["pytest >=7.4"]
+
+[project.scripts]
+pwmaker = "pwmaker.pwmaker:main"
