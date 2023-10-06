@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/graphics_maker/__init__.py
+src/graphics_maker/animation_data.py
+src/graphics_maker/graphics_maker.py
+src/graphics_maker/object.py
+src/graphics_maker/utils.py
+src/graphics_maker.egg-info/PKG-INFO
+src/graphics_maker.egg-info/SOURCES.txt
+src/graphics_maker.egg-info/dependency_links.txt
+src/graphics_maker.egg-info/requires.txt
+src/graphics_maker.egg-info/top_level.txt
