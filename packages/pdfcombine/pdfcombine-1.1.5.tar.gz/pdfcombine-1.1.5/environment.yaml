@@ -1,0 +1,12 @@
+channels:
+- conda-forge
+dependencies:
+- click
+- docopt
+- ghostscript
+- matplotlib
+- pip
+- python
+- pyyaml
+- setuptools
+- setuptools_scm

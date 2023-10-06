@@ -1,0 +1,2 @@
+[console_scripts]
+pdfcombine = pdfcombine.cli.pdfcombine:main
