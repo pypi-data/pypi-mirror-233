@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+atlantisfastapi/__init__.py
+atlantisfastapi.egg-info/PKG-INFO
+atlantisfastapi.egg-info/SOURCES.txt
+atlantisfastapi.egg-info/dependency_links.txt
+atlantisfastapi.egg-info/requires.txt
+atlantisfastapi.egg-info/top_level.txt
