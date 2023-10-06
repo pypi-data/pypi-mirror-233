@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Ogonek.egg-info/PKG-INFO
+Ogonek.egg-info/SOURCES.txt
+Ogonek.egg-info/dependency_links.txt
+Ogonek.egg-info/requires.txt
+Ogonek.egg-info/top_level.txt
+ogonek/Ogonek.py
+ogonek/__init__.py
