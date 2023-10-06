@@ -1,0 +1,12 @@
+formula_validation/Adduct.py,sha256=7_kmRz53n4KyVSVzJSWGpOvpPpurz2-xmPkWQq0k51g,9234
+formula_validation/Element.py,sha256=Ij-tbhQ7ktOgjka_XMXMSMQIPQ8iPGu5jDQYD7rXRMo,5079
+formula_validation/Formula.py,sha256=ve9p3qj5RWgavQe5uH9uHKt61up2Wlw-kJvNwA007A8,35140
+formula_validation/FormulaPrediction.py,sha256=DlO_GLSwyy8cExOPaOtWZp2NRk_fU2XhvfGqC2JzCwM,2754
+formula_validation/IncorrectAdduct.py,sha256=p3kRe3kGW8uN6WZ_I3Gk9ONhug1U_fRVWdX0mDoE92c,869
+formula_validation/IncorrectFormula.py,sha256=mkRmHjV9MkRO3sidUNgrirKeCWS4ZhyjKJWYYo9Widg,914
+formula_validation/NotFoundElement.py,sha256=5T2l-hDGK9waiIj6Uk4PJmSgIXj38MCzd19ahOMEjss,810
+formula_validation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+formula_validation-1.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+formula_validation-1.0.2.dist-info/METADATA,sha256=P2q9p3XU_9ux7oKJyjJUQbD4obDPEsoat78ruxOgBB8,5555
+formula_validation-1.0.2.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+formula_validation-1.0.2.dist-info/RECORD,,
