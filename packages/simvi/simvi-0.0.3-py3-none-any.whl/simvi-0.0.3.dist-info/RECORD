@@ -1,0 +1,10 @@
+simvi/__init__.py,sha256=O0bMjZoJVi4F0L1fNmqALL1kFXnv38OPL4iCMzANn-g,34
+simvi/model/__init__.py,sha256=28Me31t77Du5ynmWK4UfUDAVgPkp3WkZGdOIEDsyH4A,80
+simvi/model/simvi.py,sha256=k3voRRefTfAXjl4k55_fADhrYJYf81wuv4gBBAGyu38,23696
+simvi/module/__init__.py,sha256=O0bMjZoJVi4F0L1fNmqALL1kFXnv38OPL4iCMzANn-g,34
+simvi/module/simvi.py,sha256=IJdJw77R_hjoDB_eUXyiQbJPqleGZP-bUBz_56BayvY,17989
+simvi-0.0.3.dist-info/LICENSE,sha256=G-ili4N2UW6DVetPaDw02r1Yv_oz769Hyj0U5QC7RZw,1497
+simvi-0.0.3.dist-info/METADATA,sha256=8U-YsdFB12bMeuUpEtB6N6z6WflLZlfv2VBIFkT5LAI,2454
+simvi-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+simvi-0.0.3.dist-info/top_level.txt,sha256=9GmbRULrdcyUG86E1315lH5k2e2YJ_Y6TpoaUZnozB8,6
+simvi-0.0.3.dist-info/RECORD,,
