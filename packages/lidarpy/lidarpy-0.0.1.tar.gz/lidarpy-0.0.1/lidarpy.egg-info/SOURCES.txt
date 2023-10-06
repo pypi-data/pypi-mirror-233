@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+lidarpy.egg-info/PKG-INFO
+lidarpy.egg-info/SOURCES.txt
+lidarpy.egg-info/dependency_links.txt
+lidarpy.egg-info/requires.txt
+lidarpy.egg-info/top_level.txt
