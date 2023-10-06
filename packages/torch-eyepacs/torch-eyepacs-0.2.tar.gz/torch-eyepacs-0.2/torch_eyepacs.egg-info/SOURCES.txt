@@ -1,0 +1,13 @@
+EyeQ_process.py
+LICENSE
+README.md
+eyepacs.py
+eyeq.py
+fundus_prep.py
+setup.py
+torch_eyepacs.egg-info/PKG-INFO
+torch_eyepacs.egg-info/SOURCES.txt
+torch_eyepacs.egg-info/dependency_links.txt
+torch_eyepacs.egg-info/requires.txt
+torch_eyepacs.egg-info/top_level.txt
+torch_eyepacs.egg-info/zip-safe

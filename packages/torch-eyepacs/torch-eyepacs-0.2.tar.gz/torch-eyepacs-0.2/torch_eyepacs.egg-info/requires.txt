@@ -1,0 +1,4 @@
+torchvision
+kaggle
+pandas
+opencv-python

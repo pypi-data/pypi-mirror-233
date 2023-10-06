@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: torch-eyepacs
+Version: 0.2
+Summary: Dataset class for PyTorch and the EyePACS & EyeQ datasets, with automated extraction (download).
+Home-page: https://github.com/indirivacua/torch-eyepacs
+Author: Oscar Agustín Stanchi
+Author-email: oscar.stanchi@gmail.com
+Project-URL: Bug Tracker, https://github.com/indirivacua/torch-eyepacs/issues
+Project-URL: Documentation, https://github.com/indirivacua/torch-eyepacs
+Project-URL: Source Code, https://github.com/indirivacua/torch-eyepacs
+Keywords: EyePACS EyeQ Gradeability Diabetic Retinopathy Dataset PyTorch torch torchvision
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# torch-eyeq
