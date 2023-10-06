@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: blue-prints
+Version: 0.0.2
+Summary: Blueprints: Python AEC library.
+Author: Blueprints
+Maintainer: Blueprints Maintainers
+Maintainer-email: Enrique García Méndez <enriquegarcia@live.nl>
+License: LGPL-2.1
+Project-URL: homepage, https://github.com/BlueprintsEngineering/blueprints
+Project-URL: documentation, https://blueprints.readthedocs.io
+Project-URL: issues, https://github.com/BlueprintsEngineering/blueprints/issues
+Keywords: Civil engineering,Material properties,Structural engineering,Structural analysis,Eurocodes,Dutch building codes
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib >=3.7.2
+Requires-Dist: pandas >=2.1.0
+Requires-Dist: shapely >=2.0.1
+Requires-Dist: numpy >=1.25.2
+Provides-Extra: dev
+Requires-Dist: black >=23.7.0 ; extra == 'dev'
+Requires-Dist: mypy >=1.5.1 ; extra == 'dev'
+Requires-Dist: pylint >=2.17.5 ; extra == 'dev'
+Requires-Dist: isort >=5.12.0 ; extra == 'dev'
+Provides-Extra: docs
+Provides-Extra: minimal_requirements
+Requires-Dist: matplotlib >=3.7.2 ; extra == 'minimal_requirements'
+Requires-Dist: pandas >=2.1.0 ; extra == 'minimal_requirements'
+Requires-Dist: shapely >=2.0.1 ; extra == 'minimal_requirements'
+Requires-Dist: numpy >=1.25.2 ; extra == 'minimal_requirements'
+Provides-Extra: plot
+Requires-Dist: matplotlib >=3.7.2 ; extra == 'plot'
+Requires-Dist: plotly >=5.15.0 ; extra == 'plot'
+Provides-Extra: test
+Requires-Dist: black ==23.7.0 ; extra == 'test'
+Requires-Dist: mypy ==1.4.1 ; extra == 'test'
+Requires-Dist: pylint ==2.17.5 ; extra == 'test'
+Requires-Dist: pytest ==7.4.0 ; extra == 'test'
+Requires-Dist: pytest-describe ==2.1.0 ; extra == 'test'
+Requires-Dist: pytest-pspec ==0.0.4 ; extra == 'test'
+Requires-Dist: pytest-raises ==0.11 ; extra == 'test'
+
+# Blueprints
+
+Coming soon...
+
