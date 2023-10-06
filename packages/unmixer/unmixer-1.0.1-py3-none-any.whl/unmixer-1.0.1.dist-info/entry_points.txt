@@ -1,0 +1,3 @@
+[console_scripts]
+unmixer=unmixer.__main__:main
+
