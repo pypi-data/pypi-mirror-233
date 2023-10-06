@@ -1,0 +1,6 @@
+README.md
+setup.py
+filehunter.egg-info/PKG-INFO
+filehunter.egg-info/SOURCES.txt
+filehunter.egg-info/dependency_links.txt
+filehunter.egg-info/top_level.txt
