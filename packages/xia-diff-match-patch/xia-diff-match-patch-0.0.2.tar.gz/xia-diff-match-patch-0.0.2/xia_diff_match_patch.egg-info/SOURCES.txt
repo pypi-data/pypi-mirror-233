@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+xia_diff_match_patch/__init__.py
+xia_diff_match_patch/diff.py
+xia_diff_match_patch.egg-info/PKG-INFO
+xia_diff_match_patch.egg-info/SOURCES.txt
+xia_diff_match_patch.egg-info/dependency_links.txt
+xia_diff_match_patch.egg-info/top_level.txt
