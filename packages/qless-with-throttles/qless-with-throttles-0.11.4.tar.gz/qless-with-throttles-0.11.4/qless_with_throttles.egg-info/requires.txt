@@ -1,0 +1,9 @@
+argparse
+decorator
+hiredis
+redis
+six
+simplejson
+
+[ps]
+setproctitle
