@@ -1,0 +1,11 @@
+memoria/__init__.py,sha256=Bbf2_HmcIGc5fsVw6gFDV-jxhwCPT41RjW7dDD_9cwo,273
+memoria/abstractor.py,sha256=MYufE9TkHt9Sv1fdigUfdgvO6h4FkwQQKokpWZPxliU,1565
+memoria/engram.py,sha256=stKbcWKIuEcpA5XnDcAqpmGuPdbdz2K231aLCbqNeZA,14107
+memoria/memoria.py,sha256=vU-rzKMD8N1FIT5xDRBoYUqnNVNFBa3IFTjcZePFLDU,12472
+memoria/sparse_tensor.py,sha256=peGXY9A_thCNh7icVQLv_uRhwzze1igjis7heDJtSFw,15153
+memoria/utils.py,sha256=RcZnFLiupdRzQTyldXjoECXdjNXfcdJBdbbv7LYy6U0,598
+memoria_pytorch-1.0.0.dist-info/LICENSE,sha256=GKk-FPExkNzKV0agOt-OFXaWrxSdT9-PQ1-I2uJMVMg,1068
+memoria_pytorch-1.0.0.dist-info/METADATA,sha256=cQWWVST8VKeh2cY2c-SlYGfjqLOrtDvEBZaFQeTgHJM,7343
+memoria_pytorch-1.0.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+memoria_pytorch-1.0.0.dist-info/top_level.txt,sha256=_ChPDpsb1hACJPaLng4ATTqx2xlaNgO8fNXvmAAhhmY,8
+memoria_pytorch-1.0.0.dist-info/RECORD,,
