@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: throttle-controller
+Version: 0.2.0
+Summary: A simple throttling controller
+Home-page: https://github.com/kitsuyui/python-throttle-controller
+Author: Yui Kitsu
+Author-email: kitsuyui+github@kitsuyui.com
+License: BSD-3-Clause
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+
+# throttle-controller
+
+[![Python](https://img.shields.io/pypi/pyversions/throttle-controller.svg?style=plastic)](https://badge.fury.io/py/throttle-controller)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/throttle-controller.svg)](https://pypi.python.org/pypi/throttle-controller/)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![codecov](https://codecov.io/gh/kitsuyui/python-throttle-controller/branch/main/graph/badge.svg?token=90X7WXZDD2)](https://codecov.io/gh/kitsuyui/python-throttle-controller)
+
+## Motivation
+
+This package provides a simple throttle controller for general use-cases.
+For example, you can use this package to throttle API requests to avoid rate-limiting.
+
+## Usage
+
+```python
+from throttle_controller import SimpleThrottleController
+
+throttle = SimpleThrottleController.create(default_cooldown_time=3.0)
+throttle.wait_if_needed("http://example.com/path/to/api")
+throttle.record_use_time_as_now("http://example.com/path/to/api")
+... # requests
+throttle.wait_if_needed("http://example.com/path/to/api")  # wait 3.0 seconds
+throttle.record_use_time_as_now("http://example.com/path/to/api")
+```
+
+### `with` statement
+
+```python
+from throttle_controller import SimpleThrottleController
+throttle = SimpleThrottleController.create(default_cooldown_time=3.0)
+
+for _ in range(10):
+    with throttle.use("http://example.com/path/to/api"):
+        # wait if cooldown needed
+        requests.get("http://example.com/path/to/api")
+```
+
+# Caution
+
+Currently this package supports only to use in single thread / single process use-cases.
+
+# LICENSE
+
+The 3-Clause BSD License. See also LICENSE file.
