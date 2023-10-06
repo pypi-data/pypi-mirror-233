@@ -1,0 +1,28 @@
+# extend from https://squidfunk.github.io/mkdocs-material/
+extends: material
+
+# favicon (IGWN Computing Logo)
+favicon: 'assets/images/favicon.ico'
+
+# logo (IGWN Computing Logo)
+logo: 'assets/images/logo.png'
+
+# default features
+features:
+  - navigation.expand
+  - navigation.sections
+
+# use auto-detect ligh/dark palette with custom igwn colours
+palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: igwn
+    toggle:
+      icon: material/eye-outline
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: orange
+    accent: orange
+    toggle:
+      icon: material/eye
+      name: Switch to light mode

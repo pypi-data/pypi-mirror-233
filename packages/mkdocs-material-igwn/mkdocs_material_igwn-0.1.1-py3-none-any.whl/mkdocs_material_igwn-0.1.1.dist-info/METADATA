@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: mkdocs-material-igwn
+Version: 0.1.1
+Summary: IGWN extensions to Material for MkDocs
+Author: Duncan Macleod
+Author-email: duncan.macleod@ligo.org
+License: MIT
+Project-URL: Bug Tracker, https://git.ligo.org/computing/igwn-material/-/issues
+Project-URL: Documentation, https://computing.docs.ligo.org/igwn-material/mkdocs/
+Project-URL: Source Code, https://git.ligo.org/computing/igwn-material.git
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Documentation
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Documentation
+Description-Content-Type: text/markdown
+Requires-Dist: mkdocs-material ~=8.0
+Provides-Extra: docs
+Requires-Dist: markdown-include ; extra == 'docs'
+Requires-Dist: mkdocs ; extra == 'docs'
+
+# IGWN Material for MkDocs
+
+This project defines the IGWN Material theme for MkDocs, an extension of
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+
+To install this package:
+
+```shell
+python -m pip install mkdocs-material-igwn
+```
+
+To use the theme add the following to your `mkdocs.yml`:
+
+```yaml
+theme:
+  name: material_igwn
+```
+
+For full details, see <https://computing.docs.ligo.org/igwn-material/mkdocs/>.

@@ -1,0 +1,2 @@
+[mkdocs.themes]
+material_igwn = material_igwn
