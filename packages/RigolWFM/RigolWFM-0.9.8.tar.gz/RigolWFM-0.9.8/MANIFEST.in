@@ -1,0 +1,6 @@
+include CHANGELOG.rst
+include CITATION.cff
+include requirements.txt
+include tests/test_wfmconvert.py
+include tests/*.wfm
+exclude wfm/*
