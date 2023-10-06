@@ -1,0 +1,9 @@
+phx-filters>=3.4.0
+Django>=4.0
+
+[build-system]
+build
+twine
+
+[test-runner]
+tox
