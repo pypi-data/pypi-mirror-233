@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bodhilib
+Version: 0.1.9
+Summary: intuitive and powerful library to work with LLMs
+Author: Amir Nagri
+Author-email: amir.nagri@proton.me
+Requires-Python: >=3.8.1,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cohere (>=4.21,<5.0)
+Requires-Dist: jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: pluggy (>=1.2.0,<2.0.0)
+Requires-Dist: pydantic (>=1,<2)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: qdrant-client (>=1.5.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# bodhilib
+
+Bodhilib is a pluggable and extensible LLM framework.
+
+Currently the popular LLM framework tends to do everything by themselves, resulting in extraordinary bloat,
+Bodhilib is built on top of a plugin architecture, with a very thin core implementing the most
+critical LLM related operations. Rest of the features and variations are provided by plugins.
+
