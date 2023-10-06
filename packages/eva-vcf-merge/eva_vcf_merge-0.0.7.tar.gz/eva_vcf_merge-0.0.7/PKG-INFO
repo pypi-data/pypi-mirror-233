@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: eva_vcf_merge
+Version: 0.0.7
+Summary: EBI EVA - VCF merge library
+Home-page: https://github.com/EBIVariation/eva-vcf-merge
+License: Apache
+Keywords: ebi,eva,python,vcf
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
