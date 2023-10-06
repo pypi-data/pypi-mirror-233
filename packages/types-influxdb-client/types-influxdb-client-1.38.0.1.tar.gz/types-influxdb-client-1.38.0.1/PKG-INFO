@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: types-influxdb-client
+Version: 1.38.0.1
+Summary: Typing stubs for influxdb-client
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Project-URL: GitHub, https://github.com/python/typeshed
+Project-URL: Changes, https://github.com/typeshed-internal/stub_uploader/blob/main/data/changelogs/influxdb-client.md
+Project-URL: Issue tracker, https://github.com/python/typeshed/issues
+Project-URL: Chat, https://gitter.im/python/typing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Typing :: Stubs Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## Typing stubs for influxdb-client
+
+This is a PEP 561 type stub package for the `influxdb-client` package. It
+can be used by type-checking tools like
+[mypy](https://github.com/python/mypy/),
+[pyright](https://github.com/microsoft/pyright),
+[pytype](https://github.com/google/pytype/),
+PyCharm, etc. to check code that uses
+`influxdb-client`. The source for this package can be found at
+https://github.com/python/typeshed/tree/main/stubs/influxdb-client. All fixes for
+types and metadata should be contributed there.
+
+Note: `types-influxdb-client` has required `urllib3>=2` since v1.37.0.1. If you need to install `types-influxdb-client` into an environment that must also have `urllib3<2` installed into it, you will have to use `types-influxdb-client<1.37.0.1`.
+
+See https://github.com/python/typeshed/blob/main/README.md for more details.
+This package was generated from typeshed commit `011f24794d334ecbd6bda104a8e57399bd6bcad8` and was tested
+with mypy 1.5.1, pyright 1.1.328, and
+pytype 2023.8.31.
