@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="eea"
+    >
+
+  <adapter
+      factory=".feed.FacetedFeed"
+      provides="Products.CMFPlone.interfaces.syndication.IFeed"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      />
+
+</configure>

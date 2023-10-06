@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="eea"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="eea.facetednavigation:default"
+      source="*"
+      destination="16.0"
+      >
+
+    <genericsetup:upgradeDepends
+        title="Import all steps from eea.facetednavigation default profile"
+        import_profile="eea.facetednavigation:default"
+        />
+
+  </genericsetup:upgradeSteps>
+
+</configure>

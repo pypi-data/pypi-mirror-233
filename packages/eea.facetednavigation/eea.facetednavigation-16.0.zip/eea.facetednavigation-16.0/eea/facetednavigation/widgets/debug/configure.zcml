@@ -1,0 +1,58 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
+
+  <faceted:widget
+      factory=".widget.Widget"
+      schema=".interfaces.IDebugSchema"
+      />
+
+  <browser:page
+      name="faceted.widget.debug.visible"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".browser.Debug"
+      attribute="visible"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.widget.debug.query"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".browser.Debug"
+      attribute="query"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.widget.debug.after"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".browser.Debug"
+      attribute="after"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.widget.debug.counters"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".browser.Debug"
+      attribute="counters"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.widget.debug.criteria"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".browser.Debug"
+      attribute="criteria"
+      permission="zope2.View"
+      />
+
+  <utility
+      factory=".vocabulary.CurrentUserVocabulary"
+      name="eea.faceted.vocabularies.CurrentUser"
+      />
+
+</configure>

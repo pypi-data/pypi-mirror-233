@@ -1,0 +1,155 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="eea"
+    >
+
+  <browser:page
+      name="facetednavigation_view"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/view.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_display_criteria_checker"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.DisplayCriteriaCheckerView"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="facetednavigation_simple_view"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/simple_view.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_widgets"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/widgets.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_widgets_macros"
+      for="..interfaces.IFacetedNavigable"
+      template="template/widgets.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_macros"
+      for="..interfaces.IFacetedNavigable"
+      template="template/macros.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="configure_faceted.html"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedConfigureView"
+      template="template/configure.pt"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_configure"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedFormHandler"
+      allowed_interface=".interfaces.IFacetedFormHandler"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_update_criteria"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedCriteriaHandler"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_update_criterion"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedCriterionHandler"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_update_position"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedPositionHandler"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_query"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.query.FacetedQueryHandler"
+      template="template/query.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_counter"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.counter.FacetedQueryCounter"
+      template="template/counter.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted_exportimport"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.exportimport.FacetedExportImport"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted_schema"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.schema.FacetedSchemaGetter"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="default_widgets.xml"
+      for="..interfaces.IPossibleFacetedNavigable"
+      template="template/default.xml"
+      permission="eea.faceted.configure"
+      />
+
+  <browser:page
+      name="faceted.widget.error"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.error.FacetedError"
+      template="template/error.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.catalog.types.json"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.catalog.FacetedCatalog"
+      attribute="json_types"
+      permission="zope2.View"
+      />
+
+  <!-- BBB -->
+  <browser:resourceDirectory
+      name="facetednavigation"
+      directory="./static"
+      />
+
+  <plone:static
+      directory="static"
+      name="facetednavigation"
+      type="plone"
+      />
+
+</configure>

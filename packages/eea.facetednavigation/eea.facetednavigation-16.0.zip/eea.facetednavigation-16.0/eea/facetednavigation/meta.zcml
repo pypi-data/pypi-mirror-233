@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:meta="http://namespaces.zope.org/meta"
+    >
+
+  <meta:directives namespace="http://namespaces.zope.org/faceted">
+    <meta:directive
+        name="widget"
+        handler=".widgets.widgets.WidgetDirective"
+        schema=".widgets.interfaces.IWidgetDirective"
+        />
+  </meta:directives>
+
+  <meta:directives namespace="http://namespaces.zope.org/faceted">
+    <meta:directive
+        name="view"
+        handler=".views.meta.ViewDirective"
+        schema="zope.browserpage.metadirectives.IPageDirective"
+        />
+  </meta:directives>
+
+</configure>

@@ -1,0 +1,28 @@
+<configure
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
+
+  <faceted:widget
+      factory=".widget.Widget"
+      schema=".interfaces.IPathSchema"
+      />
+
+  <browser:page
+      name="faceted.path.tree.json"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".tree.FacetedTree"
+      attribute="json_tree"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted.path.breadcrumbs.json"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".tree.FacetedTree"
+      attribute="json_breadcrumbs"
+      permission="zope2.View"
+      />
+
+</configure>
