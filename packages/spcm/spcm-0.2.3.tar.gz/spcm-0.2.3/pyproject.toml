@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spcm"
+version = "0.2.3"
+authors = [
+  { author='Spectrum Instrumentation GmbH', email='info@spec.de' },
+]
+description = "Package for Spectrum Instrumentation GmbH cards"
+readme = "README.rst"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+]
+
+[project.urls]
+"Homepage" = "https://spectrum-instrumentation.com/"
+"Bug Tracker" = "https://spectrum-instrumentation.com/"
