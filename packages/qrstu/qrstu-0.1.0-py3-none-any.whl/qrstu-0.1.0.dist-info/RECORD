@@ -1,0 +1,10 @@
+qrstu/__init__.py,sha256=x6Cv0nC8ck6JZs5MjmBW97dxxE9MjOeSbuPHgOa0g5Y,542
+qrstu/__main__.py,sha256=SNtK93LYb0bkckT-0EWz8oXiSJG1F-r8raJSYGc2JIA,925
+qrstu/commandline.py,sha256=sBvkdM3iOf0g2cPfGiG1hoqXlyCVnA5xZdgXEAlsCKE,3466
+qrstu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qrstu/reduce.py,sha256=wsaDMdyzIKSZ4PX1Xw9zpWXGK9s-4pQeEQoaAVGbTf4,11615
+qrstu-0.1.0.dist-info/LICENSE,sha256=LaZU96gqeh5MfXqjTs-AL_uWhoaQS8RaLexLx9pfJKc,1075
+qrstu-0.1.0.dist-info/METADATA,sha256=DltNm0H502K2FdkMr9Jmdf_v5PNfI8C6VEUxIYgw6ik,5421
+qrstu-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+qrstu-0.1.0.dist-info/top_level.txt,sha256=AlpzXU8lRM1_atXPZdPOz6YUMDJ8qHQ6BBdixosurRU,6
+qrstu-0.1.0.dist-info/RECORD,,
