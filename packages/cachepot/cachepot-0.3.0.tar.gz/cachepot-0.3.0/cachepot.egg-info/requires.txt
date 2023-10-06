@@ -1,0 +1,4 @@
+typing-extensions
+
+[redis]
+redis>=3.0
