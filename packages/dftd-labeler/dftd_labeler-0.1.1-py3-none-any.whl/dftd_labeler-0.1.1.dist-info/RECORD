@@ -1,0 +1,9 @@
+dftd_labeler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dftd_labeler/labeler.py,sha256=GQYZ7FYzsdlNdz7e9gqHmx9w4Q5X_kg_0Ldt297TFT0,5717
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dftd_labeler.py,sha256=y_8DLySgtwGZQZS4hacRIbrSxYo-sFdjZO5BRlzMIKs,1405
+dftd_labeler-0.1.1.dist-info/METADATA,sha256=3pDybDc9Wp0sTUVPq93mO0xZL0r7jsAfMORyHMVRT0k,2313
+dftd_labeler-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dftd_labeler-0.1.1.dist-info/entry_points.txt,sha256=tHYYCZWTq3SzE4jFoOROF1DOXoSt-TBnqjjN9I35V8E,59
+dftd_labeler-0.1.1.dist-info/top_level.txt,sha256=w2KLlvu4wplEoR2Gu64Z0EZAzn4z-SQWlZB33DIju1Y,19
+dftd_labeler-0.1.1.dist-info/RECORD,,
