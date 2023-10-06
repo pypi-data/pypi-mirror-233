@@ -1,0 +1,10 @@
+graft ./
+global-exclude *.pyc .gitignore
+prune ./.git
+prune ./.github
+prune ./.pylintrc
+prune ./.idea
+prune ./build
+prune ./distinclude
+include versioneer.py
+include adrubix_jmp/_version.py
