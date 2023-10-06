@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: kedifa
+Version: 0.0.7
+Summary: KEy DIstribution FAcility
+Home-page: https://lab.nexedi.com/nexedi/kedifa
+Author: Lukasz Nowak
+Author-email: luke@nexedi.com
+License: GPLv3+ with wide exception for FOSS
+Keywords: key distribution ssl
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Provides-Extra: test
+License-File: COPYING
+
+..  Note to the editor: beware of implicit inline
+    targets aliasing, keep global title different from all commands
+
+=============================================================================
+KeDiFa - KEy DIstribution FAcility
+=============================================================================
+
+Overview
+========
+
+A system to upload SSL keys for some nodes to securely download them.
+
+0.0.7 (2023-10-05)
+==================
+
+ * select only valid CRLs
+
+0.0.6 (2021-10-13)
+==================
+
+ * switch to python3/python2 compatibility
+ * stabilised tests
+
+0.0.5 (2021-09-29)
+==================
+
+ * fixing release
+
+0.0.4 (2021-09-29)
+==================
+
+ * require minimal zc.lockfile version
+
+0.0.3 (2021-09-29)
+==================
+
+ * support multiple CRLs
+
+0.0.2 (2020-01-27)
+==================
+
+ * add missing CHANGES.rst
+
+0.0.1 (2020-01-27)
+==================
+
+ * first published version
+
+
+

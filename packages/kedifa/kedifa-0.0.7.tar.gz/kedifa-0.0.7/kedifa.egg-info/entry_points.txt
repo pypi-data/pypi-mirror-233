@@ -1,0 +1,5 @@
+[console_scripts]
+kedifa = kedifa.cli:http
+kedifa-getter = kedifa.cli:getter
+kedifa-updater = kedifa.cli:updater
+
