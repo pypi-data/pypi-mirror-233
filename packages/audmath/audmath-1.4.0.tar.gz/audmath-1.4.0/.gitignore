@@ -1,0 +1,7 @@
+audmath.egg-info/
+build/
+__pycache__/
+.coverage
+coverage.xml
+.eggs/
+docs/api/
