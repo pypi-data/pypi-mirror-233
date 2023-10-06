@@ -1,0 +1,3 @@
+bkh-pytorch-utils==0.9.0
+torchextractor==0.3.0
+OmegaConf==2.0.0
