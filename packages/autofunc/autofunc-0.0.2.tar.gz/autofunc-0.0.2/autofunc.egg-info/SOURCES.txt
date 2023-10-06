@@ -1,0 +1,13 @@
+CHANGES
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.py
+autofunc/__init__.py
+autofunc/autofunc.py
+autofunc.egg-info/PKG-INFO
+autofunc.egg-info/SOURCES.txt
+autofunc.egg-info/dependency_links.txt
+autofunc.egg-info/requires.txt
+autofunc.egg-info/top_level.txt
