@@ -1,0 +1,2 @@
+[console_scripts]
+y2mate = y2mate_api.console:main
