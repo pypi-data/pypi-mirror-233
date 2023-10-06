@@ -1,0 +1,4 @@
+
+# Export data
+export probs_original_data.nt.gz "application/n-triples" fact-domain IDB
+# export probs_original_data.ttl "text/turtle" fact-domain IDB

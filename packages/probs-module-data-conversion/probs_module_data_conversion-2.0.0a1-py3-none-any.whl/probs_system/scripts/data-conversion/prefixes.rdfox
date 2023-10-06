@@ -1,0 +1,11 @@
+
+# Our prefixes
+# RDFox bug?
+# BASE                 <http://w3id.org/probs-lab/ontology#>
+PREFIX :             <http://w3id.org/probs-lab/ontology#>
+PREFIX ufrd:         <http://w3id.org/probs-lab/ontology/raw_data/>
+PREFIX ufu:          <http://w3id.org/probs-lab/ontology/utility/>
+PREFIX ufs:          <http://w3id.org/probs-lab/ontology/stats/>
+PREFIX prov:         <http://www.w3.org/ns/prov#>
+PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
+PREFIX qudt:         <http://qudt.org/schema/qudt/>

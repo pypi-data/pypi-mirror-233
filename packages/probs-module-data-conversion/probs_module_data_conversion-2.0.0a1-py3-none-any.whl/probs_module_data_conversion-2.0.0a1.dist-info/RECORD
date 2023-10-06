@@ -1,0 +1,14 @@
+probs_system/scripts/data-conversion/explicate.rdfox,sha256=SubIJ4eoDVlrjPpFcyW_keWrW41Yvce8pOTF-Y7gRy0,69
+probs_system/scripts/data-conversion/input.rdfox,sha256=FLSuNg9KkgS50kdxooI-iQHYEFhYzXmb_QFLDaAY3ts,166
+probs_system/scripts/data-conversion/load_data.rdfox,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+probs_system/scripts/data-conversion/load_rules.rdfox,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+probs_system/scripts/data-conversion/master.rdfox,sha256=TYIVlmJStPkwKm7ZhfCScu-jUnIlTBtbvoi9zqQNZuw,464
+probs_system/scripts/data-conversion/output.rdfox,sha256=fKPkGgK9Tx93iCrZXIuLdaSMJV-Jx7W2kHWadqk7mS8,44
+probs_system/scripts/data-conversion/prefixes.rdfox,sha256=cU06Q4WRBlmxDq9K1JopACYQCl6JUK6AIPq4Dg-YKMY,510
+probs_system/scripts/data-conversion/save_data.rdfox,sha256=MsWfD4IBg-qgL-hNsrkmEKeGH7viSydrN-slgxSap6g,151
+probs_system/scripts/data-conversion/setup-RDFox.rdfox,sha256=G4xtzMojYnn8UlB4cGI67rIiIOPzcs6qMlybwWW7uVE,197
+probs_module_data_conversion-2.0.0a1.dist-info/LICENSE,sha256=5tDtE_812y5-WlmZKvCyOqApL8dx2IcYfoKddluqZTQ,1066
+probs_module_data_conversion-2.0.0a1.dist-info/METADATA,sha256=swRBVNDmGxXM3arO6g6htEwemcOgahoYQ-nEDVAF_TE,237
+probs_module_data_conversion-2.0.0a1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+probs_module_data_conversion-2.0.0a1.dist-info/top_level.txt,sha256=YIJwWuEpDMq79NnDQGz-duRdQSvr9s23rqYPBMXz5wU,13
+probs_module_data_conversion-2.0.0a1.dist-info/RECORD,,

@@ -1,0 +1,10 @@
+
+# Create datastore
+#dstore create default type par-complex-nn $(2)
+dstore create default type parallel-nn $(2)
+
+# Printing on stdout by default
+set output out
+
+# Load prefixes
+exec prefixes.rdfox
