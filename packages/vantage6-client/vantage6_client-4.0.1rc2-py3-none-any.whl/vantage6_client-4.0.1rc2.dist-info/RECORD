@@ -1,0 +1,11 @@
+tests/test_client.py,sha256=05sSTcta1XdLyYVHbFXxVuCl-6MW_E0AO3Dk5VePGgQ,3468
+vantage6/client/__build__,sha256=1HNeOiZeFu7gP1lxi5tdAwGcB9i2xR-Q2jpmbuwTqzU,1
+vantage6/client/__init__.py,sha256=BD7nUPx6rQpHksm0hEThLIowd6Y8MAdiVGNflYDLFUc,55489
+vantage6/client/_version.py,sha256=Pp6cxi_DOk_s5BGHNlX2xy6pnYoQkncPRdIomJnUwRk,688
+vantage6/client/exceptions.py,sha256=pGCQPxNGgMsp72yiJ4q1BZsHLfnjSwKjc0f--nCWfA0,146
+vantage6/client/filter.py,sha256=woaHM6CJqrG9I4Mo6ZnDiSVGOvAiqJLCPOBmcajDVC4,8006
+vantage6/client/utils.py,sha256=KMAPSuLYINdYNhpP1vRGFjarII-TxvuYmjQ5i2qUfxs,451
+vantage6_client-4.0.1rc2.dist-info/METADATA,sha256=F2b7RvLaIh0rzIhuKlvEgv6Y58BiBhZzvptuDLMELR4,5552
+vantage6_client-4.0.1rc2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vantage6_client-4.0.1rc2.dist-info/top_level.txt,sha256=2wuu77IKLbZNxdsVk3tOTCGhB_43-1qGrpI05snTd0I,15
+vantage6_client-4.0.1rc2.dist-info/RECORD,,
