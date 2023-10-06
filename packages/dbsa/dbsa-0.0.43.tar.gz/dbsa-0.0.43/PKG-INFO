@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dbsa
+Version: 0.0.43
+Summary: Database schema definitions
+Home-page: https://github.com/bfaludi/dbsa
+Author: Bence Faludi
+Author-email: bence@subninja.org
+License: MIT
+License-File: LICENSE
