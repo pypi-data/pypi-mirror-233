@@ -1,0 +1,22 @@
+prefect>=2.0.0
+slack-sdk>=3.15.1
+aiohttp>=3.8.1
+
+[dev]
+pytest
+black
+flake8
+mypy
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+isort
+pre-commit
+pytest-asyncio
+mkdocs-gen-files
+interrogate
+coverage
+pillow
+
+[dev:python_version < "3.8"]
+mock
