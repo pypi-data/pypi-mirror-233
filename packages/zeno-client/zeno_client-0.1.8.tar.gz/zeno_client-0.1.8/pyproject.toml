@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "zeno-client"
+version = "0.1.8"
+description = "Python client for creating new Zeno projects and uploading data."
+authors = ["Zeno Team <hello@zenoml.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "zeno_client" }]
+
+[tool.poetry.dependencies]
+pandas = ">=1.4.3"
+pyarrow = ">=6.0.0"
+python = ">=3.8"
+pydantic = ">=1.0"
+requests = ">=2.20.0"
+
+[tool.poetry.dev-dependencies]
+black = "^23.3.0"
+pyright = "^1.1.320"
+pytest = "^7.3.2"
+ruff = "^0.0.282"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = ["E", "F", "I", "PD", "N", "D"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
