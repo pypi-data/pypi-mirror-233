@@ -1,0 +1,2 @@
+[pyrokinetics.equilibrium]
+_test = pyrokinetics_plugin_examples.equilibrium:EquilibriumReader
