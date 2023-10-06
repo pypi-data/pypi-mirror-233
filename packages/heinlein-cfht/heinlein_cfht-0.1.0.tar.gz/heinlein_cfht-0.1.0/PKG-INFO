@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: heinlein-cfht
+Version: 0.1.0
+Summary: 
+Author: Patrick Wells
+Author-email: pwells@ucdavis.edu
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: heinlein (>=0.7.0,<0.8.0)
+Description-Content-Type: text/markdown
+
+
