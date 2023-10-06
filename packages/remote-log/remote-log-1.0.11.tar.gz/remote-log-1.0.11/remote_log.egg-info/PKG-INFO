@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: remote-log
+Version: 1.0.11
+Summary: A simple function to send logging data to a remote server.
+Author: Shubham Gupta
+Author-email: shubhastro2@gmail.com
+Description-Content-Type: text/markdown
+
+```python
+import remote_log
+remote_log("https://myserver.com/log/", "log this my dear logging server")
+```
+
+It sends a POST request to the server with the data you passed. If the system is offline, it stored the logs offline and sends all the data on the next call of `remote_log`.
+
+This way you are always assured you will receive the data to be logged.
+
+It also sends basic system information. Any uniquely identifiable information is not sent as plain text. It is hashed on the system using SHA256 before being sent. This way the logging server can still uniquely identify a log request but have no traceability back to the system that sent it thus allowing you to take a PRIVACY FIRST approach to logging.
+
+The function `remote_log` is non blocking and doesn't return anything. It's only purpose is to send logging data.
