@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="686940ea-63df-4bc2-b5b3-0b782729efe5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2W5Qm4XlNyc7V4fGVteXO1NZD2b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/bmarts/projects/django-joinfield",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="686940ea-63df-4bc2-b5b3-0b782729efe5" name="Changes" comment="" />
+      <created>1696020116793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696020116793</updated>
+      <workItem from="1696020117842" duration="6669000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add github workflows, remove travis.yml">
+      <option name="closed" value="true" />
+      <created>1696440508384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696440508384</updated>
+    </task>
+    <task id="LOCAL-00002" summary="simplify test runner">
+      <option name="closed" value="true" />
+      <created>1696441446356</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696441446356</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update tests to the current implementation of assertQuerysetEqual">
+      <option name="closed" value="true" />
+      <created>1696441916255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696441916255</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update database connections for mysql and postgres test settings">
+      <option name="closed" value="true" />
+      <created>1696442212346</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696442212346</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Drop support for Django less than version 2.">
+      <option name="closed" value="true" />
+      <created>1696476846633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696476846633</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add License to the Readme">
+      <option name="closed" value="true" />
+      <created>1696507695857</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696507695857</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add LICENSE file">
+      <option name="closed" value="true" />
+      <created>1696507731864</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696507731864</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Replace setup.py with pyproject.toml">
+      <option name="closed" value="true" />
+      <created>1696508112013</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696508112013</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add github workflows, remove travis.yml" />
+    <MESSAGE value="simplify test runner" />
+    <MESSAGE value="Update tests to the current implementation of assertQuerysetEqual" />
+    <MESSAGE value="update database connections for mysql and postgres test settings" />
+    <MESSAGE value="Drop support for Django less than version 2." />
+    <MESSAGE value="Add License to the Readme" />
+    <MESSAGE value="Add LICENSE file" />
+    <MESSAGE value="Replace setup.py with pyproject.toml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace setup.py with pyproject.toml" />
+  </component>
+</project>
