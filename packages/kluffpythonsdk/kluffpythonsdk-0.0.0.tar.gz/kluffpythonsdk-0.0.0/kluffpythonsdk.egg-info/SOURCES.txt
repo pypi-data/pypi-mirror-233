@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+kluffpythonsdk.egg-info/PKG-INFO
+kluffpythonsdk.egg-info/SOURCES.txt
+kluffpythonsdk.egg-info/dependency_links.txt
+kluffpythonsdk.egg-info/top_level.txt
