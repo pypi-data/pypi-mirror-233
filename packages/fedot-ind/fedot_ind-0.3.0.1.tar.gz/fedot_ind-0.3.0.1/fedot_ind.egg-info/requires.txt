@@ -1,0 +1,31 @@
+fedot==0.7.2
+thegolem==0.3.2
+giotto_tda==0.6.0
+hyperopt==0.2.7
+MKLpy==0.6
+numpy!=1.24.0,>=1.16.0
+Pillow==10.0.0
+PyMonad==2.4.0
+PyWavelets==1.4.1
+PyYAML==6.0.1
+scipy~=1.7.3
+sktime==0.16.1
+tensorly==0.8.1
+torch==2.0.0
+torchmetrics==0.11.4
+torchvision==0.15.1
+tensorboard>=2.12.0
+statsforecast==1.5.0
+chardet
+tqdm
+
+[:python_version == "3.8"]
+ripser==0.5.4
+
+[:python_version == "3.9"]
+ripser==0.6.4
+
+[:python_version >= "3.8"]
+matplotlib>=3.3.1
+pandas>=1.3.0
+scikit_learn>=1.0.0
