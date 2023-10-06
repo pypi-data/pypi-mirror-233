@@ -1,0 +1,13 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+py_xid.egg-info/PKG-INFO
+py_xid.egg-info/SOURCES.txt
+py_xid.egg-info/dependency_links.txt
+py_xid.egg-info/not-zip-safe
+py_xid.egg-info/top_level.txt
+tests/test_xid.py
+xid/__init__.py
+xid/xid.py
