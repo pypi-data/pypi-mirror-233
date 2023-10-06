@@ -1,0 +1,14 @@
+prefect_census/__init__.py,sha256=Yew5XOlT5fy3elVggQUNqrJRcwxDaBBGKX6OfZGNwnI,318
+prefect_census/_version.py,sha256=jCQeJlwPOuts9kwVO26Jbvh3ej42E9S-lAkCHhjBAY4,497
+prefect_census/client.py,sha256=NbXWolstDrf5nODV_n0IEaLdLy6q9AsLIe1myYv8TH0,4042
+prefect_census/credentials.py,sha256=JemRsiiek8-aOroQeophwt6DAtSDLkpxDUlnb7RWfS0,2569
+prefect_census/flows.py,sha256=ZtYQNFM-yBXjBLlHlkDxnK4YT3uB7W7iplBCw8bH0KE,660
+prefect_census/runs.py,sha256=Suql3kWtt-FP4_I9VcbTkPjR2bEr56KwcNN3C4Btde4,6789
+prefect_census/syncs.py,sha256=4jlo8xZKIAx3xv9tzlN5WcM5O2RUHQyj3m84x882yfg,13729
+prefect_census/utils.py,sha256=i21pf7g-FfI3wUSsL0KP1MnjEJvthIqDcu6Z7SWRwbM,669
+prefect_census-0.2.0.dist-info/LICENSE,sha256=tLKlrmr0sOnPybm5TUmA2SBT-cYajF3kILQME85pqpQ,11356
+prefect_census-0.2.0.dist-info/METADATA,sha256=JN03dwiryMWTgV_ZtBI86EJIaZw-VZmm3d1-EyepEsw,7961
+prefect_census-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+prefect_census-0.2.0.dist-info/entry_points.txt,sha256=BHGR15k3LuMxG87goo6BOU3WXXVsAyhGK_XpIW_L3bM,54
+prefect_census-0.2.0.dist-info/top_level.txt,sha256=lSaUuiRusutVIwrHf-rBq2wsssk_t4YFEu3niV4WdQg,15
+prefect_census-0.2.0.dist-info/RECORD,,
