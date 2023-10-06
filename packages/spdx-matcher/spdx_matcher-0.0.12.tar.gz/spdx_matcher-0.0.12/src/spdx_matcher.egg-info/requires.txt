@@ -1,0 +1,7 @@
+
+[dev]
+check-manifest
+black
+
+[test]
+coverage
