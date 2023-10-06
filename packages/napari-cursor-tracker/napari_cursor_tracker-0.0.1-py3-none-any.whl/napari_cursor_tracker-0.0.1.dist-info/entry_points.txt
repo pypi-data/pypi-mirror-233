@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-cursor-tracker = napari_cursor_tracker:napari.yaml

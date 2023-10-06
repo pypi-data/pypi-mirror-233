@@ -1,0 +1,13 @@
+napari_cursor_tracker/__init__.py,sha256=rbG1-VXcExjaAWtSms03wsRpXILT7orZe_xJiDzUSv8,162
+napari_cursor_tracker/_sample_data.py,sha256=cIsNaUlH7jVNCLkwcD-pg2GPRiKPvpLVJyHwarvUQY4,948
+napari_cursor_tracker/_widget.py,sha256=OM5eq40T4L6by5IV0kTQKibmtHVxSmg_TjV_RPbo2Vg,9332
+napari_cursor_tracker/napari.yaml,sha256=Ha-D-3MMUE6R__KmscfWK8rZz4P9jQYz9y_fWSE2ReY,612
+napari_cursor_tracker/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_cursor_tracker/_tests/test_sample_data.py,sha256=OrKYeL4e0eAmZ7qdwSEd1xQCU-oxsbTLfSatfBLHW98,654
+napari_cursor_tracker/_tests/test_widget.py,sha256=L31Dp7YxA3qkcII-niXyDdHO6YBMdSgzfXOkKw8NzMI,3675
+napari_cursor_tracker-0.0.1.dist-info/LICENSE,sha256=_1zKIADNMVQQIIuiCVKryxPyWonAYo6gF8BEBz9911I,1490
+napari_cursor_tracker-0.0.1.dist-info/METADATA,sha256=LwdkUhCZ09-xvVE-1PtokeksDBKpQuBd83hPD8f-neE,6600
+napari_cursor_tracker-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+napari_cursor_tracker-0.0.1.dist-info/entry_points.txt,sha256=-DyTYo-v_2e7sRl-MIpVPl0pjKFNGEviGeJeJ5ap5vE,76
+napari_cursor_tracker-0.0.1.dist-info/top_level.txt,sha256=EdABg6oIKI6XDjluB-0pkyqYJ5jmW1pZxiWzhOlAq4o,22
+napari_cursor_tracker-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+name: napari-cursor-tracker
+display_name: Cursor tracker
+contributions:
+  commands:
+    - id: napari-cursor-tracker.make_sample_data
+      python_name: napari_cursor_tracker._sample_data:make_sample_data
+      title: Load sample data from Cursor tracker
+    - id: napari-cursor-tracker.make_qwidget
+      python_name: napari_cursor_tracker._widget:CursorTracker
+      title: CursorTracker
+  sample_data:
+    - command: napari-cursor-tracker.make_sample_data
+      display_name: Cursor tracker
+      key: unique_id.1
+  widgets:
+    - command: napari-cursor-tracker.make_qwidget
+      display_name: Cursor tracker
