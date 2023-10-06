@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwebviz_subsurface_components=self.webpackChunkwebviz_subsurface_components||[]).push([[997],{36700:(e,n,o)=>{o.r(n),o.d(n,{ViewFooter:()=>r});var s=o(21550),t=o.n(s),c=o(59733),a=o.n(c);const i=(0,o(3457).Z)("div")((({theme:e})=>({position:"absolute",bottom:e.spacing(0),right:e.spacing(2),zIndex:999999,float:"right",backgroundColor:"#ffffffcc",color:"#000000ff",paddingLeft:"3px",display:"tableRow"}))),r=({children:e})=>t().createElement(i,null,e);r.propTypes={children:a().any}}}]);
+//# sourceMappingURL=async-webviz-view-footer.js.map
