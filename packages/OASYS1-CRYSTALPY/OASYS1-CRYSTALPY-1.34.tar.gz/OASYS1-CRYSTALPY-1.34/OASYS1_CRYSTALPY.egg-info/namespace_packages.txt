@@ -1,0 +1,3 @@
+orangecontrib
+orangecontrib.crystalpy
+orangecontrib.crystalpy.widgets

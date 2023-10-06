@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: OASYS1-CRYSTALPY
+Version: 1.34
+Summary: Oasys interface for crystalpy
+Home-page: https://github.com/oasys-kit/OASYS-CRYSTALPY
+Author: Edoardo Cappelli, Mark Glass and Manuel Sanchez del Rio
+Author-email: srio@esrf.eu
+License: MIT
+Download-URL: https://github.com/oasys-kit/OASYS-CRYSTALPY
+Keywords: xray,dynamic diffraction,polarization,Oasys,Orange
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+License-File: LICENSE
+
+oasys-crystalpy
+
+

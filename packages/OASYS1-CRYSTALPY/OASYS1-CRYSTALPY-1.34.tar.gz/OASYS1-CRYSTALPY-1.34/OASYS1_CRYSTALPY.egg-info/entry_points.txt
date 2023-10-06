@@ -1,0 +1,6 @@
+[oasys.addons]
+CrystalPy = orangecontrib.crystalpy
+
+[oasys.widgets]
+CrystalPy = orangecontrib.crystalpy.widgets.elements
+
