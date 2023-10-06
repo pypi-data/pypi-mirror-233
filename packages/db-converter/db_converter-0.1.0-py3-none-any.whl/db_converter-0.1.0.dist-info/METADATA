@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: db-converter
+Version: 0.1.0
+Home-page: https://github.com/mertcelikan/db-converter
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pymongo
+Requires-Dist: PyMySQL
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: six
+Requires-Dist: dnspython
+
