@@ -1,0 +1,5 @@
+graft src/m3_data_import
+include README.rst
+include version.conf
+include requirements/*
+global-exclude *.pyc

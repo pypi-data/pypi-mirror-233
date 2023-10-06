@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: m3-data-import
+Version: 1.0.4
+Summary: Пакет импорта данных - UI
+Author: БАРС Груп
+Author-email: dev@bars-open.ru
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development
+Requires-Dist: data-import<2,>=1.0.0
+Requires-Dist: m3-core<2.3,>=2.2.13
+Requires-Dist: m3-ui<2.3,>=2.2.31
+Requires-Dist: m3-objectpack<2.3,>=2.2.13
+Requires-Dist: Django<3,>=1.8.18
