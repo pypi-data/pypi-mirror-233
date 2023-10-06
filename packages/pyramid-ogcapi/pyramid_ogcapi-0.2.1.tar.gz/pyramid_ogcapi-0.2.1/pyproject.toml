@@ -1,0 +1,74 @@
+[tool.black]
+line-length = 110
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 110
+known_first_party = "pyramid_ogcapi"
+
+[tool.mypy]
+python_version = 3.9
+warn_redundant_casts = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+strict = true
+
+[tool.poetry]
+name = "pyramid-ogcapi"
+version = "0.2.1"
+description = "Build pyramid routes, provide template for user html pages"
+readme = "README.md"
+authors = ["Stéphane Brunner <stephane.brunner@camptocamp.com>"]
+repository = "https://github.com/camptocamp/pyramid-ogcapi"
+license = "BSD-2-Clause"
+keywords = ["ogcapi", "openapi", "pyramid"]
+packages = [{ include = "pyramid_ogcapi" }]
+include = ["pyramid_ogcapi/py.typed"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+pyramid-openapi3 = "0.16.0"
+c2cwsgiutils = { version = "6.0.4", optional = true, extras = ["standard", "oauth2", "test_images"] }
+pyramid-mako = "1.1.0"
+openapi-core = "0.16.6"
+
+[tool.poetry.group.dev.dependencies]
+prospector = { extras = ["with_mypy", "with_bandit", "with_pyroma"], version = "1.10.2" }
+prospector-profile-duplicated = "0.3.0"
+pytest = "7.4.2"
+pytest-cov = "4.1.0"
+WebTest = "3.0.0"
+
+[tool.poetry.extras]
+application = ["c2cwsgiutils"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning", "poetry-plugin-tweak-dependencies-version"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+pattern = "^(?P<base>\\d+(\\.\\d+)*)"
+format-jinja = """
+{%- if env.get("VERSION_TYPE") == "version_branch" -%}
+{{serialize_pep440(bump_version(base, 1 if env.get("IS_MASTER") == "TRUE" else 2), dev=distance)}}
+{%- elif distance == 0 -%}
+{{serialize_pep440(base)}}
+{%- else -%}
+{{serialize_pep440(bump_version(base), dev=distance)}}
+{%- endif -%}
+"""
+
+[tool.poetry-plugin-tweak-dependencies-version]
+default = "present"
