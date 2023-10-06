@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: snuh
+Version: 0.1.0
+Summary: Python Libray for SNUH
+Home-page: https://github.com/vitaldb
+Author: Hyung-Chul Lee
+Author-email: vital@snu.ac.kr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+Python Libray for SNUH
