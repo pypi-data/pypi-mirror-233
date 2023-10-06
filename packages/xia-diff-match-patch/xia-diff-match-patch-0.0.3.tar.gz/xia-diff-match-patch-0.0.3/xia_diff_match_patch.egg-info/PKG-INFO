@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: xia-diff-match-patch
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: https://develop.x-i-a.com/docs/xia-diff-match-patch/0.0.3/index.html
+Author: Neil Fraser
+Author-email: fraser@google.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+Introduction
+=============================
+
+Current version is a wrap of Google's project: https://github.com/google/diff-match-patch
+
+
+* Installation:
+
+.. code-block:: bash
+
+   pip install xia-diff-match-patch
+
+
+* Usage
+
+`apply_patches` function takes a series patched files as arguments, sorted by its priorities.
+
+.. code-block:: python
+
+    from xia_diff_match_patch import apply_patches
+
+    base = "Line 1\n"
+    a1 = "Line 1\nLine2\n"
+    a2 = "Line 1\n\nCode 1\nCode 2\nCode 3\n"
+    a3 = "Line 3\n"
+
+    print(apply_patches(base, a1, a2, a3))
+
+
+
+
