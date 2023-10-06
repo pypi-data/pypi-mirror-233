@@ -1,0 +1,4 @@
+include VERSION
+include README.md
+include CHANGES
+recursive-include autofunc *.py
