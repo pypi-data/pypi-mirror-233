@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: NRandom
+Version: 2.0
+Summary: This module also help in figure out  the most similar text in the given dataset with user given input.....
+Author: Somnath Dash
+License: ./LICENSE.txt
+Keywords: Random,Not Random
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: sklearn
+Requires: numpy
+License-File: LICENSE.txt
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+
