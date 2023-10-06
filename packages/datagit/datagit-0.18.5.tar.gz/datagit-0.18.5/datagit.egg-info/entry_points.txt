@@ -1,0 +1,2 @@
+[console_scripts]
+datagit = datagit.cli:cli_entrypoint
