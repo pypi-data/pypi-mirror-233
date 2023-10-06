@@ -1,0 +1,14 @@
+openai
+tenacity
+python-dateutil
+python-dotenv
+rich
+tenacity
+requests
+
+[dev]
+black
+pytest
+build
+twine
+nox
