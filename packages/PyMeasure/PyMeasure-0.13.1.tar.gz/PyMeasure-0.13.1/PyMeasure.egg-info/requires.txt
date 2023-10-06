@@ -1,0 +1,21 @@
+numpy>=1.6.1
+pandas>=0.14
+pint
+pyvisa>=1.8
+pyserial>=2.7
+pyqtgraph>=0.12
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[python-vxi11]
+python-vxi11>=0.9
+
+[tcp]
+pyzmq>=16.0.2
+cloudpickle>=0.3.1
+
+[tests]
+pytest>=2.9.1
+pytest-qt>=2.4.0
+pyvisa-sim>=0.4.0
