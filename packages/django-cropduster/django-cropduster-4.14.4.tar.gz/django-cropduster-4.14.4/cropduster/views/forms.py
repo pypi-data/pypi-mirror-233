@@ -1,0 +1,236 @@
+from __future__ import division
+
+import os
+import hashlib
+
+import PIL.Image
+
+from django import forms
+from django.core.exceptions import ObjectDoesNotExist
+from django.core.files.storage import default_storage
+from django.conf import settings
+from django.forms.forms import NON_FIELD_ERRORS
+from django.forms.models import BaseModelFormSet
+from django.forms.utils import ErrorDict as _ErrorDict
+from django.utils.encoding import force_str
+from django.utils.html import conditional_escape
+from django.utils.safestring import mark_safe
+
+from cropduster.models import Thumb
+from cropduster.utils import (json, get_upload_foldername, get_min_size,
+    get_image_extension)
+
+
+class ErrorDict(_ErrorDict):
+
+    def as_ul(self):
+        if not self: return ''
+        error_list = []
+        for k, v in self.items():
+            if k == NON_FIELD_ERRORS:
+                k = ''
+            error_list.append('%s%s' % (k, conditional_escape(force_str(v))))
+
+        return mark_safe('<ul class="errorlist">%s</ul>'
+                % ''.join(['<li>%s</li>' % e for e in error_list]))
+
+
+def clean_upload_data(data):
+    image = data['image']
+    image.seek(0)
+    try:
+        pil_image = PIL.Image.open(image)
+    except IOError as e:
+        if e.errno:
+            error_msg = force_str(e)
+        else:
+            error_msg = "Invalid or unsupported image file"
+        raise forms.ValidationError({"image": [error_msg]})
+    else:
+        extension = get_image_extension(pil_image)
+
+    upload_to = data['upload_to'] or None
+
+    folder_path = get_upload_foldername(image.name, upload_to=upload_to)
+
+    (w, h) = (orig_w, orig_h) = pil_image.size
+    sizes = data.get('sizes')
+    if sizes:
+        (min_w, min_h) = get_min_size(sizes)
+
+        if (orig_w < min_w or orig_h < min_h):
+            raise forms.ValidationError({"image": [(
+                "Image must be at least %(min_w)sx%(min_h)s "
+                "(%(min_w)s pixels wide and %(min_h)s pixels high). "
+                "The image you uploaded was %(orig_w)sx%(orig_h)s pixels.") % {
+                    "min_w": min_w,
+                    "min_h": min_h,
+                    "orig_w": orig_w,
+                    "orig_h": orig_h
+                }]})
+
+    if w <= 0:
+        raise forms.ValidationError({"image": ["Invalid image: width is %d" % w]})
+    elif h <= 0:
+        raise forms.ValidationError({"image": ["Invalid image: height is %d" % h]})
+
+    # File is good, get rid of the tmp file
+    orig_file_path = os.path.join(folder_path, 'original' + extension)
+    image.seek(0)
+    md5_hash = hashlib.md5()
+    default_storage.save(orig_file_path, image)
+    with default_storage.open(orig_file_path) as f:
+        md5_hash.update(f.read())
+        f.seek(0)
+        data['image'] = f
+    data['md5'] = md5_hash.hexdigest()
+
+    return data
+
+
+class FormattedErrorMixin(object):
+
+    def full_clean(self):
+        super(FormattedErrorMixin, self).full_clean()
+        if self._errors:
+            self._errors = ErrorDict(self._errors)
+
+    def _clean_form(self):
+        try:
+            self.cleaned_data = self.clean()
+        except forms.ValidationError as e:
+            self._errors = e.update_error_dict(self._errors)
+            # Wrap newly updated self._errors values in self.error_class
+            # (defaults to django.forms.util.ErrorList)
+            for k, v in self._errors.items():
+                if isinstance(v, list) and not isinstance(v, self.error_class):
+                    self._errors[k] = self.error_class(v)
+            if not isinstance(self._errors, _ErrorDict):
+                self._errors = ErrorDict(self._errors)
+
+
+class UploadForm(FormattedErrorMixin, forms.Form):
+
+    image = forms.FileField(required=True)
+    md5 = forms.CharField(required=False)
+    sizes = forms.CharField(required=False)
+    image_element_id = forms.CharField(required=False)
+    standalone = forms.BooleanField(required=False)
+    upload_to = forms.CharField(required=False)
+
+    # The width and height of the image to be generated for
+    # crop preview after upload
+    preview_width = forms.IntegerField(required=False)
+    preview_height = forms.IntegerField(required=False)
+
+    def clean(self):
+        data = super(UploadForm, self).clean()
+        return clean_upload_data(data)
+
+    def clean_sizes(self):
+        sizes = self.cleaned_data.get('sizes')
+        try:
+            return json.loads(sizes)
+        except:
+            return []
+
+
+class CropForm(forms.Form):
+
+    class Media:
+        css = {'all': (
+            "cropduster/css/cropduster.css",
+            "cropduster/css/jquery.jcrop.css",
+            "cropduster/css/upload.css",
+        )}
+        js = (
+            "cropduster/js/json2.js",
+            "cropduster/js/jquery.class.js",
+            "cropduster/js/jquery.form.js",
+            "cropduster/js/jquery.jcrop.js",
+            "cropduster/js/cropduster.js",
+            "cropduster/js/upload.js",
+        )
+
+    image_id = forms.IntegerField(required=False)
+    orig_image = forms.CharField(max_length=512, required=False)
+    orig_w = forms.IntegerField(required=False)
+    orig_h = forms.IntegerField(required=False)
+    sizes = forms.CharField()
+    thumbs = forms.CharField(required=False)
+    standalone = forms.BooleanField(required=False)
+
+    def clean_sizes(self):
+        try:
+            json.loads(self.cleaned_data.get('sizes', '[]'))
+        except:
+            return []
+
+    def clean_thumbs(self):
+        try:
+            return json.loads(self.cleaned_data.get('thumbs', '{}'))
+        except:
+            return {}
+
+
+class ThumbForm(forms.ModelForm):
+
+    id = forms.IntegerField(required=False, widget=forms.HiddenInput)
+    thumbs = forms.CharField(required=False)
+    size = forms.CharField(required=False)
+    changed = forms.BooleanField(required=False)
+
+    class Meta:
+        model = Thumb
+        fields = (
+            'id', 'name', 'width', 'height',
+            'crop_x', 'crop_y', 'crop_w', 'crop_h', 'thumbs', 'size', 'changed')
+
+    def clean_size(self):
+        try:
+            return json.loads(self.cleaned_data.get('size', 'null'))
+        except:
+            return None
+
+    def clean_thumbs(self):
+        try:
+            return json.loads(self.cleaned_data.get('thumbs', '{}'))
+        except:
+            return {}
+
+
+class ThumbFormSet(BaseModelFormSet):
+    """
+    If the form submitted empty strings for thumb pks, change to None before
+    calling AutoField.get_prep_value() (so that int('') doesn't throw a
+    ValueError).
+    """
+
+    def _existing_object(self, pk):
+        """
+        Avoid potentially expensive list comprehension over self.queryset()
+        in the parent method.
+        """
+        if not hasattr(self, '_object_dict'):
+            self._object_dict = {}
+        if not pk:
+            return None
+        try:
+            obj = self.get_queryset().get(pk=pk)
+        except ObjectDoesNotExist:
+            return None
+        else:
+            self._object_dict[obj.pk] = obj
+        return super(ThumbFormSet, self)._existing_object(pk)
+
+    def _construct_form(self, i, **kwargs):
+        if self.is_bound and i < self.initial_form_count():
+            mutable = getattr(self.data, '_mutable', False)
+            self.data._mutable = True
+            pk_key = "%s-%s" % (self.add_prefix(i), self.model._meta.pk.name)
+            self.data[pk_key] = self.data.get(pk_key) or None
+            self.data._mutable = mutable
+        form = super(ThumbFormSet, self)._construct_form(i, **kwargs)
+        if self.data.get('crop-standalone') == 'on':
+            form.fields[self.model._meta.pk.name].required = False
+        return form
