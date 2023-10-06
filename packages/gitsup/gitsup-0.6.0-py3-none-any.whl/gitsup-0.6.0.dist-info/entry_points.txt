@@ -1,0 +1,2 @@
+[console_scripts]
+gitsup = gitsup.main:main
