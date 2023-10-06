@@ -1,0 +1,41 @@
+Results of doctest builder run on 2023-10-05 14:15:37
+=====================================================
+
+Document: using
+---------------
+1 items passed all tests:
+  97 tests in default
+97 tests in 1 items.
+97 passed and 0 failed.
+Test passed.
+
+Document: api/cache
+-------------------
+1 items passed all tests:
+  11 tests in default
+11 tests in 1 items.
+11 passed and 0 failed.
+Test passed.
+
+Document: api/attributes
+------------------------
+1 items passed all tests:
+  80 tests in default
+80 tests in 1 items.
+80 passed and 0 failed.
+Test passed.
+
+Document: api/pickling
+----------------------
+1 items passed all tests:
+  68 tests in default
+68 tests in 1 items.
+68 passed and 0 failed.
+Test passed.
+
+Doctest summary
+===============
+  256 tests
+    0 failures in tests
+    0 failures in setup code
+    0 failures in cleanup code
