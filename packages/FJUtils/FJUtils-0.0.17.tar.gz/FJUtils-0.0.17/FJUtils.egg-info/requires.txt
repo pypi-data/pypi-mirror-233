@@ -1,0 +1,10 @@
+jax~=0.4.10
+flax~=0.7.1
+numpy
+typing~=3.7.4.3
+transformers~=4.31.0
+einops~=0.6.1
+optax~=0.1.7
+msgpack~=1.0.5
+tqdm==4.65.0
+ml_collections
