@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+custom_attributes/__init__.py
+custom_attributes/plugin.py
+mkdocs_custom_tags_attributes.egg-info/PKG-INFO
+mkdocs_custom_tags_attributes.egg-info/SOURCES.txt
+mkdocs_custom_tags_attributes.egg-info/dependency_links.txt
+mkdocs_custom_tags_attributes.egg-info/entry_points.txt
+mkdocs_custom_tags_attributes.egg-info/requires.txt
+mkdocs_custom_tags_attributes.egg-info/top_level.txt
+tests/test.py
