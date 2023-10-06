@@ -1,0 +1,65 @@
+/*
+ * Copyright (c) 2018 ISP RAS (http://www.ispras.ru)
+ * Ivannikov Institute for System Programming of the Russian Academy of Sciences
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * ee the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+query: execution($ $(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $path "/execution.txt", "%s %s %d %s %s\n", $env<CMD_ID>, $func_name, $decl_line, $storage_class, $signature>
+}
+
+query: declare_func($ $(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $path "/declare_func.txt", "%s %s %d %s %s\n", $env<CMD_ID>, $func_name, $decl_line, $storage_class, $signature>
+}
+
+query: expand($) {
+    $fprintf<"$env<CIF_INFO_DIR>" $expansion_path "/CLADE-EXPAND" $path "/expand.txt", "%s %d %d\n", $macro_name, $expansion_line, $line>
+}
+
+query: expand($(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $expansion_path "/CLADE-EXPAND" $path "/expand.txt", "%s %d %d\n", $macro_name, $expansion_line, $line>
+    $fprintf<"$env<CIF_INFO_DIR>" $expansion_path "/expand_args.txt", "%s %s\n", $macro_name, $actual_args>
+}
+
+query: define($) {
+    $fprintf<"$env<CIF_INFO_DIR>" $path "/define.txt", "%s %d\n", $macro_name, $line>
+}
+
+query: define($(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $path "/define.txt", "%s %d\n", $macro_name, $line>
+}
+
+query: call($ $(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $func_context_path "/call.txt", "%s %s %s %d %s %s\n", $env<CMD_ID>, $func_context_name, $func_name, $call_line, $storage_class, $actual_arg_func_names>
+}
+
+query: callp($ $(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $func_context_path "/callp.txt", "%s %s %d\n", $func_context_name, $func_ptr_name, $call_line>
+}
+
+query: use_func($ $(..)) {
+    $fprintf<"$env<CIF_INFO_DIR>" $func_context_path "/use_func.txt", "%s %s %s %d %s\n", $env<CMD_ID>, $func_context_name, $func_name, $use_line, $storage_class>
+}
+
+query: use_var($ $) {
+    $fprintf<"$env<CIF_INFO_DIR>" $func_context_path "/use_var.txt", "%s %s %d\n", $func_context_name, $var_name, $use_line>
+}
+
+query: init_global($ $){
+    $fprintf<"$env<CIF_INFO_DIR>/$env<C_FILE>/init_global.txt", "\"%s\" %s %s %s\n", $signature, $env<CMD_ID>, $storage_class, $var_init_list_json>
+}
+
+query: introduce($ $) {
+    $fprintf<"$env<CIF_INFO_DIR>" $path "/typedefs.txt", "%s\n", $signature>
+}
