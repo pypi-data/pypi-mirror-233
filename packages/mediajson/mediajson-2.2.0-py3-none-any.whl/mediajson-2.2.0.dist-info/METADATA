@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mediajson
+Version: 2.2.0
+Summary: A JSON serialiser and parser for python that supports extensions convenient for our media grain formats
+Home-page: https://github.com/bbc/rd-apmm-python-lib-mediajson
+Author: BBC R&D
+Author-email: cloudfit-opensource@rd.bbc.co.uk
+License: Apache 2
+Requires-Python: >=3.10.0
+License-File: LICENSE.md
+License-File: NOTICE.md
+Requires-Dist: mediatimestamp >=4.0.0
+Requires-Dist: typing-extensions
+
+A JSON serialiser and parser for python that supports extensions convenient for our media grain formats
