@@ -1,0 +1,9 @@
+[console_scripts]
+clade = clade.__main__:main
+clade-cdb = clade.scripts.compilation_database:main
+clade-check = clade.scripts.check:main
+clade-cmds-stats = clade.scripts.stats:print_cmds_stats
+clade-diff = clade.scripts.diff:main
+clade-file-graph = clade.scripts.file_graph:main
+clade-pid-graph = clade.scripts.pid_graph:main
+clade-trace = clade.scripts.tracer:main
