@@ -1,0 +1,2 @@
+[console_scripts]
+my_script = afrinet_system.module:main

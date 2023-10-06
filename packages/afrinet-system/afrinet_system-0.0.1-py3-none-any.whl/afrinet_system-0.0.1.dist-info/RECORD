@@ -1,0 +1,15 @@
+modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modules/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modules/src/authentication_class.py,sha256=KPFeQVFqBSykw-9rwV_Vs__gYTPcxgvWVOAXSDD-Y4A,159
+modules/src/base_class.py,sha256=Eo8iujIhQ1tHe_jWl03Y0swrXu106Ok580Vpa-CyBDc,243
+modules/src/id_generator_class.py,sha256=JEq-yOb5uZmNmdi5Stx9iWIMvpMoRhkg8gDpbur1FQ4,613
+modules/src/slugify_class.py,sha256=R05Jv2SAA9cJS9QfYk1zLdQxwkjJOM3ZEI5le_sO7pM,1192
+modules/src/user_class.py,sha256=RMWyK07TUMT43tINo5SS9ilUB_sUvXPVqcRqGdtx2TI,1006
+modules/src/verification_class.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/module_test.py,sha256=jcUDcocpBzNaj19iMxhnd51EVWKeeRINh-nYLEZqU3c,224
+afrinet_system-0.0.1.dist-info/METADATA,sha256=0FyxfRCelzYjuoDcEX8YRbCgFRLzz4tyOsCcnIWHYJs,784
+afrinet_system-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+afrinet_system-0.0.1.dist-info/entry_points.txt,sha256=5pfm4HHK55TUsk149NoLL4lckl_-SczhH7te3BC0w_c,57
+afrinet_system-0.0.1.dist-info/top_level.txt,sha256=L1LfP96v_I_8HE8xjKG2FXVMiGl48VBd6CMRV4WSN1g,14
+afrinet_system-0.0.1.dist-info/RECORD,,

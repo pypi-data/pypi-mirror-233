@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: afrinet-system
+Version: 0.0.1
+Summary: A brief description of your project
+Home-page: https://github.com/yourusername/yourproject
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+A longer description of your project
