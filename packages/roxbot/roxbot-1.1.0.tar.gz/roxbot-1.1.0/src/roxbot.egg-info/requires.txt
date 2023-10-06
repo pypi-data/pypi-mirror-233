@@ -1,0 +1,7 @@
+click
+pymap3d
+pynmea2
+websockets
+pydantic
+pyserial-asyncio
+coloredlogs
