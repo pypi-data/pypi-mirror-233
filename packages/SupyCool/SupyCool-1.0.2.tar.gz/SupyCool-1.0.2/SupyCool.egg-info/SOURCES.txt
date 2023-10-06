@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+SupyCool.egg-info/PKG-INFO
+SupyCool.egg-info/SOURCES.txt
+SupyCool.egg-info/dependency_links.txt
+SupyCool.egg-info/requires.txt
+SupyCool.egg-info/top_level.txt

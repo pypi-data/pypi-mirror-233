@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: SupyCool
+Version: 1.0.2
+Summary: It's SuperCool!
+Home-page: https://bbs.hezhongkj.top/SupyCool
+Author: PythonHaveNoName
+Author-email: pythonhavenoname@qq.com
+License: GNU General Public License v3.0
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pywin32
+
+# SupyCool
+
+**SupyCool**, as the name suggests, is "SuperCool"! It is a Windows platform module that creates funny effects similar to MEMZ. The motivation behind creating this was the lack of such effects in Python. If you search online, you'll find that there are very few impressive effects created with Python, so I decided to create SupyCool.
+
+The name was inspired by a famous American director's phrase in a TV show (which has now become an emoji). The phrase "Funny fucking =)" is my personal catchphrase, influenced by some Chinglish style. It means that once you encounter a code with "funny fucking," your computer will no longer be under your control!
+
+This project is essentially a collection of effects originally written in other languages like C++, rewritten in Python. I have OCD, so I meticulously wrote these codes one by one using IDLE.
+
+These codes are not copyrighted; they are completely free and open source! I hope you enjoy them!
+
+## Usage:
+
+### 1. Copy Code (Recommended)
+- Open **SupyCool.py** with any text editor.
+- Copy all the code from it and paste it into your own code. That's it!
+- You can then freely write your own code! The recommended way to call it is:
+    ```python
+    cool = SupyCool()
+    # ...
+    ```
+    or
+    ```python
+    SupyCool...
+    ```
+    
+### 2. Module Import
+- Copy **SupyCool.py** to your project directory.
+- Import it in your preferred way. Here's a recommended way:
+    ```python
+    from SupyCool import Supycool as cool
+    # ...
+    ```
+    or
+    ```python
+    from SupyCool import Supycool
+    ```
+    
+### 3. Writing Code Directly in SupyCool.py
+- Simply write your code directly in **SupyCool.py**.
+
+### 4. Contributing with Rich Content
+- You cannot modify existing code.
+- Comments should be in English or English/Chinese.
+- Group your functions into one function before adding them.
+- Place your functions in the appropriate section (e.g., screen, windows) based on the examples inside.
+- Function names should follow UpperCamelCase (e.g., FunnyFucking).
+- Function names should be concise, so users can quickly understand their purpose. For example, if the function inverts the screen color, it should be named "InvertColor" instead of "InvertScreenColor."
+
+---
+Copyright: pyhnm
