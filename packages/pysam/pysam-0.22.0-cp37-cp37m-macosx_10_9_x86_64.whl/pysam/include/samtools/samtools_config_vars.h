@@ -1,0 +1,7 @@
+#define SAMTOOLS_CC "gcc"
+#define SAMTOOLS_CPPFLAGS "-I/Users/runner/work/pysam/pysam/pysam -I/Users/runner/work/pysam/pysam/htslib -I/Users/runner/work/pysam/pysam/samtools -I/Users/runner/work/pysam/pysam/samtools/lz4 -I/Users/runner/work/pysam/pysam/bcftools -I/Users/runner/work/pysam/pysam"
+#define SAMTOOLS_CFLAGS "-Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -arch x86_64 -g  -Wno-unused -Wno-strict-prototypes -Wno-sign-compare -Wno-error=declaration-after-statement"
+#define SAMTOOLS_LDFLAGS "-arch x86_64 -g -L/Users/runner/work/pysam/pysam/pysam -L/Users/runner/work/pysam/pysam -Lbuild/lib.macosx-10.9-x86_64-3.6/pysam -Lbuild/lib.macosx-10.9-x86_64-3.6/pysam -dynamiclib -rpath @loader_path -Wl,-headerpad_max_install_names -Wl,-install_name,@rpath/libcsamtools.cpython-36m-darwin.so -Wl,-x"
+#define SAMTOOLS_LIBS "-lz -llzma -lbz2 -lz -lcurl -lchtslib.cpython-36m-darwin"
+#define SAMTOOLS_HTSDIR "(unused)"
+#define SAMTOOLS_CURSES_LIB "(unused)"
