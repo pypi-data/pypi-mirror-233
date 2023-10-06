@@ -1,0 +1,12 @@
+neurum_db/__init__.py,sha256=LULpC5CYrcrxv8r69OfnOx9SUX7bVIkymeMe9hxwkHk,142
+neurum_db/delete.py,sha256=hyOMg_N5RV66vHZatzK8Va-o-3YkFXjT_-nz-A3KPUo,888
+neurum_db/get.py,sha256=oFlUpOWqWlJdXtEut9Ihzdh_tsY6D_vLE4Te0WA5KYI,888
+neurum_db/get_cell.py,sha256=hgy8-VGKiu2YNc7fLUvRM5cv5zuSzFo-wiGyuCApZC4,893
+neurum_db/get_column.py,sha256=Fk0ApdOs312AUUDe5FZVJxQYsAiQRnDH25mHVwwYpuE,880
+neurum_db/post.py,sha256=fXXVkoOoX5TjlbmMG4kKszvqt_ZuWhrRo0967qe89-c,534
+neurum_db/update.py,sha256=f7lSMmi3f9kOx5EPP7a5-TeuefpRBdw36cMuHjLRc7M,1342
+neurum_db-0.3.6.dist-info/LICENSE.txt,sha256=yew7JbAoTVNb4qPIO4bjReA9CEhyoGjnSWQNvvuYQ4M,1057
+neurum_db-0.3.6.dist-info/METADATA,sha256=b9Largag_Nvsw1ylYuYeZOLkFEDMf2uyb8eVbWqt8ys,612
+neurum_db-0.3.6.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+neurum_db-0.3.6.dist-info/top_level.txt,sha256=YoV0Z6kfx8akkZRwf5oDsGksE6wAdfnNVuTj51suc3c,10
+neurum_db-0.3.6.dist-info/RECORD,,
