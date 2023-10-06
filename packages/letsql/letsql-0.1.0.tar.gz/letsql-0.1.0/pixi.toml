@@ -1,0 +1,39 @@
+[project]
+name = "letsql"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Daniel Mesejo <mesejoleon@gmail.com>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tasks]
+
+[dependencies]
+pytest = "7.4.2.*"
+toolz = "0.12.0.*"
+atpublic = "3.0.1.*"
+pytest-benchmark = "4.0.0.*"
+pytest-mock = "3.11.1.*"
+python-dateutil = "2.8.2.*"
+parsy = "2.1.*"
+black = "23.9.1.*"
+bidict = "0.22.1.*"
+pre-commit = "3.4.0.*"
+ruff = "0.0.291.*"
+blackdoc = "0.3.8.*"
+typing-extensions = "4.8.0.*"
+pytest-cov = "4.1.0.*"
+pytz = "2023.3.post1.*"
+maturin = "1.2.3.*"
+pytest-xdist = "3.3.1.*"
+sqlalchemy = "2.0.21.*"
+filelock = "3.12.4.*"
+rich = "13.6.0.*"
+python = "3.11.5.*"
+hypothesis = "6.87.1.*"
+pyarrow = "==10.0.1"
+pip = "23.2.1.*"
+sqlglot = "18.10.1.*"
+pandas = "==2.0.3"
+multipledispatch = "0.6.0.*"
+pytest-snapshot = "0.9.0.*"

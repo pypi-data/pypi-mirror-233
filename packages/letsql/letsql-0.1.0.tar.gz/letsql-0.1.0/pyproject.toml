@@ -1,0 +1,238 @@
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "letsql"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+
+[tool.maturin]
+module-name = "letsql._internal"
+features = ["pyo3/extension-module"]
+include = [
+    { path = "Cargo.lock", format = "sdist" }
+]
+exclude = [".github/**", "ci/**", ".asf.yaml"]
+# Require Cargo.lock is up to date
+locked = true
+
+[tool.pytest.ini_options]
+doctest_optionflags = [
+  "NORMALIZE_WHITESPACE",
+  "IGNORE_EXCEPTION_DETAIL",
+  "ELLIPSIS",
+]
+xfail_strict = true
+addopts = [
+  "--strict-markers",
+  "--strict-config",
+  "--benchmark-disable",
+  "--benchmark-group-by=name",
+  "--benchmark-sort=name",
+]
+norecursedirs = [
+  "**/snapshots",
+  ".benchmarks",
+  ".direnv",
+  ".git",
+  ".github",
+  ".hypothesis",
+  ".pytest_cache",
+  ".streamlit",
+  "LICENSES",
+  "ci",
+  "conda-lock",
+  "dev",
+  "docker",
+  "docs",
+  "nix",
+  "result*",
+  "target*",
+  ".pixi"
+]
+filterwarnings = [
+  # fail on any warnings that are not explicitly matched below
+  "error",
+  # pyspark and impala leave sockets open
+  "ignore:Exception ignored in:",
+  # dask
+  "ignore:index is deprecated and will be removed in a future release:FutureWarning",
+  "ignore:`meta` is not specified:UserWarning",
+  "ignore:Concatenating dataframes with unknown divisions:UserWarning",
+  "ignore:Possible nested set at position:FutureWarning",
+  'ignore:\s+You did not provide metadata:UserWarning',
+  # numpy by way of dask
+  'ignore:np\.find_common_type is deprecated:DeprecationWarning',
+  # pandas
+  "ignore:Boolean Series key will be reindexed:UserWarning",
+  'ignore:Using \.astype to convert from timezone-(naive|aware) dtype:FutureWarning',
+  "ignore:The default dtype for empty Series will be 'object':FutureWarning",
+  # pandas 1.5.x
+  "ignore:iteritems is deprecated and will be removed in a future version:FutureWarning",
+  'ignore:Passing unit-less datetime64 dtype to \.astype is deprecated:FutureWarning',
+  'ignore:The default value of numeric_only in DataFrameGroupBy\.sum is deprecated:FutureWarning',
+  # numpy
+  "ignore:Creating an ndarray from ragged nested sequences:",
+  'ignore:`np\.bool` is a deprecated alias for the builtin `bool`:DeprecationWarning',
+  # numpy, coming from a pandas call
+  'ignore:In the future `np\.bool` will be defined as the corresponding NumPy scalar:FutureWarning',
+  # duckdb-engine
+  'ignore:Dialect .+ does \*not\* support Decimal:',
+  "ignore:duckdb-engine doesn't yet support reflection on indices:",
+  # druid
+  'ignore:Dialect druid.rest will not make use of SQL compilation caching:',
+  # ibis
+  'ignore:`(Base)?Backend.database` is deprecated:FutureWarning',
+  # spark
+  "ignore:distutils Version classes are deprecated:DeprecationWarning",
+  "ignore:The distutils package is deprecated and slated for removal:DeprecationWarning",
+  "ignore:In Python .*, it is preferred .* type hints .* UDF:UserWarning",
+  "ignore:`np.object` is a deprecated alias for the builtin `object`:DeprecationWarning",
+  # windows
+  "ignore:getargs.* The 'u' format is deprecated:DeprecationWarning",
+  # sqlalchemy
+  "ignore:Class ST_.+ will not make use of SQL compilation caching:",
+  "ignore:UserDefinedType Geometry:",
+  # google
+  "ignore:Deprecated call to `pkg_resources\\.declare_namespace\\('.*'\\):DeprecationWarning",
+  # pyspark on python 3.11
+  "ignore:typing\\.io is deprecated:DeprecationWarning",
+  # warnings from google's use of the cgi module
+  "ignore:'cgi' is deprecated and slated for removal in Python 3\\.13:DeprecationWarning",
+  # warnings from google's use of pkg_resources
+  "ignore:pkg_resources is deprecated as an API:DeprecationWarning",
+  # sqlalchemy warns about mysql's inability to cast to bool;
+  # this has no effect on ibis's output because we convert types after
+  # execution
+  "ignore:Datatype BOOL does not support CAST on MySQL/MariaDB; the cast will be skipped:sqlalchemy.exc.SAWarning",
+  # snowflake vendors an older version requests
+  "ignore:'urllib3\\.contrib\\.pyopenssl' module is deprecated and will be removed in a future release of urllib3:DeprecationWarning",
+  # apache-beam
+  "ignore:the imp module is deprecated in favour of importlib:DeprecationWarning",
+  # pytest raises a syntax error when encountering this from *any* module, including third party modules
+  "ignore:invalid escape sequence:DeprecationWarning",
+]
+empty_parameter_set_mark = "fail_at_collect"
+markers = [
+  "backend: tests specific to a backend",
+  "benchmark: benchmarks",
+  "core: tests that do not required a backend",
+  "examples: tests that exercise examples",
+  "geospatial: tests for geospatial functionality",
+  "xfail_version: backend tests that for a specific version of a dependency",
+  "notimpl: functionality that isn't implemented in ibis",
+  "notyet: for functionality that isn't implemented in a backend",
+  "never: tests for functionality that a backend is likely to never implement",
+  "broken: test has exposed existing broken functionality",
+  "sqlalchemy_only: tests for SQLAlchemy based backends",
+  "bigquery: BigQuery tests",
+  "clickhouse: ClickHouse tests",
+  "dask: Dask tests",
+  "datafusion: Apache Datafusion tests",
+  "druid: Apache Druid tests",
+  "duckdb: DuckDB tests",
+  "flink: Flink tests",
+  "impala: Apache Impala tests",
+  "mysql: MySQL tests",
+  "mssql: MS SQL Server tests",
+  "oracle: Oracle tests",
+  "pandas: Pandas tests",
+  "polars: Polars tests",
+  "postgres: PostgreSQL tests",
+  "pyspark: PySpark tests",
+  "snowflake: Snowflake tests",
+  "sqlite: SQLite tests",
+  "trino: Trino tests",
+  "tpch: TPC-H tests",
+]
+
+[tool.codespell]
+# notebooks are skipped because there's no straightforward way to ignore base64
+# encoded strings
+skip = "*.lock,.direnv,.git,docs/_freeze/**/html.json"
+ignore-regex = '\b(DOUB|i[if]f|I[IF]F|lamduh|AFE|crate)\b'
+builtin = "clear,rare,names"
+
+[tool.ruff]
+line-length = 88
+respect-gitignore = true
+ignore = [
+  "B028",    # required stacklevel argument to warn
+  "B904",    # raise from e or raise from None in exception handlers
+  "C408",    # dict(...) as literal
+  "D100",    # public module
+  "D101",    # public class
+  "D102",    # public method
+  "D103",    # public function
+  "D104",    # public package
+  "D105",    # magic methods
+  "D106",    # nested class
+  "D107",    # init
+  "D202",    # blank lines after function docstring
+  "D203",    # blank line before class docstring
+  "D213",    # Multi-line docstring summary should start at the second line
+  "D401",    # Imperative mood
+  "D402",    # First line should not be the function's signature
+  "E501",
+  "E731",
+  "PGH003",
+  "PLC0105", # covariant type parameters should have a _co suffix
+  "PLR0124", # name compared with self, e.g., a == a
+  "PLR0911", # too many return statements
+  "PLR0912", # too many branches
+  "PLR0913", # too many arguments
+  "PLR0915", # too many statements
+  "PLR2004", # forces everything to be a constant
+  "PLW2901", # overwriting loop variable
+  "RET504",
+  "RET505",
+  "RET506",
+  "RET507",
+  "RET508",
+  "RUF005",  # splat instead of concat
+  "RUF012",  # Mutable class attributes should be annotated with `typing.ClassVar`
+  "SIM102",  # nested ifs
+  "SIM108",  # convert everything to ternary operator
+  "SIM114",  # combine `if` branches using logical `or` operator
+  "SIM116",  # dictionary instead of `if` statements
+  "SIM117",  # nested with statements
+  "SIM118",  # remove .keys() calls from dictionaries
+  "SIM300",  # yoda conditions
+  "UP007",   # Optional[str] -> str | None
+]
+exclude = ["*_py310.py", "letsql/_vendor/ibis/tests/*/snapshots/*"]
+target-version = "py39"
+# none of these codes will be automatically fixed by ruff
+unfixable = [
+  "T201",   # print statements
+  "F401",   # unused imports
+  "RUF100", # unused noqa comments
+  "F841",   # unused variables
+]
+
+[tool.ruff.pyupgrade]
+keep-runtime-typing = true
+
+[tool.ruff.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.per-file-ignores]
+"*test*.py" = [
+  "D", # ignore all docstring lints in tests
+]
+"ci/*.py" = ["INP001"]
+"docs/*.py" = ["INP001"]
+"ci/release/verify_release.py" = ["T201"] # CLI tool that prints stuff
+
+[tool.blackdoc]
+extend_exclude = 'ibis/examples/__init__\.py'
+
+[tool.black]
+line_length = 88
+extend_exclude = '\.direnv|result(-\d+)|_py310\.py|decompiled\.py'

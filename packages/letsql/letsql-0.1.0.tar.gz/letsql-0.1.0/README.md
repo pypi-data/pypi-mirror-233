@@ -1,0 +1,62 @@
+<!---
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+# LETSQL
+
+## Contributing Guide
+
+### Setting up a development environment
+
+This assumes that you have rust and cargo installed. We use the workflow recommended by [pyo3](https://github.com/PyO3/pyo3) and [maturin](https://github.com/PyO3/maturin).
+
+```bash
+# fetch this repo
+git clone git@github.com:letsql/letsql.git
+# prepare development environment (used to build wheel / install in development)
+python3 -m venv venv
+# activate the venv
+source venv/bin/activate
+# update pip itself if necessary
+python -m pip install -U pip
+# install dependencies (for Python 3.8+)
+python -m pip install -r requirements-dev.txt
+# set up the git hook scripts
+pre-commit install
+```
+
+### Running the test suite
+Install the [just](https://github.com/casey/just#installation) command runner, if needed.
+Download example data to run the tests successfully.
+
+```bash
+just download-data
+```
+
+Start the postgresql server:
+
+```bash
+just up
+```
+
+To test the code:
+```bash
+# make sure you activate the venv using "source venv/bin/activate" first
+maturin develop
+python -m pytest # or pytest
+```
