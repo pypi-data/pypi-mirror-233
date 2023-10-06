@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/wsgi_shim/__init__.py
+src/wsgi_shim/__main__.py
+src/wsgi_shim/hello_world.py
+src/wsgi_shim/wsgi_shim.py
+src/wsgi_shim.egg-info/PKG-INFO
+src/wsgi_shim.egg-info/SOURCES.txt
+src/wsgi_shim.egg-info/dependency_links.txt
+src/wsgi_shim.egg-info/entry_points.txt
+src/wsgi_shim.egg-info/requires.txt
+src/wsgi_shim.egg-info/top_level.txt
+src/wsgi_shim/templates/config.toml
+tests/test_config.py

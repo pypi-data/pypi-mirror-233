@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsgi-shim"
+version = "0.0.1"
+description = "WSGI shim for when you have limited web log access"
+readme = "README.md"
+requires-python = ">=3.11"
+# license = { file = "LICENSE"}
+authors = [{ name = "Scott Karlin", email = "scott@cs.princeton.edu"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Development Status :: 4 - Beta",
+    "Topic :: Internet :: WWW/HTTP :: WSGI",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+]
+
+[project.urls]
+"Home Page" = "https://www.cs.princeton.edu/~scott/"
+
+[project.scripts]
+wsgi-shim = "wsgi_shim.wsgi_shim:cli"
+
+[project.optional-dependencies]
+tests = [
+    "pytest >=7.4",
+]
+build = [
+    "twine",
+    "packaging",
+]
+ci = [
+    "pytest >=7.4",
+    "twine",
+    "packaging",
+    "ruff",
+]
+dev = [
+    "pre-commit >=3.4",
+    "pytest >=7.4",
+]
+
+[tool.mypy]
+explicit_package_bases = "True"
+files = "src, tests"
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"wsgi_shim.templates" = ["config.toml"]
+
+[tool.ruff]
+# Ignore `E401` (imported but unused) in all `__init__.py` files.
+per-file-ignores = { "__init__.py" = ["F401"] }
+line-length = 90
+target-version = "py311"
