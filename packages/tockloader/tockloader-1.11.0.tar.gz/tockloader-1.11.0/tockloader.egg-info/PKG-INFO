@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: tockloader
+Version: 1.11.0
+Summary: TockOS Support Tool
+Home-page: https://github.com/tock/tockloader
+Author: Tock Project Developers
+Author-email: tock-dev@googlegroups.com
+License-File: LICENSE
+
+Please visit `Github <https://github.com/tock/tockloader>`_ for more information.
