@@ -1,0 +1,9 @@
+sopel-flipper 0.1.0
+===================
+
+Initial release.
+
+Changed:
+* Converted from single file to entry-point package
+* Properly specified dependencies
+* Upgraded to Sopel 7.1+ coding standards

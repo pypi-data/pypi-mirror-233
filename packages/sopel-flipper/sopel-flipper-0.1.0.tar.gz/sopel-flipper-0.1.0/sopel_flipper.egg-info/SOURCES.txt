@@ -1,0 +1,14 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+setup.cfg
+setup.py
+sopel_flipper/__init__.py
+sopel_flipper.egg-info/PKG-INFO
+sopel_flipper.egg-info/SOURCES.txt
+sopel_flipper.egg-info/dependency_links.txt
+sopel_flipper.egg-info/entry_points.txt
+sopel_flipper.egg-info/not-zip-safe
+sopel_flipper.egg-info/requires.txt
+sopel_flipper.egg-info/top_level.txt
