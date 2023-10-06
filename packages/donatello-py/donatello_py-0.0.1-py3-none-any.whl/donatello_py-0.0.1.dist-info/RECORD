@@ -1,0 +1,17 @@
+donatello/__init__.py,sha256=_rlM2NGoCfTYOsn6_Sswgot55iC5xTQ47C0PuLXVWTw,318
+donatello/client.py,sha256=itFgDXZ5gkWBbm7AzcuCymIImY5FsyxC9PV0478iHHU,6602
+donatello/events.py,sha256=huIRiYALAclMtszTOuWoTRjOrC8PWR6fFuOWpn6CFXA,1263
+donatello/models/__init__.py,sha256=m87CpByot9tqWq-iY26fnUsI2Bq_5BkIvfJV4Zt-C-c,231
+donatello/models/client.py,sha256=fj_z8fmVjczIpndWd4d7L2l7Knj8ICeTFA8rhcOUzy0,498
+donatello/models/client_list.py,sha256=cvd2USOlv30_EgOlacbF1YSCfBlvr0IZO0AyRlJU7g4,665
+donatello/models/donate.py,sha256=Vou1vIhNJjCqJYeyL6z7d2tgpyVj62pvrdule61zvKg,971
+donatello/models/donate_list.py,sha256=Zrlu2eySUFPhSkT_e-Vu4spF2pvdvxey7nuffqRaZIM,925
+donatello/models/longpool_donale.py,sha256=jfEmlAB2hQk-dBynG3QuyZd2oBOuvUnir2nJh7Sgh_Y,1511
+donatello/models/user.py,sha256=wAskRNNLbjt4Mw8v-IJF_RPYbplN76hYf_S9_MMpjsw,867
+donatello/models/user_donates.py,sha256=2cz7AACWvDZFnXR-sqHte0O_yKicQTBZuO-vIWmqzmQ,481
+donatello_py-0.0.1.dist-info/LICENSE,sha256=hju_plvtrCfb9bKQwGhCFlDmtii-zyQHGKBkdcOd9_s,1062
+donatello_py-0.0.1.dist-info/METADATA,sha256=FzgiXz4UH9hrsYOaTOryLxH5xvEtyyaYDhK5SMXiZMg,2926
+donatello_py-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+donatello_py-0.0.1.dist-info/entry_points.txt,sha256=nukAcM7Tii6cMhfcRcjYwcMjDO-FLGSzVwydTqqbbFs,57
+donatello_py-0.0.1.dist-info/top_level.txt,sha256=kiCR4Y2CB3ACZdmdznFaRC-EIde6JQfbQNTWa18yA7U,10
+donatello_py-0.0.1.dist-info/RECORD,,
