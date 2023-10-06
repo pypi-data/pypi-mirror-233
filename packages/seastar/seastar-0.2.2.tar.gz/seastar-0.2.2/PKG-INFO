@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: seastar
+Version: 0.2.2
+Summary: A Web Framework and Toolkit for Digital Ocean Cloud Functions influenced by Starlette.
+Project-URL: Documentation, https://github.com/rykroon/seastar#readme
+Project-URL: Issues, https://github.com/rykroon/seastar/issues
+Project-URL: Source, https://github.com/rykroon/seastar
+Author-email: Ryan Kroon <rykroon.tech@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.9
+Requires-Dist: multidict==6.*
+Description-Content-Type: text/markdown
+
+# seastar
+
+[![PyPI - Version](https://img.shields.io/pypi/v/seastar.svg)](https://pypi.org/project/seastar)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/seastar.svg)](https://pypi.org/project/seastar)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install seastar
+```
+
+## License
+
+`seastar` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
