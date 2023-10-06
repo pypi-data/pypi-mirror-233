@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+keaml/__init__.py
+keaml/client.py
+keaml/inference.py
+keaml.egg-info/PKG-INFO
+keaml.egg-info/SOURCES.txt
+keaml.egg-info/dependency_links.txt
+keaml.egg-info/requires.txt
+keaml.egg-info/top_level.txt
