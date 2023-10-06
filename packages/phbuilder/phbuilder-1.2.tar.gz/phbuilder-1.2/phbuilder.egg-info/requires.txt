@@ -1,0 +1,2 @@
+argcomplete>=3.1.1
+configparser>=6.0.0
