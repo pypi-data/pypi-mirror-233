@@ -1,0 +1,2 @@
+[console_scripts]
+zaapy = zaapy.main:main
