@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "jsonnotate"
+version = "0.2.2"
+description = ""
+authors = ["Edward George <edwardgeorge@gmail.com>"]
+include = ["jsonnotate/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+mypy = "^1.5.1"
+ruff = "^0.0.282"
+black = "^23.7.0"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 118
+unfixable = ["F401", "F841", "E731"]
+
+[tool.black]
+line-length = 118
+target-version = ["py39"]
+include = '\.pyi?$'
+
+[tool.mypy]
+strict = true
+python_version = 3.9
+namespace_packages = true
+ignore_missing_imports = true
+explicit_package_bases = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
