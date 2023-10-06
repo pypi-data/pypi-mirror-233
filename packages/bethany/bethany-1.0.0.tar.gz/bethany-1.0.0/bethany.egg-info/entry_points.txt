@@ -1,0 +1,3 @@
+[console_scripts]
+bethany = bethany.bethany:main
+
