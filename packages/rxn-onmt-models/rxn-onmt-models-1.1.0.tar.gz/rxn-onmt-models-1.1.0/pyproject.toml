@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "onmt.*",
+    "numpy.*",
+    "pandas.*",
+    "pytest.*",
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
