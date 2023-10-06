@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: kerrgeopy
+Version: 0.9.0
+Summary: Library for computing stable and plunging geodesics in Kerr spacetime
+Home-page: https://github.com/syp2001/KerrGeoPy
+Author: Seyong Park
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+License-File: LICENSE
+Requires-Dist: scipy >=1.8
+Requires-Dist: numpy
+Requires-Dist: matplotlib >=3.3
+
