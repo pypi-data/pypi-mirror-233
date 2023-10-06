@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: uzum-payments
+Version: 0.0.4
+Summary: Uzum Payments API Client
+Home-page: https://github.com/homeroff/uzum-payments/
+Author: Vsevolod Slivсa
+License: MIT
+Project-URL: Source Code, https://github.com/homeroff/uzum-payments/
+Project-URL: Issue Tracker, https://github.com/homeroff/uzum-payments/issues
+Project-URL: Documentation, https://www.inplat-tech.ru/docs/checkout/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Uzum Payments
+
+Easy to use API wrapper for Uzum Checkout API v1.10.1 & Uzum Receipt producer API v0.0.2 written in Python. Supports sync and async requests.
+
+## Install
+
+The easiest way to install uzum-payments is via pip.
+
+```shell
+$ pip install uzum-payments
+```
+
+## Documentation
+
+See [documentation](https://www.inplat-tech.ru/docs/checkout/) for more details.
+
+## Requirements
+
+This package supports the following minimum versions:
+* Python >= `3.6`
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
