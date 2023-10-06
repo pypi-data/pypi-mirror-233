@@ -1,0 +1,10 @@
+treact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+treact/core.py,sha256=uYrfM7RgnaLFJsuIy4o8M4LbK5xpStSK25KjllNGW98,1435
+treact/renderers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+treact/renderers/console.py,sha256=WO99bg_LaWcoBTuXu-pQ9McSFx8ALnVaHwT16gq5LPY,253
+treact/renderers/html.py,sha256=PnBAhWpMpsQJQArQZ3p2siStLRngqbPnIi0eYj2lUgw,1571
+treact/renderers/tree.py,sha256=B7m2wPVuvgeJ38IhiYtWukisqF9dp90YALZmdCxhvCM,485
+treact-0.0.1.dist-info/METADATA,sha256=rk4Kqyv-paY-VQeVjw6Ot4Lx8kR_L2rPCzXM-HtwXgo,1378
+treact-0.0.1.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+treact-0.0.1.dist-info/licenses/LICENSE.txt,sha256=goHaU2uNecqECsfKpSLCJaxbsYjb_bkyNP4Esxap98I,1109
+treact-0.0.1.dist-info/RECORD,,
