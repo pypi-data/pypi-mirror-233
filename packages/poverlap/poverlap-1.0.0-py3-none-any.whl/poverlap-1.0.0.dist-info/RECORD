@@ -1,0 +1,12 @@
+poverlap/__init__.py,sha256=JTKcFBhIb5CqNJ-ykZID2L-ZobnEzqk3aZjNfWbxyJA,717
+poverlap/point_circle.py,sha256=G1x1C1csceOM2UAMLkxTbHfeUaN32-rwRDLMEgN_5Jw,1849
+poverlap/point_line.py,sha256=abebFmokgoq4K7M6LyiAXhHLklMdbrvcPYDpWTqlQH0,1835
+poverlap/point_point.py,sha256=jbmK9muye9kOoB_xvDIk47isz8LWI2iaF9_UlYjTu_k,1546
+poverlap/point_polygon.py,sha256=A-JpHneQQV8e6yd2fn6sKwHCFpK1sM_xyVk5Wx9oyrw,1139
+poverlap/point_rectangle.py,sha256=0eeU8zIVYYKIMy_WY9DxrRRah-FqqhjRFHTC3fLrGgw,1861
+poverlap/point_triangle.py,sha256=BZF30-9qD8UCkds78rkhgPHdEWW9ps-ME-PokqTaD18,1004
+poverlap-1.0.0.dist-info/License,sha256=0tgW1gk3LYxEqnTJ5T2qDpwGOZ-hpuvauDSXXX6fpiE,1100
+poverlap-1.0.0.dist-info/METADATA,sha256=BPfaj00IaFpaiKcRWEw7dLM5ThJ38WSOcg4vmz4OxaU,4009
+poverlap-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+poverlap-1.0.0.dist-info/top_level.txt,sha256=L9hHTBoHfhkfM_LDymTWsHv2wI-qmYRgHhMvsw1J8LI,9
+poverlap-1.0.0.dist-info/RECORD,,
