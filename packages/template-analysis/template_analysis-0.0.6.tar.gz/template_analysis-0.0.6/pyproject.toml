@@ -1,0 +1,76 @@
+[tool.poetry]
+# I use poetry as just a package manager.
+# So, I only write the settings that poetry needs.
+# The actual package metadata is written in setup.cfg.
+# I use pypa/build for packaging.
+name = "python-template-analysis"
+version = "0.0.0"
+description = ""
+authors = []
+packages = [
+    { include = "template_analysis" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+pytest = "*"
+isort = "*"
+pyupgrade = "*"
+pytest-cov = "*"
+flake8 = "*"
+mypy = "*"
+poethepoet = "*"
+setuptools-scm = "*"
+build = "*"
+
+[build-system]
+requires = ["setuptools",  "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "template_analysis/_version.py"
+
+[tool.poe.tasks]
+test = "pytest"
+coverage-xml = "pytest --cov=template_analysis --doctest-modules --cov-report=xml"
+format = [
+    { cmd = "isort template_analysis"},
+    { cmd = "black template_analysis"},
+    { cmd = "pyupgrade --py37-plus template_analysis/*.py"},
+]
+check = [
+    { cmd = "isort --check-only --diff template_analysis"},
+    { cmd = "black --check --diff template_analysis"},
+    { cmd = "flake8 template_analysis"},
+    { cmd = "mypy template_analysis"},
+]
+build = [
+    { cmd = "python -m build"}
+]
+
+[tool.mypy]
+# https://mypy.readthedocs.io/en/latest/config_file.html
+ignore_missing_imports = true
+disallow_any_decorated = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_return_any = true
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.black]
+line-length = 79
+
+[tool.flake8]
+max-line-length = 79
