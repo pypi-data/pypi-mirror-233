@@ -1,0 +1,215 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "saturnin-core"
+dynamic = ["version"]
+description = "Saturnin core services"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Pavel Cisar", email = "pcisar@users.sourceforge.net"},
+]
+keywords = ["Saturnin", "Core", "Services", "Firebird", "Butler", "Platform", "ZeroMQ"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Topic :: System :: Systems Administration",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Logging",
+    "Topic :: Database",
+    ]
+dependencies = [
+    "saturnin>=0.9.0",
+    "firebird-driver>=1.10.0",
+    "firebird-lib>=1.5.0"
+    ]
+
+[project.urls]
+Home = "http://firebirdsql.org/en/saturnin/"
+Documentation = "https://saturnin-core.rtfd.io"
+Issues = "https://github.com/FirebirdSQL/saturnin-core/issues"
+Funding = "https://github.com/sponsors/pcisar"
+Source = "https://github.com/FirebirdSQL/saturnin-core"
+
+[project.entry-points."firebird.butler.protobuf"]
+"saturnin.core.protobuf.common" = "saturnin.core.protobuf.common_pb2:DESCRIPTOR"
+"saturnin.core.protobuf.fblog" = "saturnin.core.protobuf.fblog_pb2:DESCRIPTOR"
+"saturnin.core.protobuf.fbtrace" = "saturnin.core.protobuf.fbtrace_pb2:DESCRIPTOR"
+
+[project.entry-points."saturnin.service"]
+"514faccc-a938-5109-ab0c-8d403e898709" = "saturnin.core.text_writer.api:SERVICE_DESCRIPTOR"
+"13ec0815-fe8a-5b0c-a3bc-76404bf07104" = "saturnin.core.text_reader.api:SERVICE_DESCRIPTOR"
+"a311d7c4-3ca1-57e6-9203-5c0f08c7e5f2" = "saturnin.core.text_filter.api:SERVICE_DESCRIPTOR"
+"df1aeeaf-194c-5bcc-93b9-891c0216f3d8" = "saturnin.core.binary_writer.api:SERVICE_DESCRIPTOR"
+"207facd5-fc8b-5741-9cba-91ec9d3ab25b" = "saturnin.core.binary_reader.api:SERVICE_DESCRIPTOR"
+"4bf551b7-d138-5014-98cd-261dab381d83" = "saturnin.core.proto_printer.api:SERVICE_DESCRIPTOR"
+"3b210c54-5b80-5c04-b88c-4cfe4b04a6a7" = "saturnin.core.proto_filter.api:SERVICE_DESCRIPTOR"
+"07708d74-f57d-5aaf-a638-011363e1d452" = "saturnin.core.proto_aggregator.api:SERVICE_DESCRIPTOR"
+"40d8648b-2920-5bc5-a1a2-9fc761be3442" = "saturnin.core.fb_log_fromsrv.api:SERVICE_DESCRIPTOR"
+"35fcea0e-c0fd-55a4-9641-12ed0cf85d9b" = "saturnin.core.fb_log_parse.api:SERVICE_DESCRIPTOR"
+"e9567080-85ed-5773-b09b-64b7fe7164f5" = "saturnin.core.fb_trace_parse.api:SERVICE_DESCRIPTOR"
+"bf8d0d53-7223-5fe8-aef3-8489865c3cbb" = "saturnin.core.fb_trace_session.api:SERVICE_DESCRIPTOR"
+
+[tool.hatch.version]
+path = "src/saturnin/core/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/saturnin"]
+
+[tool.hatch.envs.default]
+dependencies = [
+]
+
+[tool.hatch.envs.test]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.test.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+version = "python --version"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11"]
+
+[tool.hatch.envs.doc]
+detached = false
+platforms = ["linux"]
+dependencies = [
+  "Sphinx>=7.1",
+  "sphinx-bootstrap-theme>=0.8.1",
+  "sphinx-autodoc-typehints>=1.24.0",
+  "doc2dash>=3.0.0"
+]
+[tool.hatch.envs.doc.scripts]
+build = "cd docs ; make html"
+docset = [
+  "cd docs ; doc2dash -u https://saturnin-core.readthedocs.io/en/latest/ -f -i ./_static/fb-favicon.png -n saturnin-core ./_build/html/",
+  "cd docs; VERSION=`hatch version` ; tar --exclude='.DS_Store' -cvzf ../dist/saturnin-core-$VERSION-docset.tgz saturnin-core.docset",
+]
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = [
+  "black>=23.1.0",
+  "mypy>=1.0.0",
+  "ruff>=0.0.243",
+]
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:src/saturnin tests}"
+style = [
+  "ruff {args:.}",
+  "black --check --diff {args:.}",
+]
+fmt = [
+  "black {args:.}",
+  "ruff --fix {args:.}",
+  "style",
+]
+all = [
+  "style",
+  "typing",
+]
+
+[tool.black]
+target-version = ["py38"]
+line-length = 120
+skip-string-normalization = true
+
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+ignore = [
+  # Allow non-abstract empty methods in abstract base classes
+  "B027",
+  # Allow boolean positional values in function calls, like `dict.get(... True)`
+  "FBT003",
+  # Ignore checks for possible passwords
+  "S105", "S106", "S107",
+  # Ignore complexity
+  "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+]
+unfixable = [
+  # Don't touch unused imports
+  "F401",
+]
+
+[tool.ruff.isort]
+known-first-party = ["saturnin"]
+
+[tool.ruff.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.per-file-ignores]
+# Tests can use magic values, assertions, and relative imports
+"tests/**/*" = ["PLR2004", "S101", "TID252"]
+
+[tool.coverage.run]
+source_pkgs = ["saturnin", "tests"]
+branch = true
+parallel = true
+omit = [
+]
+
+[tool.coverage.paths]
+saturnin = ["src/python", "*/python/src/saturnin"]
+tests = ["tests", "*/python/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
