@@ -1,0 +1,7 @@
+setuptools
+scikit-build
+cython
+cmake
+oldest-supported-numpy
+ninja
+build
