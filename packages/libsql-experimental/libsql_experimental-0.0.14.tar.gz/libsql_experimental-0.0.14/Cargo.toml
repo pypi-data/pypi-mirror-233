@@ -1,0 +1,14 @@
+[package]
+name = "libsql-python"
+version = "0.0.14"
+edition = "2021"
+
+[lib]
+name = "libsql_experimental"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19.0"
+libsql = { git = "https://github.com/tursodatabase/libsql/", rev = "4875412c3867ea10d46a9b23404eebba8a45f9f1" }
+libsql-sys = { git = "https://github.com/tursodatabase/libsql/", rev = "4875412c3867ea10d46a9b23404eebba8a45f9f1" }
+tokio = { version = "1.29.1", features = [ "rt-multi-thread" ] }
