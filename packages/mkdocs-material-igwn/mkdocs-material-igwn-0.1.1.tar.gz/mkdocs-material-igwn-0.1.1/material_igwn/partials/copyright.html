@@ -1,0 +1,38 @@
+<!--
+  copyright.html | custom IGWN MkDocs copyright footer block
+
+  This file should be kept as precisely in-sync with
+  /sphinx/sphinx_immaterial_igwn/partials/copyright.html as
+  possible to ensure a consistent display between
+  IGWN Sphinx and MkDocs themes.
+
+  Copyright (C) 2022 Cardiff University
+  License: MIT, see LICENSE for details
+-->
+
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+
+  {# add our acknowledgements partial immediately below the copyright statement #}
+  {% include "partials/acknowledgements.html" %}
+
+  {% if not config.extra.generator == false %}
+    Made with
+    <a
+      href="https://computing.docs.ligo.org/igwn-material/mkdocs/"
+      target="_blank" rel="noopener"
+    >
+      IGWN Material for MkDocs
+    </a>.
+  {% endif %}
+
+  {% if not config.extra.last_updated == false %}
+  <div>
+    Last updated {{ build_date_utc.strftime("%B %d, %Y") }}.
+  </div>
+  {% endif %}
+</div>
