@@ -1,0 +1,6 @@
+python_package/__init__.py,sha256=iFP6OwhNBAzbO7LwcmbLcUuKi6dhISuHfR6rWium0D4,363
+python_package/hello_world.py,sha256=GogXmyYRJHKBlKpMM1oNmSob2l4itrJITtVIcjv2pCc,650
+openmeteo_sdk-1.0.0.dist-info/LICENSE,sha256=Bve99gTbFQ4T59iYp3VmnbNNKNi7PuOb7iAd5mbvrpQ,1067
+openmeteo_sdk-1.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+openmeteo_sdk-1.0.0.dist-info/METADATA,sha256=hPVwdTZTmFHp1Z1twXEqsL0kzSl1dKIdIlwJxya3Sug,1835
+openmeteo_sdk-1.0.0.dist-info/RECORD,,
