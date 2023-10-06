@@ -1,0 +1,15 @@
+connpy/__init__.py,sha256=NEYerDfqB-zty0m8lQkR3ofka7DLBCiy8we-KW_xPhU,8545
+connpy/__main__.py,sha256=B-icvqMBj2h7wrbN4Mfp7WrSiyNXX7pj1jNoq2kqpng,181
+connpy/_version.py,sha256=avUfVgZnbSr4uvRKNowN9v_Z8xH9YQnmOT4Rl1ilFZQ,23
+connpy/ai.py,sha256=yuBuc5u13shQl75xA8Jeq33XMhqoyQu5vBzCyGyZrLc,24594
+connpy/api.py,sha256=YC-51dM1kHrzcjaiHB4jwcgrQGoD7BT8C8ihgNOv1xk,5102
+connpy/completion.py,sha256=A1qfYNSyXICKKotP7WEXq2GqXMtlNee_CMRePHwh0LI,5375
+connpy/configfile.py,sha256=RnZtz-_D2AhkgG05P3BjGqcLmnZgz1vTVc8chemZ2jo,15844
+connpy/connapp.py,sha256=_IGXmaGz-3m8vMB1EzvqwHUMb3dWJnbfyH62f1WZTVY,62176
+connpy/core.py,sha256=7Srxqjy9vPNMSvO40hHl6ZUYI5jI5A-ST0SOC6N9XKM,30095
+connpy-3.5.0.dist-info/LICENSE,sha256=CoUtIyRRs3rELlOtrXhzSnGPEMfIoBvyxH8Vvfug_C0,1068
+connpy-3.5.0.dist-info/METADATA,sha256=yNto8pSUvVtosmxtZ4DqAo0NI4Q4QryInnmY92N29Fs,9619
+connpy-3.5.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+connpy-3.5.0.dist-info/entry_points.txt,sha256=7OB5ch4OfHQR_kLpIXOi11QsfA85Yp1kA3Iu83kam7s,126
+connpy-3.5.0.dist-info/top_level.txt,sha256=JdS2ceiwXdFVQv08sUBnND30GlcGCNxIu-oaM_marzo,7
+connpy-3.5.0.dist-info/RECORD,,
