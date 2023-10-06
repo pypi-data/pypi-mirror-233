@@ -1,0 +1,27 @@
+[project]
+name = "pytower"
+version = "0.0.1"
+authors = [
+  { name="Salman Mohammadi", email="salman@pytower.com" },
+]
+description = "build and deploy Pythonic apps"
+readme = "README.rst"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers"
+]
+
+[project.urls]
+Homepage = "https://pytower.com"
+"Source Code" = "https://codeberg.org/pytower/pytower"
+"Bug Tracker" = "https://codeberg.org/pytower/pytower/issues"
+Documentation = "https://docs.pytower.com"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
