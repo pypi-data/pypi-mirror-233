@@ -1,0 +1,6 @@
+pycatima/__init__.py,sha256=_Yam6XLrUdBZ7wSdGv8hDdnLv9LXKnHiIOttGOogWQ8,21
+pycatima/_ext.cp310-win_amd64.pyd,sha256=OwkUGM5KAK3lqgme7PdvslRyeUTDn47bp3qmpSNByDw,1105408
+pycatima-1.90.dist-info/METADATA,sha256=JjHUnVd4Uyd0U9GrjEpi1UGVEiK1HDetDAAwOAO9Ucg,987
+pycatima-1.90.dist-info/WHEEL,sha256=TC34e7eeK5YVfepID_S2yki5fgC6-BXrA3TyWEywg2Q,105
+pycatima-1.90.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycatima-1.90.dist-info/RECORD,,
