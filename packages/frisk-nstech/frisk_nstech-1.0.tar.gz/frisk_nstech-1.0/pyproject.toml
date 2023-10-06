@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "frisk_nstech"
+version = "1.0"
+authors = [
+  { name="frisk", email="Frisk2010@163.com"},
+]
+description = "juans is a package for fast iterating your deep learning experiment, it has some helpful tricks which are often used in competition and work by me, and more tricks are on the way!"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+        "wget",
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/NickYi1990/juans"
