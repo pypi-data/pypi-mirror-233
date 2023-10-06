@@ -1,0 +1,9 @@
+snakemake
+pymbar
+alchemlyb
+gromacs
+scipy
+numpy
+pandas
+matplotlib
+argparse
