@@ -1,0 +1,13 @@
+RUTTS/__init__.py,sha256=SiGAShwFPxH4iCMHg0Cv5_1CtNK628v1rx8OhwYsFDQ,27
+RUTTS/infer_onnx.py,sha256=jhkuM3BqdRyHvvBYvoCa_TV779xz-xFBLSlVJspYC_s,3526
+RUTTS/tokenizer/__init__.py,sha256=_FBtmaNGefl9Igxn4llHvnlE660v32AP1fg_dHAciF4,89
+RUTTS/tokenizer/g2p/__init__.py,sha256=pqP11ZPbJtClN99487TztsXoLD38emrBUYj5guxAH-g,32
+RUTTS/tokenizer/g2p/g2p.py,sha256=N6cHqk1jOxqkmm40DkotSk8BO3y2e0Tx8Y1pbV_SoZg,2052
+RUTTS/tokenizer/g2p/tokenizer.py,sha256=h1ibO_JX7bwqDLhXQ_wmarJyqB8Jtc7dhp6l9SJNJgQ,1455
+RUTTS/tokenizer/gruut/__init__.py,sha256=pqP11ZPbJtClN99487TztsXoLD38emrBUYj5guxAH-g,32
+RUTTS/tokenizer/gruut/tokenizer.py,sha256=tgapt96ktv-vB5vgI3edgOW_uoohzP0dT_ZXxLjX2gY,1212
+RUTTS-0.1.13.dist-info/LICENSE.txt,sha256=U5vwLmoaE1tZayCv4tarj8XpvKmtIXu8tG9ClLZkfYI,1057
+RUTTS-0.1.13.dist-info/METADATA,sha256=PzhEA1x8OBtXBfIaivdQiAbTjyKX2I9lw3e44xgZ208,8115
+RUTTS-0.1.13.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+RUTTS-0.1.13.dist-info/top_level.txt,sha256=84ezTmlV6cp2_Ni6uCUAYK0m2V4H73KqZQKOKDHTlac,6
+RUTTS-0.1.13.dist-info/RECORD,,
