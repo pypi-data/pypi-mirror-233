@@ -1,0 +1,42 @@
+:py:mod:`ssbkonf.util`
+======================
+
+.. py:module:: ssbkonf.util
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.util.prepare_input
+   ssbkonf.util.find_hierarchies
+   ssbkonf.util.convert2r
+   ssbkonf.util.convert2py
+   ssbkonf.util.convert_formula2r
+   ssbkonf.util.convert_hierarchies
+
+
+
+.. py:function:: prepare_input(data: pandas.DataFrame, freq_var=None, num_var=None, dim_var: list[str] = None, formula: str = None, hierarchies: dict[str, pandas.DataFrame | list[pandas.DataFrame]] = None)
+
+
+.. py:function:: find_hierarchies(data, total='Total')
+
+
+.. py:function:: convert2r(data)
+
+
+.. py:function:: convert2py(data)
+
+
+.. py:function:: convert_formula2r(formula)
+
+
+.. py:function:: convert_hierarchies(hier)
+
+

@@ -1,0 +1,83 @@
+:py:mod:`ssbkonf.suppress`
+==========================
+
+.. py:module:: ssbkonf.suppress
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.suppress.suppress_small_counts
+   ssbkonf.suppress.suppress_few_contributors
+   ssbkonf.suppress.suppress_dominant_cells
+
+
+
+.. py:function:: suppress_small_counts(data: pandas.DataFrame, max_n: int, freq_var: str = None, dim_var: list[str] = None, hierarchies: dict[str, pandas.DataFrame | list[pandas.DataFrame]] = None, formula: str = None, protect_zeros: bool = True, secondary_zeros: bool = False) -> pandas.DataFrame
+
+   Wrapper function for suppressing small counts in frequency tables. See the documentation of SuppressSmallCounts in the R package GaussSuppression for all the details.
+
+   Args:
+       - data (DataFrame): Input data as pandas.DataFrame
+       - max_n (int): Maximum value to be suppressed. Defaults to 3.
+       - freq_var (str, optional): Name of the variable containing frequency information. Defaults to "freq".
+       - dim_var (list[str], optional): List of variable names defining the categorical variables of the table. Defaults to None.
+       - hierarchies (dict[str, DataFrame  |  list[DataFrame]], optional): A dictionary containing hierarchies. Each key is a variable name, each value is a list of pandas.DataFrames describing the hierarchies associated with the key. Defaults to None.
+       - formula (str, optional): An R model formula for table definition. Defaults to None.
+       - protect_zeros (bool, optional): Boolean value, determines whether zeros should be suppressed. Defaults to True.
+       - secondary_zeros (bool, optional): Boolean value, determines whether zeros can be used as secondary suppressions. Defaults to False.
+
+   Returns:
+       pandas.DataFrame: A DataFrame containing the output table, as well as suppression information.
+
+
+.. py:function:: suppress_few_contributors(data: pandas.DataFrame, max_n: int, freq_var: str = None, num_var: str = None, dim_var: list[str] = None, hierarchies: dict[str, pandas.DataFrame | list[pandas.DataFrame]] = None, formula: str = None, contributor_var=None, remove_codes: list[str] = None, remove0=True, protect_zeros=False, secondary_zeros=False) -> pandas.DataFrame
+
+   Wrapper function for suppressing few contributors in magnitude tables. See the documentation of SuppressFewContributors in the R package GaussSuppression for all the details.
+
+   Args:
+       - data (DataFrame): Input data as pandas.DataFrame
+       - max_n (int): Maximum number of contributors to be suppressed.
+       - freq_var (str, optional): Name of the variable containing frequency information. Defaults to "freq".
+       - num_var (str, optional): Name (or list of names) of variables containing numerical variables.
+       - dim_var (list[str], optional): List of variable names defining the categorical variables of the table. Defaults to None.
+       - hierarchies (dict[str, DataFrame  |  list[DataFrame]], optional): A dictionary containing hierarchies. Each key is a variable name, each value is a list of pandas.DataFrames describing the hierarchies associated with the key. Defaults to None.
+       - formula (str, optional): An R model formula for table definition. Defaults to None.
+       - contributor_var(str, optional): Variable determining contributor holding information. Defaults to None.
+       - remove_codes(list[str], optional): List of codes to omitted when counting contributors. Defaults to None.
+       - remove0(bool, optional): Boolean value to determine whether empty cells should be omitted in output. Defaults to True.
+       - protect_zeros (bool, optional): Boolean value, determines whether zeros should be suppressed. Defaults to True.
+       - secondary_zeros (bool, optional): Boolean value, determines whether zeros can be used as secondary suppressions. Defaults to False.
+
+   Returns:
+       pandas.DataFrame: A DataFrame containing the output table, as well as suppression information.
+
+
+.. py:function:: suppress_dominant_cells(data: pandas.DataFrame, n: int | list[int], k: int | list[int], all_dominance: bool = False, freq_var: str = None, num_var: str = None, dim_var: list[str] = None, hierarchies: dict[str, pandas.DataFrame | list[pandas.DataFrame]] = None, formula=None, contributor_var=None, s_weight_var=None, protect_zeros=False, secondary_zeros=False) -> pandas.DataFrame
+
+   Wrapper function for suppressing dominant cells in magnitude tables. See the documentation of SuppressDominantCells in the R package GaussSuppression for all the details.
+
+   Args:
+       - data (DataFrame): Input data as pandas.DataFrame
+       - n (int | list[int]): a (list of) integer value to be used in the dominance rule. Must be same length as parameter `k`. Represents the number of contributing units.
+       - k (int | list[int]): a (list of) integer value to be used in the dominance rule. Must be same length as parameter `n`.  Represents the percentage threshold in the dominance rule.
+       - all_dominance (bool, optional): Boolean value that determines whether dominance information should be included in output. Defaults to False.
+       - freq_var (str, optional): Name of the variable containing frequency information. Defaults to "freq".
+       - num_var (str, optional): Name (or list of names) of variables containing numerical variables.
+       - dim_var (list[str], optional): List of variable names defining the categorical variables of the table. Defaults to None.
+       - hierarchies (dict[str, DataFrame  |  list[DataFrame]], optional): A dictionary containing hierarchies. Each key is a variable name, each value is a list of pandas.DataFrames describing the hierarchies associated with the key. Defaults to None.
+       - formula (str, optional): An R model formula for table definition. Defaults to None.
+       - contributor_var(str, optional): Variable determining contributor holding information. Defaults to None.
+       - s_weight_var (_type_, optional): Variable name of the sampling weights. Defaults to None.
+       - protect_zeros (bool, optional): Boolean value, determines whether zeros should be suppressed. Defaults to True.
+       - secondary_zeros (bool, optional): Boolean value, determines whether zeros can be used as secondary suppressions. Defaults to False.
+   Returns:
+       pandas.DataFrame: A DataFrame containing the output table, as well as suppression information.
+
+

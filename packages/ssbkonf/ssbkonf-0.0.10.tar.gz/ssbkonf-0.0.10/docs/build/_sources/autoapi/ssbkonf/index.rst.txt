@@ -1,0 +1,63 @@
+:py:mod:`ssbkonf`
+=================
+
+.. py:module:: ssbkonf
+
+.. autoapi-nested-parse::
+
+   A Python package for applying output disclosure control to pandas.DataFrames.
+   It is first and foremost a set of wrappers that call the R functions that implement the methods.
+
+   The package consists of two main submodules:
+
+   - suppress: this module contains functions for applying cell suppression to tables. The current implementation includes a wrapper function for suppressing small counts in frequency tables.
+   - perturb: this module contains functions for applying perturbative methods to tables. Currently, the only implemented method is small count rounding. Future versions might include cell-key perturbation.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   pckg/index.rst
+   perturb/index.rst
+   suppress/index.rst
+   util/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.example_data
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.__version__
+   ssbkonf.__ssbtools
+
+
+.. py:data:: __version__
+   :value: '0.0.9'
+
+   
+
+.. py:data:: __ssbtools
+
+   
+
+.. py:function:: example_data(name)
+
+

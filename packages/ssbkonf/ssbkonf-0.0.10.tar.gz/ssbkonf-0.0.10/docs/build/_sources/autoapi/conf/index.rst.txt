@@ -1,0 +1,59 @@
+:py:mod:`conf`
+==============
+
+.. py:module:: conf
+
+
+Module Contents
+---------------
+
+.. py:data:: project
+   :value: 'ssbkonf'
+
+   
+
+.. py:data:: copyright
+   :value: '2023, Daniel P. Lupp'
+
+   
+
+.. py:data:: author
+   :value: 'Daniel P. Lupp'
+
+   
+
+.. py:data:: release
+   :value: '0.0.6'
+
+   
+
+.. py:data:: extensions
+   :value: []
+
+   
+
+.. py:data:: autoapi_dirs
+   :value: ['..']
+
+   
+
+.. py:data:: templates_path
+   :value: ['_templates']
+
+   
+
+.. py:data:: exclude_patterns
+   :value: []
+
+   
+
+.. py:data:: html_theme
+   :value: 'alabaster'
+
+   
+
+.. py:data:: html_static_path
+   :value: ['_static']
+
+   
+

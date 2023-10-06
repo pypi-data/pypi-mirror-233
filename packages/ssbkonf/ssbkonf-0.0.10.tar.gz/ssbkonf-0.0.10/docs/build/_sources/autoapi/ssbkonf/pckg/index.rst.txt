@@ -1,0 +1,39 @@
+:py:mod:`ssbkonf.pckg`
+======================
+
+.. py:module:: ssbkonf.pckg
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.pckg.importr_tryhard
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   ssbkonf.pckg.utils
+   ssbkonf.pckg.__ssbtools
+
+
+.. py:data:: utils
+
+   
+
+.. py:function:: importr_tryhard(packname)
+
+
+.. py:data:: __ssbtools
+
+   
+
