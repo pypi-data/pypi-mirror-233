@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rmscene
+Version: 0.5.0
+Summary: Read v6 .rm files from the reMarkable tablet
+Home-page: https://github.com/ricklupton/rmscene
+License: MIT
+Author: Rick Lupton
+Author-email: mail@ricklupton.name
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: packaging (>=23.0,<24.0)
+Project-URL: Repository, https://github.com/ricklupton/rmscene
