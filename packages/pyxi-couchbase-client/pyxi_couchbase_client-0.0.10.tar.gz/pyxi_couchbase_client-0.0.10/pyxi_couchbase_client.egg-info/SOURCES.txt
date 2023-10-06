@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyxi_couchbase_client.egg-info/PKG-INFO
+pyxi_couchbase_client.egg-info/SOURCES.txt
+pyxi_couchbase_client.egg-info/dependency_links.txt
+pyxi_couchbase_client.egg-info/requires.txt
+pyxi_couchbase_client.egg-info/top_level.txt
+src/pyxi_couchbase_client/__init__.py
+src/pyxi_couchbase_client/couchbase_client.py
+src/pyxi_couchbase_client/secret_provider.py
