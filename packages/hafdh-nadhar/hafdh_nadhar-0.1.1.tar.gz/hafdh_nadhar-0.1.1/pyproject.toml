@@ -1,0 +1,24 @@
+[project]
+name = "hafdh-nadhar"
+version = "0.1.1"
+description = "Remove humans from a picture"
+authors = [
+    { name = "karim-bouchez", email = "bouchez.karim@gmail.com" },
+]
+dependencies = [
+    "opencv-python>=4.8.0.76",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = []
