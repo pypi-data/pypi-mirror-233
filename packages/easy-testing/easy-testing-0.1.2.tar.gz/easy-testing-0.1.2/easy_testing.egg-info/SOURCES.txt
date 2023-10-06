@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+easy_testing/__init__.py
+easy_testing.egg-info/PKG-INFO
+easy_testing.egg-info/SOURCES.txt
+easy_testing.egg-info/dependency_links.txt
+easy_testing.egg-info/not-zip-safe
+easy_testing.egg-info/requires.txt
+easy_testing.egg-info/top_level.txt
