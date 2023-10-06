@@ -1,0 +1,35 @@
+# Build tools specified
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Metadata for my project
+[project]
+name = "my_mia"
+
+# Versioning: MAJOR.MINOR.PATCH
+version = "0.0.1"
+authors = [
+  { name="Amisha Muni" , email="notdisclosed@me.com" },
+]
+description = "Building a personal assistant using LangChain, Python, Streamlit and OpenAI LLMs"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["langchain", "python3"]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+]
+
+# Data i dont want to specify statically
+dynamic = ["dependencies"]
+
+# Specify my dependencies via separate files
+# This is configuration specific to the 'setuptools' build backend
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+"Homepage" = "https://github.com/amishamuni/mia"

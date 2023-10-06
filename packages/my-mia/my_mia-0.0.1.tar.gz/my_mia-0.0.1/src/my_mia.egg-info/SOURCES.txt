@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/mia/__init__.py
+src/mia/main.py
+src/my_mia.egg-info/PKG-INFO
+src/my_mia.egg-info/SOURCES.txt
+src/my_mia.egg-info/dependency_links.txt
+src/my_mia.egg-info/top_level.txt
