@@ -1,0 +1,13 @@
+sccross/__init__.py,sha256=orzd6BJrv0-A9lLKU0OewhCX4F9HPsuSocuv5nBHslo,611
+sccross/data.py,sha256=f5blP4COtTSG__8BBovntVE9JveHjmuYzPx_WOmTeYk,17258
+sccross/metrics.py,sha256=lVPJytzFjxVKFCFE4qLsFRDVzbIdzkYqez_6P-Ns4fA,8539
+sccross/utils.py,sha256=QOnYHLXC6NCH2JfXCghkWqA_v1KUOijSNc5eCUWxsnU,28812
+sccross/models/__init__.py,sha256=hqMHx-7FXLfFnEvFKZVqlprZpbW2hlC8XB7r9tYlAeA,2927
+sccross/models/data.py,sha256=aJCNoHThzPSBn1TnkIzgC0sAz0f0B6vkTUEY4D-Gneg,11379
+sccross/models/layers.py,sha256=mk41yJUUUnlrx-Zu68A3Q3lFAe7xwh7EM7mI1cY-qEo,20350
+sccross/models/sccross.py,sha256=5DXwzQC-ItwXZSjt3G50soUioGS4TGsWIpuXTuRKm9M,76157
+sccross/models/utils.py,sha256=WhXelJiu6dt4s3nQ-YcNtNZXLJYadZ_dM44z97wuHns,25980
+sccross-1.0.1.dist-info/LICENSE,sha256=46IaroA-QsjvjD3Tlk9wtREewX7Gl0rxMvjXkXSQVpE,1091
+sccross-1.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+sccross-1.0.1.dist-info/METADATA,sha256=sUAh8FKPAVZSP-cX-6KwZz2aILJ3YhUGLCfvVYOF2iU,4449
+sccross-1.0.1.dist-info/RECORD,,
