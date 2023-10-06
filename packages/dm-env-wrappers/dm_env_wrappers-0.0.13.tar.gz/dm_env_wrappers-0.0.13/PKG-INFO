@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: dm_env_wrappers
+Version: 0.0.13
+Summary: A collection of wrappers for dm_env environments
+Home-page: https://github.com/kevinzakka/dm_env_wrappers
+Author: Kevin Zakka
+Author-email: kevinarmandzakka@gmail.com
+Maintainer: Kevin Zakka
+Maintainer-email: kevinarmandzakka@gmail.com
+License: Apache License 2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dm-env
+Requires-Dist: imageio
+Requires-Dist: imageio-ffmpeg
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: test
+Requires-Dist: absl-py; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Requires-Dist: dm_control>=1.0.7; extra == "test"
+Requires-Dist: gym<0.24.0; extra == "test"
+Requires-Dist: gymnasium; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: absl-py; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: dm_control>=1.0.7; extra == "dev"
+Requires-Dist: gym<0.24.0; extra == "dev"
+Requires-Dist: gymnasium; extra == "dev"
+Provides-Extra: gym
+Requires-Dist: gym<0.24.0; extra == "gym"
+Provides-Extra: gymnasium
+Requires-Dist: gymnasium; extra == "gymnasium"
+
+# `dm_env_wrappers`
+
+[![PyPI Python Version][pypi-versions-badge]][pypi]
+[![PyPI version][pypi-badge]][pypi]
+[![build][tests-badge]][tests]
+
+[pypi-versions-badge]: https://img.shields.io/pypi/pyversions/dm_env_wrappers
+[pypi-badge]: https://badge.fury.io/py/dm_env_wrappers.svg
+[pypi]: https://pypi.org/project/dm_env_wrappers/
+[tests-badge]: https://github.com/kevinzakka/dm_env_wrappers/actions/workflows/ci.yml/badge.svg
+[tests]: https://github.com/kevinzakka/dm_env_wrappers/actions/workflows/ci.yml
+
+`dm_env_wrappers` is a collection of frequently-used wrappers for environments that respect the [dm_env](https://github.com/deepmind/dm_env) interface (e.g., dm_control suite/composer envs).
