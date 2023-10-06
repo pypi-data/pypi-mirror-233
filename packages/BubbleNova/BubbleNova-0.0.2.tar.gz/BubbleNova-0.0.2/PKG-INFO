@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: BubbleNova
+Version: 0.0.2
+Summary: A Python library for running multiple Discord bots at once.
+Home-page: UNKNOWN
+Author: SoapDoesCode
+Author-email: 
+License: UNKNOWN
+Keywords: python,discord,disord bot,bubble nova
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# BubbleNova
+
+BubbleNova is a Python framework developed to simplify the concurrent execution of multiple Discord bots (or other scripts). It achieves this by running the bots in separate threads, allowing them to operate independently and concurrently.
+
+## How it Works
+
+BubbleNova operates based on a dictionary input that contains the name of your bot (or script) and its directory path relative to the script where you import BubbleNova. It starts each bot in its own thread, ensuring they run in separate, isolated environments.
+
+## Usage
+
+To use BubbleNova, follow these steps:
+
+1. Import the `BubbleNova` library into your Python script.
+
+```python
+import BubbleNova
+```
+
+2. Create a dictionary that maps your bot names to their respective script directories:
+
+```python
+bot_list = {
+    "SoapBot": "bots/SoapBot.py",
+    "Bubbles": "bots/Bubbles.py"
+}
+```
+
+3. Start the bots using the start_bots function, passing in your bot list as an argument:
+
+```python
+BubbleNova.start_bots(bot_list)
+```
+
+When you run your script, BubbleNova will launch each bot in a separate thread, allowing them to operate concurrently.
+
+# Example
+
+Here's a sample code snippet demonstrating how to use BubbleNova:
+
+```python
+import BubbleNova
+
+bot_list = {
+    "SoapBot": "bots/SoapBot.py",
+    "Bubbles": "bots/Bubbles.py"
+}
+
+BubbleNova.start_bots(bot_list)
+
+print("This code here can still run even though the bots are also still online!")
+```
+

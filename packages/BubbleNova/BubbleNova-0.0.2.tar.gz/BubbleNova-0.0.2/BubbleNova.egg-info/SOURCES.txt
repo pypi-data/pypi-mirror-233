@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+BubbleNova/BubbleNova.py
+BubbleNova/__init__.py
+BubbleNova.egg-info/PKG-INFO
+BubbleNova.egg-info/SOURCES.txt
+BubbleNova.egg-info/dependency_links.txt
+BubbleNova.egg-info/requires.txt
+BubbleNova.egg-info/top_level.txt
