@@ -1,0 +1,11 @@
+doc/soft-moe-layer.jpeg,sha256=vgnLyGf0xSzV4cGvgwOejMx5nVU9YQRLXwoc5KzOAeE,150122
+soft_mixture_of_experts/__init__.py,sha256=ZQQLzU8ujYGLX223i55IA4OdNRmc0KbnB1Ht08qufp4,386
+soft_mixture_of_experts/multi_expert.py,sha256=xsWMteQKJsX0PEv8sEi1oaOpESRkRcYuQBZOtVkze7Q,3715
+soft_mixture_of_experts/soft_moe.py,sha256=1jQImvwL6s7YHazkJ2S_OV2Gno_OccWVv302X6kWjAY,4244
+soft_mixture_of_experts/transformer.py,sha256=_I4ReExAkRv4HYBEepi9iggMjpmC7m6l5wM2E3zNC2Y,10479
+soft_mixture_of_experts/vit.py,sha256=hs9Pr_Snon5-y4fDgCaYSOv0ggQ6-qtS9g7UYEENr7w,7529
+soft_mixture_of_experts-0.2.0.dist-info/LICENSE,sha256=hRXuyjlIpCesw-fD9ONCbyH2AZxw9AKL2IMx3EcCOEs,1067
+soft_mixture_of_experts-0.2.0.dist-info/METADATA,sha256=TpWHRqCKhqVoSbv1ONoMikml3_iPWwjG-WEFrSB5D04,5921
+soft_mixture_of_experts-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+soft_mixture_of_experts-0.2.0.dist-info/top_level.txt,sha256=7nCb4yk_PkHcw89_u-iw5uWhbSiIf8Urpjhm196NuyA,28
+soft_mixture_of_experts-0.2.0.dist-info/RECORD,,
