@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+sparsemixer/__init__.py
+sparsemixer/sparsemixer.py
+sparsemixer/switchgate.py
+sparsemixer.egg-info/PKG-INFO
+sparsemixer.egg-info/SOURCES.txt
+sparsemixer.egg-info/dependency_links.txt
+sparsemixer.egg-info/not-zip-safe
+sparsemixer.egg-info/requires.txt
+sparsemixer.egg-info/top_level.txt
