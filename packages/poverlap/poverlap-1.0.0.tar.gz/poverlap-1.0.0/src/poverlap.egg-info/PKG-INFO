@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: poverlap
+Version: 1.0.0
+Summary: Point Overlapping With Any 2D Shape
+Author-email: Tooraj <booleansfunction@Gmail.com>
+License: Copyright (c) <2025> <Tooraj - booleansfunction@Gmail.com>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/IRTJ/poverlap
+Project-URL: Source, https://github.com/IRTJ/poverlap
+Keywords: point,overlapping,collide,2d overlap,2d collide,collision,overlap,point overlap,point collide
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: License
+
+# **POVERLAP**
+
+
+POverlap or Point Overlap is pure python library For Check Overlapping or Colliding 2D Point With Any 2D Shape. And Work Everywhere.
+
+# Installation
+
+Install library like other library use `pip` package manager.
+
+```bash
+pip install poverlap
+```
+
+```shell
+py -m pip install poverlap
+```
+
+## Usage
+
+First Importing `poverlap` Package
+
+```python
+import poverlap
+```
+
+then use any function you needed
+
+```python
+point_a = (10, 200)
+point_b = (30, 100)
+
+pdp: float = poverlap.point_distance(point_a, point_b)
+
+pop: bool = poverlap.point_point(point_a, point_b)
+pop_area: bool = poverlap.point_point_add_area(point_a, point_b, 5.5)
+
+```
+
+## Some Detail
+
+All Overlapping Point Algorithm in One File and Any File Fully NoDepended Can Use One File From `poverlap` in your app without need anything else.
+
+__TypeAliases Mean:__
+```python
+# in point_point.py
+T_X: TypeAlias = int | float
+T_Y: TypeAlias = int | float
+T_POINT: TypeAlias = tuple[T_X, T_Y], list[T_X, T_Y]
+
+# added in point_line.py
+T_LINE: TypeAlias = tuple[T_POINT, T_POINT], list[T_POINT, T_POINT]
+
+# added in point_rectangle.py
+T_W: TypeAlias = int | float
+T_H: TypeAlias = int | float
+T_POSITION: TypeAlias = T_POINT
+T_SIZE: TypeAlias = tuple[T_W, T_H], list[T_W, T_H]
+
+# added in point_circle.py
+T_RADIUS: TypeAlias = int |float
+
+# added in point_polygon.py
+T_POLYGON: TypeAlias = tuple[T_POSITION], list[T_POSITION]
+```
+
+Some of Function Name Ended With `_add_area()` like `point_point_add_area()` this means u can Use for Bigger or Some Bigger and Smaller Area for Detection Overlapping.
+
+
+[SourceCode](https://github.com/IRTJ/poverlap)
+
+## License
+
+
+[MIT](https://github.com/IRTJ/poverlap/blob/main/License)
