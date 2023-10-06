@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "wagtail-meilisearch"
+version = "1.0rc5"
+description = "A MeiliSearch backend for Wagatil"
+authors = ["Hactar <systems@hactar.is>"]
+
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/hactar-is/wagtail-meilisearch"
+repository = "https://github.com/hactar-is/wagtail-meilisearch"
+keywords = ["wagtail", "django", "search", "meilisearch"]
+classifiers=[
+    'Environment :: Web Environment',
+    'Framework :: Django',
+    'Framework :: Wagtail',
+    'Framework :: Wagtail :: 2',
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3.8',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+arrow = "^1.2.3"
+meilisearch = "^0.28"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.8"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+select = [
+    "E", "F", "B", "DJ", "C90", "S", "COM", "DTZ", "EM",
+    "PT", "RET", "SIM", "TCH", "ARG", "PTH", "PERF"
+]
+target-version = "py38"  # Change this to match the project
+line-length = 100
+extend-exclude = ["tests", "*/migrations/*"]
+extend-ignore = ["E402", "RET504", "S101", "DJ012"]
+ignore-init-module-imports = true
+
+[tool.ruff.isort]
+combine-as-imports = true
+force-wrap-aliases = true
