@@ -1,0 +1,2 @@
+[console_scripts]
+request-ssh-certificate = request_ssh_certificate.cli:main
