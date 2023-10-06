@@ -1,0 +1,8 @@
+doltcli/__init__.py,sha256=6qtMPDAfYafFSpG6dG_2uY_LdTItKp2HUXuF4hwKhFk,496
+doltcli/dolt.py,sha256=SeAbVTZAEaV8jueV5OCQgok77D-RBeKLYsRV-6DweAk,52519
+doltcli/types.py,sha256=u9h3p4nkoX2Xs_1iT_IK1BzuZT5oO8sAOunvQUs_HE0,4985
+doltcli/utils.py,sha256=DqzX1oq53HleZBT_NLGHLIy3l-7BrhhklYUyddjqG-U,8894
+doltcli-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+doltcli-0.2.0.dist-info/METADATA,sha256=F6Kn2flm9iGYGIYAeEQWPJVU25wuQ2izZehAYkIIYxo,576
+doltcli-0.2.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+doltcli-0.2.0.dist-info/RECORD,,
