@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dta-wir-api-lib-python
+Version: 0.1.0
+Summary: 
+Author: Youngbok Yoon
+Author-email: bok@weltcorp.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: deprecated (>=1.2.14,<2.0.0)
+Requires-Dist: oauthlib (>=3.2.2,<4.0.0)
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: requests-kerberos (>=0.14.0,<0.15.0)
+Requires-Dist: requests-oauthlib (>=1.3.1,<2.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# dta-wir-api-lib-python
