@@ -1,0 +1,8 @@
+bodhiext/openai/__init__.py,sha256=mwFwSRhvpdhu0IpuawTE8FTmgaACaygQrNALEpOVpl4,558
+bodhiext/openai/_openai.py,sha256=NeFpcglP4nNqh9VwBJnsxACTvWvQ7qIAczniOuDSsSQ,9146
+bodhiext/openai/_version.py,sha256=xtJA8K0XN3pF5dcc6gRfVwS6uhZrIMN64jpUQojAIpw,200
+bodhiext_openai-0.1.1.dist-info/LICENSE,sha256=DoBmT6-eOwf-O-_fjYSDRiK2EZFlFk1gPdXEUCwJgwE,1067
+bodhiext_openai-0.1.1.dist-info/METADATA,sha256=phQzr-KqVpkt4goCqxTowKtMSHrkFU2Z8hxWReZzCn0,1328
+bodhiext_openai-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bodhiext_openai-0.1.1.dist-info/entry_points.txt,sha256=y7UBkxtN-Ml3Q9nhlRFRx0A6L-bfmO8_G1WEL1nYQzU,44
+bodhiext_openai-0.1.1.dist-info/RECORD,,
