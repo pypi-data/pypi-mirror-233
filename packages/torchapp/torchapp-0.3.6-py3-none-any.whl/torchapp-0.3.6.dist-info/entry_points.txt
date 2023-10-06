@@ -1,0 +1,4 @@
+[console_scripts]
+torchapp=torchapp.main:app
+torchapp-imageclassifier=torchapp.examples.image_classifier:ImageClassifier.main
+
