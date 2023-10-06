@@ -1,0 +1,3 @@
+docs
+omero_slurm_client
+resources
