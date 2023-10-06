@@ -1,0 +1,2 @@
+[console_scripts]
+write_dataframes = npc_lims.scripts.write_dataframes:main
