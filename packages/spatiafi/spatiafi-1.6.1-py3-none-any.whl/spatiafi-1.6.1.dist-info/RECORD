@@ -1,0 +1,16 @@
+spatiafi/__init__.py,sha256=023iLpanVMaKiNVLraXCIuHrPw25KsWygPHnWIDKVoY,506
+spatiafi/__main__.py,sha256=1ZEjlMWIvbga34TBBu-N_AhNCdPB9zfeykEnI697kD8,46
+spatiafi/_version.py,sha256=edFVVa8HpVPfLqL2y6CKtViSqJREfmXxInA-HCy-134,411
+spatiafi/async_queue.py,sha256=dD__9eG5gzIm46WR5L1KlQlvmnmpw_Kxe-yEeb7zN4E,10979
+spatiafi/auth.py,sha256=i-YvOnFrS6AmJQ8CV1X4ShpHgPz7aqFzs7HxiDfwOs8,2930
+spatiafi/session.py,sha256=aduwgeEmdC0hRYpV_wZmz-ft5cfWU3INysjalHim4wU,3184
+spatiafi/gdal_auth/__init__.py,sha256=Hbvi_wnzVL3A0QTRFsrKmufqsDW0peydxR6wqryPK_0,146
+spatiafi/gdal_auth/__main__.py,sha256=1ZEjlMWIvbga34TBBu-N_AhNCdPB9zfeykEnI697kD8,46
+spatiafi/gdal_auth/cli.py,sha256=WY-TZ12IMSD9eReOaF5mMbabYGWClrjWi1I0uR-eAvA,5006
+spatiafi/gdal_auth/gdal_auth.py,sha256=5zS3_f8ZucnzpFL-b_TK5_o5hSUJ12_MV-kzSrk3G7Y,6079
+spatiafi-1.6.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+spatiafi-1.6.1.dist-info/METADATA,sha256=tNM8odI3TOh6XHumxSohl98EsBMLjXx9R38TwbT7fbQ,10084
+spatiafi-1.6.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+spatiafi-1.6.1.dist-info/entry_points.txt,sha256=GsZpBp-1ppZdovrY5QOxXzKrA4l5ifqzcgIJ2YjVc_0,88
+spatiafi-1.6.1.dist-info/top_level.txt,sha256=uElBa58iAvfqwXXbJ_AY2u-P5jwO4Y6x0Agin_ZcAlE,9
+spatiafi-1.6.1.dist-info/RECORD,,
