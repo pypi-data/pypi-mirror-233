@@ -1,0 +1,9 @@
+pyramid_ogcapi/__init__.py,sha256=6xNoxaOVYNquU9CedIzu0WT1a98jbf3sla8dssae4aU,11942
+pyramid_ogcapi/json2html.py,sha256=cOameTFONrdhZnfzsa4RNSNXCdKJzv6MrOdVrbd_-Xs,9433
+pyramid_ogcapi/links.py,sha256=AGtpaqc0Gaj_F9KuyPgVmbo_Ae1_SU4ceDle1__QO5w,2583
+pyramid_ogcapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyramid_ogcapi/templates/default.mako,sha256=8ZmPopQYcXawQsWSc1k6sbDHn9n2r48HtzI9PctLGW4,3867
+pyramid_ogcapi-0.2.1.dist-info/LICENSE,sha256=aTvdlpzQGCB42mhtyOD7c8Hlrq56gCiDOkjVcEk4YN4,1304
+pyramid_ogcapi-0.2.1.dist-info/METADATA,sha256=zpMzp0MbqPmEgd-RhOWmJcHSQZ4xtOm8Z3wsbFjyJEY,3505
+pyramid_ogcapi-0.2.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pyramid_ogcapi-0.2.1.dist-info/RECORD,,
