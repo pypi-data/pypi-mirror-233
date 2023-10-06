@@ -1,0 +1,8 @@
+rgeocoder-0.1.6.dist-info/METADATA,sha256=GEtbXWxbfimJrG_vXhflBfxYyYhbMnIasE6SdVKeH8U,2668
+rgeocoder-0.1.6.dist-info/WHEEL,sha256=fA8jjWyZ8up06QKvEo2bYHJswKs85LHUQWQpiHGlqF8,94
+rgeocoder-0.1.6.dist-info/license_files/LICENSE,sha256=AKtXnvUGbShs98_JMGTtQ-IPjYyp6rNN_aOt3vbY-c0,1045
+rgeocoder/cities.csv,sha256=HeVtwysDCMYJTV2DNEHIyiWCfyTppqTMFEIjq1-bZb8,7851524
+rgeocoder/exceptions.py,sha256=9pveylZFCvkIiO2xFi_bLEcAsFIqBM8OUrq7VF-0O-c,452
+rgeocoder/__init__.py,sha256=eNdTfEGTvqLKM_e2Nqr5nB2w9EsJw8WR2QtPoANrMPg,3700
+rgeocoder/_rgeocoder.pyd,sha256=cfrFMqxF5OjArVx-s6dOWGA1OoE1-YC0fix0URCC1I8,383488
+rgeocoder-0.1.6.dist-info/RECORD,,
