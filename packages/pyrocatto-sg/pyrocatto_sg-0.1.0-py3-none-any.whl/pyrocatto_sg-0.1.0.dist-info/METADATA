@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyrocatto-sg
+Version: 0.1.0
+Summary: pyrocatto session generator
+License: MIT
+Author: devops117
+Author-email: devops117.main@protonmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: speedups
+Requires-Dist: TgCrypto (>=1.2.5,<2.0.0) ; extra == "speedups"
+Requires-Dist: attrs (>=23.1.0,<24.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: pyrocatto-pyrogram (>=2.0.107,<3.0.0)
+Requires-Dist: ruamel-yaml (>=0.17.32,<0.18.0)
+Description-Content-Type: text/markdown
+
+## pyrocatto session generator
+<br />
+
+# Installation
+### With optional speedups (Installs packages like TgCrypto for Pyrogram):
+- `pip install pyrocatto_sg[speedups]`
+### Without optional speedups:
+- `pip install pyrocatto_sg`
+<br />
+
+# Setting up sessions:
+### For User account:
+- `python -m pyrocatto_sg create-user-session --session-dir <session_dir>`
+### For Bot account:
+- `python -m pyrocatto_sg create-bot-session --session-dir <session_dir>`
+<br />
+
