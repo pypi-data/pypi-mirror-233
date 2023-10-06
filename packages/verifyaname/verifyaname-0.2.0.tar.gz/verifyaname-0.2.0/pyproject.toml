@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "verifyaname"
+version = "0.2.0"
+description = "Aname verification library"
+authors = ["Fetch.AI Limited"]
+license = "Apache 2.0"
+readme = "verifyaname/README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+uagents = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

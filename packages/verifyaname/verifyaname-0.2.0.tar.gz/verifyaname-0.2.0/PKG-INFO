@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: verifyaname
+Version: 0.2.0
+Summary: Aname verification library
+License: Apache 2.0
+Author: Fetch.AI Limited
+Requires-Python: >=3.8,<3.12
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: uagents
+Description-Content-Type: text/markdown
+
+Example how to generate verification string for your domain
+
+```python
+from verifyaname.verification_string import generate_verification_string
+
+DOMAIN = "fetch-ai.com"
+WALLET_ADDRESS = "fetchabc"
+
+# Generate verification string for Alice
+verification_string = generate_verification_string(
+    domain=DOMAIN, address=WALLET_ADDRESS
+)
+```
+
+This string needs to be stored to domain DNS TXT record under key `fetch-ans-token=`
+
