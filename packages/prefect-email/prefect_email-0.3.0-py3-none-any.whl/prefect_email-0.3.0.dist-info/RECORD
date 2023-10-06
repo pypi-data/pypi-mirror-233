@@ -1,0 +1,10 @@
+prefect_email/__init__.py,sha256=mu09AgViw3y-Jwi49APhyyvsKcnJtcxG-ehBKsmx0Js,269
+prefect_email/_version.py,sha256=uSlfotdC2pJ3Eul6fGsUkqAg_L91prNpkWLQlXww_kA,497
+prefect_email/credentials.py,sha256=PnbjOeLpyCqgzWmtgXf76Wlov803qUqbd3-DbpgvIgg,6494
+prefect_email/message.py,sha256=nTXLKoCKSCfmstZDWxeLp8FwQ22Xm8SZ2Rl_faZS8uA,4286
+prefect_email-0.3.0.dist-info/LICENSE,sha256=tLKlrmr0sOnPybm5TUmA2SBT-cYajF3kILQME85pqpQ,11356
+prefect_email-0.3.0.dist-info/METADATA,sha256=6dd5oR3RevgGG5CZdR_OEftf3K9FkrbWBmLm81qq_GM,9635
+prefect_email-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+prefect_email-0.3.0.dist-info/entry_points.txt,sha256=GMNyWm3jfRUcKDytkUzU0788y52U_rwYG91USDs7b6A,52
+prefect_email-0.3.0.dist-info/top_level.txt,sha256=pYwCjLM02-hAr-H3VjDRXmOnIzouWqOOk93_colO6WU,14
+prefect_email-0.3.0.dist-info/RECORD,,
