@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: probs_module_kbc_hierarchy
+Version: 2.0.0a1
+Summary: Knowledge base completion RDFox scripts for the PRObs ontology
+Author: Stefano Germano, Rick Lupton, Carla Saunders, Stephen Boyle
+License-File: LICENSE
+Requires-Dist: probs_module_ontology==2.0.0a1
