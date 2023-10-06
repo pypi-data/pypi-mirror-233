@@ -1,0 +1,11 @@
+classifier/ANN.py,sha256=vtlWz8OgXMAPxrS7wel03hP5GtGjw0x-JkTaDBXQUHg,4816
+classifier/KFold.py,sha256=Fn1JBGDOyfoSHC9zgTOkKfEcX3yoFeyjmwQz3AbeVS4,7155
+classifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+classifier/dataset.py,sha256=DsSIBo3NvkIhlHbcJwWVkPD3BLZJf70Rxwq94tLMq54,5952
+classifier/evaluation.py,sha256=fqXvGPVvdzqxrgzSZy2SQqphSBU06Q3RQS8uuGBSHoI,2904
+classifier/iris_training.py,sha256=4YA8eU8m6Z7t230qFDqQHbCo7dq7irjF2nxwcd-yiuE,5260
+irisClass-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+irisClass-0.1.0.dist-info/METADATA,sha256=DdH22RJfM50bD4ej0GAKo8TNJ4Vx97JBbZxcrHcj-tQ,1063
+irisClass-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+irisClass-0.1.0.dist-info/top_level.txt,sha256=cQNKiHRnjvZTRfRfPSvlGt1b_Sllbu_BTX4I6wE4dkI,11
+irisClass-0.1.0.dist-info/RECORD,,
