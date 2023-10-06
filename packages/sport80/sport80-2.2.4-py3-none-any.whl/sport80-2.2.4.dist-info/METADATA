@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sport80
+Version: 2.2.4
+Summary: Python API interface for the Sport80 sites
+Home-page: https://github.com/euanwm/sport80_api
+Author: Euan Meston
+Author-email: euanmeston@gmail.com
+License: BSD
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: js2py
+
+Intentionally empty
