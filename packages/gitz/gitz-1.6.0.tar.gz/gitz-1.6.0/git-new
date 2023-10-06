@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+
+from gitz.git import GIT, functions, guess_origin, reference_branch, root
+from gitz.program import ARGS, ENV, PROGRAM
+
+SUMMARY = 'Create and push new branches'
+
+HELP = """
+Create new branches from the reference branch and push them with
+--set-upstream.
+
+``git new`` does the things you really want to safely get new branches
+where you can start working and pushing immediately
+
+- Fails leaving the workspace unchanged if there are uncommitted changes
+
+- Fails if any of the new branches already exists locally or remotely
+
+- Fetches the *reference branch* only - a branch on the upstream or origin repo
+  that is the main branch for development - likely upstream/main or origin/main
+  or upstream/master or origin/master
+
+- Create new branches locally from that reference branch commit ID
+
+- Pushes them to the remote origin with --set-upstream
+
+USEFUL FLAGS
+
+``git new --reference/-r <branch-or-commit>`` uses a commit ID
+to populate the new branches that isn't the default reference branch
+
+``git new --use-head/-u`` uses the current commit ID to populate the new
+branches and not the reference commit
+
+``git new --duplicate/-d <remote>/<branch>`` duplicates the name
+and contents of a remote branch in your local repo, super useful for code
+reviewing.
+
+gitz can guess what the reference branch and remote origin are, and for
+nearly all projects this will be correct, or this can be specified at the
+command line, per project, or through environment variables - see ``git gitz``
+for more details.
+
+"""
+
+EXAMPLES = """
+git new foo
+    Create a new branch foo from the reference branch and push to the origin
+
+git new foo --origin=remote_1
+git new foo -o remote_1
+    Create a new branch foo from the reference branch and push to remote_1
+
+git new one two three --reference-branch=some-remote/main
+git new one two three -r some-remote/main
+    Create three new branches from the remote branch some-remote/main
+"""
+
+_HELP_BRANCHES = 'Names of branches to create'
+
+
+def git_new():
+    if ARGS.stash or ARGS.use_head:
+        root.check_git()
+    else:
+        root.check_clean_workspace()
+
+    if ARGS.duplicate:
+        if ARGS.reference_branch:
+            PROGRAM.exit('Cannot set --duplicate and --reference-branch')
+        if len(ARGS.branches) > 1:
+            PROGRAM.exit('Cannot --duplicate multiple branches')
+        ARGS.reference_branch = ARGS.branches[0]
+
+        remote, _, rest = ARGS.reference_branch.partition(':')
+        if rest:
+            ARGS.branches[0] = rest
+            ARGS.reference_branch = f'{remote}/{rest}'
+
+        else:
+            _, _, ARGS.branches[0] = ARGS.reference_branch.partition('/')
+            if not ARGS.branches[0]:
+                _, _, ARGS.branches[0] = ARGS.reference_branch.partition(':')
+                if not ARGS.branches[0]:
+                    PROGRAM.exit('--duplicate requires a branch with a slash')
+
+    branches = functions.branches()
+    remote_branches = functions.remote_branches()
+    origin = guess_origin.guess_origin(ARGS.origin)
+    origin_branches = remote_branches[origin]
+    overwrites = (set(branches) | set(origin)) & set(ARGS.branches)
+    if overwrites:
+        overs = ', '.join(sorted(overwrites))
+        s = '' if len(overwrites) == 1 else 'es'
+        PROGRAM.exit(f'Cannot overwrite existing branch{s}: {overs}')
+
+    stashed = GIT.stash and root.is_workspace_dirty()
+    if stashed:
+        GIT.stash()
+
+    new_branches = set(ARGS.branches)
+    current = functions.branch_name()
+
+    if ARGS.cherry_pick:
+        try:
+            cp = functions.commit_id(ARGS.cherry_pick)
+        except Exception:
+            PROGRAM.exit('Cannot understand --cherry-pick', ARGS.cherry_pick)
+
+    if ARGS.use_head:
+        ref = 'HEAD'
+    else:
+        ref = '/'.join(reference_branch.reference_branch(remote_branches))
+        GIT.fetch(*(ref.split('/', maxsplit=1)))
+
+    for new_branch in ARGS.branches:
+        original_id = None
+        GIT.checkout('-b', new_branch, ref)
+
+        if ARGS.cherry_pick:
+            GIT.cherry_pick(cp)
+
+        GIT.push('-fu', origin, new_branch)
+        id = functions.commit_id(new_branch)
+        fmt = '+ {0}..{1} {2} -> {3}/{2}'
+        PROGRAM.message(fmt.format(original_id or id, id, new_branch, origin))
+
+    if stashed:
+        GIT.stash('pop')
+
+
+def add_arguments(parser):
+    add = parser.add_argument
+    add('branches', nargs='+', help=_HELP_BRANCHES)
+    add('-c', '--cherry-pick', default='', help=_HELP_CHERRY_PICK)
+    add('-d', '--duplicate', action='store_true', help=_HELP_DUPLICATE)
+    add('-o', '--origin', default='', help=_HELP_ORIGIN)
+    add('-s', '--stash', action='store_true', help=_HELP_STASH)
+    add('-u', '--use-head', action='store_true', help=_HELP_USE_HEAD)
+    reference_branch.add_arguments(parser)
+
+
+_HELP_CHERRY_PICK = 'Name a commit to cherry pick into the new branch'
+_HELP_ORIGIN = 'Remote origin to push to'
+_HELP_DUPLICATE = 'Duplicate a branch in a remote repo into this repo'
+_HELP_STASH = 'Stash existing changes before creating then unstash'
+_HELP_USE_HEAD = 'Use HEAD and not reference branch'
+
+if __name__ == '__main__':
+    PROGRAM.start()

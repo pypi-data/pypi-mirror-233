@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+from gitz.git import save
+from gitz.program import ARGS
+from gitz.program import PROGRAM
+
+SUMMARY = 'Save and restore state of the git repository'
+
+HELP = """
+Saves and restores the whole state of the git repository
+including files staged but not commited, and (optionally) untracked
+files.
+
+---
+
+You don't need to understand the following to use git-save.
+This is just for people who need to know how things work behind the
+scenes.
+
+A git-save "record" has up to five parts:
+
+1. The most recent commit (HEAD at the time that git-save was called)
+2. Modified, staged files
+3. Modified, unstaged files
+4. Untracked files
+5. The hash stash
+
+git-save starts at HEAD, and adds "hidden" commits for any of
+parts 2, 3 and 4 which is non-empty, to get a "final" commit ID.
+
+Finally, the hash stash!  A tiny text file is added after these which
+contains only the hash of the final commit, and then this is stashed.
+
+When restoring a save file, the hash is popped from the stash to
+``git reset`` to the "final" commit ID, and then working backwards to HEAD
+restores the full state.
+"""
+
+EXAMPLES = """
+git save
+    Saves everything except untracked files
+
+git save -a
+git save --all
+    Saves everything including untracked files: only .gitignored files
+    will not be saved this way.
+
+
+"""
+
+DANGER = 'Rewrites history!'
+
+
+def git_save():
+    if ARGS.state:
+        commit_id, msg = save.restore(ARGS.state)
+    else:
+        commit_id, msg = save.save(ARGS.all, not ARGS.do_not_stash)
+
+    label = 'Restored from' if ARGS.state else 'Saved as'
+    PROGRAM.message(label, '%s: %s' % (commit_id, msg))
+
+
+def add_arguments(parser):
+    parser.add_argument('state', nargs='?', default='', help=_HELP_STATE)
+    parser.add_argument('-a', '--all', action='store_true', help=_HELP_ALL)
+    parser.add_argument(
+        '-d', '--do_not_stash', action='store_true', help=_HELP_STASH
+    )
+
+
+_HELP_ALL = 'Save even untracked files'
+_HELP_STATE = """\
+Save to this state if set. Otherwise, print a commit ID that saves this \
+state."""
+_HELP_STASH = """\
+If set, do not stash the commit ID, just print it out
+"""
+
+
+if __name__ == '__main__':
+    PROGRAM.start()
