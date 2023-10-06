@@ -1,0 +1,4 @@
+[console_scripts]
+ai=intelliterm.main:run
+intelliterm=intelliterm.main:run
+
