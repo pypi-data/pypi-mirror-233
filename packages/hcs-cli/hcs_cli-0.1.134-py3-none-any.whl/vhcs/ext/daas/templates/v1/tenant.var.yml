@@ -1,0 +1,17 @@
+deploymentId:
+var:
+  orgId:
+  edgeId:
+  orderType:
+  order:
+    image:
+      sku:
+      streamId:
+      markerId:
+    template:
+      type:
+    application:
+      info:
+  desktop:
+    userGroup:
+  userEmails: []
