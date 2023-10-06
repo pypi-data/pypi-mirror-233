@@ -1,0 +1,8 @@
+trex_imager_readfile/__init__.py,sha256=fiM_3an_QLBo61m6gkZe0vjEHrkeF3R_9kQv00ynUlY,397
+trex_imager_readfile/blueline.py,sha256=WigF_oM2AEkdl1wehP5td_Bte79-X9l1ipTFr8aEuAE,9097
+trex_imager_readfile/nir.py,sha256=DCht0Jbmk5hmy_VlWK32PMuEXiGnE1MMDtSjD6b8S40,9042
+trex_imager_readfile/rgb.py,sha256=BGltLItXnMNqBgPwXl99DOKvpsNvOT_xSkS6pUlzlf4,19928
+trex_imager_readfile/spectrograph.py,sha256=cC4fJ3cPiMsfRhw2ELJ3COEcvwuAhQCiyw2asc-U4Bo,9145
+trex_imager_readfile-1.5.0.dist-info/METADATA,sha256=4drtCHKR7DxokEsiasEjNDIKnMOHwvVInoRp4a83C2w,970
+trex_imager_readfile-1.5.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+trex_imager_readfile-1.5.0.dist-info/RECORD,,
