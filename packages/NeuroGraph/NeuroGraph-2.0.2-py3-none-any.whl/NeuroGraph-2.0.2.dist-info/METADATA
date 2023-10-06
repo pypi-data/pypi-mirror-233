@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: NeuroGraph
+Version: 2.0.2
+Summary: A Python package for graph-based neuroimaging benchmarks and tools
+Author: Anwar Said
+Author-email: <anwar.said@vanderbilt.edu>
+Keywords: python,neuroimaging,graph machine learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE.txt
+Requires-Dist: boto3 (==1.26.158)
+Requires-Dist: nilearn (==0.10.1)
+Requires-Dist: networkx (==2.6)
+Requires-Dist: pandas
+
