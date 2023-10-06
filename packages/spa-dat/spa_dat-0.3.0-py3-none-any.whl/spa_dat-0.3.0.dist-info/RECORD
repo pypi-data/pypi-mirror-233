@@ -1,0 +1,16 @@
+spa_dat/__init__.py,sha256=9HuFvTnqHwuSunsx-jXC2ZOZLHo9Gt0aRs8j9fDOmLI,292
+spa_dat/application/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spa_dat/application/application.py,sha256=1XKjzEEUPSwEYqwI_oeRzksZqP46ycsM8n915u7IG0Y,6929
+spa_dat/application/typedef.py,sha256=DlEAmqz0RXKeWEd5FJuq1jUd2zYLZZDXuzepV7Rl4IQ,1379
+spa_dat/config.py,sha256=a5vU1rR1dx-0_XEl9WRI9RiJWPLklg9SL_mmxlEdi70,450
+spa_dat/main.py,sha256=F-v8Bw_8dK5ArXpTICsQ6zdM2PjptcRGEbTxqHy1U7s,126
+spa_dat/provider.py,sha256=iTjDcz6x0HECOontjQS6tNyQo03hSifyEoaamzJG4kQ,1629
+spa_dat/serialization.py,sha256=Q9QGUCHxhqMyCvEonnZPkw1j6HK3g4FmP_TNW82qUOk,913
+spa_dat/socket/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spa_dat/socket/kafka.py,sha256=4VnUb5QftNZojoUVpybgUmNo_RafmcBMgAIJw4IV1Hw,7771
+spa_dat/socket/mqtt.py,sha256=jIKlZ0RZ-w6FYsRLl_CeRj8HLmzrywIE2MLrfr41WHk,7586
+spa_dat/socket/typedef.py,sha256=0G1pvzz8GAjvAvxXFxsot53kdYQXqEvoiqcFDDHOCZE,1202
+spa_dat-0.3.0.dist-info/LICENSE,sha256=dDwq980GUF2P-1SI1VUyBDIqMbTGMBDD51DfCJ9JNz0,1102
+spa_dat-0.3.0.dist-info/METADATA,sha256=3s6v0sG4uK_z_U3bJmWOD2p7Ag5U7L8qSKZW3tpWvOg,1143
+spa_dat-0.3.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+spa_dat-0.3.0.dist-info/RECORD,,
