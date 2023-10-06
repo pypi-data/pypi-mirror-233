@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+reportity/__init__.py
+reportity/reportity.py
+reportity.egg-info/PKG-INFO
+reportity.egg-info/SOURCES.txt
+reportity.egg-info/dependency_links.txt
+reportity.egg-info/requires.txt
+reportity.egg-info/top_level.txt

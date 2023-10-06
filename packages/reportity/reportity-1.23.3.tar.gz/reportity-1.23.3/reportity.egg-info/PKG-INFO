@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: reportity
+Version: 1.23.3
+Summary: this is the best package for reports
+Author-email: Yonatan Faigenbaum <fnatanoy@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/fnatanoy/reportity
+Keywords: report,analysis,figures,plot
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >3
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: mpld3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Provides-Extra: dev
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
