@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: orcaz
+Version: 0.1.2
+Summary: ORCA (Optimized Registration through Conditional Adversarial networks)  
+Home-page: 
+Author: Zacharias Chalampalakis, PhD, Lalith Kumar Shiyam Sundar, PhD
+Author-email: zacharias.chalampalakis@meduniwien.ac.at, lalith.shiyamsundar@meduniwien.ac.at
+License: GNU General Public License v3.0
+License-File: LICENSE
+Requires-Dist: pyfiglet ~=0.8.post1
+Requires-Dist: setuptools ~=65.5.1
+Requires-Dist: nibabel
+Requires-Dist: tqdm
+Requires-Dist: torch >=0.4.1
+Requires-Dist: torchvision >=0.2.1
+Requires-Dist: matplotlib
+Requires-Dist: tensorboard
+Requires-Dist: scipy
+Requires-Dist: SimpleITK
+Requires-Dist: scikit-learn
+Requires-Dist: emoji
+Requires-Dist: pydicom
+Requires-Dist: dicom2nifti
+Requires-Dist: moosez
+Requires-Dist: falconz
+Requires-Dist: nifti2dicom
+Requires-Dist: rich
+
