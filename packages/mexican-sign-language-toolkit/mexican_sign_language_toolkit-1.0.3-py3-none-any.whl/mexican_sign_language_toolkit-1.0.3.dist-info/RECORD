@@ -1,0 +1,13 @@
+mexican_sign_language_toolkit/__init__.py,sha256=pH5i4Fj1tbXLqLtTVIdoojiplZssQn0nnud8-HXodRE,577
+mexican_sign_language_toolkit/cli.py,sha256=0Su3JTRKqWE_DpckPQPhU1wJGPGoiddFn60cmDk8GbM,3841
+mexican_sign_language_toolkit/lexer.py,sha256=DQ9OBZ4jtag9FmUuIFKMCDD9YQiTPkwGQOeuiMqCJKo,583
+mexican_sign_language_toolkit/neighbors.py,sha256=t4NJ5mgBGKsJXBOrS85aDveL0SfYWappxeMUhyHNLPE,1164
+mexican_sign_language_toolkit/pipeline.py,sha256=ur_fl_UBXvOgUj20tlnGE-uZOnfvlg4Wy86BeJ-KODI,4394
+mexican_sign_language_toolkit/pose_landmarker.py,sha256=klEryXj59G8rudXHCXVKRwYkKN-WYFU9tw6WMoNRuYQ,5710
+mexican_sign_language_toolkit/server.py,sha256=QiHuUbHi0WzjFRQhVkpwSsLOimilxmcPe6n1JrdDbBA,634
+mexican_sign_language_toolkit-1.0.3.dist-info/LICENSE.txt,sha256=tbuh1wOjX7XFqVWpLMotQcqMcES1N4eLlkAFG1NOCVQ,1082
+mexican_sign_language_toolkit-1.0.3.dist-info/METADATA,sha256=pc3hbnPlMwNFiTvJjGKXX2nCIj_U2kVHuqpLojlS9KI,2049
+mexican_sign_language_toolkit-1.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mexican_sign_language_toolkit-1.0.3.dist-info/entry_points.txt,sha256=WeddcZJVv_hEzU1beiLe7Wm7xb-ndbht_aAy2SGC3tY,62
+mexican_sign_language_toolkit-1.0.3.dist-info/top_level.txt,sha256=pHXB2kDI41t20G4OhA0UdfFPdFXpuJoBFn6NcUmNIqg,30
+mexican_sign_language_toolkit-1.0.3.dist-info/RECORD,,
