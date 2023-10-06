@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+prefect_great_expectations/__init__.py
+prefect_great_expectations/_version.py
+prefect_great_expectations/validation.py
+prefect_great_expectations.egg-info/PKG-INFO
+prefect_great_expectations.egg-info/SOURCES.txt
+prefect_great_expectations.egg-info/dependency_links.txt
+prefect_great_expectations.egg-info/requires.txt
+prefect_great_expectations.egg-info/top_level.txt
+tests/test_validation.py
