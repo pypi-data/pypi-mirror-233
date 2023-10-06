@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwebviz_subsurface_components=self.webpackChunkwebviz_subsurface_components||[]).push([[913],{757:(e,n,s)=>{s.r(n),s.d(n,{ViewAnnotation:()=>u});var r=s(21550),c=s.n(r),i=s(59733),t=s.n(i);const u=({children:e})=>c().createElement(c().Fragment,null," ",e," ");u.propTypes={id:t().string.isRequired,children:t().any}}}]);
+//# sourceMappingURL=async-webviz-view-annotation.js.map
