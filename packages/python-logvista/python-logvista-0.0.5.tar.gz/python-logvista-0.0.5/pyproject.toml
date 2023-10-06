@@ -1,0 +1,20 @@
+[project]
+name = "python-logvista"
+version = "0.0.5"
+description = "LogVista SDK for Python"
+authors = [{name = "Dencyuman", email = "t.tanaka@triggerhack.com"}]
+license = { file = "LICENSE" }
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[options]
+install_requires = [
+    "requests"
+]
+
+[options.extras_require]
+dev = [
+    "pytest"
+]
