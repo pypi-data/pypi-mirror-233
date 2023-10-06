@@ -1,0 +1,9 @@
+codeartifact/__init__.py,sha256=lrt-oH4FlTPKAz7KaGeg0bSRDa4NbUGZBcSUGPiaUFU,70462
+codeartifact/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+codeartifact/_jsii/__init__.py,sha256=NPIIqn-gFYuwLmJV_hyEu_963iIVZtVXdPIGRlgmvFk,453
+codeartifact/_jsii/cdk-library-aws-codeartifact@0.0.1.jsii.tgz,sha256=_-LjywkTaoPdcqYqyyno9eW-ACIuk4ok4tynmoM18rI,37534
+renovosolutions.aws_cdk_aws_codeartifact-0.0.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+renovosolutions.aws_cdk_aws_codeartifact-0.0.1.dist-info/METADATA,sha256=DVldMUoDf73xwynmyzrxhwGdN2t3jpIKepZGuAe1J9E,3817
+renovosolutions.aws_cdk_aws_codeartifact-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+renovosolutions.aws_cdk_aws_codeartifact-0.0.1.dist-info/top_level.txt,sha256=MgafXYKIvjiiuRDXxQLA655G0AjWPbrZT9WTSOPq2kA,13
+renovosolutions.aws_cdk_aws_codeartifact-0.0.1.dist-info/RECORD,,
