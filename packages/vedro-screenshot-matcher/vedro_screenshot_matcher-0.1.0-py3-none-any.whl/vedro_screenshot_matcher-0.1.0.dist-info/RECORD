@@ -1,0 +1,9 @@
+vedro_screenshot_matcher/__init__.py,sha256=_GNuWlPqCd3M66IiuszQ21gdaEV0larEtOTbE969rGw,267
+vedro_screenshot_matcher/_scheduler.py,sha256=Ms3qFUbgJ0whziQ6PlYBpSs01H_esFztQ78qhmdr2gw,622
+vedro_screenshot_matcher/_screenshot_asserts.py,sha256=Hm5cuS853bIc_RmTQch3e5Z1P71jj0Xlw1xE_QDWZaM,567
+vedro_screenshot_matcher/_screenshot_matcher.py,sha256=miE6hs-Gq8xoyW8b-0AFuCZfOKCGUQgrNv9H-fcjYPk,4883
+vedro_screenshot_matcher/_screenshot_matcher_plugin.py,sha256=UU_bAyW713zYQmAlGC3SLWZNKlCx5xS5ikdw1UN9A4I,6441
+vedro_screenshot_matcher-0.1.0.dist-info/METADATA,sha256=GnHWUXqsiyXz4K8dgOb-ojEdIpnsnzamvciYL74YfGE,4090
+vedro_screenshot_matcher-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vedro_screenshot_matcher-0.1.0.dist-info/top_level.txt,sha256=BOhB4Chzpmbc5VG7pBoWw39ILB4VqGbGV-hj-Hlih88,25
+vedro_screenshot_matcher-0.1.0.dist-info/RECORD,,
