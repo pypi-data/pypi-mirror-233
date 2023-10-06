@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/onionpaper/__init__.py
+src/onionpaper/__main__.py
+src/onionpaper/core.py
+src/onionpaper/ctypes.py
+src/onionpaper/tween.py
+src/onionpaper.egg-info/PKG-INFO
+src/onionpaper.egg-info/SOURCES.txt
+src/onionpaper.egg-info/dependency_links.txt
+src/onionpaper.egg-info/requires.txt
+src/onionpaper.egg-info/top_level.txt

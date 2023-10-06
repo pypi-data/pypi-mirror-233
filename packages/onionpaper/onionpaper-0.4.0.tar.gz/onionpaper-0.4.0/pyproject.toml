@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onionpaper"
+description = "Onion Paper"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "humanfriendly",
+    "PyAutoGUI",
+    "pytweening",
+    "PyYAML"
+]
+license = {file = "LICENSE"}
+authors = [
+    {name = "Elmer Nocon", email = "elmernocon@gmail.com"},
+]
+dynamic = [
+    "version"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "build",
+    "twine",
+]
+test = [
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "onionpaper.__version__"}
