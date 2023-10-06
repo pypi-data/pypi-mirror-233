@@ -1,0 +1,13 @@
+gruut
+gruut-lang-ru
+huggingface-hub==0.15.1
+num2words
+numpy
+onnxruntime
+ruaccent
+scipy
+sentencepiece
+sounddevice
+tok
+transformers
+transliterate
