@@ -1,0 +1,11 @@
+addict
+cached-property
+requests
+
+[dev]
+pre-commit
+piffle[test]
+
+[test]
+pytest-cov
+pytest>=3.6
