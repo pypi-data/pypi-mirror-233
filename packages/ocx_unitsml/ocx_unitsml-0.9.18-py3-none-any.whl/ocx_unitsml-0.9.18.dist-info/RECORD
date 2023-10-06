@@ -1,0 +1,10 @@
+ocx_unitsml/__init__.py,sha256=BJ6fh3PrhfnXYBaQxsgyZZ-6kxY0WvfGYyXFKS9cFzE,23
+ocx_unitsml/ocx_unitsml_0918/__init__.py,sha256=-C2BbxhwlKuuiM8Q7-L5L1iN07o4q4o8MvSwgyi32u8,1535
+ocx_unitsml/ocx_unitsml_0918/ocx_unitsml_0918.py,sha256=fJplm5uff17Y0vBcyD_KCyMarJKeWmBxa80Qr1p8MXE,29577
+ocx_unitsml/ocx_unitsml_0918/unitsml-v1.0-csd04.xsd,sha256=50FgHTx6-iQAxBxJ7uCXyu21-FPwxNU-y6PgAaVDgfk,56893
+ocx_unitsml/ocx_unitsml_0918/xsdata.xml,sha256=L2PDblY15_7Z1nuFCimQmYFXIVHuODGOd_qXz97Dpfc,2149
+ocx_unitsml/unitsmlSchema_lite.xsd,sha256=Zzcez9V5P8SaNfQ4pXPkVS_qpeKaLGcGj5KUn8VNe-o,33912
+ocx_unitsml-0.9.18.dist-info/LICENSE,sha256=7rZPBsxPb9j9HmGhxAfCH3cFGZyq8S4qeFLot5ZASl4,1560
+ocx_unitsml-0.9.18.dist-info/METADATA,sha256=6yoi84gJ5I9I9gKX87hpR3CP8ygzHt8jUjfAbruZxik,3811
+ocx_unitsml-0.9.18.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+ocx_unitsml-0.9.18.dist-info/RECORD,,
