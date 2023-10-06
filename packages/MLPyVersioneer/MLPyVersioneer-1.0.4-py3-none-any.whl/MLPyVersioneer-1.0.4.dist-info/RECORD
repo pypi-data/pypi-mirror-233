@@ -1,0 +1,12 @@
+MLPyVersioneer/__init__.py,sha256=fDbp1cUBM15KFqj-ybbwhT_0n0Q3XyROpeyx4Zu5dAY,302
+MLPyVersioneer/__main__.py,sha256=FQn7lH-DqN5iwiDdYMG9vYxKvu_TmQNAbkPDrt7P4zk,543
+MLPyVersioneer/exporter.py,sha256=U0gEG2gD0MrzJNN1x7pok8YfBPTBBVqzIxcjDEqp7Lw,2724
+MLPyVersioneer/summary.py,sha256=TOP7UJtSGc0k2jTSOgWG5VaxhW90jslvf1iaRB9UOvU,4230
+MLPyVersioneer/training_phase_metric.py,sha256=BvZwvtyupioVQ2sFkV5fEuoKkDuEjQ_m0J8F4mTkoLY,438
+MLPyVersioneer/training_phase_metric_storage.py,sha256=ITCuXPe4eJjX78KmPja7pAB7GkUYCnkHb3fc1FCc7dI,5294
+MLPyVersioneer-1.0.4.dist-info/LICENSE,sha256=3Y9sqRbDt_VZ8klG_Ahk_XCkrOCBnOoUiJezzuHsJ2s,1070
+MLPyVersioneer-1.0.4.dist-info/METADATA,sha256=YSftYWBSTKDHnp4xxKzP94vhuCRdQ_tqqKP_QWLrsL0,2664
+MLPyVersioneer-1.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+MLPyVersioneer-1.0.4.dist-info/entry_points.txt,sha256=VZLI099aDAnuc2rB8OeqeLhCpZHZRBrVV3Sox0qv_es,64
+MLPyVersioneer-1.0.4.dist-info/top_level.txt,sha256=e-aob4uBAH3eEh7noimcDvL_f9VU0pLOChyDznJTZXg,15
+MLPyVersioneer-1.0.4.dist-info/RECORD,,
