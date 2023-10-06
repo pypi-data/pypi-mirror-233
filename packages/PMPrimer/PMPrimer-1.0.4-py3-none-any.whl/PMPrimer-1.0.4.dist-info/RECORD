@@ -1,0 +1,15 @@
+piece/__auxiliary__.py,sha256=TXV5pICtP2WYDUe-ocSzjlx9tSNfMaODo9twCljnLv4,211
+piece/__init__.py,sha256=fLjGRqmvPJWx9duUmHO4TckLA37-N8HZaIkpTkdDiyw,15
+piece/piecebase.py,sha256=VnVLW9zh6jDcAl7LzXo4n12YtYraZJowBhbXj6iSBoY,10805
+piece/piecedataprogress.py,sha256=g_-ib3ArV905wImgFcyI2icCWz7Wez8HkFfHbfPQpcQ,8960
+piece/piecedefine.py,sha256=qWe4Z9M9WQ_MIpucKRCFWukIM5m7cNLPttLKee9FiP8,1306
+piece/piecedesign.py,sha256=8Usf7sMjNc3-vCnLrvTub3r5oJU2XSprNiemyHSEQuw,10804
+piece/pieceevaluate.py,sha256=K56-ufSXRUSGSO5A6neY7DSKSz7dIK2D7Av7zU20Zt8,19052
+piece/piecemain.py,sha256=CV6j7BWPUTyJr4XZn0YQPSGt4wEJP4VdNqip9rf1hNY,31336
+piece/piecentry.py,sha256=m6PIFuotUUM6btuJa5kzd1gIPyecJ0HhmvAtw3kQKMw,6819
+PMPrimer-1.0.4.dist-info/LICENSE,sha256=wlWWuMqqq2KgicYpS518cWieeGJsj08MAdLjJpK0gy8,1087
+PMPrimer-1.0.4.dist-info/METADATA,sha256=-vYPkVal27oUWdgFbFTvCPUZks6PuiU2W9pNhNYUXKQ,10801
+PMPrimer-1.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+PMPrimer-1.0.4.dist-info/entry_points.txt,sha256=Ja4n8UrtjpfADV9jh1jnX1N_e82P9nxuB-ICWXM1QzY,51
+PMPrimer-1.0.4.dist-info/top_level.txt,sha256=0DE8sET3tp0vjvNBusM2Wd4yJ-SJhwu0o4koZQkBBx8,6
+PMPrimer-1.0.4.dist-info/RECORD,,
