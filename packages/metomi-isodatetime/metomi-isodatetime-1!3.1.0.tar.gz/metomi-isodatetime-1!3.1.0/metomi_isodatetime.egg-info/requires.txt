@@ -1,0 +1,7 @@
+
+[all]
+coverage
+pytest>=5
+pytest-env
+pytest-cov
+flake8
