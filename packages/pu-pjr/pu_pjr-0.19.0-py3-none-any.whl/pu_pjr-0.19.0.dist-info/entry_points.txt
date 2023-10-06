@@ -1,0 +1,5 @@
+[console_scripts]
+dirstats=pu_pjr.dir_stats.__main__:main
+potentials=pu_pjr.force_fields_plotting.__main__:main
+quickplot=pu_pjr.plotting.__main__:main
+
