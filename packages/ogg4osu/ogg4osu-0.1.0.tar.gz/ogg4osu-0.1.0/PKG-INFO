@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ogg4osu
+Version: 0.1.0
+Summary: Converts audio to OGG Vorbis for the purposes of osu!
+Home-page: https://github.com/lewskii/ogg4osu
+Author: lewski
+Keywords: osu! convert music audio ogg
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ffmpeg-python
+
+# ogg4osu
+converts audio files to Ogg Vorbis for the purposes of osu!
