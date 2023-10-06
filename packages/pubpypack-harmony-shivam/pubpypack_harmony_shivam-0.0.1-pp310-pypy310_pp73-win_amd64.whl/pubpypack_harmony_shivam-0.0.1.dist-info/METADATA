@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pubpypack-harmony-shivam
+Version: 0.0.1
+Summary: This package does amazing things.
+Home-page: https://github.com/<username>/<package repo name>
+Author: Given Family
+Author-email: Given Family <given.family@example.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: termcolor <2,>=1.1.0
+
+# second-python-package
+This package does really amazing things!
+
+## Installation
+```shell
+$ python -m pip install second-python-package
+```
