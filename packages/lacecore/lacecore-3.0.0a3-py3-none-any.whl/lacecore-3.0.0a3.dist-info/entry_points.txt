@@ -1,0 +1,3 @@
+[console_scripts]
+convert_units=lacecore_cli.convert_units:convert_units
+
