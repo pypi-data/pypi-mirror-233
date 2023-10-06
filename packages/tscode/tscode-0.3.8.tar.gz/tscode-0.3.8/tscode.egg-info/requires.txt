@@ -1,0 +1,14 @@
+numpy==1.20.3
+scipy==1.6.2
+numba-scipy==0.3.0
+cclib==1.7
+periodictable==1.6.0
+matplotlib==3.4.2
+networkx==2.5.1
+rmsd==1.4
+ase==3.21.1
+sella==2.3.2
+scikit-learn==1.0.1
+numba==0.54.1
+prettytable==3.3.0
+typing-extensions==4.8.0
