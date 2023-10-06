@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: patternSense
+Version: 0.0.1
+Summary: Faster pattern matching in text processing and data analysis.
+Home-page: UNKNOWN
+Author: Sagar Nailwal
+Author-email: <sanjunailwal2003@gmail.com>
+License: UNKNOWN
+Keywords: patter_matching,Rabin Karp,Boyer Moore,KMP
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: timeit
+
+
+Develop a library that provides efficient algorithms for pattern matching, including KMP, Boyer-Moore, and Rabin-Karp, with options to choose the best algorithm based on the input.
+
