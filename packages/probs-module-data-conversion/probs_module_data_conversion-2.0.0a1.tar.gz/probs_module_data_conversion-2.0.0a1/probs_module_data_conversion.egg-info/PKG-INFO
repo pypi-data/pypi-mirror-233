@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: probs-module-data-conversion
+Version: 2.0.0a1
+Summary: Data conversion files and RDFox scripts for the PRObs ontology
+Author: Stefano Germano, Rick Lupton, Carla Saunders, Stephen Boyle
+License-File: LICENSE

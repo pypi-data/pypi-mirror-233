@@ -1,0 +1,7 @@
+
+# Create a named graph to store triples not needed in the output
+# tupletable create ufu:NG type named-graph
+
+# Load and convert data
+exec load_data
+exec load_rules

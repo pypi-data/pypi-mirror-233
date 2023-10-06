@@ -1,0 +1,21 @@
+[project]
+name = "probs_module_data_conversion"
+version = "2.0.0a1"
+description = "Data conversion files and RDFox scripts for the PRObs ontology"
+authors = [
+    {name = "Stefano Germano"},
+    {name = "Rick Lupton"},
+    {name = "Carla Saunders"},
+    {name = "Stephen Boyle"},
+]
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"probs_system.scripts" = "scripts"}
+
+[tool.setuptools.package-data]
+"probs_system.scripts" = ["*/*"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
