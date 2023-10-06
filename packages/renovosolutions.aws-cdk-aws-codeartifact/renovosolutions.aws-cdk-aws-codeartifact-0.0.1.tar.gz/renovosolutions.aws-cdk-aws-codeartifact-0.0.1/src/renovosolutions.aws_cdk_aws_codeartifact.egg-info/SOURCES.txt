@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/codeartifact/__init__.py
+src/codeartifact/py.typed
+src/codeartifact/_jsii/__init__.py
+src/codeartifact/_jsii/cdk-library-aws-codeartifact@0.0.1.jsii.tgz
+src/renovosolutions.aws_cdk_aws_codeartifact.egg-info/PKG-INFO
+src/renovosolutions.aws_cdk_aws_codeartifact.egg-info/SOURCES.txt
+src/renovosolutions.aws_cdk_aws_codeartifact.egg-info/dependency_links.txt
+src/renovosolutions.aws_cdk_aws_codeartifact.egg-info/requires.txt
+src/renovosolutions.aws_cdk_aws_codeartifact.egg-info/top_level.txt
