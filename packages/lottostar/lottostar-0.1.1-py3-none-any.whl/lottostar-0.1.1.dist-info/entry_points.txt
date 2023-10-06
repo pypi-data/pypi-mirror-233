@@ -1,0 +1,2 @@
+[console_scripts]
+lottostar = lottostar.main:LotteryProcessor.run
