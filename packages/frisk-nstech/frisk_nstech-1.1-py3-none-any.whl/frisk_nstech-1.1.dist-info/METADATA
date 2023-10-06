@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: frisk_nstech
+Version: 1.1
+Summary: juans is a package for fast iterating your deep learning experiment, it has some helpful tricks which are often used in competition and work by me, and more tricks are on the way!
+Project-URL: Homepage, https://github.com/NickYi1990/juans
+Author-email: frisk <Frisk2010@163.com>
+License: 114514
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: wget
+Description-Content-Type: text/markdown
+
+printer("text", time)
