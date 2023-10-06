@@ -1,0 +1,10 @@
+matplotlib
+mpld3
+numpy
+pandas
+plotly
+
+[dev]
+bumpver
+build
+twine
