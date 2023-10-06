@@ -1,0 +1,11 @@
+orjson
+charset_normalizer
+graphviz
+ply
+
+[dev]
+pytest
+black
+flake8
+mypy
+ruff
