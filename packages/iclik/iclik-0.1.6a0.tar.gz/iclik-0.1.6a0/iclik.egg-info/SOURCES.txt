@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.py
+iclik/inform_crit.py
+iclik/matrices.py
+iclik.egg-info/PKG-INFO
+iclik.egg-info/SOURCES.txt
+iclik.egg-info/dependency_links.txt
+iclik.egg-info/requires.txt
+iclik.egg-info/top_level.txt
+tests/test_inform_crit.py
+tests/test_matrices.py
