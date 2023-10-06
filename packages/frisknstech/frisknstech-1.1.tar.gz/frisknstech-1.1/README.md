@@ -1,0 +1,1 @@
+printer("text", time)

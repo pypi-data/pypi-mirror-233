@@ -1,0 +1,7 @@
+README.md
+setup.py
+frisknstech.egg-info/PKG-INFO
+frisknstech.egg-info/SOURCES.txt
+frisknstech.egg-info/dependency_links.txt
+frisknstech.egg-info/requires.txt
+frisknstech.egg-info/top_level.txt
