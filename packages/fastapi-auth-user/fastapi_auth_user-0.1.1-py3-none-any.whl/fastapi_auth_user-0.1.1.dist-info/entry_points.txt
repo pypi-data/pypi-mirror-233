@@ -1,0 +1,3 @@
+[console_scripts]
+start=fastapi-auth-user.__main__:app
+
