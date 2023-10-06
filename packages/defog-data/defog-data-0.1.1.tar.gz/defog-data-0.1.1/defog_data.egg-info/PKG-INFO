@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: defog-data
+Version: 0.1.1
+Summary: Static SQL and JSON files containing the data we use for evaluations
+Author: Defog
+Author-email: support@defog.ai
+License-File: LICENSE
