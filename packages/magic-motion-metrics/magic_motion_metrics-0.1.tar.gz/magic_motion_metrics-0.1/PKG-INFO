@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: magic_motion_metrics
+Version: 0.1
+Summary: This package calculate metrics data using bvh motion data of a human
+Author: Muhammad Tariq 
+Author-email: tariq@movrs.com
