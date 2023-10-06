@@ -1,0 +1,8 @@
+little_server/__init__.py,sha256=JwXOOgs4VOoYyIFkqyLV4IgEg8fHbYTCsGYrByPDqE4,72
+little_server/server.py,sha256=uPd0AHJ8WCWEeY9sXIVJMDmX8Vmzk_TbIDcSu_nmTmU,1597
+little_server/utils/__init__.py,sha256=pM2SBPRpzxfxn7tEohbGWh3LUAiaLDP4IW8ovUK5G_4,194
+little_server/utils/utils.py,sha256=U42B1iXULauByBSYkgfMbLC3qDNTiIq6-XiIbuAnUfM,1080
+little_server-5.0.1.dist-info/LICENSE.txt,sha256=0Qdn9Tuf32i0VKqJn2pQe2JTSfwStEhkt5sIh-KgQrM,1067
+little_server-5.0.1.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+little_server-5.0.1.dist-info/METADATA,sha256=WkOkHDAYOANHKZP8iiDD6h32aVYYvHBfGnXUh84xyPs,714
+little_server-5.0.1.dist-info/RECORD,,
