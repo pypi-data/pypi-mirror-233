@@ -1,0 +1,5 @@
+setup.py
+gmailsendp.egg-info/PKG-INFO
+gmailsendp.egg-info/SOURCES.txt
+gmailsendp.egg-info/dependency_links.txt
+gmailsendp.egg-info/top_level.txt
