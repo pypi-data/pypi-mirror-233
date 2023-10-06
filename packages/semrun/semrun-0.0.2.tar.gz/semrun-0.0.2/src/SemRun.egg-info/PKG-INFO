@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: semrun
+Version: 0.0.2
+Summary: PigeonAI client and SDK
+Author: Aria Attar
+Author-email: aria.attar@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
