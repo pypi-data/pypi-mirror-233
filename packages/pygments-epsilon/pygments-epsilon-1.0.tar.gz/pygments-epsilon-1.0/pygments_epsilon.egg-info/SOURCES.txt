@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pygments_epsilon.egg-info/PKG-INFO
+pygments_epsilon.egg-info/SOURCES.txt
+pygments_epsilon.egg-info/dependency_links.txt
+pygments_epsilon.egg-info/entry_points.txt
+pygments_epsilon.egg-info/top_level.txt
