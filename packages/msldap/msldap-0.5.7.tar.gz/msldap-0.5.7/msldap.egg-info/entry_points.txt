@@ -1,0 +1,2 @@
+[console_scripts]
+msldap = msldap.examples.msldapclient:main
