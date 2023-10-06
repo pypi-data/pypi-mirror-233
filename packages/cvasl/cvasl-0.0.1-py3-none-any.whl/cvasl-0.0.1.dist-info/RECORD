@@ -1,0 +1,11 @@
+cvasl/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+cvasl/__main__.py,sha256=J6JHq_4OmTwwbvOsXNh--mDrH5vAfT_6hsYj6Ys5X-c,90
+cvasl/carve.py,sha256=a-EHLta9JaE2r8WNHylUD5uh7EeN4zH7Y9kA5JL3TsY,20746
+cvasl/cli.py,sha256=snUrlwyMpm9re37CJ438ABNBeo8Edp42EVSib-sax64,5299
+cvasl/file_handler.py,sha256=bpjhBdJ6JOcHWJeCoW6coPnOnP5FdsP_LgIeXeMYtm4,11509
+cvasl/mold.py,sha256=V9WkycBwFegnhLsuhOENEr5FJHP0lVkOhMV66vkmvZo,6500
+cvasl/seperated.py,sha256=QWuIb6jZcOpkB8Azq9Nz6TLB-hHN01wM7r2b_cXB_gU,14670
+cvasl-0.0.1.dist-info/METADATA,sha256=lTUMf5CLkHUUY_vaTHwLlXubkJY-vfhLe93lkguvU0M,8918
+cvasl-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cvasl-0.0.1.dist-info/top_level.txt,sha256=WlEZoIdIj_mfEp9WC8p5lA2g5l-U1jtcmz8AVJ1xlZk,6
+cvasl-0.0.1.dist-info/RECORD,,
