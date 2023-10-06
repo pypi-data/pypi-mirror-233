@@ -1,0 +1,11 @@
+pysubdisc/VERSION,sha256=9lT-c7OzANERpsKJ_B-0bj9h1ry8k3isQIkpILXpZiI,387
+pysubdisc/__init__.py,sha256=GSSwPcRehLkTtz--npj1Q1I5H9GLj7P6FBDlZinfWaI,566
+pysubdisc/core.py,sha256=_LLcft0fNxkOEYsj9tumgcK0QvxExKot6_A0pda6cQ4,20093
+pysubdisc/interface.py,sha256=rUbb2Dag6Yos-UePm6FexCSZJSPNbSFrgeBISozxXuc,8296
+pysubdisc/java.py,sha256=c3X6ZsB3hpIgbgW7q2HSlGkUM7R8aDkfqBnZvzjiLb8,1466
+pysubdisc/version.py,sha256=wXN82LIS12hMQ1bO1Y_tjsecflZRpiEGCdRorqMrkCA,244
+pysubdisc/jars/subdisc-gui-r1159.jar,sha256=ZBbtr1RXoByXBulmdBoa4OkrTfVlRl7PKvDjXrrwLXo,10434486
+pysubdisc-0.1.1159.dist-info/METADATA,sha256=TNA4SGRPb4FU7Hgx0ELeuO7sqWJaNFB3GL_k4FXksW4,6500
+pysubdisc-0.1.1159.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+pysubdisc-0.1.1159.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pysubdisc-0.1.1159.dist-info/RECORD,,
