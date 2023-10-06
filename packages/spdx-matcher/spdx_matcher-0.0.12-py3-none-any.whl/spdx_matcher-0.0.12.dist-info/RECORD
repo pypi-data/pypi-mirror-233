@@ -1,0 +1,10 @@
+spdx_matcher/__init__.py,sha256=jOIBODHB9il8V-p33VzjwhWpIDW5HOOlzAOHge5EcY0,28066
+spdx_matcher/spdxCache.json,sha256=WquEKqS5ToP9699qHSqVlw36667J6J6ydeT_xNM32wE,9481662
+spdx_matcher/_pyinstaller/__init__.py,sha256=-c4Zo8nQGKAm8wc_LDscxMtK7zr_YhZwRnC9CMruUBE,72
+spdx_matcher/_pyinstaller/hook-spdx_matcher.py,sha256=WQ8CcnxKBwFZw3M4NKPpbQK3RdubYjCqYVSnbaYcRZI,126
+spdx_matcher-0.0.12.dist-info/LICENSE.txt,sha256=1uxJF_SUMe5TO66CnLY_x88nBoWkKDcN1-VxKiJNYK0,28689
+spdx_matcher-0.0.12.dist-info/METADATA,sha256=zlbHiTOM0zvD4LiQoaUOhMYk-450HjcDjpekk93ep-8,50508
+spdx_matcher-0.0.12.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+spdx_matcher-0.0.12.dist-info/entry_points.txt,sha256=R2kof1Zc8g1cQF07dgxNn0bSqq_dwQTfEqAZUB2FjNg,141
+spdx_matcher-0.0.12.dist-info/top_level.txt,sha256=egQe5dvwCWGycdwzknTeIKtiJ5AM8b87FrtBW7Xwhr0,13
+spdx_matcher-0.0.12.dist-info/RECORD,,
