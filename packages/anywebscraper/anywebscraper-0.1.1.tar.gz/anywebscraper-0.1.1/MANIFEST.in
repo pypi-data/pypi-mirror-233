@@ -1,0 +1,19 @@
+include *.txt
+include *.md
+include *.pkl
+include *.png
+
+recursive-include ./anywebscraper/*
+include anywebscraper/*.md
+include anywebscraper/images/*
+include anywebscraper/curl-impersonate/*
+recursive-include anywebscraper/images/*
+recursive-include anywebscraper/curl-impersonate/*
+
+include ./requirements/requirements.txt
+exclude *.log
+exclude *.cfg
+exclude *.ipynb
+
+recursive-exclude * __pycache__
+recursive-exclude *.py[co]
