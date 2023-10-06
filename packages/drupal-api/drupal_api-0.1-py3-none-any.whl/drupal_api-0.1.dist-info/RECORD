@@ -1,0 +1,13 @@
+drupal_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drupal_api/drupal.py,sha256=3KSEjthUivjTySfFAk_kNwBEa9V_thzOK1mI63Pqaps,14024
+drupal_api/drupal_entity.py,sha256=SnHDy-ajRUKHFwY-5iDCbUHjLwRnbU0qUEKjv5wLH4o,176
+drupal_api/drupal_field_text_formatted_long_summary.py,sha256=LWRsXnlGfe4aaENt0oaAt2QjE6cono44LYttG54LXMQ,461
+drupal_api/drupal_media_image.py,sha256=VGzRbbcpAUtI51Qb2n7deKrcO7SnnJAeD3V8yzXKbvY,956
+drupal_api/drupal_node.py,sha256=GokjaaDxMPEWwIsmE6h1_iHFcmcz3eZ_PRQmb4VkFq4,361
+drupal_api/drupal_paragraph.py,sha256=Ij4x33kQuzHbpXzg7hccswuRq_fb1Xzb96jRBuQrnAE,481
+drupal_api/drupal_redirect.py,sha256=cb9Ab0Bh-SGSnfEO9W0vfjtEhxEyPQpvpqtzba1ybs4,628
+drupal_api/drupal_taxonomy_term.py,sha256=tlM9tGc-FgfgKsKhaeb-3hdoCnxE_jImXz55LUN2Kro,369
+drupal_api-0.1.dist-info/METADATA,sha256=P0Q2fOtyjVMTqXKmU3J_qiaD_wanSp9qdkmer28-4lw,259
+drupal_api-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+drupal_api-0.1.dist-info/top_level.txt,sha256=oCSHcQ7kkvRvBddqvtH03qNNDjei-TAByFZ9wIoUueA,11
+drupal_api-0.1.dist-info/RECORD,,
