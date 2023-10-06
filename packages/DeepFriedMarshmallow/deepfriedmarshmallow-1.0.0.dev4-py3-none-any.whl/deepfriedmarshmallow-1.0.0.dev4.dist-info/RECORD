@@ -1,0 +1,12 @@
+deepfriedmarshmallow/__init__.py,sha256=b_OnnMK9L22MJJcLJUqYCl7pwTD9QXlJKtCwp_ILiHc,835
+deepfriedmarshmallow/compat.py,sha256=wDXM24e49-8cjWZ1b2Mll3W77t_5e-59B7Z7SuVIPrg,369
+deepfriedmarshmallow/import_patch.py,sha256=GJE4R79OAArDodXA2mb9u5O4u_jZFnoe8WaN8B1oPjg,2056
+deepfriedmarshmallow/jit.py,sha256=58f7gLZxGiqkFRSx73qiZoSVts8QcaNTZrGoHpJCcJk,27685
+deepfriedmarshmallow/mixin.py,sha256=TVvwLB24tvap6Z3p5nk7zRt033Eiezy4rW8VYDT6V3s,401
+deepfriedmarshmallow/schema.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepfriedmarshmallow/serializer.py,sha256=gKJJ9AzITtfNeDgm8rOjh8SIcwtMkkAz8L0FG15WoIQ,1499
+deepfriedmarshmallow/utils.py,sha256=aMuZANrwbftw38h8lIdaHrROcnsZLgwj6v899BEUzUE,1038
+deepfriedmarshmallow-1.0.0.dev4.dist-info/LICENSE,sha256=ziW4GLct8derzAvjom1SyhB_pNj7MXAIQdavYh7SgdI,11396
+deepfriedmarshmallow-1.0.0.dev4.dist-info/METADATA,sha256=j5D69H9AnMVzKx_oaX_0swzcDHacJBRipxfq3nYsih0,8793
+deepfriedmarshmallow-1.0.0.dev4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+deepfriedmarshmallow-1.0.0.dev4.dist-info/RECORD,,
