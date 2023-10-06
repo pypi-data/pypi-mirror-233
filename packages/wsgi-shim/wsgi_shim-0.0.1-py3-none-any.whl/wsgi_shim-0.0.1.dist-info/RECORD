@@ -1,0 +1,11 @@
+wsgi_shim/__init__.py,sha256=pdbEBZQ5Ni-iRbjCQOuWEbMixce2MeO0PvT_YyvgpO4,290
+wsgi_shim/__main__.py,sha256=ikinsMarzLOPSReFVhTFpeiVGk-MZ2RVthC3Gjv0KjE,201
+wsgi_shim/hello_world.py,sha256=wu7UsNrgv0h_1zUNrhvk56SAFmXE0fXCXEjV_c4mwi8,858
+wsgi_shim/wsgi_shim.py,sha256=kVm_pOm1YYNDr83pJESiLgD6g5xfkY_1VpA3aOylLRQ,19004
+wsgi_shim/templates/config.toml,sha256=ltLR40b2SqtVI7c6C6-gHZEP7IQcsFKdgZOlrwKmCTc,2904
+wsgi_shim-0.0.1.dist-info/LICENSE,sha256=1-pYBy-aVNwd8rEWv9uV0JzEVtCdxuWsyIjrmb-6618,1092
+wsgi_shim-0.0.1.dist-info/METADATA,sha256=fmJYrzmpmLgt_yEdj9mH-yw5WcLnSN2ldHw5WmDztoY,14890
+wsgi_shim-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+wsgi_shim-0.0.1.dist-info/entry_points.txt,sha256=NnkDUwY-C3rvg2iZ6RdyUsg8BWSqetfUKyCY0mWP0bY,54
+wsgi_shim-0.0.1.dist-info/top_level.txt,sha256=hCM8fqVFwZYBDiEplWdTrtJGUHMuu_fbJ8gmeFCNuLI,10
+wsgi_shim-0.0.1.dist-info/RECORD,,

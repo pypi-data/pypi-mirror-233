@@ -1,0 +1,407 @@
+Metadata-Version: 2.1
+Name: wsgi-shim
+Version: 0.0.1
+Summary: WSGI shim for when you have limited web log access
+Author-email: Scott Karlin <scott@cs.princeton.edu>
+Project-URL: Home Page, https://www.cs.princeton.edu/~scott/
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: build
+Requires-Dist: twine ; extra == 'build'
+Requires-Dist: packaging ; extra == 'build'
+Provides-Extra: ci
+Requires-Dist: pytest >=7.4 ; extra == 'ci'
+Requires-Dist: twine ; extra == 'ci'
+Requires-Dist: packaging ; extra == 'ci'
+Requires-Dist: ruff ; extra == 'ci'
+Provides-Extra: dev
+Requires-Dist: pre-commit >=3.4 ; extra == 'dev'
+Requires-Dist: pytest >=7.4 ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest >=7.4 ; extra == 'tests'
+
+## wsgi-shim
+
+This repository contains files to set up and configure a Python-based
+website using the WSGI protocol in the Princeton CS domain.  For
+example, mywebsite.cs.princeton.edu.
+
+> 📝 **Note:** This mechanism requires your site work with Python 3.11
+> or later.  If you must use an earlier version of Python, contact CS Staff
+> for guidance.
+
+All command line instructions below are to be done on a "cycles" machine.
+
+## ⚠️ Security Considerations
+
+### File Permissions
+
+The webserver will run your Python code with your UID/NetID (i.e., "as you") and
+with a GID/group (to which you belong) of your choosing.  This has the benefit
+that you can include secrets/credentials in files that are not world-readable.
+A consideration to remember is that because the webserver will run "as you",
+your running code will have access to any project space files (in any project)
+that you have access.
+
+Note that before running "as you," the webserver is running as a user/group that
+can only read certain configuration/control files if they are world-readable.
+These files are noted in the documentation below.
+
+### Environment Variables
+
+If your shell is `bash`, all the environment variables you set up in your
+`.bashrc` and `.bash_profile` will be available to your running Python code.
+(See: the default "on" configuration of
+[PassengerLoadShellEnvvars](https://www.phusionpassenger.com/library/config/apache/reference/#passengerloadshellenvvars).)
+This can obviously be
+handy; however, there are some downsides.  First, from a security perspective,
+environment variables containing secrets can be exposed to other running
+processes on the shared webserver.  Second, from a configuration management
+perspective, having some of the configuration for your site be in your personal
+`.bashrc` file in your home directory and the rest of the configuration in the
+project space for the site may lead to issues when you are ready to hand the
+reins over to another person.
+
+When the webserver runs your `.bashrc` and `.bash_profile`, it will have set the
+environment variable `IN_PASSENGER`.  If you want the webserver to effectively
+skip your normal Bash configuration, you can put this at the top of your
+`.bashrc` and `.bash_profile` files:
+
+    if [ -n "$IN_PASSENGER" ]; then
+        return 0
+    fi
+
+As an alternative, you can pass environment variables and secrets to the webserver
+application, you can use the `[environment]` and `[secret_files]` sections in the
+`config.toml` file as described below.
+
+## Requesting Resources / Initial Set-up
+
+The step-by-step instructions in this section assume you are starting from scratch
+and running commands from a "cycles" machine.
+If you already have some of the resources that you wish to use, adapt
+these instructions as appropriate.  As always, you can reach out to
+csstaff@cs.princeton.edu for guidance.
+
+> 📝 **Note:** You won't have direct access to web server logs for debugging.
+> Therefore, it's important to be methodical and test along the way.  The
+> `wsgi-shim` package can catch common configuration mistakes and give feedback
+> without access to the web server logs.  However, in a pinch, you can reach
+> out to CS Staff and ask about errors in the log for your site if you get
+> stuck.  Be sure to give a precise timestamp to help us find your messages
+> within the common web server log.
+
+### 1. Request "project disk space"
+
+Request disk space to put the website files
+and a new POSIX group for the files.
+
+In the "Request Forms" block on the [CS Guide](https://csguide.cs.princeton.edu),
+click on "Project Disk Space: new space request".  The key fields are:
+
+**Additional people:** `Create POSIX group with me as member`
+
+**Requested Partition Name:** `myproject`
+
+Note that the "Additional people" field is free form where you can request a
+POSIX group.  In general, the name of the new POSIX group will match the name
+of the partition.
+
+### 2. Verify/set permissions on the project space
+
+After receiving notification that the space has been created, verify that it
+exists with the correct group and permissions.
+
+Note that project space is "auto-mounted" and will exist on a given machine only
+after it is accessed.  Using `ls` does not count as accessing.  Using `cd`
+will access the space.
+
+Verify project space permissions:
+
+    cd /n/fs/myproject  # to ensure the space is mounted
+    ls -ld /n/fs/myproject
+
+The output should look like something like this:
+
+    drwxr-sr-x. 4 mynetid mygroup 59 Sep 20 13:24 /n/fs/myproject
+
+If the owner is not `mynetid` (i.e., *your* NetID), contact CS Staff.
+
+The group should **not** be your default group (i.e., the one displayed when you
+run the `id -gn` command).  If it is your default group, contact CS Staff.
+
+If the permissions are not `drwxr-sr-x` (note the lowercase "s"), change them with
+`chmod 2755 /n/fs/myproject`.  The lowercase "s" in this position is the SETGID bit
+and ensures that files and subdirectories created under `/n/fs/myproject` will belong
+to the `mygroup` group by default.
+
+### 3. Build Python
+
+Build a local version of Python 3.11 or greater.
+
+These are abbreviated instructions from the
+[CS Guide: Building a Local Version of
+Python](https://csguide.cs.princeton.edu/software/virtualenv#build).
+To build Python 3.11.5 and install it in your project space at
+`/n/fs/myproject/python-3.11.5` use these commands (adjusting `PROJECT_DIR`
+and `PYVER` as appropriate):
+
+    PROJECT_DIR="/n/fs/myproject"
+    PYVER="3.11.5"
+    cd $PROJECT_DIR
+    mkdir temp
+    cd temp
+    wget https://www.python.org/ftp/python/$PYVER/Python-$PYVER.tar.xz
+    tar xJf Python-$PYVER
+    cd Python-$PYVER
+    ./configure --prefix=$PROJECT_DIR/python-$PYVER
+    make
+    make install
+    cd /n/fs/myproject
+    rm -rf temp
+
+Test the Python installation:
+
+    /n/fs/myproject/python-3.11.5/bin/python3 --version
+
+Output should be:
+
+    Python 3.11.5
+
+### 4. Create Website Directory and Build Python Virtual Environment
+
+Create the directory to hold the files associated with your website.
+This directory must be world-readable but not world-writeable:
+
+    mkdir /n/fs/myproject/mywebsitefiles
+    chmod o=rx /n/fs/myproject/mywebsitefiles
+
+Build the Python virtual environment for your website in `venv`.
+
+    cd /n/fs/myproject/mywebsitefiles
+    /n/fs/myproject/python-3.11.5/bin/python3 -m venv venv
+
+> 📝 **Note:** This is the Python virtual environment that will be
+> used for the running website.  This is, for example, where you
+> would "pip install" packages such as Flask or Django.
+
+### 5. Install wsgi-shim and Create Initial Configuration
+
+Activate your virtual environment, install the `wsgi-shim` package,
+and create the initial PassengerAppRoot directory:
+
+    cd /n/fs/myproject/mywebsitefiles
+    source venv/bin/activate
+    pip install wsgi-shim
+    wsgi-shim install /n/fs/myproject/mywebsitefiles/www
+    deactivate
+
+At this point, your project space directory structure will look like this:
+
+    /n/fs/myproject
+    ├── python-3.11.5
+    │   └── ...
+    └── mywebsitefiles
+        ├── venv
+        │   └── ...
+        └── www
+            ├── config.toml
+            ├── passenger_wsgi.py
+            └── tmp
+                └── restart.txt
+
+### 6. Request "project web space"
+
+With the directory structure created, it is time to request "project web space".
+This will configure the CS web server to recognize mywebsite.cs.princeton.edu as
+a valid website and route its requests to your Python code via the provided
+`passenger_wsgi.py` file.
+
+You will need the key/value pairs in the `[passenger]` section of the
+`/n/fs/myproject/mywebsitefiles/config.toml` file created in the previous step
+to populate the "Additional Notes" section in the form below.
+
+In the "Request Forms" block on the [CS Guide](https://csguide.cs.princeton.edu),
+click on "Project Web Space".  The key fields are:
+
+**Project Name:** `mywebsite`
+
+**Location of Document Root:** `/n/fs/myproject/mywebsitefiles/www`
+
+**Group Ownership:** `mygroup`
+
+**Additional Notes:**
+
+    Requesting Phusion Passenger Site with following attributes:
+    owner = "mynetid"
+    group  = "mygroup"
+    passenger_app_root = "/n/fs/myproject/mywebsitefiles/www"
+    passenger_python = "/n/fs/myproject/mywebsitefiles/venv/bin/python"
+
+> 💡 **Tip:** Do not continue with testing until you have received
+> confirmation from CS Staff that this is ready.  DNS resolvers
+> sometimes perform "negative caching" where they remember that
+> a host name is not found for a period of time before attempting
+> another lookup.  Premature testing may require that you wait until
+> a timeout elapses.
+
+### 7. Test Initial Configuration
+
+When you get verification from CS Staff that the project web space is
+set up, verify that the DNS name for the website is in place:
+
+    host mywebsite.cs.princeton.edu
+
+The output should look something like this:
+
+    minor.cs.princeton.edu is an alias for wwwprx.cs.princeton.edu.
+    wwwprx.cs.princeton.edu has address 128.112.136.67
+
+If you get a response indicating "not found," wait an hour and try again.
+If at that point you are still getting a "not found" indication, follow-up
+with CS Staff.
+
+Open a browser and visit `https:mywebsite.cs.princeton.edu`
+
+You should see a "Hello, World" page.  If so, congratulations!  You're
+ready to start installing and developing code as described in the next
+section.
+
+If you are not getting the "Hello, World" page, carefully review your
+steps and also refer to the Troubleshooting section, below.
+
+## Install / Develop Site-Specific Code
+
+### Directory Structure
+
+Other than being readable by the user/group specified in the `config.toml`
+file, the webserver doesn't put specific restrictions on where in project
+space the code implementing your web application must go.  One possibility
+is the following layout:
+
+    /n/fs/myproject
+    ├── python-3.11.5
+    │   └── ...
+    └── mywebsitefiles
+        ├── venv
+        │   └── ...
+        ├── www
+        │   ├── config.toml
+        │   ├── passenger_wsgi.py
+        │   └── tmp
+        │       └── restart.txt
+        ├── secrets
+        │   └── credentials.env
+        ├── log
+        │   └── logfile
+        └── myapp
+            ├── file1.py
+            ├── file2.py
+            └── ...
+
+In this example, the `secrets` directory contains credentials and, as such,
+should not be world-readable; the `myapp` directory contains the Python code
+making up the web application.  The `myapp` directory might reasonably be
+a checked out Git repository of your code.
+
+The next section describes how to edit your `config.toml` file to point
+to your application in `myapp`.
+
+### Configuration Settings
+
+TODO
+
+See the created config.toml file.
+
+Putting the path to this file in the `[secrets]`
+section of the `config.toml` will force a check that the file permissions
+are not too lax.  See the
+
+### Logging
+
+TODO
+
+Reminder that you don't have ready access to the webserver logs.  Use logging.
+
+### Flask Example
+
+TODO
+
+Include logging
+
+## Operation
+
+The webserver will start your application when it receives a request to a URL
+in `https://mywebsite.cs.princeton.edu`.  This process will exist and handle
+multiple visits.  After a period of inactivity, the webserver will kill the
+process until there is another request.
+
+### Restarting Your Application
+
+You can force a restart of your application by updating the timestamp of the
+`restart.txt` file:
+
+    touch /n/fs/myproject/mywebsitewsgi/www/tmp/restart.txt
+
+Note that the restart is not immediate and the file is only checked when a
+URL is visited on your site but no more often than every 10 seconds (the value
+of PassengerStatThrottleRate in the webserver global configuration)
+
+### Using Maintenance Mode
+
+The provided `passenger_wsgi.py` file implements a mechanism to not load
+your website code but, rather, show a "maintenance" page
+where all requests to the site return a `503 Service Unavailable` response.
+In this mode,  your site-specific code (e.g., based on Django, Flask, etc.)
+will not be accessed.
+
+To enable maintenance mode, create the sentinel file:
+
+    touch /n/fs/myproject/mywebsitewsgi/www/tmp/maint.txt
+
+To disable maintenance mode, delete the sentinel file:
+
+    rm /n/fs/myproject/mywebsitewsgi/www/tmp/maint.txt
+
+Note that the existence of this file is only checked when the WSGI server
+(e.g., Phusion Passenger) restarts the application.  Therefore, anytime you
+enable/disable maintenance mode, you need to force a restart of the
+application.  For example, to update the code for a website, one might
+follow these steps:
+
+1. Run: `touch /n/fs/myproject/mywebsitewsgi/www/tmp/maint.txt`
+2. Run: `touch /n/fs/myproject/mywebsitewsgi/www/tmp/restart.txt`
+3. Reload the site a few times until it shows the maintenance page.  This can
+   take up to 10 seconds.
+4. Update the site
+5. Run: `touch /n/fs/myproject/mywebsitewsgi/www/tmp/maint.txt`
+6. Run: `touch /n/fs/myproject/mywebsitewsgi/www/tmp/restart.txt`
+7. Reload the site a few times until it shows the updated content.
+
+## Troubleshooting
+
+TODO
+
+* `wsgi-shim check`
+* check your logs
+* project space full?
+* ask CS Staff for webserver log entries for your site at time of error
+  (give precise timestamps)
+
+Things that can go wrong before even getting a response:
+
+* Does your .bashrc/.bash_profile "exit" rather than "return" when invoked by
+  the webserver (i.e., when `IN_PASSENGER` is set)?
+* "Hmm. We're having trouble finding that site." -- usually DNS
+* No certificate? not sure
+* Passenger Error Page - review the above steps (especially file locations and permissions)
+* Error Page

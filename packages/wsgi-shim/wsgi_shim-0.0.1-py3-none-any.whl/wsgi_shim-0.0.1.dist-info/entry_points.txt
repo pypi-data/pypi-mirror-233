@@ -1,0 +1,2 @@
+[console_scripts]
+wsgi-shim = wsgi_shim.wsgi_shim:cli

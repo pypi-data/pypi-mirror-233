@@ -1,0 +1,65 @@
+# wsgi_shim config.toml file
+
+# This must reside in the passenger_app_root directory specified below.
+# It must not be world-writable.
+
+[passenger]
+# The entries in this section must match the entries provided to your
+# web infrastructure sysadmins to configure your web site with
+# Phusion Passenger.
+
+# The user/group your website code will run as.  The files implementing
+# your site (including the Python virtual environment) must be accessible
+# by this user/group.
+user = "{user}"
+group = "{group}"
+# The passenger_app_root directory must be world readable and
+# world searchable (chmod o=rx).
+passenger_app_root = "{passenger_app_root}"
+# The Python binary must be a virtual environment and must not be
+# a subdirectory of passenger_app_root.
+passenger_python = "{passenger_python}"
+
+
+[wsgi]
+# This section identifies the entry point into the Python module that
+# implements your site.  When the site is in Maintenance Mode (see
+# docs), this section is ignored and the module is not imported.
+# (This is useful when first standing up your website.)
+
+# The Python module containing your code can either be a module available
+# in the virtual environment or the absolute path to a Python module
+# (a bare .py file or a directory with an included __init__.py file).
+# (TODO: test the __init__.py bit.)
+module = "wsgi_shim.hello_world"
+app = "app_hello_world" # the WSGI callable in the above module
+
+
+[secret_files]
+# Key-value pairs in this section are passed along to the application
+# environment as in the [environment] section, below.  Also, an additional
+# check is performed to ensure that the value is a file path that exists
+# and that has restricted permissions appropriate for holding secrets.
+# Specifically, this means not world accessible and only group-accessible if
+# the group GID is >= 10000.  This group-accessibile check can be disabled
+# with the special key-value pair of:  check_gid = "false"
+# (TODO: implement this check_gid bit.)
+# It is up to your website code to read and interpret the contents of these
+# files using, for example, the dotenv_values function of
+# https://pypi.org/project/python-dotenv/
+# Note: if wsgi_shim detects that the site is not configured correctly,
+# these keys (but *not* their value) may be included in the HTML shown
+# to someone visiting your site.
+# Values must be absolute paths:
+# CONFIG_DOTENV = "/n/fs/myproject/mywebsitefiles/secrets/credentials.env"
+
+
+[environment]
+# Key-value pairs in this section are passed along to the application
+# environment and accessible with the Python os.environ object.  Keys in
+# this section must not also be defined in the [secret_files] section.
+# Note: if wsgi_shim detects that the site is not configured correctly,
+# these keys (but *not* their value) may be included in the HTML shown
+# to someone visiting your site.
+# For example:
+# LOG_FILENAME = "/n/fs/myproject/mywebsitefiles/log/logfile"
