@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+schulze_condorcet/__init__.py
+schulze_condorcet/py.typed
+schulze_condorcet/schulze_condorcet.py
+schulze_condorcet/strength.py
+schulze_condorcet/types.py
+schulze_condorcet/util.py
+schulze_condorcet.egg-info/PKG-INFO
+schulze_condorcet.egg-info/SOURCES.txt
+schulze_condorcet.egg-info/dependency_links.txt
+schulze_condorcet.egg-info/top_level.txt
+tests/test_schulze.py
