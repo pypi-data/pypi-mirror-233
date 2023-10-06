@@ -1,0 +1,12 @@
+rest_uploader/__init__.py,sha256=5mgh9WWQ9TfKLALIThJ_5JEDaaWz9P7fk5HhHJZn398,183
+rest_uploader/api_token.py,sha256=FfGTOD99n_ptF-TsYYcrjoOLqrjx3TU6DynHDaRIeGo,1380
+rest_uploader/cli.py,sha256=b3tsiKsNCsHx5rP9m5EhJ3d1eZ3LOEHedv4pWKwhkmw,4026
+rest_uploader/email_processor.py,sha256=_yb_zf8A_Zs28EjZqhi8Lc0O_yVpyJOuhyUPkxk_cJU,2007
+rest_uploader/rest_uploader.py,sha256=25ikNUXgk0E4xTEUJUxyoBDIjP88hPDVBXJRE_CZEgI,9945
+rest_uploader-1.20.0.dist-info/AUTHORS.rst,sha256=RHWg5V0_3uTmqStfbS_IjunJltbmBf1fgvpp_nN4DIw,166
+rest_uploader-1.20.0.dist-info/LICENSE,sha256=eX7nr1QYusm_rog0JJuFxgC7pvsYP9nsTlX6ETNKF9Q,1072
+rest_uploader-1.20.0.dist-info/METADATA,sha256=9w2MbRiomzdgHQqyG7rsnjEtuYdN22ObMAsuCprZzbY,5584
+rest_uploader-1.20.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+rest_uploader-1.20.0.dist-info/entry_points.txt,sha256=s6LxQTwU7zFolh-9Pv6K9-QBHbMCcTkOfxwT5W0Bkdo,57
+rest_uploader-1.20.0.dist-info/top_level.txt,sha256=_eBINVt3XKKR7V-KA8fpXforr9usWw2P86qgIPZBQsg,14
+rest_uploader-1.20.0.dist-info/RECORD,,
