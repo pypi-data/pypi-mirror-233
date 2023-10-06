@@ -1,0 +1,40 @@
+#
+# Tools for locan development
+#
+# Update existing environment: conda env update --file "./environment_dev.yml"
+#
+name: locan
+
+channels:
+- conda-forge
+- defaults
+
+dependencies:
+# Python
+- cython
+
+# Python tests
+- pytest
+- coverage
+- asv
+
+# Development
+- build
+- twine
+- black~=23.0
+- pre-commit
+- ruff
+- mypy
+- numpy
+- types-requests
+- types-protobuf
+- pandas-stubs
+
+# Documentation
+- sphinx
+- ipython
+- myst-nb
+- sphinx-copybutton
+- sphinx_rtd_theme
+- sphinx-autodoc-typehints
+- furo

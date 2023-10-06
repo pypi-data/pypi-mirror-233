@@ -1,0 +1,17 @@
+#
+# Tools for locan development
+#
+-r ./requirements
+coverage[toml]
+build
+twine
+black~=23.0
+pre-commit
+asv
+ruff
+mypy
+numpy>1.20.0  # required by mypy
+types-requests  # required by mypy
+types-protobuf  # required by mypy
+pandas-stubs  # required by mypy
+-r docs/requirements
