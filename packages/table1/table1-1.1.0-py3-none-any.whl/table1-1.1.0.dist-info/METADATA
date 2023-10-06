@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: table1
+Version: 1.1.0
+Summary: Python Libray for Table 1
+Home-page: https://github.com/vitaldb/table1
+Author: Hyung-Chul Lee
+Author-email: vital@snu.ac.kr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: rpy2
+Requires-Dist: scipy
+
+Python Libray for Table 1
