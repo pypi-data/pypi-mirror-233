@@ -1,0 +1,8 @@
+infinopy/__init__.py,sha256=yyLRvCzvPpsMsTViFxwQ-afjvQ7KjCkbmCLbsNOyxKI,33
+infinopy/client.py,sha256=PLJrG4ULJmNxwJrX3g1XNAUHEGluk3o6o-ZVip_fLHE,1539
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=hMI-DB8BrsV8wiPtK5__ciov9nsM2oqwjF73udlgyP8,4469
+infinopy-0.0.4.dist-info/METADATA,sha256=rFedL2suPjbtfOfuPvLRFajgLufROCWtkJQGlA3L5fw,1380
+infinopy-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+infinopy-0.0.4.dist-info/top_level.txt,sha256=J-QgpBrjcz8uVi9xD-UfYOmrRgJ0nEgmHfQ39F6-vHQ,15
+infinopy-0.0.4.dist-info/RECORD,,
