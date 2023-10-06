@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: awadb-client
+Version: 0.0.7
+Summary: Python client for AI Native database AwaDB
+Home-page: https://github.com/awa-ai/awadb
+Author: Vincent
+Author-email: awadb.vincent@gmail.com
+License: Apache 2.0
+Keywords: awadb-client python sdk vectordb
+Requires-Python: >=3.3
+
+Python client for AI Native database AwaDB
