@@ -1,0 +1,2 @@
+[ewatercycle.models]
+LeakyBucket = ewatercycle_leakybucket.model:LeakyBucket

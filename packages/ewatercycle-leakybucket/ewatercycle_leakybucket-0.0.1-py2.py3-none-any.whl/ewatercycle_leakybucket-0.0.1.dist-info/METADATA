@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ewatercycle-leakybucket
+Version: 0.0.1
+Summary: Template project for starting a new eWaterCycle plugin
+Author-email: "Bart Schilperoort, Peter Kalverla, Stefan Verhoeven" <b.schilperoort@esciencecenter.nl>
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Requires-Dist: ewatercycle
