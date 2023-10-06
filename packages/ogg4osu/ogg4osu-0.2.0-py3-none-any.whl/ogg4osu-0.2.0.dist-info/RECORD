@@ -1,0 +1,13 @@
+ogg4osu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ogg4osu/__main__.py,sha256=vCWxuNKUKy0tOSS61yIzJOpOe21EBP4N9tkIlepFGTg,41
+ogg4osu/audio.py,sha256=niaSDSEEUaLw3LNsHGo6ALqmsmSf-kjIu_nBptt6aDE,5431
+ogg4osu/cli.py,sha256=RzPh7gcpsN-YQ8Du56V8VOItMdYyyVC4dIZeAP-g0Bs,1026
+ogg4osu/ogg4osu.py,sha256=ZNd1h9cxiV-DVvI6B_O7cRy1UVj-p7CH30MtTBBZK-A,1193
+ogg4osu/audio/__init__.py,sha256=dF2QrZulZ7TFGpxANyM-Jp9s4fuubwHknwRGeyOA3WQ,351
+ogg4osu/audio/audio.py,sha256=1umQkdvJO8KSBQ7R-F9aGPtNyItlpzP_pfi6o46VJBQ,2056
+ogg4osu/audio/audio_info.py,sha256=Y79oKMVSuf9HXTEFuF4rTlS8ZZHF9evD7SLtpg_d5ME,1999
+ogg4osu-0.2.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ogg4osu-0.2.0.dist-info/METADATA,sha256=nMnms75K16rOtRtgEn46L_uX-6dYh5S94r7r3Hhgb4s,2394
+ogg4osu-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ogg4osu-0.2.0.dist-info/top_level.txt,sha256=-9-lXKjzh7hpDuOWApajolVfI5qxFhElBgl9Ub5vAlc,8
+ogg4osu-0.2.0.dist-info/RECORD,,
