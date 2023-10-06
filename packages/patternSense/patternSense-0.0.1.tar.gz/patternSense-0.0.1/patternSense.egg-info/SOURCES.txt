@@ -1,0 +1,7 @@
+README.md
+setup.py
+patternSense.egg-info/PKG-INFO
+patternSense.egg-info/SOURCES.txt
+patternSense.egg-info/dependency_links.txt
+patternSense.egg-info/requires.txt
+patternSense.egg-info/top_level.txt

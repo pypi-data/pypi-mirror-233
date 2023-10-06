@@ -1,0 +1,1 @@
+Develop a library that provides efficient algorithms for pattern matching, including KMP, Boyer-Moore, and Rabin-Karp, with options to choose the best algorithm based on the input.
