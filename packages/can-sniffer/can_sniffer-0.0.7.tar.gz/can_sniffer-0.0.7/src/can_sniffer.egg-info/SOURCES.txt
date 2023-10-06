@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+src/can_sniffer/__init__.py
+src/can_sniffer/__version__.py
+src/can_sniffer/can_sniffer.py
+src/can_sniffer.egg-info/PKG-INFO
+src/can_sniffer.egg-info/SOURCES.txt
+src/can_sniffer.egg-info/dependency_links.txt
+src/can_sniffer.egg-info/requires.txt
+src/can_sniffer.egg-info/top_level.txt
