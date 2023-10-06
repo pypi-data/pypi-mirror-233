@@ -1,0 +1,7 @@
+setup.py
+lottostar.egg-info/PKG-INFO
+lottostar.egg-info/SOURCES.txt
+lottostar.egg-info/dependency_links.txt
+lottostar.egg-info/entry_points.txt
+lottostar.egg-info/requires.txt
+lottostar.egg-info/top_level.txt
