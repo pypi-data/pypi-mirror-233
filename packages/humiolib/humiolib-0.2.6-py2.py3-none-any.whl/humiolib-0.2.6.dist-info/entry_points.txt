@@ -1,0 +1,2 @@
+[console_scripts]
+humiocli = humiolib.cli:main
