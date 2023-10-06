@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: jetto-mobo
+Version: 0.1.0
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: botorch
+Requires-Dist: jetto-tools
+Requires-Dist: netCDF4
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: kaleido ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: plotly ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pydata-sphinx-theme ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-autobuild ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
