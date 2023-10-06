@@ -1,0 +1,9 @@
+equation_scraper/__init__.py,sha256=k6I0xLDSK8_TOkIC1mzGrlKqr2GdFuMGS_yN7WyJ_Fg,269
+equation_scraper/functions/parse.py,sha256=ILYws8_6xBns-lAY0jkv9pBYQqu6SaDGI_JSYliz2o4,41660
+equation_scraper/functions/plot.py,sha256=fOCsvTSeYEWzQUrfJW8f3YQTD1srJEkKFTUF0R-BVJY,7181
+equation_scraper/functions/scrape.py,sha256=v3vJLYAsSvrRGMqkgDzU6ql5zGLlZDkx0bXEGsb93AE,12827
+equation_scraper/functions/scrape_and_parse.py,sha256=kNABfxPitkiWlMcWLl7vyVkxXnfNyloHAq0FUEf5-kg,1966
+equation_scraper-0.0.6.dist-info/METADATA,sha256=vWKHtG4dqQ_6DXt5BTenjD_xM8Uu-xy1pd5x5VTdUZY,3980
+equation_scraper-0.0.6.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+equation_scraper-0.0.6.dist-info/licenses/LICENSE.md,sha256=qXfX-8r4yNQ4irwcsyZUG6ePnSzRGCesMN67KsqPsk8,1104
+equation_scraper-0.0.6.dist-info/RECORD,,
