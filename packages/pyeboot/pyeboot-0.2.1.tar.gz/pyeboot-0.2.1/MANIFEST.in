@@ -1,0 +1,4 @@
+include pspdecrypt/*.h
+include pspdecrypt/libkirk/*.h
+include sign_np/*.h
+include sign_np/libkirk/*.h
