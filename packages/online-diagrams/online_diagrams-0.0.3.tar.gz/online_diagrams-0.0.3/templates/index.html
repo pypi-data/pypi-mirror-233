@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <!--  Material Design Lite -->
+        <script src="md/material.min.js"></script>
+        <link rel="stylesheet" href="md/material.min.css">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <!--  Material design icons see https://materialdesignicons.com/getting-started -->
+        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/diagrams.css">
+        <script>
+            // read the example
+            function readExample() {
+            	var selector = document.getElementById("generatorselect");
+            	var example = selector.options[selector.selectedIndex].value.trim();
+             	fetch('/example/'+example)
+             		.then(
+             			response => {
+             				return response.text();
+             			}
+            		)
+             		.then(
+             			text => {
+             				var sourceTextArea=document.getElementById('source');
+            				sourceTextArea.value=text;
+             				// console.log(text);
+             			}
+             		)
+             		.catch(
+             			error => {
+             				// alert(error);
+             				console.error(error);
+             			}
+             		);
+            }
+        </script>
+    </head>
+    <body>
+        {% include 'menu.html' %}
+        <div id="navigationbox" title="Diagrams-Services">Diagrams-Service</div>
+        <div class="container-fluid" id="contentbox">
+            <br>
+            <form action="/diagrams" method="post">
+                <div class="row">
+                    <div id="generatorlabel" class="col-md-1 text-right">
+                        <label class="label" for="generator">Generator:</label>
+                    </div>
+                    <div id="generatorcol" class="col-md-6">
+                        <select name="generator" id="generatorselect" onchange="onGeneratorChange(this)">
+                            {% for igen in gens %}
+                            <optgroup id="{{igen.id}}-optgroup" label="{{igen.name}}">
+                                {% for genAlias in igen.aliases %}
+                                <option value="{{genAlias}}" name="{{genAlias}}" {% if genAlias ==alias  %} selected {% endif %}>{{genAlias}}</option>
+                                {% endfor %}
+                            </optgroup>
+                            {% endfor %}
+                        </select>
+                    	<button type='submit' id="render">render</button>
+                    	<br>
+                        <button type='button' id="readexample" onclick="readExample()">example</button>
+                    </div>
+                    {% for igen in gens %}
+                    {{igen.getHtmlInfo()|safe}}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div id="outputTypeLabel" class="col-md-1 text-right">
+                        <label class="label">Output:</label>
+                    </div>
+                    <div id="outputTypeCol" class="col-md-6">
+                        <fieldset id='outputTypes'>
+                          {% for genOutputType in ['png','svg','txt'] %}
+                            <input type="radio" id="output-{{genOutputType}}" name="outputType" value="{{genOutputType}}" {% if genOutputType ==outputType  %} checked {% endif %}>&nbsp;{{genOutputType}}
+                          {% endfor %}
+                         </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sourcelabel" class="col-md-1 text-right">
+                        <label class="label" for="source">Source code:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <textarea id="source" name="source" rows="24" cols="80">{{ source }}</textarea>
+                     </div>
+                    <div class="col-md-6">
+                    {% if genResult %}
+                    {{genResult.asHtml()|safe}}
+                    {% endif %}
+                    </div> 
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-2">
+                    <pre>
+{{ message }}</pre>
+                </div>
+            </div>
+            <!--  end of main content box -->
+            <div id="footerbox"></div>
+        </div>
+    </body>
+</html>
