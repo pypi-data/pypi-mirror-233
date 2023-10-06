@@ -1,0 +1,48 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "EscribaLogger"
+version = "1.22.3"
+authors = [
+    { name = "Thiago Santa Clara Pereira", email = "strovsk@outlook.com" },
+]
+keywords = [
+    "logging",
+    "logger",
+    "log",
+    "logs",
+    "drivers",
+]
+description = "A fast 'read to use' Logging system which provides stdout/file/custom stream with easy syntax and operation. It's a very simple approach of Laravel drivers sorts, by the way, handlers ands drivers are both the same"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "markdown-it-py==3.0.0",
+    "mdurl==0.1.2",
+    "Pygments==2.15.1",
+    "rich==13.4.2",
+    "graypy>=2.1.0",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Github = "https://github.com/Strovsk/EscribaLogger"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "coverage>=7.3.0",
+    "watchdogs>=1.9.10",
+    "pytest-mock>=3.11.1",
+]
