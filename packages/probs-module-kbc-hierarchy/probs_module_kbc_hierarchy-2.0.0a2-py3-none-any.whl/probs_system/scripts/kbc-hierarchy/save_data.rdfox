@@ -1,0 +1,13 @@
+
+# # Explicate facts
+# clear rules-explicate-facts force
+
+# # Export data
+# export probs_enhanced_data.nt.gz "application/n-triples" fact-domain IDB
+# # export probs_enhanced_data.ttl "text/turtle" fact-domain IDB
+
+# Output in N-Triples format
+set query.answer-format "application/n-triples"
+set output probs_enhanced_data.nt.gz
+# set output probs_enhanced_data.ttl
+evaluate export_enhanced_data.rq

@@ -1,0 +1,81 @@
+################################################################
+##### Find an order among the components of each composite #####
+################################################################
+
+#####
+# Ordering is quite important for the performance of composition.
+# An ordering based on the increasing number of observations of each component is the best ordering when all the observations of the components are compatible.
+# We consider only the initial ones (Direct) because counting the Inferred ones is much more time consuming.
+#####
+
+# Utility rule: how many observations define an object
+ufu:numberObservationsDefinedBy[?CompositeComponent,?NumberObservations] ufu:PW
+    :- ufu:Component[?CompositeComponent,?Component] ufu:PW,
+        AGGREGATE(
+                :objectDefinedBy[?Observation,?Component]
+                ON ?Component
+                BIND COUNT(?Observation) AS ?NumberObservations
+        ) .
+# If there are no observations, then the value is 1 (the `EmptyObservation`)
+ufu:numberObservationsDefinedBy[?CompositeComponent,1] ufu:PW
+    :- ufu:Component[?CompositeComponent,?Component] ufu:PW,
+        NOT EXISTS ?Observation IN (
+                :objectDefinedBy[?Observation,?Component]
+        ) .
+
+# Identify the first component of a composition hierarchy
+ufu:firstComponent[?CompositeComponent,true] ufu:PW :-
+        ufu:objectComposedOf[?Composite,?CompositeComponent] ufu:PW,
+        ufu:numberObservationsDefinedBy[?CompositeComponent,?NumberObservationsComponent] ufu:PW,
+        NOT EXISTS ?PrecedingCompositeComponent,?NumberObservationsPrecedingComponent IN (
+                ufu:objectComposedOf[?Composite,?PrecedingCompositeComponent] ufu:PW,
+                ufu:numberObservationsDefinedBy[?PrecedingCompositeComponent,?NumberObservationsPrecedingComponent] ufu:PW,
+                FILTER (
+                        ?NumberObservationsPrecedingComponent < ?NumberObservationsComponent ||
+                        (?NumberObservationsPrecedingComponent = ?NumberObservationsComponent
+                                && ?PrecedingCompositeComponent < ?CompositeComponent)
+                )
+        ) .
+
+# Identify the last component of a composition hierarchy
+ufu:lastComponent[?Composite,?CompositeComponent] ufu:PW :-
+        ufu:objectComposedOf[?Composite,?CompositeComponent] ufu:PW,
+        ufu:numberObservationsDefinedBy[?CompositeComponent,?NumberObservationsComponent] ufu:PW,
+        NOT EXISTS ?SubsequentCompositeComponent,?NumberObservationsSubsequentComponent IN (
+                ufu:objectComposedOf[?Composite,?SubsequentCompositeComponent] ufu:PW,
+                ufu:numberObservationsDefinedBy[?SubsequentCompositeComponent,?NumberObservationsSubsequentComponent] ufu:PW,
+                FILTER (
+                        ?NumberObservationsSubsequentComponent > ?NumberObservationsComponent ||
+                        (?NumberObservationsSubsequentComponent = ?NumberObservationsComponent
+                                && ?SubsequentCompositeComponent > ?CompositeComponent)
+                )
+        ) .
+
+# Identify the next component of each component
+ufu:nextComponent[?CompositeComponent,?OtherCompositeComponent] ufu:PW :-
+        ufu:objectComposedOf[?Composite,?CompositeComponent] ufu:PW,
+        ufu:numberObservationsDefinedBy[?CompositeComponent,?NumberObservationsComponent] ufu:PW,
+        ufu:objectComposedOf[?Composite,?OtherCompositeComponent] ufu:PW,
+        ufu:numberObservationsDefinedBy[?OtherCompositeComponent,?NumberObservationsOtherComponent] ufu:PW,
+        FILTER (
+                ?NumberObservationsOtherComponent > ?NumberObservationsComponent
+                ||
+                (?NumberObservationsOtherComponent = ?NumberObservationsComponent
+                        && ?CompositeComponent < ?OtherCompositeComponent)
+        ),
+        NOT EXISTS ?BetweenCompositeComponent,?NumberObservationsBetweenComponent IN (
+                ufu:objectComposedOf[?Composite,?BetweenCompositeComponent] ufu:PW,
+                ufu:numberObservationsDefinedBy[?BetweenCompositeComponent,?NumberObservationsBetweenComponent] ufu:PW,
+                FILTER (
+                        ?NumberObservationsBetweenComponent > ?NumberObservationsComponent
+                        ||
+                        (?NumberObservationsBetweenComponent = ?NumberObservationsComponent
+                                && ?CompositeComponent < ?BetweenCompositeComponent)
+                ),
+                FILTER (
+                        ?NumberObservationsBetweenComponent < ?NumberObservationsOtherComponent
+                        ||
+                        (?NumberObservationsBetweenComponent = ?NumberObservationsOtherComponent
+                                && ?BetweenCompositeComponent < ?OtherCompositeComponent)
+                )
+        ) .

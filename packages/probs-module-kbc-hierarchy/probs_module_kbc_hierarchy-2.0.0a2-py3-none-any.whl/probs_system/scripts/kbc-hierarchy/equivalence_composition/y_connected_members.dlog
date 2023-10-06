@@ -1,0 +1,25 @@
+#############################
+##### Connected members #####
+#############################
+
+#####
+# Identify the direcly connected observations that have been aggregated to create each last partial observation (and so the new inferred observation).
+#####
+
+# Base case (the last observation itself)
+ufu:hasMember[?PartialObservation,?Observation] ufu:PW :-
+    ufu:CompositionObservationToExport[?PartialObservation] ufu:PW ,
+    ufu:PObsForObservation[?PartialObservation,?Observation] ufu:PW.
+
+# Induction step (for each predecessor)
+ufu:hasMember[?PartialObservation,?Observation] ufu:PW :-
+    ufu:hasPredecessor[?PartialObservation,?Predecessor] ufu:PW,
+    ufu:PObsForObservation[?Predecessor,?Observation] ufu:PW.
+
+# All the predecessors of the last observation
+ufu:hasPredecessor[?PartialObservation,?Predecessor] ufu:PW :-
+    ufu:CompositionObservationToExport[?PartialObservation] ufu:PW ,
+    ufu:PObsForPredecessor[?PartialObservation,?Predecessor] ufu:PW.
+ufu:hasPredecessor[?PartialObservation,?PredecessorOfPredecessor] ufu:PW :-
+    ufu:hasPredecessor[?PartialObservation,?Predecessor] ufu:PW,
+    ufu:PObsForPredecessor[?Predecessor,?PredecessorOfPredecessor] ufu:PW.

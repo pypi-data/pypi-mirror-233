@@ -1,0 +1,13 @@
+###############################
+##### Missing measurement #####
+###############################
+
+#####
+# If an observation does not have the measurement, a valid measurement value must be specified for the aggregation to work.
+# This observation must use the neutral element of the "aggregation function" that we use for the composition (`0` at the moment).
+# We decided to consider all the missing measurement observations (i.e., observations without measurement) as observations with measurement 0.
+#####
+
+# Set the neutral element of the "aggregation function" as measurement for each `ufu:missingMeasurement` 
+:measurement[?Observation,0] ufu:PW :-
+        ufu:missingMeasurement[?Observation,true] ufu:PW .

@@ -1,0 +1,47 @@
+##########################################
+##### Create the working environment #####
+##########################################
+
+#####
+# Temporary predicates
+#####
+
+:objectEquivalentTo[?Object1,?Object2] ufu:PW :-
+    :objectEquivalentTo[?Object1,?Object2] .
+
+# Using an identifier for each pair <Composite,Component>
+ufu:Composite[?CompositeComponent,?Composite] ufu:PW ,
+ufu:Component[?CompositeComponent,?Component] ufu:PW ,
+ufu:objectComposedOf[?Composite,?CompositeComponent] ufu:PW :-
+        :objectComposedOf[?Composite,?Component],
+        BIND(IRI(CONCAT("CompositeComponent-", MD5(STR(?Composite)), "-", MD5(STR(?Component))), STR(ufu:)) AS ?CompositeComponent) .
+
+:objectDirectlyDefinedBy[?Observation,?Object] ufu:PW :-
+    :objectDirectlyDefinedBy[?Observation,?Object] .
+
+:objectInferredDefinedBy[?Observation,?Object] ufu:PW :-
+    :objectInferredDefinedBy[?Observation,?Object] .
+
+# Compatibility signature for each Observation. A superset of `ufu:OriginalCompatibilitySignature` (containing also the `ufu:PlaceholderObservation`).
+ufu:CompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW :-
+        ufu:OriginalCompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW .
+
+# New temporary predicates the measurement value
+:measurement[?Observation,?Measurement] ufu:PW :-
+        :measurement[?Observation,?Measurement] .
+
+#####
+# Initial DefinedBy to use in the composition
+#####
+
+# Only observations with a measurement
+# Note that given the current version of "Missing measurement", this includes every Observation
+# Using an identifier for each pair <Composite,Component>
+ufu:objectDefinedByForComposition[?Observation,?CompositeComponent] ufu:PW :-
+        :objectDefinedBy[?Observation,?Component] ufu:PW ,
+        ufu:Component[?CompositeComponent,?Component] ufu:PW ,
+        :measurement[?Observation,?Measurement] ufu:PW .
+
+# Include the empty observations
+ufu:objectDefinedByForComposition[?Observation,?CompositeComponent] ufu:PW :-
+        ufu:objectDefinedByEmpty[?Observation,?CompositeComponent] ufu:PW .

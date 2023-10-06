@@ -1,0 +1,43 @@
+
+# 3: after y-algorithm
+
+ufs:y_stat[ufs:3_InferredObservation, ?Count] :-
+    AGGREGATE(
+        :InferredObservation[?Observation]
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+# :DirectObservation + :InferredObservation
+ufs:y_stat[ufs:3_Observation, ?Count] :-
+    AGGREGATE(
+        :Observation[?Observation]
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+# New inferred observations due to equivalence
+ufs:y_stat[ufs:3_new_observations_via_equivalence, ?Count] :-
+    AGGREGATE(
+        ufu:EquivalenceObservationToExport[?Observation] ufu:PW
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+# New inferred observations due to composition
+ufs:y_stat[ufs:3_new_observations_via_composition, ?Count] :-
+    AGGREGATE(
+        ufu:CompositionObservationToExport[?Observation] ufu:PW
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+# Observation-Object relations used during composition
+ufs:y_stat[ufs:3_ufu_objectDefinedByForComposition, ?Count] :-
+    AGGREGATE(
+        ufu:objectDefinedByForComposition[?Observation,?Object] ufu:PW
+        BIND COUNT(?Observation, ?Object) AS ?Count
+    ) .
+
+# All the different compatibility signature values
+ufs:y_stat[ufs:3_ufu_distinct_compatibility_signatures, ?Count] :-
+    AGGREGATE(
+        ufu:CompatibilitySignature[?Observation,?CompatibilitySignature] ufu:PW
+        BIND COUNT(DISTINCT(?CompatibilitySignature)) AS ?Count
+    ) .

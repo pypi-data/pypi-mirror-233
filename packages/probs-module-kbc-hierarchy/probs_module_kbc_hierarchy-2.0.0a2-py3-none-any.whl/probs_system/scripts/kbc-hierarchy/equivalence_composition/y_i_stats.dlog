@@ -1,0 +1,77 @@
+
+# 1: in the original data
+
+# this must be 0
+ufs:y_stat[ufs:1_observations_without_metric, ?Count] :-
+    AGGREGATE(
+        :Observation[?Observation]
+        BIND COUNT(DISTINCT(?Observation)) AS ?CountObs
+    ) ,
+    AGGREGATE(
+        :hasMetric[?Observation, ?Measurement]
+        BIND COUNT(DISTINCT(?Observation)) AS ?CountM
+    ) ,
+    BIND (?CountObs-?CountM AS ?Count).
+
+ufs:y_stat[ufs:1_observations_without_measurement, ?Count] :-
+    AGGREGATE(
+        :Observation[?Observation]
+        BIND COUNT(DISTINCT(?Observation)) AS ?CountObs
+    ) ,
+    AGGREGATE(
+        :measurement[?Observation, ?Measurement]
+        BIND COUNT(DISTINCT(?Observation)) AS ?CountM
+    ) ,
+    BIND (?CountObs-?CountM AS ?Count).
+
+ufs:y_stat[ufs:1_observations_with_0_as_measurement, ?Count] :-
+    AGGREGATE(
+        :measurement[?Observation, 0]
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:1_observations, ?Count] :-
+    AGGREGATE(
+        :Observation[?Observation]
+        BIND COUNT(?Observation) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:1_objectDefinedBy, ?Count] :-
+    AGGREGATE(
+        :objectDefinedBy[?Observation, ?Object]
+        BIND COUNT(?Observation, ?Object) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:1_objects, ?Count] :-
+    AGGREGATE(
+        :Object[?Object]
+        BIND COUNT(?Object) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:1_objectEquivalentTo, ?Count] :-
+    AGGREGATE(
+        :objectEquivalentTo[?O1, ?O2]
+        BIND COUNT(?O1, ?O2) AS ?Count
+    ) .
+
+ufs:y_stat[ufs:1_objectComposedOf, ?Count] :-
+    AGGREGATE(
+        :objectComposedOf[?Object, ?Component]
+        BIND COUNT(?Object, ?Component) AS ?Count
+    ) .
+
+# Objects that have at least a component
+ufs:y_stat[ufs:1_composite_objects, ?Count] :-
+    AGGREGATE(
+        :objectComposedOf[?Object, ?Component]
+        BIND COUNT(DISTINCT(?Object)) AS ?Count
+    ) .
+
+# Objects involved in more than one composition hierarchy
+ufs:y_stat[ufs:1_components_with_multiple_composites, ?Count] :-
+    AGGREGATE(
+        :objectComposedOf[?O1, ?Component] ,
+        :objectComposedOf[?O2, ?Component] ,
+        FILTER (?O1 != ?O2)
+        BIND COUNT(?Component) AS ?Count
+    ) .

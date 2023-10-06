@@ -1,0 +1,17 @@
+###################################
+##### Equivalence aggregation #####
+###################################
+
+#####
+# If an object is equivalent to another one, the observation of one must be propagated to the other.
+#####
+
+ufu:EquivalenceObservationToExport[?Observation] ufu:PW ,
+:objectInferredDefinedBy[?Observation,?Object1] ufu:PW ,
+:wasDerivedFrom[?Observation,?Observation] ufu:PW :-
+        # if 2 objects are equivalent but they are not the same object
+        :objectEquivalentTo[?Object1,?Object2] ufu:PW , FILTER(?Object1 != ?Object2) ,
+        # and one object has an observation
+        :objectDefinedBy[?Observation,?Object2] ufu:PW ,
+        # and this observation is not already a direct observation of the equivalent object
+        NOT :objectDirectlyDefinedBy[?Observation,?Object1] ufu:PW .

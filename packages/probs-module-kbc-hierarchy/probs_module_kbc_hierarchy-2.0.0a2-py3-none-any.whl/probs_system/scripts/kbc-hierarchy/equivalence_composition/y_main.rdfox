@@ -1,0 +1,51 @@
+
+# These tupletable are needed only for optimisation reasons in y_composition_hierarchy (see the optimised rules there). RDFox currently does not support atoms with arity greater than 2, and using these tupletables allows us to get atoms of arity 3.
+tupletable create CompositeComponentCompatibilitySignatureObservation type triple-table
+tupletable create CompositeComponentCompatibilitySignaturePartialObservation type triple-table
+
+# Initial stats
+import equivalence_composition/y_i_$(stats).dlog
+
+begin
+
+# Import ontology rules in the new named graph
+import > ufu:PW probs_ontology_rules.dlog
+
+# Generate compatibility signatures
+import equivalence_composition/y_compatibility_signature.dlog
+
+# Define empty observations
+import equivalence_composition/y_empty_observations.dlog
+
+# Identify observations without measurement
+import equivalence_composition/y_missing_measurement.dlog
+
+# Create the working environment
+import equivalence_composition/y_parallel_world.dlog
+
+import equivalence_composition/y_ordering.dlog
+
+# Mid stats
+import equivalence_composition/y_m_$(stats).dlog
+exec equivalence_composition/y_query_$(stats)
+
+# Composition aggregation
+import equivalence_composition/y_composition_hierarchy.dlog
+
+# Equivalence aggregation
+import equivalence_composition/y_equivalence.dlog
+
+# Identify observations 'connected' to each `InferredObservation`
+import equivalence_composition/y_connected_members.dlog
+
+# Identify 'was derived from' for each `InferredObservation`
+import equivalence_composition/y_connected_wdf.dlog
+
+# Identify bound value for each `InferredObservation`
+import equivalence_composition/y_connected_bounds.dlog
+
+commit
+
+# Final stats
+import equivalence_composition/y_f_$(stats).dlog
+exec equivalence_composition/y_query_$(stats)
