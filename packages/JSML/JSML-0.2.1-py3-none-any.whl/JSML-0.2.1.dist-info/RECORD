@@ -1,0 +1,12 @@
+JSML/__init__.py,sha256=ED1yEcX3M5loOzqm2MOKmpokbtz4BerUM_Tl3MOWpHo,20
+JSML/hello.py,sha256=wvFzCSc7FG2HMwyTBwb50ejIXXgeJllL6WbtKfcplWo,44
+JSML/basic/__init__.py,sha256=D4exlxOD2oVr6iqVRpikPradiB_I-5LvvdF3cE_Rpmg,66
+JSML/basic/activations.py,sha256=Hu9iKO8nuwy1uOa8nbkh5eRviiWdf-MjyBaqHwdAXyY,3094
+JSML/basic/layers.py,sha256=5ERnIgRLtNIMpcM_BIlQrKwX_RfMNea0vE43uQhn8ao,3224
+JSML/basic/losses-and-accuracy.py,sha256=pS1kfNCgWvOqe3BXCGafa9wGfLoTqUqSP18UAWmrBtA,9355
+JSML/basic/model.py,sha256=8XcnDJ0114ozq-M5b-1mpJ41V1Mp0f40FK6DpuGPBIg,14218
+JSML/basic/optimizers.py,sha256=6nz4ZRW2tGKksE7mDlV9s0qNUHa7BXbAWYvXoTk0glo,8316
+JSML-0.2.1.dist-info/METADATA,sha256=qwq_tWXZ0K-gu4c587nBsFX_-1ZH_QvPFSfwqzm2EpI,542
+JSML-0.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+JSML-0.2.1.dist-info/top_level.txt,sha256=TTF87sXedA9HOga6AgAJHE6Ac8SkMJuU9zsdiD807yk,5
+JSML-0.2.1.dist-info/RECORD,,
