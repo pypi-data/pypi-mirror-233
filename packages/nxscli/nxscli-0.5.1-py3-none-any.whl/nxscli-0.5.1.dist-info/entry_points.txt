@@ -1,0 +1,2 @@
+[console_scripts]
+nxscli = nxscli.cli.main:main
