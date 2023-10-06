@@ -1,0 +1,3 @@
+[console_scripts]
+MLSTclassifier_cd=mlstclassifier_cd.MLST_classifier_EB:main
+
