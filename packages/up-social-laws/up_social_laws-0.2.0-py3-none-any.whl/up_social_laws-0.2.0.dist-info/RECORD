@@ -1,0 +1,15 @@
+up_social_laws/__init__.py,sha256=3Ciprx3PDUyDzO8h3o0KwemycNMAAmF0FTHNQN2qEOY,751
+up_social_laws/ma_centralizer.py,sha256=5J0Z38sUBG25AlU0CDRZE5ce9dlTFpe0Yrruyd5w9_4,7192
+up_social_laws/ma_problem_waitfor.py,sha256=m64UuLGt9GPrLYNm2gw4P05i1F_3hpkjSM7wuhSftrY,3210
+up_social_laws/robustness_checker.py,sha256=GY_Qhaz29wal9hH1_Ib8n4zDfqsdlPtInZZSlHbVXyY,12837
+up_social_laws/robustness_verification.py,sha256=ZrpsDJKJua2Q7fwoNwyAdHEhvBWufgpLqnr6XqJzwg0,52426
+up_social_laws/sa_to_ma_converter.py,sha256=Pvv1Iv3UUoc939zJedi_vdr_Yd1bZKEr3GZScYRPGoI,14600
+up_social_laws/single_agent_projection.py,sha256=xXyar_Zqtgi6isBOxyiuvFLlM47zWuwOPsSlTbeldvU,7281
+up_social_laws/social_law.py,sha256=0HLrCebTTqonNQCdtC1NE25mzJyH7xz13SEASlNzXCQ,16667
+up_social_laws/synthesis.py,sha256=JdEvyZDhVhsC8pJVbiYyrSAEc_BiVnygWGaIuC_lrPc,14186
+up_social_laws/waitfor_specification.py,sha256=0RNnIoqXzDpuGh8LU9NZuXlTvVXVU1fCHVG6iInfMfY,2322
+up_social_laws-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+up_social_laws-0.2.0.dist-info/METADATA,sha256=8zWKBq49ZCmi3pBQHl76opwOen0vcZp8cfBCzPjpKgc,593
+up_social_laws-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+up_social_laws-0.2.0.dist-info/top_level.txt,sha256=gp_Rq1eFCvKZA4sueB7OvewBdTeaPQ614YpTNufASls,15
+up_social_laws-0.2.0.dist-info/RECORD,,
