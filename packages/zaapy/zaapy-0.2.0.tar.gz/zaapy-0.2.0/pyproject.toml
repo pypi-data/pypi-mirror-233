@@ -1,0 +1,64 @@
+[build-system]
+requires = [
+    "setuptools>=61.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zaapy"
+description = "A tool to analyze results from Zeltron"
+authors = [
+    { name = "A. Soudais" },
+]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib>=3.5.0",
+    "numpy>=1.18.5",
+    "packaging>=21.3",
+    "scipy>=1.6.1",
+    "h5py>=3.8.0",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "zaapy.__version__"}
+
+[project.license]
+text = "GPL-3.0"
+
+[project.scripts]
+zaapy = "zaapy.main:main"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+exclude = ["*__init__.py"]
+ignore = [
+    "E402",
+    "E501",
+    "F401",
+    "F821",
+    "W605",
+    "F841",
+    "F541",
+    "E731",
+]
+select = [
+    "E",
+    "F",
+    "W",
+]
+
+[tool.ruff.isort]
+combine-as-imports = true
