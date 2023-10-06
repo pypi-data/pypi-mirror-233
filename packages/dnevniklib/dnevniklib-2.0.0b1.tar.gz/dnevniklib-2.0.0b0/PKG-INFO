@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dnevniklib
+Version: 2.0.0b0
+Summary: Библиотека для работы с МЭШ
+Home-page: https://github.com/xD1rty/dnevniklib
+Author: Ivan Kriventsev
+Author-email: <dirtyhornet277@gmail.com>
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# DnevnikLib20
+
+
