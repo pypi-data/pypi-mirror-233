@@ -1,0 +1,13 @@
+himon/__init__.py,sha256=zplcMUxqCx-iT75Zbx-vFKpaSH1YdXgw6_DWz5IIOw0,515
+himon/exceptions.py,sha256=Us_wvTzj3vhmIoe_YToimXm9GJGn3nhDPYjWM1xBTWI,272
+himon/league_of_comic_geeks.py,sha256=zh-KN59ED5lxXRL0XeBWGs1A-ZQApJNJAmPi-HPXElo,9738
+himon/sqlite_cache.py,sha256=VXj9ctC3yGh8kL2JugMdrmSJgOgKuRSC_mHj4PONFzc,2762
+himon/schemas/__init__.py,sha256=a6S9LzAjFxhylXLpVYk5Mk-_AJ5H65amIpueIlw6FF8,398
+himon/schemas/_validators.py,sha256=O-0WjhWp_Fy5NYos4Qlo16ZmEw71EjtmICktXGL_tnI,1570
+himon/schemas/comic.py,sha256=FUgKi_aU_1aKTiUh3CTWAGfxkQZsI7p-HMSCpw9wRrs,8202
+himon/schemas/search_result.py,sha256=4deKOusU763od5b80RQ2lrSidyB-xJpisV9ZGt2x3AA,3063
+himon/schemas/series.py,sha256=CTVdzyn5tY0YpYhV5AUZoDKtmV6-IymWtNJ-DM5z714,1988
+himon-0.5.0.dist-info/METADATA,sha256=fDUy-qRMSvCUGlVOnjkinCSBPSITYBavL2IQFYbjQvc,5298
+himon-0.5.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+himon-0.5.0.dist-info/licenses/LICENSE.txt,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+himon-0.5.0.dist-info/RECORD,,
