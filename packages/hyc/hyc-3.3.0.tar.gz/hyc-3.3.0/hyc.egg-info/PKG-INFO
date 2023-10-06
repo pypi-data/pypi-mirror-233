@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hyc
+Version: 3.3.0
+Summary: HYC means HELP YOU CALCULATE.It has many functions to help you calculate quickly and easily.
+Home-page: https://github.com/offical-HYC/hyc
+Author: Zou
+Author-email: HUWA625@outlook.com
+License: MIT
+Keywords: calculate,maths
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: Chinese (Simplified)
+License-File: LICENSE
