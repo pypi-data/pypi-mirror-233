@@ -1,0 +1,12 @@
+zope.i18nmessageid-6.1.0-py3.8-nspkg.pth,sha256=SWEVH-jEWsKYrL0qoC6GBJaStx_iKxGoAY9PQycFVC4,529
+zope.i18nmessageid-6.1.0.dist-info/METADATA,sha256=MClqy7pGkN5RXooYJV_9Kge5JT70ZmM25c48yOQt5rY,8731
+zope.i18nmessageid-6.1.0.dist-info/LICENSE.txt,sha256=PmcdsR32h1FswdtbPWXkqjg-rKPCDOo_r1Og9zNdCjw,2070
+zope.i18nmessageid-6.1.0.dist-info/WHEEL,sha256=0hhP97AV4kXP0ejB-F3ZqHePUSlgfnH2eMaBqXSBAKQ,150
+zope.i18nmessageid-6.1.0.dist-info/RECORD,,
+zope.i18nmessageid-6.1.0.dist-info/namespace_packages.txt,sha256=QpUHvpO4wIuZDeEgKY8qZCtD-tAukB0fn_f6utzlb98,5
+zope.i18nmessageid-6.1.0.dist-info/top_level.txt,sha256=QpUHvpO4wIuZDeEgKY8qZCtD-tAukB0fn_f6utzlb98,5
+zope/i18nmessageid/tests.py,sha256=jlj4B4Uk1svqrVHGvogFn6xBMy0iROQfaOsZ9tCoXws,11020
+zope/i18nmessageid/_zope_i18nmessageid_message.c,sha256=hqXBPbMk6tprdIw9wIc3pj41dYhiQnH-RR7ULKK_oYo,9670
+zope/i18nmessageid/__init__.py,sha256=ZZ51-hkFcf0C0gEFUmbrdDSU6yeCoEBW9Ei7gZMX0jk,867
+zope/i18nmessageid/_zope_i18nmessageid_message.cpython-38-aarch64-linux-gnu.so,sha256=KVYYU8sftPbxwfHG0HfYuBvxt9tCBVoyw_LsRu2B5BM,98648
+zope/i18nmessageid/message.py,sha256=KmSPbRSDzpmqrYBTNiHK9LYGYIT4WQy6uCkBcKXV2BU,3819
