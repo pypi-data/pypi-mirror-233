@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: altern
+Version: 0.1.2
+Summary: A Python package to interact with the altern API
+Home-page: https://github.com/alternbits/altern-python
+Author: Dariush Abbasi
+Author-email: poshtehani@gmail.com
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://altern.ai">
+    <img src="ast/altern-python.png" alt="Altern For Python" />
+  </a>
+
+</p>
+
+<p align="center">A Python package to interact with the [Altern](https://altern.ai) API</p>
+
+install
+--------
+
+The easiest way to install the altern package is either via pip:
+
+```
+$ pip install altern
+```
+
+or manually by downloading the source and run the setup.py script:
+
+```
+python setup.py install
+```
+
+license
+-------
+
+MIT
