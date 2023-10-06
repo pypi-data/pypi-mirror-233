@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: itk-viewer-agave-renderer
+Version: 0.0.3
+Project-URL: Documentation, https://github.com/InsightSoftwareConsortium/itk-viewer/tree/main/packages/agave-renderer#readme
+Project-URL: Issues, https://github.com/InsightSoftwareConsortium/itk-viewer/issues
+Project-URL: Source, https://github.com/InsightSoftwareConsortium/itk-viewer
+Author-email: Matt McCormick <matt.mccormick@kitware.com>
+License-Expression: Apache-2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: agave-pyclient
+Requires-Dist: hypha
+Requires-Dist: itkwasm-htj2k
+Requires-Dist: numpy
+Requires-Dist: pillow
+Description-Content-Type: text/markdown
+
+# ITK Viewer Agave Renderer
+
+[![PyPI - Version](https://img.shields.io/pypi/v/itk-viewer-agave-renderer.svg)](https://pypi.org/project/itk-viewer-agave-renderer)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/itk-viewer-agave-renderer.svg)](https://pypi.org/project/itk-viewer-agave-renderer)
+
+---
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install itk-viewer-agave-renderer
+```
+
+## License
+
+`itk-viewer-agave-renderer` is distributed under the terms of the [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) license.
+
+## Publishing
+
+```console
+hatch version patch
+```
