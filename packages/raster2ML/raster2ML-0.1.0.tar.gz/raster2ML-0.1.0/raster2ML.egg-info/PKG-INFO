@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: raster2ML
+Version: 0.1.0
+Summary: Convert georeferenced Geotiff or any spatial raster format to machine learning ready data.
+Home-page: https://github.com/spatiallysaying/raster2ML
+Author: Durga Prasad, Dhulipudi
+Author-email: dgplinux@yahoo.com
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

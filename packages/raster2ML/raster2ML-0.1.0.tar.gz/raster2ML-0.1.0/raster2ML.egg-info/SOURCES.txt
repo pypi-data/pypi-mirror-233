@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+examples/__init__.py
+examples/raster_and_shape_to_mask.py
+examples/test_labelme2mask.py
+examples/test_raster2png.py
+examples/test_shp2labelme.py
+raster2ML/__init__.py
+raster2ML/labelme2mask.py
+raster2ML/raster2png.py
+raster2ML/shp2labelme.py
+raster2ML.egg-info/PKG-INFO
+raster2ML.egg-info/SOURCES.txt
+raster2ML.egg-info/dependency_links.txt
+raster2ML.egg-info/requires.txt
+raster2ML.egg-info/top_level.txt
