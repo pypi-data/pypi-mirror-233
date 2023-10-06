@@ -1,0 +1,13 @@
+numpy
+pandas>=1.1.1
+
+[dev]
+matplotlib
+numba
+plotly
+polars
+
+[plotting]
+matplotlib
+plotly
+plotly-resampler
