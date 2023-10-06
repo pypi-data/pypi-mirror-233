@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pharmbio
+Version: 0.1.6
+Summary: This is a Python package for interacting with Pharmb.io routine analysis.
+Home-page: https://github.com/pharmbio/pharmbio_package
+Author: Nima Chamyani
+Author-email: nima.ch@gmail.com
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: polars >=0.19.5
+Requires-Dist: pyarrow
+Requires-Dist: ipywidgets
+Requires-Dist: sqlalchemy
+Requires-Dist: connectorx >=0.3.1
+Requires-Dist: psycopg2-binary
+Requires-Dist: plotly
+Requires-Dist: nbformat
+Requires-Dist: tqdm
+
