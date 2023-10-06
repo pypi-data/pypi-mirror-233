@@ -1,0 +1,250 @@
+Metadata-Version: 2.1
+Name: mmv-im2im
+Version: 0.5.1
+Summary: A python package for deep learing based image to image transformation
+Home-page: https://github.com/MMV-Lab/mmv_im2im
+Author: Jianxu Chen
+Author-email: jianxuchen.ai@gmail.com
+License: MIT license
+Keywords: deep learning,microscopy image analysis,biomedical image analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lightning ==2.0.0
+Requires-Dist: torch ==2.0.1
+Requires-Dist: monai >=1.1.0
+Requires-Dist: aicsimageio ==4.10.0
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: protobuf <4.21.0
+Requires-Dist: pyrallis
+Requires-Dist: scikit-learn
+Requires-Dist: tensorboard
+Requires-Dist: numba
+Provides-Extra: advanced
+Requires-Dist: lightning ==2.0.0 ; extra == 'advanced'
+Requires-Dist: torch ==2.0.1 ; extra == 'advanced'
+Requires-Dist: monai >=1.1.0 ; extra == 'advanced'
+Requires-Dist: aicsimageio ==4.10.0 ; extra == 'advanced'
+Requires-Dist: pandas ; extra == 'advanced'
+Requires-Dist: scikit-image ; extra == 'advanced'
+Requires-Dist: protobuf <4.21.0 ; extra == 'advanced'
+Requires-Dist: pyrallis ; extra == 'advanced'
+Requires-Dist: scikit-learn ; extra == 'advanced'
+Requires-Dist: tensorboard ; extra == 'advanced'
+Requires-Dist: numba ; extra == 'advanced'
+Provides-Extra: all
+Requires-Dist: lightning ==2.0.0 ; extra == 'all'
+Requires-Dist: torch ==2.0.1 ; extra == 'all'
+Requires-Dist: monai >=1.1.0 ; extra == 'all'
+Requires-Dist: aicsimageio ==4.10.0 ; extra == 'all'
+Requires-Dist: pandas ; extra == 'all'
+Requires-Dist: scikit-image ; extra == 'all'
+Requires-Dist: protobuf <4.21.0 ; extra == 'all'
+Requires-Dist: pyrallis ; extra == 'all'
+Requires-Dist: scikit-learn ; extra == 'all'
+Requires-Dist: tensorboard ; extra == 'all'
+Requires-Dist: numba ; extra == 'all'
+Requires-Dist: quilt3 ; extra == 'all'
+Requires-Dist: pooch ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: notebook ; extra == 'all'
+Requires-Dist: pytest-runner >=5.2 ; extra == 'all'
+Requires-Dist: black >=19.10b0 ; extra == 'all'
+Requires-Dist: codecov >=2.1.4 ; extra == 'all'
+Requires-Dist: flake8 >=3.8.3 ; extra == 'all'
+Requires-Dist: flake8-debugger >=3.2.1 ; extra == 'all'
+Requires-Dist: pytest >=5.4.3 ; extra == 'all'
+Requires-Dist: pytest-cov >=2.9.0 ; extra == 'all'
+Requires-Dist: pytest-raises >=0.11 ; extra == 'all'
+Requires-Dist: bump2version >=1.0.1 ; extra == 'all'
+Requires-Dist: coverage >=5.1 ; extra == 'all'
+Requires-Dist: ipython >=7.15.0 ; extra == 'all'
+Requires-Dist: m2r2 >=0.2.7 ; extra == 'all'
+Requires-Dist: Sphinx >=3.4.3 ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme >=0.5.1 ; extra == 'all'
+Requires-Dist: tox >=3.15.2 ; extra == 'all'
+Requires-Dist: twine >=3.1.1 ; extra == 'all'
+Requires-Dist: wheel >=0.34.2 ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest-runner >=5.2 ; extra == 'dev'
+Requires-Dist: black >=19.10b0 ; extra == 'dev'
+Requires-Dist: codecov >=2.1.4 ; extra == 'dev'
+Requires-Dist: flake8 >=3.8.3 ; extra == 'dev'
+Requires-Dist: flake8-debugger >=3.2.1 ; extra == 'dev'
+Requires-Dist: pytest >=5.4.3 ; extra == 'dev'
+Requires-Dist: pytest-cov >=2.9.0 ; extra == 'dev'
+Requires-Dist: pytest-raises >=0.11 ; extra == 'dev'
+Requires-Dist: bump2version >=1.0.1 ; extra == 'dev'
+Requires-Dist: coverage >=5.1 ; extra == 'dev'
+Requires-Dist: ipython >=7.15.0 ; extra == 'dev'
+Requires-Dist: m2r2 >=0.2.7 ; extra == 'dev'
+Requires-Dist: Sphinx >=3.4.3 ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme >=0.5.1 ; extra == 'dev'
+Requires-Dist: tox >=3.15.2 ; extra == 'dev'
+Requires-Dist: twine >=3.1.1 ; extra == 'dev'
+Requires-Dist: wheel >=0.34.2 ; extra == 'dev'
+Provides-Extra: paper
+Requires-Dist: lightning ==2.0.0 ; extra == 'paper'
+Requires-Dist: torch ==2.0.1 ; extra == 'paper'
+Requires-Dist: monai >=1.1.0 ; extra == 'paper'
+Requires-Dist: aicsimageio ==4.10.0 ; extra == 'paper'
+Requires-Dist: pandas ; extra == 'paper'
+Requires-Dist: scikit-image ; extra == 'paper'
+Requires-Dist: protobuf <4.21.0 ; extra == 'paper'
+Requires-Dist: pyrallis ; extra == 'paper'
+Requires-Dist: scikit-learn ; extra == 'paper'
+Requires-Dist: tensorboard ; extra == 'paper'
+Requires-Dist: numba ; extra == 'paper'
+Requires-Dist: quilt3 ; extra == 'paper'
+Requires-Dist: pooch ; extra == 'paper'
+Requires-Dist: matplotlib ; extra == 'paper'
+Requires-Dist: notebook ; extra == 'paper'
+Provides-Extra: setup
+Requires-Dist: pytest-runner >=5.2 ; extra == 'setup'
+Provides-Extra: test
+Requires-Dist: black >=19.10b0 ; extra == 'test'
+Requires-Dist: codecov >=2.1.4 ; extra == 'test'
+Requires-Dist: flake8 >=3.8.3 ; extra == 'test'
+Requires-Dist: flake8-debugger >=3.2.1 ; extra == 'test'
+Requires-Dist: pytest >=5.4.3 ; extra == 'test'
+Requires-Dist: pytest-cov >=2.9.0 ; extra == 'test'
+Requires-Dist: pytest-raises >=0.11 ; extra == 'test'
+
+# MMV Im2Im Transformation
+
+[![Build Status](https://github.com/MMV-Lab/mmv_im2im/workflows/Build%20Main/badge.svg)](https://github.com/MMV-Lab/mmv_im2im/actions)
+
+A generic python package for deep learning based image-to-image transformation in biomedical applications
+
+(We are actively working on the documentation and tutorials. Submit a feature request if there is anything you need.)
+
+---
+
+## Overview
+
+The overall package is designed with a generic image-to-image transformation framework, which could be directly used for semantic segmentation, instance segmentation, image restoration, image generation, labelfree prediction, staining transformation, etc.. The implementation takes advantage of the state-of-the-art ML engineering techniques for users to focus on researches without worrying about the engineering details. In our pre-print [arxiv link](https://arxiv.org/abs/2209.02498), we demonstrated the effectiveness of *MMV_Im2Im* in more than ten different biomedical problems/datasets. 
+
+* For computational biomedical researchers (e.g., AI algorithm development or bioimage analysis workflow development), we hope this package could serve as the starting point for their specific problems, since the image-to-image "boilerplates" can be easily extended further development or adapted for users' specific problems.
+* For experimental biomedical researchers, we hope this work provides a comprehensive view of the image-to-image transformation concept through diversified examples and use cases, so that deep learning based image-to-image transformation could be integrated into the assay development process and permit new biomedical studies that can hardly be done only with traditional experimental methods
+
+
+## Installation
+
+Before starting, we recommend to [create a new conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) or [a virtual environment](https://docs.python.org/3/library/venv.html) with Python 3.9+.
+
+Please note that the proper setup of hardware is beyond the scope of this pacakge. This package was tested with GPU/CPU on Linux/Windows and CPU on MacOS. [Special note for MacOS users: Directly pip install in MacOS may need [additional setup of xcode](https://developer.apple.com/forums/thread/673827).]
+
+### Install the development head of MONAI
+
+Due to this bug in MONAI: https://github.com/Project-MONAI/MONAI/pull/6523, which has been fixed in the dev branch but not in the stable release yet, we need to install the current dev head to avoid this bug. To do this:
+```
+git clone https://github.com/Project-MONAI/MONAI.git
+cd ./MONAI
+# note: the dev branch is the default branch after cloning MONAI
+pip install .
+```
+
+### Install MMV_Im2Im for basic usage:
+
+(For users only using this package, not planning to change any code or make any extension):
+
+**Option 1: core functionality only** `pip install mmv_im2im`<br>
+**Option 2: advanced functionality (core + logger)** `pip install mmv_im2im[advance]`<br>
+**Option 3: to reproduce paper:** `pip install mmv_im2im[paper]`<br>
+**Option 4: install everything:** `pip install mmv_im2im[all]`<br>
+
+For MacOS users, additional ' ' marks are need when using installation tags in zsh. For example, `pip install mmv_im2im[paper]` should be `pip install mmv_im2im'[paper]'` in MacOS.
+
+### Install MMV_Im2Im for customization or extension:
+
+
+```
+git clone https://github.com/MMV-Lab/mmv_im2im.git
+cd mmv_im2im
+pip install -e .[all]
+```
+
+Note: The `-e` option is the so-called "editable" mode. This will allow code changes taking effect immediately. The installation tags, `embedseg`, `advance`, `paper`, `all`, are be selected based on your needs.
+
+### (Optional) Install using Docker
+
+It is also possible to use our package through [docker](https://www.docker.com/). The installation tutorial is [here](docker/tutorial.md).
+
+### (Optional) Use MMV_Im2Im with Google Colab
+
+We provide a web-based demo, if cloud computing is preferred. you can [![Open a 2D labelfree DEMO in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MMV-Lab/mmv_im2im/blob/main/tutorials/colab/labelfree_2d.ipynb). The same demo can de adapted for different applications.
+
+## Quick start
+
+You can try out on a simple example following [the quick start guide](tutorials/quick_start.md)
+
+Basically, you can specify your training configuration in a yaml file and run training with `run_im2im --config /path/to/train_config.yaml`. Then, you can specify the inference configuration in another yaml file and run inference with `run_im2im --config /path/to/inference_config.yaml`. You can also run the inference as a function with the provided API. This will be useful if you want to run the inference within another python script or workflow.  Here is an example:
+
+```
+from pathlib import Path
+from aicsimageio import AICSImage
+from aicsimageio.writers import OmeTiffWriter
+from mmv_im2im.configs.config_base import ProgramConfig, parse_adaptor, configuration_validation
+from mmv_im2im import ProjectTester
+
+# load the inference configuration
+cfg = parse_adaptor(config_class=ProgramConfig, config="./paper_configs/semantic_seg_2d_inference.yaml")
+cfg = configuration_validation(cfg)
+
+# define the executor for inference
+executor = ProjectTester(cfg)
+executor.setup_model()
+executor.setup_data_processing()
+
+# get the data, run inference, and save the result
+fn = Path("./data/img_00_IM.tiff")
+img = AICSImage(fn).get_image_data("YX", Z=0, C=0, T=0)
+# or using delayed loading if the data is large
+# img = AICSImage(fn).get_image_dask_data("YX", Z=0, C=0, T=0)
+seg = executor.process_one_image(img)
+OmeTiffWriter.save(seg, "output.tiff", dim_orders="YX")
+```
+
+
+## Tutorials, examples, demonstrations and documentations
+
+The overall package aims to achieve both simplicty and flexibilty with the modularized image-to-image boilerplates. To help different users to best use this package, we provide documentations from four different aspects:
+
+* [Examples (i.e., scripts and config files)](tutorials/example_by_use_case.md) for reproducing all the experiments in our [pre-print](https://arxiv.org/abs/2209.02498)
+* A bottom-up tutorials on [how to understand the modularized image-to-image boilerplates](tutorials/how_to_understand_boilerplates.md) (for extending or adapting the package) and [how to understand the configuration system in details](tutorials/how_to_understand_config.md) (for advance usage to make specific customization).
+* A top-down tutorials as [FAQ](tutorials/FAQ.md), which will continuously grow as we receive more questions.
+
+
+### Contribute models to [BioImage Model Zoo](https://bioimage.io/#/)
+
+We highly appreciate the BioImage Model Zoo's initiative to provide a comprehensive collection of pre-trained models for a wide range of applications. To make MMV_Im2Im trained models available as well, the first step involves extracting the state_dict from the PyTorch Lightning checkpoint.
+This can be done via:
+
+```python
+import torch
+
+ckpt_path = "./lightning_logs/version_0/checkpoints/last.ckpt"
+checkpoint = torch.load(ckpt_path, map_location=torch.device('cpu'))
+state_dict = checkpoint['state_dict']
+torch.save(state_dict, "./state_dict.pt")
+```
+
+All further steps to provide models can be found in the [official documentation](https://bioimage.io/docs/#/contribute_models/README).
+
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the code.
+
+
+**MIT license**
+
+
