@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+./__init__.py
+./nakv.py
+nadb.egg-info/PKG-INFO
+nadb.egg-info/SOURCES.txt
+nadb.egg-info/dependency_links.txt
+nadb.egg-info/top_level.txt
