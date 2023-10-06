@@ -1,0 +1,10 @@
+pyrokinetics
+
+[lint]
+black
+ruff
+isort
+
+[test]
+pytest
+pytest-sugar
