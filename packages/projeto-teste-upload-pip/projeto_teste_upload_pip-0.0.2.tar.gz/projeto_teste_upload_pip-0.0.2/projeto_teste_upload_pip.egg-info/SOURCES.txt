@@ -1,0 +1,9 @@
+setup.py
+base/__init__.py
+base/memoria.py
+gerador/__init__.py
+gerador/palavra.py
+projeto_teste_upload_pip.egg-info/PKG-INFO
+projeto_teste_upload_pip.egg-info/SOURCES.txt
+projeto_teste_upload_pip.egg-info/dependency_links.txt
+projeto_teste_upload_pip.egg-info/top_level.txt
