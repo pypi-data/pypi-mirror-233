@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: singulr
+Version: 0.0.1
+Summary: Package to trace generative apps and guard them
+Home-page: 
+Author: Madan Singhal
+Author-email: 00848madan@gmail.com
+License: MIT
+Requires-Dist: langchain
+
