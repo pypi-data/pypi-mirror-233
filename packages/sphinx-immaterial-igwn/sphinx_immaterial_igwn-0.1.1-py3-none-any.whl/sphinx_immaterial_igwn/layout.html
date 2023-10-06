@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%- block styles -%}
+  {{ super() }}
+  {# append our extra stylesheets to the styles from mkdocs-material #}
+  <link rel="stylesheet" href="{{ pathto('_static/stylesheets/igwn-mkdocs-material.css', resource=True) }}">
+{%- endblock -%}
+
+{%- block extracopyright %}
+  {# add our acknowledgements partial immediately below the copyright statement #}
+  {% include "partials/acknowledgements.html" %}
+{% endblock %}
