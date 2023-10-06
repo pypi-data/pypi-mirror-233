@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "onmt.*",
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
