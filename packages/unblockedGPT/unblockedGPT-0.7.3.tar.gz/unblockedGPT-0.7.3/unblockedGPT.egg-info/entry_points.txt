@@ -1,0 +1,4 @@
+[console_scripts]
+chat = unblockedGPT.__main__:run
+type = unblockedGPT.__main__:type
+typeGPT = unblockedGPT.__main__:typeGPT
