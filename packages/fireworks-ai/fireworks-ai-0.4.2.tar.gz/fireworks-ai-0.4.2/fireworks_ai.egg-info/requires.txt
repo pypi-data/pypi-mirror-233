@@ -1,0 +1,6 @@
+httpx
+httpx_sse
+pydantic
+
+[stability]
+stability_sdk
