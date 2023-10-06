@@ -1,0 +1,15 @@
+odoo/addons/sm_donation_crm/__init__.py,sha256=iLIJMqyxPGaW4AYYX_MffqzP1KjldI_YrtyUvckOAbc,44
+odoo/addons/sm_donation_crm/__manifest__.py,sha256=PvM0e2dH27I_nQnYpuDJeU_Pk4A5hqn5sZ8OKEzqrYA,615
+odoo/addons/sm_donation_crm/data/crm_stage_data.xml,sha256=35T3wAa-3YrbGSPYnK1DeT6ZDBO26dQqHUiHYz2Cstw,1211
+odoo/addons/sm_donation_crm/data/crm_team_data.xml,sha256=WL_R_bjQqgxTKzDyQHcG-HYnT-ZeNoE8_ok3ZPuhKWo,387
+odoo/addons/sm_donation_crm/data/utm_source_data.xml,sha256=Bp-odJJV41Y6orO-POztQjCb6x5_uWF22GnjWlmHvlg,229
+odoo/addons/sm_donation_crm/models/__init__.py,sha256=2HtZRDRjL24xAsajxhy834v6bLUdtG7yRKZoqs75Xdc,23
+odoo/addons/sm_donation_crm/models/crm_team.py,sha256=h7sOBAZHsCR4vmL42nnIetIDxdnQvb4DJvgE0MjWeTI,994
+odoo/addons/sm_donation_crm/services/__init__.py,sha256=u_ImeL7ZIqaoCJUB6rxBG5gkGVc1Vanq5EQ7IQ6X6ug,53
+odoo/addons/sm_donation_crm/services/crm_lead_service.py,sha256=_9fEwzXbuP-ynT8_rcfwSEqKodtV0HT6VPj34XrrsMg,2651
+odoo/addons/sm_donation_crm/services/schemas.py,sha256=B1if6Q_UqEXQ2Nb3YLgp_9Zjx6XeLJ1psBUuoRa6hNw,76
+odoo/addons/sm_donation_crm/views/crm_lead_views.xml,sha256=xj28xPjxzVs6ElXonPX8HdLMQUihs6icAH0KGhzv8iA,630
+odoo12_addon_sm_donation_crm-12.0.0.0.4.dev1.dist-info/METADATA,sha256=u_VsaHOIErnKEPWX3mcKyIPE7JIbqI65asu0tXyVzlc,549
+odoo12_addon_sm_donation_crm-12.0.0.0.4.dev1.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+odoo12_addon_sm_donation_crm-12.0.0.0.4.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_sm_donation_crm-12.0.0.0.4.dev1.dist-info/RECORD,,
