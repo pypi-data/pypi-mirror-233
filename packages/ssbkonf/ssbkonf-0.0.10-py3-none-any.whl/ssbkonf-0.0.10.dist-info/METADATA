@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ssbkonf
+Version: 0.0.10
+Summary: A package for disclosure control in Python, wrapping methods coded in R
+Project-URL: Homepage, https://github.com/statisticsnorway/ssbkonf
+Project-URL: Bug Tracker, https://github.com/statisticsnorway/ssbkonf/issues
+Author-email: "Daniel P. Lupp" <dlu@ssb.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: pandas
+Requires-Dist: rpy2
+Description-Content-Type: text/markdown
+
+# Python package for statistical disclosure control
+
+This package implements a Python wrapper for easy use of the functions in the `GaussSuppression` and `SmallCountRounding` R packages. This package does not support the full functionality of the R packages, and is currently in alpha testing. For some ugly documentation, see [here](https://solid-adventure-n15ynzy.pages.github.io/). Alternatively, see an introduction in [this Jupyter notebook](https://github.com/statisticsnorway/ssbkonf/blob/main/docs/intro.ipynb).
