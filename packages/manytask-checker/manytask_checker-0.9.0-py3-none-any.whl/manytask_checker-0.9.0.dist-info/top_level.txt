@@ -1,0 +1,4 @@
+checker
+dist
+docs
+examples
