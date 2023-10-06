@@ -1,0 +1,11 @@
+venv
+/thirdParty/*
+/dist/*
+build
+*.egg-info
+*.so
+_skbuild
+/src/python/frenetix/_version.py
+.idea
+
+__pycache__
