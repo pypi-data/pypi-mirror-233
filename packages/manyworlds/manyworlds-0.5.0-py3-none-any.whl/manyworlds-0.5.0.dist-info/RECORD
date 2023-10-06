@@ -1,0 +1,11 @@
+manyworlds/__init__.py,sha256=1aw9E0I29FgkUE9XR20tPgRU-n7mk-3DQYJCSXxTW6g,74
+manyworlds/__main__.py,sha256=VEW9YbUJLOXrFUxh858o7dv-P4DccM59hRW03o6tRzw,2464
+manyworlds/data_table.py,sha256=40tiFKC-iJfq2ZFKIWejawb1DTiyGT4syGa6KCU1lsc,2949
+manyworlds/exceptions.py,sha256=gJfPEo9fFVgLft4IuKO0-qOvnnDezoZdLjP7n5nx2Fg,107
+manyworlds/feature.py,sha256=n0ZWgDxUrzexsrXHCsunytDohI6Ajzaj4oRt47_GE-o,22687
+manyworlds/scenario.py,sha256=SfNBuSla1IgcAPZE8UltLvO8A-pf_oBf5gQHE20HR6k,8702
+manyworlds/step.py,sha256=4mlORfGoqazFDsMigc6noPZYO_TtI9z9Oiv3wkCCFVw,3484
+manyworlds-0.5.0.dist-info/METADATA,sha256=ep_JHA2ViTygEyMUzZVmr2sAnyszxNGpx_diDrT9G0Q,16506
+manyworlds-0.5.0.dist-info/WHEEL,sha256=9QBuHhg6FNW7lppboF2vKVbCGTVzsFykgRQjjlajrhA,87
+manyworlds-0.5.0.dist-info/licenses/LICENSE,sha256=kk8wZApsmwxVo5QLYGR-CIbtiiQOZ2cAj_Qnwe2vuXE,1066
+manyworlds-0.5.0.dist-info/RECORD,,
