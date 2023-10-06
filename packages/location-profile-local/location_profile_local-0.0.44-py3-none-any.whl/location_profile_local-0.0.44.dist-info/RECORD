@@ -1,0 +1,8 @@
+location_profile_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+location_profile_local/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+location_profile_local/src/constants_location_profile.py,sha256=EULVdEYBzhys7NMxS-Iubnv8bpYqxUHhXe4yQ4ikkmk,892
+location_profile_local/src/location_profile.py,sha256=mm_9S1M2u0BIxW3gOBIhm81aFCDitWS-GYN59Z4sjQ8,3412
+location_profile_local-0.0.44.dist-info/METADATA,sha256=R3SvCc2NerK9Fp4dOXKxbcW3EgALLp9ByGZcMV2AK0s,541
+location_profile_local-0.0.44.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+location_profile_local-0.0.44.dist-info/top_level.txt,sha256=1WrDdqXFaemkjLeOz2Jn4sRRODzEEJqxDGWaKoX3_zw,23
+location_profile_local-0.0.44.dist-info/RECORD,,
