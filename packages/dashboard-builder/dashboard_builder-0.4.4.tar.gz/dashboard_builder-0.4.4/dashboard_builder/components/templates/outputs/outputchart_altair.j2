@@ -1,0 +1,10 @@
+<div class="flex items-center justify-center w-full">
+    <div class="max-w-screen-xl rounded-lg bg-white px-2 sm:px-4 md:px-6 py-2 sm:py-4 md:py-6 shadow overflow-x-auto">
+        <dt class="truncate text-xs sm:text-sm md:text-base font-medium text-gray-500 pb-4"> {{ chart_title }} </dt>
+        <div id="{{ chart_id }}"></div>
+        <script>
+            const chartData_{{ chart_id }} = {{ chart_json|safe }};
+            vegaEmbed('#{{ chart_id }}', chartData_{{ chart_id }});
+        </script>
+    </div>
+</div>

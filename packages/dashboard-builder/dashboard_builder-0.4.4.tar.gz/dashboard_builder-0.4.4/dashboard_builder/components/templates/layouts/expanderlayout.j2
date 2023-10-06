@@ -1,0 +1,42 @@
+<!-- expander.j2 -->
+
+<!-- CSS for the Expander component -->
+<style>
+    .expander-content {
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        max-height: 0;
+    }
+</style>
+
+<!-- The main HTML structure of the Expander -->
+<div class="expander-container w-4/5 mx-auto">
+    <!-- Styling the label area with a light gray background, some padding, a subtle shadow, rounded corners, and a hover effect -->
+    <div class="expander-label flex justify-between items-center cursor-pointer border border-black bg-gray-100 hover:bg-gray-200 p-2 rounded shadow-sm transition-colors duration-200" onclick="toggleExpander('{{ id }}')">
+        {{ label }}
+        <!-- Arrow indicating dropdown. It will rotate 180 degrees when the expander is opened. -->
+        <span class="expander-arrow w-2 h-2 inline-block border-r-2 border-b-2 transform rotate-45 border-black"></span>
+    </div>
+    <div id="{{ id }}" class="expander-content mt-2 mb-2">
+        {% for output in components %}
+            <div class="m-2">
+                {{ output|safe }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- JavaScript to handle the Expander's show/hide functionality and the arrow's rotation -->
+<script>
+    function toggleExpander(expanderId) {
+        let content = document.getElementById(expanderId);
+        let arrow = content.previousElementSibling.querySelector('.expander-arrow');
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            arrow.style.transform = 'rotate(45deg)';
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            arrow.style.transform = 'rotate(-135deg)';
+        }
+    }
+</script>

@@ -1,0 +1,53 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ defaults.page_title }}</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Markdown styling via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" rel="stylesheet">
+    <!-- Load in Vega, Vega-Lite, and Vega-Embeded modules (required for Altair) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+</head>
+<body class="{{ theme_colors['background_light'] }} h-screen font-sans">
+    <div class="flex mx-auto">
+
+        <!-- Input Panel (Left Side) -->
+        <div class="w-1/4 {{ theme_colors['background_dark'] }} p-4 shadow-lg">
+            <h2 class="text-xl mb-4"></h2>
+            
+            {% for form_group in form_groups %}
+                <div class="mb-4 border-b pb-4">
+                    {{ form_group|safe }}
+                </div>
+            {% endfor %}
+                    
+        </div>
+    
+        <!-- Output Panel (Center) -->
+        <div class="w-3/4 ml-6">
+            <h2 class="text-xl mb-4"></h2>
+            {% for output_component in output_components %}
+                <div class="mb-4">{{ output_component|safe }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="{{ theme_colors['background_footer'] }} rounded-lg shadow dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            {{ defaults.footer_text }} 
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
