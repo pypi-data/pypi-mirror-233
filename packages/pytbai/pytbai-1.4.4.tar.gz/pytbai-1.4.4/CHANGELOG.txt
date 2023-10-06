@@ -1,0 +1,145 @@
+1.4.4 (2023-10-05)
+------------------
+
+- core modifications [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.4.3 (2023-07-28)
+------------------
+
+- get vat breakdown in json [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.4.2 (2023-07-27)
+------------------
+
+- include templates [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- include templates [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.4.1 (2023-07-27)
+------------------
+
+- xml structure [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.4.0 (2023-07-27)
+------------------
+
+- fix test for DEV environment [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- previous invoice fingerprint [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.8 (2023-07-26)
+------------------
+
+- DEV url fixed [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.7 (2023-07-26)
+------------------
+
+- DEV and PROD urls configurable [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- Update core.py [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+-  [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- ResponseXML in string format [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.6 (2023-07-07)
+------------------
+
+- Decimal cast [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- get_json returns total_amount + default line values in Decimal [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.5 (2023-07-07)
+------------------
+
+- fix invoice get_json by dict object copy [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.4 (2023-07-07)
+------------------
+
+- fix invoice get_dict [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.3 (2023-07-07)
+------------------
+
+- xml/xsd/html/css files missing [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.2 (2023-07-07)
+------------------
+
+- init some subfolders not included in the package [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.1 (2023-07-07)
+------------------
+
+- package configuration [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.3.0 (2023-07-07)
+------------------
+
+- include templates in the release [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.2 (2023-07-05)
+----------------
+
+- include pem files for testing purpose [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- update README [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- get_json function + more tests [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- pypi python versions badge [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- add badge [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.1.1 (2023-07-05)
+------------------
+
+- added classifiers [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- revert python-package.yml file [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+- remove some workflows [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.1 (2023-07-05)
+----------------
+
+- long description type set [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
+
+
+1.0 (2023-07-05)
+----------------
