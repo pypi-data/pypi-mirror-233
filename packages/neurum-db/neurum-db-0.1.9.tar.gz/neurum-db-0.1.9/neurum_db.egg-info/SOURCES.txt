@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+neurum db/__init__.py
+neurum db/neurum_db.py
+neurum_db.egg-info/PKG-INFO
+neurum_db.egg-info/SOURCES.txt
+neurum_db.egg-info/dependency_links.txt
+neurum_db.egg-info/top_level.txt
