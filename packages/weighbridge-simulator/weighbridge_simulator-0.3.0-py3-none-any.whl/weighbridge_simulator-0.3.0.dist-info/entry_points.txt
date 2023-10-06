@@ -1,0 +1,3 @@
+[console_scripts]
+wb-simulator=weighbridge_simulator.__main__:cli
+

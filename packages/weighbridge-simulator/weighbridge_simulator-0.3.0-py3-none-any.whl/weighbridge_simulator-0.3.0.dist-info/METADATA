@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: weighbridge-simulator
+Version: 0.3.0
+Summary: A command line tool continuously send data to a serial port to simulate weighbridge communicating.
+Home-page: https://github.com/garrett-he/weighbridge-simulator
+License: BSD-3-Clause
+Keywords: weighbridge,simulator,serial-communication
+Author: Garrett HE
+Author-email: garrett.he@hotmail.com
+Requires-Python: >=3.8,<3.13
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Project-URL: Repository, https://github.com/garrett-he/weighbridge-simulator.git
+Description-Content-Type: text/markdown
+
+# weighbridge-simulator
+
+A command line tool continuously send data to a serial port to simulate
+weighbridge communicating.
+
+## Install
+
+You can install this tool by the following methods:
+
+1. Install `weighbridge-simulator` by `pip`:
+   ```
+   pip install git+ssh://git@github.com/garrett-he/weighbridge-simulator.git
+   ```
+
+2. Download compiled binary files from [Repository Releases][1].
+
+## Quickstart
+
+1. Prepare a file contains weight list in format:
+
+   ```
+   000.000
+   000.020
+   000.160
+   000.420
+   000.780
+   005.660
+   005.800
+   006.040
+   006.120
+   006.100
+   006.080
+   ...
+   ```
+
+2. Run `wb-simulator` to start simulation:
+
+    ```
+    wb-simulator --data-file FILE
+    ```
+
+Then you can receive the weight values from the created port `/dev/pts/N` in *
+*raw** data format.
+
+> `weighbridge-simulator` will convert the input data into **raw**
+> weighbridge format before sending it to a serial port, like:
+>
+> `012.345` will be converted to `543.210=`
+
+## Usage
+
+```
+Usage: wb-simulator [OPTIONS]
+
+  A command line tool continuously send data to a serial port to simulate
+  weighbridge communicating.
+
+Options:
+  -p, --port NAME       Name of serial port.
+  -d, --data-file PATH  Path of data file.  [required]
+  -l, --loops N         Loops of sending data set, zero means endless.
+  -i, --interval SECS   Interval of each data.
+  --version             Show the version and exit.
+  --help                Show this message and exit.
+```
+
+## License
+
+Copyright (C) 2023 Garrett HE <garrett.he@hotmail.com>
+
+The BSD 3-Clause License, see [LICENSE](./LICENSE).
+
+[1]: https://github.com/garrett-he/weighbridge-simulator/releases
+
