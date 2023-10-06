@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+emailotp/__init__.py
+emailotp/emailotp.py
+emailotp.egg-info/PKG-INFO
+emailotp.egg-info/SOURCES.txt
+emailotp.egg-info/dependency_links.txt
+emailotp.egg-info/requires.txt
+emailotp.egg-info/top_level.txt

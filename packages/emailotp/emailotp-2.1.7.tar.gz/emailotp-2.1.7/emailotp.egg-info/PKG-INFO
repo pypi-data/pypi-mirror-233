@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: emailotp
+Version: 2.1.7
+Summary: Sending emails and otp verifications is super simple with emailotp
+Author: shaik afrid
+Author-email: <afridayan01@gmail.com>
+Keywords: email,emalilsending,emailotp,emailsending,emailsent,email-send,email-otp,email_otp,email_sending,email-sending,email-,email_,verification,email-verification,email_verification
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+
+# emailotp
+Email otp simplifies email integration in Python, enabling users to send emails, facilitate OTP verification,  Enhance your app's email functionality effortlessly.
+## Example
+
+```python
+from emailotp import emailotp
+emailotp = emailotp()
+responseFromEmailOtp = emailotp.send("toemail@gmail.com")
+print(responseFromEmailOtp["message"])
+
+``` 
+## -- methods
+
+```python
+emailotp = emailotp()
+responseFromEmailOtp = emailotp.sendOtp("toemail@gmail.com",123456)
+print(responseFromEmailOtp["message"])
+   
+
+``` 
+
+```python
+emailotp = emailotp()
+responseFromEmailOtp = emailotp.sendMessage("toemail@gmail.com","title","subject","body")
+print(responseFromEmailOtp["message"])
+
+``` 
+
+```python
+emailotp = emailotp()
+responseFromEmailOtp = emailotp.custom("fromemail@gmail.com","passkey","toemail@gmail.com","title","subject","body")
+print(responseFromEmailOtp["message"])
+
+``` 
+
+
+
+
+##  help
+```python
+emailotp = emailotp()
+emailotp.help()
+
+``` 
+## Authors
+
+- [SHAIK AFRID](https://www.github.com/afriddev)
+
+
+
+## Getting Started
+
+For help getting started with Python, view our online
+[documentation](https://docs.python.org/3/).
