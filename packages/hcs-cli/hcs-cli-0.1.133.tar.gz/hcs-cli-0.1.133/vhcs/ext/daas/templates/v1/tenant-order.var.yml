@@ -1,0 +1,15 @@
+orderType:
+var:
+  orgId:
+  providerInstanceId:
+  edgeDeploymentId:
+  image:
+    sku:
+    streamId:
+    markerId:
+  template:
+    type:
+  application:
+    info:
+
+
