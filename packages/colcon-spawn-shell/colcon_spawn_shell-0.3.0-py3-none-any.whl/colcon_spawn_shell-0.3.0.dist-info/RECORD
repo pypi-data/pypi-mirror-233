@@ -1,0 +1,10 @@
+colcon_spawn_shell/__init__.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+colcon_spawn_shell/spawn_shell.py,sha256=egsSQo1FnJBGB4qDeyaCeuZ6na9YIb5AdW_Oo8plrIA,2155
+colcon_spawn_shell/template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colcon_spawn_shell/template/spawn_shell.bash.em,sha256=hH_vI6lX_PcLXfbtEKTdC5SzuEv8nbbqA3QMSYcTou0,2821
+colcon_spawn_shell-0.3.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+colcon_spawn_shell-0.3.0.dist-info/METADATA,sha256=TuFcAXAatJ8QkpEux9wSlNkKA-hvsoRqv30GZVUPQyQ,3920
+colcon_spawn_shell-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+colcon_spawn_shell-0.3.0.dist-info/entry_points.txt,sha256=Nl1c8bhJBPD2c18dF0ZAFw_zr_sR0SxV6HBAaZyTWDU,86
+colcon_spawn_shell-0.3.0.dist-info/top_level.txt,sha256=i-eHTWiNtS8Z1QaenrB5MtZaqYwNCe9PphDxciIUkNI,19
+colcon_spawn_shell-0.3.0.dist-info/RECORD,,

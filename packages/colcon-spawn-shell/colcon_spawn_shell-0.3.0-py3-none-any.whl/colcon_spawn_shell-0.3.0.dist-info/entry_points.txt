@@ -1,0 +1,3 @@
+[colcon_core.shell]
+spawn_bash_shell = colcon_spawn_shell.spawn_shell:SpawnBashShell
+
