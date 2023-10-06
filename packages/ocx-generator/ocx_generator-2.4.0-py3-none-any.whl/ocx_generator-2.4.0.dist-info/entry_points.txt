@@ -1,0 +1,3 @@
+[console_scripts]
+databinding=ocx_generator.cli:main
+
