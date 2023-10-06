@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pyarmips
+Version: 0.11.2
+Summary: Python interface for armips.
+Home-page: https://github.com/Illidanz/pyarmips
+Author: Illidan
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyarmips
+Python interface for armips.
+
+## Installation
+`pip install pyarmips`
+
+## Usage
+```
+import pyarmips
+
+pyarmips.run("bin_patch.asm")
+```
+
+
