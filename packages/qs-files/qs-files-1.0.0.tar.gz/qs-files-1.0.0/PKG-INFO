@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: qs-files
+Version: 1.0.0
+Summary: Python library for managing .qs files and configurations.
+Home-page: https://github.com/QuadratNew/qs-files
+Author: Quadrat.Ik
+Author-email: quadrat.ik@yandex.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
