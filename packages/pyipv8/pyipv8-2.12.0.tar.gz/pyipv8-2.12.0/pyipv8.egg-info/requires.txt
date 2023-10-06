@@ -1,0 +1,19 @@
+cryptography
+libnacl
+aiohttp
+aiohttp_apispec
+pyOpenSSL
+pyasn1
+marshmallow
+
+[all]
+coverage
+
+[all:python_version == "3.7"]
+asynctest
+
+[tests]
+coverage
+
+[tests:python_version == "3.7"]
+asynctest
