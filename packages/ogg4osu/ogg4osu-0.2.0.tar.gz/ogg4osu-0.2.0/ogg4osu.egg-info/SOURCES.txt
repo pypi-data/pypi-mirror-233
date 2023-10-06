@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ogg4osu/__init__.py
+ogg4osu/__main__.py
+ogg4osu/audio.py
+ogg4osu/cli.py
+ogg4osu/ogg4osu.py
+ogg4osu.egg-info/PKG-INFO
+ogg4osu.egg-info/SOURCES.txt
+ogg4osu.egg-info/dependency_links.txt
+ogg4osu.egg-info/requires.txt
+ogg4osu.egg-info/top_level.txt
