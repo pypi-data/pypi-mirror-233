@@ -1,0 +1,3 @@
+[console_scripts]
+rxn-extend-model-with-vocab = rxn.onmt_utils.scripts.extend_model_with_vocab:main
+rxn-strip-opennmt-model = rxn.onmt_utils.strip_model:main
