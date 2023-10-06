@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: refract-mlflow-plugin
+Version: 1.0.0
+Summary: Refract plugin for MLflow
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlflow
+
+# refract_mlflow_plugin
+
+
+
+## Getting started
+
+This is Refract specific customized mlflow plugin for giving customized behaviour to the mlflow APIs.  
+
+
