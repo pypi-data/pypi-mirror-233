@@ -1,0 +1,11 @@
+termkit/__init__.py,sha256=dH2x1WOPxjKV4ymKbEag5qm6srNvPnt6RJabReg-q-E,501
+termkit/arguments.py,sha256=oiv0IgBhKGyhpcCmOvJ-UA87DLj0tuFluD8LEtId1nw,2769
+termkit/core.py,sha256=WvtDw64e7tlaO75_kisBw4-eJo7jx6ECh-YIyCKhytI,5443
+termkit/groups.py,sha256=MoPxmdiHN7xvD9oyHgHBJuwmGau5QIdFfuYCf9wPZn8,1618
+termkit/parser.py,sha256=Su4C63DEwpONbm_y1Io46Bb0DTMpAVVR8QXtKVS35Ts,4060
+termkit/tests.py,sha256=plSk0_xf5wCjnspSlSutDb5UBuK2r2FxlfSbtvjwamk,918
+termkit/utils.py,sha256=uGQ5E-Ka548iWPProz3SSmbtCjRFjQYprOBs8_7-0Gw,962
+termkit-0.2.0.dist-info/LICENSE,sha256=NPkdOoHjxlnIVFb7jfV1OT3SpPsxYNl4kPAlPKajRUQ,1069
+termkit-0.2.0.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+termkit-0.2.0.dist-info/METADATA,sha256=04tUpEmR5aypBs4QlG4RjZjFmx5shbGA7PA-X0MdVZU,2358
+termkit-0.2.0.dist-info/RECORD,,
