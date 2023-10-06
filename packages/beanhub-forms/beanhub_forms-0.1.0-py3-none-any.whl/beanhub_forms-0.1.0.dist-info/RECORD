@@ -1,0 +1,8 @@
+beanhub_forms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beanhub_forms/data_types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beanhub_forms/data_types/form.py,sha256=wIBD5hne167IGnKAYXT-F1X5odJCj6wDVimEeyXroFI,2883
+beanhub_forms/form.py,sha256=qFIMVXWOVf_TaPj3Vxv7asn0Xrw0ssa5uekg4ytISFw,3835
+beanhub_forms-0.1.0.dist-info/LICENSE,sha256=wCPvw4IEzFk2Xzsj7F99m1sXoYOgk5hSuV16YVVThHY,1072
+beanhub_forms-0.1.0.dist-info/METADATA,sha256=abhRKw1_IRqo8PhN5KGLGbeRq0efB9HTMr-PkRFfCiw,586
+beanhub_forms-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+beanhub_forms-0.1.0.dist-info/RECORD,,
