@@ -1,0 +1,36 @@
+{
+ "collection_info": {
+  "namespace": "inspur",
+  "name": "ispim",
+  "version": "2.1.0",
+  "authors": [
+   "Baoshan Wang <wangbaoshan@inspur.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "inspur",
+   "ispim",
+   "server",
+   "manager",
+   "tools"
+  ],
+  "description": "Inspur server supports ansible management device.",
+  "license": [
+   "GPL-2.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/ispim/inspur.ispim",
+  "documentation": "https://ispim.github.io/inspur.ispim-docs/index.html",
+  "homepage": "https://github.com/ispim/inspur.ispim",
+  "issues": "https://github.com/ispim/inspur.ispim/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "cd581aa9aec54651597c815bd812c37b2c1f7b72cac14f3065c88a6d4bdf6b05",
+  "format": 1
+ },
+ "format": 1
+}
