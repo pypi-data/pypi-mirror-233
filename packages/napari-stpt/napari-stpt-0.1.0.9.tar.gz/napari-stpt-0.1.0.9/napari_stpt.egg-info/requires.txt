@@ -1,0 +1,9 @@
+opencv-python==4.5.1.48
+napari==0.4.17
+numpy
+xarray
+zarr
+PySide2==5.13.2
+SimpleITK
+napari-animation==0.0.5
+tifffile
