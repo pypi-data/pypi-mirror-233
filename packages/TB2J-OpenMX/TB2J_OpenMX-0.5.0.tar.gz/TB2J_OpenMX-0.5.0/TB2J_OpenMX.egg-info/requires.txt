@@ -1,0 +1,6 @@
+TB2J>=0.6.0
+ase
+cffi
+matplotlib
+numpy
+scipy
