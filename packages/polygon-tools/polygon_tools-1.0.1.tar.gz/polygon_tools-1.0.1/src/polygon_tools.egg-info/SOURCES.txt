@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/polygon_tools/__init__.py
+src/polygon_tools.egg-info/PKG-INFO
+src/polygon_tools.egg-info/SOURCES.txt
+src/polygon_tools.egg-info/dependency_links.txt
+src/polygon_tools.egg-info/requires.txt
+src/polygon_tools.egg-info/top_level.txt
+tests/test_threaded.py
