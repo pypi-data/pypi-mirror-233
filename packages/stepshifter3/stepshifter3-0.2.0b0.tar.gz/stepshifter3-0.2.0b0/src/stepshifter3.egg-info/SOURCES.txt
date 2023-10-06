@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/stepshifter3/__init__.py
+src/stepshifter3/dask_client_manager.py
+src/stepshifter3/logger.py
+src/stepshifter3/report.py
+src/stepshifter3/stepshifter.py
+src/stepshifter3/synthetic_data_generator.py
+src/stepshifter3.egg-info/PKG-INFO
+src/stepshifter3.egg-info/SOURCES.txt
+src/stepshifter3.egg-info/dependency_links.txt
+src/stepshifter3.egg-info/requires.txt
+src/stepshifter3.egg-info/top_level.txt
+tests/test_report.py
+tests/test_stepshifter.py
