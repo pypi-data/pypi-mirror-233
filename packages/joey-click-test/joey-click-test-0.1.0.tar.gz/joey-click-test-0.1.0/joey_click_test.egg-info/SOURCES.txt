@@ -1,0 +1,9 @@
+setup.py
+joey_click_test/__init__.py
+joey_click_test/main.py
+joey_click_test.egg-info/PKG-INFO
+joey_click_test.egg-info/SOURCES.txt
+joey_click_test.egg-info/dependency_links.txt
+joey_click_test.egg-info/entry_points.txt
+joey_click_test.egg-info/requires.txt
+joey_click_test.egg-info/top_level.txt
