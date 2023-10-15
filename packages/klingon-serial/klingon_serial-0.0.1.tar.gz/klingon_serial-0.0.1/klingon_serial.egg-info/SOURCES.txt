@@ -1,0 +1,12 @@
+README.md
+setup.py
+klingon_serial/__init__.py
+klingon_serial/generate_serial.py
+klingon_serial/strtobool.py
+klingon_serial/utils.py
+klingon_serial.egg-info/PKG-INFO
+klingon_serial.egg-info/SOURCES.txt
+klingon_serial.egg-info/dependency_links.txt
+klingon_serial.egg-info/entry_points.txt
+klingon_serial.egg-info/requires.txt
+klingon_serial.egg-info/top_level.txt
