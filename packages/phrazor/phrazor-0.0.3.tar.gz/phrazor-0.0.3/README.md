@@ -1,0 +1,60 @@
+![Python versions](https://img.shields.io/badge/python>=-3.6-blue.svg)
+
+## [Phrazor API Postman Workspace](https://www.postman.com/vphrase/workspace/phrazor-api)
+
+### Phrazor Insights Collection 
+For Postman Docs visit [Phrazor Postman Docs](https://documenter.getpostman.com/view/30152822/2s9YJc2ifY)
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/30152822-cd724c00-a511-440c-95c0-90e5d3e0fa48?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30152822-cd724c00-a511-440c-95c0-90e5d3e0fa48%26entityType%3Dcollection%26workspaceId%3D93db9691-c25b-488e-8647-b2977be3f65f)
+
+# Phrazor Python Library
+
+Phrazor is a Python library that converts your data into textual insights.
+
+You can find usage examples for the Phrazor Python library in our [Phrazor Docs](https://docs.phrazor.ai/)
+
+## Quick Start
+
+Click here to go to [Quick start of Phrazor SDK](https://docs.phrazor.ai/docs/quick-start)
+
+## Installation
+
+You don't need this source code unless you want to modify the package. If you just
+want to use the package, just run:
+
+```sh
+pip install --upgrade phrazor
+```
+
+Install from source with:
+
+```sh
+python setup.py install
+```
+
+## Usage
+
+The library needs to be configured with your account's secret key which is available on
+the [website](https://platform.phrazor.ai).
+
+Or set `phrazor.API_KEY` to its value:
+
+```python
+import phrazor
+
+phrazor.API_KEY = "YOUR API KEY"
+phrzr = phrazor.Phrazor()
+
+# set data
+phrzr.set_data({"Column Name 1": [list of values], "Column Name 2": [list of values]})
+
+# set column meta
+phrzr.set_column_meta(
+    date_column="Date Column Name", metric_column=["Metric Column Name 2"],
+    dimension_column="Dimension Column Name"
+)
+
+# supported analysis - ("descriptor", "change", "compare_measure", "compare_dimension", "target_vs_achievement", "budget" or "trend")
+# print the generated insights
+print(phrzr.get_insights("descriptor"))
+```
