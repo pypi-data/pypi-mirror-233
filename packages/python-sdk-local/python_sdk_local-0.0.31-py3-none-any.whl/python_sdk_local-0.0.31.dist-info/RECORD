@@ -1,0 +1,12 @@
+sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdk/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdk/src/constants.py,sha256=SXDfrFw3LYnfXS42tWlfid5QS5mzHNNOo-DubOHmPXA,739
+sdk/src/our_object.py,sha256=RnXIBoxGwknjpaIa7s_jHjMRlIsmaKguhpVCn_TD_UI,1437
+sdk/src/utilities.py,sha256=khcO6Zg84SjZcHqOlPvMxD-GOVFxUISbUKKz7qbUVr0,1949
+sdk/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdk/tests/our_object_test.py,sha256=VekGWDXmDr1-hPIe5AJM2JJlQ7nCLtnvpJDhOygrxUk,2285
+sdk/tests/utilities_test.py,sha256=6m1mSQCXv2Lo73C8A_S2UPkFcT40TV-l3wo5b0MuVBo,1462
+python_sdk_local-0.0.31.dist-info/METADATA,sha256=TtbeArGmFd0Gfjd_CwAqXaBglNoZ_XzBbhx6rUVKlkI,468
+python_sdk_local-0.0.31.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+python_sdk_local-0.0.31.dist-info/top_level.txt,sha256=JuXS55gRP3EzGKmJgbLfVfUolO3cM_u69k3qvutnBuw,4
+python_sdk_local-0.0.31.dist-info/RECORD,,
