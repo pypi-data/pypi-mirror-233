@@ -1,0 +1,3 @@
+[bodhilib]
+bodhiext.qdrant=bodhiext.qdrant
+
