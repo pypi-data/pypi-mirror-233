@@ -1,0 +1,5 @@
+[bodhilib]
+bodhiext.data_loader=bodhiext.data_loader
+bodhiext.prompt_source=bodhiext.prompt_source
+bodhiext.splitter=bodhiext.splitter
+
