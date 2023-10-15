@@ -1,0 +1,9 @@
+LICENSE,sha256=nXYPPSdzosOv13_ESzEO9pG2rbLvrJmKhIEP11hmVUU,1070
+bodhiext/cohere/__init__.py,sha256=6SlHmdBUPuukc3or2pOIrBtcvET3VxXoSlcSaMhIg44,422
+bodhiext/cohere/_cohere.py,sha256=6iZlhprsCm_9DTA4iMgYCF6n2j2255AX80NaROuxDfo,6197
+bodhiext/cohere/_version.py,sha256=QQgC5a79OPi8TNrXAeqYFb8JJmK6oY9f9iQVVEJANl4,200
+bodhiext_cohere-0.1.0.dist-info/LICENSE,sha256=nXYPPSdzosOv13_ESzEO9pG2rbLvrJmKhIEP11hmVUU,1070
+bodhiext_cohere-0.1.0.dist-info/METADATA,sha256=4wD3r7wVhOFucwRDLoHBhn0FefNMaxkeqNEXMA_L3ZU,1698
+bodhiext_cohere-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+bodhiext_cohere-0.1.0.dist-info/entry_points.txt,sha256=AHZWLbC3NLpT7rhLfMAOGAvFTAwclVo0Bed2v9nyHkM,44
+bodhiext_cohere-0.1.0.dist-info/RECORD,,
