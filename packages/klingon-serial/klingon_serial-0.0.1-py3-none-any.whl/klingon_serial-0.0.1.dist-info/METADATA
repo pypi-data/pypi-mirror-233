@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: klingon-serial
+Version: 0.0.1
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: uuid
+Requires-Dist: datetime
+Requires-Dist: netifaces
+Requires-Dist: pytest
+Requires-Dist: setuptools
+
