@@ -1,0 +1,10 @@
+normality<=3.0.0,>=2.0.0
+
+[dev]
+pytest
+pytest-cov
+mypy
+black
+pyyaml
+types-pyyaml
+bump2version
