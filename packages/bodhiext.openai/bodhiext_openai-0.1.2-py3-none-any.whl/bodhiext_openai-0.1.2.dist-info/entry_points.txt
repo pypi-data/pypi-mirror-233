@@ -1,0 +1,3 @@
+[bodhilib]
+bodhiext.openai=bodhiext.openai
+
