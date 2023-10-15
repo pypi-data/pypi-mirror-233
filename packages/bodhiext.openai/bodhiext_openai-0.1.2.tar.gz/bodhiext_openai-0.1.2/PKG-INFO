@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: bodhiext.openai
+Version: 0.1.2
+Summary: Bodhilib plugin for OpenAI APIs
+License: MIT
+Requires-Python: >=3.8.1,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: bodhilib (>=0.1.0,<0.2.0)
+Requires-Dist: openai (>=0.28.1,<0.29.0)
+Requires-Dist: pydantic (>=1,<2)
+Description-Content-Type: text/markdown
+
+# Bodhilib OpenAI plugin
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/BodhiSearch/bodhiext.openai/blob/main/LICENSE)
+![pypi](https://img.shields.io/pypi/v/bodhiext.cohere.svg)
+[![CI/CD](https://github.com/BodhiSearch/bodhiext.openai/actions/workflows/main.yml/badge.svg)](https://github.com/BodhiSearch/bodhiext.openai/actions/workflows/main.yml)
+[![Documentation Status](https://readthedocs.org/projects/bodhiextopenai/badge/?version=stable)](https://bodhiextopenai.readthedocs.io/en/stable/)
+[![codecov](https://codecov.io/gh/BodhiSearch/bodhiext.openai/branch/main/graph/badge.svg?token=EXFQHNBA9Z)](https://codecov.io/gh/BodhiSearch/bodhiext.openai/)
+
+Bodhilib plugin for OpenAI APIs
+
+* Free software: MIT license
+* Documentation: <https:/>/bodhiext.openai.readthedocs.io.
+
+# Features
+
+- TODO
+
+# Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) forked and modified at [BodhiSearch/cookiecutter-plugin-template](https://github.com/BodhiSearch/cookiecutter-plugin-template).
+
