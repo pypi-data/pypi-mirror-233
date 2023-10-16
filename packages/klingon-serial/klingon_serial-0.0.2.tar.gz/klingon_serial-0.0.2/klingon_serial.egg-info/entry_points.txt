@@ -1,0 +1,2 @@
+[console_scripts]
+klingon_serial = klingon_serial:main

@@ -1,0 +1,4 @@
+netifaces
+pytest
+uuid
+setuptools
