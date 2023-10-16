@@ -1,0 +1,16 @@
+
+[all]
+zarr
+pyyaml
+numpy
+tqdm
+GitPython
+
+[data]
+zarr
+pyyaml
+numpy
+tqdm
+
+[provenance]
+GitPython
