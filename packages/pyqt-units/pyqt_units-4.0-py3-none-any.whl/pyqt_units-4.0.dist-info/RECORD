@@ -1,0 +1,14 @@
+pyqt_units/ConglomerateWidgets.py,sha256=KWOXwwTGcYd_wQ_0WRksrZv-_YhLNg_2SWpFAKBcAGM,6324
+pyqt_units/CurrentUnitSetter.py,sha256=eTlCAUQO0wKTLhM207M9VgzW-WeDe7WjQf9vcnkkXSA,511
+pyqt_units/MeasurementDatabase.py,sha256=KOm7If0gfW0tuhxDTLdIW8Us2JnKqEsreDHDosBh4V8,366
+pyqt_units/MeasurementWidgets.py,sha256=TkFRfJ8fzJK3HwuWNsJeSrIEBPCiNjOEoCjAm5ZES9E,6695
+pyqt_units/SelectionMenu.py,sha256=9pCag3wBO012fg3mklJRxpejDVKtisX9rogHrsadz6U,972
+pyqt_units/UnitComboDelegate.py,sha256=rwU_emSUnuDnLpDyh0EvZ8Ewh3E9q8DLr6tgw3PLv-U,1354
+pyqt_units/__init__.py,sha256=OkipmX9UhK54z5-nbdNQKucI1vsauWBFL-4wvh1cILI,2008
+pyqt_units/models.py,sha256=7hLwUDy5-BrqV214BX52kU12YETy7RxgSyBa_Hoxnr0,9685
+pyqt_units/measurements/measurements_root.db,sha256=r6eNDaENWyItgnZ_3XqvXxNz_IZU5Zkof4uVcbO9CAM,18432
+pyqt_units-4.0.dist-info/LICENSE,sha256=WdkR4xi8NOuPPVpnd9Swejj4trhCXc8h6j3_Ih6L8K0,1098
+pyqt_units-4.0.dist-info/METADATA,sha256=7B3BrJsK9vDv7XhO8ng_tWLAgLr8EUX___hKXpwIM30,297
+pyqt_units-4.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyqt_units-4.0.dist-info/top_level.txt,sha256=JJU0Yb7ajMuhVdlZfi2y1QUZDVWJGHnkhMCrVF9mH_w,11
+pyqt_units-4.0.dist-info/RECORD,,
