@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+nlpkan.egg-info/PKG-INFO
+nlpkan.egg-info/SOURCES.txt
+nlpkan.egg-info/dependency_links.txt
+nlpkan.egg-info/top_level.txt
+tests/test.py
