@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+russian_quotes/__init__.py
+russian_quotes/exceptions.py
+russian_quotes/quotes.py
+russian_quotes/quotes_async.py
+russian_quotes.egg-info/PKG-INFO
+russian_quotes.egg-info/SOURCES.txt
+russian_quotes.egg-info/dependency_links.txt
+russian_quotes.egg-info/requires.txt
+russian_quotes.egg-info/top_level.txt
