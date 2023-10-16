@@ -1,0 +1,3 @@
+importlib-resources
+pytest>=5.0.0
+pytest-nunit<2.0.0,>=1.0.0
