@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mikiApi
+Version: 1.0.0
+Summary: A Quantitative-research API
+Author: chenxiansheng
+Author-email: 435469015@qq.com
+License: MIT License
+Platform: Independant
+Requires-Dist: numpy
+Requires-Dist: pandas
+
