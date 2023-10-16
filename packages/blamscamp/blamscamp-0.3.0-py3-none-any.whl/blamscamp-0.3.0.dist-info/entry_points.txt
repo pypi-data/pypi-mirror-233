@@ -1,0 +1,3 @@
+[console_scripts]
+blamscamp=blamscamp.__main__:main
+
