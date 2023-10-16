@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyqt-units
+Version: 4.0
+Summary: System of units for PySide6
+Home-page: https://github.com/ergoregion/pyqt-units.git
+Author: Neil Butcher
+License: MIT
+Keywords: units pyqt measurements
+Requires-Python: >=3
+License-File: LICENSE
+
+System of units for PySide6
