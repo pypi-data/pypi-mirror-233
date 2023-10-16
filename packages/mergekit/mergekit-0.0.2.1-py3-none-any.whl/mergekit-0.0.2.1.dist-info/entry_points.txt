@@ -1,0 +1,4 @@
+[console_scripts]
+bakllama = mergekit.scripts.bakllama:_main
+mergekit-legacy = mergekit.scripts.legacy:_main
+mergekit-yaml = mergekit.scripts.run_yaml:_main

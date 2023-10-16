@@ -1,0 +1,13 @@
+mergekit/architecture.py,sha256=O84VthyRbfbd2TlcFHqyXUwd36BjCtNFo79dZp4ptzQ,5760
+mergekit/common.py,sha256=cI845HQ4bc6k8FRTP-QHH6gBUk6pCi1txew3XefZcF8,5880
+mergekit/config.py,sha256=2aCiCdvjHlfH7CMGlrKpMtJTjwmwB_pOmN2FiVRPz6w,6252
+mergekit/graph.py,sha256=LyaipvLEFja0LQbH0IXiBJdg-28a7VcqJY8THull684,13131
+mergekit/lazy_tensors.py,sha256=OT6UkoYzEayW2aneJYLJ6HJM1Y0LO73pCu06-EUi9dY,9263
+mergekit/merge.py,sha256=qjNUfUiqknvUUPStLvJFYsWuVpBeBIEDrFs-74HZA1U,3123
+mergekit/plan.py,sha256=6UJ-wkQf1jyggGPPBaxJwjpsT7j5f8t2f36FnO5gdZo,6270
+mergekit-0.0.2.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+mergekit-0.0.2.1.dist-info/METADATA,sha256=xUAiuEpZaotsC5owfJAugo_jcPbGKx6J1GHuptaZ0tY,5179
+mergekit-0.0.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mergekit-0.0.2.1.dist-info/entry_points.txt,sha256=XOgoIPMeXNGxqOe0z57K3kZTGpb-h-oIkF7YdMX7_B4,157
+mergekit-0.0.2.1.dist-info/top_level.txt,sha256=2vRk9HCVcaKiv0lzzUxnMmvzCPS48OsFCnCCl2C44Tg,9
+mergekit-0.0.2.1.dist-info/RECORD,,
