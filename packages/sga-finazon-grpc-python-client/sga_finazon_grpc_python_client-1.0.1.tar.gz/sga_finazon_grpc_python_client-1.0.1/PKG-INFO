@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: sga-finazon-grpc-python-client
+Version: 1.0.1
+Summary: Finazon gRPC client library for Python
+Home-page: https://github.com/mivxxx/finazon-grpc-python-client
+License: MIT
+Author: Finazon
+Author-email: team@finazon.io
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: grpcio (==1.58.0)
+Requires-Dist: grpcio-tools (==1.58.0)
+Requires-Dist: mypy-protobuf (>=3.5.0,<4.0.0)
+Project-URL: Repository, https://github.com/mivxxx/finazon-grpc-python-client
+Description-Content-Type: text/markdown
+
+# finazon-grpc-python-client
+Finazon gRPC client library for Python
+
+## Requirements
+Python >= 3.10
+
+## Installation
+
+Via pip
+```shell
+pip install finazon-grpc-python-client
+```
+Via poetry
+```shell
+poetry install finazon-grpc-python-client
+```
+
+## Usage example
+See examples directory
