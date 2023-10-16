@@ -1,0 +1,41 @@
+2019-05-08
+    Initial release 0.1.0
+    
+2019-05-23
+    0.1.1 added OData client
+
+2019-05-28
+    0.1.2 added ZEMA client
+
+2020-04-12
+    0.1.3 added more services and fixed bugs
+
+2020-04-17
+    1.0
+
+2020-06-05
+    1.0.1 added "skip" parameter
+
+2020-11-25
+    1.0.2 added "proxies" and "auth" parameter 
+          setting auth['verify_ssl'] to False will skip certificate verification
+
+2020-12-04
+    1.0.3 added new method for retrieving curve data and properties
+          added OAuth2 support
+
+2022-04-12
+    1.1 added services for holiday groups and holidays
+
+2022-05-18
+    1.1.1 added support for datetime type in filters
+
+2022-06-02
+    1.1.2 added support for generic Resource Owner Password OAuth2 Flow
+
+2023-03-08
+    1.1.3 added upload curve data services for REST
+          made it available in PyPI - https://pypi.org/project/zeclient
+
+2023-04-11
+    1.1.4 added "effective_date" parameter for getting profile data

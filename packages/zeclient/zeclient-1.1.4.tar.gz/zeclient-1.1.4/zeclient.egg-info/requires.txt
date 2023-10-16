@@ -1,0 +1,14 @@
+requests
+lxml
+dicttoxml
+pandas
+zeep
+beautifulsoup4
+
+[test]
+pytest-cov
+pytest
+configparser
+numpy
+tabulate
+validate_email

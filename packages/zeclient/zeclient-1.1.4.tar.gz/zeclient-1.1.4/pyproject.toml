@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeclient"
+version = "1.1.4"
+authors = [
+  { name="ZE", email="support@ze.com" },
+]
+description='Python APIs for ZE Web Services'
+readme = "README.md"
+requires-python = ">=3.5"
+license = {file = "LICENSE.txt"}
+dependencies = [
+    'requests',
+    'lxml',
+    'dicttoxml',
+    'pandas',
+    'zeep',
+    'beautifulsoup4'
+]
+
