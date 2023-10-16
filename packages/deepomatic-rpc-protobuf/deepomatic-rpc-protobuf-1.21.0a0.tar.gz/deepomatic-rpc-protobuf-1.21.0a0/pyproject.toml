@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepomatic-rpc-protobuf"
+version = "1.21.0a0"
+authors = [
+  { name="deepomatic", email="support@deepomatic.com" }
+]
+description = "Generated protobufs for deepomatic-rpc"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "protobuf ~= 4.21",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Deepomatic/deepomatic-rpc"
+"Company" = "https://www.deepomatic.com"
+
+[tool.setuptools.packages.find]
+where = ["src"]
