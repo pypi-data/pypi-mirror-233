@@ -1,0 +1,5 @@
+
+[test]
+pytest-pyodide==0.52.2
+pytest-cov
+build==0.10

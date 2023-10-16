@@ -1,0 +1,80 @@
+name: main
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: main-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    env:
+      DISPLAY: :99
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        pyodide-version: [0.24.1]
+        test-config: [
+          {runner: selenium, runtime: chrome, runtime-version: latest},
+        ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
+      - uses: pyodide/pyodide-actions/download-pyodide@v1
+        with:
+          version: ${{ matrix.pyodide-version }}
+          to: dist
+
+      - uses: pyodide/pyodide-actions/install-browser@v1
+        with:
+          runner: ${{ matrix.test-config.runner }}
+          browser: ${{ matrix.test-config.runtime }}
+          browser-version: ${{ matrix.test-config.runtime-version }}
+
+      - name: Install requirements
+        shell: bash -l {0}
+        run: |
+          python3 -m pip install -e .[test]
+
+      - name: Run tests
+        shell: bash -l {0}
+        run: |
+          pytest -v \
+            --cov=matplotlib_pyodide \
+            --dist-dir=./dist/ \
+            --runner=${{ matrix.test-config.runner }} \
+            --rt ${{ matrix.test-config.runtime }}
+      - uses: codecov/codecov-action@v3
+        if: ${{ github.event.repo.name == 'pyodide/matplotlib-pyodide' || github.event_name == 'pull_request' }}
+        with:
+          fail_ci_if_error: false
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+    environment: PyPi-deploy
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Install requirements and build wheel
+        shell: bash -l {0}
+        run: |
+          python -m pip install build twine
+          python -m build .
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
