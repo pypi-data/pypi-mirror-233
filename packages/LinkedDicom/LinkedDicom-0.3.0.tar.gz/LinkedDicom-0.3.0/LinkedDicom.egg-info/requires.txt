@@ -1,0 +1,7 @@
+pydicom
+rdflib
+requests
+click
+pynetdicom
+requests
+dicompyler-core

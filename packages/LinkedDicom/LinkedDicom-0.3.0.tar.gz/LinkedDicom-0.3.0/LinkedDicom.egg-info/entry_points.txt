@@ -1,0 +1,4 @@
+[console_scripts]
+ldcm-calc-dvh = LinkedDicom.cli:calc_dvh
+ldcm-parse = LinkedDicom.cli:main_parse
+ldcm-scp = LinkedDicom.CLI_SCP:start_scp
