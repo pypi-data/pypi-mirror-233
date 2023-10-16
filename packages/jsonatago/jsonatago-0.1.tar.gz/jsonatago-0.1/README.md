@@ -1,0 +1,1 @@
+go build -o jsonatago.dll -buildmode=c-shared main.go
