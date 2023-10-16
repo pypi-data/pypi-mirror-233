@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: zeclient
+Version: 1.1.4
+Summary: Python APIs for ZE Web Services
+Home-page: http://www.ze.com
+Author: ZE
+Author-email: ZE <support@ze.com>
+License: Please refer to the ZEMA license
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: dicttoxml
+Requires-Dist: pandas
+Requires-Dist: zeep
+Requires-Dist: beautifulsoup4
+Provides-Extra: test
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: configparser ; extra == 'test'
+Requires-Dist: numpy ; extra == 'test'
+Requires-Dist: tabulate ; extra == 'test'
+Requires-Dist: validate-email ; extra == 'test'
+
+# ZE Python Client
+
+The ZE Python Client provides a unified module - ZemaClient for retrieving data from ZEMA web services.
+
+## Prerequisites
+
+Python 3.5 or above and the following packages
+
+ * requests
+ * lxml
+ * pandas
+ * zeep
+ * dicttoxml
+ 
+The packages will be automatically installed during the installation.
+ 
+## Installation
+
+```
+pip install zeclient
+```
+
+## Usage
+ 
+```python
+  from zeclient.zema_client import ZemaClient
+    
+  # ZEMA Data Direct server URL
+  datadirect_url = "http://host.company.com/datadirect";
+    
+  # Create ZEMA client instance and start a session
+  client = ZemaClient(datadirect_url, 'user.name', 'password', 'Client')
+    
+  # Get profile data
+  result = client.get_profile('user.name', 'profile group', 'profile name')
+```
+
+## Support
+Please report bugs to support@ze.com
