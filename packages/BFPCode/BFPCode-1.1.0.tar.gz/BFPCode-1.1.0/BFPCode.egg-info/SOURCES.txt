@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+BFPCode/__init__.py
+BFPCode.egg-info/PKG-INFO
+BFPCode.egg-info/SOURCES.txt
+BFPCode.egg-info/dependency_links.txt
+BFPCode.egg-info/top_level.txt
