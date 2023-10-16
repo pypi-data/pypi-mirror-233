@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pylint_protobuf/__init__.py
+pylint_protobuf/parse_proto.py
+pylint_protobuf/transform.py
+pylint_protobuf.egg-info/PKG-INFO
+pylint_protobuf.egg-info/SOURCES.txt
+pylint_protobuf.egg-info/dependency_links.txt
+pylint_protobuf.egg-info/not-zip-safe
+pylint_protobuf.egg-info/requires.txt
+pylint_protobuf.egg-info/top_level.txt
