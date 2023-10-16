@@ -1,0 +1,17 @@
+discord/ext/voice_recv/__init__.py,sha256=21APtsnK0ZItvno09Ge1C1ai_-n31jO_CfmlgtHsyp4,362
+discord/ext/voice_recv/buffer.py,sha256=YsTC0o90RO7kdhx2DaST7rrZ3BXUaqp44Vhi5HUeuHo,6272
+discord/ext/voice_recv/gateway.py,sha256=cqPJcyPCKKOxqYHZV9OQI6nup4IRwFabo11ZzmyOtAo,3480
+discord/ext/voice_recv/opus.py,sha256=_sDic7uRADGw1WjP1kHDJaI4Ya7rTDZRWGaFuL2vzp0,37262
+discord/ext/voice_recv/reader.py,sha256=gUCQKKMqWNKSSgEzowyR7kWPoUyDqziD8N7ar5m_eCQ,6153
+discord/ext/voice_recv/rtp.py,sha256=vmX0d6BCsxen1WLMYmrhuO0hHLfVVdqu9_xSCQgYYqU,13323
+discord/ext/voice_recv/silence.py,sha256=Shk20H2t7HnwxreP0RMZGrjWw1L8Tyjc91LPdyKIJW0,5413
+discord/ext/voice_recv/sinks.py,sha256=C0lyQcV57WuRsigW7hJudk-wqSxx33xUc_DpfiZ8xH4,13510
+discord/ext/voice_recv/types.py,sha256=5j4oL0pRd5tHVq_5986Nm1FBsyo7xPHTFU9DPm3j4qw,1075
+discord/ext/voice_recv/utils.py,sha256=ZRZWrQtH-y8kvh8qv0ZMfxUCMMAGZK_wtnIWMhouyG8,2274
+discord/ext/voice_recv/video.py,sha256=RD9A9Rg-ndOXKTYf9hOZa8NOfNzEYXezh2bbeqVGmPQ,2626
+discord/ext/voice_recv/voice_client.py,sha256=xf0E7CGVDvGd349juxKkpyhy2tHagPPDAyM0NmtZ4Ec,6504
+discord_ext_voice_recv-0.3.0a120.dist-info/LICENSE,sha256=Zkax9TsXywKsEshhSfBITA_0Wdaww-0BfLzyAKKo3_g,1091
+discord_ext_voice_recv-0.3.0a120.dist-info/METADATA,sha256=7Rpuvt8om6xhvT_gB16IBUn5GGkPUEHF3I1nHOKlPlA,10640
+discord_ext_voice_recv-0.3.0a120.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+discord_ext_voice_recv-0.3.0a120.dist-info/top_level.txt,sha256=fJkrNbR-_8ubMBUcDEJBcfkpECrvSEmMrNKgvLlQFoM,8
+discord_ext_voice_recv-0.3.0a120.dist-info/RECORD,,
