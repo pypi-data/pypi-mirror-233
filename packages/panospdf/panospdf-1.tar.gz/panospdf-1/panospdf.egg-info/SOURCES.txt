@@ -1,0 +1,7 @@
+LICENCE
+README.md
+setup.py
+panospdf.egg-info/PKG-INFO
+panospdf.egg-info/SOURCES.txt
+panospdf.egg-info/dependency_links.txt
+panospdf.egg-info/top_level.txt
