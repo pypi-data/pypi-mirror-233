@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+nlp_kan/__init__.py
+nlp_kan/main.py
+nlpkan.egg-info/PKG-INFO
+nlpkan.egg-info/SOURCES.txt
+nlpkan.egg-info/dependency_links.txt
+nlpkan.egg-info/top_level.txt
+tests/test.py
