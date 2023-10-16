@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: smi-python-tbi-parser
+Version: 0.1.0
+Summary: setmy.info Python TBI parser library.
+Home-page: https://github.com/setmy-info/python-tbi-parser
+Author: Imre Tabur
+Author-email: info@setmy.info
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: smi-python-commons ==0.2.6
+
+setmy.info Python TBI parser library.
+
