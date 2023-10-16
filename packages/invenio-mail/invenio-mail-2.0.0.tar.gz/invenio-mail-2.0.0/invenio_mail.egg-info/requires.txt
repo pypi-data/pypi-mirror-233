@@ -1,0 +1,13 @@
+Flask>=0.11.1
+Flask-Mail>=0.9.1
+
+[celery]
+
+[docs]
+
+[tests]
+pytest-black<0.3.10,>=0.3.0
+pytest-invenio>=1.4.0
+Flask-CeleryExt>=0.2.2
+Flask-CeleryExt>=0.2.2
+sphinx>=4.5
