@@ -1,0 +1,12 @@
+download_latest/__init__.py,sha256=VnrAx3k5d4Cs5023W0r-JFW1hxUy3ZyXd3TN-L3RwRQ,300
+download_latest/cache.py,sha256=1MQj2lttLX7ns3MjtP2XaZK2y8BxXhFPBqKALt74ZpI,4692
+download_latest/cls.py,sha256=Br-e6OCYBy00PPg1xUTfJivPk6uTBMkZAwmf6-LRHqU,16841
+download_latest/console.py,sha256=DyNBDkifYVY6Jo0HYVWf39g_DkghQkdtY_dNZFzgzfw,6482
+download_latest/fetch.py,sha256=kw6I7q17Yo0X3fOlKzNs7RpMBW4yK2nU1T7dg5NIsGw,6814
+download_latest/meta.py,sha256=EbWdAtAZfprwHAxHg9KoEw2q7A20TxescOxBDKDT0Lo,371
+download_latest/util.py,sha256=g4L4bDw3sFJ1AO8FIk3zGuRH0MS3iHHDOIGiOdFW2R8,7158
+download_latest-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+download_latest-0.0.1.dist-info/METADATA,sha256=nN9CxtE_v57dGL2VVz274eEvm9N7p90iwAVfEcOYSJc,2514
+download_latest-0.0.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+download_latest-0.0.1.dist-info/entry_points.txt,sha256=qBpFN00-KU0cRl3IA-VsKOYpPnIi00L7c72TTDwBlJY,96
+download_latest-0.0.1.dist-info/RECORD,,
